@@ -13,3 +13,13 @@
   - [1461. Check If a String Contains All Binary Codes of Size K](./src/2022-05/leetcode-1461.ts)
 
 </details>
+
+<details>
+<summary>2022년 6월</summary>
+
+### 2022년 6월
+
+- 2022년 6월 1일
+  - [1480. Running Sum of 1d Array](./src/2022-06/leetcode-1480.ts)
+
+</details>
