@@ -21,5 +21,7 @@
 
 - 2022년 6월 1일
   - [1480. Running Sum of 1d Array](./src/2022-06/leetcode-1480.ts)
+- 2022년 6월 2일
+  - [867. Transpose Matrix](./src/2022-06/leetcode-867.ts)
 
 </details>
