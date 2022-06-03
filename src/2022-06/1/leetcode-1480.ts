@@ -3,7 +3,7 @@
   https://leetcode.com/problems/running-sum-of-1d-array/
 */
 
-function runningSum(nums: number[]): number[] {
+export function runningSum(nums: number[]): number[] {
   /* Iteration
   const ret: number[] = [];
   let previousValue = 0;
@@ -26,5 +26,3 @@ function runningSum(nums: number[]): number[] {
   }
   return nums.reduce(reduceFunc, [[], 0])[0];
 }
-
-console.log(runningSum([1, 2, 3, 4]));

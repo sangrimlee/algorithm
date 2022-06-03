@@ -3,7 +3,7 @@
   https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/
 */
 
-function hasAllCodes(s: string, k: number): boolean {
+export function hasAllCodes(s: string, k: number): boolean {
   const n = s.length;
   const isExist = new Map<number, boolean>();
   const maxValue = (1 << k) - 1;
@@ -25,5 +25,3 @@ function hasAllCodes(s: string, k: number): boolean {
 
   return false;
 }
-
-console.log(hasAllCodes('00110110', 2));
