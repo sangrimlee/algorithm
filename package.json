@@ -12,7 +12,8 @@
     "lint": "eslint --fix \"src/**/*.ts\"",
     "format": "prettier --write  \"./src/**/*.ts\"",
     "start": "ts-node src/index.ts",
-    "test": "jest src"
+    "test": "jest src",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/jest": "^28.1.0",
@@ -21,10 +22,18 @@
     "@typescript-eslint/parser": "^5.27.0",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.0",
     "jest": "^28.1.0",
+    "lint-staged": "^13.0.0",
     "prettier": "^2.6.2",
     "ts-jest": "^28.0.3",
     "ts-node": "^10.8.0",
     "typescript": "^4.7.2"
+  },
+  "lint-staged": {
+    "src/*/**.ts": [
+      "yarn format",
+      "yarn lint"
+    ]
   }
 }
