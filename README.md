@@ -25,5 +25,7 @@
   - [867. Transpose Matrix](./src/2022-06/2/leetcode-867.ts)
 - 2022년 6월 3일
   - [304. Range Sum Query 2D - Immutable](./src/2022-06/3/leetcode-304.ts)
+- 2022년 6월 4일
+  - [51. N-Queens](./src/2022-06/4/leetcode-51.ts)
 
 </details>
