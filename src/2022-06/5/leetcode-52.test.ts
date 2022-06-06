@@ -1,6 +1,6 @@
 import { totalNQueens } from './leetcode-52';
 
-describe('2022-06-04: LeetCode 51', () => {
+describe('2022-06-05: LeetCode 52', () => {
   test('Example 1', () => {
     expect(totalNQueens(4)).toBe(2);
   });
