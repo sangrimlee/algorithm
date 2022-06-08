@@ -32,9 +32,11 @@
 - 2022년 6월 6일
   - [160. Intersection of Two Linked Lists](./src/2022-06/6/leetcode-160.ts)
   - [68645. 삼각 달팽이](./src/2022-06/6/programmers-68645.ts)
-- 2022년 6월 6일
+- 2022년 6월 7일
   - [88. Merge Sorted Array](./src/2022-06/7/leetcode-88.ts)
   - [68936. 쿼드압축 후 개수 세기](./src/2022-06/7/programmers-68936.ts)
   - [70129. 이진 변환 반복하기](./src/2022-06/7/programmers-70129.ts)
+- 2022년 6월 8일
+  - [1332. Remove Palindromic Subsequences](./src/2022-06/8/leetcode-1332.ts)
 
 </details>
