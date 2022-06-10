@@ -2,6 +2,11 @@
 
 1 Day 1 Solve (1일 1문제)를 실천하는 Repository입니다.
 
+## 문제 출처
+
+- [LeetCode](https://leetcode.com/problemset/all/)
+- [Programmers (프로그래머스)](https://programmers.co.kr/learn/challenges)
+
 ## 문제 정리
 
 <details>
@@ -38,5 +43,10 @@
   - [70129. 이진 변환 반복하기](./src/2022-06/7/programmers-70129.ts)
 - 2022년 6월 8일
   - [1332. Remove Palindromic Subsequences](./src/2022-06/8/leetcode-1332.ts)
+- 2022년 6월 9일
+  - [167. Two Sum II - Input Array Is Sorted](./src/2022-06/9/leetcode-167.ts)
+- 2022년 6월 10일
+  - [3. Longest Substring Without Repeating Characters](./src/2022-06/10/leetcode-3.ts)
+  - [70130. 스타 수열](./src/2022-06/10/programmers-70130.ts)
 
 </details>
