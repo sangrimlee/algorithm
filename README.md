@@ -48,5 +48,7 @@
 - 2022년 6월 10일
   - [3. Longest Substring Without Repeating Characters](./src/2022-06/10/leetcode-3.ts)
   - [70130. 스타 수열](./src/2022-06/10/programmers-70130.ts)
+- 2022년 6월 11일
+  - [1658. Minimum Operations to Reduce X to Zero](./src/2022-06/11/leetcode-1658.ts)
 
 </details>
