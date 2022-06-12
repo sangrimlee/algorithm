@@ -50,5 +50,7 @@
   - [70130. 스타 수열](./src/2022-06/10/programmers-70130.ts)
 - 2022년 6월 11일
   - [1658. Minimum Operations to Reduce X to Zero](./src/2022-06/11/leetcode-1658.ts)
+- 2022년 6월 12일
+  - [1695. Maximum Erasure Value](./src/2022-06/12/leetcode-1695.ts)
 
 </details>
