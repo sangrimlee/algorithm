@@ -52,5 +52,7 @@
   - [1658. Minimum Operations to Reduce X to Zero](./src/2022-06/11/leetcode-1658.ts)
 - 2022년 6월 12일
   - [1695. Maximum Erasure Value](./src/2022-06/12/leetcode-1695.ts)
+- 2022년 6월 13일
+  - [120. Triangle](./src/2022-06/13/leetcode-120.ts)
 
 </details>
