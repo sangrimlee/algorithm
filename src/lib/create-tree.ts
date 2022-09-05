@@ -33,3 +33,35 @@ export function createTree(arr: (number | null)[]) {
 
   return treeNodes[0];
 }
+
+export class NArrayTreeNode {
+  val: number;
+  children: NArrayTreeNode[];
+  constructor(val?: number) {
+    this.val = val === undefined ? 0 : val;
+    this.children = [];
+  }
+}
+
+export function createNArrayTree(tree: {
+  [key: number]: number[] | undefined;
+}): NArrayTreeNode | null {
+  if (!tree[1]) {
+    return null;
+  }
+  const rootNode = new NArrayTreeNode(1);
+  rootNode.children = tree[1].map((value) => new NArrayTreeNode(value));
+
+  const currentNodes = [rootNode];
+  while (0 < currentNodes.length) {
+    const currentNode = currentNodes.shift();
+    if (currentNode) {
+      const children =
+        tree[currentNode.val]?.map((value) => new NArrayTreeNode(value)) ?? [];
+      currentNode.children = children;
+      currentNodes.push(...children);
+    }
+  }
+
+  return rootNode;
+}
