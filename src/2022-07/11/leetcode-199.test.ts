@@ -1,27 +1,5 @@
-import { rightSideView, TreeNode } from './leetcode-199';
-
-function createTree(arr: (number | null)[]) {
-  const n = arr.length;
-  if (n === 0) {
-    return null;
-  }
-  const treeNodes = arr.map((value) =>
-    value !== null ? new TreeNode(value) : null
-  );
-  treeNodes.forEach((currentNode, i) => {
-    if (currentNode) {
-      const leftNode = 2 * (i + 1) - 1;
-      const rightNode = leftNode + 1;
-      if (leftNode < n) {
-        currentNode.left = treeNodes[leftNode];
-      }
-      if (rightNode < n) {
-        currentNode.right = treeNodes[rightNode];
-      }
-    }
-  });
-  return treeNodes[0];
-}
+import { createTree } from '../../lib/create-tree';
+import { rightSideView } from './leetcode-199';
 
 describe('2022-07-11: LeetCode 199', () => {
   test('Example 1', () => {

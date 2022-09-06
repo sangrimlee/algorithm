@@ -1,3 +1,5 @@
+import { TreeNode } from '../../lib/create-tree';
+
 /**
  * 199. Binary Tree Right Side View
  * https://leetcode.com/problems/binary-tree-right-side-view/
@@ -24,15 +26,4 @@ export function rightSideView(root: TreeNode | null): number[] {
   }
 
   return answer;
-}
-
-export class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
 }

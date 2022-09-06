@@ -1,19 +1,9 @@
+import { TreeNode } from '../../lib/create-tree';
+
 /**
  * 968. Binary Tree Cameras
  * https://leetcode.com/problems/binary-tree-cameras/
  */
-
-export class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
-  }
-}
-
 export function minCameraCover(root: TreeNode | null): number {
   /**
    * 모든 상태
