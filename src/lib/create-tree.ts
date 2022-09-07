@@ -34,6 +34,23 @@ export function createTree(arr: (number | null)[]) {
   return treeNodes[0];
 }
 
+export function compareTree(
+  node1: TreeNode | null,
+  node2: TreeNode | null
+): boolean {
+  if (node1 === null && node2 === null) {
+    return true;
+  }
+  if (node1 === null || node2 === null) {
+    return false;
+  }
+  return (
+    node1.val === node2.val &&
+    compareTree(node1.left, node2.left) &&
+    compareTree(node1.right, node2.right)
+  );
+}
+
 export class NArrayTreeNode {
   val: number;
   children: NArrayTreeNode[];
