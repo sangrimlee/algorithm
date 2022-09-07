@@ -1,21 +1,4 @@
-export class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
-
-function convertLinkedListToArray(head: ListNode | null) {
-  const result: number[] = [];
-  let currentNode = head;
-  while (currentNode !== null) {
-    result.push(currentNode.val);
-    currentNode = currentNode.next;
-  }
-  return result;
-}
+import { ListNode } from '../../lib/create-linked-list';
 
 /**
  * 234. Palindrome Linked List
@@ -32,4 +15,14 @@ export function isPalindrome(head: ListNode | null): boolean {
     end -= 1;
   }
   return true;
+}
+
+function convertLinkedListToArray(head: ListNode | null) {
+  const result: number[] = [];
+  let currentNode = head;
+  while (currentNode !== null) {
+    result.push(currentNode.val);
+    currentNode = currentNode.next;
+  }
+  return result;
 }

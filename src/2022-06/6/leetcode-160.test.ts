@@ -1,4 +1,5 @@
-import { ListNode, getIntersectionNode } from './leetcode-160';
+import { ListNode } from '../../lib/create-linked-list';
+import { getIntersectionNode } from './leetcode-160';
 
 describe('2022-06-06: LeetCode 160', () => {
   function createExample(
