@@ -16,3 +16,19 @@ export function createLinkedList(arr: number[]): ListNode | null {
   });
   return startNode.next;
 }
+
+export function linkedListToArr(head: ListNode | null): number[] {
+  if (head === null) {
+    return [];
+  }
+
+  const arr: number[] = [];
+  let currentNode: ListNode | null = head;
+
+  while (currentNode !== null) {
+    arr.push(currentNode.val);
+    currentNode = currentNode.next;
+  }
+
+  return arr;
+}
