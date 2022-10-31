@@ -1,0 +1,33 @@
+/**
+ * 1239. Maximum Length of a Concatenated String with Unique Characters
+ * https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
+ */
+export function maxLength(arr: string[]): number {
+  const unique: Set<string>[] = [];
+  for (const word of arr) {
+    const wordSet = new Set(word);
+    if (wordSet.size === word.length) {
+      unique.push(wordSet);
+    }
+  }
+
+  const concat: Set<string>[] = [new Set()];
+  for (const u of unique) {
+    for (const c of concat) {
+      if (intersect(u, c).size === 0) {
+        concat.push(union(u, c));
+      }
+    }
+  }
+
+  const answer = concat.reduce((prev, curr) => Math.max(prev, curr.size), 0);
+  return answer;
+}
+
+function intersect<T>(set1: Set<T>, set2: Set<T>) {
+  return new Set([...set1].filter((x) => set2.has(x)));
+}
+
+function union<T>(set1: Set<T>, set2: Set<T>) {
+  return new Set([...set1, ...set2]);
+}
