@@ -1,0 +1,15 @@
+{
+  "Test Code": {
+    "prefix": "ctest",
+    "body": [
+      "describe('$CURRENT_YEAR-$CURRENT_MONTH-${CURRENT_DATE}: ${TM_FILENAME_BASE/^([^-]*)-([^.]*).*/${1:/pascalcase} ${2:/pascalcase}/}', () => {",
+      "  test('Example 1', () => {});",
+      "",
+      "  test('Example 2', () => {});",
+      "",
+      "  test('Example 3', () => {});",
+      "});"
+    ],
+    "description": "Test Code Template"
+  }
+}
