@@ -1,0 +1,46 @@
+/**
+ * 345. Reverse Vowels of a String
+ * https://leetcode.com/problems/reverse-vowels-of-a-string/
+ */
+export function reverseVowels(s: string): string {
+  const vowelSet = new Set<string>('aeiou');
+  const isVowel = (char: string) => vowelSet.has(char.toLowerCase());
+
+  const arr = Array.from(s);
+  const vowels = arr.filter(isVowel).reverse();
+  let currentIndex = 0;
+  let answer = '';
+  for (const char of s) {
+    if (isVowel(char)) {
+      answer += vowels[currentIndex++];
+    } else {
+      answer += char;
+    }
+  }
+  return answer;
+}
+
+/** Another ways: Two Pointer
+function reverseVowels(s: string): string {
+  const arr = Array.from(s);
+  const set = new Set('aeiouAEIOU');
+  const isVowel = (char: string) => set.has(char);
+
+  let [start, end] = [0, arr.length - 1];
+  while (start < end) {
+    while (start < arr.length && !isVowel(arr[start])) {
+      start += 1;
+    }
+    while (0 <= end && !isVowel(arr[end])) {
+      end -= 1;
+    }
+    if (start < end) {
+      [arr[start], arr[end]] = [arr[end], arr[start]];
+      start += 1;
+      end -= 1;
+    }
+  }
+
+  return arr.join('');
+}
+*/
