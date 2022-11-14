@@ -9,7 +9,6 @@ export function maxProfitIII(prices: number[]): number {
   const minPrices = new Array(3).fill(prices[0]);
   for (let i = 1; i < n; i++) {
     for (let k = 1; k <= 2; k++) {
-      console.log(minPrices, dp);
       minPrices[k] = Math.min(minPrices[k], prices[i] - dp[k - 1]);
       dp[k] = Math.max(dp[k], prices[i] - minPrices[k]);
     }
