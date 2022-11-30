@@ -1,0 +1,33 @@
+/**
+ * 2225. Find Players With Zero or One Losses
+ * https://leetcode.com/problems/find-players-with-zero-or-one-losses/
+ */
+export function findWinners(matches: number[][]): number[][] {
+  const players = new Set<number>();
+  const lostCounts = new Map<number, number>();
+
+  for (const [winner, loser] of matches) {
+    players.add(winner);
+    players.add(loser);
+    lostCounts.set(loser, (lostCounts.get(loser) || 0) + 1);
+  }
+
+  const notLostAnyMatches: number[] = [];
+  const lostOneMatch: number[] = [];
+  for (const player of players) {
+    const lostCount = lostCounts.get(player) || 0;
+    if (1 < lostCount) {
+      continue;
+    }
+    if (lostCount === 0) {
+      notLostAnyMatches.push(player);
+    } else {
+      lostOneMatch.push(player);
+    }
+  }
+
+  notLostAnyMatches.sort((a, b) => a - b);
+  lostOneMatch.sort((a, b) => a - b);
+
+  return [notLostAnyMatches, lostOneMatch];
+}
