@@ -3,7 +3,11 @@
     "target": "ES2015",
     "module": "commonjs",
     "outDir": "dist",
-    "strict": true
+    "strict": true,
+    "baseUrl": "src",
+    "paths": {
+      "@lib/*": ["lib/*"]
+    }
   },
-  "files": ["./src/index.ts"]
+  "include": ["src"]
 }
