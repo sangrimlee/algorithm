@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-1d1s",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-turbo": "latest"
+  },
+  "devDependencies": {
+    "eslint": "8.29.0",
+    "typescript": "^4.9.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

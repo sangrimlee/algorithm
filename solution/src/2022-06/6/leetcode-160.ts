@@ -1,0 +1,17 @@
+import { ListNode } from '@1d1s/lib';
+
+/**
+ * 160. Intersection of Two Linked Lists
+ * https://leetcode.com/problems/intersection-of-two-linked-lists/
+ */
+export function getIntersectionNode(
+  headA: ListNode | null,
+  headB: ListNode | null,
+): ListNode | null {
+  let [nodeA, nodeB] = [headA, headB];
+  while (nodeA !== nodeB) {
+    nodeA = nodeA ? nodeA.next : headB;
+    nodeB = nodeB ? nodeB.next : headA;
+  }
+  return nodeA;
+}
