@@ -13,6 +13,7 @@
   "license": "MIT",
   "scripts": {
     "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
     "format": "turbo run format",
     "lint": "turbo run lint",
     "test": "turbo run test",
