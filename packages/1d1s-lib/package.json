@@ -1,0 +1,31 @@
+{
+  "name": "@1d1s/lib",
+  "description": "1일 1문제를 문제 풀이를 위한 라이브러리",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "TIMING=1 eslint --fix \"src/**/*.ts\"",
+    "format": "prettier --write  \"./src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@1d1s/tsconfig": "*",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.12",
+    "eslint": "^8.29.0",
+    "eslint-config-1d1s": "*",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.5.0",
+    "turbo": "^1.6.3",
+    "typescript": "^4.9.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

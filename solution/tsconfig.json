@@ -1,0 +1,4 @@
+{
+  "extends": "@1d1s/tsconfig/node16.json",
+  "include": ["src", "jest.config.js"]
+}
