@@ -18,9 +18,11 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
+    "generate": "1d1s --dir=solution/src",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@1d1s/cli": "*",
     "eslint": "^8.29.0",
     "eslint-config-1d1s": "*",
     "husky": "^8.0.2",
