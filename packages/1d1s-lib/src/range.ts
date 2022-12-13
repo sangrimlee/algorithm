@@ -15,6 +15,5 @@ export function* range(start: number, end?: number, step = 1) {
   while (value < endValue) {
     yield value;
     value += step;
-    yield value++;
   }
 }
