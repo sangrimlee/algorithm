@@ -1,0 +1,38 @@
+/**
+ * 834. Sum of Distances in Tree
+ * https://leetcode.com/problems/sum-of-distances-in-tree
+ */
+export function sumOfDistancesInTree(n: number, edges: number[][]): number[] {
+  const tree: number[][] = new Array(n).fill(undefined).map(() => []);
+  for (const [a, b] of edges) {
+    tree[a].push(b);
+    tree[b].push(a);
+  }
+
+  const answer = new Array<number>(n).fill(0);
+  const count = new Array<number>(n).fill(1);
+
+  const dfs = (node: number, parentNode?: number) => {
+    for (const childNode of tree[node]) {
+      if (childNode !== parentNode) {
+        dfs(childNode, node);
+        count[node] += count[childNode];
+        answer[node] += answer[childNode] + count[childNode];
+      }
+    }
+  };
+
+  const dfs2 = (node: number, parentNode?: number) => {
+    for (const childNode of tree[node]) {
+      if (childNode !== parentNode) {
+        answer[childNode] = answer[node] - count[childNode] + n - count[childNode];
+        dfs2(childNode, node);
+      }
+    }
+  };
+
+  dfs(0);
+  dfs2(0);
+
+  return answer;
+}
