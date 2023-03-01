@@ -1,25 +1,40 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { generateDailyChallenge } from './lib';
+
+import { generateDailyChallenge, generateProgrammersProblem } from './lib';
+import { choiceGenereateTypePrompt, inputProblemNumberPrompt } from './prompt';
 
 const program = new Command('1D1S Daily Challenge');
 
-program
-  .option('--dir <dir>', 'Output directory')
-  .option('-d, --daily', 'LeetCode Daily Challenge')
-  .parse();
+program.option('--dir <dir>', 'Output directory').parse();
 
 const options = program.opts();
 
 const outputDir = options.dir ? options.dir : '.';
-const isDaily = options.daily;
 
-if (isDaily) {
-  console.log('🎉  Generate LeetCode Daily Challenge Template');
-  generateDailyChallenge(outputDir).then(() => {
-    console.log("🚀  Finished! Let's Coding🔥🔥");
-  });
-} else {
-  console.error('🚧 Not Implemented. Work in progress.');
+async function main() {
+  const generateType = await choiceGenereateTypePrompt();
+  switch (generateType) {
+    case 'LeetCode Daily Challenge': {
+      await generateDailyChallenge(outputDir);
+      break;
+    }
+    case 'Programmers': {
+      const problemNumber = await inputProblemNumberPrompt();
+      await generateProgrammersProblem(outputDir, problemNumber);
+      break;
+    }
+    default: {
+      throw new Error('🚧 Not Implemented. Work in progress.');
+    }
+  }
 }
+
+main()
+  .then(() => {
+    console.log("🚀  Finished! Let's Coding🔥🔥");
+  })
+  .catch((error) => {
+    console.error(error);
+  });

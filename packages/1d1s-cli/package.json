@@ -1,7 +1,7 @@
 {
   "name": "@1d1s/cli",
   "description": "Coding Template Generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "bin": {
     "1d1s": "./dist/index.js"
@@ -14,10 +14,13 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
-    "commander": "^9.4.1"
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^9.4.1",
+    "inquirer": "^8.2.5"
   },
   "devDependencies": {
     "@1d1s/tsconfig": "*",
+    "@types/inquirer": "^8.2.5",
     "@types/node": "^18.11.12",
     "eslint": "^8.29.0",
     "eslint-config-1d1s": "*",

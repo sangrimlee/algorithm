@@ -1,6 +1,6 @@
 import { CodingSite } from '../enums';
 
-export function createTestTemplate(date: string, codingSite: CodingSite, id: string) {
+export function createTestTemplate(codingSite: CodingSite, date: string, id: string) {
   return `describe('${date}: ${codingSite} ${id}', () => {
   test('Example 1', () => {});
   

@@ -17,6 +17,10 @@ export async function generateDailyChallenge(outputDir: string) {
   const { fileName, testFileName } = createFileName(id, CodingSite.LeetCode);
   createPathIfNotExist(dailyDir);
 
-  createFileWithContent(dailyDir, fileName, createSolutionTemplate(id, title, titleSlug));
-  createFileWithContent(dailyDir, testFileName, createTestTemplate(date, CodingSite.LeetCode, id));
+  createFileWithContent(
+    dailyDir,
+    fileName,
+    createSolutionTemplate(CodingSite.Programmers, id, title, titleSlug),
+  );
+  createFileWithContent(dailyDir, testFileName, createTestTemplate(CodingSite.LeetCode, date, id));
 }
