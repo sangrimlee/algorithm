@@ -20,7 +20,7 @@ export async function generateDailyChallenge(outputDir: string) {
   createFileWithContent(
     dailyDir,
     fileName,
-    createSolutionTemplate(CodingSite.Programmers, id, title, titleSlug),
+    createSolutionTemplate(CodingSite.LeetCode, id, title, titleSlug),
   );
   createFileWithContent(dailyDir, testFileName, createTestTemplate(CodingSite.LeetCode, date, id));
 }
