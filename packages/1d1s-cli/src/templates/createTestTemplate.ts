@@ -1,11 +1,21 @@
-import { CodingSite } from '../enums';
+import dedent from 'ts-dedent';
 
-export function createTestTemplate(codingSite: CodingSite, date: string, id: string) {
-  return `describe('${date}: ${codingSite} ${id}', () => {
-  test('Example 1', () => {});
-  
-  test('Example 2', () => {});
-  
-  test('Example 3', () => {});
-});`;
+import { CodingSite } from '../enums';
+import { TestCase } from '../types';
+
+export function createTestTemplate(
+  codingSite: CodingSite,
+  date: string,
+  id: string,
+  testCases: TestCase[] = [],
+) {
+  return dedent`describe('${date}: ${codingSite} ${id}', () => {
+    ${testCases.map(createTestCaseTemplate).join('\n')}
+  });`;
+}
+
+export function createTestCaseTemplate({ input, output }: TestCase, i: number) {
+  return dedent`test('Example ${i + 1}', () => {
+    expect(solution(${input.join(', ')})).toEqual(${output});
+  });`;
 }

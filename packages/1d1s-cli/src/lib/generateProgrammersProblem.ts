@@ -10,7 +10,7 @@ import {
 } from '../utils';
 
 export async function generateProgrammersProblem(outputDir: string, id: string) {
-  const { title } = await getProgrammersProblem(id);
+  const { title, testCases } = await getProgrammersProblem(id);
   const date = getCurrentDate();
   const dailyDir = createDailyPath(outputDir, date);
   const { fileName, testFileName } = createFileName(id, CodingSite.Programmers);
@@ -24,6 +24,6 @@ export async function generateProgrammersProblem(outputDir: string, id: string) 
   createFileWithContent(
     dailyDir,
     testFileName,
-    createTestTemplate(CodingSite.Programmers, date, id),
+    createTestTemplate(CodingSite.Programmers, date, id, testCases),
   );
 }

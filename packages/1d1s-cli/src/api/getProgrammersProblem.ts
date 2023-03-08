@@ -1,9 +1,30 @@
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import { TestCase } from '../types';
 
-const getTitleFromHTML = (html: string) => {
-  const $ = cheerio.load(html);
+const getTitleFromHTML = ($: cheerio.CheerioAPI) => {
   return $('li.algorithm-title').text().trim();
+};
+
+const getTestCaseFromHTML = ($: cheerio.CheerioAPI) => {
+  const table = $('table');
+
+  const testCases: TestCase[] = [];
+  $(table)
+    .find('tbody tr')
+    .each((_, tr) => {
+      const row: string[] = [];
+      $(tr)
+        .find('td')
+        .each((_, td) => {
+          row.push($(td).text());
+        });
+      const input = row.slice(0, -1);
+      const output = row[row.length - 1];
+      testCases.push({ input, output });
+    });
+
+  return testCases;
 };
 
 export const getProgrammersProblem = async (id: string) => {
@@ -18,8 +39,10 @@ export const getProgrammersProblem = async (id: string) => {
         },
       },
     );
+    const $ = cheerio.load(html);
     return {
-      title: getTitleFromHTML(html),
+      title: getTitleFromHTML($),
+      testCases: getTestCaseFromHTML($),
     };
   } catch (error) {
     throw new Error(
