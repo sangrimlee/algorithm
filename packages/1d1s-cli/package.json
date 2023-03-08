@@ -16,7 +16,8 @@
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^9.4.1",
-    "inquirer": "^8.2.5"
+    "inquirer": "^8.2.5",
+    "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
     "@1d1s/tsconfig": "*",
