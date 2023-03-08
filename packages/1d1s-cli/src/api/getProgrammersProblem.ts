@@ -1,31 +1,6 @@
 import axios from 'axios';
-import * as cheerio from 'cheerio';
-import { TestCase } from '../types';
 
-const getTitleFromHTML = ($: cheerio.CheerioAPI) => {
-  return $('li.algorithm-title').text().trim();
-};
-
-const getTestCaseFromHTML = ($: cheerio.CheerioAPI) => {
-  const table = $('table');
-
-  const testCases: TestCase[] = [];
-  $(table)
-    .find('tbody tr')
-    .each((_, tr) => {
-      const row: string[] = [];
-      $(tr)
-        .find('td')
-        .each((_, td) => {
-          row.push($(td).text());
-        });
-      const input = row.slice(0, -1);
-      const output = row[row.length - 1];
-      testCases.push({ input, output });
-    });
-
-  return testCases;
-};
+import { parseProgrammers } from '@/lib/parse';
 
 export const getProgrammersProblem = async (id: string) => {
   try {
@@ -39,14 +14,8 @@ export const getProgrammersProblem = async (id: string) => {
         },
       },
     );
-    const $ = cheerio.load(html);
-    return {
-      title: getTitleFromHTML($),
-      testCases: getTestCaseFromHTML($),
-    };
+    return parseProgrammers(html);
   } catch (error) {
-    throw new Error(
-      '문제를 불러오는 중에 오류가 발생하였습니다.\n문제 번호를 다시 확인하거나, 아래 에러를 확인해주세요.',
-    );
+    throw new Error('문제를 불러오는 중에 오류가 발생하였습니다. 문제 번호를 확인해주세요.');
   }
 };

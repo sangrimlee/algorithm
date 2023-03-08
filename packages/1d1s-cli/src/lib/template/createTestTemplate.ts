@@ -1,7 +1,6 @@
 import dedent from 'ts-dedent';
 
-import { CodingSite } from '../enums';
-import { TestCase } from '../types';
+import { CodingSite, TestCase } from '@/types';
 
 export function createTestTemplate(
   codingSite: CodingSite,

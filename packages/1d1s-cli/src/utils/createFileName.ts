@@ -1,4 +1,4 @@
-import { CodingSite } from '../enums';
+import { CodingSite } from '@/types';
 
 export function createFileName(id: string, codingSite: CodingSite) {
   return {

@@ -1,4 +1,4 @@
-import { CodingSite } from '../enums';
+import { CodingSite } from '@/types';
 
 export const CODING_SITE_URL: Record<CodingSite, string> = {
   [CodingSite.LeetCode]: 'https://leetcode.com/problems',

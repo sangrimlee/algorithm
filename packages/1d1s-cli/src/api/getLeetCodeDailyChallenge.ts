@@ -1,44 +1,34 @@
-import axios, { AxiosRequestConfig } from 'axios';
-
-const LEETCODE_API_URL = 'https://leetcode.com/graphql';
+import * as graphql from '@/lib/graphql';
 
 const DAILY_CODING_CHALLENGE_QUERY = `
 query questionOfToday {
   activeDailyCodingChallengeQuestion {
     date
-    link
     question {
-      difficulty
-      title
       titleSlug
-      frontendQuestionId: questionFrontendId
     }
   }
 }`;
 
 interface DailyChallengeQuestion {
   date: string;
-  link: string;
   question: {
-    difficulty: string;
-    title: string;
     titleSlug: string;
-    frontendQuestionId: string;
   };
 }
 
-export const getDailyCodingChallenge = async () => {
-  const config: AxiosRequestConfig<{ query: string }> = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    data: {
+interface DailyChallengeResponse {
+  data: { activeDailyCodingChallengeQuestion: DailyChallengeQuestion };
+}
+
+export const getLeetCodeDailyChallenge = async () => {
+  try {
+    const { data } = await graphql.query<DailyChallengeResponse>('https://leetcode.com/graphql', {
       query: DAILY_CODING_CHALLENGE_QUERY,
-    },
-  };
+    });
 
-  const { data } = await axios<{
-    data: { activeDailyCodingChallengeQuestion: DailyChallengeQuestion };
-  }>(LEETCODE_API_URL, config);
-
-  return data.data.activeDailyCodingChallengeQuestion;
+    return data.activeDailyCodingChallengeQuestion;
+  } catch (error) {
+    throw new Error('문제를 불러오는 중에 오류가 발생하였습니다.\n');
+  }
 };

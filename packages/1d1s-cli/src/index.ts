@@ -2,8 +2,12 @@
 
 import { Command } from 'commander';
 
-import { generateDailyChallenge, generateProgrammersProblem } from './lib';
-import { choiceGenereateTypePrompt, inputProblemNumberPrompt } from './prompt';
+import {
+  generateLeetCode,
+  generateLeetCodeDailyChallenge,
+  generateProgrammers,
+} from '@/lib/generate';
+import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/lib/prompt';
 
 const program = new Command('1D1S Daily Challenge');
 
@@ -16,13 +20,18 @@ const outputDir = options.dir ? options.dir : '.';
 async function main() {
   const generateType = await choiceGenereateTypePrompt();
   switch (generateType) {
-    case 'LeetCode Daily Challenge': {
-      await generateDailyChallenge(outputDir);
+    case 'LeetCode': {
+      const titleSlug = await leetCodePrompt();
+      await generateLeetCode(outputDir, titleSlug);
       break;
     }
     case 'Programmers': {
-      const problemNumber = await inputProblemNumberPrompt();
-      await generateProgrammersProblem(outputDir, problemNumber);
+      const problemNumber = await programmersPrompt();
+      await generateProgrammers(outputDir, problemNumber);
+      break;
+    }
+    case 'LeetCode Daily Challenge': {
+      await generateLeetCodeDailyChallenge(outputDir);
       break;
     }
     default: {
