@@ -7,7 +7,7 @@ export function makingHamburger(ingredients: number[]) {
   const stack: number[] = [];
 
   const isMakable = () => {
-    return 4 <= stack.length && stack.slice(-4, 4).join('') === '1231';
+    return 4 <= stack.length && stack.slice(-4).join('') === '1231';
   };
 
   for (const ingredient of ingredients) {
