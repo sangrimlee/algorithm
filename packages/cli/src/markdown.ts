@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
+import { generateREADME } from './lib/generate';
 
 const program = new Command('Markdown Generator for @algorithm');
 
-program.option('--dir <dir>', 'Solution directory').parse();
+program
+  .option('-d, --dir <dir>', 'Solution directory')
+  .option('-o, --outdir <dir>', 'Output directory')
+  .parse();
 
 const options = program.opts();
 
 const solutionDir = options.dir ? options.dir : '.';
+const outDir = options.outdir ? options.outdir : '.';
 
 async function main() {
-  console.log(solutionDir);
+  await generateREADME(solutionDir, outDir);
 }
 
 main()
