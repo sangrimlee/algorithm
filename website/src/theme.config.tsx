@@ -1,6 +1,6 @@
 import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
-import { Logo } from './components/Logo';
+import { Footer, Logo } from './components';
 
 const config: DocsThemeConfig = {
   project: {
@@ -19,7 +19,6 @@ const config: DocsThemeConfig = {
   logo: <Logo className="nx-mt-1" />,
   head: function useHead() {
     const { title } = useConfig();
-    const { route } = useRouter();
     const url = process.env.NEXT_PUBLIC_URL;
     const domain = url.replace(/^https?:\/\//, '');
     const ogImage = url + '/images/og.jpeg';
@@ -49,6 +48,9 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: 1,
     toggleButton: false,
+  },
+  footer: {
+    component: <Footer />,
   },
 };
 
