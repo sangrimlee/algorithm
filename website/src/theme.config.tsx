@@ -1,9 +1,9 @@
-import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
+import { Logo } from './components/Logo';
 
 const config: DocsThemeConfig = {
-  logo: <span className="nx-font-bold nx-text-xl">Algorithm</span>,
+  logo: <Logo />,
   project: {
     link: 'https://github.com/sangrimlee/algorithm/',
   },
