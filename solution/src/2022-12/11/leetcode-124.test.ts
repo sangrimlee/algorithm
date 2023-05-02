@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { maxPathSum } from './leetcode-124';
 
 describe('2022-12-11: LeetCode 124', () => {

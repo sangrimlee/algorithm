@@ -1,5 +1,5 @@
 import { removeNthFromEnd } from './leetcode-19';
-import { createLinkedList, linkedListToArr } from '@1d1s/lib';
+import { createLinkedList, linkedListToArr } from '@algorithm/lib';
 
 describe('2022-09-28 LeetCode 19', () => {
   test('Example 1', () => {

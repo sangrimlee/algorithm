@@ -1,4 +1,4 @@
-import { ListNode } from '@1d1s/lib';
+import { ListNode } from '@algorithm/lib';
 
 /**
  * 19. Remove Nth Node From End of List

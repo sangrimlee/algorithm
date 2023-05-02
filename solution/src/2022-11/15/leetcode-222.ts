@@ -1,4 +1,4 @@
-import { TreeNode } from '@1d1s/lib';
+import { TreeNode } from '@algorithm/lib';
 
 /**
  * 222. Count Complete Tree Nodes

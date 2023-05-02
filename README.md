@@ -1,6 +1,6 @@
-# 1 Day 1 Solve (1일 1문제)
+# 문제 풀이 저장소
 
-1 Day 1 Solve (1일 1문제)를 실천하는 Repository입니다.
+알고리즘, 프로그래밍 관련 문제 풀이 저장소입니다.
 
 [문제 풀이 보러가기](./solution/README.md)
 

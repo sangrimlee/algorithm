@@ -1,4 +1,4 @@
-import { ListNode } from '@1d1s/lib';
+import { ListNode } from '@algorithm/lib';
 
 /**
  * 328. Odd Even Linked List

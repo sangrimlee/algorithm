@@ -1,4 +1,4 @@
-import { range } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
 
 /**
  * 1061. Lexicographically Smallest Equivalent String

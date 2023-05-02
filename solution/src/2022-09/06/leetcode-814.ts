@@ -1,4 +1,4 @@
-import { TreeNode } from '@1d1s/lib';
+import { TreeNode } from '@algorithm/lib';
 
 /**
  * 814. Binary Tree Pruning

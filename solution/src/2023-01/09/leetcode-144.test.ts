@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { preorderTraversal } from './leetcode-144';
 
 describe('2023-01-09: LeetCode 144', () => {

@@ -1,4 +1,4 @@
-import { range } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
 
 /**
  * 790. Domino and Tromino Tiling

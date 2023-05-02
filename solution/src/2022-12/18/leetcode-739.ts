@@ -1,4 +1,4 @@
-import { range } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
 
 /**
  * 739. Daily Temperatures

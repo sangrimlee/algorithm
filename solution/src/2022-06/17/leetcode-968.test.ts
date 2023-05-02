@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { minCameraCover } from './leetcode-968';
 
 describe('2022-06-17: LeetCode 968', () => {

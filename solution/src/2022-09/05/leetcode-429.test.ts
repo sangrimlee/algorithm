@@ -1,4 +1,4 @@
-import { createNArrayTree } from '@1d1s/lib';
+import { createNArrayTree } from '@algorithm/lib';
 import { levelOrder } from './leetcode-429';
 
 describe('2022-09-05: LeetCode 429', () => {

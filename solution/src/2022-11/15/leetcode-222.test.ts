@@ -1,5 +1,5 @@
 import { countNodes } from './leetcode-222';
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 
 describe('2022-11-15: Leetcode 222', () => {
   test('Example 1', () => {

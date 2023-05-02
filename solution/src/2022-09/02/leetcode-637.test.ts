@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { averageOfLevels } from './leetcode-637';
 
 describe('2022-09-02: LeetCode 637', () => {

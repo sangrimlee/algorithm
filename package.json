@@ -1,9 +1,13 @@
 {
-  "name": "1d1s",
+  "name": "algorithm",
   "description": "1일 1문제를 실천하자🔥",
+  "author": {
+    "name": "sangrimlee",
+    "email": "contact@sangrim.dev"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sangrimlee/1d1s"
+    "url": "https://github.com/sangrimlee/algorithm"
   },
   "private": true,
   "workspaces": [
@@ -13,18 +17,18 @@
   "license": "MIT",
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
     "format": "turbo run format",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "generate": "1d1s --dir=solution/src",
+    "generate": "algorithm --dir=solution/src",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@1d1s/cli": "*",
+    "@algorithm/cli": "*",
+    "@algorithm/eslint-config": "*",
     "eslint": "^8.29.0",
-    "eslint-config-1d1s": "*",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",

@@ -1,4 +1,4 @@
-import { TreeNode } from '@1d1s/lib';
+import { TreeNode } from '@algorithm/lib';
 
 /**
  * 637. Average of Levels in Binary Tree
