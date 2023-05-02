@@ -1,0 +1,22 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Home",
+    "display": "hidden"
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
+  },
+  "solutions": {
+    "type": "page",
+    "title": "Solution"
+  },
+  "about": {
+    "type": "page",
+    "title": "About",
+    "theme": {
+      "typesetting": "article"
+    }
+  }
+}

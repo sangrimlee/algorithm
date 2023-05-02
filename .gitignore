@@ -21,3 +21,8 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# environment
+.env
+.env.local
+.env.*.local
