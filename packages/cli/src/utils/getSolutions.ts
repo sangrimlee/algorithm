@@ -8,6 +8,7 @@ import { CodingSite, Solution } from '@/types';
 import { findFirstPattern } from './find';
 import { getCodingSite } from './typeGuard';
 
+const COMMENT_REGEX = /\/\*(\*(?!\/)|[^*])*\*\//;
 const URL_REGEX =
   /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)/;
 const TITLE_REGEX = /[0-9]+..*\n/;
@@ -17,8 +18,9 @@ async function getSolutionPaths(solutionDir: string) {
 }
 
 function parseSolutionFile(solutionFile: string) {
-  const url = findFirstPattern(solutionFile, URL_REGEX).trim();
-  const title = findFirstPattern(solutionFile, TITLE_REGEX)
+  const comment = findFirstPattern(solutionFile, COMMENT_REGEX);
+  const url = findFirstPattern(comment, URL_REGEX).trim();
+  const title = findFirstPattern(comment, TITLE_REGEX)
     .replace(/^[0-9. ]+/, '')
     .trim();
   return { url, title };
