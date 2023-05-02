@@ -9,7 +9,7 @@ import {
 } from '@/lib/generate';
 import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/lib/prompt';
 
-const program = new Command('Algorithm');
+const program = new Command('Code template Generator for @algorithm');
 
 program.option('--dir <dir>', 'Output directory').parse();
 
