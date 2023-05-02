@@ -21,7 +21,7 @@ export interface LeetCodeQuestion {
 
 export interface Solution {
   id: string;
-  source: string;
+  codingSite: CodingSite;
   url: string;
   title: string;
   relativePath: string;
