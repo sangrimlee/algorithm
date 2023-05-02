@@ -50,7 +50,10 @@ const config: DocsThemeConfig = {
     toggleButton: false,
   },
   footer: {
-    component: <Footer />,
+    text: <Footer />,
+  },
+  search: {
+    placeholder: 'Search',
   },
 };
 
