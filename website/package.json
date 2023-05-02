@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "description": "문제 풀이 공유 웹사이트",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --fix \"src/**/*.ts\"",
+    "format": "prettier --write  \"./src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@algorithm/eslint-config": "*",
+    "@algorithm/tsconfig": "*",
+    "eslint": "^8.29.0",
+    "prettier": "^2.8.1"
+  }
+}
