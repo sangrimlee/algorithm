@@ -5,6 +5,11 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "build#website": {
+      "dependsOn": ["^build"],
+      "env": ["NEXT_PUBLIC_URL"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
     "dev": {
       "cache": false
     },
