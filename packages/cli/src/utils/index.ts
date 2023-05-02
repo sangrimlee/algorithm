@@ -1,3 +1,4 @@
+export * from './capitalize';
 export * from './createDailyPath';
 export * from './createFileName';
 export * from './createFileWithContent';
