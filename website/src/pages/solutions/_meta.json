@@ -2,9 +2,9 @@
   "index": "Introduction",
   "leetcode": "LeetCode",
   "programmers": "Programmers",
-  "-- More": {
+  "-- Site": {
     "type": "separator",
-    "title": "More"
+    "title": "Site"
   },
   "leetcode-link": {
     "title": "LeetCode ↗",
