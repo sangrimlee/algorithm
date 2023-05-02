@@ -1,16 +1,29 @@
 {
   "name": "website",
+  "private": true,
   "version": "0.0.0",
   "description": "문제 풀이 공유 웹사이트",
-  "private": true,
   "license": "MIT",
   "scripts": {
-    "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write  \"./src/**/*.ts\""
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\""
+  },
+  "dependencies": {
+    "next": "^13.3.4",
+    "nextra": "^2.4.2",
+    "nextra-theme-docs": "^2.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@algorithm/eslint-config": "*",
     "@algorithm/tsconfig": "*",
+    "@types/node": "^18.11.12",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
     "eslint": "^8.29.0",
     "prettier": "^2.8.1"
   }
