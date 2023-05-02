@@ -1,4 +1,4 @@
-import { Heap } from '@1d1s/lib';
+import { Heap } from '@algorithm/lib';
 
 /**
  * 1962. Remove Stones to Minimize the Total

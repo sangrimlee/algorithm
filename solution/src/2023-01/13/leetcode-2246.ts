@@ -1,4 +1,4 @@
-import { range } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
 
 /**
  * 2246. Longest Path With Different Adjacent Characters

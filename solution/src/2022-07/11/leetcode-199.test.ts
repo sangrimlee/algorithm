@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { rightSideView } from './leetcode-199';
 
 describe('2022-07-11: LeetCode 199', () => {

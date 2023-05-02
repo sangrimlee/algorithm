@@ -1,5 +1,5 @@
 import { pathSum } from './leetcode-113';
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 
 describe('2022-09-24 LeetCode 1680', () => {
   test('Example 1', () => {

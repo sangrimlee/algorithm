@@ -9,7 +9,7 @@ import {
 } from '@/lib/generate';
 import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/lib/prompt';
 
-const program = new Command('1D1S Daily Challenge');
+const program = new Command('Algorithm');
 
 program.option('--dir <dir>', 'Output directory').parse();
 

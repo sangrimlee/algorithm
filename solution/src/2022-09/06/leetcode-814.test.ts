@@ -1,4 +1,4 @@
-import { compareTree, createTree } from '@1d1s/lib';
+import { compareTree, createTree } from '@algorithm/lib';
 import { pruneTree } from './leetcode-814';
 
 describe('2022-09-06: LeetCode 814', () => {

@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { maxAncestorDiff } from './leetcode-1026';
 
 describe('2022-12-09: Leetcode 1026', () => {

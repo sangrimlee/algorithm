@@ -1,5 +1,5 @@
-import { range } from '@1d1s/lib';
-import { TreeNode } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
+import { TreeNode } from '@algorithm/lib';
 
 /**
  * 872. Leaf-Similar Trees

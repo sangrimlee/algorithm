@@ -1,4 +1,4 @@
-import { createLinkedList } from '@1d1s/lib';
+import { createLinkedList } from '@algorithm/lib';
 import { isPalindrome } from './leetcode-234';
 
 describe('2022-09-02: LeetCode 234', () => {

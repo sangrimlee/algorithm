@@ -1,4 +1,4 @@
-import { ListNode } from '@1d1s/lib';
+import { ListNode } from '@algorithm/lib';
 import { getIntersectionNode } from './leetcode-160';
 
 describe('2022-06-06: LeetCode 160', () => {

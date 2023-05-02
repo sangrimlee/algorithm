@@ -1,4 +1,4 @@
-import { range } from '@1d1s/lib';
+import { range } from '@algorithm/lib';
 
 /**
  * 2256. Minimum Average Difference

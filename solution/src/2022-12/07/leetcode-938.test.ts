@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { rangeSumBST } from './leetcode-938';
 
 describe('2022-12-07: Leetcode 938', () => {

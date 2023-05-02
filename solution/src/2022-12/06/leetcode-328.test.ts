@@ -1,4 +1,4 @@
-import { createLinkedList, linkedListToArr } from '@1d1s/lib';
+import { createLinkedList, linkedListToArr } from '@algorithm/lib';
 import { oddEvenList } from './leetcode-328';
 
 describe('2022-12-06: Leetcode 328', () => {

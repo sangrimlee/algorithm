@@ -1,4 +1,4 @@
-import { Heap } from '@1d1s/lib';
+import { Heap } from '@algorithm/lib';
 
 /**
  * 1834. Single-Threaded CPU

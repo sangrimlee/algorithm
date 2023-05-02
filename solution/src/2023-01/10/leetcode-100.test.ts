@@ -1,4 +1,4 @@
-import { createTree } from '@1d1s/lib';
+import { createTree } from '@algorithm/lib';
 import { isSameTree } from './leetcode-100';
 
 describe('2023-01-10: LeetCode 100', () => {

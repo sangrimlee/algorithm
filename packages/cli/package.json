@@ -1,15 +1,15 @@
 {
-  "name": "@1d1s/cli",
-  "description": "Coding Template Generator",
+  "name": "@algorithm/cli",
+  "description": "Template generation cli",
   "version": "1.0.2",
   "license": "MIT",
   "bin": {
-    "1d1s": "./dist/index.js"
+    "algorithm": "./bin/algorithm.cjs"
   },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "TIMING=1 eslint --fix \"src/**/*.ts\"",
+    "lint": "eslint --fix \"src/**/*.ts\"",
     "format": "prettier --write  \"./src/**/*.ts\""
   },
   "dependencies": {
@@ -20,11 +20,11 @@
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
-    "@1d1s/tsconfig": "*",
+    "@algorithm/eslint-config": "*",
+    "@algorithm/tsconfig": "*",
     "@types/inquirer": "^8.2.5",
     "@types/node": "^18.11.12",
     "eslint": "^8.29.0",
-    "eslint-config-1d1s": "*",
     "ts-node": "^10.9.1",
     "tsup": "^6.5.0",
     "typescript": "^4.9.4"

@@ -1,4 +1,4 @@
 {
   "extends": "@algorithm/tsconfig/node16.json",
-  "include": ["src", "jest.config.js"]
+  "include": ["src"]
 }

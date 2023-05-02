@@ -1,4 +1,4 @@
-import { createLinkedList } from '@1d1s/lib';
+import { createLinkedList } from '@algorithm/lib';
 
 import { middleNode } from './leetcode-876';
 
