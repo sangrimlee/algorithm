@@ -1,4 +1,4 @@
-import { removeDuplicates } from './leecode-1047';
+import { removeDuplicates } from './leetcode-1047';
 
 describe('2022-11-10: Leecode 1047', () => {
   test('Example 1', () => {
