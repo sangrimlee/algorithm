@@ -1,4 +1,4 @@
-import { getLeetCodeQuestionBySlug } from '@/api';
+import { getLeetCodeQuestionBySlug, getLeetCodeSlugById } from '@/api';
 import { createSolutionTemplate, createTestTemplate } from '@/lib/template';
 import {
   createDailyPath,
@@ -10,10 +10,8 @@ import {
 
 import { CodingSite } from '@/types';
 
-import LeetCodeTitleSlugById from '@/data/LeetCode.json';
-
-export async function generateLeetCode(outputDir: string, id: keyof typeof LeetCodeTitleSlugById) {
-  const titleSlug = LeetCodeTitleSlugById[id];
+export async function generateLeetCode(outputDir: string, id: string) {
+  const titleSlug = await getLeetCodeSlugById(id);
   const { title, codeSnippet } = await getLeetCodeQuestionBySlug(titleSlug);
   const date = getCurrentDate();
   const dailyDir = createDailyPath(outputDir, date);
