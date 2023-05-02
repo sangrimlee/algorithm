@@ -5,6 +5,7 @@ export default defineConfig((options) => {
     minify: !options.watch,
     entry: {
       algorithm: 'src/algorithm.ts',
+      markdown: 'src/markdown.ts',
     },
     format: ['cjs'],
     clean: true,

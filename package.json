@@ -22,7 +22,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "generate": "algorithm --dir=solution/src",
+    "generate:code": "algorithm --dir=solution/src",
+    "generate:md": "markdown --dir=solution/src",
     "prepare": "husky install"
   },
   "devDependencies": {

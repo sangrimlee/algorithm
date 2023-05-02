@@ -4,7 +4,8 @@
   "version": "1.0.2",
   "license": "MIT",
   "bin": {
-    "algorithm": "./bin/algorithm.cjs"
+    "algorithm": "./bin/algorithm.cjs",
+    "markdown": "./bin/markdown.cjs"
   },
   "scripts": {
     "build": "tsup",
