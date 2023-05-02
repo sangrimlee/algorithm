@@ -18,3 +18,11 @@ export interface LeetCodeQuestion {
     code: string;
   }>;
 }
+
+export interface Solution {
+  id: string;
+  codingSite: CodingSite;
+  url: string;
+  title: string;
+  relativePath: string;
+}
