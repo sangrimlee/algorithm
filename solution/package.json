@@ -12,19 +12,18 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@algorithm/lib": "*"
+    "@algorithm/lib": "workspace:*"
   },
   "devDependencies": {
-    "@algorithm/eslint-config": "*",
-    "@algorithm/tsconfig": "*",
-    "@types/jest": "^29.2.4",
-    "@types/node": "^18.11.12",
-    "cliui": "^8.0.1",
-    "eslint": "^8.29.0",
-    "jest": "^29.3.1",
-    "ts-jest": "^29.0.3",
+    "@algorithm/eslint-config": "workspace:*",
+    "@algorithm/tsconfig": "workspace:*",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.3",
+    "eslint": "^8.39.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "turbo": "^1.6.3",
-    "typescript": "^4.9.4"
+    "turbo": "^1.9.3",
+    "typescript": "^5.0.4"
   }
 }
