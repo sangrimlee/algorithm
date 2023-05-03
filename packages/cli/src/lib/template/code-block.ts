@@ -13,7 +13,7 @@ export function createCodeBlockTemplate(
 ) {
   const isOn = (flag: boolean, ret: string) => (flag ? ret : '');
 
-  return dedent`\`\`\`${language} filename=${fileName} ${isOn(copy, 'copy')} ${isOn(
+  return dedent`\`\`\`${language} filename="${fileName}" ${isOn(copy, 'copy')} ${isOn(
     showLineNumbers,
     'showLineNumbers',
   )}
