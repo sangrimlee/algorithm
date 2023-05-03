@@ -2,6 +2,7 @@
   "name": "@algorithm/lib",
   "description": "문제 풀이를 위한 유틸리티 라이브러리",
   "version": "0.0.0",
+  "private": true,
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,8 +25,5 @@
     "tsup": "^6.5.0",
     "turbo": "^1.6.3",
     "typescript": "^4.9.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

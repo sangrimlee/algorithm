@@ -3,6 +3,7 @@
   "description": "Template generation cli",
   "version": "1.0.3",
   "license": "MIT",
+  "private": true,
   "bin": {
     "algorithm": "./bin/algorithm.cjs",
     "markdown": "./bin/markdown.cjs"
@@ -30,8 +31,5 @@
     "ts-node": "^10.9.1",
     "tsup": "^6.5.0",
     "typescript": "^4.9.4"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

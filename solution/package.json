@@ -3,6 +3,7 @@
   "description": "문제 풀이",
   "version": "0.0.0",
   "license": "MIT",
+  "private": true,
   "main": "src/index.ts",
   "scripts": {
     "lint": "eslint --fix \"src/**/*.ts\"",
