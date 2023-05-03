@@ -1,6 +1,6 @@
-import { CodingSite } from '@/types';
+import { CodingSite } from './enums';
 
-export function getCodingSite(site: string): CodingSite {
+export function isCodingSite(site: string): CodingSite {
   if (/leetcode/i.test(site)) {
     return CodingSite.LeetCode;
   }

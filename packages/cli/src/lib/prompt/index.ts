@@ -1,3 +1,3 @@
-export * from './choiceGenerateTypePrompt';
-export * from './leetCodePrompt';
-export * from './programmersPrompt';
+export * from './generate-type';
+export * from './leetcode';
+export * from './programmers';

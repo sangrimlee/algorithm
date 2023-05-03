@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { parseProgrammers } from '@/lib/parse';
 
-export const getProgrammersProblem = async (id: string) => {
+export const getProgrammersProblemById = async (id: string) => {
   try {
     const { data: html } = await axios.get<string>(
       `https://school.programmers.co.kr/learn/courses/30/lessons/${id}`,

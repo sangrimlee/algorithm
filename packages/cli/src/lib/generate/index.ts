@@ -1,4 +1,3 @@
-export * from './generateLeetCode';
-export * from './generateLeetCodeDailyChallenge';
-export * from './generateProgrammers';
-export * from './generateREADME';
+export { generateLeetCode, generateLeetCodeDailyChallenge } from './leetcode';
+export { generateProgrammers } from './programmers';
+export { generateREADME } from './readme';
