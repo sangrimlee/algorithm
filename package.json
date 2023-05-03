@@ -23,7 +23,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "generate:code": "algorithm -d solution/src",
+    "generate:code": "algorithm --dir solution/src",
     "generate:readme": "markdown -d solution/src -o solution",
     "prepare": "husky install"
   },
