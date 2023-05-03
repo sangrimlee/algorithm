@@ -1,0 +1,20 @@
+# Intersection of Two Linked Lists
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { ListNode } from '@algorithm/lib';
+
+
+export function getIntersectionNode(
+  headA: ListNode | null,
+  headB: ListNode | null,
+): ListNode | null {
+  let [nodeA, nodeB] = [headA, headB];
+  while (nodeA !== nodeB) {
+    nodeA = nodeA ? nodeA.next : headB;
+    nodeB = nodeB ? nodeB.next : headA;
+  }
+  return nodeA;
+}
+```

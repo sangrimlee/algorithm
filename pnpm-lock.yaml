@@ -190,6 +190,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@algorithm/cli':
+        specifier: workspace:*
+        version: link:../packages/cli
       '@algorithm/eslint-config':
         specifier: workspace:*
         version: link:../packages/eslint-config

@@ -1,0 +1,16 @@
+# Find Target Indices After Sorting Array
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function targetIndices(nums: number[], target: number): number[] {
+  return nums
+    .sort((a, b) => a - b)
+    .reduce((targets, num, index) => {
+      if (target === num) {
+        targets.push(index);
+      }
+      return targets;
+    }, [] as number[]);
+}
+```

@@ -1,0 +1,28 @@
+# Number of Dice Rolls With Target Sum
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function numRollsToTarget(n: number, k: number, target: number): number {
+  const MOD = 10 ** 9 + 7;
+  const memo = new Map<string, number>();
+  const key = (n: number, target: number) => `${n}-${target}`;
+
+  function dp(n: number, target: number) {
+    if (n === 0) {
+      return 0 < target ? 0 : 1;
+    }
+    if (memo.has(key(n, target))) {
+      return memo.get(key(n, target)) || 0;
+    }
+    let ret = 0;
+    for (let i = Math.max(0, target - k); i < target; i++) {
+      ret += dp(n - 1, i) % MOD;
+    }
+    memo.set(key(n, target), ret % MOD);
+    return ret % MOD;
+  }
+
+  return dp(n, target) % MOD;
+}
+```

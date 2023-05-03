@@ -1,0 +1,9 @@
+# Detect Capital
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function detectCapitalUse(word: string): boolean {
+  return /^[A-Z]+$|^[A-Z]?[a-z]+$/.test(word);
+}
+```

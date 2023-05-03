@@ -1,0 +1,50 @@
+# Unique Paths III
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { range } from '@algorithm/lib';
+
+
+export function uniquePathsIII(grid: number[][]): number {
+  const [n, m] = [grid.length, grid[0].length];
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+
+  const dfs = (y: number, x: number, empty: number) => {
+    if (y < 0 || n <= y || x < 0 || m <= x || grid[y][x] === -1) {
+      return 0;
+    }
+
+    if (grid[y][x] === 2) {
+      return empty === -1 ? 1 : 0;
+    }
+
+    let ret = 0;
+    grid[y][x] = -1;
+    for (const [dy, dx] of directions) {
+      ret += dfs(y + dy, x + dx, empty - 1);
+    }
+    grid[y][x] = 0;
+
+    return ret;
+  };
+
+  let [sy, sx, empty] = [0, 0, 0];
+  for (const y of range(n)) {
+    for (const x of range(m)) {
+      if (grid[y][x] === 1) {
+        [sy, sx] = [y, x];
+      } else if (grid[y][x] === 0) {
+        empty += 1;
+      }
+    }
+  }
+
+  return dfs(sy, sx, empty);
+}
+```

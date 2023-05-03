@@ -1,0 +1,13 @@
+# Count Complete Tree Nodes
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { TreeNode } from '@algorithm/lib';
+
+
+export function countNodes(root: TreeNode | null): number {
+  if (root === null) return 0;
+  return countNodes(root.left) + countNodes(root.right) + 1;
+}
+```
