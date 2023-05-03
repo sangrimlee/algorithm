@@ -1,14 +1,11 @@
+import path from 'node:path';
+
 import { getLeetCodeQuestionBySlug, getLeetCodeSlugById } from '@/api';
 import { createSolutionTemplate, createTestTemplate } from '@/lib/template';
-import {
-  createDailyPath,
-  createFileName,
-  createFileWithContent,
-  createPathIfNotExist,
-  getCurrentDate,
-} from '@/utils';
+import { createDailyPath, createFileName, getCurrentDate } from '@/utils';
 
 import { CodingSite } from '@/types';
+import { ensureWriteFile } from '@/utils/fs';
 
 export async function generateLeetCode(outputDir: string, id: string) {
   const titleSlug = await getLeetCodeSlugById(id);
@@ -17,16 +14,13 @@ export async function generateLeetCode(outputDir: string, id: string) {
   const dailyDir = createDailyPath(outputDir, date);
   const { fileName, testFileName } = createFileName(id, CodingSite.LeetCode);
 
-  createPathIfNotExist(dailyDir);
   await Promise.all([
-    createFileWithContent(
-      dailyDir,
-      fileName,
+    ensureWriteFile(
+      path.join(dailyDir, fileName),
       createSolutionTemplate(CodingSite.LeetCode, id, title, titleSlug, codeSnippet),
     ),
-    createFileWithContent(
-      dailyDir,
-      testFileName,
+    ensureWriteFile(
+      path.join(dailyDir, testFileName),
       createTestTemplate(CodingSite.LeetCode, date, id),
     ),
   ]);

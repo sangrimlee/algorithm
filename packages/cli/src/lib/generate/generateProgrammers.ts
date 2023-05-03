@@ -1,12 +1,8 @@
+import path from 'node:path';
 import { getProgrammersProblem } from '@/api';
 import { createSolutionTemplate, createTestTemplate } from '@/lib/template';
-import {
-  createDailyPath,
-  createFileName,
-  createFileWithContent,
-  createPathIfNotExist,
-  getCurrentDate,
-} from '@/utils';
+import { createDailyPath, createFileName, getCurrentDate } from '@/utils';
+import { ensureWriteFile } from '@/utils/fs';
 
 import { CodingSite } from '@/types';
 
@@ -15,17 +11,14 @@ export async function generateProgrammers(outputDir: string, id: string) {
   const date = getCurrentDate();
   const dailyDir = createDailyPath(outputDir, date);
   const { fileName, testFileName } = createFileName(id, CodingSite.Programmers);
-  createPathIfNotExist(dailyDir);
 
   await Promise.all([
-    createFileWithContent(
-      dailyDir,
-      fileName,
+    ensureWriteFile(
+      path.join(dailyDir, fileName),
       createSolutionTemplate(CodingSite.Programmers, id, title, id),
     ),
-    createFileWithContent(
-      dailyDir,
-      testFileName,
+    ensureWriteFile(
+      path.join(dailyDir, testFileName),
       createTestTemplate(CodingSite.Programmers, date, id, testCases),
     ),
   ]);
