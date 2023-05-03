@@ -1,0 +1,13 @@
+# Sign of the Product of an Array
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function arraySign(nums: number[]): number {
+  const sign = (num: number) => {
+    return num === 0 ? 0 : Math.sign(num);
+  };
+
+  return sign(nums.reduce((prev, curr) => prev * sign(curr), 1));
+}
+```

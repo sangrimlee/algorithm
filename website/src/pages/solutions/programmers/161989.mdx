@@ -1,0 +1,19 @@
+# 덧칠하기
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function overPainting(n: number, m: number, section: number[]): number {
+  let totalSection = 0;
+  let lastIndex = -1;
+  for (const i of section) {
+    if (i <= lastIndex) {
+      continue;
+    }
+    lastIndex = i + m - 1;
+    totalSection += 1;
+  }
+
+  return totalSection;
+}
+```

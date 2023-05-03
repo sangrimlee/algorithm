@@ -1,0 +1,27 @@
+# Odd Even Linked List
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { ListNode } from '@algorithm/lib';
+
+
+export function oddEvenList(head: ListNode | null): ListNode | null {
+  if (head === null) {
+    return null;
+  }
+
+  const [oddHead, evenHead] = [head, head.next];
+  let [oddNode, evenNode] = [oddHead, evenHead];
+
+  while (evenNode !== null && evenNode.next !== null) {
+    oddNode.next = evenNode.next;
+    oddNode = oddNode.next;
+    evenNode.next = oddNode.next;
+    evenNode = evenNode.next;
+  }
+  oddNode.next = evenHead;
+
+  return oddHead;
+}
+```

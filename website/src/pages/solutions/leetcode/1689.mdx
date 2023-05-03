@@ -1,0 +1,9 @@
+# Partitioning Into Minimum Number Of Deci-Binary Numbers
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function minPartitions(n: string): number {
+  return n.split('').reduce((prev, curr) => (prev < +curr ? +curr : prev), 0);
+}
+```

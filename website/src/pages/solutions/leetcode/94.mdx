@@ -1,0 +1,24 @@
+# Binary Tree Inorder Traversal
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { TreeNode } from '@algorithm/lib';
+
+
+export function inorderTraversal(root: TreeNode | null): number[] {
+  const answer: number[] = [];
+
+  function inorder(node: TreeNode | null) {
+    if (node === null) {
+      return;
+    }
+    inorder(node.left);
+    answer.push(node.val);
+    inorder(node.right);
+  }
+
+  inorder(root);
+  return answer;
+}
+```

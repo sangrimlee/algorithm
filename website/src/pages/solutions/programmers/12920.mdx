@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript filename="solution.ts" copy 
 function available(cores: number[], totalTime: number): number {
   return cores.reduce((prev, curr) => prev + Math.floor(totalTime / curr), 0);
 }

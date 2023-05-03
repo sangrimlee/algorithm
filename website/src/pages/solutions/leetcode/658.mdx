@@ -1,0 +1,15 @@
+# Find K Closest Elements
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function findClosestElements(arr: number[], k: number, x: number): number[] {
+  if (arr.length === k) {
+    return arr;
+  }
+  return arr
+    .sort((a, b) => Math.abs(a - x) - Math.abs(b - x))
+    .slice(0, k)
+    .sort((a, b) => a - b);
+}
+```
