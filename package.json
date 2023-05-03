@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "algorithm",
   "description": "프로그래밍 및 알고리즘 문제 풀이 저장소",
   "author": {
@@ -9,12 +10,6 @@
     "type": "git",
     "url": "https://github.com/sangrimlee/algorithm"
   },
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "solution",
-    "website"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "turbo run build",
@@ -28,13 +23,12 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@algorithm/cli": "*",
-    "@algorithm/eslint-config": "*",
-    "eslint": "^8.29.0",
-    "husky": "^8.0.2",
-    "lint-staged": "^13.1.0",
-    "prettier": "^2.8.1",
-    "turbo": "^1.6.3"
-  },
-  "packageManager": "yarn@1.22.19"
+    "@algorithm/cli": "workspace:*",
+    "@algorithm/eslint-config": "workspace:*",
+    "eslint": "^8.39.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "turbo": "^1.9.3"
+  }
 }
