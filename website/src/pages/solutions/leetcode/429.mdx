@@ -1,0 +1,22 @@
+# N-ary Tree Level Order Traversal
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { NArrayTreeNode } from '@algorithm/lib';
+
+
+export function levelOrder(root: NArrayTreeNode | null): number[][] {
+  if (root === null) {
+    return [];
+  }
+
+  const answer: number[][] = [];
+  let currentNodes = [root];
+  while (0 < currentNodes.length) {
+    answer.push(currentNodes.map((currentNode) => currentNode.val));
+    currentNodes = currentNodes.flatMap((currentNode) => currentNode.children);
+  }
+  return answer;
+}
+```

@@ -26,3 +26,17 @@ export async function ensureWriteFile(filePath: string, data: string) {
 export function readFile(filePath: string) {
   return fs.readFile(filePath, 'utf-8');
 }
+
+/**
+ * 주어진 경로에 주어진 객체 형식의 JSON 파일 생성
+ *
+ * @param filePath 생성할 파일 경로
+ * @param data 파일 데이터
+ */
+export async function ensureWriteJson<O extends object>(filePath: string, object: O) {
+  const dirPath = path.dirname(filePath);
+  if (existsSync(dirPath)) {
+    await fs.mkdir(dirPath, { recursive: true });
+  }
+  await fs.writeFile(filePath, JSON.stringify(object, null, 2), 'utf-8');
+}

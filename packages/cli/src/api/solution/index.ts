@@ -1,2 +1,2 @@
 export { getSolutions } from './solutions';
-export { getSolutionGroupByCodingSite } from './group-by-coding-site';
+export { groupByCodingSite } from './group-by-coding-site';

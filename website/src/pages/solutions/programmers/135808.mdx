@@ -1,0 +1,15 @@
+# 과일 장수
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function fruitSeller(k: number, m: number, scores: number[]) {
+  const sortedScores = [...scores].sort((a, b) => b - a);
+
+  let answer = 0;
+  for (let i = m - 1; i < sortedScores.length; i += m) {
+    answer += sortedScores[i] * m;
+  }
+  return answer;
+}
+```

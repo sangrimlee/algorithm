@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\""
+    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\"",
+    "generate:page": "markdown --dir=../solution/src --outdir=./src/pages/solutions --format=page"
   },
   "dependencies": {
     "next": "^13.3.4",
@@ -19,6 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@algorithm/cli": "workspace:*",
     "@algorithm/eslint-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/node": "^18.16.3",

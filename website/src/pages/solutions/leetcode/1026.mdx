@@ -1,0 +1,35 @@
+# Maximum Difference Between Node and Ancestor
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+import { TreeNode } from '@algorithm/lib';
+
+
+export function maxAncestorDiff(root: TreeNode | null): number {
+  if (root === null) {
+    return 0;
+  }
+
+  function findAncestorDiff(
+    node: TreeNode | null,
+    maxAncestor: number,
+    minAncestor: number,
+  ): number {
+    if (node === null) {
+      return 0;
+    }
+
+    const maxNextAncestor = Math.max(maxAncestor, node.val);
+    const minNextAncestor = Math.min(minAncestor, node.val);
+    const maxDiff = Math.max(Math.abs(maxAncestor - node.val), Math.abs(minAncestor - node.val));
+    return Math.max(
+      maxDiff,
+      findAncestorDiff(node.left, maxNextAncestor, minNextAncestor),
+      findAncestorDiff(node.right, maxNextAncestor, minNextAncestor),
+    );
+  }
+
+  return findAncestorDiff(root, root.val, root.val);
+}
+```

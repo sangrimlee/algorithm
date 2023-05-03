@@ -24,13 +24,14 @@ export async function parseSolution(
   outDir: string,
 ): Promise<Solution> {
   const fileName = path.basename(solutionPath);
-
+  const code = solutionFile.replace(COMMENT_REGEX, '').trim();
   const { url, title } = parseSolutionFile(solutionFile);
   const [source, id] = fileName.replace(/.ts$/, '').split('-');
   const relativePath = path.relative(outDir, solutionPath);
 
   return {
     id,
+    code,
     codingSite: isCodingSite(source),
     url,
     title,

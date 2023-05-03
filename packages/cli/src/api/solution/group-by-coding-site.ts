@@ -1,9 +1,6 @@
 import { CodingSite, Solution } from '@/types';
-import { getSolutions } from './solutions';
 
-export async function getSolutionGroupByCodingSite(solutionDir: string, outDir: string) {
-  const solutions = await getSolutions(solutionDir, outDir);
-
+export function groupByCodingSite(solutions: Solution[]) {
   const groups = new Map<CodingSite, Solution[]>();
   for (const solution of solutions) {
     const group = groups.get(solution.codingSite);

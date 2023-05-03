@@ -1,0 +1,21 @@
+# The Number of Weak Characters in the Game
+
+## Solution
+
+```typescript filename="solution.ts" copy 
+export function numberOfWeakCharacters(properties: number[][]): number {
+  let answer = 0;
+  const stack: number[] = [];
+  properties.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : b[1] - a[1]));
+
+  for (const [, defense] of properties) {
+    while (0 < stack.length && stack[stack.length - 1] < defense) {
+      stack.pop();
+      answer += 1;
+    }
+    stack.push(defense);
+  }
+
+  return answer;
+}
+```
