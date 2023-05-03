@@ -1,2 +1,1 @@
-export * from './query';
-export * from './query';
+export { query } from './query';

@@ -1,3 +1,3 @@
-export * from './createSolutionTemplate';
-export * from './createTestTemplate';
-export * from './createREADMETemplate';
+export { createREADMETemplate } from './readme';
+export { createSolutionTemplate } from './solution';
+export { createTestTemplate, createTestCaseTemplate } from './test';

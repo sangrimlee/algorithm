@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { getProgrammersProblem } from '@/api';
+import { getProgrammersProblemById } from '@/api/programmers';
 import { EXTNAME } from '@/constants';
 import { createSolutionTemplate, createTestTemplate } from '@/lib/template';
 
@@ -11,7 +11,7 @@ import { kebabcase } from '@/utils/naming';
 import { CodingSite } from '@/types';
 
 export async function generateProgrammers(outputDir: string, id: string) {
-  const { title, testCases } = await getProgrammersProblem(id);
+  const { title, testCases } = await getProgrammersProblemById(id);
   const currentDate = new Date();
   const datePath = getDatePath(currentDate, outputDir);
   const dateString = getDateString(currentDate);
