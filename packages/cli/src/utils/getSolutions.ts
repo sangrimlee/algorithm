@@ -58,7 +58,7 @@ function groupByCodingSite(solutions: Solution[]) {
 }
 
 export async function getSolutions(solutionDir: string, outDir: string) {
-  const solutionPaths = await getSolutionPaths(path.join(process.cwd(), solutionDir));
+  const solutionPaths = await getSolutionPaths(solutionDir);
   const solutions = await Promise.all(
     solutionPaths.map((solutionPath) => parseSolution(solutionPath, outDir)),
   );

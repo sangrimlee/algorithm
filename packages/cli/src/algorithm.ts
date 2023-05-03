@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import path from 'node:path';
 
 import { Command } from 'commander';
 
@@ -11,11 +12,11 @@ import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/
 
 const program = new Command('Code template Generator for @algorithm');
 
-program.option('--dir <dir>', 'Output directory').parse();
+program.option('-d, --dir <dir>', 'Output directory', '.').parse();
 
 const options = program.opts();
 
-const outputDir = options.dir ? options.dir : '.';
+const outputDir = path.join(process.cwd(), options.dir);
 
 async function main() {
   const generateType = await choiceGenereateTypePrompt();
