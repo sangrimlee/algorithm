@@ -4,6 +4,7 @@ import path from 'node:path';
 import { Command } from 'commander';
 
 import { generateREADME } from './lib/generate';
+import { generatePage } from './lib/generate/page';
 
 const program = new Command('Markdown Generator for @algorithm');
 
@@ -24,7 +25,7 @@ function main() {
   }
 
   if (/^page$/i.test(options.format)) {
-    return Promise.reject('Not Implemented');
+    return generatePage(solutionDir, outDir);
   }
 
   return Promise.reject('format should be PAGE or README.');
