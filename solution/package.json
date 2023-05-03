@@ -19,6 +19,7 @@
     "@algorithm/tsconfig": "*",
     "@types/jest": "^29.2.4",
     "@types/node": "^18.11.12",
+    "cliui": "^8.0.1",
     "eslint": "^8.29.0",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",

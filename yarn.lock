@@ -1818,7 +1818,16 @@ clipboardy@1.2.2:
     arch "^2.1.0"
     execa "^0.8.0"
 
-cliui@^8.0.1, "cliui@github:isaacs/cliui#isaacs/esm-cjs-consistency":
+cliui@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/cliui/-/cliui-8.0.1.tgz#0c04b075db02cbfe60dc8e6cf2f5486b1a3608aa"
+  integrity sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.1"
+    wrap-ansi "^7.0.0"
+
+"cliui@github:isaacs/cliui#isaacs/esm-cjs-consistency":
   version "8.0.1"
   resolved "https://codeload.github.com/isaacs/cliui/tar.gz/9f97090165675fdda63a79c29bc36bb1033506b0"
   dependencies:
