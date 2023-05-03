@@ -1,1 +1,2 @@
-export * from './url.constant';
+export * from './url';
+export * from './extname';
