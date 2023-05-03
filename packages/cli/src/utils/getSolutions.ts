@@ -3,10 +3,9 @@ import path from 'node:path';
 
 import { glob } from 'glob';
 
-import { CodingSite, Solution } from '@/types';
+import { CodingSite, Solution, isCodingSite } from '@/types';
 
-import { findFirstPattern } from './find';
-import { getCodingSite } from './typeGuard';
+import { findFirstMatch } from './regex';
 
 const COMMENT_REGEX = /\/\*(\*(?!\/)|[^*])*\*\//;
 const URL_REGEX =
@@ -18,9 +17,9 @@ async function getSolutionPaths(solutionDir: string) {
 }
 
 function parseSolutionFile(solutionFile: string) {
-  const comment = findFirstPattern(solutionFile, COMMENT_REGEX);
-  const url = findFirstPattern(comment, URL_REGEX).trim();
-  const title = findFirstPattern(comment, TITLE_REGEX)
+  const comment = findFirstMatch(solutionFile, COMMENT_REGEX);
+  const url = findFirstMatch(comment, URL_REGEX).trim();
+  const title = findFirstMatch(comment, TITLE_REGEX)
     .replace(/^[0-9. ]+/, '')
     .trim();
   return { url, title };
@@ -35,7 +34,7 @@ async function parseSolution(solutionPath: string, outDir: string): Promise<Solu
 
   return {
     id,
-    codingSite: getCodingSite(source),
+    codingSite: isCodingSite(source),
     url,
     title,
     relativePath,
