@@ -18,6 +18,7 @@ export interface LeetCodeQuestion {
 
 export interface Solution {
   id: string;
+  code: string;
   codingSite: CodingSite;
   url: string;
   title: string;
