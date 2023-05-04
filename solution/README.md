@@ -69,6 +69,7 @@
 | 452  | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)                                                  | [풀이](src/2023-01/05/leetcode-452.ts)  |
 | 462  | [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                                                     | [풀이](src/2022-06/30/leetcode-462.ts)  |
 | 472  | [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                                                                  | [풀이](src/2023-01/27/leetcode-472.ts)  |
+| 495  | [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                                                                        | [풀이](src/2023-05/04/leetcode-495.ts)  |
 | 509  | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                                                                     | [풀이](src/2022-07/06/leetcode-509.ts)  |
 | 520  | [Detect Capital](https://leetcode.com/problems/detect-capital)                                                                                                          | [풀이](src/2023-01/02/leetcode-520.ts)  |
 | 557  | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                                                   | [풀이](src/2022-09/22/leetcode-557.ts)  |
@@ -77,6 +78,7 @@
 | 606  | [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)                                                                   | [풀이](src/2022-09/07/leetcode-606.ts)  |
 | 630  | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)                                                                                               | [풀이](src/2022-06/23/leetcode-630.ts)  |
 | 637  | [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                                                                     | [풀이](src/2022-09/02/leetcode-637.ts)  |
+| 649  | [Dota2 Senate](https://leetcode.com/problems/dota2-senate)                                                                                                              | [풀이](src/2023-05/04/leetcode-649.ts)  |
 | 658  | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                                                                       | [풀이](src/2022-09/29/leetcode-658.ts)  |
 | 665  | [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)                                                                                             | [풀이](src/2022-06/25/leetcode-665.ts)  |
 | 718  | [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                                               | [풀이](src/2022-09/20/leetcode-718.ts)  |
