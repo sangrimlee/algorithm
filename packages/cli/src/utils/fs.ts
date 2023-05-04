@@ -11,7 +11,7 @@ import path from 'node:path';
  */
 export async function ensureWriteFile(filePath: string, data: string) {
   const dirPath = path.dirname(filePath);
-  if (existsSync(dirPath)) {
+  if (!existsSync(dirPath)) {
     await fs.mkdir(dirPath, { recursive: true });
   }
   await fs.writeFile(filePath, data, 'utf-8');
@@ -35,7 +35,7 @@ export function readFile(filePath: string) {
  */
 export async function ensureWriteJson<O extends object>(filePath: string, object: O) {
   const dirPath = path.dirname(filePath);
-  if (existsSync(dirPath)) {
+  if (!existsSync(dirPath)) {
     await fs.mkdir(dirPath, { recursive: true });
   }
   await fs.writeFile(filePath, JSON.stringify(object, null, 2), 'utf-8');
