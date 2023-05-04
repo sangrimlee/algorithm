@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function furthestBuilding(heights: number[], bricks: number, ladders: number): number {
   const heap = new Heap();
   for (let currentIndex = 0; currentIndex < heights.length - 1; currentIndex++) {

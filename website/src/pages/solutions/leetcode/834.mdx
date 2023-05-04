@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function sumOfDistancesInTree(n: number, edges: number[][]): number[] {
   const tree: number[][] = new Array(n).fill(undefined).map(() => []);
   for (const [a, b] of edges) {

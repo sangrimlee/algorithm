@@ -2,9 +2,8 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 import { range } from '@algorithm/lib';
-
 
 export function possibleBipartition(n: number, dislikes: number[][]): boolean {
   const colors: number[] = new Array(n + 1).fill(0); // 0: None, 1 or -1

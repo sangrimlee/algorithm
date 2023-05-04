@@ -2,9 +2,8 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 type CharCount = { [key: string]: number };
-
 
 export function countSubTrees(n: number, edges: number[][], labels: string): number[] {
   const answer = new Array<number>(n).fill(0);

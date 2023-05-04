@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function findLength(nums1: number[], nums2: number[]): number {
   const [N, M] = [nums1.length, nums2.length];
   const dp = new Array(N + 1).fill(undefined).map(() => new Array(M + 1).fill(0));

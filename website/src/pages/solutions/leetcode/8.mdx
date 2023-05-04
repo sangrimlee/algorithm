@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 const MAX_NUMBER = 2 ** 31 - 1;
 const MIN_NUMBER = -(2 ** 31);
 
@@ -27,7 +27,6 @@ function convert(s: string) {
   const num = parseInt(result[0]);
   return num;
 }
-
 
 export function myAtoi(s: string): number {
   return clamp(convert(removeWhiteSpaces(s)));

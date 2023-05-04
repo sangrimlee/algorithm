@@ -2,9 +2,8 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 import { Heap } from '@algorithm/lib';
-
 
 export function minStoneSum(piles: number[], k: number): number {
   const heap = new Heap<number>((a, b) => b - a);

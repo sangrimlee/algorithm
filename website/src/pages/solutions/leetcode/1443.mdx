@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function minTime(n: number, edges: number[][], hasApple: boolean[]): number {
   const tree = new Array(n).fill(undefined).map(() => new Array<number>());
   for (const [a, b] of edges) {

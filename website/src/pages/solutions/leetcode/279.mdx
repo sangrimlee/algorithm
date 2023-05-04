@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function numSquares(n: number): number {
   const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
   for (let i = 1; i <= Math.sqrt(n); i++) {

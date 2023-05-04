@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function minPathSum(grid: number[][]): number {
   const [N, M] = [grid.length, grid[0].length];
   const memo: number[][] = new Array(N).fill(undefined).map(() => new Array(M).fill(-1));

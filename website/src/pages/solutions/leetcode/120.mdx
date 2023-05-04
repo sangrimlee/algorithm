@@ -2,7 +2,7 @@
 
 ## Solution
 
-```typescript filename="solution.ts" copy 
+```typescript filename="solution.ts" copy
 export function minimumTotal(triangle: number[][]): number {
   const height = triangle.length;
   const dp = new Array(height).fill(undefined).map((_, i) => new Array(i + 1).fill(undefined));
