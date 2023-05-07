@@ -158,6 +158,7 @@
 | 1859 | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)                                                                                             | [풀이](src/2022-09/29/leetcode-1859.ts) |
 | 1926 | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)                                                                 | [풀이](src/2022-11/21/leetcode-1926.ts) |
 | 1962 | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [풀이](src/2022-12/28/leetcode-1962.ts) |
+| 1964 | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [풀이](src/2023-05/07/leetcode-1964.ts) |
 | 1971 | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [풀이](src/2022-12/19/leetcode-1971.ts) |
 | 1996 | [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)                                                   | [풀이](src/2022-09/09/leetcode-1996.ts) |
 | 2089 | [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/)                                                       | [풀이](src/2022-09/28/leetcode-2089.ts) |
