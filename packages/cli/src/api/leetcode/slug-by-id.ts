@@ -52,7 +52,9 @@ export const getLeetCodeAllProblem = async () => {
 
 export const getLeetCodeSlugById = async (id: string) => {
   const allProblems = await getLeetCodeAllProblem();
-  const problem = allProblems.find(({ stat: { question_id } }) => question_id === +id);
+  const problem = allProblems.find(
+    ({ stat: { frontend_question_id } }) => frontend_question_id === +id,
+  );
   if (problem === undefined) {
     throw new Error('LeetCode에 없는 문제 번호 입니다.');
   }
