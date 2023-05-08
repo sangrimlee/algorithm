@@ -140,6 +140,7 @@
 | 1531 | [String Compression II](https://leetcode.com/problems/string-compression-ii/)                                                                                           | [풀이](src/2022-10/15/leetcode-1531.ts) |
 | 1539 | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number)                                                                                | [풀이](src/2023-03/06/leetcode-1539.ts) |
 | 1544 | [Make The String Great](https://leetcode.com/problems/make-the-string-great/)                                                                                           | [풀이](src/2022-11/08/leetcode-1544.ts) |
+| 1572 | [Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum)                                                                                                | [풀이](src/2023-05/08/leetcode-1572.ts) |
 | 1578 | [Minimum Time to Make Rope Colorful](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/)                                                                 | [풀이](src/2022-10/03/leetcode-1578.ts) |
 | 1642 | [Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/)                                                                       | [풀이](src/2022-06/21/leetcode-1642.ts) |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)                         | [풀이](src/2022-06/28/leetcode-1647.ts) |
@@ -172,6 +173,7 @@
 | 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                                                                 | [풀이](src/2022-12/04/leetcode-2256.ts) |
 | 2279 | [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                                                      | [풀이](src/2022-12/27/leetcode-2279.ts) |
 | 2389 | [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                                                             | [풀이](src/2022-12/25/leetcode-2389.ts) |
+| 2635 | [Apply Transform Over Each Element in Array](https://leetcode.com/problems/apply-transform-over-each-element-in-array)                                                  | [풀이](src/2023-05/08/leetcode-2635.ts) |
 
 ### Programmers
 

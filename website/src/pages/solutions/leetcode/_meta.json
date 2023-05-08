@@ -133,6 +133,7 @@
   "1531": "String Compression II",
   "1539": "Kth Missing Positive Number",
   "1544": "Make The String Great",
+  "1572": "Matrix Diagonal Sum",
   "1578": "Minimum Time to Make Rope Colorful",
   "1642": "Furthest Building You Can Reach",
   "1647": "Minimum Deletions to Make Character Frequencies Unique",
@@ -164,5 +165,6 @@
   "2246": "Longest Path With Different Adjacent Characters",
   "2256": "Minimum Average Difference",
   "2279": "Maximum Bags With Full Capacity of Rocks",
-  "2389": "Longest Subsequence With Limited Sum"
+  "2389": "Longest Subsequence With Limited Sum",
+  "2635": "Apply Transform Over Each Element in Array"
 }
