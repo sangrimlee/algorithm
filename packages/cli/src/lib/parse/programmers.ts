@@ -7,7 +7,8 @@ function getTitle($: cheerio.CheerioAPI) {
 }
 
 function getTestCases($: cheerio.CheerioAPI) {
-  const table = $('table');
+  const $h5 = $('h5:contains("입출력 예")');
+  const table = $h5.next();
 
   const testCases: TestCase[] = [];
   $(table)
