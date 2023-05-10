@@ -14,7 +14,9 @@
 | 36   | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)                                                                                                             | [풀이](src/2022-11/23/leetcode-36.ts)   |
 | 51   | [N-Queens](https://leetcode.com/problems/n-queens/)                                                                                                                     | [풀이](src/2022-06/4/leetcode-51.ts)    |
 | 52   | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                                                                               | [풀이](src/2022-06/5/leetcode-52.ts)    |
+| 54   | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)                                                                                                            | [풀이](src/2023-05/09/leetcode-54.ts)   |
 | 55   | [Jump Game](https://leetcode.com/problems/jump-game)                                                                                                                    | [풀이](src/2022-12/26/leetcode-55.ts)   |
+| 59   | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)                                                                                                      | [풀이](src/2023-05/10/leetcode-59.ts)   |
 | 64   | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)                                                                                                      | [풀이](src/2023-03/27/leetcode-64.ts)   |
 | 70   | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                                                                                        | [풀이](src/2022-12/12/leetcode-70.ts)   |
 | 79   | [Word Search](https://leetcode.com/problems/word-search/)                                                                                                               | [풀이](src/2022-11/24/leetcode-79.ts)   |
@@ -173,6 +175,8 @@
 | 2256 | [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                                                                 | [풀이](src/2022-12/04/leetcode-2256.ts) |
 | 2279 | [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                                                      | [풀이](src/2022-12/27/leetcode-2279.ts) |
 | 2389 | [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                                                             | [풀이](src/2022-12/25/leetcode-2389.ts) |
+| 2626 | [Array Reduce Transformation](https://leetcode.com/problems/array-reduce-transformation)                                                                                | [풀이](src/2023-05/10/leetcode-2626.ts) |
+| 2634 | [Filter Elements from Array](https://leetcode.com/problems/filter-elements-from-array)                                                                                  | [풀이](src/2023-05/09/leetcode-2634.ts) |
 | 2635 | [Apply Transform Over Each Element in Array](https://leetcode.com/problems/apply-transform-over-each-element-in-array)                                                  | [풀이](src/2023-05/08/leetcode-2635.ts) |
 
 ### Programmers

@@ -7,7 +7,9 @@
   "36": "Valid Sudoku",
   "51": "N-Queens",
   "52": "N-Queens II",
+  "54": "Spiral Matrix",
   "55": "Jump Game",
+  "59": "Spiral Matrix II",
   "64": "Minimum Path Sum",
   "70": "Climbing Stairs",
   "79": "Word Search",
@@ -166,5 +168,7 @@
   "2256": "Minimum Average Difference",
   "2279": "Maximum Bags With Full Capacity of Rocks",
   "2389": "Longest Subsequence With Limited Sum",
+  "2626": "Array Reduce Transformation",
+  "2634": "Filter Elements from Array",
   "2635": "Apply Transform Over Each Element in Array"
 }
