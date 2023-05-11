@@ -1,0 +1,11 @@
+# Function Composition
+
+## Solution
+
+```typescript filename="solution.ts" copy
+type F = (x: number) => number;
+
+export function compose(functions: F[]): F {
+  return (x) => functions.reduceRight((acc, func) => func(acc), x);
+}
+```

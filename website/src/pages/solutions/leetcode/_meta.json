@@ -109,6 +109,7 @@
   "987": "Vertical Order Traversal of a Binary Tree",
   "997": "Find the Town Judge",
   "1026": "Maximum Difference Between Node and Ancestor",
+  "1035": "Uncrossed Lines",
   "1047": "Remove All Adjacent Duplicates In String",
   "1048": "Longest String Chain",
   "1061": "Lexicographically Smallest Equivalent String",
@@ -169,6 +170,7 @@
   "2279": "Maximum Bags With Full Capacity of Rocks",
   "2389": "Longest Subsequence With Limited Sum",
   "2626": "Array Reduce Transformation",
+  "2629": "Function Composition",
   "2634": "Filter Elements from Array",
   "2635": "Apply Transform Over Each Element in Array"
 }
