@@ -13,6 +13,7 @@
     "generate:page": "markdown --dir=../solution/src --outdir=./src/pages/solutions --format=page"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.18",
     "clsx": "^1.2.1",
     "next": "^13.3.4",
     "nextra": "^2.4.2",
