@@ -1,6 +1,8 @@
 import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
+
 import { Footer, Logo } from './components';
+import { LevelBadge } from './components/mdx-components';
 
 const config: DocsThemeConfig = {
   project: {
@@ -54,6 +56,9 @@ const config: DocsThemeConfig = {
   },
   search: {
     placeholder: 'Search',
+  },
+  components: {
+    LevelBadge,
   },
 };
 
