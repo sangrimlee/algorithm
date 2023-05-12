@@ -15,7 +15,6 @@ const LEETCODE_QUESTION_DETAIL_QUERY = `query getQuestionBySlug($titleSlug: Stri
     difficulty
     topicTags {
         name
-        id
         slug
     }
   }
@@ -31,11 +30,10 @@ interface LeetCodeQuestion {
     code: string;
   }>;
   difficulty: string;
-  topicTags: {
-    id: string;
+  topicTags: Array<{
     name: string;
     slug: string;
-  };
+  }>;
 }
 
 interface LeetCodeQuestionResponse {
