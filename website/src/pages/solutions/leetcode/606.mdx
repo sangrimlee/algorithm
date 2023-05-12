@@ -1,4 +1,21 @@
-# Construct String from Binary Tree
+---
+title: Construct String from Binary Tree
+tags:
+  - String
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 606. Construct String from Binary Tree
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
 
 ## Solution
 
@@ -18,3 +35,9 @@ export function tree2str(root: TreeNode | null): string {
   return `${root.val}(${tree2str(root.left)})(${tree2str(root.right)})`;
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/construct-string-from-binary-tree/"
+  title="Construct String from Binary Tree"
+/>

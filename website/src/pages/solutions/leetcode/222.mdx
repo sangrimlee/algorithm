@@ -1,4 +1,21 @@
-# Count Complete Tree Nodes
+---
+title: Count Complete Tree Nodes
+tags:
+  - Binary Search
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 222. Count Complete Tree Nodes
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
 
 ## Solution
 
@@ -10,3 +27,9 @@ export function countNodes(root: TreeNode | null): number {
   return countNodes(root.left) + countNodes(root.right) + 1;
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-complete-tree-nodes/"
+  title="Count Complete Tree Nodes"
+/>

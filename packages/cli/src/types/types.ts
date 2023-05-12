@@ -16,11 +16,21 @@ export interface LeetCodeQuestion {
   }>;
 }
 
-export interface Solution {
+export interface BaseSolution {
   id: string;
   code: string;
-  codingSite: CodingSite;
   url: string;
   title: string;
   relativePath: string;
 }
+
+export interface ProgrammersSolution extends BaseSolution {
+  codingSite: CodingSite.Programmers;
+}
+
+export interface LeetCodeSolution extends BaseSolution {
+  codingSite: CodingSite.LeetCode;
+  slug: string;
+}
+
+export type Solution = ProgrammersSolution | LeetCodeSolution;

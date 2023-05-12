@@ -1,4 +1,25 @@
-# Maximum Length of Repeated Subarray
+---
+title: Maximum Length of Repeated Subarray
+tags:
+  - Array
+  - Binary Search
+  - Dynamic Programming
+  - Sliding Window
+  - Rolling Hash
+  - Hash Function
+---
+
+# 718. Maximum Length of Repeated Subarray
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+  <TopicBadge name="Sliding Window" slug="sliding-window" />
+  <TopicBadge name="Rolling Hash" slug="rolling-hash" />
+  <TopicBadge name="Hash Function" slug="hash-function" />
+</Badges>
 
 ## Solution
 
@@ -18,3 +39,9 @@ export function findLength(nums1: number[], nums2: number[]): number {
   return Math.max(...dp.map((row) => Math.max(...row)));
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-length-of-repeated-subarray/"
+  title="Maximum Length of Repeated Subarray"
+/>

@@ -1,4 +1,25 @@
-# Cheapest Flights Within K Stops
+---
+title: Cheapest Flights Within K Stops
+tags:
+  - Dynamic Programming
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Heap (Priority Queue)
+  - Shortest Path
+---
+
+# 787. Cheapest Flights Within K Stops
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Graph" slug="graph" />
+  <TopicBadge name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <TopicBadge name="Shortest Path" slug="shortest-path" />
+</Badges>
 
 ## Solution
 
@@ -38,3 +59,9 @@ export function findCheapestPrice(
   return prices[dst] === Number.MAX_SAFE_INTEGER ? -1 : prices[dst];
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+  title="Cheapest Flights Within K Stops"
+/>

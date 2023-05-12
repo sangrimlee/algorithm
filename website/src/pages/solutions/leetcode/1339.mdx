@@ -1,4 +1,19 @@
-# Maximum Product of Splitted Binary Tree
+---
+title: Maximum Product of Splitted Binary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 1339. Maximum Product of Splitted Binary Tree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
 
 ## Solution
 
@@ -40,3 +55,9 @@ function getTotalValue(root: TreeNode | null): number {
   return root.val + getTotalValue(root.left) + getTotalValue(root.right);
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/"
+  title="Maximum Product of Splitted Binary Tree"
+/>

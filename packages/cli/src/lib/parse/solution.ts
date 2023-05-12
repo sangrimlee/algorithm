@@ -2,7 +2,7 @@ import path from 'node:path';
 
 import { findFirstMatch } from '@/utils/regex';
 
-import { Solution, isCodingSite } from '@/types';
+import { CodingSite, Solution, isCodingSite } from '@/types';
 
 const COMMENT_REGEX = /\/\*(\*(?!\/)|[^*])*\*\//;
 const URL_REGEX =
@@ -29,12 +29,17 @@ export async function parseSolution(
   const [source, id] = fileName.replace(/.ts$/, '').split('-');
   const relativePath = path.relative(outDir, solutionPath);
 
+  const codingSite = isCodingSite(source);
+  const solution = { id, code, url, title, relativePath };
+  if (codingSite === CodingSite.Programmers) {
+    return { ...solution, codingSite };
+  }
+
+  const matched = url.match(/([^/]+)\/?$/);
+  const slug = matched ? matched[1] : '';
   return {
-    id,
-    code,
-    codingSite: isCodingSite(source),
-    url,
-    title,
-    relativePath,
+    ...solution,
+    codingSite,
+    slug,
   };
 }
