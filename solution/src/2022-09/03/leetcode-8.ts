@@ -25,7 +25,7 @@ function convert(s: string) {
 
 /**
  * 8. String to Integer (atoi)
- * https://leetcode.com/problems/string-to-integer-atoi/submissions/
+ * https://leetcode.com/problems/string-to-integer-atoi/
  */
 export function myAtoi(s: string): number {
   return clamp(convert(removeWhiteSpaces(s)));

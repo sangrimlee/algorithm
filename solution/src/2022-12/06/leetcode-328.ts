@@ -2,7 +2,7 @@ import { ListNode } from '@algorithm/lib';
 
 /**
  * 328. Odd Even Linked List
- * https://leetcode.com/problems/odd-even-linked-list/description/
+ * https://leetcode.com/problems/odd-even-linked-list/
  */
 export function oddEvenList(head: ListNode | null): ListNode | null {
   if (head === null) {
