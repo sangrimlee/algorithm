@@ -41,7 +41,11 @@ export async function generateSolutionPageMeta(
   solutions: Solution[],
   outDir: string,
 ) {
-  const meta = Object.fromEntries(solutions.map(({ id, title }) => [id, title]));
+  const meta = Object.fromEntries(
+    solutions.map(({ id, title, codingSite }) =>
+      codingSite === CodingSite.LeetCode ? [id, `${id}. ${title}`] : [id, title],
+    ),
+  );
 
   await ensureWriteJson(path.join(outDir, codingSite.toLowerCase(), `_meta${EXTNAME.JSON}`), meta);
 }
