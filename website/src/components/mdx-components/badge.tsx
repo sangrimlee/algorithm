@@ -11,7 +11,6 @@ export const LevelBadge = ({ level }: LevelBadgeProps) => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          margin-top: 1rem;
           border-radius: 9999px;
           padding: 0.25rem 0.875rem;
 
@@ -37,16 +36,12 @@ export const LevelBadge = ({ level }: LevelBadgeProps) => {
   );
 };
 
-interface Topic {
+interface TopicBadgeProps {
   name: string;
   slug: string;
 }
 
-interface TopicBadgeProps {
-  topic: Topic;
-}
-
-export const TopicBadge = ({ topic: { name, slug } }: TopicBadgeProps) => {
+export const TopicBadge = ({ name, slug }: TopicBadgeProps) => {
   return (
     <>
       <a
@@ -68,7 +63,6 @@ export const TopicBadge = ({ topic: { name, slug } }: TopicBadgeProps) => {
 
           font-size: 1rem;
           font-weight: 500;
-          text-transform: capitalize;
 
           --color-hue: 212deg;
           --bg-opacity: 0.1;
@@ -83,26 +77,21 @@ export const TopicBadge = ({ topic: { name, slug } }: TopicBadgeProps) => {
   );
 };
 
-interface TopicBadgesProps {
-  topics: Topic[];
+interface BadgesProps {
+  children?: React.ReactNode;
 }
 
-export const TopicBadges = ({ topics }: TopicBadgesProps) => {
+export const Badges = ({ children }: BadgesProps) => {
   return (
     <>
-      <ul className="topic-badges">
-        {topics.map((topic) => (
-          <li key={topic.name}>
-            <TopicBadge topic={topic} />
-          </li>
-        ))}
-      </ul>
+      <div className="topic-badges">{children}</div>
       <style jsx>{`
         .topic-badges {
           display: flex;
-          gap: 0.5rem;
+          align-items: center;
+          gap: 0.75rem;
           flex-wrap: wrap;
-          margin-top: 1rem;
+          margin-top: 1.25rem;
         }
       `}</style>
     </>

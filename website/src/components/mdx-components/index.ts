@@ -1,1 +1,1 @@
-export { LevelBadge, TopicBadges } from './badge';
+export { LevelBadge, TopicBadge, Badges } from './badge';
