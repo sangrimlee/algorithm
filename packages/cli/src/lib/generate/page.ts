@@ -1,18 +1,39 @@
 import path from 'node:path';
 
+import { getLeetCodeQuestionBySlug } from '@/api/leetcode';
 import { groupByCodingSite, getSolutions } from '@/api/solution';
-import { createSolutionPageTemplate } from '@/lib/template';
 import { ensureWriteFile, ensureWriteJson } from '@/utils/fs';
-import { CodingSite, Solution } from '@/types';
+import {
+  createLeetCodeSolutionPageTemplate,
+  createProgrammersSolutionPageTemplate,
+} from '@/lib/template';
+
 import { EXTNAME } from '@/constants';
+import { CodingSite, LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
 
-async function generateSolutionPage(solution: Solution, outDir: string) {
-  const solutionPageTemplate = createSolutionPageTemplate(solution);
+async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
+  const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
+  const template = createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
 
-  await ensureWriteFile(
-    path.join(outDir, solution.codingSite.toLowerCase(), `${solution.id}${EXTNAME.MDX}`),
-    solutionPageTemplate,
+  await ensureWriteFile(pagePath, template);
+}
+
+async function generateProgrammersSolutionPage(solution: ProgrammersSolution, pagePath: string) {
+  const template = createProgrammersSolutionPageTemplate(solution);
+  await ensureWriteFile(pagePath, template);
+}
+
+function generateSolutionPage(solution: Solution, outDir: string) {
+  const pagePath = path.join(
+    outDir,
+    solution.codingSite.toLowerCase(),
+    `${solution.id}${EXTNAME.MDX}`,
   );
+
+  if (solution.codingSite === CodingSite.LeetCode) {
+    return generateLeetCodeSolutionPage(solution, pagePath);
+  }
+  return generateProgrammersSolutionPage(solution, pagePath);
 }
 
 export async function generateSolutionPageMeta(
