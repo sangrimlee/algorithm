@@ -1,24 +1,34 @@
+import dedent from 'ts-dedent';
+
+import { format } from '@/utils/format';
 import { CodingSite, Solution } from '@/types';
 
-function createSolutionRowTemplate({ id, title, url, relativePath }: Solution) {
-  return `| ${id} | [${title}](${url}) | [풀이](${relativePath}) |`;
+import { createTableTemplate } from './table';
+
+function createSolutionRow({ id, title, url, relativePath }: Solution) {
+  return [id, `[${title}](${url})`, `[풀이](${relativePath})`];
 }
 
-export function createSolutionTableTemplate(codingSite: CodingSite, solutions: Solution[]) {
-  return `
-### ${codingSite}
-
-| #   | Title | Solution |
-| --- | ----- | -------- |
-${solutions.map(createSolutionRowTemplate).join('\n')}
-`;
+function createSolutionTableTemplate(codingSite: CodingSite, solutions: Solution[]) {
+  return `### ${codingSite}
+  
+  ${createTableTemplate(['#', 'Title', 'Solution'], solutions.map(createSolutionRow))}
+  `;
 }
 
 export function createREADMETemplate(groups: Map<CodingSite, Solution[]>) {
-  let template = `# Solution\n\n## 문제 풀이 목록`;
-
+  let tableTemplate = '';
   for (const [codingSite, solutions] of groups) {
-    template += createSolutionTableTemplate(codingSite, solutions);
+    tableTemplate += createSolutionTableTemplate(codingSite, solutions);
   }
-  return template;
+
+  return format(
+    dedent`# Solution
+
+    ## 문제 풀이 목록
+
+    ${tableTemplate}
+    `,
+    'markdown',
+  );
 }

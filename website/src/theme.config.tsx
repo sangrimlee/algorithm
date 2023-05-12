@@ -1,4 +1,4 @@
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
+import { DocsThemeConfig, useConfig, Tab, Tabs } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 
 import { Footer, Logo } from './components';
@@ -83,6 +83,8 @@ const config: DocsThemeConfig = {
     LevelBadge,
     TopicBadge,
     ProblemLink,
+    Tab,
+    Tabs,
   },
 };
 

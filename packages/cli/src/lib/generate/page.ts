@@ -4,6 +4,7 @@ import { getLeetCodeQuestionBySlug } from '@/api/leetcode';
 import { groupByCodingSite, getSolutions } from '@/api/solution';
 import { ensureWriteFile, ensureWriteJson } from '@/utils/fs';
 import {
+  createIntroductionPageTemplate,
   createLeetCodeSolutionPageTemplate,
   createProgrammersSolutionPageTemplate,
 } from '@/lib/template';
@@ -50,14 +51,24 @@ export async function generateSolutionPageMeta(
   await ensureWriteJson(path.join(outDir, codingSite.toLowerCase(), `_meta${EXTNAME.JSON}`), meta);
 }
 
+export async function generateIntroductionPage(
+  groups: Map<CodingSite, Solution[]>,
+  outDir: string,
+) {
+  const template = createIntroductionPageTemplate(groups);
+
+  await ensureWriteFile(path.join(outDir, `index${EXTNAME.MDX}`), template);
+}
+
 export async function generatePage(solutionDir: string, outDir: string) {
   const solutions = await getSolutions(solutionDir, outDir);
-  const groups = Array.from(groupByCodingSite(solutions));
+  const groups = groupByCodingSite(solutions);
 
   await Promise.all([
     ...solutions.map((solution) => generateSolutionPage(solution, outDir)),
-    ...groups.map(([codingSite, solution]) =>
+    ...Array.from(groups).map(([codingSite, solution]) =>
       generateSolutionPageMeta(codingSite, solution, outDir),
     ),
+    generateIntroductionPage(groups, outDir),
   ]);
 }
