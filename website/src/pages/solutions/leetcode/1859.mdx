@@ -1,4 +1,17 @@
-# Sorting the Sentence
+---
+title: Sorting the Sentence
+tags:
+  - String
+  - Sorting
+---
+
+# 1859. Sorting the Sentence
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
 
 ## Solution
 
@@ -11,3 +24,9 @@ export function sortSentence(s: string): string {
   return s.split(' ').sort(sortByIndex).map(removeIndex).join(' ');
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sorting-the-sentence/"
+  title="Sorting the Sentence"
+/>

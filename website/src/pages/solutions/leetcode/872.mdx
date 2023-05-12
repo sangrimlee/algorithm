@@ -1,4 +1,19 @@
-# Leaf-Similar Trees
+---
+title: Leaf-Similar Trees
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 872. Leaf-Similar Trees
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
 
 ## Solution
 
@@ -35,3 +50,9 @@ function getLeafNodes(node: TreeNode | null): number[] {
   return [...getLeafNodes(node.left), ...getLeafNodes(node.right)];
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/leaf-similar-trees/"
+  title="Leaf-Similar Trees"
+/>

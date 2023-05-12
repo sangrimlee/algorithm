@@ -1,4 +1,19 @@
-# Push Dominoes
+---
+title: Push Dominoes
+tags:
+  - Two Pointers
+  - String
+  - Dynamic Programming
+---
+
+# 838. Push Dominoes
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+</Badges>
 
 ## Solution
 
@@ -37,3 +52,9 @@ export function pushDominoes(dominoes: string): string {
   return forces.map((force) => (force === 0 ? '.' : 0 < force ? 'R' : 'L')).join('');
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/push-dominoes/"
+  title="Push Dominoes"
+/>

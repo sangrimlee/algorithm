@@ -1,4 +1,13 @@
-# Function Composition
+---
+title: Function Composition
+tags:
+---
+
+# 2629. Function Composition
+
+<Badges>
+  <LevelBadge level="easy" />
+</Badges>
 
 ## Solution
 
@@ -9,3 +18,9 @@ export function compose(functions: F[]): F {
   return (x) => functions.reduceRight((acc, func) => func(acc), x);
 }
 ```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/function-composition"
+  title="Function Composition"
+/>
