@@ -12,6 +12,12 @@ const LEETCODE_QUESTION_DETAIL_QUERY = `query getQuestionBySlug($titleSlug: Stri
       langSlug
       code
     }
+    difficulty
+    topicTags {
+        name
+        id
+        slug
+    }
   }
 }`;
 
@@ -24,6 +30,12 @@ interface LeetCodeQuestion {
     langSlug: string;
     code: string;
   }>;
+  difficulty: string;
+  topicTags: {
+    id: string;
+    name: string;
+    slug: string;
+  };
 }
 
 interface LeetCodeQuestionResponse {
@@ -41,7 +53,7 @@ export const getLeetCodeQuestionBySlug = async (titleSlug: string) => {
       variables: { titleSlug },
     });
 
-    const { id, title, content, codeSnippets } = question;
+    const { id, title, content, codeSnippets, difficulty, topicTags } = question;
     const codeSnippet = codeSnippets.find(({ langSlug }) => langSlug === 'typescript')?.code;
     const { testCases } = parseLeetCode(content);
 
@@ -50,6 +62,8 @@ export const getLeetCodeQuestionBySlug = async (titleSlug: string) => {
       title,
       codeSnippet,
       testCases,
+      difficulty,
+      topics: topicTags,
     };
   } catch (error) {
     throw new Error('문제를 불러오는 중에 오류가 발생하였습니다. 문제 번호를 확인해주세요.');
