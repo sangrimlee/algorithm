@@ -3,9 +3,12 @@ import dedent from 'ts-dedent';
 import { createCodeBlockTemplate } from './code-block';
 import { LeetCodeSolution, ProgrammersSolution } from '@/types/types';
 import { createFrontMatterTemplate } from './front-matter';
+import { format } from '@/utils/format';
+import { createComponentTemplate } from './component';
 
 export function createProgrammersSolutionPageTemplate({ title, code }: ProgrammersSolution) {
-  return dedent`
+  return format(
+    dedent`
     ${createFrontMatterTemplate({
       title,
     })}
@@ -19,7 +22,9 @@ export function createProgrammersSolutionPageTemplate({ title, code }: Programme
       fileName: 'solution.ts',
       copy: true,
     })}
-  `;
+  `,
+    'mdx',
+  );
 }
 
 export function createLeetCodeSolutionPageTemplate(
@@ -27,7 +32,8 @@ export function createLeetCodeSolutionPageTemplate(
   difficulty: string,
   topics: { name: string; slug: string }[],
 ) {
-  return dedent`
+  return format(
+    dedent`
     ${createFrontMatterTemplate({
       title,
       tags: topics.map(({ name }) => name),
@@ -35,10 +41,13 @@ export function createLeetCodeSolutionPageTemplate(
 
     # ${id}. ${title}
 
-    <LevelBadge level="${difficulty.toLowerCase()}" />
-    <TopicBadges
-      topics={${JSON.stringify(topics, null, 2)}}
-    />
+    
+    <Badges>
+      ${createComponentTemplate({ name: 'LevelBadge', props: { level: difficulty.toLowerCase() } })}
+      ${topics
+        .map((topic) => createComponentTemplate({ name: 'TopicBadge', props: topic }))
+        .join('\n')}
+    </Badges>
 
     ## Solution
 
@@ -47,5 +56,7 @@ export function createLeetCodeSolutionPageTemplate(
       fileName: 'solution.ts',
       copy: true,
     })}
-  `;
+  `,
+    'mdx',
+  );
 }
