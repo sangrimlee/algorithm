@@ -2,7 +2,7 @@ import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 
 import { Footer, Logo } from './components';
-import { Badges, LevelBadge, TopicBadge } from './components/mdx-components';
+import { Badges, LevelBadge, TopicBadge, ProblemLink } from './components/mdx-components';
 
 const config: DocsThemeConfig = {
   project: {
@@ -82,6 +82,7 @@ const config: DocsThemeConfig = {
     Badges,
     LevelBadge,
     TopicBadge,
+    ProblemLink,
   },
 };
 

@@ -8,14 +8,16 @@ function createComponentPropsTemplate(props: Props) {
     .join(' ');
 }
 
-interface ComponentTemplateOptions {
-  name: string;
-  props?: Props;
-  children?: string;
-}
-
-export function createComponentTemplate({ name, props = {}, children }: ComponentTemplateOptions) {
-  if (!children) {
+export function createComponentTemplate(
+  name: string,
+  {
+    children,
+    ...props
+  }: Props & {
+    children?: string;
+  },
+) {
+  if (children === undefined) {
     return `<${name} ${createComponentPropsTemplate(props)} />`;
   }
   return `<${name} ${createComponentPropsTemplate(props)}>${children}</${name}>`;

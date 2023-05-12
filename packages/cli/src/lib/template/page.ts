@@ -6,7 +6,7 @@ import { createFrontMatterTemplate } from './front-matter';
 import { format } from '@/utils/format';
 import { createComponentTemplate } from './component';
 
-export function createProgrammersSolutionPageTemplate({ title, code }: ProgrammersSolution) {
+export function createProgrammersSolutionPageTemplate({ title, code, url }: ProgrammersSolution) {
   return format(
     dedent`
     ${createFrontMatterTemplate({
@@ -22,13 +22,19 @@ export function createProgrammersSolutionPageTemplate({ title, code }: Programme
       fileName: 'solution.ts',
       copy: true,
     })}
+
+    ${createComponentTemplate('ProblemLink', {
+      codingSite: 'programmers',
+      href: url,
+      title,
+    })}
   `,
     'mdx',
   );
 }
 
 export function createLeetCodeSolutionPageTemplate(
-  { id, title, code }: LeetCodeSolution,
+  { id, title, code, url }: LeetCodeSolution,
   difficulty: string,
   topics: { name: string; slug: string }[],
 ) {
@@ -43,10 +49,8 @@ export function createLeetCodeSolutionPageTemplate(
 
     
     <Badges>
-      ${createComponentTemplate({ name: 'LevelBadge', props: { level: difficulty.toLowerCase() } })}
-      ${topics
-        .map((topic) => createComponentTemplate({ name: 'TopicBadge', props: topic }))
-        .join('\n')}
+      ${createComponentTemplate('LevelBadge', { level: difficulty.toLowerCase() })}
+      ${topics.map((topic) => createComponentTemplate('TopicBadge', topic)).join('\n')}
     </Badges>
 
     ## Solution
@@ -55,6 +59,12 @@ export function createLeetCodeSolutionPageTemplate(
       language: 'typescript',
       fileName: 'solution.ts',
       copy: true,
+    })}
+
+    ${createComponentTemplate('ProblemLink', {
+      codingSite: 'leetcode',
+      href: url,
+      title,
     })}
   `,
     'mdx',
