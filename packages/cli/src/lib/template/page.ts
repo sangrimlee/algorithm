@@ -2,9 +2,14 @@ import dedent from 'ts-dedent';
 
 import { createCodeBlockTemplate } from './code-block';
 import { LeetCodeSolution, ProgrammersSolution } from '@/types/types';
+import { createFrontMatterTemplate } from './front-matter';
 
 export function createProgrammersSolutionPageTemplate({ title, code }: ProgrammersSolution) {
   return dedent`
+    ${createFrontMatterTemplate({
+      title,
+    })}
+  
     # ${title}
 
     ## Solution
@@ -23,6 +28,11 @@ export function createLeetCodeSolutionPageTemplate(
   topics: { name: string; slug: string }[],
 ) {
   return dedent`
+    ${createFrontMatterTemplate({
+      title,
+      tags: topics.map(({ name }) => name),
+    })}
+
     # ${id}. ${title}
 
     <LevelBadge level="${difficulty.toLowerCase()}" />
