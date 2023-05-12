@@ -38,7 +38,6 @@ export const LevelBadge = ({ level }: LevelBadgeProps) => {
 };
 
 interface Topic {
-  id: string;
   name: string;
   slug: string;
 }
@@ -47,7 +46,7 @@ interface TopicBadgeProps {
   topic: Topic;
 }
 
-export const TopicBadge = ({ topic: { id, name, slug } }: TopicBadgeProps) => {
+export const TopicBadge = ({ topic: { name, slug } }: TopicBadgeProps) => {
   return (
     <>
       <a
@@ -93,7 +92,7 @@ export const TopicBadges = ({ topics }: TopicBadgesProps) => {
     <>
       <ul className="topic-badges">
         {topics.map((topic) => (
-          <li key={topic.id}>
+          <li key={topic.name}>
             <TopicBadge topic={topic} />
           </li>
         ))}
