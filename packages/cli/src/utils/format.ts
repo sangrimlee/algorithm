@@ -1,6 +1,9 @@
 import prettier from 'prettier';
 
-export function format(source: string) {
+export function format(
+  source: string,
+  parser: prettier.LiteralUnion<prettier.BuiltInParserName, string> | prettier.CustomParser,
+) {
   return prettier.format(source, {
     printWidth: 100,
     semi: true,
@@ -8,5 +11,6 @@ export function format(source: string) {
     useTabs: false,
     singleQuote: true,
     trailingComma: 'all',
+    parser,
   });
 }
