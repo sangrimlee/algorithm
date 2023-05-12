@@ -161,6 +161,7 @@
   "2089": "Find Target Indices After Sorting Array",
   "2131": "Longest Palindrome by Concatenating Two Letter Words",
   "2136": "Earliest Possible Day of Full Bloom",
+  "2140": "Solving Questions With Brainpower",
   "2187": "Minimum Time to Complete Trips",
   "2215": "Find the Difference of Two Arrays",
   "2225": "Find Players With Zero or One Losses",
@@ -172,5 +173,6 @@
   "2626": "Array Reduce Transformation",
   "2629": "Function Composition",
   "2634": "Filter Elements from Array",
-  "2635": "Apply Transform Over Each Element in Array"
+  "2635": "Apply Transform Over Each Element in Array",
+  "2666": "Allow One Function Call"
 }

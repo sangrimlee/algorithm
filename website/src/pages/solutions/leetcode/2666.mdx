@@ -1,0 +1,16 @@
+# Allow One Function Call
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function once<T, R>(fn: (...args: T[]) => R): (...args: T[]) => R | undefined {
+  let called = false;
+  return (...args) => {
+    if (called) {
+      return;
+    }
+    called = true;
+    return fn(...args);
+  };
+}
+```
