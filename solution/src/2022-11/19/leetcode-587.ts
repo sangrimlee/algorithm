@@ -1,6 +1,6 @@
 /**
  * 587. Erect the Fence
- * https://leetcode.com/problems/erect-the-fence/solution/
+ * https://leetcode.com/problems/erect-the-fence/
  */
 export function outerTrees(points: number[][]): number[][] {
   const stack: number[][] = [];
