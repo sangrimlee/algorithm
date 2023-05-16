@@ -18,12 +18,5 @@
   "solutions": {
     "type": "page",
     "title": "Solution"
-  },
-  "about": {
-    "type": "page",
-    "title": "About",
-    "theme": {
-      "typesetting": "article"
-    }
   }
 }
