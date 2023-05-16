@@ -30,7 +30,8 @@ const config: DocsThemeConfig = {
     const domain = baseURL.hostname;
     const ogImage = new URL('/images/og.png', baseURL).href;
     const url = new URL(asPath, baseURL).href;
-    const description = 'TypeScript로 작성한 LeetCode와 Programmers의 문제 풀이 입니다.';
+    const description =
+      frontMatter.description ?? 'TypeScript로 작성한 LeetCode와 Programmers의 문제 풀이 입니다.';
 
     const tags = [
       '알고리즘',
@@ -56,8 +57,11 @@ const config: DocsThemeConfig = {
         <meta property="og:image:height" content="960" />
         <meta name="og:type" content="website" />
         <meta name="og:site_name" content="Algorithm" />
-        <meta property="og:locale" content="ko_KR"></meta>
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:url" content={url} />
 
+        <meta property="twitter:title" content={title ? title + ' |  Algorithm' : 'Algorithm'} />
+        <meta property="twitter:description" content={description} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site:domain" content={domain} />

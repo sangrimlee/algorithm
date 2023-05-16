@@ -16,7 +16,7 @@ import { CodingSite } from '@/types';
 
 export async function generateLeetCode(outputDir: string, id: string) {
   const titleSlug = await getLeetCodeSlugById(id);
-  const { title, codeSnippet } = await getLeetCodeQuestionBySlug(titleSlug);
+  const { title, codeSnippet, testCases } = await getLeetCodeQuestionBySlug(titleSlug);
 
   const currentDate = new Date();
   const datePath = getDatePath(currentDate, outputDir);
@@ -31,7 +31,7 @@ export async function generateLeetCode(outputDir: string, id: string) {
     ),
     ensureWriteFile(
       path.join(datePath, `${fileName}${EXTNAME.TYPESCRIPT_TEST}`),
-      createTestTemplate(CodingSite.LeetCode, dateString, id),
+      createTestTemplate(CodingSite.LeetCode, dateString, id, testCases),
     ),
   ]);
 }
