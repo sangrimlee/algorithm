@@ -32,7 +32,8 @@ const config: DocsThemeConfig = {
     const ogImage = new URL('/images/og.png', baseURL).href;
     const url = new URL(asPath, baseURL).href;
     const description =
-      frontMatter.description ?? 'TypeScript로 작성한 LeetCode와 Programmers의 문제 풀이 입니다.';
+      frontMatter.description ??
+      'The solutions written in TypeScript for problems of LeetCode and Programmers.';
 
     const tags = [
       '알고리즘',
@@ -54,8 +55,8 @@ const config: DocsThemeConfig = {
         <meta name="og:title" content={title ? title + ' |  Algorithm' : 'Algorithm'} />
         <meta name="og:description" content={description} />
         <meta name="og:image" content={ogImage} />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="960" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="og:type" content="website" />
         <meta name="og:site_name" content="Algorithm" />
         <meta property="og:locale" content="ko_KR" />
