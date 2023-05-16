@@ -21,7 +21,7 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s',
     };
   },
-  logo: <Logo className="nx-mt-1" />,
+  logo: <Logo />,
   head: function useHead() {
     const { asPath } = useRouter();
     const { title, frontMatter } = useConfig();
