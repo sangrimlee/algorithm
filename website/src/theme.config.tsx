@@ -1,7 +1,8 @@
 import { DocsThemeConfig, useConfig, Tab, Tabs } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 
-import { Footer, Logo } from './components';
+import { Footer } from './components';
+import { Logo } from './components/logos';
 import { Badges, LevelBadge, TopicBadge, ProblemLink } from './components/mdx-components';
 
 const config: DocsThemeConfig = {
