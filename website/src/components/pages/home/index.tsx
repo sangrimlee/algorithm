@@ -2,6 +2,28 @@ import clsx from 'clsx';
 
 import { Background } from './background';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+interface LinkBadgeProps {
+  href: string;
+  label: string;
+}
+const LinkBadge = ({ href, label }: LinkBadgeProps) => {
+  return (
+    <Link
+      className={clsx(
+        'inline-flex items-center justify-center rounded-full py-1.5 px-4 font-medium text-sm md:text-base',
+        'bg-blue-600 text-blue-600 bg-opacity-10 hover:bg-opacity-20',
+        'dark:bg-blue-400 dark:text-blue-400  dark:bg-opacity-[0.15] dark:hover:bg-opacity-25',
+      )}
+      href={href}
+    >
+      {label}
+      <ArrowRightIcon className="w-3.5 h-3.5 md:w-4 md:h-4 ml-1.5" />
+    </Link>
+  );
+};
 
 export const HomePage = () => {
   return (
@@ -30,6 +52,10 @@ export const HomePage = () => {
           >
             The solutions written in TypeScript for problems of LeetCode and Programmers.
           </p>
+          <div className="mt-6 md:mt-10 space-x-4">
+            <LinkBadge href="/solution/leetcode/1" label="LeetCode" />
+            <LinkBadge href="/solution/programmers/1843" label="Programmers" />
+          </div>
         </div>
         <div className="flex items-center py-12 md:py-16">
           <Image
@@ -37,9 +63,9 @@ export const HomePage = () => {
             alt="Profile image"
             width={512}
             height={512}
-            className={clsx('w-12 h-12 rounded-full', 'md:w-16 md:h-16')}
+            className={clsx('w-12 h-12 rounded-full', 'md:w-14 md:h-14 xl:w-16 xl:h-16')}
           />
-          <div className="flex flex-col ml-3 text-xs md:text-sm font-medium">
+          <div className="flex flex-col ml-3 text-xs font-medium md:text-sm xl:text-base">
             <a
               href="https://github.com/sangrimlee"
               target="_blank"
