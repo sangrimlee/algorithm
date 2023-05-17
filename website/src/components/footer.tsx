@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="mb-4">
         <Logo />
       </div>
-      <div className="text-sm font-medium font-mono">
+      <div className="font-mono text-sm font-medium">
         © {new Date().getFullYear()} Algorithm, All rights reserved.
       </div>
     </div>

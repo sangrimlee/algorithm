@@ -1,0 +1,56 @@
+---
+title: Swapping Nodes in a Linked List
+tags:
+  - Linked List
+  - Two Pointers
+---
+
+# 1721. Swapping Nodes in a Linked List
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function swapNodes(head: ListNode | null, k: number): ListNode | null {
+  const findNode = (node: ListNode | null, k: number): ListNode | null => {
+    let currentNode = node;
+    for (let i = 1; i < k; i++) {
+      if (currentNode === null) {
+        return null;
+      }
+      currentNode = currentNode.next;
+    }
+    return currentNode;
+  };
+
+  const kthNode = findNode(head, k);
+
+  if (head === null || kthNode === null) {
+    return null;
+  }
+
+  let [startNode, endNode] = [head, kthNode];
+
+  while (startNode.next !== null && endNode.next !== null) {
+    startNode = startNode?.next;
+    endNode = endNode.next;
+  }
+
+  [startNode.val, kthNode.val] = [kthNode.val, startNode.val];
+
+  return head;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/swapping-nodes-in-a-linked-list"
+  title="Swapping Nodes in a Linked List"
+/>

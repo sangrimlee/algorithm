@@ -10,8 +10,8 @@ export const Background = () => {
         <FadeIn delay={1} noVertical>
           <div
             className={clsx(
-              'gradient absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 opacity-30 blur-3xl animate-pulse',
-              'md:w-96 md:h-96 xl:w-[32rem] xl:h-[32rem] md:blur-[128px]',
+              'gradient absolute inset-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 animate-pulse opacity-30 blur-3xl',
+              'md:h-96 md:w-96 md:blur-[128px] xl:h-[32rem] xl:w-[32rem]',
             )}
           />
         </FadeIn>
