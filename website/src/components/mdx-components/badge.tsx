@@ -15,7 +15,7 @@ export const LevelBadge = ({ level }: LevelBadgeProps) => {
     <>
       <div
         className={clsx(
-          'inline-flex items-center justify-center rounded-full py-1 px-3.5 font-medium capitalize',
+          'inline-flex items-center justify-center rounded-full px-3.5 py-1 font-medium capitalize',
           'bg-opacity-[0.15] hover:bg-opacity-20 dark:bg-opacity-[0.15] dark:hover:bg-opacity-25',
           levelColors[level],
         )}
@@ -35,9 +35,9 @@ export const TopicBadge = ({ name, slug }: TopicBadgeProps) => {
   return (
     <a
       className={clsx(
-        'inline-flex items-center justify-center rounded-full py-1 px-3.5 font-medium',
-        'bg-blue-600 text-blue-600 bg-opacity-10 hover:bg-opacity-20',
-        'dark:bg-blue-400 dark:text-blue-400  dark:bg-opacity-[0.15] dark:hover:bg-opacity-25',
+        'inline-flex items-center justify-center rounded-full px-3.5 py-1 font-medium',
+        'bg-blue-600 bg-opacity-10 text-blue-600 hover:bg-opacity-20',
+        'dark:bg-blue-400 dark:bg-opacity-[0.15]  dark:text-blue-400 dark:hover:bg-opacity-25',
       )}
       href={`https://leetcode.com/tag/${slug}`}
       target="_blank"
@@ -53,5 +53,5 @@ interface BadgesProps {
 }
 
 export const Badges = ({ children }: BadgesProps) => {
-  return <div className="flex items-center gap-3 flex-wrap mt-5">{children}</div>;
+  return <div className="mt-5 flex flex-wrap items-center gap-3">{children}</div>;
 };

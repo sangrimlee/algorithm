@@ -1,7 +1,7 @@
 export const Logo = () => {
   return (
     <>
-      <div className="text-xl font-extrabold tracking-tight font-logo">Algorithm</div>
+      <div className="font-logo text-xl font-extrabold tracking-tight">Algorithm</div>
       <style jsx>{`
         div {
           mask-image: linear-gradient(60deg, black 25%, rgba(0, 0, 0, 0.25) 50%, black 75%);

@@ -1,0 +1,26 @@
+---
+title: Sleep
+tags:
+---
+
+# 2621. Sleep
+
+<Badges>
+<LevelBadge level="easy" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sleep(ms: number) {
+  return new Promise<void>((resolve, reject) => {
+    if (typeof ms !== 'number' || isNaN(ms)) {
+      reject('TypeError');
+    }
+    setTimeout(resolve, ms);
+  });
+}
+```
+
+<ProblemLink codingSite="leetcode" href="https://leetcode.com/problems/sleep" title="Sleep" />

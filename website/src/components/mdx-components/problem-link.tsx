@@ -31,24 +31,24 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
       target="_blank"
       rel="nofollow noreferrer"
       className={clsx(
-        'flex w-full rounded-lg border justify-start mt-10 overflow-hidden group',
+        'group mt-10 flex w-full justify-start overflow-hidden rounded-lg border',
         'border-gray-200 dark:border-gray-800',
       )}
     >
-      <div className={clsx('w-44 h-28 flex items-center justify-center', bgClassName)}>
+      <div className={clsx('flex h-28 w-44 items-center justify-center', bgClassName)}>
         <Logo className={logoClassName} />
       </div>
-      <div className="flex-1 px-6 flex justify-center flex-col">
-        <strong className="text-lg">{title}</strong>
+      <div className="flex flex-1 flex-col justify-center px-6 py-4">
+        <strong className="line-clamp-2 text-base">{title}</strong>
         <div
           className={clsx(
-            'flex items-center mt-2.5 font-medium',
+            'mt-2.5 flex items-center text-sm font-medium',
             'text-blue-600 dark:text-blue-400',
           )}
         >
           문제 풀러가기
           <ArrowRightIcon
-            className={clsx('ml-1 h-4 w-4', 'transition-transform group-hover:translate-x-1')}
+            className={clsx('ml-1 h-3.5 w-3.5', 'transition-transform group-hover:translate-x-1')}
           />
         </div>
       </div>
