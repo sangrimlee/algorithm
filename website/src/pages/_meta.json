@@ -2,7 +2,14 @@
   "index": {
     "type": "page",
     "title": "Home",
-    "display": "hidden"
+    "display": "hidden",
+    "theme": {
+      "layout": "raw",
+      "sidebar": false,
+      "toc": false,
+      "breadcrumb": false,
+      "pagination": false
+    }
   },
   "docs": {
     "type": "page",
@@ -11,12 +18,5 @@
   "solutions": {
     "type": "page",
     "title": "Solution"
-  },
-  "about": {
-    "type": "page",
-    "title": "About",
-    "theme": {
-      "typesetting": "article"
-    }
   }
 }
