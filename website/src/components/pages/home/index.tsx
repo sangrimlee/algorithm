@@ -53,8 +53,8 @@ const TitleAndDescription = () => {
       </FadeIn>
       <FadeIn delay={0.4}>
         <div className="mt-6 space-x-4 md:mt-10">
-          <LinkBadge href="/solution/leetcode/1" label="LeetCode" />
-          <LinkBadge href="/solution/programmers/1843" label="Programmers" />
+          <LinkBadge href="/solutions/leetcode/1" label="LeetCode" />
+          <LinkBadge href="/solutions/programmers/1843" label="Programmers" />
         </div>
       </FadeIn>
     </div>
