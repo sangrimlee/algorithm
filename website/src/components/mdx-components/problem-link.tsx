@@ -38,17 +38,17 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
       <div className={clsx('flex h-28 w-44 items-center justify-center', bgClassName)}>
         <Logo className={logoClassName} />
       </div>
-      <div className="flex flex-1 flex-col justify-center px-6">
-        <strong className="text-lg">{title}</strong>
+      <div className="flex flex-1 flex-col justify-center px-6 py-4">
+        <strong className="line-clamp-2 text-base">{title}</strong>
         <div
           className={clsx(
-            'mt-2.5 flex items-center font-medium',
+            'mt-2.5 flex items-center text-sm font-medium',
             'text-blue-600 dark:text-blue-400',
           )}
         >
           문제 풀러가기
           <ArrowRightIcon
-            className={clsx('ml-1 h-4 w-4', 'transition-transform group-hover:translate-x-1')}
+            className={clsx('ml-1 h-3.5 w-3.5', 'transition-transform group-hover:translate-x-1')}
           />
         </div>
       </div>
