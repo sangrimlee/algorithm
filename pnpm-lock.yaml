@@ -208,9 +208,6 @@ importers:
         specifier: ^0.32.1
         version: 0.32.1
     devDependencies:
-      '@algorithm/cli':
-        specifier: workspace:*
-        version: link:../packages/cli
       '@algorithm/eslint-config':
         specifier: workspace:*
         version: link:../packages/eslint-config

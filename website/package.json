@@ -9,9 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\"",
-    "generate:page": "markdown --dir=../solution/src --outdir=./src/pages/solutions --format=page",
-    "postgenerate:page": "pnpm run format"
+    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\""
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -26,7 +24,6 @@
     "sharp": "^0.32.1"
   },
   "devDependencies": {
-    "@algorithm/cli": "workspace:*",
     "@algorithm/eslint-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/node": "^18.16.3",

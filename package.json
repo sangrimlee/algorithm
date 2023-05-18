@@ -18,8 +18,10 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "generate:code": "algorithm --dir solution/src",
+    "generate:code": "algorithm -d solution/src",
     "generate:readme": "markdown -d solution/src -o solution",
+    "generate:page": "markdown -d solution/src -o website/src/pages/solutions --format page",
+    "postgenerate:page": "pnpm run format",
     "prepare": "husky install"
   },
   "devDependencies": {
