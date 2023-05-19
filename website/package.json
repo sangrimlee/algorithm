@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "format": "prettier --write  \"./**/*.{mdx,ts,tsx}\""
+    "format": "prettier --write --cache  \"./**/*.{mdx,ts,tsx}\""
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

@@ -12,7 +12,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write  \"./src/**/*.ts\""
+    "format": "prettier --write --cache \"./src/**/*.ts\""
   },
   "dependencies": {
     "axios": "^1.4.0",
