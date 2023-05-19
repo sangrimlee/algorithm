@@ -91,10 +91,14 @@ LeetCode와 Programmers의 문제들을 저만의 방식으로 푼 것을 공유
 
 <Tabs items={['LeetCode', 'Programmers']}>
   <Tab>
-    ${createIntroductionTableTemplate(groups.get(CodingSite.LeetCode) || [])}
+  
+${createIntroductionTableTemplate(groups.get(CodingSite.LeetCode) || [])}
+
   </Tab>
   <Tab>
-    ${createIntroductionTableTemplate(groups.get(CodingSite.Programmers) || [])}
+
+${createIntroductionTableTemplate(groups.get(CodingSite.Programmers) || [])}
+
   </Tab>
 </Tabs>
 

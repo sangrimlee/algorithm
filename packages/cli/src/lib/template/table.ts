@@ -1,3 +1,5 @@
+import { format } from '@/utils/format';
+
 function createTableRowTemplate(cols: string[]) {
   return `| ${cols.join(' | ')} |`;
 }
@@ -11,5 +13,8 @@ export function createTableTemplate(thead: string[], trows: string[][]) {
   if (thead.length !== trows[0].length) {
     throw new Error('thead의 column수와 trow의 column수가 일치하지 않습니다');
   }
-  return `${createTableHeadTemplate(thead)}\n${trows.map(createTableRowTemplate).join('\n')}`;
+  return format(
+    `${createTableHeadTemplate(thead)}\n${trows.map(createTableRowTemplate).join('\n')}`,
+    'markdown',
+  );
 }
