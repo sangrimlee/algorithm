@@ -1,0 +1,31 @@
+---
+title: Debounce
+tags:
+---
+
+# 2627. Debounce
+
+<Badges>
+<LevelBadge level="medium" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function debounce<T extends (...args: any[]) => void>(fn: T, t: number) {
+  let timeoutId: NodeJS.Timeout | null = null;
+
+  return (...args: Parameters<T>) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    timeoutId = setTimeout(() => {
+      fn(...args);
+    }, t);
+  };
+}
+```
+
+<ProblemLink codingSite="leetcode" href="https://leetcode.com/problems/debounce" title="Debounce" />

@@ -1,0 +1,59 @@
+---
+title: Cache With Time Limit
+tags:
+---
+
+# 2622. Cache With Time Limit
+
+<Badges>
+<LevelBadge level="medium" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class TimeLimitedCache {
+  private readonly cache: Map<number, { timeoutId: number; value: number }>;
+
+  constructor() {
+    this.cache = new Map();
+  }
+
+  private _set(key: number, value: number, duration: number): void {
+    const timeoutId = setTimeout(() => {
+      this.cache.delete(key);
+    }, duration);
+    this.cache.set(key, { value, timeoutId: +timeoutId });
+  }
+
+  public set(key: number, value: number, duration: number): boolean {
+    const cached = this.cache.get(key);
+    if (cached) {
+      clearTimeout(cached.timeoutId);
+      this._set(key, value, duration);
+      return true;
+    }
+    this._set(key, value, duration);
+    return false;
+  }
+
+  public get(key: number): number {
+    const cached = this.cache.get(key);
+    if (cached) {
+      return cached.value;
+    }
+    return -1;
+  }
+
+  public count(): number {
+    return this.cache.size;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/cache-with-time-limit"
+  title="Cache With Time Limit"
+/>
