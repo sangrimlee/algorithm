@@ -1,4 +1,4 @@
-![cover](https://user-images.githubusercontent.com/56021431/235562227-fc7f46ca-e1be-4c45-8c23-e6a27e1aab57.png)
+![cover](/website/public/images/og.png)
 
 # Algorithm
 
@@ -10,16 +10,17 @@
 
 ## Solution
 
-- [Github](./solution/README.md)
-- Website(Processing)
+- [모든 문제 풀이 목록 보러가기↗️](./solution/README.md)
+- [웹 사이트에서 보기↗️](https://algorithm.sangrim.dev)
 
 ## Packages
 
-| Pacakge                                    | Description                          |
-| ------------------------------------------ | ------------------------------------ |
-| [@algorithm/cli](./packages/cli)           | 문제 관련 템플릿을 생성하는 CLI      |
-| [@algorithm/lib](./packages/lib)           | 문제 풀이에 사용되는 공통 라이브러리 |
-| [@algorithm/solution](./packages/solution) | 문제 풀이                            |
+| Pacakge                           | Description                          |
+| --------------------------------- | ------------------------------------ |
+| [@algorithm/cli](./packages/cli)  | 문제 템플릿을 생성하는 CLI           |
+| [@algorithm/lib](./packages/lib)  | 문제 풀이에 사용되는 공통 라이브러리 |
+| [@algorithm/solution](./solution) | 문제 풀이                            |
+| [website](./website)              | 문제 풀이 정리 Website               |
 
 ## Problem Source
 
