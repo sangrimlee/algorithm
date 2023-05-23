@@ -1,0 +1,22 @@
+/**
+ * 135807. 숫자 카드 나누기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/135807
+ */
+export function divideCard(arrayA: number[], arrayB: number[]): number {
+  const gcd = (a: number, b: number): number => (a % b === 0 ? b : gcd(b, a % b));
+
+  const lcm = (a: number, b: number): number => (a * b) / gcd(a, b);
+
+  const gcdA = arrayA.reduce(gcd, arrayA[0]);
+  const gcdB = arrayB.reduce(gcd, arrayB[0]);
+  const lcmA = arrayA.reduce(lcm, arrayA[0]);
+  const lcmB = arrayB.reduce(lcm, arrayB[0]);
+
+  for (let i = Math.max(gcdA, gcdB); 1 < i; i--) {
+    if ((gcdA % i === 0 && lcmB % i !== 0) || (gcdB % i === 0 && lcmA % i !== 0)) {
+      return i;
+    }
+  }
+
+  return 0;
+}

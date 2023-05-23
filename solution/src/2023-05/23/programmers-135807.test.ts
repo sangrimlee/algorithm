@@ -1,0 +1,13 @@
+import { divideCard } from './programmers-135807';
+
+describe('2023-05-23: Programmers 135807', () => {
+  test('Example 1', () => {
+    expect(divideCard([10, 17], [5, 20])).toEqual(0);
+  });
+  test('Example 2', () => {
+    expect(divideCard([10, 20], [5, 17])).toEqual(10);
+  });
+  test('Example 3', () => {
+    expect(divideCard([14, 35, 119], [18, 30, 102])).toEqual(7);
+  });
+});

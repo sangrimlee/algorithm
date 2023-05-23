@@ -79,6 +79,7 @@
   "649": "649. Dota2 Senate",
   "658": "658. Find K Closest Elements",
   "665": "665. Non-decreasing Array",
+  "703": "703. Kth Largest Element in a Stream",
   "718": "718. Maximum Length of Repeated Subarray",
   "739": "739. Daily Temperatures",
   "745": "745. Prefix and Suffix Search",
@@ -194,5 +195,6 @@
   "2636": "2636. Promise Pool",
   "2637": "2637. Promise Time Limit",
   "2666": "2666. Allow One Function Call",
+  "2675": "2675. Array of Objects to Matrix",
   "2676": "2676. Throttle"
 }
