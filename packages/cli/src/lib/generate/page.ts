@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 import { getLeetCodeQuestionBySlug } from '@/api/leetcode';
@@ -24,12 +25,16 @@ async function generateProgrammersSolutionPage(solution: ProgrammersSolution, pa
   await ensureWriteFile(pagePath, template);
 }
 
-function generateSolutionPage(solution: Solution, outDir: string) {
+function generateSolutionPage(solution: Solution, outDir: string, force: boolean) {
   const pagePath = path.join(
     outDir,
     solution.codingSite.toLowerCase(),
     `${solution.id}${EXTNAME.MDX}`,
   );
+
+  if (existsSync(pagePath) && !force) {
+    return;
+  }
 
   if (solution.codingSite === CodingSite.LeetCode) {
     return generateLeetCodeSolutionPage(solution, pagePath);
@@ -60,12 +65,12 @@ export async function generateIntroductionPage(
   await ensureWriteFile(path.join(outDir, `index${EXTNAME.MDX}`), template);
 }
 
-export async function generatePage(solutionDir: string, outDir: string) {
+export async function generatePage(solutionDir: string, outDir: string, force: boolean) {
   const solutions = await getSolutions(solutionDir, outDir);
   const groups = groupByCodingSite(solutions);
 
   await Promise.all([
-    ...solutions.map((solution) => generateSolutionPage(solution, outDir)),
+    ...solutions.map((solution) => generateSolutionPage(solution, outDir, force)),
     ...Array.from(groups).map(([codingSite, solution]) =>
       generateSolutionPageMeta(codingSite, solution, outDir),
     ),

@@ -12,6 +12,7 @@ program
   .option('-d, --dir <dir>', 'Solution directory', '.')
   .option('-o, --outdir <dir>', 'Output directory', '.')
   .option('--format <format>', 'Generate format ("README", "PAGE")', 'README')
+  .option('--force', 'Force generate page', false)
   .parse();
 
 const options = program.opts();
@@ -25,7 +26,7 @@ function main() {
   }
 
   if (/^page$/i.test(options.format)) {
-    return generatePage(solutionDir, outDir);
+    return generatePage(solutionDir, outDir, options.force);
   }
 
   return Promise.reject('format should be PAGE or README.');
