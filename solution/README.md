@@ -188,6 +188,7 @@
 | 2279 |                           [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                            | [풀이](src/2022-12/27/leetcode-2279.ts) |
 | 2389 |                               [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                               | [풀이](src/2022-12/25/leetcode-2389.ts) |
 | 2466 |                                   [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                    | [풀이](src/2023-05/13/leetcode-2466.ts) |
+| 2542 |                                          [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score)                                           | [풀이](src/2023-05/24/leetcode-2542.ts) |
 | 2621 |                                                              [Sleep](https://leetcode.com/problems/sleep)                                                               | [풀이](src/2023-05/15/leetcode-2621.ts) |
 | 2622 |                                              [Cache With Time Limit](https://leetcode.com/problems/cache-with-time-limit)                                               | [풀이](src/2023-05/18/leetcode-2622.ts) |
 | 2623 |                                                            [Memoize](https://leetcode.com/problems/memoize)                                                             | [풀이](src/2023-05/13/leetcode-2623.ts) |
@@ -204,6 +205,7 @@
 | 2666 |                                            [Allow One Function Call](https://leetcode.com/problems/allow-one-function-call)                                             | [풀이](src/2023-05/12/leetcode-2666.ts) |
 | 2675 |                                         [Array of Objects to Matrix](https://leetcode.com/problems/array-of-objects-to-matrix)                                          | [풀이](src/2023-05/23/leetcode-2675.ts) |
 | 2676 |                                                           [Throttle](https://leetcode.com/problems/throttle)                                                            | [풀이](src/2023-05/22/leetcode-2676.ts) |
+| 2700 |                                    [Differences Between Two Objects](https://leetcode.com/problems/differences-between-two-objects)                                     | [풀이](src/2023-05/24/leetcode-2700.ts) |
 
 ### Programmers
 
