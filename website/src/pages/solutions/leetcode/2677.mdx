@@ -1,0 +1,27 @@
+---
+title: Chunk Array
+tags:
+---
+
+# 2677. Chunk Array
+
+<Badges>
+<LevelBadge level="easy" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function chunk<T>(arr: T[], size: number): T[][] {
+  return Array.from({ length: Math.ceil(arr.length / size) }).map((_, i) =>
+    arr.slice(i * size, (i + 1) * size),
+  );
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/chunk-array"
+  title="Chunk Array"
+/>

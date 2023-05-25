@@ -99,6 +99,7 @@
 | 814  |                                                [Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/)                                                |  [풀이](src/2022-09/06/leetcode-814.ts) |
 | 820  |                                            [Short Encoding of Words](https://leetcode.com/problems/short-encoding-of-words/)                                            |  [풀이](src/2022-06/20/leetcode-820.ts) |
 | 834  |                                           [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree)                                            |  [풀이](src/2022-12/22/leetcode-834.ts) |
+| 837  |                                                        [New 21 Game](https://leetcode.com/problems/new-21-game)                                                         |  [풀이](src/2023-05/25/leetcode-837.ts) |
 | 838  |                                                      [Push Dominoes](https://leetcode.com/problems/push-dominoes/)                                                      |  [풀이](src/2022-09/27/leetcode-838.ts) |
 | 841  |                                                     [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms)                                                      |  [풀이](src/2022-12/20/leetcode-841.ts) |
 | 867  |                                                   [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/)                                                   |   [풀이](src/2022-06/2/leetcode-867.ts) |
@@ -205,6 +206,7 @@
 | 2666 |                                            [Allow One Function Call](https://leetcode.com/problems/allow-one-function-call)                                             | [풀이](src/2023-05/12/leetcode-2666.ts) |
 | 2675 |                                         [Array of Objects to Matrix](https://leetcode.com/problems/array-of-objects-to-matrix)                                          | [풀이](src/2023-05/23/leetcode-2675.ts) |
 | 2676 |                                                           [Throttle](https://leetcode.com/problems/throttle)                                                            | [풀이](src/2023-05/22/leetcode-2676.ts) |
+| 2677 |                                                        [Chunk Array](https://leetcode.com/problems/chunk-array)                                                         | [풀이](src/2023-05/25/leetcode-2677.ts) |
 | 2700 |                                    [Differences Between Two Objects](https://leetcode.com/problems/differences-between-two-objects)                                     | [풀이](src/2023-05/24/leetcode-2700.ts) |
 
 ### Programmers
@@ -230,6 +232,7 @@
 | 138476 |        [귤 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/138476)         | [풀이](src/2023-03/02/programmers-138476.ts) |
 | 140107 |         [점 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/140107)          | [풀이](src/2023-03/28/programmers-140107.ts) |
 | 140108 |      [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108)       | [풀이](src/2023-03/08/programmers-140108.ts) |
+| 142085 |       [디펜스 게임](https://school.programmers.co.kr/learn/courses/30/lessons/142085)        | [풀이](src/2023-05/25/programmers-142085.ts) |
 | 142086 |  [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)   | [풀이](src/2023-03/03/programmers-142086.ts) |
 | 147355 |  [크기가 작은 부분문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355)  | [풀이](src/2023-03/02/programmers-147355.ts) |
 | 148653 |    [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)     | [풀이](src/2023-05/02/programmers-148653.ts) |
@@ -240,3 +243,4 @@
 | 160586 |      [대충 만든 자판](https://school.programmers.co.kr/learn/courses/30/lessons/160586)      | [풀이](src/2023-03/28/programmers-160586.ts) |
 | 161989 |         [덧칠하기](https://school.programmers.co.kr/learn/courses/30/lessons/161989)         | [풀이](src/2023-03/08/programmers-161989.ts) |
 | 161990 |      [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)       | [풀이](src/2023-03/13/programmers-161990.ts) |
+| 172927 |        [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)         | [풀이](src/2023-05/25/programmers-172927.ts) |
