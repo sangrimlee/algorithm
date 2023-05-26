@@ -128,6 +128,7 @@
 | 1048 |                                               [Longest String Chain](https://leetcode.com/problems/longest-string-chain/)                                               | [풀이](src/2022-06/15/leetcode-1048.ts) |
 | 1061 |                       [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string)                        | [풀이](src/2023-01/14/leetcode-1061.ts) |
 | 1137 |                                             [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                              | [풀이](src/2023-01/30/leetcode-1137.ts) |
+| 1140 |                                                      [Stone Game II](https://leetcode.com/problems/stone-game-ii)                                                       | [풀이](src/2023-05/26/leetcode-1140.ts) |
 | 1143 |                                         [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)                                          | [풀이](src/2022-12/15/leetcode-1143.ts) |
 | 1155 |                               [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)                               | [풀이](src/2022-10/02/leetcode-1155.ts) |
 | 1207 |                                       [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                       | [풀이](src/2022-11/30/leetcode-1207.ts) |
@@ -193,6 +194,7 @@
 | 2621 |                                                              [Sleep](https://leetcode.com/problems/sleep)                                                               | [풀이](src/2023-05/15/leetcode-2621.ts) |
 | 2622 |                                              [Cache With Time Limit](https://leetcode.com/problems/cache-with-time-limit)                                               | [풀이](src/2023-05/18/leetcode-2622.ts) |
 | 2623 |                                                            [Memoize](https://leetcode.com/problems/memoize)                                                             | [풀이](src/2023-05/13/leetcode-2623.ts) |
+| 2625 |                                        [Flatten Deeply Nested Array](https://leetcode.com/problems/flatten-deeply-nested-array)                                         | [풀이](src/2023-05/26/leetcode-2625.ts) |
 | 2626 |                                        [Array Reduce Transformation](https://leetcode.com/problems/array-reduce-transformation)                                         | [풀이](src/2023-05/10/leetcode-2626.ts) |
 | 2627 |                                                           [Debounce](https://leetcode.com/problems/debounce)                                                            | [풀이](src/2023-05/19/leetcode-2627.ts) |
 | 2628 |                                                    [JSON Deep Equal](https://leetcode.com/problems/json-deep-equal)                                                     | [풀이](src/2023-05/21/leetcode-2628.ts) |
