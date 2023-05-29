@@ -155,6 +155,7 @@
 | 1557 |                      [Minimum Number of Vertices to Reach All Nodes](https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes)                       | [풀이](src/2023-05/18/leetcode-1557.ts) |
 | 1572 |                                                [Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum)                                                 | [풀이](src/2023-05/08/leetcode-1572.ts) |
 | 1578 |                                 [Minimum Time to Make Rope Colorful](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/)                                 | [풀이](src/2022-10/03/leetcode-1578.ts) |
+| 1603 |                                              [Design Parking System](https://leetcode.com/problems/design-parking-system)                                               | [풀이](src/2023-05/29/leetcode-1603.ts) |
 | 1642 |                                    [Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/)                                    | [풀이](src/2022-06/21/leetcode-1642.ts) |
 | 1647 |             [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)             | [풀이](src/2022-06/28/leetcode-1647.ts) |
 | 1657 |                                 [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/)                                 | [풀이](src/2022-12/02/leetcode-1657.ts) |
@@ -192,6 +193,7 @@
 | 2389 |                               [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                               | [풀이](src/2022-12/25/leetcode-2389.ts) |
 | 2466 |                                   [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                    | [풀이](src/2023-05/13/leetcode-2466.ts) |
 | 2542 |                                          [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score)                                           | [풀이](src/2023-05/24/leetcode-2542.ts) |
+| 2618 |                                  [Check if Object Instance of Class](https://leetcode.com/problems/check-if-object-instance-of-class)                                   | [풀이](src/2023-05/29/leetcode-2618.ts) |
 | 2619 |                                               [Array Prototype Last](https://leetcode.com/problems/array-prototype-last)                                                | [풀이](src/2023-05/28/leetcode-2619.ts) |
 | 2621 |                                                              [Sleep](https://leetcode.com/problems/sleep)                                                               | [풀이](src/2023-05/15/leetcode-2621.ts) |
 | 2622 |                                              [Cache With Time Limit](https://leetcode.com/problems/cache-with-time-limit)                                               | [풀이](src/2023-05/18/leetcode-2622.ts) |
