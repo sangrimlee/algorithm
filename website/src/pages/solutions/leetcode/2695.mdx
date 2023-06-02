@@ -1,0 +1,37 @@
+---
+title: Array Wrapper
+tags:
+---
+
+# 2695. Array Wrapper
+
+<Badges>
+<LevelBadge level="easy" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class ArrayWrapper {
+  private readonly nums: number[];
+
+  constructor(nums: number[]) {
+    this.nums = nums;
+  }
+
+  valueOf() {
+    return this.nums.reduce((a, b) => a + b, 0);
+  }
+
+  toString() {
+    return `[${this.nums}]`;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/array-wrapper"
+  title="Array Wrapper"
+/>

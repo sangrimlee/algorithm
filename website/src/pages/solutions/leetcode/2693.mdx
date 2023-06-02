@@ -1,0 +1,35 @@
+---
+title: Call Function with Custom Context
+tags:
+---
+
+# 2693. Call Function with Custom Context
+
+<Badges>
+<LevelBadge level="medium" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+declare global {
+  interface Function {
+    callPolyfill(context: Record<any, any>, ...args: any[]): any;
+  }
+}
+
+Function.prototype.callPolyfill = function (context, ...args): any {
+  return this.bind(context)(...args);
+};
+
+export {};
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/call-function-with-custom-context"
+  title="Call Function with Custom Context"
+/>

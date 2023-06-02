@@ -1,0 +1,66 @@
+---
+title: Detonate the Maximum Bombs
+tags:
+  - Array
+  - Math
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Geometry
+---
+
+# 2101. Detonate the Maximum Bombs
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Graph" slug="graph" />
+  <TopicBadge name="Geometry" slug="geometry" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function maximumDetonation(bombs: number[][]): number {
+  const n = bombs.length;
+  const graph: number[][] = Array.from({ length: n }).map(() => []);
+
+  const isInRange = ([ax, ay, ar]: number[], [bx, by]: number[]) => {
+    return ar ** 2 >= (ax - bx) ** 2 + (ay - by) ** 2;
+  };
+
+  for (const i of range(n)) {
+    for (const j of range(i + 1, n)) {
+      if (isInRange(bombs[i], bombs[j])) {
+        graph[i].push(j);
+      }
+      if (isInRange(bombs[j], bombs[i])) {
+        graph[j].push(i);
+      }
+    }
+  }
+
+  const dfs = (currentNode: number, visited: Set<number>) => {
+    visited.add(currentNode);
+    for (const nextNode of graph[currentNode]) {
+      if (!visited.has(nextNode)) {
+        dfs(nextNode, visited);
+      }
+    }
+    return visited.size;
+  };
+
+  return bombs.reduce((answer, _, i) => Math.max(answer, dfs(i, new Set())), 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/detonate-the-maximum-bombs"
+  title="Detonate the Maximum Bombs"
+/>
