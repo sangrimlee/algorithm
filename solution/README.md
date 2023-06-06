@@ -147,6 +147,7 @@
 | 1465 | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/) | [풀이](src/2022-07/02/leetcode-1465.ts) |
 | 1480 |                                            [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                            |  [풀이](src/2022-06/1/leetcode-1480.ts) |
 | 1491 |            [Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary)             | [풀이](src/2023-05/01/leetcode-1491.ts) |
+| 1502 |                      [Can Make Arithmetic Progression From Sequence](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence)                       | [풀이](src/2023-06/06/leetcode-1502.ts) |
 | 1519 |                [Number of Nodes in the Sub-Tree With the Same Label](https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label)                 | [풀이](src/2023-01/12/leetcode-1519.ts) |
 | 1531 |                                              [String Compression II](https://leetcode.com/problems/string-compression-ii/)                                              | [풀이](src/2022-10/15/leetcode-1531.ts) |
 | 1539 |                                        [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number)                                         | [풀이](src/2023-03/06/leetcode-1539.ts) |
@@ -199,6 +200,7 @@
 | 2621 |                                                              [Sleep](https://leetcode.com/problems/sleep)                                                               | [풀이](src/2023-05/15/leetcode-2621.ts) |
 | 2622 |                                              [Cache With Time Limit](https://leetcode.com/problems/cache-with-time-limit)                                               | [풀이](src/2023-05/18/leetcode-2622.ts) |
 | 2623 |                                                            [Memoize](https://leetcode.com/problems/memoize)                                                             | [풀이](src/2023-05/13/leetcode-2623.ts) |
+| 2624 |                                                    [Snail Traversal](https://leetcode.com/problems/snail-traversal)                                                     | [풀이](src/2023-06/06/leetcode-2624.ts) |
 | 2625 |                                        [Flatten Deeply Nested Array](https://leetcode.com/problems/flatten-deeply-nested-array)                                         | [풀이](src/2023-05/26/leetcode-2625.ts) |
 | 2626 |                                        [Array Reduce Transformation](https://leetcode.com/problems/array-reduce-transformation)                                         | [풀이](src/2023-05/10/leetcode-2626.ts) |
 | 2627 |                                                           [Debounce](https://leetcode.com/problems/debounce)                                                            | [풀이](src/2023-05/19/leetcode-2627.ts) |
