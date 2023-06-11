@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "next lint --fix",
     "format": "prettier --write --cache  \"./**/*.{mdx,ts,tsx}\"",
-    "prebuild": "next-sitemap"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
