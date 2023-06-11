@@ -1,6 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
-
-module.exports = {
-  siteUrl: process.env.VERCEL_URL,
+const config = {
+  siteUrl: process.env.URL,
   generateRobotsTxt: true,
 };
+
+module.exports = config;

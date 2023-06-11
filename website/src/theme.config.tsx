@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Footer } from './components';
 import { Logo } from './components/logos';
 import { Badges, LevelBadge, TopicBadge, ProblemLink } from './components/mdx-components';
+import { env } from './env.mjs';
 
 const config: DocsThemeConfig = {
   project: {
@@ -27,7 +28,7 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter();
     const { title, frontMatter } = useConfig();
 
-    const baseURL = new URL(process.env.NEXT_PUBLIC_URL);
+    const baseURL = new URL(env.URL);
     const domain = baseURL.hostname;
     const ogImage = new URL('/images/og.png', baseURL).href;
     const url = new URL(asPath, baseURL).href;
