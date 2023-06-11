@@ -5,8 +5,11 @@ export const env = createEnv({
   server: {
     URL: z.string().url(),
   },
-  client: {},
+  client: {
+    NEXT_PUBLIC_URL: z.string().url(),
+  },
   runtimeEnv: {
     URL: process.env.URL,
+    NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   },
 });

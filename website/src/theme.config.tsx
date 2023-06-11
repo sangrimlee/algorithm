@@ -28,7 +28,7 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter();
     const { title, frontMatter } = useConfig();
 
-    const baseURL = new URL(env.URL);
+    const baseURL = new URL(env.NEXT_PUBLIC_URL);
     const domain = baseURL.hostname;
     const ogImage = new URL('/images/og.png', baseURL).href;
     const url = new URL(asPath, baseURL).href;
