@@ -1,5 +1,7 @@
 import nextra from 'nextra';
 
+import './src/env.mjs';
+
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './src/theme.config.tsx',

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@t3-oss/env-nextjs": "^0.4.0",
     "@vercel/analytics": "^1.0.1",
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.11",
@@ -23,7 +24,8 @@
     "nextra-theme-docs": "^2.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "^0.32.1"
+    "sharp": "^0.32.1",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
