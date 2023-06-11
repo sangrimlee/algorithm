@@ -130,6 +130,7 @@
 | 1137 |                                             [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                              | [풀이](src/2023-01/30/leetcode-1137.ts) |
 | 1140 |                                                      [Stone Game II](https://leetcode.com/problems/stone-game-ii)                                                       | [풀이](src/2023-05/26/leetcode-1140.ts) |
 | 1143 |                                         [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)                                          | [풀이](src/2022-12/15/leetcode-1143.ts) |
+| 1146 |                                                     [Snapshot Array](https://leetcode.com/problems/snapshot-array)                                                      | [풀이](src/2023-06/11/leetcode-1146.ts) |
 | 1155 |                               [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)                               | [풀이](src/2022-10/02/leetcode-1155.ts) |
 | 1207 |                                       [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                       | [풀이](src/2022-11/30/leetcode-1207.ts) |
 | 1239 |     [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)     | [풀이](src/2022-10/24/leetcode-1239.ts) |
@@ -240,6 +241,7 @@
 | 132265 |     [롤케이크 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/132265)      | [풀이](src/2023-03/01/programmers-132265.ts) |
 | 133499 |        [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499)        | [풀이](src/2023-03/08/programmers-133499.ts) |
 | 133502 |      [햄버거 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/133502)       | [풀이](src/2023-03/13/programmers-133502.ts) |
+| 134239 |     [우박수열 정적분](https://school.programmers.co.kr/learn/courses/30/lessons/134239)      | [풀이](src/2023-06/11/programmers-134239.ts) |
 | 135807 |     [숫자 카드 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/135807)     | [풀이](src/2023-05/23/programmers-135807.ts) |
 | 135808 |        [과일 장수](https://school.programmers.co.kr/learn/courses/30/lessons/135808)         | [풀이](src/2023-03/06/programmers-135808.ts) |
 | 136798 |     [기사단원의 무기](https://school.programmers.co.kr/learn/courses/30/lessons/136798)      | [풀이](src/2023-03/07/programmers-136798.ts) |
