@@ -26,3 +26,8 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+
+# robots & sitemap for deployment
+website/public/robots*
+website/public/sitemap*
