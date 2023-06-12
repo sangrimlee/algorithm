@@ -1,0 +1,31 @@
+---
+title: Is Object Empty
+tags:
+---
+
+# 2727. Is Object Empty
+
+<Badges>
+<LevelBadge level="easy" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isEmpty(obj: Record<string, unknown> | unknown[]): boolean {
+  if (Array.isArray(obj)) {
+    return obj.length === 0;
+  }
+  if (typeof obj === 'object' && obj !== null) {
+    return Object.keys(obj).length === 0;
+  }
+  return false;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/is-object-empty"
+  title="Is Object Empty"
+/>

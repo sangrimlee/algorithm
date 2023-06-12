@@ -1,0 +1,31 @@
+---
+title: Add Two Promises
+tags:
+---
+
+# 2723. Add Two Promises
+
+<Badges>
+<LevelBadge level="easy" />
+
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function addTwoPromises(
+  promise1: Promise<number>,
+  promise2: Promise<number>,
+): Promise<number> {
+  /* if use async await
+   * return (await promise1) + (await promise2);
+   */
+  return Promise.all([promise1, promise2]).then((nums) => nums.reduce((a, b) => a + b, 0));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/add-two-promises"
+  title="Add Two Promises"
+/>

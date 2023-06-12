@@ -46,6 +46,7 @@
   "222": "222. Count Complete Tree Nodes",
   "223": "223. Rectangle Area",
   "224": "224. Basic Calculator",
+  "228": "228. Summary Ranges",
   "232": "232. Implement Queue using Stacks",
   "234": "234. Palindrome Linked List",
   "263": "263. Ugly Number",
@@ -215,5 +216,12 @@
   "2693": "2693. Call Function with Custom Context",
   "2694": "2694. Event Emitter",
   "2695": "2695. Array Wrapper",
-  "2700": "2700. Differences Between Two Objects"
+  "2700": "2700. Differences Between Two Objects",
+  "2721": "2721. Execute Asynchronous Functions in Parallel",
+  "2722": "2722. Join Two Arrays by ID",
+  "2723": "2723. Add Two Promises",
+  "2724": "2724. Sort By",
+  "2725": "2725. Interval Cancellation",
+  "2726": "2726. Calculator with Method Chaining",
+  "2727": "2727. Is Object Empty"
 }

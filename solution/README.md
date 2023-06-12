@@ -53,6 +53,7 @@
 | 222  |                                          [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)                                          |  [풀이](src/2022-11/15/leetcode-222.ts) |
 | 223  |                                                     [Rectangle Area](https://leetcode.com/problems/rectangle-area/)                                                     |  [풀이](src/2022-11/17/leetcode-223.ts) |
 | 224  |                                                   [Basic Calculator](https://leetcode.com/problems/basic-calculator/)                                                   |  [풀이](src/2022-11/20/leetcode-224.ts) |
+| 228  |                                                     [Summary Ranges](https://leetcode.com/problems/summary-ranges)                                                      |  [풀이](src/2023-06/12/leetcode-228.ts) |
 | 232  |                                       [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)                                        |  [풀이](src/2022-12/16/leetcode-232.ts) |
 | 234  |                                             [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                             |  [풀이](src/2022-09/02/leetcode-234.ts) |
 | 263  |                                                        [Ugly Number](https://leetcode.com/problems/ugly-number/)                                                        |  [풀이](src/2022-11/18/leetcode-263.ts) |
@@ -223,6 +224,13 @@
 | 2694 |                                                      [Event Emitter](https://leetcode.com/problems/event-emitter)                                                       | [풀이](src/2023-06/02/leetcode-2694.ts) |
 | 2695 |                                                      [Array Wrapper](https://leetcode.com/problems/array-wrapper)                                                       | [풀이](src/2023-06/02/leetcode-2695.ts) |
 | 2700 |                                    [Differences Between Two Objects](https://leetcode.com/problems/differences-between-two-objects)                                     | [풀이](src/2023-05/24/leetcode-2700.ts) |
+| 2721 |                         [Execute Asynchronous Functions in Parallel](https://leetcode.com/problems/execute-asynchronous-functions-in-parallel)                          | [풀이](src/2023-06/12/leetcode-2721.ts) |
+| 2722 |                                              [Join Two Arrays by ID](https://leetcode.com/problems/join-two-arrays-by-id)                                               | [풀이](src/2023-06/12/leetcode-2722.ts) |
+| 2723 |                                                   [Add Two Promises](https://leetcode.com/problems/add-two-promises)                                                    | [풀이](src/2023-06/12/leetcode-2723.ts) |
+| 2724 |                                                            [Sort By](https://leetcode.com/problems/sort-by)                                                             | [풀이](src/2023-06/12/leetcode-2724.ts) |
+| 2725 |                                              [Interval Cancellation](https://leetcode.com/problems/interval-cancellation)                                               | [풀이](src/2023-06/12/leetcode-2725.ts) |
+| 2726 |                                    [Calculator with Method Chaining](https://leetcode.com/problems/calculator-with-method-chaining)                                     | [풀이](src/2023-06/12/leetcode-2726.ts) |
+| 2727 |                                                    [Is Object Empty](https://leetcode.com/problems/is-object-empty)                                                     | [풀이](src/2023-06/12/leetcode-2727.ts) |
 
 ### Programmers
 
