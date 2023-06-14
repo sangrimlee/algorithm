@@ -1,0 +1,41 @@
+---
+title: Delete Greatest Value in Each Row
+tags:
+  - Array
+  - Sorting
+  - Matrix
+---
+
+# 2500. Delete Greatest Value in Each Row
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function deleteGreatestValue(grid: number[][]): number {
+  grid.forEach((row) => row.sort((a, b) => a - b));
+
+  let answer = 0;
+  while (0 < grid[0].length) {
+    let maxValue = 0;
+    grid.forEach((row) => {
+      maxValue = Math.max(row.pop() || 0, maxValue);
+    });
+    answer += maxValue;
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/delete-greatest-value-in-each-row"
+  title="Delete Greatest Value in Each Row"
+/>
