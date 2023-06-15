@@ -78,6 +78,7 @@
 | 495  |                                                    [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                     |  [풀이](src/2023-05/04/leetcode-495.ts) |
 | 509  |                                                   [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                   |  [풀이](src/2022-07/06/leetcode-509.ts) |
 | 520  |                                                     [Detect Capital](https://leetcode.com/problems/detect-capital)                                                      |  [풀이](src/2023-01/02/leetcode-520.ts) |
+| 530  |                                 [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst)                                  |  [풀이](src/2023-06/14/leetcode-530.ts) |
 | 557  |                                  [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                  |  [풀이](src/2022-09/22/leetcode-557.ts) |
 | 583  |                                   [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)                                   |  [풀이](src/2022-06/14/leetcode-583.ts) |
 | 587  |                                                    [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)                                                    |  [풀이](src/2022-11/19/leetcode-587.ts) |
@@ -269,4 +270,5 @@
 | 160586 |      [대충 만든 자판](https://school.programmers.co.kr/learn/courses/30/lessons/160586)      | [풀이](src/2023-03/28/programmers-160586.ts) |
 | 161989 |         [덧칠하기](https://school.programmers.co.kr/learn/courses/30/lessons/161989)         | [풀이](src/2023-03/08/programmers-161989.ts) |
 | 161990 |      [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)       | [풀이](src/2023-03/13/programmers-161990.ts) |
+| 169199 |       [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)        | [풀이](src/2023-06/14/programmers-169199.ts) |
 | 172927 |        [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)         | [풀이](src/2023-05/25/programmers-172927.ts) |
