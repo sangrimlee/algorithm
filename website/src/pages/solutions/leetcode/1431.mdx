@@ -1,0 +1,27 @@
+---
+title: Kids With the Greatest Number of Candies
+tags:
+  - Array
+---
+
+# 1431. Kids With the Greatest Number of Candies
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
+  const maxCandies = candies.reduce((prev, curr) => Math.max(prev, curr), 0);
+  return candies.map((candy) => candy + extraCandies >= maxCandies);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/kids-with-the-greatest-number-of-candies"
+  title="Kids With the Greatest Number of Candies"
+/>
