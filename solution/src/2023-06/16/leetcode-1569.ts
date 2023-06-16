@@ -1,0 +1,47 @@
+/**
+ * 1569. Number of Ways to Reorder Array to Get Same BST
+ * https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst
+ */
+export function numOfWays(nums: number[]): number {
+  const MOD = BigInt(10 ** 9 + 7);
+
+  const cache = new Map<number, bigint>();
+  const factorial = (n: number): bigint => {
+    if (n < 2) {
+      return 1n;
+    }
+    const cached = cache.get(n);
+    if (cached !== undefined) {
+      return cached;
+    }
+
+    const result = BigInt(n) * factorial(n - 1);
+    cache.set(n, result);
+    return result;
+  };
+
+  const combination = (n: number, r: number): bigint => {
+    if (n < 2) {
+      return 1n;
+    }
+    return factorial(n) / factorial(n - r) / factorial(r);
+  };
+
+  const dfs = (nodes: number[]): bigint => {
+    if (nodes.length < 3) {
+      return 1n;
+    }
+    const rootNode = nodes[0];
+    const leftNodes = nodes.filter((node) => node < rootNode);
+    const rightNodes = nodes.filter((node) => node > rootNode);
+    return (
+      (combination(leftNodes.length + rightNodes.length, leftNodes.length) *
+        dfs(leftNodes) *
+        dfs(rightNodes)) %
+      MOD
+    );
+  };
+
+  const answer = (dfs(nums) - 1n) % MOD;
+  return Number(answer);
+}

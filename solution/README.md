@@ -160,6 +160,7 @@
 | 1544 |                                              [Make The String Great](https://leetcode.com/problems/make-the-string-great/)                                              | [풀이](src/2022-11/08/leetcode-1544.ts) |
 | 1547 |                                        [Minimum Cost to Cut a Stick](https://leetcode.com/problems/minimum-cost-to-cut-a-stick)                                         | [풀이](src/2023-05/28/leetcode-1547.ts) |
 | 1557 |                      [Minimum Number of Vertices to Reach All Nodes](https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes)                       | [풀이](src/2023-05/18/leetcode-1557.ts) |
+| 1569 |                    [Number of Ways to Reorder Array to Get Same BST](https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst)                     | [풀이](src/2023-06/16/leetcode-1569.ts) |
 | 1572 |                                                [Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum)                                                 | [풀이](src/2023-05/08/leetcode-1572.ts) |
 | 1578 |                                 [Minimum Time to Make Rope Colorful](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/)                                 | [풀이](src/2022-10/03/leetcode-1578.ts) |
 | 1603 |                                              [Design Parking System](https://leetcode.com/problems/design-parking-system)                                               | [풀이](src/2023-05/29/leetcode-1603.ts) |

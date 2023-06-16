@@ -1,0 +1,84 @@
+---
+title: Number of Ways to Reorder Array to Get Same BST
+tags:
+  - Array
+  - Math
+  - Divide and Conquer
+  - Dynamic Programming
+  - Tree
+  - Union Find
+  - Binary Search Tree
+  - Memoization
+  - Combinatorics
+  - Binary Tree
+---
+
+# 1569. Number of Ways to Reorder Array to Get Same BST
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Divide and Conquer" slug="divide-and-conquer" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Union Find" slug="union-find" />
+  <TopicBadge name="Binary Search Tree" slug="binary-search-tree" />
+  <TopicBadge name="Memoization" slug="memoization" />
+  <TopicBadge name="Combinatorics" slug="combinatorics" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numOfWays(nums: number[]): number {
+  const MOD = BigInt(10 ** 9 + 7);
+
+  const cache = new Map<number, bigint>();
+  const factorial = (n: number): bigint => {
+    if (n < 2) {
+      return 1n;
+    }
+    const cached = cache.get(n);
+    if (cached !== undefined) {
+      return cached;
+    }
+
+    const result = BigInt(n) * factorial(n - 1);
+    cache.set(n, result);
+    return result;
+  };
+
+  const combination = (n: number, r: number): bigint => {
+    if (n < 2) {
+      return 1n;
+    }
+    return factorial(n) / factorial(n - r) / factorial(r);
+  };
+
+  const dfs = (nodes: number[]): bigint => {
+    if (nodes.length < 3) {
+      return 1n;
+    }
+    const rootNode = nodes[0];
+    const leftNodes = nodes.filter((node) => node < rootNode);
+    const rightNodes = nodes.filter((node) => node > rootNode);
+    return (
+      (combination(leftNodes.length + rightNodes.length, leftNodes.length) *
+        dfs(leftNodes) *
+        dfs(rightNodes)) %
+      MOD
+    );
+  };
+
+  const answer = (dfs(nums) - 1n) % MOD;
+  return Number(answer);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst"
+  title="Number of Ways to Reorder Array to Get Same BST"
+/>
