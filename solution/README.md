@@ -136,6 +136,7 @@
 | 1146 |                                                     [Snapshot Array](https://leetcode.com/problems/snapshot-array)                                                      | [풀이](src/2023-06/11/leetcode-1146.ts) |
 | 1155 |                               [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)                               | [풀이](src/2022-10/02/leetcode-1155.ts) |
 | 1161 |                                 [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree)                                  | [풀이](src/2023-06/15/leetcode-1161.ts) |
+| 1187 |                                     [Make Array Strictly Increasing](https://leetcode.com/problems/make-array-strictly-increasing)                                      | [풀이](src/2023-06/17/leetcode-1187.ts) |
 | 1207 |                                       [Unique Number of Occurrences](https://leetcode.com/problems/unique-number-of-occurrences/)                                       | [풀이](src/2022-11/30/leetcode-1207.ts) |
 | 1239 |     [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)     | [풀이](src/2022-10/24/leetcode-1239.ts) |
 | 1268 |                                          [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)                                          | [풀이](src/2022-06/19/leetcode-1268.ts) |
