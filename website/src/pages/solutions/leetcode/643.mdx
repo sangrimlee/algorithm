@@ -1,0 +1,39 @@
+---
+title: Maximum Average Subarray I
+tags:
+  - Array
+  - Sliding Window
+---
+
+# 643. Maximum Average Subarray I
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Sliding Window" slug="sliding-window" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function findMaxAverage(nums: number[], k: number): number {
+  const n = nums.length;
+
+  let totalValue = nums.slice(0, k).reduce((acc, num) => acc + num, 0);
+  let maxAverage = totalValue / k;
+  for (const i of range(n - k)) {
+    totalValue += nums[i + k] - nums[i];
+    maxAverage = Math.max(totalValue / k, maxAverage);
+  }
+
+  return maxAverage;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-average-subarray-i"
+  title="Maximum Average Subarray I"
+/>

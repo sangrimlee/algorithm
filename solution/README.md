@@ -86,6 +86,7 @@
 | 606  |                                  [Construct String from Binary Tree](https://leetcode.com/problems/construct-string-from-binary-tree/)                                  |  [풀이](src/2022-09/07/leetcode-606.ts) |
 | 630  |                                                [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)                                                |  [풀이](src/2022-06/23/leetcode-630.ts) |
 | 637  |                                   [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                                   |  [풀이](src/2022-09/02/leetcode-637.ts) |
+| 643  |                                         [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i)                                          |  [풀이](src/2023-06/19/leetcode-643.ts) |
 | 649  |                                                       [Dota2 Senate](https://leetcode.com/problems/dota2-senate)                                                        |  [풀이](src/2023-05/04/leetcode-649.ts) |
 | 658  |                                            [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                            |  [풀이](src/2022-09/29/leetcode-658.ts) |
 | 665  |                                               [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)                                               |  [풀이](src/2022-06/25/leetcode-665.ts) |
@@ -114,6 +115,7 @@
 | 901  |                                                  [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                  |  [풀이](src/2022-11/09/leetcode-901.ts) |
 | 907  |                                           [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)                                           |  [풀이](src/2022-11/25/leetcode-907.ts) |
 | 931  |                                           [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum)                                            |  [풀이](src/2022-12/13/leetcode-931.ts) |
+| 933  |                                             [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls)                                              |  [풀이](src/2023-06/19/leetcode-933.ts) |
 | 934  |                                                    [Shortest Bridge](https://leetcode.com/problems/shortest-bridge)                                                     |  [풀이](src/2023-05/21/leetcode-934.ts) |
 | 938  |                                                   [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)                                                   |  [풀이](src/2022-12/07/leetcode-938.ts) |
 | 944  |                                      [Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted)                                       |  [풀이](src/2023-01/03/leetcode-944.ts) |
@@ -177,6 +179,7 @@
 | 1706 |                                           [Where Will the Ball Fall](https://leetcode.com/problems/where-will-the-ball-fall/)                                           | [풀이](src/2022-11/01/leetcode-1706.ts) |
 | 1710 |                                           [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/)                                           | [풀이](src/2022-07/01/leetcode-1710.ts) |
 | 1721 |                                    [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list)                                     | [풀이](src/2023-05/15/leetcode-1721.ts) |
+| 1732 |                                          [Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)                                           | [풀이](src/2023-06/19/leetcode-1732.ts) |
 | 1799 |                                  [Maximize Score After N Operations](https://leetcode.com/problems/maximize-score-after-n-operations)                                   | [풀이](src/2023-05/14/leetcode-1799.ts) |
 | 1822 |                                    [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array)                                     | [풀이](src/2023-05/02/leetcode-1822.ts) |
 | 1833 |                                             [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                              | [풀이](src/2023-01/06/leetcode-1833.ts) |
