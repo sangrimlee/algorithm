@@ -191,6 +191,7 @@
 | 1971 |                                       [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                        | [풀이](src/2022-12/19/leetcode-1971.ts) |
 | 1996 |                          [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)                          | [풀이](src/2022-09/09/leetcode-1996.ts) |
 | 2089 |                            [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/)                            | [풀이](src/2022-09/28/leetcode-2089.ts) |
+| 2090 |                                         [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages)                                          | [풀이](src/2023-06/20/leetcode-2090.ts) |
 | 2101 |                                         [Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs)                                          | [풀이](src/2023-06/02/leetcode-2101.ts) |
 | 2130 |                                  [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)                                   | [풀이](src/2023-05/17/leetcode-2130.ts) |
 | 2131 |               [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/)               | [풀이](src/2022-11/03/leetcode-2131.ts) |
