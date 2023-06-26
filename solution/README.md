@@ -208,6 +208,7 @@
 | 2279 |                           [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                            | [풀이](src/2022-12/27/leetcode-2279.ts) |
 | 2352 |                                         [Equal Row and Column Pairs](https://leetcode.com/problems/equal-row-and-column-pairs)                                          | [풀이](src/2023-06/13/leetcode-2352.ts) |
 | 2389 |                               [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                               | [풀이](src/2022-12/25/leetcode-2389.ts) |
+| 2462 |                                       [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers)                                        | [풀이](src/2023-06/26/leetcode-2462.ts) |
 | 2466 |                                   [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                    | [풀이](src/2023-05/13/leetcode-2466.ts) |
 | 2500 |                                  [Delete Greatest Value in Each Row](https://leetcode.com/problems/delete-greatest-value-in-each-row)                                   | [풀이](src/2023-06/13/leetcode-2500.ts) |
 | 2542 |                                          [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score)                                           | [풀이](src/2023-05/24/leetcode-2542.ts) |
