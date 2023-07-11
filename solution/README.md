@@ -29,6 +29,7 @@
 | 100  |                                                          [Same Tree](https://leetcode.com/problems/same-tree)                                                           |  [풀이](src/2023-01/10/leetcode-100.ts) |
 | 101  |                                                     [Symmetric Tree](https://leetcode.com/problems/symmetric-tree)                                                      |  [풀이](src/2023-03/13/leetcode-101.ts) |
 | 108  |                         [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)                          |  [풀이](src/2023-06/22/leetcode-108.ts) |
+| 111  |                                       [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)                                        |  [풀이](src/2023-07/10/leetcode-111.ts) |
 | 112  |                                                           [Path Sum](https://leetcode.com/problems/path-sum/)                                                           |  [풀이](src/2022-10/04/leetcode-112.ts) |
 | 113  |                                                        [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                        |  [풀이](src/2022-09/24/leetcode-113.ts) |
 | 120  |                                                           [Triangle](https://leetcode.com/problems/triangle/)                                                           |  [풀이](src/2022-06/13/leetcode-120.ts) |
