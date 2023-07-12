@@ -1,0 +1,60 @@
+---
+title: Find Eventual Safe States
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Topological Sort
+---
+
+# 802. Find Eventual Safe States
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Graph" slug="graph" />
+  <TopicBadge name="Topological Sort" slug="topological-sort" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function eventualSafeNodes(graph: number[][]): number[] {
+  const n = graph.length;
+  const visited = new Array<boolean>(n).fill(false);
+  const inStack = new Array<boolean>(n).fill(false);
+
+  const dfs = (node: number): boolean => {
+    if (inStack[node]) {
+      return true;
+    }
+    if (visited[node]) {
+      return false;
+    }
+    visited[node] = true;
+    inStack[node] = true;
+    for (const neighbor of graph[node]) {
+      if (dfs(neighbor)) {
+        return true;
+      }
+    }
+    inStack[node] = false;
+    return false;
+  };
+
+  for (const node of range(n)) {
+    dfs(node);
+  }
+
+  return [...range(n)].filter((node) => !inStack[node]);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-eventual-safe-states"
+  title="Find Eventual Safe States"
+/>

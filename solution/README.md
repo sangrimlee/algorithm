@@ -103,6 +103,7 @@
 | 787  |                                    [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)                                    |  [풀이](src/2023-01/26/leetcode-787.ts) |
 | 790  |                                          [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling)                                           |  [풀이](src/2022-12/24/leetcode-790.ts) |
 | 797  |                                    [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target)                                     |  [풀이](src/2022-12/30/leetcode-797.ts) |
+| 802  |                                          [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states)                                           |  [풀이](src/2023-07/12/leetcode-802.ts) |
 | 814  |                                                [Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/)                                                |  [풀이](src/2022-09/06/leetcode-814.ts) |
 | 820  |                                            [Short Encoding of Words](https://leetcode.com/problems/short-encoding-of-words/)                                            |  [풀이](src/2022-06/20/leetcode-820.ts) |
 | 834  |                                           [Sum of Distances in Tree](https://leetcode.com/problems/sum-of-distances-in-tree)                                            |  [풀이](src/2022-12/22/leetcode-834.ts) |
@@ -234,6 +235,7 @@
 | 2636 |                                                       [Promise Pool](https://leetcode.com/problems/promise-pool)                                                        | [풀이](src/2023-05/17/leetcode-2636.ts) |
 | 2637 |                                                 [Promise Time Limit](https://leetcode.com/problems/promise-time-limit)                                                  | [풀이](src/2023-05/16/leetcode-2637.ts) |
 | 2648 |                                        [Generate Fibonacci Sequence](https://leetcode.com/problems/generate-fibonacci-sequence)                                         | [풀이](src/2023-06/02/leetcode-2648.ts) |
+| 2649 |                                             [Nested Array Generator](https://leetcode.com/problems/nested-array-generator)                                              | [풀이](src/2023-07/12/leetcode-2649.ts) |
 | 2666 |                                            [Allow One Function Call](https://leetcode.com/problems/allow-one-function-call)                                             | [풀이](src/2023-05/12/leetcode-2666.ts) |
 | 2675 |                                         [Array of Objects to Matrix](https://leetcode.com/problems/array-of-objects-to-matrix)                                          | [풀이](src/2023-05/23/leetcode-2675.ts) |
 | 2676 |                                                           [Throttle](https://leetcode.com/problems/throttle)                                                            | [풀이](src/2023-05/22/leetcode-2676.ts) |
