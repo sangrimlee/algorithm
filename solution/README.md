@@ -50,6 +50,7 @@
 | 198  |                                                       [House Robber](https://leetcode.com/problems/house-robber)                                                        |  [풀이](src/2022-12/14/leetcode-198.ts) |
 | 199  |                                        [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                        |  [풀이](src/2022-07/11/leetcode-199.ts) |
 | 202  |                                                       [Happy Number](https://leetcode.com/problems/happy-number/)                                                       |  [풀이](src/2022-12/23/leetcode-202.ts) |
+| 207  |                                                    [Course Schedule](https://leetcode.com/problems/course-schedule)                                                     |  [풀이](src/2023-07/13/leetcode-207.ts) |
 | 212  |                                                     [Word Search II](https://leetcode.com/problems/word-search-ii/)                                                     |  [풀이](src/2022-11/05/leetcode-212.ts) |
 | 215  |                                    [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)                                    |  [풀이](src/2022-06/22/leetcode-215.ts) |
 | 222  |                                          [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)                                          |  [풀이](src/2022-11/15/leetcode-222.ts) |
