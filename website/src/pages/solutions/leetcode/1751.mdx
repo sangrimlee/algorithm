@@ -1,0 +1,70 @@
+---
+title: Maximum Number of Events That Can Be Attended II
+tags:
+  - Array
+  - Binary Search
+  - Dynamic Programming
+  - Sorting
+---
+
+# 1751. Maximum Number of Events That Can Be Attended II
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxValue(events: number[][], k: number): number {
+  // 시작일 기준으로 정렬
+  events.sort(([aStartDay], [bStartDay]) => aStartDay - bStartDay);
+
+  // 끝나는 날을 기준으로 가장 빨리 시작하는 이벤트를 찾기 (UpperBound)
+  const findNearestEvent = (endDay: number) => {
+    let [left, right] = [0, n];
+    while (left < right) {
+      const mid = Math.floor((left + right) / 2);
+      const startDay = events[mid][0];
+      if (startDay <= endDay) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+    return left;
+  };
+
+  const n = events.length;
+  const dp = Array.from({ length: k + 1 }).map(() => new Array(n).fill(-1));
+  const nextEventIndicies = events.map(([, endDay]) => findNearestEvent(endDay));
+
+  const dfs = (currentIndex: number, remainCount: number) => {
+    if (currentIndex === n || remainCount === 0) {
+      return 0;
+    }
+    if (dp[remainCount][currentIndex] !== -1) {
+      return dp[remainCount][currentIndex];
+    }
+    const [, , eventValue] = events[currentIndex];
+    const nextIndex = nextEventIndicies[currentIndex];
+    dp[remainCount][currentIndex] = Math.max(
+      eventValue + dfs(nextIndex, remainCount - 1),
+      dfs(currentIndex + 1, remainCount),
+    );
+    return dp[remainCount][currentIndex];
+  };
+
+  return dfs(0, k);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii"
+  title="Maximum Number of Events That Can Be Attended II"
+/>
