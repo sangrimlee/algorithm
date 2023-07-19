@@ -41,6 +41,7 @@
 | 134  |                                                        [Gas Station](https://leetcode.com/problems/gas-station)                                                         |  [풀이](src/2023-01/07/leetcode-134.ts) |
 | 135  |                                                              [Candy](https://leetcode.com/problems/candy/)                                                              |  [풀이](src/2022-07/04/leetcode-135.ts) |
 | 144  |                                     [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                      |  [풀이](src/2023-01/09/leetcode-144.ts) |
+| 146  |                                                          [LRU Cache](https://leetcode.com/problems/lru-cache)                                                           |  [풀이](src/2023-07/18/leetcode-146.ts) |
 | 149  |                                               [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                |  [풀이](src/2023-01/08/leetcode-149.ts) |
 | 150  |                                   [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)                                    |  [풀이](src/2022-12/17/leetcode-150.ts) |
 | 151  |                                          [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)                                          |  [풀이](src/2022-11/13/leetcode-151.ts) |
