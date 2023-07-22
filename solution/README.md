@@ -101,6 +101,7 @@
 | 649  |                                                       [Dota2 Senate](https://leetcode.com/problems/dota2-senate)                                                        |  [풀이](src/2023-05/04/leetcode-649.ts) |
 | 658  |                                            [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                            |  [풀이](src/2022-09/29/leetcode-658.ts) |
 | 665  |                                               [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)                                               |  [풀이](src/2022-06/25/leetcode-665.ts) |
+| 673  |                           [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence)                            |  [풀이](src/2023-07/21/leetcode-673.ts) |
 | 703  |                                    [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream)                                     |  [풀이](src/2023-05/23/leetcode-703.ts) |
 | 714  |               [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)                |  [풀이](src/2023-06/22/leetcode-714.ts) |
 | 718  |                                [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                |  [풀이](src/2022-09/20/leetcode-718.ts) |
