@@ -102,6 +102,7 @@
 | 658  |                                            [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)                                            |  [풀이](src/2022-09/29/leetcode-658.ts) |
 | 665  |                                               [Non-decreasing Array](https://leetcode.com/problems/non-decreasing-array/)                                               |  [풀이](src/2022-06/25/leetcode-665.ts) |
 | 673  |                           [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence)                            |  [풀이](src/2023-07/21/leetcode-673.ts) |
+| 688  |                                   [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard)                                    |  [풀이](src/2023-07/22/leetcode-688.ts) |
 | 703  |                                    [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream)                                     |  [풀이](src/2023-05/23/leetcode-703.ts) |
 | 714  |               [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)                |  [풀이](src/2023-06/22/leetcode-714.ts) |
 | 718  |                                [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                |  [풀이](src/2022-09/20/leetcode-718.ts) |
@@ -188,6 +189,7 @@
 | 1647 |             [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/)             | [풀이](src/2022-06/28/leetcode-1647.ts) |
 | 1657 |                                 [Determine if Two Strings Are Close](https://leetcode.com/problems/determine-if-two-strings-are-close/)                                 | [풀이](src/2022-12/02/leetcode-1657.ts) |
 | 1658 |                             [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/)                             | [풀이](src/2022-06/11/leetcode-1658.ts) |
+| 1679 |                                          [Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs)                                           | [풀이](src/2023-07/22/leetcode-1679.ts) |
 | 1680 |                        [Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/)                        | [풀이](src/2022-09/23/leetcode-1680.ts) |
 | 1689 |            [Partitioning Into Minimum Number Of Deci-Binary Numbers](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/)            | [풀이](src/2022-06/27/leetcode-1689.ts) |
 | 1695 |                                              [Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)                                              | [풀이](src/2022-06/12/leetcode-1695.ts) |
