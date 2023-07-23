@@ -128,6 +128,7 @@
 | 875  |                                                [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas)                                                 |  [풀이](src/2023-03/08/leetcode-875.ts) |
 | 876  |                                          [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                          |  [풀이](src/2022-12/05/leetcode-876.ts) |
 | 886  |                                               [Possible Bipartition](https://leetcode.com/problems/possible-bipartition)                                                |  [풀이](src/2022-12/21/leetcode-886.ts) |
+| 894  |                                     [All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees)                                      |  [풀이](src/2023-07/23/leetcode-894.ts) |
 | 899  |                                                      [Orderly Queue](https://leetcode.com/problems/orderly-queue/)                                                      |  [풀이](src/2022-11/06/leetcode-899.ts) |
 | 901  |                                                  [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                  |  [풀이](src/2022-11/09/leetcode-901.ts) |
 | 907  |                                           [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)                                           |  [풀이](src/2022-11/25/leetcode-907.ts) |
