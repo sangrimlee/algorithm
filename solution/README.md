@@ -15,6 +15,7 @@
 | 24   |                                                [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                 |   [풀이](src/2023-05/16/leetcode-24.ts) |
 | 26   |                                [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)                                |   [풀이](src/2022-11/11/leetcode-26.ts) |
 | 36   |                                                       [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)                                                       |   [풀이](src/2022-11/23/leetcode-36.ts) |
+| 50   |                                                            [Pow(x, n)](https://leetcode.com/problems/powx-n)                                                            |   [풀이](src/2023-07/24/leetcode-50.ts) |
 | 51   |                                                           [N-Queens](https://leetcode.com/problems/n-queens/)                                                           |    [풀이](src/2022-06/4/leetcode-51.ts) |
 | 52   |                                                        [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                        |    [풀이](src/2022-06/5/leetcode-52.ts) |
 | 54   |                                                      [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)                                                       |   [풀이](src/2023-05/09/leetcode-54.ts) |
@@ -145,6 +146,7 @@
 | 985  |                                  [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                  |  [풀이](src/2022-09/21/leetcode-985.ts) |
 | 987  |                          [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)                          |  [풀이](src/2022-09/04/leetcode-987.ts) |
 | 997  |                                                [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge)                                                 |  [풀이](src/2023-01/23/leetcode-997.ts) |
+| 1004 |                                           [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)                                            | [풀이](src/2023-07/24/leetcode-1004.ts) |
 | 1026 |                       [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)                       | [풀이](src/2022-12/09/leetcode-1026.ts) |
 | 1035 |                                                    [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines)                                                     | [풀이](src/2023-05/11/leetcode-1035.ts) |
 | 1047 |                           [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)                           | [풀이](src/2022-11/10/leetcode-1047.ts) |
