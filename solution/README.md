@@ -210,6 +210,7 @@
 | 1833 |                                             [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                              | [풀이](src/2023-01/06/leetcode-1833.ts) |
 | 1834 |                                                [Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu)                                                 | [풀이](src/2022-12/29/leetcode-1834.ts) |
 | 1859 |                                               [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)                                               | [풀이](src/2022-09/29/leetcode-1859.ts) |
+| 1870 |                                    [Minimum Speed to Arrive on Time](https://leetcode.com/problems/minimum-speed-to-arrive-on-time)                                     | [풀이](src/2023-07/26/leetcode-1870.ts) |
 | 1926 |                                 [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)                                 | [풀이](src/2022-11/21/leetcode-1926.ts) |
 | 1962 |                                [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                 | [풀이](src/2022-12/28/leetcode-1962.ts) |
 | 1964 |            [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)             | [풀이](src/2023-05/07/leetcode-1964.ts) |
