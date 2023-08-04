@@ -224,6 +224,7 @@
 | 2131 |               [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/)               | [풀이](src/2022-11/03/leetcode-2131.ts) |
 | 2136 |                                [Earliest Possible Day of Full Bloom](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/)                                | [풀이](src/2022-10/29/leetcode-2136.ts) |
 | 2140 |                                  [Solving Questions With Brainpower](https://leetcode.com/problems/solving-questions-with-brainpower)                                   | [풀이](src/2023-05/12/leetcode-2140.ts) |
+| 2141 |                                [Maximum Running Time of N Computers](https://leetcode.com/problems/maximum-running-time-of-n-computers)                                 | [풀이](src/2023-07/27/leetcode-2141.ts) |
 | 2187 |                                     [Minimum Time to Complete Trips](https://leetcode.com/problems/minimum-time-to-complete-trips)                                      | [풀이](src/2023-03/07/leetcode-2187.ts) |
 | 2215 |                                  [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays)                                   | [풀이](src/2023-05/03/leetcode-2215.ts) |
 | 2225 |                               [Find Players With Zero or One Losses](https://leetcode.com/problems/find-players-with-zero-or-one-losses/)                               | [풀이](src/2022-11/28/leetcode-2225.ts) |
