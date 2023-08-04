@@ -42,6 +42,7 @@
 | 128  |                                       [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)                                       |  [풀이](src/2022-07/05/leetcode-128.ts) |
 | 134  |                                                        [Gas Station](https://leetcode.com/problems/gas-station)                                                         |  [풀이](src/2023-01/07/leetcode-134.ts) |
 | 135  |                                                              [Candy](https://leetcode.com/problems/candy/)                                                              |  [풀이](src/2022-07/04/leetcode-135.ts) |
+| 139  |                                                         [Word Break](https://leetcode.com/problems/word-break)                                                          |  [풀이](src/2023-08/04/leetcode-139.ts) |
 | 144  |                                     [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                      |  [풀이](src/2023-01/09/leetcode-144.ts) |
 | 146  |                                                          [LRU Cache](https://leetcode.com/problems/lru-cache)                                                           |  [풀이](src/2023-07/18/leetcode-146.ts) |
 | 149  |                                               [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                |  [풀이](src/2023-01/08/leetcode-149.ts) |
