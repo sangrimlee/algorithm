@@ -23,6 +23,7 @@
 | 59   |                                                   [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)                                                    |   [풀이](src/2023-05/10/leetcode-59.ts) |
 | 64   |                                                   [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)                                                    |   [풀이](src/2023-03/27/leetcode-64.ts) |
 | 70   |                                                    [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                                     |   [풀이](src/2022-12/12/leetcode-70.ts) |
+| 74   |                                                 [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)                                                  |   [풀이](src/2023-08/07/leetcode-74.ts) |
 | 79   |                                                        [Word Search](https://leetcode.com/problems/word-search/)                                                        |   [풀이](src/2022-11/24/leetcode-79.ts) |
 | 88   |                                                 [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)                                                 |    [풀이](src/2022-06/7/leetcode-88.ts) |
 | 91   |                                                        [Decode Ways](https://leetcode.com/problems/decode-ways/)                                                        |   [풀이](src/2022-10/01/leetcode-91.ts) |
@@ -108,6 +109,7 @@
 | 703  |                                    [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream)                                     |  [풀이](src/2023-05/23/leetcode-703.ts) |
 | 714  |               [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)                |  [풀이](src/2023-06/22/leetcode-714.ts) |
 | 718  |                                [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                |  [풀이](src/2022-09/20/leetcode-718.ts) |
+| 724  |                                                   [Find Pivot Index](https://leetcode.com/problems/find-pivot-index)                                                    |  [풀이](src/2023-08/07/leetcode-724.ts) |
 | 735  |                                                 [Asteroid Collision](https://leetcode.com/problems/asteroid-collision)                                                  |  [풀이](src/2023-07/20/leetcode-735.ts) |
 | 739  |                                                 [Daily Temperatures](https://leetcode.com/problems/daily-temperatures)                                                  |  [풀이](src/2022-12/18/leetcode-739.ts) |
 | 745  |                                           [Prefix and Suffix Search](https://leetcode.com/problems/prefix-and-suffix-search/)                                           |  [풀이](src/2022-06/18/leetcode-745.ts) |
