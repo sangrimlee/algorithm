@@ -51,6 +51,7 @@
 | 151  |                                          [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)                                          |  [풀이](src/2022-11/13/leetcode-151.ts) |
 | 160  |                                   [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)                                   |   [풀이](src/2022-06/6/leetcode-160.ts) |
 | 167  |                                  [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                  |   [풀이](src/2022-06/9/leetcode-167.ts) |
+| 169  |                                                   [Majority Element](https://leetcode.com/problems/majority-element)                                                    |  [풀이](src/2023-08/17/leetcode-169.ts) |
 | 188  |                                 [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)                                 |  [풀이](src/2022-09/10/leetcode-188.ts) |
 | 198  |                                                       [House Robber](https://leetcode.com/problems/house-robber)                                                        |  [풀이](src/2022-12/14/leetcode-198.ts) |
 | 199  |                                        [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                        |  [풀이](src/2022-07/11/leetcode-199.ts) |
@@ -93,6 +94,7 @@
 | 509  |                                                   [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                   |  [풀이](src/2022-07/06/leetcode-509.ts) |
 | 520  |                                                     [Detect Capital](https://leetcode.com/problems/detect-capital)                                                      |  [풀이](src/2023-01/02/leetcode-520.ts) |
 | 530  |                                 [Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst)                                  |  [풀이](src/2023-06/14/leetcode-530.ts) |
+| 542  |                                                            [Matrix](https://leetcode.com/problems/01-matrix)                                                            |  [풀이](src/2023-08/17/leetcode-542.ts) |
 | 557  |                                  [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                  |  [풀이](src/2022-09/22/leetcode-557.ts) |
 | 583  |                                   [Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/)                                   |  [풀이](src/2022-06/14/leetcode-583.ts) |
 | 587  |                                                    [Erect the Fence](https://leetcode.com/problems/erect-the-fence/)                                                    |  [풀이](src/2022-11/19/leetcode-587.ts) |

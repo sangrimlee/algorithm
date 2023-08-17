@@ -1,0 +1,42 @@
+---
+title: Majority Element
+tags:
+  - Array
+  - Hash Table
+  - Divide and Conquer
+  - Sorting
+  - Counting
+---
+
+# 169. Majority Element
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Divide and Conquer" slug="divide-and-conquer" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function majorityElement(nums: number[]): number {
+  let count = 0;
+  let majority = Infinity;
+  for (const num of nums) {
+    if (count === 0) {
+      majority = num;
+    }
+    count += majority === num ? 1 : -1;
+  }
+  return majority;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/majority-element"
+  title="Majority Element"
+/>
