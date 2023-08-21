@@ -46,6 +46,7 @@
 | 139  |                                                         [Word Break](https://leetcode.com/problems/word-break)                                                          |  [풀이](src/2023-08/04/leetcode-139.ts) |
 | 144  |                                     [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                      |  [풀이](src/2023-01/09/leetcode-144.ts) |
 | 146  |                                                          [LRU Cache](https://leetcode.com/problems/lru-cache)                                                           |  [풀이](src/2023-07/18/leetcode-146.ts) |
+| 148  |                                                          [Sort List](https://leetcode.com/problems/sort-list)                                                           |  [풀이](src/2023-08/21/leetcode-148.ts) |
 | 149  |                                               [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                |  [풀이](src/2023-01/08/leetcode-149.ts) |
 | 150  |                                   [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)                                    |  [풀이](src/2022-12/17/leetcode-150.ts) |
 | 151  |                                          [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)                                          |  [풀이](src/2022-11/13/leetcode-151.ts) |
@@ -88,6 +89,7 @@
 | 445  |                                                 [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                  |  [풀이](src/2023-07/17/leetcode-445.ts) |
 | 451  |                                       [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)                                       |  [풀이](src/2022-12/03/leetcode-451.ts) |
 | 452  |                         [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)                          |  [풀이](src/2023-01/05/leetcode-452.ts) |
+| 459  |                                         [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)                                          |  [풀이](src/2023-08/21/leetcode-459.ts) |
 | 462  |                           [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                           |  [풀이](src/2022-06/30/leetcode-462.ts) |
 | 472  |                                                 [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                  |  [풀이](src/2023-01/27/leetcode-472.ts) |
 | 495  |                                                    [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                     |  [풀이](src/2023-05/04/leetcode-495.ts) |
