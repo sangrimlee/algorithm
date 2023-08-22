@@ -52,6 +52,7 @@
 | 151  |                                          [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)                                          |  [풀이](src/2022-11/13/leetcode-151.ts) |
 | 160  |                                   [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)                                   |   [풀이](src/2022-06/6/leetcode-160.ts) |
 | 167  |                                  [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                  |   [풀이](src/2022-06/9/leetcode-167.ts) |
+| 168  |                                           [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title)                                            |  [풀이](src/2023-08/22/leetcode-168.ts) |
 | 169  |                                                   [Majority Element](https://leetcode.com/problems/majority-element)                                                    |  [풀이](src/2023-08/17/leetcode-169.ts) |
 | 188  |                                 [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)                                 |  [풀이](src/2022-09/10/leetcode-188.ts) |
 | 198  |                                                       [House Robber](https://leetcode.com/problems/house-robber)                                                        |  [풀이](src/2022-12/14/leetcode-198.ts) |
@@ -68,6 +69,7 @@
 | 234  |                                             [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                             |  [풀이](src/2022-09/02/leetcode-234.ts) |
 | 238  |                                       [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                        |  [풀이](src/2023-07/15/leetcode-238.ts) |
 | 263  |                                                        [Ugly Number](https://leetcode.com/problems/ugly-number/)                                                        |  [풀이](src/2022-11/18/leetcode-263.ts) |
+| 274  |                                                            [H-Index](https://leetcode.com/problems/h-index)                                                             |  [풀이](src/2023-08/22/leetcode-274.ts) |
 | 279  |                                                    [Perfect Squares](https://leetcode.com/problems/perfect-squares/)                                                    |  [풀이](src/2022-11/22/leetcode-279.ts) |
 | 283  |                                                        [Move Zeroes](https://leetcode.com/problems/move-zeroes)                                                         |  [풀이](src/2023-07/17/leetcode-283.ts) |
 | 290  |                                                       [Word Pattern](https://leetcode.com/problems/word-pattern)                                                        |  [풀이](src/2023-01/01/leetcode-290.ts) |
