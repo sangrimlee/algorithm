@@ -25,6 +25,7 @@
 | 70   |                                                    [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                                     |   [풀이](src/2022-12/12/leetcode-70.ts) |
 | 74   |                                                 [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)                                                  |   [풀이](src/2023-08/07/leetcode-74.ts) |
 | 79   |                                                        [Word Search](https://leetcode.com/problems/word-search/)                                                        |   [풀이](src/2022-11/24/leetcode-79.ts) |
+| 80   |                             [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)                              |   [풀이](src/2023-08/28/leetcode-80.ts) |
 | 88   |                                                 [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)                                                 |    [풀이](src/2022-06/7/leetcode-88.ts) |
 | 91   |                                                        [Decode Ways](https://leetcode.com/problems/decode-ways/)                                                        |   [풀이](src/2022-10/01/leetcode-91.ts) |
 | 94   |                                      [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                      |   [풀이](src/2022-09/08/leetcode-94.ts) |
@@ -64,6 +65,7 @@
 | 222  |                                          [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)                                          |  [풀이](src/2022-11/15/leetcode-222.ts) |
 | 223  |                                                     [Rectangle Area](https://leetcode.com/problems/rectangle-area/)                                                     |  [풀이](src/2022-11/17/leetcode-223.ts) |
 | 224  |                                                   [Basic Calculator](https://leetcode.com/problems/basic-calculator/)                                                   |  [풀이](src/2022-11/20/leetcode-224.ts) |
+| 225  |                                       [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues)                                        |  [풀이](src/2023-08/28/leetcode-225.ts) |
 | 228  |                                                     [Summary Ranges](https://leetcode.com/problems/summary-ranges)                                                      |  [풀이](src/2023-06/12/leetcode-228.ts) |
 | 232  |                                       [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)                                        |  [풀이](src/2022-12/16/leetcode-232.ts) |
 | 234  |                                             [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                             |  [풀이](src/2022-09/02/leetcode-234.ts) |

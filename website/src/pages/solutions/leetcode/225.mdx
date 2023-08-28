@@ -1,0 +1,56 @@
+---
+title: Implement Stack using Queues
+tags:
+  - Stack
+  - Design
+  - Queue
+---
+
+# 225. Implement Stack using Queues
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Stack" slug="stack" />
+  <TopicBadge name="Design" slug="design" />
+  <TopicBadge name="Queue" slug="queue" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class MyStack {
+  private readonly queue: number[];
+
+  constructor() {
+    this.queue = [];
+  }
+
+  push(x: number): void {
+    this.queue.push(x);
+    for (let i = 0; i < this.queue.length - 1; i++) {
+      const peek = this.queue.shift();
+      if (peek !== undefined) {
+        this.queue.push(peek);
+      }
+    }
+  }
+
+  pop(): number | undefined {
+    return this.queue.shift();
+  }
+
+  top(): number | undefined {
+    return this.queue[0];
+  }
+
+  empty(): boolean {
+    return this.queue.length === 0;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/implement-stack-using-queues"
+  title="Implement Stack using Queues"
+/>
