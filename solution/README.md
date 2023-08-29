@@ -11,6 +11,7 @@
 | 5    |                                      [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)                                      |    [풀이](src/2022-06/16/leetcode-5.ts) |
 | 8    |                                            [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)                                            |    [풀이](src/2022-09/03/leetcode-8.ts) |
 | 11   |                                          [Container With Most Water](https://leetcode.com/problems/container-with-most-water)                                           |   [풀이](src/2023-07/19/leetcode-11.ts) |
+| 12   |                                                   [Integer to Roman](https://leetcode.com/problems/integer-to-roman)                                                    |   [풀이](src/2023-08/29/leetcode-12.ts) |
 | 19   |                                   [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)                                   |   [풀이](src/2022-09/28/leetcode-19.ts) |
 | 24   |                                                [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                 |   [풀이](src/2023-05/16/leetcode-24.ts) |
 | 26   |                                [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)                                |   [풀이](src/2022-11/11/leetcode-26.ts) |
@@ -247,6 +248,7 @@
 | 2389 |                               [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                               | [풀이](src/2022-12/25/leetcode-2389.ts) |
 | 2462 |                                       [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers)                                        | [풀이](src/2023-06/26/leetcode-2462.ts) |
 | 2466 |                                   [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                    | [풀이](src/2023-05/13/leetcode-2466.ts) |
+| 2483 |                                         [Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop)                                          | [풀이](src/2023-08/29/leetcode-2483.ts) |
 | 2500 |                                  [Delete Greatest Value in Each Row](https://leetcode.com/problems/delete-greatest-value-in-each-row)                                   | [풀이](src/2023-06/13/leetcode-2500.ts) |
 | 2542 |                                          [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score)                                           | [풀이](src/2023-05/24/leetcode-2542.ts) |
 | 2618 |                                  [Check if Object Instance of Class](https://leetcode.com/problems/check-if-object-instance-of-class)                                   | [풀이](src/2023-05/29/leetcode-2618.ts) |
