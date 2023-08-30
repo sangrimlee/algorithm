@@ -16,6 +16,7 @@
 | 24   |                                                [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                 |   [풀이](src/2023-05/16/leetcode-24.ts) |
 | 26   |                                [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)                                |   [풀이](src/2022-11/11/leetcode-26.ts) |
 | 36   |                                                       [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)                                                       |   [풀이](src/2022-11/23/leetcode-36.ts) |
+| 48   |                                                       [Rotate Image](https://leetcode.com/problems/rotate-image)                                                        |   [풀이](src/2023-08/30/leetcode-48.ts) |
 | 50   |                                                            [Pow(x, n)](https://leetcode.com/problems/powx-n)                                                            |   [풀이](src/2023-07/24/leetcode-50.ts) |
 | 51   |                                                           [N-Queens](https://leetcode.com/problems/n-queens/)                                                           |    [풀이](src/2022-06/4/leetcode-51.ts) |
 | 52   |                                                        [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                        |    [풀이](src/2022-06/5/leetcode-52.ts) |
@@ -24,6 +25,7 @@
 | 59   |                                                   [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)                                                    |   [풀이](src/2023-05/10/leetcode-59.ts) |
 | 64   |                                                   [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)                                                    |   [풀이](src/2023-03/27/leetcode-64.ts) |
 | 70   |                                                    [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                                     |   [풀이](src/2022-12/12/leetcode-70.ts) |
+| 73   |                                                  [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)                                                   |   [풀이](src/2023-08/30/leetcode-73.ts) |
 | 74   |                                                 [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)                                                  |   [풀이](src/2023-08/07/leetcode-74.ts) |
 | 79   |                                                        [Word Search](https://leetcode.com/problems/word-search/)                                                        |   [풀이](src/2022-11/24/leetcode-79.ts) |
 | 80   |                             [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii)                              |   [풀이](src/2023-08/28/leetcode-80.ts) |
@@ -245,6 +247,7 @@
 | 2256 |                                         [Minimum Average Difference](https://leetcode.com/problems/minimum-average-difference/)                                         | [풀이](src/2022-12/04/leetcode-2256.ts) |
 | 2279 |                           [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                            | [풀이](src/2022-12/27/leetcode-2279.ts) |
 | 2352 |                                         [Equal Row and Column Pairs](https://leetcode.com/problems/equal-row-and-column-pairs)                                          | [풀이](src/2023-06/13/leetcode-2352.ts) |
+| 2366 |                             [Minimum Replacements to Sort the Array](https://leetcode.com/problems/minimum-replacements-to-sort-the-array)                              | [풀이](src/2023-08/30/leetcode-2366.ts) |
 | 2389 |                               [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                               | [풀이](src/2022-12/25/leetcode-2389.ts) |
 | 2462 |                                       [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers)                                        | [풀이](src/2023-06/26/leetcode-2462.ts) |
 | 2466 |                                   [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                    | [풀이](src/2023-05/13/leetcode-2466.ts) |
