@@ -48,6 +48,7 @@
 | 134  |                                                        [Gas Station](https://leetcode.com/problems/gas-station)                                                         |  [풀이](src/2023-01/07/leetcode-134.ts) |
 | 135  |                                                              [Candy](https://leetcode.com/problems/candy/)                                                              |  [풀이](src/2022-07/04/leetcode-135.ts) |
 | 139  |                                                         [Word Break](https://leetcode.com/problems/word-break)                                                          |  [풀이](src/2023-08/04/leetcode-139.ts) |
+| 141  |                                                  [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)                                                   |  [풀이](src/2023-09/04/leetcode-141.ts) |
 | 144  |                                     [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                      |  [풀이](src/2023-01/09/leetcode-144.ts) |
 | 146  |                                                          [LRU Cache](https://leetcode.com/problems/lru-cache)                                                           |  [풀이](src/2023-07/18/leetcode-146.ts) |
 | 148  |                                                          [Sort List](https://leetcode.com/problems/sort-list)                                                           |  [풀이](src/2023-08/21/leetcode-148.ts) |
@@ -192,6 +193,7 @@
 | 1465 | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/) | [풀이](src/2022-07/02/leetcode-1465.ts) |
 | 1480 |                                            [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                            |  [풀이](src/2022-06/1/leetcode-1480.ts) |
 | 1491 |            [Average Salary Excluding the Minimum and Maximum Salary](https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary)             | [풀이](src/2023-05/01/leetcode-1491.ts) |
+| 1492 |                                                [The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n)                                                 | [풀이](src/2023-09/04/leetcode-1492.ts) |
 | 1493 |                  [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element)                  | [풀이](src/2023-07/25/leetcode-1493.ts) |
 | 1502 |                      [Can Make Arithmetic Progression From Sequence](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence)                       | [풀이](src/2023-06/06/leetcode-1502.ts) |
 | 1519 |                [Number of Nodes in the Sub-Tree With the Same Label](https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label)                 | [풀이](src/2023-01/12/leetcode-1519.ts) |
