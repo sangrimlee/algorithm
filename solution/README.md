@@ -40,6 +40,7 @@
 | 111  |                                       [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)                                        |  [풀이](src/2023-07/10/leetcode-111.ts) |
 | 112  |                                                           [Path Sum](https://leetcode.com/problems/path-sum/)                                                           |  [풀이](src/2022-10/04/leetcode-112.ts) |
 | 113  |                                                        [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                        |  [풀이](src/2022-09/24/leetcode-113.ts) |
+| 118  |                                                   [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)                                                   |  [풀이](src/2023-09/08/leetcode-118.ts) |
 | 120  |                                                           [Triangle](https://leetcode.com/problems/triangle/)                                                           |  [풀이](src/2022-06/13/leetcode-120.ts) |
 | 121  |                                    [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                                    |  [풀이](src/2022-09/10/leetcode-121.ts) |
 | 122  |                                 [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)                                 |  [풀이](src/2022-09/10/leetcode-122.ts) |
@@ -308,6 +309,7 @@
 | 121683 | [[PCCP 모의고사 #1] 외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683) | [풀이](src/2023-09/06/programmers-121683.ts) |
 | 121684 |   [[PCCP 모의고사 #1] 체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)    | [풀이](src/2023-09/07/programmers-121684.ts) |
 | 121685 |   [[PCCP 모의고사 #1] 유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)    | [풀이](src/2023-09/07/programmers-121685.ts) |
+| 121686 |   [[PCCP 모의고사 #1] 운영체제](https://school.programmers.co.kr/learn/courses/30/lessons/121686)    | [풀이](src/2023-09/08/programmers-121686.ts) |
 | 131127 |            [할인 행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)             | [풀이](src/2023-03/06/programmers-131127.ts) |
 | 131128 |            [숫자 짝꿍](https://school.programmers.co.kr/learn/courses/30/lessons/131128)             | [풀이](src/2023-03/07/programmers-131128.ts) |
 | 131701 |     [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)     | [풀이](src/2023-03/03/programmers-131701.ts) |
