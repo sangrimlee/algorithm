@@ -1,0 +1,40 @@
+---
+title: 실습용 로봇
+---
+
+# 실습용 로봇
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function practicalRobot(command: string): [number, number] {
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+  let [x, y] = [0, 0];
+  let currentDirection = 0;
+  for (const c of command) {
+    if (c === 'R') {
+      currentDirection = (currentDirection + 1) % 4;
+    } else if (c === 'L') {
+      currentDirection = (currentDirection + 3) % 4;
+    } else if (c === 'G') {
+      const [dx, dy] = directions[currentDirection];
+      [x, y] = [x + dx, y + dy];
+    } else {
+      const [dx, dy] = directions[currentDirection];
+      [x, y] = [x - dx, y - dy];
+    }
+  }
+  return [x, y];
+}
+```
+
+<ProblemLink
+  codingSite="programmers"
+  href="https://school.programmers.co.kr/learn/courses/30/lessons/121687"
+  title="실습용 로봇"
+/>
