@@ -1,7 +1,7 @@
 import { Heap } from '@algorithm/lib';
 
 /**
- * 121686. [PCCP 모의고사 #1] 운영체제
+ * 121686. 운영체제
  * https://school.programmers.co.kr/learn/courses/30/lessons/121686
  */
 export function operatingSystem(program: number[][]): number[] {

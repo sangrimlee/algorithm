@@ -1,5 +1,5 @@
 /**
- * 121683. [PCCP 모의고사 #1] 외톨이 알파벳
+ * 121683. 외톨이 알파벳
  * https://school.programmers.co.kr/learn/courses/30/lessons/121683
  */
 export function aloneAlphabet(s: string) {

@@ -1,5 +1,5 @@
 /**
- * 121685. [PCCP 모의고사 #1] 유전법칙
+ * 121685. 유전법칙
  * https://school.programmers.co.kr/learn/courses/30/lessons/121685
  */
 export function inheritance(queries: [number, number][]): ('RR' | 'Rr' | 'rr')[] {

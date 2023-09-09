@@ -1,5 +1,5 @@
 /**
- * 121684. [PCCP 모의고사 #1] 체육대회
+ * 121684. 체육대회
  * https://school.programmers.co.kr/learn/courses/30/lessons/121684
  */
 export function trackMeet(abilities: number[][]) {
