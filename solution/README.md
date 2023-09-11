@@ -22,6 +22,7 @@
 | 52   |                                                        [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                        |    [풀이](src/2022-06/5/leetcode-52.ts) |
 | 54   |                                                      [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)                                                       |   [풀이](src/2023-05/09/leetcode-54.ts) |
 | 55   |                                                          [Jump Game](https://leetcode.com/problems/jump-game)                                                           |   [풀이](src/2022-12/26/leetcode-55.ts) |
+| 56   |                                                    [Merge Intervals](https://leetcode.com/problems/merge-intervals)                                                     |   [풀이](src/2023-09/11/leetcode-56.ts) |
 | 59   |                                                   [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii)                                                    |   [풀이](src/2023-05/10/leetcode-59.ts) |
 | 64   |                                                   [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)                                                    |   [풀이](src/2023-03/27/leetcode-64.ts) |
 | 70   |                                                    [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)                                                     |   [풀이](src/2022-12/12/leetcode-70.ts) |
@@ -184,6 +185,7 @@
 | 1218 |                 [Longest Arithmetic Subsequence of Given Difference](https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference)                  | [풀이](src/2023-07/14/leetcode-1218.ts) |
 | 1239 |     [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/)     | [풀이](src/2022-10/24/leetcode-1239.ts) |
 | 1268 |                                          [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)                                          | [풀이](src/2022-06/19/leetcode-1268.ts) |
+| 1282 |               [Group the People Given the Group Size They Belong To](https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to)                | [풀이](src/2023-09/11/leetcode-1282.ts) |
 | 1293 |                 [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/)                 | [풀이](src/2022-10/30/leetcode-1293.ts) |
 | 1323 |                                                  [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)                                                  | [풀이](src/2022-11/07/leetcode-1323.ts) |
 | 1328 |                                                 [Break a Palindrome](https://leetcode.com/problems/break-a-palindrome/)                                                 | [풀이](src/2022-10/10/leetcode-1328.ts) |
