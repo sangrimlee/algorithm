@@ -38,6 +38,7 @@
 | 100  |                                                          [Same Tree](https://leetcode.com/problems/same-tree)                                                           |  [풀이](src/2023-01/10/leetcode-100.ts) |
 | 101  |                                                     [Symmetric Tree](https://leetcode.com/problems/symmetric-tree)                                                      |  [풀이](src/2023-03/13/leetcode-101.ts) |
 | 108  |                         [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)                          |  [풀이](src/2023-06/22/leetcode-108.ts) |
+| 110  |                                               [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)                                                |  [풀이](src/2023-09/12/leetcode-110.ts) |
 | 111  |                                       [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)                                        |  [풀이](src/2023-07/10/leetcode-111.ts) |
 | 112  |                                                           [Path Sum](https://leetcode.com/problems/path-sum/)                                                           |  [풀이](src/2022-10/04/leetcode-112.ts) |
 | 113  |                                                        [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                        |  [풀이](src/2022-09/24/leetcode-113.ts) |
@@ -320,6 +321,7 @@
 | 121690 |        [보물 지도](https://school.programmers.co.kr/learn/courses/30/lessons/121690)         | [풀이](src/2023-09/10/programmers-121690.ts) |
 | 131127 |        [할인 행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)         | [풀이](src/2023-03/06/programmers-131127.ts) |
 | 131128 |        [숫자 짝꿍](https://school.programmers.co.kr/learn/courses/30/lessons/131128)         | [풀이](src/2023-03/07/programmers-131128.ts) |
+| 131130 |     [혼자 놀기의 달인](https://school.programmers.co.kr/learn/courses/30/lessons/131130)     | [풀이](src/2023-09/12/programmers-131130.ts) |
 | 131701 | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701) | [풀이](src/2023-03/03/programmers-131701.ts) |
 | 131704 |         [택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)         | [풀이](src/2023-03/27/programmers-131704.ts) |
 | 132265 |     [롤케이크 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/132265)      | [풀이](src/2023-03/01/programmers-132265.ts) |
