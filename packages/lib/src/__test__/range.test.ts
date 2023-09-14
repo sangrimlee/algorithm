@@ -15,3 +15,11 @@ test('range with start, end and step.', () => {
 test('range with start, end and negative step.', () => {
   expect([...range(20, 10, -2)]).toEqual([20, 18, 16, 14, 12]);
 });
+
+test('range can not reach end', () => {
+  expect([...range(10, 20, -2)]).toEqual([]);
+});
+
+test('step is zero', () => {
+  expect(() => [...range(10, 20, 0)]).toThrowError();
+});
