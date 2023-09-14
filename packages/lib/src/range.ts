@@ -12,7 +12,15 @@
 export function* range(start: number, end?: number, step = 1) {
   let value = end === undefined ? 0 : start;
   const endValue = end === undefined ? start : end;
-  while (value < endValue) {
+
+  const outOfRange = (value: number) => {
+    if (step < 0) {
+      return endValue < value;
+    }
+    return value < endValue;
+  };
+
+  while (outOfRange(value)) {
     yield value;
     value += step;
   }
