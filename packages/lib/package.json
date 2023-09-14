@@ -11,7 +11,9 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write --cache \"./src/**/*.ts\""
+    "format": "prettier --write --cache \"./src/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
