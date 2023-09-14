@@ -48,6 +48,7 @@
 | 122  |                                 [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)                                 |  [풀이](src/2022-09/10/leetcode-122.ts) |
 | 123  |                                [Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)                                |  [풀이](src/2022-09/10/leetcode-123.ts) |
 | 124  |                                       [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                        |  [풀이](src/2022-12/11/leetcode-124.ts) |
+| 125  |                                                   [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)                                                    |  [풀이](src/2023-09/14/leetcode-125.ts) |
 | 128  |                                       [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)                                       |  [풀이](src/2022-07/05/leetcode-128.ts) |
 | 134  |                                                        [Gas Station](https://leetcode.com/problems/gas-station)                                                         |  [풀이](src/2023-01/07/leetcode-134.ts) |
 | 135  |                                                              [Candy](https://leetcode.com/problems/candy/)                                                              |  [풀이](src/2022-07/04/leetcode-135.ts) |
