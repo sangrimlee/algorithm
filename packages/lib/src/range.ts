@@ -10,9 +10,20 @@
  * range(1, 6, 2); // returns 1 3 5
  */
 export function* range(start: number, end?: number, step = 1) {
+  if (step === 0) {
+    throw new Error('Value Error: range() arg 3 must not be zero');
+  }
   let value = end === undefined ? 0 : start;
   const endValue = end === undefined ? start : end;
-  while (value < endValue) {
+
+  const outOfRange = (value: number) => {
+    if (step < 0) {
+      return endValue < value;
+    }
+    return value < endValue;
+  };
+
+  while (outOfRange(value)) {
     yield value;
     value += step;
   }
