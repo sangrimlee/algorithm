@@ -16,10 +16,6 @@ export function* range(start: number, end?: number, step = 1) {
   let value = end === undefined ? 0 : start;
   const endValue = end === undefined ? start : end;
 
-  if ((endValue - value) * step < 0) {
-    return;
-  }
-
   const outOfRange = (value: number) => {
     if (step < 0) {
       return endValue < value;
