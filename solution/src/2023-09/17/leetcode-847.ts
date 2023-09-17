@@ -1,0 +1,38 @@
+/**
+ * 847. Shortest Path Visiting All Nodes
+ * https://leetcode.com/problems/shortest-path-visiting-all-nodes
+ */
+export function shortestPathLength(graph: number[][]): number {
+  const n = graph.length;
+  if (n <= 3) {
+    return n - 1;
+  }
+
+  const visited: number[] = new Array(n).fill(undefined).map((_, i) => 1 << i);
+  const allVisited = (1 << n) - 1;
+  const visitedState: Set<number>[] = new Array(n)
+    .fill(undefined)
+    .map((_, i) => new Set([visited[i]]));
+
+  let queue: [number, number][] = new Array(n).fill(undefined).map((_, i) => [i, visited[i]]);
+  let currentStep = 0;
+  while (0 < queue.length) {
+    const nextQueue: [number, number][] = [];
+    for (const [currentNode, currentVisited] of queue) {
+      for (const nextNode of graph[currentNode]) {
+        const nextVisited = currentVisited | visited[nextNode];
+        if (nextVisited === allVisited) {
+          return currentStep + 1;
+        }
+        if (!visitedState[nextNode].has(nextVisited)) {
+          visitedState[nextNode].add(nextVisited);
+          nextQueue.push([nextNode, nextVisited]);
+        }
+      }
+    }
+    queue = nextQueue;
+    currentStep += 1;
+  }
+
+  throw new Error('모든 노드를 방문할 수 없습니다.');
+}
