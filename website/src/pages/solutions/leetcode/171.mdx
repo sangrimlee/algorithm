@@ -1,0 +1,37 @@
+---
+title: Excel Sheet Column Number
+tags:
+  - Math
+  - String
+---
+
+# 171. Excel Sheet Column Number
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function titleToNumber(columnTitle: string): number {
+  const n = columnTitle.length;
+
+  let answer = 0;
+  for (const i of range(n - 1, -1, -1)) {
+    const num = columnTitle.charCodeAt(i) - 64;
+    answer += 26 ** (n - i - 1) * num;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/excel-sheet-column-number"
+  title="Excel Sheet Column Number"
+/>

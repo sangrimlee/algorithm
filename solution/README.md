@@ -65,6 +65,7 @@
 | 167  |                                  [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                  |   [풀이](src/2022-06/9/leetcode-167.ts) |
 | 168  |                                           [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title)                                            |  [풀이](src/2023-08/22/leetcode-168.ts) |
 | 169  |                                                   [Majority Element](https://leetcode.com/problems/majority-element)                                                    |  [풀이](src/2023-08/17/leetcode-169.ts) |
+| 171  |                                          [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number)                                           |  [풀이](src/2023-09/18/leetcode-171.ts) |
 | 188  |                                 [Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)                                 |  [풀이](src/2022-09/10/leetcode-188.ts) |
 | 198  |                                                       [House Robber](https://leetcode.com/problems/house-robber)                                                        |  [풀이](src/2022-12/14/leetcode-198.ts) |
 | 199  |                                        [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)                                        |  [풀이](src/2022-07/11/leetcode-199.ts) |
@@ -193,6 +194,7 @@
 | 1323 |                                                  [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)                                                  | [풀이](src/2022-11/07/leetcode-1323.ts) |
 | 1328 |                                                 [Break a Palindrome](https://leetcode.com/problems/break-a-palindrome/)                                                 | [풀이](src/2022-10/10/leetcode-1328.ts) |
 | 1332 |                                    [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/)                                    |  [풀이](src/2022-06/8/leetcode-1332.ts) |
+| 1337 |                                     [The K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix)                                      | [풀이](src/2023-09/18/leetcode-1337.ts) |
 | 1339 |                            [Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/)                            | [풀이](src/2022-12/10/leetcode-1339.ts) |
 | 1354 |                          [Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/)                          | [풀이](src/2022-06/24/leetcode-1354.ts) |
 | 1359 |                        [Count All Valid Pickup and Delivery Options](https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options)                         | [풀이](src/2023-09/10/leetcode-1359.ts) |

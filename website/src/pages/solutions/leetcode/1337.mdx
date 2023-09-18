@@ -1,0 +1,38 @@
+---
+title: The K Weakest Rows in a Matrix
+tags:
+  - Array
+  - Binary Search
+  - Sorting
+  - Heap (Priority Queue)
+  - Matrix
+---
+
+# 1337. The K Weakest Rows in a Matrix
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kWeakestRows(mat: number[][], k: number): number[] {
+  return mat
+    .map((row, i) => [row.reduce((acc, curr) => acc + curr, 0), i])
+    .sort(([a], [b]) => a - b)
+    .slice(0, k)
+    .map(([, i]) => i);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix"
+  title="The K Weakest Rows in a Matrix"
+/>
