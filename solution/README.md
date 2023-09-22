@@ -81,6 +81,8 @@
 | 232  |                                       [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)                                        |  [풀이](src/2022-12/16/leetcode-232.ts) |
 | 234  |                                             [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                             |  [풀이](src/2022-09/02/leetcode-234.ts) |
 | 238  |                                       [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                        |  [풀이](src/2023-07/15/leetcode-238.ts) |
+| 257  |                                                  [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths)                                                   |  [풀이](src/2023-09/22/leetcode-257.ts) |
+| 258  |                                                         [Add Digits](https://leetcode.com/problems/add-digits)                                                          |  [풀이](src/2023-09/22/leetcode-258.ts) |
 | 263  |                                                        [Ugly Number](https://leetcode.com/problems/ugly-number/)                                                        |  [풀이](src/2022-11/18/leetcode-263.ts) |
 | 274  |                                                            [H-Index](https://leetcode.com/problems/h-index)                                                             |  [풀이](src/2023-08/22/leetcode-274.ts) |
 | 279  |                                                    [Perfect Squares](https://leetcode.com/problems/perfect-squares/)                                                    |  [풀이](src/2022-11/22/leetcode-279.ts) |
