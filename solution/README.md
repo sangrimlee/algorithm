@@ -95,8 +95,10 @@
 | 304  |                                      [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)                                      |   [풀이](src/2022-06/3/leetcode-304.ts) |
 | 326  |                                                     [Power of Three](https://leetcode.com/problems/power-of-three)                                                      |  [풀이](src/2023-09/23/leetcode-326.ts) |
 | 328  |                                               [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)                                               |  [풀이](src/2022-12/06/leetcode-328.ts) |
+| 338  |                                                      [Counting Bits](https://leetcode.com/problems/counting-bits)                                                       |  [풀이](src/2023-09/24/leetcode-338.ts) |
 | 345  |                                         [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)                                         |  [풀이](src/2022-11/04/leetcode-345.ts) |
 | 347  |                                            [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                                             |  [풀이](src/2023-05/22/leetcode-347.ts) |
+| 349  |                                         [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)                                          |  [풀이](src/2023-09/24/leetcode-349.ts) |
 | 352  |                                  [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals)                                   |  [풀이](src/2023-01/28/leetcode-352.ts) |
 | 374  |                                       [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)                                       |  [풀이](src/2022-11/16/leetcode-374.ts) |
 | 376  |                                                 [Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/)                                                 |  [풀이](src/2022-07/03/leetcode-376.ts) |
@@ -146,6 +148,7 @@
 | 787  |                                    [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)                                    |  [풀이](src/2023-01/26/leetcode-787.ts) |
 | 790  |                                          [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling)                                           |  [풀이](src/2022-12/24/leetcode-790.ts) |
 | 797  |                                    [All Paths From Source to Target](https://leetcode.com/problems/all-paths-from-source-to-target)                                     |  [풀이](src/2022-12/30/leetcode-797.ts) |
+| 799  |                                                    [Champagne Tower](https://leetcode.com/problems/champagne-tower)                                                     |  [풀이](src/2023-09/24/leetcode-799.ts) |
 | 802  |                                          [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states)                                           |  [풀이](src/2023-07/12/leetcode-802.ts) |
 | 814  |                                                [Binary Tree Pruning](https://leetcode.com/problems/binary-tree-pruning/)                                                |  [풀이](src/2022-09/06/leetcode-814.ts) |
 | 820  |                                            [Short Encoding of Words](https://leetcode.com/problems/short-encoding-of-words/)                                            |  [풀이](src/2022-06/20/leetcode-820.ts) |
