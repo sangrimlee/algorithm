@@ -1,0 +1,32 @@
+---
+title: Valid Perfect Square
+tags:
+  - Math
+  - Binary Search
+---
+
+# 367. Valid Perfect Square
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isPerfectSquare(num: number): boolean {
+  let r = num;
+  while (num < r * r) {
+    r = Math.floor((r + num / r) / 2);
+  }
+  return r * r === num;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/valid-perfect-square"
+  title="Valid Perfect Square"
+/>

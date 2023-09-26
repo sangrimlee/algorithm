@@ -93,6 +93,7 @@
 | 295  |                                       [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)                                       |  [풀이](src/2022-11/12/leetcode-295.ts) |
 | 303  |                                         [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable)                                          |  [풀이](src/2023-09/23/leetcode-303.ts) |
 | 304  |                                      [Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)                                      |   [풀이](src/2022-06/3/leetcode-304.ts) |
+| 316  |                                           [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters)                                            |  [풀이](src/2023-09/26/leetcode-316.ts) |
 | 326  |                                                     [Power of Three](https://leetcode.com/problems/power-of-three)                                                      |  [풀이](src/2023-09/23/leetcode-326.ts) |
 | 328  |                                               [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)                                               |  [풀이](src/2022-12/06/leetcode-328.ts) |
 | 338  |                                                      [Counting Bits](https://leetcode.com/problems/counting-bits)                                                       |  [풀이](src/2023-09/24/leetcode-338.ts) |
@@ -100,6 +101,7 @@
 | 347  |                                            [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                                             |  [풀이](src/2023-05/22/leetcode-347.ts) |
 | 349  |                                         [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)                                          |  [풀이](src/2023-09/24/leetcode-349.ts) |
 | 352  |                                  [Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals)                                   |  [풀이](src/2023-01/28/leetcode-352.ts) |
+| 367  |                                               [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square)                                                |  [풀이](src/2023-09/26/leetcode-367.ts) |
 | 374  |                                       [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)                                       |  [풀이](src/2022-11/16/leetcode-374.ts) |
 | 376  |                                                 [Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/)                                                 |  [풀이](src/2022-07/03/leetcode-376.ts) |
 | 377  |                                                 [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv)                                                  |  [풀이](src/2023-09/09/leetcode-377.ts) |
