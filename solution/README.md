@@ -106,6 +106,7 @@
 | 376  |                                                 [Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/)                                                 |  [풀이](src/2022-07/03/leetcode-376.ts) |
 | 377  |                                                 [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv)                                                  |  [풀이](src/2023-09/09/leetcode-377.ts) |
 | 380  |                                        [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)                                        |  [풀이](src/2022-11/29/leetcode-380.ts) |
+| 389  |                                                [Find the Difference](https://leetcode.com/problems/find-the-difference)                                                 |  [풀이](src/2023-09/27/leetcode-389.ts) |
 | 392  |                                                     [Is Subsequence](https://leetcode.com/problems/is-subsequence)                                                      |  [풀이](src/2023-07/17/leetcode-392.ts) |
 | 406  |                                     [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)                                     |  [풀이](src/2022-06/29/leetcode-406.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
@@ -165,6 +166,7 @@
 | 872  |                                                 [Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees/)                                                 |  [풀이](src/2022-12/08/leetcode-872.ts) |
 | 875  |                                                [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas)                                                 |  [풀이](src/2023-03/08/leetcode-875.ts) |
 | 876  |                                          [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                          |  [풀이](src/2022-12/05/leetcode-876.ts) |
+| 880  |                                            [Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index)                                             |  [풀이](src/2023-09/27/leetcode-880.ts) |
 | 886  |                                               [Possible Bipartition](https://leetcode.com/problems/possible-bipartition)                                                |  [풀이](src/2022-12/21/leetcode-886.ts) |
 | 894  |                                     [All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees)                                      |  [풀이](src/2023-07/23/leetcode-894.ts) |
 | 899  |                                                      [Orderly Queue](https://leetcode.com/problems/orderly-queue/)                                                      |  [풀이](src/2022-11/06/leetcode-899.ts) |
