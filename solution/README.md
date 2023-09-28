@@ -108,6 +108,8 @@
 | 380  |                                        [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)                                        |  [풀이](src/2022-11/29/leetcode-380.ts) |
 | 389  |                                                [Find the Difference](https://leetcode.com/problems/find-the-difference)                                                 |  [풀이](src/2023-09/27/leetcode-389.ts) |
 | 392  |                                                     [Is Subsequence](https://leetcode.com/problems/is-subsequence)                                                      |  [풀이](src/2023-07/17/leetcode-392.ts) |
+| 401  |                                                       [Binary Watch](https://leetcode.com/problems/binary-watch)                                                        |  [풀이](src/2023-09/28/leetcode-401.ts) |
+| 404  |                                                 [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves)                                                  |  [풀이](src/2023-09/28/leetcode-404.ts) |
 | 406  |                                     [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)                                     |  [풀이](src/2022-06/29/leetcode-406.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
 | 433  |                                           [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                                           |  [풀이](src/2022-11/02/leetcode-433.ts) |
@@ -171,6 +173,7 @@
 | 894  |                                     [All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees)                                      |  [풀이](src/2023-07/23/leetcode-894.ts) |
 | 899  |                                                      [Orderly Queue](https://leetcode.com/problems/orderly-queue/)                                                      |  [풀이](src/2022-11/06/leetcode-899.ts) |
 | 901  |                                                  [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                  |  [풀이](src/2022-11/09/leetcode-901.ts) |
+| 905  |                                               [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity)                                                |  [풀이](src/2023-09/28/leetcode-905.ts) |
 | 907  |                                           [Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)                                           |  [풀이](src/2022-11/25/leetcode-907.ts) |
 | 931  |                                           [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum)                                            |  [풀이](src/2022-12/13/leetcode-931.ts) |
 | 933  |                                             [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls)                                              |  [풀이](src/2023-06/19/leetcode-933.ts) |
