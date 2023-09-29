@@ -110,7 +110,9 @@
 | 392  |                                                     [Is Subsequence](https://leetcode.com/problems/is-subsequence)                                                      |  [풀이](src/2023-07/17/leetcode-392.ts) |
 | 401  |                                                       [Binary Watch](https://leetcode.com/problems/binary-watch)                                                        |  [풀이](src/2023-09/28/leetcode-401.ts) |
 | 404  |                                                 [Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves)                                                  |  [풀이](src/2023-09/28/leetcode-404.ts) |
+| 405  |                                    [Convert a Number to Hexadecimal](https://leetcode.com/problems/convert-a-number-to-hexadecimal)                                     |  [풀이](src/2023-09/29/leetcode-405.ts) |
 | 406  |                                     [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)                                     |  [풀이](src/2022-06/29/leetcode-406.ts) |
+| 409  |                                                 [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)                                                  |  [풀이](src/2023-09/29/leetcode-409.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
 | 433  |                                           [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                                           |  [풀이](src/2022-11/02/leetcode-433.ts) |
 | 435  |                                          [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)                                           |  [풀이](src/2023-07/19/leetcode-435.ts) |
@@ -171,6 +173,7 @@
 | 880  |                                            [Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index)                                             |  [풀이](src/2023-09/27/leetcode-880.ts) |
 | 886  |                                               [Possible Bipartition](https://leetcode.com/problems/possible-bipartition)                                                |  [풀이](src/2022-12/21/leetcode-886.ts) |
 | 894  |                                     [All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees)                                      |  [풀이](src/2023-07/23/leetcode-894.ts) |
+| 896  |                                                    [Monotonic Array](https://leetcode.com/problems/monotonic-array)                                                     |  [풀이](src/2023-09/29/leetcode-896.ts) |
 | 899  |                                                      [Orderly Queue](https://leetcode.com/problems/orderly-queue/)                                                      |  [풀이](src/2022-11/06/leetcode-899.ts) |
 | 901  |                                                  [Online Stock Span](https://leetcode.com/problems/online-stock-span/)                                                  |  [풀이](src/2022-11/09/leetcode-901.ts) |
 | 905  |                                               [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity)                                                |  [풀이](src/2023-09/28/leetcode-905.ts) |

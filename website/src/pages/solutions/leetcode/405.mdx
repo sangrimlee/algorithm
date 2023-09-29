@@ -1,0 +1,41 @@
+---
+title: Convert a Number to Hexadecimal
+tags:
+  - Math
+  - Bit Manipulation
+---
+
+# 405. Convert a Number to Hexadecimal
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function toHex(num: number): string {
+  if (num === 0) {
+    return '0';
+  }
+
+  const digits = '0123456789abcdef';
+
+  let hex = '';
+  let n = num >>> 0;
+  while (0 < n) {
+    hex = digits[n % 16] + hex;
+    n = Math.floor(n / 16);
+  }
+
+  return hex;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/convert-a-number-to-hexadecimal"
+  title="Convert a Number to Hexadecimal"
+/>
