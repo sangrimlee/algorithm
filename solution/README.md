@@ -113,6 +113,7 @@
 | 405  |                                    [Convert a Number to Hexadecimal](https://leetcode.com/problems/convert-a-number-to-hexadecimal)                                     |  [풀이](src/2023-09/29/leetcode-405.ts) |
 | 406  |                                     [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)                                     |  [풀이](src/2022-06/29/leetcode-406.ts) |
 | 409  |                                                 [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)                                                  |  [풀이](src/2023-09/29/leetcode-409.ts) |
+| 412  |                                                          [Fizz Buzz](https://leetcode.com/problems/fizz-buzz)                                                           |  [풀이](src/2023-10/03/leetcode-412.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
 | 433  |                                           [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                                           |  [풀이](src/2022-11/02/leetcode-433.ts) |
 | 435  |                                          [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)                                           |  [풀이](src/2023-07/19/leetcode-435.ts) |
@@ -228,6 +229,7 @@
 | 1492 |                                                [The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n)                                                 | [풀이](src/2023-09/04/leetcode-1492.ts) |
 | 1493 |                  [Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element)                  | [풀이](src/2023-07/25/leetcode-1493.ts) |
 | 1502 |                      [Can Make Arithmetic Progression From Sequence](https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence)                       | [풀이](src/2023-06/06/leetcode-1502.ts) |
+| 1512 |                                               [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs)                                                | [풀이](src/2023-10/03/leetcode-1512.ts) |
 | 1519 |                [Number of Nodes in the Sub-Tree With the Same Label](https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label)                 | [풀이](src/2023-01/12/leetcode-1519.ts) |
 | 1531 |                                              [String Compression II](https://leetcode.com/problems/string-compression-ii/)                                              | [풀이](src/2022-10/15/leetcode-1531.ts) |
 | 1539 |                                        [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number)                                         | [풀이](src/2023-03/06/leetcode-1539.ts) |
