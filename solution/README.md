@@ -114,6 +114,8 @@
 | 406  |                                     [Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height/)                                     |  [풀이](src/2022-06/29/leetcode-406.ts) |
 | 409  |                                                 [Longest Palindrome](https://leetcode.com/problems/longest-palindrome)                                                  |  [풀이](src/2023-09/29/leetcode-409.ts) |
 | 412  |                                                          [Fizz Buzz](https://leetcode.com/problems/fizz-buzz)                                                           |  [풀이](src/2023-10/03/leetcode-412.ts) |
+| 414  |                                               [Third Maximum Number](https://leetcode.com/problems/third-maximum-number)                                                |  [풀이](src/2023-10/04/leetcode-414.ts) |
+| 415  |                                                        [Add Strings](https://leetcode.com/problems/add-strings)                                                         |  [풀이](src/2023-10/04/leetcode-415.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
 | 433  |                                           [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                                           |  [풀이](src/2022-11/02/leetcode-433.ts) |
 | 435  |                                          [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)                                           |  [풀이](src/2023-07/19/leetcode-435.ts) |
@@ -143,6 +145,7 @@
 | 673  |                           [Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence)                            |  [풀이](src/2023-07/21/leetcode-673.ts) |
 | 688  |                                   [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard)                                    |  [풀이](src/2023-07/22/leetcode-688.ts) |
 | 703  |                                    [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream)                                     |  [풀이](src/2023-05/23/leetcode-703.ts) |
+| 706  |                                                     [Design HashMap](https://leetcode.com/problems/design-hashmap)                                                      |  [풀이](src/2023-10/04/leetcode-706.ts) |
 | 714  |               [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee)                |  [풀이](src/2023-06/22/leetcode-714.ts) |
 | 718  |                                [Maximum Length of Repeated Subarray](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)                                |  [풀이](src/2022-09/20/leetcode-718.ts) |
 | 724  |                                                   [Find Pivot Index](https://leetcode.com/problems/find-pivot-index)                                                    |  [풀이](src/2023-08/07/leetcode-724.ts) |
