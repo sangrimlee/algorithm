@@ -78,6 +78,7 @@
 | 224  |                                                   [Basic Calculator](https://leetcode.com/problems/basic-calculator/)                                                   |  [풀이](src/2022-11/20/leetcode-224.ts) |
 | 225  |                                       [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues)                                        |  [풀이](src/2023-08/28/leetcode-225.ts) |
 | 228  |                                                     [Summary Ranges](https://leetcode.com/problems/summary-ranges)                                                      |  [풀이](src/2023-06/12/leetcode-228.ts) |
+| 229  |                                                [Majority Element II](https://leetcode.com/problems/majority-element-ii)                                                 |  [풀이](src/2023-10/05/leetcode-229.ts) |
 | 232  |                                       [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)                                        |  [풀이](src/2022-12/16/leetcode-232.ts) |
 | 234  |                                             [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                             |  [풀이](src/2022-09/02/leetcode-234.ts) |
 | 238  |                                       [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                        |  [풀이](src/2023-07/15/leetcode-238.ts) |
@@ -118,6 +119,7 @@
 | 415  |                                                        [Add Strings](https://leetcode.com/problems/add-strings)                                                         |  [풀이](src/2023-10/04/leetcode-415.ts) |
 | 429  |                                   [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                                   |  [풀이](src/2022-09/05/leetcode-429.ts) |
 | 433  |                                           [Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                                           |  [풀이](src/2022-11/02/leetcode-433.ts) |
+| 434  |                                     [Number of Segments in a String](https://leetcode.com/problems/number-of-segments-in-a-string)                                      |  [풀이](src/2023-10/05/leetcode-434.ts) |
 | 435  |                                          [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)                                           |  [풀이](src/2023-07/19/leetcode-435.ts) |
 | 443  |                                                 [String Compression](https://leetcode.com/problems/string-compression)                                                  |  [풀이](src/2023-07/15/leetcode-443.ts) |
 | 445  |                                                 [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                  |  [풀이](src/2023-07/17/leetcode-445.ts) |
