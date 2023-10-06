@@ -98,6 +98,7 @@
 | 326  |                                                     [Power of Three](https://leetcode.com/problems/power-of-three)                                                      |  [풀이](src/2023-09/23/leetcode-326.ts) |
 | 328  |                                               [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)                                               |  [풀이](src/2022-12/06/leetcode-328.ts) |
 | 338  |                                                      [Counting Bits](https://leetcode.com/problems/counting-bits)                                                       |  [풀이](src/2023-09/24/leetcode-338.ts) |
+| 343  |                                                      [Integer Break](https://leetcode.com/problems/integer-break)                                                       |  [풀이](src/2023-10/06/leetcode-343.ts) |
 | 345  |                                         [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/)                                         |  [풀이](src/2022-11/04/leetcode-345.ts) |
 | 347  |                                            [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)                                             |  [풀이](src/2023-05/22/leetcode-347.ts) |
 | 349  |                                         [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays)                                          |  [풀이](src/2023-09/24/leetcode-349.ts) |
@@ -123,6 +124,7 @@
 | 435  |                                          [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)                                           |  [풀이](src/2023-07/19/leetcode-435.ts) |
 | 443  |                                                 [String Compression](https://leetcode.com/problems/string-compression)                                                  |  [풀이](src/2023-07/15/leetcode-443.ts) |
 | 445  |                                                 [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                  |  [풀이](src/2023-07/17/leetcode-445.ts) |
+| 448  |                           [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)                            |  [풀이](src/2023-10/06/leetcode-448.ts) |
 | 451  |                                       [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)                                       |  [풀이](src/2022-12/03/leetcode-451.ts) |
 | 452  |                         [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)                          |  [풀이](src/2023-01/05/leetcode-452.ts) |
 | 459  |                                         [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)                                          |  [풀이](src/2023-08/21/leetcode-459.ts) |
