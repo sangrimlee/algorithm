@@ -127,6 +127,7 @@
 | 448  |                           [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array)                            |  [풀이](src/2023-10/06/leetcode-448.ts) |
 | 451  |                                       [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)                                       |  [풀이](src/2022-12/03/leetcode-451.ts) |
 | 452  |                         [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)                          |  [풀이](src/2023-01/05/leetcode-452.ts) |
+| 455  |                                                     [Assign Cookies](https://leetcode.com/problems/assign-cookies)                                                      |  [풀이](src/2023-10/07/leetcode-455.ts) |
 | 459  |                                         [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)                                          |  [풀이](src/2023-08/21/leetcode-459.ts) |
 | 462  |                           [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                           |  [풀이](src/2022-06/30/leetcode-462.ts) |
 | 472  |                                                 [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                  |  [풀이](src/2023-01/27/leetcode-472.ts) |
@@ -225,6 +226,7 @@
 | 1339 |                            [Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/)                            | [풀이](src/2022-12/10/leetcode-1339.ts) |
 | 1354 |                          [Construct Target Array With Multiple Sums](https://leetcode.com/problems/construct-target-array-with-multiple-sums/)                          | [풀이](src/2022-06/24/leetcode-1354.ts) |
 | 1359 |                        [Count All Valid Pickup and Delivery Options](https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options)                         | [풀이](src/2023-09/10/leetcode-1359.ts) |
+| 1420 |   [Build Array Where You Can Find The Maximum Exactly K Comparisons](https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons)    | [풀이](src/2023-10/07/leetcode-1420.ts) |
 | 1423 |                           [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/)                           | [풀이](src/2022-06/26/leetcode-1423.ts) |
 | 1431 |                           [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)                            | [풀이](src/2023-06/15/leetcode-1431.ts) |
 | 1443 |                       [Minimum Time to Collect All Apples in a Tree](https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree)                        | [풀이](src/2023-01/11/leetcode-1443.ts) |
