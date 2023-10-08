@@ -129,6 +129,7 @@
 | 452  |                         [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)                          |  [풀이](src/2023-01/05/leetcode-452.ts) |
 | 455  |                                                     [Assign Cookies](https://leetcode.com/problems/assign-cookies)                                                      |  [풀이](src/2023-10/07/leetcode-455.ts) |
 | 459  |                                         [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)                                          |  [풀이](src/2023-08/21/leetcode-459.ts) |
+| 461  |                                                   [Hamming Distance](https://leetcode.com/problems/hamming-distance)                                                    |  [풀이](src/2023-10/08/leetcode-461.ts) |
 | 462  |                           [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                           |  [풀이](src/2022-06/30/leetcode-462.ts) |
 | 472  |                                                 [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                  |  [풀이](src/2023-01/27/leetcode-472.ts) |
 | 495  |                                                    [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                     |  [풀이](src/2023-05/04/leetcode-495.ts) |
@@ -231,6 +232,7 @@
 | 1431 |                           [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)                            | [풀이](src/2023-06/15/leetcode-1431.ts) |
 | 1443 |                       [Minimum Time to Collect All Apples in a Tree](https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree)                        | [풀이](src/2023-01/11/leetcode-1443.ts) |
 | 1456 |            [Maximum Number of Vowels in a Substring of Given Length](https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length)             | [풀이](src/2023-05/05/leetcode-1456.ts) |
+| 1458 |                                [Max Dot Product of Two Subsequences](https://leetcode.com/problems/max-dot-product-of-two-subsequences)                                 | [풀이](src/2023-10/08/leetcode-1458.ts) |
 | 1461 |              [Check If a String Contains All Binary Codes of Size K](https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/)              | [풀이](src/2022-05/31/leetcode-1461.ts) |
 | 1465 | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/) | [풀이](src/2022-07/02/leetcode-1465.ts) |
 | 1480 |                                            [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                            |  [풀이](src/2022-06/1/leetcode-1480.ts) |
