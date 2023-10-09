@@ -15,6 +15,7 @@
 | 19   |                                   [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)                                   |   [풀이](src/2022-09/28/leetcode-19.ts) |
 | 24   |                                                [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                 |   [풀이](src/2023-05/16/leetcode-24.ts) |
 | 26   |                                [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)                                |   [풀이](src/2022-11/11/leetcode-26.ts) |
+| 34   |            [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array)             |   [풀이](src/2023-10/09/leetcode-34.ts) |
 | 36   |                                                       [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)                                                       |   [풀이](src/2022-11/23/leetcode-36.ts) |
 | 48   |                                                       [Rotate Image](https://leetcode.com/problems/rotate-image)                                                        |   [풀이](src/2023-08/30/leetcode-48.ts) |
 | 50   |                                                            [Pow(x, n)](https://leetcode.com/problems/powx-n)                                                            |   [풀이](src/2023-07/24/leetcode-50.ts) |
@@ -131,7 +132,9 @@
 | 459  |                                         [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern)                                          |  [풀이](src/2023-08/21/leetcode-459.ts) |
 | 461  |                                                   [Hamming Distance](https://leetcode.com/problems/hamming-distance)                                                    |  [풀이](src/2023-10/08/leetcode-461.ts) |
 | 462  |                           [Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)                           |  [풀이](src/2022-06/30/leetcode-462.ts) |
+| 463  |                                                   [Island Perimeter](https://leetcode.com/problems/island-perimeter)                                                    |  [풀이](src/2023-10/09/leetcode-463.ts) |
 | 472  |                                                 [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                  |  [풀이](src/2023-01/27/leetcode-472.ts) |
+| 476  |                                                  [Number Complement](https://leetcode.com/problems/number-complement)                                                   |  [풀이](src/2023-10/09/leetcode-476.ts) |
 | 495  |                                                    [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                     |  [풀이](src/2023-05/04/leetcode-495.ts) |
 | 509  |                                                   [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                   |  [풀이](src/2022-07/06/leetcode-509.ts) |
 | 520  |                                                     [Detect Capital](https://leetcode.com/problems/detect-capital)                                                      |  [풀이](src/2023-01/02/leetcode-520.ts) |
