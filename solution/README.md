@@ -135,6 +135,8 @@
 | 463  |                                                   [Island Perimeter](https://leetcode.com/problems/island-perimeter)                                                    |  [풀이](src/2023-10/09/leetcode-463.ts) |
 | 472  |                                                 [Concatenated Words](https://leetcode.com/problems/concatenated-words)                                                  |  [풀이](src/2023-01/27/leetcode-472.ts) |
 | 476  |                                                  [Number Complement](https://leetcode.com/problems/number-complement)                                                   |  [풀이](src/2023-10/09/leetcode-476.ts) |
+| 482  |                                             [License Key Formatting](https://leetcode.com/problems/license-key-formatting)                                              |  [풀이](src/2023-10/10/leetcode-482.ts) |
+| 485  |                                               [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones)                                                |  [풀이](src/2023-10/10/leetcode-485.ts) |
 | 495  |                                                    [Teemo Attacking](https://leetcode.com/problems/teemo-attacking)                                                     |  [풀이](src/2023-05/04/leetcode-495.ts) |
 | 509  |                                                   [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                   |  [풀이](src/2022-07/06/leetcode-509.ts) |
 | 520  |                                                     [Detect Capital](https://leetcode.com/problems/detect-capital)                                                      |  [풀이](src/2023-01/02/leetcode-520.ts) |
@@ -280,6 +282,7 @@
 | 1964 |            [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)             | [풀이](src/2023-05/07/leetcode-1964.ts) |
 | 1971 |                                       [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                        | [풀이](src/2022-12/19/leetcode-1971.ts) |
 | 1996 |                          [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)                          | [풀이](src/2022-09/09/leetcode-1996.ts) |
+| 2009 |              [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous)               | [풀이](src/2023-10/10/leetcode-2009.ts) |
 | 2024 |                                  [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam)                                   | [풀이](src/2023-07/07/leetcode-2024.ts) |
 | 2089 |                            [Find Target Indices After Sorting Array](https://leetcode.com/problems/find-target-indices-after-sorting-array/)                            | [풀이](src/2022-09/28/leetcode-2089.ts) |
 | 2090 |                                         [K Radius Subarray Averages](https://leetcode.com/problems/k-radius-subarray-averages)                                          | [풀이](src/2023-06/20/leetcode-2090.ts) |
