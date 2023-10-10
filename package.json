@@ -27,11 +27,11 @@
   "devDependencies": {
     "@algorithm/cli": "workspace:*",
     "@algorithm/eslint-config": "workspace:*",
-    "eslint": "^8.39.0",
+    "eslint": "^8.51.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8",
-    "turbo": "^1.9.3"
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.15"
   },
   "engines": {
     "node": ">=18",
