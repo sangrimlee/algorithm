@@ -21,7 +21,6 @@
     "generate:code": "algorithm -d solution/src",
     "generate:readme": "markdown -d solution/src -o solution",
     "generate:page": "markdown -d solution/src -o website/src/pages/solutions --format page",
-    "postgenerate:page": "pnpm run format",
     "prepare": "husky install"
   },
   "devDependencies": {
