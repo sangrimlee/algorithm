@@ -15,13 +15,13 @@ import { CodingSite, LeetCodeSolution, ProgrammersSolution, Solution } from '@/t
 
 async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
   const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
-  const template = createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
+  const template = await createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
 
   await ensureWriteFile(pagePath, template);
 }
 
 async function generateProgrammersSolutionPage(solution: ProgrammersSolution, pagePath: string) {
-  const template = createProgrammersSolutionPageTemplate(solution);
+  const template = await createProgrammersSolutionPageTemplate(solution);
   await ensureWriteFile(pagePath, template);
 }
 
@@ -60,7 +60,7 @@ export async function generateIntroductionPage(
   groups: Map<CodingSite, Solution[]>,
   outDir: string,
 ) {
-  const template = createIntroductionPageTemplate(groups);
+  const template = await createIntroductionPageTemplate(groups);
 
   await ensureWriteFile(path.join(outDir, `index${EXTNAME.MDX}`), template);
 }
