@@ -1,0 +1,31 @@
+---
+title: Keyboard Row
+tags:
+  - Array
+  - Hash Table
+  - String
+---
+
+# 500. Keyboard Row
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findWords(words: string[]): string[] {
+  const rows = [/^[qwertyuiop]+$/i, /^[asdfghjkl]+$/i, /^[zxcvbnm]+$/i];
+  return words.filter((word) => rows.some((row) => row.test(word)));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/keyboard-row"
+  title="Keyboard Row"
+/>
