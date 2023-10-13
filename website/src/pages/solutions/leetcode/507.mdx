@@ -1,0 +1,38 @@
+---
+title: Perfect Number
+tags:
+  - Math
+---
+
+# 507. Perfect Number
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkPerfectNumber(num: number): boolean {
+  if (num === 1) {
+    return false;
+  }
+
+  const sqrtNum = Math.sqrt(num);
+
+  let sumOfDivisor = 1;
+  for (let divisor = 2; divisor <= sqrtNum; divisor++) {
+    if (num % divisor === 0) {
+      sumOfDivisor += divisor === sqrtNum ? divisor : divisor + num / divisor;
+    }
+  }
+  return sumOfDivisor === num;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/perfect-number"
+  title="Perfect Number"
+/>
