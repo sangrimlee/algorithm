@@ -140,7 +140,9 @@
   "507": "507. Perfect Number",
   "509": "509. Fibonacci Number",
   "520": "520. Detect Capital",
+  "521": "521. Longest Uncommon Subsequence I",
   "530": "530. Minimum Absolute Difference in BST",
+  "541": "541. Reverse String II",
   "542": "542. Matrix",
   "557": "557. Sum of Even Numbers After Queries",
   "583": "583. Delete Operation for Two Strings",
@@ -343,5 +345,6 @@
   "2724": "2724. Sort By",
   "2725": "2725. Interval Cancellation",
   "2726": "2726. Calculator with Method Chaining",
-  "2727": "2727. Is Object Empty"
+  "2727": "2727. Is Object Empty",
+  "2742": "2742. Painting the Walls"
 }
