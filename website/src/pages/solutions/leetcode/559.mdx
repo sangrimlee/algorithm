@@ -1,0 +1,35 @@
+---
+title: Maximum Depth of N-ary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+---
+
+# 559. Maximum Depth of N-ary Tree
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { NArrayTreeNode } from '@algorithm/lib';
+
+export function maxDepth(root: NArrayTreeNode | null): number {
+  if (!root) {
+    return 0;
+  }
+  return 1 + root.children.reduce((prev, node) => Math.max(prev, maxDepth(node)), 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-depth-of-n-ary-tree"
+  title="Maximum Depth of N-ary Tree"
+/>

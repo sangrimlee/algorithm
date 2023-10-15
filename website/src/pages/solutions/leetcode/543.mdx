@@ -1,0 +1,49 @@
+---
+title: Diameter of Binary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 543. Diameter of Binary Tree
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function diameterOfBinaryTree(root: TreeNode | null): number {
+  if (!root) {
+    return 0;
+  }
+
+  function maxHeightAndDiameter(node: TreeNode | null): [number, number] {
+    if (!node) {
+      return [0, 0];
+    }
+    const [leftMaxHeight, leftMaxDiameter] = maxHeightAndDiameter(node.left);
+    const [rightMaxHeight, rightMaxDiameter] = maxHeightAndDiameter(node.right);
+
+    return [
+      Math.max(leftMaxHeight, rightMaxHeight) + 1,
+      Math.max(leftMaxDiameter, rightMaxDiameter, leftMaxHeight + rightMaxHeight),
+    ];
+  }
+
+  return maxHeightAndDiameter(root)[1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/diameter-of-binary-tree"
+  title="Diameter of Binary Tree"
+/>
