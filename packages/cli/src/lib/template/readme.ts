@@ -6,13 +6,14 @@ import { CodingSite, Solution } from '@/types';
 import { createTableTemplate } from './table';
 
 function createSolutionRow({ id, title, url, relativePath }: Solution) {
-  return [id, `[${title}](${url})`, `[풀이](${relativePath})`];
+  return [id, `[${title}](${url})`, `[보러가기](${relativePath})`];
 }
 
 async function createSolutionTableTemplate(codingSite: CodingSite, solutions: Solution[]) {
   const table = await createTableTemplate(
-    ['#', 'Title', 'Solution'],
+    ['문제 번호', '제목', '풀이'],
     solutions.map(createSolutionRow),
+    ['left', 'left', 'center'],
   );
 
   return `### ${codingSite}

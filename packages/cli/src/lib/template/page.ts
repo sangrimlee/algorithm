@@ -69,14 +69,18 @@ ${createComponentTemplate('ProblemLink', {
 }
 
 function createIntroductionTableRow({ id, title, url, codingSite }: Solution) {
-  return [id, `[${title}](${url})`, `[풀이](/solutions/${codingSite.toLowerCase()}/${id})`];
+  return [id, `[${title}](${url})`, `[보러가기](/solutions/${codingSite.toLowerCase()}/${id})`];
 }
 
 function createIntroductionTableTemplate(solutions?: Solution[]) {
   if (!solutions) {
     return '';
   }
-  return createTableTemplate(['#', 'Title', 'Solution'], solutions.map(createIntroductionTableRow));
+  return createTableTemplate(
+    ['문제 번호', '제목', '풀이'],
+    solutions.map(createIntroductionTableRow),
+    ['left', 'left', 'center'],
+  );
 }
 
 export async function createIntroductionPageTemplate(groups: Map<CodingSite, Solution[]>) {
