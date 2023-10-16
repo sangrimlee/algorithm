@@ -1,0 +1,32 @@
+---
+title: Pascal's Triangle II
+tags:
+  - Array
+  - Dynamic Programming
+---
+
+# 119. Pascal's Triangle II
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getRow(rowIndex: number): number[] {
+  let prevRow = [1];
+  for (let row = 1; row <= rowIndex; row++) {
+    prevRow = [1, ...prevRow.map((v, i) => v + (prevRow[i + 1] ?? 0))];
+  }
+  return prevRow;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/pascals-triangle-ii"
+  title="Pascal's Triangle II"
+/>
