@@ -9,26 +9,31 @@ function createSolutionRow({ id, title, url, relativePath }: Solution) {
   return [id, `[${title}](${url})`, `[풀이](${relativePath})`];
 }
 
-function createSolutionTableTemplate(codingSite: CodingSite, solutions: Solution[]) {
+async function createSolutionTableTemplate(codingSite: CodingSite, solutions: Solution[]) {
+  const table = await createTableTemplate(
+    ['#', 'Title', 'Solution'],
+    solutions.map(createSolutionRow),
+  );
+
   return `### ${codingSite}
   
-  ${createTableTemplate(['#', 'Title', 'Solution'], solutions.map(createSolutionRow))}
-  `;
+  ${table}`;
 }
 
-export function createREADMETemplate(groups: Map<CodingSite, Solution[]>) {
-  let tableTemplate = '';
-  for (const [codingSite, solutions] of groups) {
-    tableTemplate += createSolutionTableTemplate(codingSite, solutions);
-  }
-
-  return format(
+export async function createREADMETemplate(groups: Map<CodingSite, Solution[]>) {
+  const tableTemplates = await Promise.all(
+    [...groups.entries()].map(([codingSite, solutions]) =>
+      createSolutionTableTemplate(codingSite, solutions),
+    ),
+  );
+  const template = await format(
     dedent`# Solution
 
     ## 문제 풀이 목록
 
-    ${tableTemplate}
+    ${tableTemplates.join('')}
     `,
     'markdown',
   );
+  return template;
 }

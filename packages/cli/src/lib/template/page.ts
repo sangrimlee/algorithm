@@ -79,8 +79,15 @@ function createIntroductionTableTemplate(solutions?: Solution[]) {
   return createTableTemplate(['#', 'Title', 'Solution'], solutions.map(createIntroductionTableRow));
 }
 
-export function createIntroductionPageTemplate(groups: Map<CodingSite, Solution[]>) {
-  return format(
+export async function createIntroductionPageTemplate(groups: Map<CodingSite, Solution[]>) {
+  const leetCodeTable = await createIntroductionTableTemplate(
+    groups.get(CodingSite.LeetCode) || [],
+  );
+  const programmersTable = await createIntroductionTableTemplate(
+    groups.get(CodingSite.Programmers) || [],
+  );
+
+  const template = await format(
     dedent`# Introduction
 
 LeetCode와 Programmers의 문제들을 저만의 방식으로 푼 것을 공유하고 있습니다.
@@ -92,12 +99,12 @@ LeetCode와 Programmers의 문제들을 저만의 방식으로 푼 것을 공유
 <Tabs items={['LeetCode', 'Programmers']}>
   <Tab>
   
-${createIntroductionTableTemplate(groups.get(CodingSite.LeetCode) || [])}
+${leetCodeTable}
 
   </Tab>
   <Tab>
 
-${createIntroductionTableTemplate(groups.get(CodingSite.Programmers) || [])}
+${programmersTable}
 
   </Tab>
 </Tabs>
@@ -105,4 +112,5 @@ ${createIntroductionTableTemplate(groups.get(CodingSite.Programmers) || [])}
 [Github에서 보기](https://github.com/sangrimlee/algorithm/tree/main/solution)`,
     'mdx',
   );
+  return template;
 }
