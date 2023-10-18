@@ -1,0 +1,41 @@
+---
+title: N-ary Tree Preorder Traversal
+tags:
+  - Stack
+  - Tree
+  - Depth-First Search
+---
+
+# 589. N-ary Tree Preorder Traversal
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Stack" slug="stack" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { NArrayTreeNode as Node } from '@algorithm/lib';
+
+export function preorder(root: Node | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const values: number[] = [];
+  const traverse = (node: Node) => {
+    values.push(node.val);
+    node.children.forEach(traverse);
+  };
+  traverse(root);
+  return values;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/n-ary-tree-preorder-traversal"
+  title="N-ary Tree Preorder Traversal"
+/>
