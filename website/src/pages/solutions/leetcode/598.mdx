@@ -1,0 +1,30 @@
+---
+title: Range Addition II
+tags:
+  - Array
+  - Math
+---
+
+# 598. Range Addition II
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxCount(m: number, n: number, ops: number[][]): number {
+  return ops
+    .reduce(([a1, b1], [a2, b2]) => [Math.min(a1, a2), Math.min(b1, b2)], [m, n])
+    .reduce((acc, curr) => acc * curr, 1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/range-addition-ii"
+  title="Range Addition II"
+/>
