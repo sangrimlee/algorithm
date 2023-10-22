@@ -1,0 +1,26 @@
+---
+title: Binary Number with Alternating Bits
+tags:
+  - Bit Manipulation
+---
+
+# 693. Binary Number with Alternating Bits
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function hasAlternatingBits(n: number): boolean {
+  return /^(?:10)*1?$/.test(n.toString(2));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-number-with-alternating-bits"
+  title="Binary Number with Alternating Bits"
+/>
