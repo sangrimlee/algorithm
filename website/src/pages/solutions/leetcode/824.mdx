@@ -1,0 +1,37 @@
+---
+title: Goat Latin
+tags:
+  - String
+---
+
+# 824. Goat Latin
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function toGoatLatin(sentence: string): string {
+  const goatLatin = (word: string, i: number) => {
+    let result = word;
+    if (/^[aeiou]/i.test(word)) {
+      result += 'ma';
+    } else {
+      result = result.substring(1) + result[0] + 'ma';
+    }
+    return result + 'a'.repeat(i + 1);
+  };
+
+  const SPACE = ' ';
+  return sentence.split(SPACE).map(goatLatin).join(SPACE);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/goat-latin"
+  title="Goat Latin"
+/>
