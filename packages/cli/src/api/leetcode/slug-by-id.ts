@@ -42,7 +42,13 @@ export const getLeetCodeAllProblem = async () => {
     const {
       data: { stat_status_pairs: statStatusPairs },
     } = await axios.get<GetLeetCodeAllQuestionResponse>(`https://leetcode.com/api/problems/all`, {
-      headers: { 'Accept-Encoding': 'gzip,deflate,compress' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'User-Agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+        Cookie: process.env.LEETCODE_API_COOKIE,
+      },
     });
     return statStatusPairs;
   } catch (error) {
