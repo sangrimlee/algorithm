@@ -18,6 +18,7 @@
     "axios": "^1.5.1",
     "cheerio": "^1.0.0-rc.12",
     "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
     "glob": "^10.3.10",
     "inquirer": "8.2.5",
     "prettier": "^3.0.3",

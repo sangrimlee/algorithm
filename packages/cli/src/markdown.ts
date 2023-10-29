@@ -1,10 +1,15 @@
 #!/usr/bin/env node
 
 import path from 'node:path';
+
+import dotenv from 'dotenv';
+
 import { Command } from 'commander';
 
 import { generateREADME } from './lib/generate';
 import { generatePage } from './lib/generate/page';
+
+dotenv.config();
 
 const program = new Command('Markdown Generator for @algorithm');
 

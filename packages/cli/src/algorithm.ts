@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import path from 'node:path';
 
+import dotenv from 'dotenv';
+
 import { Command } from 'commander';
 
 import {
@@ -9,6 +11,8 @@ import {
   generateProgrammers,
 } from '@/lib/generate';
 import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/lib/prompt';
+
+dotenv.config();
 
 const program = new Command('Code template Generator for @algorithm');
 
