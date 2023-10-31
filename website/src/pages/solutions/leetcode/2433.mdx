@@ -1,0 +1,28 @@
+---
+title: Find The Original Array of Prefix Xor
+tags:
+  - Array
+  - Bit Manipulation
+---
+
+# 2433. Find The Original Array of Prefix Xor
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findArray(pref: number[]): number[] {
+  return pref.map((p, i) => (i === 0 ? p : p ^ pref[i - 1]));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-original-array-of-prefix-xor"
+  title="Find The Original Array of Prefix Xor"
+/>

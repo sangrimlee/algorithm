@@ -1,0 +1,42 @@
+---
+title: Binary Gap
+tags:
+  - Bit Manipulation
+---
+
+# 868. Binary Gap
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function binaryGap(n: number): number {
+  let answer = 0;
+
+  let num = n;
+  let lastIndex = -1;
+  let currentIndex = 0;
+  while (0 < num) {
+    if ((num & 1) === 1) {
+      if (0 <= lastIndex) {
+        answer = Math.max(answer, currentIndex - lastIndex);
+      }
+      lastIndex = currentIndex;
+    }
+    num >>= 1;
+    currentIndex += 1;
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-gap"
+  title="Binary Gap"
+/>
