@@ -1,0 +1,44 @@
+---
+title: Fair Candy Swap
+tags:
+  - Array
+  - Hash Table
+  - Binary Search
+  - Sorting
+---
+
+# 888. Fair Candy Swap
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function fairCandySwap(aliceSizes: number[], bobSizes: number[]): number[] {
+  const totalAliceSize = aliceSizes.reduce((acc, size) => acc + size, 0);
+  const totalBobSize = bobSizes.reduce((acc, size) => acc + size, 0);
+
+  const difference = (totalAliceSize - totalBobSize) / 2;
+  const bobSizeSet = new Set(bobSizes);
+
+  for (const aliceSize of aliceSizes) {
+    const bobSize = aliceSize - difference;
+    if (bobSizeSet.has(bobSize)) {
+      return [aliceSize, bobSize];
+    }
+  }
+  return [-1, -1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/fair-candy-swap"
+  title="Fair Candy Swap"
+/>

@@ -1,0 +1,41 @@
+---
+title: Surface Area of 3D Shapes
+tags:
+  - Array
+  - Math
+  - Geometry
+  - Matrix
+---
+
+# 892. Surface Area of 3D Shapes
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Geometry" slug="geometry" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function surfaceArea(grid: number[][]): number {
+  const n = grid.length;
+  let area = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      area += 0 < grid[i][j] ? grid[i][j] * 4 + 2 : 0;
+      area -= 0 < i ? Math.min(grid[i][j], grid[i - 1][j]) * 2 : 0;
+      area -= 0 < j ? Math.min(grid[i][j], grid[i][j - 1]) * 2 : 0;
+    }
+  }
+  return area;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/surface-area-of-3d-shapes"
+  title="Surface Area of 3D Shapes"
+/>
