@@ -1,0 +1,48 @@
+---
+title: Count Nodes Equal to Average of Subtree
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 2265. Count Nodes Equal to Average of Subtree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function averageOfSubtree(root: TreeNode | null): number {
+  let answer = 0;
+  function traverse(node: TreeNode | null): [number, number] {
+    if (!node) {
+      return [0, 0];
+    }
+    const [leftNodeCnt, leftNodeSum] = traverse(node.left);
+    const [rightNodeCnt, rightNodeSum] = traverse(node.right);
+    const nodeCnt = leftNodeCnt + rightNodeCnt + 1;
+    const nodeSum = leftNodeSum + rightNodeSum + node.val;
+    const average = Math.floor(nodeSum / nodeCnt);
+    if (average === node.val) {
+      answer += 1;
+    }
+    return [nodeCnt, nodeSum];
+  }
+  traverse(root);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree"
+  title="Count Nodes Equal to Average of Subtree"
+/>
