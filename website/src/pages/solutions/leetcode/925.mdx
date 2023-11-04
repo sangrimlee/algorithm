@@ -1,0 +1,42 @@
+---
+title: Long Pressed Name
+tags:
+  - Two Pointers
+  - String
+---
+
+# 925. Long Pressed Name
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isLongPressedName(name: string, typed: string): boolean {
+  if (typed.length < name.length) {
+    return false;
+  }
+
+  let nIndex = 0;
+  for (let tIndex = 0; tIndex < typed.length; tIndex++) {
+    if (nIndex < name.length && name[nIndex] === typed[tIndex]) {
+      nIndex += 1;
+      continue;
+    }
+    if (tIndex === 0 || typed[tIndex - 1] !== typed[tIndex]) {
+      return false;
+    }
+  }
+  return nIndex === name.length;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/long-pressed-name"
+  title="Long Pressed Name"
+/>
