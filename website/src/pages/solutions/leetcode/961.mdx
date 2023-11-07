@@ -1,0 +1,35 @@
+---
+title: N-Repeated Element in Size 2N Array
+tags:
+  - Array
+  - Hash Table
+---
+
+# 961. N-Repeated Element in Size 2N Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function repeatedNTimes(nums: number[]): number {
+  const set = new Set<number>();
+  for (const num of nums) {
+    if (set.has(num)) {
+      return num;
+    }
+    set.add(num);
+  }
+  throw new Error('There is no repeated element.');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/n-repeated-element-in-size-2n-array"
+  title="N-Repeated Element in Size 2N Array"
+/>
