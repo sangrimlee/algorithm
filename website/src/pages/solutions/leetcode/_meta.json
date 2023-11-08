@@ -265,7 +265,10 @@
   "983": "983. Minimum Cost For Tickets",
   "985": "985. Sum of Even Numbers After Queries",
   "987": "987. Vertical Order Traversal of a Binary Tree",
+  "989": "989. Add to Array-Form of Integer",
+  "993": "993. Cousins in Binary Tree",
   "997": "997. Find the Town Judge",
+  "999": "999. Available Captures for Rook",
   "1004": "1004. Max Consecutive Ones III",
   "1026": "1026. Maximum Difference Between Node and Ancestor",
   "1035": "1035. Uncrossed Lines",
@@ -417,5 +420,6 @@
   "2725": "2725. Interval Cancellation",
   "2726": "2726. Calculator with Method Chaining",
   "2727": "2727. Is Object Empty",
-  "2742": "2742. Painting the Walls"
+  "2742": "2742. Painting the Walls",
+  "2849": "2849. Determine if a Cell Is Reachable at a Given Time"
 }

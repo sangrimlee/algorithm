@@ -1,0 +1,52 @@
+---
+title: Cousins in Binary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 993. Cousins in Binary Tree
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function isCousins(root: TreeNode | null, x: number, y: number): boolean {
+  if (!root) {
+    return false;
+  }
+
+  const cousins = {
+    [x]: { depth: -1, parent: -1 },
+    [y]: { depth: -1, parent: -1 },
+  };
+
+  const dfs = (node: TreeNode, parentNode: TreeNode | null = null, depth = 0) => {
+    if (node.val === x || node.val == y) {
+      cousins[node.val] = { depth, parent: parentNode ? parentNode.val : -1 };
+    }
+    node.left && dfs(node.left, node, depth + 1);
+    node.right && dfs(node.right, node, depth + 1);
+  };
+  dfs(root);
+
+  return cousins[x].depth === cousins[y].depth && cousins[x].parent !== cousins[y].parent;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/cousins-in-binary-tree"
+  title="Cousins in Binary Tree"
+/>

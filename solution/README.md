@@ -272,7 +272,10 @@
 | 983       | [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets)                                                                                      | [보러가기](src/2023-03/28/leetcode-983.ts)  |
 | 985       | [Sum of Even Numbers After Queries](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)                                                                   | [보러가기](src/2022-09/21/leetcode-985.ts)  |
 | 987       | [Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)                                                   | [보러가기](src/2022-09/04/leetcode-987.ts)  |
+| 989       | [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer)                                                                              | [보러가기](src/2023-11/08/leetcode-989.ts)  |
+| 993       | [Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree)                                                                                          | [보러가기](src/2023-11/08/leetcode-993.ts)  |
 | 997       | [Find the Town Judge](https://leetcode.com/problems/find-the-town-judge)                                                                                                | [보러가기](src/2023-01/23/leetcode-997.ts)  |
+| 999       | [Available Captures for Rook](https://leetcode.com/problems/available-captures-for-rook)                                                                                | [보러가기](src/2023-11/08/leetcode-999.ts)  |
 | 1004      | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii)                                                                                      | [보러가기](src/2023-07/24/leetcode-1004.ts) |
 | 1026      | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)                                             | [보러가기](src/2022-12/09/leetcode-1026.ts) |
 | 1035      | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines)                                                                                                        | [보러가기](src/2023-05/11/leetcode-1035.ts) |
@@ -425,6 +428,7 @@
 | 2726      | [Calculator with Method Chaining](https://leetcode.com/problems/calculator-with-method-chaining)                                                                        | [보러가기](src/2023-06/12/leetcode-2726.ts) |
 | 2727      | [Is Object Empty](https://leetcode.com/problems/is-object-empty)                                                                                                        | [보러가기](src/2023-06/12/leetcode-2727.ts) |
 | 2742      | [Painting the Walls](https://leetcode.com/problems/painting-the-walls)                                                                                                  | [보러가기](src/2023-10/14/leetcode-2742.ts) |
+| 2849      | [Determine if a Cell Is Reachable at a Given Time](https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time)                                      | [보러가기](src/2023-11/08/leetcode-2849.ts) |
 
 ### Programmers
 
