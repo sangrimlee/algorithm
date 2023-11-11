@@ -1,0 +1,32 @@
+---
+title: Binary Prefix Divisible By 5
+tags:
+  - Array
+---
+
+# 1018. Binary Prefix Divisible By 5
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function prefixesDivBy5(nums: number[]): boolean[] {
+  const answer: boolean[] = [];
+  let currentNum = 0;
+  for (const num of nums) {
+    currentNum = ((currentNum << 1) + num) % 5;
+    answer.push(currentNum === 0);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-prefix-divisible-by-5"
+  title="Binary Prefix Divisible By 5"
+/>
