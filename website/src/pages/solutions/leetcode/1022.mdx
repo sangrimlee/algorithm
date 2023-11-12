@@ -1,0 +1,46 @@
+---
+title: Sum of Root To Leaf Binary Numbers
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 1022. Sum of Root To Leaf Binary Numbers
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function sumRootToLeaf(root: TreeNode | null): number {
+  if (!root) {
+    return 0;
+  }
+  let answer = 0;
+  const dfs = (node: TreeNode, prev = 0) => {
+    const current = (prev << 1) + node.val;
+    if (!node.left && !node.right) {
+      answer += current;
+      return;
+    }
+    node.left && dfs(node.left, current);
+    node.right && dfs(node.right, current);
+  };
+  dfs(root);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers"
+  title="Sum of Root To Leaf Binary Numbers"
+/>
