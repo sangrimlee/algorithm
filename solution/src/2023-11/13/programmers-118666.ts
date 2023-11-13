@@ -1,0 +1,21 @@
+/**
+ * 118666. 성격 유형 검사하기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/118666
+ */
+export function testPersonality(survey: string[], choices: number[]): string {
+  const types = ['RT', 'CF', 'JM', 'AN'];
+  const results = Object.fromEntries(
+    types.flatMap(([t1, t2]) => [
+      [t1, 0],
+      [t2, 0],
+    ]),
+  );
+
+  choices.forEach((choice, i) => {
+    const [disagree, agree] = survey[i];
+    const result = choice < 4 ? disagree : agree;
+    results[result] += Math.abs(choice - 4);
+  });
+
+  return types.map(([t1, t2]) => (results[t1] < results[t2] ? t2 : t1)).join('');
+}

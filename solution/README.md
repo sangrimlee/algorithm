@@ -287,6 +287,8 @@
 | 1026      | [Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)                                             | [보러가기](src/2022-12/09/leetcode-1026.ts) |
 | 1030      | [Matrix Cells in Distance Order](https://leetcode.com/problems/matrix-cells-in-distance-order)                                                                          | [보러가기](src/2023-11/12/leetcode-1030.ts) |
 | 1035      | [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines)                                                                                                        | [보러가기](src/2023-05/11/leetcode-1035.ts) |
+| 1037      | [Valid Boomerang](https://leetcode.com/problems/valid-boomerang)                                                                                                        | [보러가기](src/2023-11/13/leetcode-1037.ts) |
+| 1046      | [Last Stone Weight](https://leetcode.com/problems/last-stone-weight)                                                                                                    | [보러가기](src/2023-11/13/leetcode-1046.ts) |
 | 1047      | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)                                                     | [보러가기](src/2022-11/10/leetcode-1047.ts) |
 | 1048      | [Longest String Chain](https://leetcode.com/problems/longest-string-chain/)                                                                                             | [보러가기](src/2022-06/15/leetcode-1048.ts) |
 | 1061      | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string)                                              | [보러가기](src/2023-01/14/leetcode-1061.ts) |
@@ -439,6 +441,7 @@
 | 2726      | [Calculator with Method Chaining](https://leetcode.com/problems/calculator-with-method-chaining)                                                                        | [보러가기](src/2023-06/12/leetcode-2726.ts) |
 | 2727      | [Is Object Empty](https://leetcode.com/problems/is-object-empty)                                                                                                        | [보러가기](src/2023-06/12/leetcode-2727.ts) |
 | 2742      | [Painting the Walls](https://leetcode.com/problems/painting-the-walls)                                                                                                  | [보러가기](src/2023-10/14/leetcode-2742.ts) |
+| 2785      | [Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string)                                                                                        | [보러가기](src/2023-11/13/leetcode-2785.ts) |
 | 2849      | [Determine if a Cell Is Reachable at a Given Time](https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time)                                      | [보러가기](src/2023-11/08/leetcode-2849.ts) |
 
 ### Programmers
@@ -451,6 +454,7 @@
 | 68936     | [쿼드압축 후 개수 세기](https://programmers.co.kr/learn/courses/30/lessons/68936)            |  [보러가기](src/2022-06/7/programmers-68936.ts)  |
 | 70129     | [이진 변환 반복하기](https://programmers.co.kr/learn/courses/30/lessons/70129)               |  [보러가기](src/2022-06/7/programmers-70129.ts)  |
 | 70130     | [스타 수열](https://programmers.co.kr/learn/courses/30/lessons/70130)                        | [보러가기](src/2022-06/10/programmers-70130.ts)  |
+| 118666    | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666)       | [보러가기](src/2023-11/13/programmers-118666.ts) |
 | 121683    | [외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683)            | [보러가기](src/2023-09/06/programmers-121683.ts) |
 | 121684    | [체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)                 | [보러가기](src/2023-09/07/programmers-121684.ts) |
 | 121685    | [유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)                 | [보러가기](src/2023-09/07/programmers-121685.ts) |

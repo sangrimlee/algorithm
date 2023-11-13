@@ -280,6 +280,8 @@
   "1026": "1026. Maximum Difference Between Node and Ancestor",
   "1030": "1030. Matrix Cells in Distance Order",
   "1035": "1035. Uncrossed Lines",
+  "1037": "1037. Valid Boomerang",
+  "1046": "1046. Last Stone Weight",
   "1047": "1047. Remove All Adjacent Duplicates In String",
   "1048": "1048. Longest String Chain",
   "1061": "1061. Lexicographically Smallest Equivalent String",
@@ -432,5 +434,6 @@
   "2726": "2726. Calculator with Method Chaining",
   "2727": "2727. Is Object Empty",
   "2742": "2742. Painting the Walls",
+  "2785": "2785. Sort Vowels in a String",
   "2849": "2849. Determine if a Cell Is Reachable at a Given Time"
 }

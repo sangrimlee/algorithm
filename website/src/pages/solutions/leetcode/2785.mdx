@@ -1,0 +1,41 @@
+---
+title: Sort Vowels in a String
+tags:
+  - String
+  - Sorting
+---
+
+# 2785. Sort Vowels in a String
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sortVowels(s: string): string {
+  const isVowel = (char: string) => /[aeiou]/i.test(char);
+  const vowels = [...s].filter(isVowel).sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
+
+  let answer = '';
+  let vowelIndex = 0;
+  for (const char of s) {
+    if (isVowel(char)) {
+      answer += vowels[vowelIndex];
+      vowelIndex += 1;
+    } else {
+      answer += char;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sort-vowels-in-a-string"
+  title="Sort Vowels in a String"
+/>
