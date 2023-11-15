@@ -369,6 +369,7 @@
 | 1833      | [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                                                                          | [보러가기](src/2023-01/06/leetcode-1833.ts) |
 | 1834      | [Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu)                                                                                                | [보러가기](src/2022-12/29/leetcode-1834.ts) |
 | 1845      | [Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)                                                                                      | [보러가기](src/2023-11/06/leetcode-1845.ts) |
+| 1846      | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging)                                      | [보러가기](src/2023-11/15/leetcode-1846.ts) |
 | 1859      | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)                                                                                             | [보러가기](src/2022-09/29/leetcode-1859.ts) |
 | 1870      | [Minimum Speed to Arrive on Time](https://leetcode.com/problems/minimum-speed-to-arrive-on-time)                                                                        | [보러가기](src/2023-07/26/leetcode-1870.ts) |
 | 1921      | [Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters)                                                              | [보러가기](src/2023-11/07/leetcode-1921.ts) |
@@ -459,6 +460,8 @@
 | 70130     | [스타 수열](https://programmers.co.kr/learn/courses/30/lessons/70130)                        | [보러가기](src/2022-06/10/programmers-70130.ts)  |
 | 118666    | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666)       | [보러가기](src/2023-11/13/programmers-118666.ts) |
 | 118667    | [두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)     | [보러가기](src/2023-11/14/programmers-118667.ts) |
+| 118668    | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)         | [보러가기](src/2023-11/15/programmers-118668.ts) |
+| 118669    | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)          | [보러가기](src/2023-11/15/programmers-118669.ts) |
 | 121683    | [외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683)            | [보러가기](src/2023-09/06/programmers-121683.ts) |
 | 121684    | [체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)                 | [보러가기](src/2023-09/07/programmers-121684.ts) |
 | 121685    | [유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)                 | [보러가기](src/2023-09/07/programmers-121685.ts) |

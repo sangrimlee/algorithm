@@ -1,0 +1,55 @@
+import { Heap } from '@algorithm/lib';
+
+/**
+ * 118669. 등산코스 정하기
+ * https://school.programmers.co.kr/learn/courses/30/lessons/118669
+ */
+export function chooseHikingCourse(
+  n: number,
+  paths: number[][],
+  gates: number[],
+  summits: number[],
+): number[] {
+  const courses: number[][][] = Array.from({ length: n + 1 }).map(() => []);
+  for (const [i, j, w] of paths) {
+    courses[i].push([j, w]);
+    courses[j].push([i, w]);
+  }
+
+  const heap = new Heap<number[]>(([i1, p1], [i2, p2]) => (i1 !== i2 ? i1 - i2 : p1 - p2));
+  const minIntensities = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
+  gates.forEach((gate) => {
+    heap.push([0, gate]);
+    minIntensities[gate] = 0;
+  });
+
+  const isSummit = new Set(summits);
+  let minSummit = Number.MAX_SAFE_INTEGER;
+  let minIntensity = Number.MAX_SAFE_INTEGER;
+
+  while (!heap.isEmpty) {
+    const [intensity, point] = heap.pop()!;
+    if (minIntensity < intensity) {
+      break;
+    }
+
+    if (isSummit.has(point)) {
+      if (intensity < minIntensity) {
+        [minSummit, minIntensity] = [point, intensity];
+      } else if (intensity === minIntensity) {
+        minSummit = Math.min(minSummit, point);
+      }
+      continue;
+    }
+
+    for (const [nextPoint, weight] of courses[point]) {
+      const nextIntensity = Math.max(intensity, weight);
+      if (nextIntensity < minIntensities[nextPoint]) {
+        minIntensities[nextPoint] = nextIntensity;
+        heap.push([nextIntensity, nextPoint]);
+      }
+    }
+  }
+
+  return [minSummit, minIntensity];
+}
