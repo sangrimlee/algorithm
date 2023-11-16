@@ -294,7 +294,9 @@
 | 1051      | [Height Checker](https://leetcode.com/problems/height-checker)                                                                                                          | [보러가기](src/2023-11/14/leetcode-1051.ts) |
 | 1061      | [Lexicographically Smallest Equivalent String](https://leetcode.com/problems/lexicographically-smallest-equivalent-string)                                              | [보러가기](src/2023-01/14/leetcode-1061.ts) |
 | 1078      | [Occurrences After Bigram](https://leetcode.com/problems/occurrences-after-bigram)                                                                                      | [보러가기](src/2023-11/14/leetcode-1078.ts) |
+| 1089      | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                                        | [보러가기](src/2023-11/16/leetcode-1089.ts) |
 | 1095      | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array)                                                                                          | [보러가기](src/2023-10/12/leetcode-1095.ts) |
+| 1103      | [Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people)                                                                              | [보러가기](src/2023-11/16/leetcode-1103.ts) |
 | 1137      | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                                                                          | [보러가기](src/2023-01/30/leetcode-1137.ts) |
 | 1140      | [Stone Game II](https://leetcode.com/problems/stone-game-ii)                                                                                                            | [보러가기](src/2023-05/26/leetcode-1140.ts) |
 | 1143      | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)                                                                                  | [보러가기](src/2022-12/15/leetcode-1143.ts) |
@@ -378,6 +380,7 @@
 | 1962      | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [보러가기](src/2022-12/28/leetcode-1962.ts) |
 | 1964      | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [보러가기](src/2023-05/07/leetcode-1964.ts) |
 | 1971      | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [보러가기](src/2022-12/19/leetcode-1971.ts) |
+| 1980      | [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string)                                                                                    | [보러가기](src/2023-11/16/leetcode-1980.ts) |
 | 1996      | [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)                                                   | [보러가기](src/2022-09/09/leetcode-1996.ts) |
 | 2009      | [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous)                            | [보러가기](src/2023-10/10/leetcode-2009.ts) |
 | 2024      | [Maximize the Confusion of an Exam](https://leetcode.com/problems/maximize-the-confusion-of-an-exam)                                                                    | [보러가기](src/2023-07/07/leetcode-2024.ts) |
@@ -462,6 +465,7 @@
 | 118667    | [두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)     | [보러가기](src/2023-11/14/programmers-118667.ts) |
 | 118668    | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)         | [보러가기](src/2023-11/15/programmers-118668.ts) |
 | 118669    | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)          | [보러가기](src/2023-11/15/programmers-118669.ts) |
+| 118670    | [행렬과 연산](https://school.programmers.co.kr/learn/courses/30/lessons/118670)              | [보러가기](src/2023-11/16/programmers-118670.ts) |
 | 121683    | [외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683)            | [보러가기](src/2023-09/06/programmers-121683.ts) |
 | 121684    | [체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)                 | [보러가기](src/2023-09/07/programmers-121684.ts) |
 | 121685    | [유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)                 | [보러가기](src/2023-09/07/programmers-121685.ts) |

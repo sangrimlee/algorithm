@@ -1,0 +1,38 @@
+---
+title: Distribute Candies to People
+tags:
+  - Math
+  - Simulation
+---
+
+# 1103. Distribute Candies to People
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function distributeCandies(candies: number, num_people: number): number[] {
+  const answer = new Array<number>(num_people).fill(0);
+
+  let turn = 1;
+  let remainCandies = candies;
+  while (0 < remainCandies) {
+    const currentIndex = (turn - 1) % num_people;
+    answer[currentIndex] += Math.min(remainCandies, turn);
+    remainCandies -= turn;
+    turn += 1;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/distribute-candies-to-people"
+  title="Distribute Candies to People"
+/>
