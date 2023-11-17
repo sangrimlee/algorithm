@@ -1,0 +1,33 @@
+/**
+ * 150370. 개인정보 수집 유효기간
+ * https://school.programmers.co.kr/learn/courses/30/lessons/150370
+ */
+export function validPrivacies(today: string, terms: string[], privacies: string[]): number[] {
+  const getDay = (dayString: string) => {
+    const [year, month, day] = dayString.split('.').map((v) => parseInt(v));
+    return year * 12 * 28 + month * 28 + day;
+  };
+
+  const isExpired = (privacy: string, validDay: number) => {
+    const [startDay, term] = privacy.split(' ');
+    const expirationDay = getDay(startDay) + expirations[term];
+    return expirationDay <= validDay;
+  };
+
+  const validDay = getDay(today);
+
+  const expirations = Object.fromEntries(
+    terms.map((term) => {
+      const [type, month] = term.split(' ');
+      return [type, parseInt(month) * 28];
+    }),
+  );
+
+  const answer: number[] = [];
+  privacies.forEach((privacy, i) => {
+    if (isExpired(privacy, validDay)) {
+      answer.push(i + 1);
+    }
+  });
+  return answer;
+}

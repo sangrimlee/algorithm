@@ -1,0 +1,39 @@
+---
+title: Minimize Maximum Pair Sum in Array
+tags:
+  - Array
+  - Two Pointers
+  - Greedy
+  - Sorting
+---
+
+# 1877. Minimize Maximum Pair Sum in Array
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minPairSum(nums: number[]): number {
+  const n = nums.length;
+
+  let answer = 0;
+  nums.sort((a, b) => a - b);
+  for (let i = 0; i < n / 2; i++) {
+    answer = Math.max(answer, nums[i] + nums[n - i - 1]);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimize-maximum-pair-sum-in-array"
+  title="Minimize Maximum Pair Sum in Array"
+/>

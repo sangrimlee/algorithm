@@ -1,0 +1,26 @@
+---
+title: Defanging an IP Address
+tags:
+  - String
+---
+
+# 1108. Defanging an IP Address
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function defangIPaddr(address: string): string {
+  return address.replace(/\./g, '[.]');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/defanging-an-ip-address"
+  title="Defanging an IP Address"
+/>

@@ -1,0 +1,72 @@
+---
+title: 이모티콘 할인행사
+---
+
+# 이모티콘 할인행사
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function saleEmoticons(users: [number, number][], emoticons: number[]): [number, number] {
+  const getAllDiscounts = (): number[][] => {
+    const allDiscounts: number[][] = [];
+
+    const dfs = (discounts: number[] = []) => {
+      if (discounts.length === emoticons.length) {
+        allDiscounts.push([...discounts]);
+        return;
+      }
+      for (const discount of [10, 20, 30, 40]) {
+        discounts.push(discount);
+        dfs(discounts);
+        discounts.pop();
+      }
+    };
+    dfs();
+
+    return allDiscounts;
+  };
+
+  const getDiscountedPrice = (price: number, discount: number): number => {
+    return (price * (100 - discount)) / 100;
+  };
+
+  const getResult = (user: [number, number], discounts: number[]): [number, number] => {
+    const [minDiscount, maxPrice] = user;
+
+    const totalPrice = discounts.reduce(
+      (prev, discount, i) =>
+        discount < minDiscount ? prev : prev + getDiscountedPrice(emoticons[i], discount),
+      0,
+    );
+
+    return maxPrice <= totalPrice ? [1, 0] : [0, totalPrice];
+  };
+
+  const allDiscounts = getAllDiscounts();
+
+  let [maxSubscribes, maxSales] = [0, 0];
+  for (const discounts of allDiscounts) {
+    let [totalSubscribes, totalSales] = [0, 0];
+    for (const user of users) {
+      const [subscribes, sales] = getResult(user, discounts);
+      totalSubscribes += subscribes;
+      totalSales += sales;
+    }
+    if (maxSubscribes < totalSubscribes) {
+      maxSubscribes = totalSubscribes;
+      maxSales = totalSales;
+    } else if (maxSubscribes === totalSubscribes) {
+      maxSales = Math.max(maxSales, totalSales);
+    }
+  }
+
+  return [maxSubscribes, maxSales];
+}
+```
+
+<ProblemLink
+  codingSite="programmers"
+  href="https://school.programmers.co.kr/learn/courses/30/lessons/150368"
+  title="이모티콘 할인행사"
+/>

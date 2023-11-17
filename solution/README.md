@@ -297,6 +297,8 @@
 | 1089      | [Duplicate Zeros](https://leetcode.com/problems/duplicate-zeros)                                                                                                        | [보러가기](src/2023-11/16/leetcode-1089.ts) |
 | 1095      | [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array)                                                                                          | [보러가기](src/2023-10/12/leetcode-1095.ts) |
 | 1103      | [Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people)                                                                              | [보러가기](src/2023-11/16/leetcode-1103.ts) |
+| 1108      | [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address)                                                                                        | [보러가기](src/2023-11/17/leetcode-1108.ts) |
+| 1122      | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array)                                                                                                | [보러가기](src/2023-11/17/leetcode-1122.ts) |
 | 1137      | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                                                                          | [보러가기](src/2023-01/30/leetcode-1137.ts) |
 | 1140      | [Stone Game II](https://leetcode.com/problems/stone-game-ii)                                                                                                            | [보러가기](src/2023-05/26/leetcode-1140.ts) |
 | 1143      | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)                                                                                  | [보러가기](src/2022-12/15/leetcode-1143.ts) |
@@ -374,6 +376,7 @@
 | 1846      | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging)                                      | [보러가기](src/2023-11/15/leetcode-1846.ts) |
 | 1859      | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)                                                                                             | [보러가기](src/2022-09/29/leetcode-1859.ts) |
 | 1870      | [Minimum Speed to Arrive on Time](https://leetcode.com/problems/minimum-speed-to-arrive-on-time)                                                                        | [보러가기](src/2023-07/26/leetcode-1870.ts) |
+| 1877      | [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array)                                                                  | [보러가기](src/2023-11/17/leetcode-1877.ts) |
 | 1921      | [Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters)                                                              | [보러가기](src/2023-11/07/leetcode-1921.ts) |
 | 1926      | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)                                                                 | [보러가기](src/2022-11/21/leetcode-1926.ts) |
 | 1930      | [Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences)                                                      | [보러가기](src/2023-11/14/leetcode-1930.ts) |
@@ -493,7 +496,9 @@
 | 142086    | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)    | [보러가기](src/2023-03/03/programmers-142086.ts) |
 | 147355    | [크기가 작은 부분문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355)   | [보러가기](src/2023-03/02/programmers-147355.ts) |
 | 148653    | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)        | [보러가기](src/2023-05/02/programmers-148653.ts) |
+| 150368    | [이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)        | [보러가기](src/2023-11/17/programmers-150368.ts) |
 | 150369    | [택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)     | [보러가기](src/2023-05/19/programmers-150369.ts) |
+| 150370    | [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)   | [보러가기](src/2023-11/17/programmers-150370.ts) |
 | 154538    | [숫자 변환하기](https://school.programmers.co.kr/learn/courses/30/lessons/154538)            | [보러가기](src/2023-03/27/programmers-154538.ts) |
 | 155652    | [둘만의 암호](https://school.programmers.co.kr/learn/courses/30/lessons/155652)              | [보러가기](src/2023-03/13/programmers-155652.ts) |
 | 159994    | [카드 뭉치](https://school.programmers.co.kr/learn/courses/30/lessons/159994)                | [보러가기](src/2023-03/08/programmers-159994.ts) |
