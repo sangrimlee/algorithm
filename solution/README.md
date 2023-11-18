@@ -299,10 +299,12 @@
 | 1103      | [Distribute Candies to People](https://leetcode.com/problems/distribute-candies-to-people)                                                                              | [보러가기](src/2023-11/16/leetcode-1103.ts) |
 | 1108      | [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address)                                                                                        | [보러가기](src/2023-11/17/leetcode-1108.ts) |
 | 1122      | [Relative Sort Array](https://leetcode.com/problems/relative-sort-array)                                                                                                | [보러가기](src/2023-11/17/leetcode-1122.ts) |
+| 1128      | [Number of Equivalent Domino Pairs](https://leetcode.com/problems/number-of-equivalent-domino-pairs)                                                                    | [보러가기](src/2023-11/18/leetcode-1128.ts) |
 | 1137      | [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number)                                                                                          | [보러가기](src/2023-01/30/leetcode-1137.ts) |
 | 1140      | [Stone Game II](https://leetcode.com/problems/stone-game-ii)                                                                                                            | [보러가기](src/2023-05/26/leetcode-1140.ts) |
 | 1143      | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)                                                                                  | [보러가기](src/2022-12/15/leetcode-1143.ts) |
 | 1146      | [Snapshot Array](https://leetcode.com/problems/snapshot-array)                                                                                                          | [보러가기](src/2023-06/11/leetcode-1146.ts) |
+| 1154      | [Day of the Year](https://leetcode.com/problems/day-of-the-year)                                                                                                        | [보러가기](src/2023-11/18/leetcode-1154.ts) |
 | 1155      | [Number of Dice Rolls With Target Sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)                                                             | [보러가기](src/2022-10/02/leetcode-1155.ts) |
 | 1161      | [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree)                                                                  | [보러가기](src/2023-06/15/leetcode-1161.ts) |
 | 1187      | [Make Array Strictly Increasing](https://leetcode.com/problems/make-array-strictly-increasing)                                                                          | [보러가기](src/2023-06/17/leetcode-1187.ts) |
@@ -372,6 +374,7 @@
 | 1822      | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array)                                                                        | [보러가기](src/2023-05/02/leetcode-1822.ts) |
 | 1833      | [Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)                                                                                          | [보러가기](src/2023-01/06/leetcode-1833.ts) |
 | 1834      | [Single-Threaded CPU](https://leetcode.com/problems/single-threaded-cpu)                                                                                                | [보러가기](src/2022-12/29/leetcode-1834.ts) |
+| 1838      | [Frequency of the Most Frequent Element](https://leetcode.com/problems/frequency-of-the-most-frequent-element)                                                          | [보러가기](src/2023-11/18/leetcode-1838.ts) |
 | 1845      | [Seat Reservation Manager](https://leetcode.com/problems/seat-reservation-manager)                                                                                      | [보러가기](src/2023-11/06/leetcode-1845.ts) |
 | 1846      | [Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging)                                      | [보러가기](src/2023-11/15/leetcode-1846.ts) |
 | 1859      | [Sorting the Sentence](https://leetcode.com/problems/sorting-the-sentence/)                                                                                             | [보러가기](src/2022-09/29/leetcode-1859.ts) |
@@ -496,6 +499,7 @@
 | 142086    | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)    | [보러가기](src/2023-03/03/programmers-142086.ts) |
 | 147355    | [크기가 작은 부분문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355)   | [보러가기](src/2023-03/02/programmers-147355.ts) |
 | 148653    | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)        | [보러가기](src/2023-05/02/programmers-148653.ts) |
+| 150365    | [미로 탈출 명령어](https://school.programmers.co.kr/learn/courses/30/lessons/150365)         | [보러가기](src/2023-11/18/programmers-150365.ts) |
 | 150368    | [이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)        | [보러가기](src/2023-11/17/programmers-150368.ts) |
 | 150369    | [택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)     | [보러가기](src/2023-05/19/programmers-150369.ts) |
 | 150370    | [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)   | [보러가기](src/2023-11/17/programmers-150370.ts) |

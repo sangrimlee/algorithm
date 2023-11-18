@@ -1,0 +1,31 @@
+---
+title: Day of the Year
+tags:
+  - Math
+  - String
+---
+
+# 1154. Day of the Year
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function dayOfYear(date: string): number {
+  const msOfDay = 24 * 60 * 60 * 1000;
+  const currentDate = new Date(date);
+  const firstDateOfYear = new Date(currentDate.getFullYear(), 0, 1);
+  return Math.floor((currentDate.getTime() - firstDateOfYear.getTime()) / msOfDay) + 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/day-of-the-year"
+  title="Day of the Year"
+/>
