@@ -1,0 +1,48 @@
+---
+title: Count Nice Pairs in an Array
+tags:
+  - Array
+  - Hash Table
+  - Math
+  - Counting
+---
+
+# 1814. Count Nice Pairs in an Array
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countNicePairs(nums: number[]): number {
+  const MOD = 10 ** 9 + 7;
+  const rev = (num: number) => {
+    return parseInt([...num.toString()].reverse().join(''), 10);
+  };
+
+  const counter = new Map<number, number>();
+  for (const num of nums) {
+    const sub = num - rev(num);
+    counter.set(sub, (counter.get(sub) ?? 0) + 1);
+  }
+
+  let answer = 0;
+  counter.forEach((count) => {
+    answer += (count * (count - 1)) / 2;
+    answer %= MOD;
+  });
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-nice-pairs-in-an-array"
+  title="Count Nice Pairs in an Array"
+/>
