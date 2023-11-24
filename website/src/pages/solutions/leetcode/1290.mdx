@@ -1,0 +1,37 @@
+---
+title: Convert Binary Number in a Linked List to Integer
+tags:
+  - Linked List
+  - Math
+---
+
+# 1290. Convert Binary Number in a Linked List to Integer
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function getDecimalValue(head: ListNode | null): number {
+  let answer = 0;
+  let currentNode = head;
+  while (currentNode) {
+    answer <<= 1;
+    answer += currentNode.val;
+    currentNode = currentNode.next;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer"
+  title="Convert Binary Number in a Linked List to Integer"
+/>

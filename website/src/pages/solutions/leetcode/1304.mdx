@@ -1,0 +1,32 @@
+---
+title: Find N Unique Integers Sum up to Zero
+tags:
+  - Array
+  - Math
+---
+
+# 1304. Find N Unique Integers Sum up to Zero
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumZero(n: number): number[] {
+  const answer = n % 2 === 0 ? [] : [0];
+  for (let num = 1; num <= Math.floor(n / 2); num++) {
+    answer.push(num, -num);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero"
+  title="Find N Unique Integers Sum up to Zero"
+/>
