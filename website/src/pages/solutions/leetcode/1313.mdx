@@ -1,0 +1,32 @@
+---
+title: Decompress Run-Length Encoded List
+tags:
+  - Array
+---
+
+# 1313. Decompress Run-Length Encoded List
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function decompressRLElist(nums: number[]): number[] {
+  const n = nums.length;
+  const answer: number[] = [];
+  for (let i = 0; i < n; i += 2) {
+    const [freq, val] = nums.slice(i, i + 2);
+    answer.push(...new Array(freq).fill(val));
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/decompress-run-length-encoded-list"
+  title="Decompress Run-Length Encoded List"
+/>
