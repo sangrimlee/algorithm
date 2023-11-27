@@ -1,0 +1,42 @@
+---
+title: Count Negative Numbers in a Sorted Matrix
+tags:
+  - Array
+  - Binary Search
+  - Matrix
+---
+
+# 1351. Count Negative Numbers in a Sorted Matrix
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countNegatives(grid: number[][]): number {
+  const [m, n] = [grid.length, grid[0].length];
+
+  let answer = 0;
+  let [row, col] = [0, n - 1];
+  while (row < m && 0 <= col) {
+    if (grid[row][col] < 0) {
+      answer += m - row;
+      col -= 1;
+    } else {
+      row += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix"
+  title="Count Negative Numbers in a Sorted Matrix"
+/>

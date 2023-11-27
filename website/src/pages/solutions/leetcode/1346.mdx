@@ -1,0 +1,42 @@
+---
+title: Check If N and Its Double Exist
+tags:
+  - Array
+  - Hash Table
+  - Two Pointers
+  - Binary Search
+  - Sorting
+---
+
+# 1346. Check If N and Its Double Exist
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkIfExist(arr: number[]): boolean {
+  const set = new Set();
+
+  for (const num of arr) {
+    if (set.has(num * 2) || set.has(num / 2)) {
+      return true;
+    }
+    set.add(num);
+  }
+  return false;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-n-and-its-double-exist"
+  title="Check If N and Its Double Exist"
+/>
