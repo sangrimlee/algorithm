@@ -1,0 +1,33 @@
+---
+title: Number of 1 Bits
+tags:
+  - Divide and Conquer
+  - Bit Manipulation
+---
+
+# 191. Number of 1 Bits
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Divide and Conquer" slug="divide-and-conquer" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function hammingWeight(n: number): number {
+  let bitCount = 0;
+  while (n !== 0) {
+    n &= n - 1;
+    bitCount += 1;
+  }
+  return bitCount;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-1-bits"
+  title="Number of 1 Bits"
+/>
