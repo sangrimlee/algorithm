@@ -1,0 +1,41 @@
+---
+title: Find Lucky Integer in an Array
+tags:
+  - Array
+  - Hash Table
+  - Counting
+---
+
+# 1394. Find Lucky Integer in an Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findLucky(arr: number[]): number {
+  const freqs = new Map<number, number>();
+  arr.forEach((num) => {
+    freqs.set(num, (freqs.get(num) ?? 0) + 1);
+  });
+
+  let answer = -1;
+  for (const [num, freq] of freqs.entries()) {
+    if (num === freq) {
+      answer = Math.max(answer, num);
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-lucky-integer-in-an-array"
+  title="Find Lucky Integer in an Array"
+/>
