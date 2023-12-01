@@ -1,0 +1,33 @@
+/**
+ * 1417. Reformat The String
+ * https://leetcode.com/problems/reformat-the-string
+ */
+export function reformat(s: string): string {
+  const alphabets: string[] = [];
+  const digits: string[] = [];
+  for (const char of s) {
+    if (/[a-z]/.test(char)) {
+      alphabets.push(char);
+    } else {
+      digits.push(char);
+    }
+  }
+
+  const [m, n] = [alphabets.length, digits.length];
+  if (1 < Math.abs(m - n)) {
+    return '';
+  }
+
+  let answer = '';
+  let isAlphabet = m >= n;
+  for (let i = 0; i < m + n; i++) {
+    const index = Math.floor(i / 2);
+    if (isAlphabet) {
+      answer += alphabets[index];
+    } else {
+      answer += digits[index];
+    }
+    isAlphabet = !isAlphabet;
+  }
+  return answer;
+}

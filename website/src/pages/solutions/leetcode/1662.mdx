@@ -1,0 +1,28 @@
+---
+title: Check If Two String Arrays are Equivalent
+tags:
+  - Array
+  - String
+---
+
+# 1662. Check If Two String Arrays are Equivalent
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function arrayStringsAreEqual(word1: string[], word2: string[]): boolean {
+  return word1.join('') === word2.join('');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent"
+  title="Check If Two String Arrays are Equivalent"
+/>
