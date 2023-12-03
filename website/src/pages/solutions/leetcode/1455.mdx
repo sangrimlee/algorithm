@@ -1,0 +1,30 @@
+---
+title: Check If a Word Occurs As a Prefix of Any Word in a Sentence
+tags:
+  - String
+  - String Matching
+---
+
+# 1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="String Matching" slug="string-matching" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isPrefixOfWord(sentence: string, searchWord: string): number {
+  const words = sentence.split(' ');
+  const result = words.findIndex((word) => word.startsWith(searchWord));
+  return result === -1 ? result : result + 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence"
+  title="Check If a Word Occurs As a Prefix of Any Word in a Sentence"
+/>
