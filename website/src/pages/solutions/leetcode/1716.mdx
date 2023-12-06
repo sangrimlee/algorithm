@@ -1,0 +1,31 @@
+---
+title: Calculate Money in Leetcode Bank
+tags:
+  - Math
+---
+
+# 1716. Calculate Money in Leetcode Bank
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function totalMoney(n: number): number {
+  const sigma = (n: number) => (n * (n + 1)) / 2;
+  const week = Math.floor(n / 7);
+  const remainDay = n % 7;
+  const totalMoneyOfWeek = 28 * week + 7 * sigma(week - 1);
+  const totalMoneyOfRemainDay = sigma(remainDay) + week * remainDay;
+  return totalMoneyOfWeek + totalMoneyOfRemainDay;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/calculate-money-in-leetcode-bank"
+  title="Calculate Money in Leetcode Bank"
+/>
