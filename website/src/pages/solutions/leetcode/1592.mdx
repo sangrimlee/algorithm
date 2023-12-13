@@ -1,0 +1,34 @@
+---
+title: Rearrange Spaces Between Words
+tags:
+  - String
+---
+
+# 1592. Rearrange Spaces Between Words
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reorderSpaces(text: string): string {
+  const spaces = text.replace(/[a-z]+/gi, '').length;
+  const words = text.trim().split(/\s+/);
+  if (words.length === 1) {
+    return words[0] + ' '.repeat(spaces);
+  }
+
+  const spaceBetween = Math.floor(spaces / (words.length - 1));
+  const remainSpace = spaces % (words.length - 1);
+  return words.join(' '.repeat(spaceBetween)) + ' '.repeat(remainSpace);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/rearrange-spaces-between-words"
+  title="Rearrange Spaces Between Words"
+/>
