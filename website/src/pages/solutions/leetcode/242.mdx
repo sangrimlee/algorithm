@@ -1,0 +1,44 @@
+---
+title: Valid Anagram
+tags:
+  - Hash Table
+  - String
+  - Sorting
+---
+
+# 242. Valid Anagram
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isAnagram(s: string, t: string): boolean {
+  if (s.length !== t.length) {
+    return false;
+  }
+  const charCount = new Map<string, number>();
+  for (const char of s) {
+    charCount.set(char, (charCount.get(char) ?? 0) + 1);
+  }
+  for (const char of t) {
+    const count = charCount.get(char) ?? 0;
+    if (count === 0) {
+      return false;
+    }
+    charCount.set(char, count - 1);
+  }
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/valid-anagram"
+  title="Valid Anagram"
+/>
