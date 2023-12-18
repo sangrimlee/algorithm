@@ -1,0 +1,43 @@
+---
+title: Defuse the Bomb
+tags:
+  - Array
+---
+
+# 1652. Defuse the Bomb
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function decrypt(code: number[], k: number): number[] {
+  if (k === 0) {
+    return new Array(code.length).fill(0);
+  }
+
+  const sum = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);
+  const getValue = (arr: number[], i: number) => arr[(i + arr.length) % arr.length];
+
+  let prevValue = sum(0 < k ? code.slice(1, k + 1) : code.slice(k));
+  const result: number[] = [prevValue];
+  for (let i = 1; i < code.length; i++) {
+    if (0 < k) {
+      prevValue += getValue(code, i + k) - getValue(code, i);
+    } else {
+      prevValue += getValue(code, i - 1) - getValue(code, i + k - 1);
+    }
+    result.push(prevValue);
+  }
+  return result;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/defuse-the-bomb"
+  title="Defuse the Bomb"
+/>
