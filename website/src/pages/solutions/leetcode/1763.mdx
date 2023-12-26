@@ -1,0 +1,46 @@
+---
+title: Longest Nice Substring
+tags:
+  - Hash Table
+  - String
+  - Divide and Conquer
+  - Bit Manipulation
+  - Sliding Window
+---
+
+# 1763. Longest Nice Substring
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Divide and Conquer" slug="divide-and-conquer" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+  <TopicBadge name="Sliding Window" slug="sliding-window" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function longestNiceSubstring(s: string): string {
+  if (s.length < 2) {
+    return '';
+  }
+  const set = new Set(s);
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (!set.has(char.toLowerCase()) || !set.has(char.toUpperCase())) {
+      const leftSubstring = longestNiceSubstring(s.substring(0, i));
+      const rightSubstring = longestNiceSubstring(s.substring(i + 1));
+      return leftSubstring >= rightSubstring ? leftSubstring : rightSubstring;
+    }
+  }
+  return s;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-nice-substring"
+  title="Longest Nice Substring"
+/>
