@@ -1,0 +1,23 @@
+/**
+ * 1790. Check if One String Swap Can Make Strings Equal
+ * https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal
+ */
+export function areAlmostEqual(s1: string, s2: string): boolean {
+  if (s1 === s2) {
+    return true;
+  }
+  const diff = [];
+  for (let i = 0; i < s1.length; i++) {
+    if (s1[i] !== s2[i]) {
+      diff.push(i);
+    }
+    if (2 < diff.length) {
+      return false;
+    }
+  }
+  if (diff.length !== 2) {
+    return false;
+  }
+  const [first, second] = diff;
+  return s1[first] == s2[second] && s1[second] == s2[first];
+}
