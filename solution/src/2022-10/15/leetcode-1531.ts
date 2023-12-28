@@ -3,52 +3,25 @@
  * https://leetcode.com/problems/string-compression-ii/
  */
 export function getLengthOfOptimalCompression(s: string, k: number): number {
-  function initArray(n: number, fillValue?: number) {
-    return new Array(n).fill(fillValue);
-  }
-
-  function getCharCode(char: string) {
-    return char.charCodeAt(0) - 'a'.charCodeAt(0);
-  }
-
-  function caculateLength(count: number) {
-    if (count === 0) return 0;
-    if (count === 1) return 1;
-    if (count < 10) return 2;
-    if (count < 100) return 3;
-    return 4;
-  }
-
   const n = s.length;
-  const dp = initArray(n).map(() =>
-    initArray(26).map(() => initArray(n + 1).map(() => initArray(k + 1, Number.MAX_SAFE_INTEGER))),
-  );
+  const memo: Record<string, number> = {};
 
-  function dynamicProgramming(i: number, char: number, count: number, k: number): number {
-    if (i === s.length) {
-      return caculateLength(count);
-    }
-    if (dp[i][char][count][k] != Number.MAX_SAFE_INTEGER) {
-      return dp[i][char][count][k];
+  function dfs(curr: number, k: number, same: number, last = ''): number {
+    if (k < 0) return 101;
+    if (n - curr === k) return 0;
+    const key = [curr, k, same, last].join('-');
+    if (memo[key]) {
+      return memo[key];
     }
 
-    const nextChar = getCharCode(s[i]);
-    if (0 < k) {
-      dp[i][char][count][k] = dynamicProgramming(i + 1, char, count, k - 1);
-    }
-    if (char === nextChar) {
-      dp[i][char][count][k] = Math.min(
-        dp[i][char][count][k],
-        dynamicProgramming(i + 1, char, count + 1, k),
-      );
+    if (s[curr] === last) {
+      const carry = [1, 9, 99].includes(same) ? 1 : 0;
+      memo[key] = carry + dfs(curr + 1, k, same + 1, last);
     } else {
-      dp[i][char][count][k] = Math.min(
-        dp[i][char][count][k],
-        caculateLength(count) + dynamicProgramming(i + 1, nextChar, 1, k),
-      );
+      memo[key] = Math.min(dfs(curr + 1, k, 1, s[curr]) + 1, dfs(curr + 1, k - 1, same, last));
     }
-    return dp[i][char][count][k];
+    return memo[key];
   }
 
-  return dynamicProgramming(0, 0, 0, k);
+  return dfs(0, k, 0);
 }
