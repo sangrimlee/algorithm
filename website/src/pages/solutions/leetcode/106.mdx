@@ -1,0 +1,49 @@
+---
+title: Construct Binary Tree from Inorder and Postorder Traversal
+tags:
+  - Array
+  - Hash Table
+  - Divide and Conquer
+  - Tree
+  - Binary Tree
+---
+
+# 106. Construct Binary Tree from Inorder and Postorder Traversal
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Divide and Conquer" slug="divide-and-conquer" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function buildTree(inorder: number[], postorder: number[]): TreeNode | null {
+  const stack = [...postorder];
+  const indices = new Map(inorder.map((v, i) => [v, i]));
+  function buildNode(start: number, end: number): TreeNode | null {
+    if (start > end || stack.length === 0) {
+      return null;
+    }
+    const value = stack.pop()!;
+    const mid = indices.get(value)!;
+    const node = new TreeNode(value);
+    node.right = buildNode(mid + 1, end);
+    node.left = buildNode(start, mid - 1);
+    return node;
+  }
+  return buildNode(0, inorder.length - 1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal"
+  title="Construct Binary Tree from Inorder and Postorder Traversal"
+/>

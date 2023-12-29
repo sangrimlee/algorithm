@@ -1,0 +1,28 @@
+---
+title: Second Largest Digit in a String
+tags:
+  - Hash Table
+  - String
+---
+
+# 1796. Second Largest Digit in a String
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function secondHighest(s: string): number {
+  return [...new Set(s.replace(/[^0-9]/g, ''))].map((v) => +v).sort((a, b) => b - a)[1] ?? -1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/second-largest-digit-in-a-string"
+  title="Second Largest Digit in a String"
+/>
