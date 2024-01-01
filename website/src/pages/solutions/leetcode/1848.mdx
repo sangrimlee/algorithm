@@ -1,0 +1,32 @@
+---
+title: Minimum Distance to the Target Element
+tags:
+  - Array
+---
+
+# 1848. Minimum Distance to the Target Element
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getMinDistance(nums: number[], target: number, start: number): number {
+  let answer = Number.MAX_SAFE_INTEGER;
+  nums.forEach((num, i) => {
+    if (num === target) {
+      answer = Math.min(answer, Math.abs(i - start));
+    }
+  });
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-distance-to-the-target-element"
+  title="Minimum Distance to the Target Element"
+/>
