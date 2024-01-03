@@ -1,0 +1,31 @@
+---
+title: Check if Word Equals Summation of Two Words
+tags:
+  - String
+---
+
+# 1880. Check if Word Equals Summation of Two Words
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isSumEqual(firstWord: string, secondWord: string, targetWord: string): boolean {
+  function convert(word: string) {
+    const numericString = [...word].map((char) => char.charCodeAt(0) - 'a'.charCodeAt(0)).join('');
+    return parseInt(numericString, 10);
+  }
+
+  return convert(firstWord) + convert(secondWord) === convert(targetWord);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-word-equals-summation-of-two-words"
+  title="Check if Word Equals Summation of Two Words"
+/>
