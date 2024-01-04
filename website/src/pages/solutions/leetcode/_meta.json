@@ -519,7 +519,9 @@
   "1876": "1876. Substrings of Size Three with Distinct Characters",
   "1877": "1877. Minimize Maximum Pair Sum in Array",
   "1880": "1880. Check if Word Equals Summation of Two Words",
+  "1886": "1886. Determine Whether Matrix Can Be Obtained By Rotation",
   "1887": "1887. Reduction Operations to Make the Array Elements Equal",
+  "1893": "1893. Check if All the Integers in a Range Are Covered",
   "1897": "1897. Redistribute Characters to Make All Strings Equal",
   "1903": "1903. Largest Odd Number in String",
   "1913": "1913. Maximum Product Difference Between Two Pairs",
@@ -605,5 +607,6 @@
   "2727": "2727. Is Object Empty",
   "2742": "2742. Painting the Walls",
   "2785": "2785. Sort Vowels in a String",
-  "2849": "2849. Determine if a Cell Is Reachable at a Given Time"
+  "2849": "2849. Determine if a Cell Is Reachable at a Given Time",
+  "2870": "2870. Minimum Number of Operations to Make Array Empty"
 }

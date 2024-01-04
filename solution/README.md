@@ -526,7 +526,9 @@
 | 1876      | [Substrings of Size Three with Distinct Characters](https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters)                                    | [보러가기](src/2024-01/03/leetcode-1876.ts) |
 | 1877      | [Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array)                                                                  | [보러가기](src/2023-11/17/leetcode-1877.ts) |
 | 1880      | [Check if Word Equals Summation of Two Words](https://leetcode.com/problems/check-if-word-equals-summation-of-two-words)                                                | [보러가기](src/2024-01/03/leetcode-1880.ts) |
+| 1886      | [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation)                              | [보러가기](src/2024-01/04/leetcode-1886.ts) |
 | 1887      | [Reduction Operations to Make the Array Elements Equal](https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal)                            | [보러가기](src/2023-11/19/leetcode-1887.ts) |
+| 1893      | [Check if All the Integers in a Range Are Covered](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered)                                      | [보러가기](src/2024-01/04/leetcode-1893.ts) |
 | 1897      | [Redistribute Characters to Make All Strings Equal](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal)                                    | [보러가기](src/2023-12/30/leetcode-1897.ts) |
 | 1903      | [Largest Odd Number in String](https://leetcode.com/problems/largest-odd-number-in-string)                                                                              | [보러가기](src/2023-12/07/leetcode-1903.ts) |
 | 1913      | [Maximum Product Difference Between Two Pairs](https://leetcode.com/problems/maximum-product-difference-between-two-pairs)                                              | [보러가기](src/2023-12/18/leetcode-1913.ts) |
@@ -613,6 +615,7 @@
 | 2742      | [Painting the Walls](https://leetcode.com/problems/painting-the-walls)                                                                                                  | [보러가기](src/2023-10/14/leetcode-2742.ts) |
 | 2785      | [Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string)                                                                                        | [보러가기](src/2023-11/13/leetcode-2785.ts) |
 | 2849      | [Determine if a Cell Is Reachable at a Given Time](https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time)                                      | [보러가기](src/2023-11/08/leetcode-2849.ts) |
+| 2870      | [Minimum Number of Operations to Make Array Empty](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty)                                      | [보러가기](src/2024-01/04/leetcode-2870.ts) |
 
 ### Programmers
 
