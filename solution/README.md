@@ -531,6 +531,7 @@
 | 1893      | [Check if All the Integers in a Range Are Covered](https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered)                                      | [보러가기](src/2024-01/04/leetcode-1893.ts) |
 | 1897      | [Redistribute Characters to Make All Strings Equal](https://leetcode.com/problems/redistribute-characters-to-make-all-strings-equal)                                    | [보러가기](src/2023-12/30/leetcode-1897.ts) |
 | 1903      | [Largest Odd Number in String](https://leetcode.com/problems/largest-odd-number-in-string)                                                                              | [보러가기](src/2023-12/07/leetcode-1903.ts) |
+| 1909      | [Remove One Element to Make the Array Strictly Increasing](https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing)                      | [보러가기](src/2024-01/10/leetcode-1909.ts) |
 | 1913      | [Maximum Product Difference Between Two Pairs](https://leetcode.com/problems/maximum-product-difference-between-two-pairs)                                              | [보러가기](src/2023-12/18/leetcode-1913.ts) |
 | 1921      | [Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters)                                                              | [보러가기](src/2023-11/07/leetcode-1921.ts) |
 | 1926      | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)                                                                 | [보러가기](src/2022-11/21/leetcode-1926.ts) |
@@ -565,6 +566,7 @@
 | 2279      | [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)                                                      | [보러가기](src/2022-12/27/leetcode-2279.ts) |
 | 2352      | [Equal Row and Column Pairs](https://leetcode.com/problems/equal-row-and-column-pairs)                                                                                  | [보러가기](src/2023-06/13/leetcode-2352.ts) |
 | 2366      | [Minimum Replacements to Sort the Array](https://leetcode.com/problems/minimum-replacements-to-sort-the-array)                                                          | [보러가기](src/2023-08/30/leetcode-2366.ts) |
+| 2385      | [Amount of Time for Binary Tree to Be Infected](https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected)                                            | [보러가기](src/2024-01/10/leetcode-2385.ts) |
 | 2389      | [Longest Subsequence With Limited Sum](https://leetcode.com/problems/longest-subsequence-with-limited-sum/)                                                             | [보러가기](src/2022-12/25/leetcode-2389.ts) |
 | 2391      | [Minimum Amount of Time to Collect Garbage](https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage)                                                    | [보러가기](src/2023-11/20/leetcode-2391.ts) |
 | 2433      | [Find The Original Array of Prefix Xor](https://leetcode.com/problems/find-the-original-array-of-prefix-xor)                                                            | [보러가기](src/2023-10/31/leetcode-2433.ts) |
@@ -671,3 +673,4 @@
 | 161990    | [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)            | [보러가기](src/2023-03/13/programmers-161990.ts) |
 | 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)              | [보러가기](src/2023-06/14/programmers-169199.ts) |
 | 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                | [보러가기](src/2023-05/25/programmers-172927.ts) |
+| 258712    | [가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)      | [보러가기](src/2024-01/10/programmers-258712.ts) |
