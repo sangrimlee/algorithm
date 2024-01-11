@@ -1,0 +1,67 @@
+---
+title: 도넛과 막대 그래프
+---
+
+# 도넛과 막대 그래프
+
+## Solution
+
+```typescript filename="solution.ts" copy
+class Counter<K> {
+  private readonly map: Map<K, number>;
+
+  constructor() {
+    this.map = new Map();
+  }
+
+  get(key: K): number {
+    return this.map.get(key) ?? 0;
+  }
+
+  add(key: K) {
+    return this.map.set(key, this.get(key) + 1);
+  }
+}
+
+export function countGraph(edges: number[][]): number[] {
+  const nodes = new Set<number>();
+  const indegrees = new Counter<number>();
+  const outdegrees = new Counter<number>();
+  for (const [a, b] of edges) {
+    nodes.add(a);
+    nodes.add(b);
+    indegrees.add(b);
+    outdegrees.add(a);
+  }
+
+  let rootNode = 0;
+  let totalGraph = 0;
+  let barGraph = 0;
+  let eightGraph = 0;
+  for (const node of nodes) {
+    // 생성한 정점
+    if (indegrees.get(node) === 0 && 2 <= outdegrees.get(node)) {
+      rootNode = node;
+      totalGraph = outdegrees.get(node);
+      continue;
+    }
+    // 막대 그래프의 마지막 노드
+    if (outdegrees.get(node) === 0) {
+      barGraph += 1;
+    }
+    // 8자 그래프의 가운데 노드
+    else if (outdegrees.get(node) === 2) {
+      eightGraph += 1;
+    }
+  }
+
+  const donutGraph = totalGraph - barGraph - eightGraph;
+  return [rootNode, donutGraph, barGraph, eightGraph];
+}
+```
+
+<ProblemLink
+  codingSite="programmers"
+  href="https://school.programmers.co.kr/learn/courses/30/lessons/258711"
+  title="도넛과 막대 그래프"
+/>

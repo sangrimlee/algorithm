@@ -1,0 +1,28 @@
+---
+title: Build Array from Permutation
+tags:
+  - Array
+  - Simulation
+---
+
+# 1920. Build Array from Permutation
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function buildArray(nums: number[]): number[] {
+  return new Array(nums.length).fill(0).map((_, i) => nums[nums[i]]);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/build-array-from-permutation"
+  title="Build Array from Permutation"
+/>
