@@ -1,0 +1,47 @@
+---
+title: Flatten Binary Tree to Linked List
+tags:
+  - Linked List
+  - Stack
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 114. Flatten Binary Tree to Linked List
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Stack" slug="stack" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function flatten(root: TreeNode | null): void {
+  let lastNode: TreeNode | null = null;
+  function traverse(node: TreeNode | null) {
+    if (node === null) {
+      return null;
+    }
+    traverse(node.right);
+    traverse(node.left);
+    node.right = lastNode;
+    node.left = null;
+    lastNode = node;
+  }
+  traverse(root);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list"
+  title="Flatten Binary Tree to Linked List"
+/>

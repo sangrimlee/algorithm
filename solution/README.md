@@ -70,6 +70,7 @@
 | 111       | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)                                                                              | [보러가기](src/2023-07/10/leetcode-111.ts)  |
 | 112       | [Path Sum](https://leetcode.com/problems/path-sum/)                                                                                                                     | [보러가기](src/2022-10/04/leetcode-112.ts)  |
 | 113       | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)                                                                                                               | [보러가기](src/2022-09/24/leetcode-113.ts)  |
+| 114       | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list)                                                                  | [보러가기](src/2024-01/12/leetcode-114.ts)  |
 | 118       | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle)                                                                                                     | [보러가기](src/2023-09/08/leetcode-118.ts)  |
 | 119       | [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii)                                                                                               | [보러가기](src/2023-10/16/leetcode-119.ts)  |
 | 120       | [Triangle](https://leetcode.com/problems/triangle/)                                                                                                                     | [보러가기](src/2022-06/13/leetcode-120.ts)  |
@@ -538,7 +539,9 @@
 | 1921      | [Eliminate Maximum Number of Monsters](https://leetcode.com/problems/eliminate-maximum-number-of-monsters)                                                              | [보러가기](src/2023-11/07/leetcode-1921.ts) |
 | 1925      | [Count Square Sum Triples](https://leetcode.com/problems/count-square-sum-triples)                                                                                      | [보러가기](src/2024-01/11/leetcode-1925.ts) |
 | 1926      | [Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/)                                                                 | [보러가기](src/2022-11/21/leetcode-1926.ts) |
+| 1929      | [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array)                                                                                          | [보러가기](src/2024-01/12/leetcode-1929.ts) |
 | 1930      | [Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences)                                                      | [보러가기](src/2023-11/14/leetcode-1930.ts) |
+| 1935      | [Maximum Number of Words You Can Type](https://leetcode.com/problems/maximum-number-of-words-you-can-type)                                                              | [보러가기](src/2024-01/12/leetcode-1935.ts) |
 | 1962      | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [보러가기](src/2022-12/28/leetcode-1962.ts) |
 | 1964      | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [보러가기](src/2023-05/07/leetcode-1964.ts) |
 | 1971      | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [보러가기](src/2022-12/19/leetcode-1971.ts) |
@@ -676,5 +679,6 @@
 | 161990    | [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)            | [보러가기](src/2023-03/13/programmers-161990.ts) |
 | 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)              | [보러가기](src/2023-06/14/programmers-169199.ts) |
 | 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                | [보러가기](src/2023-05/25/programmers-172927.ts) |
+| 258709    | [주사위 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/258709)            | [보러가기](src/2024-01/12/programmers-258709.ts) |
 | 258711    | [도넛과 막대 그래프](https://school.programmers.co.kr/learn/courses/30/lessons/258711)       | [보러가기](src/2024-01/11/programmers-258711.ts) |
 | 258712    | [가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)      | [보러가기](src/2024-01/10/programmers-258712.ts) |
