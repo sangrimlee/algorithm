@@ -1,0 +1,35 @@
+---
+title: 산 모양 타일링
+---
+
+# 산 모양 타일링
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countMoutainTile(n: number, tops: number[]): number {
+  const MOD = 10007;
+  const sum = (...nums: number[]): number => {
+    return nums.reduce((acc, curr) => (acc + curr) % MOD, 0);
+  };
+
+  let [none, left, center, right] = [1, 1, tops[0], 1];
+  for (let i = 1; i < n; i++) {
+    const total = sum(none, left, center, right);
+    [none, left, center, right] = [
+      total,
+      sum(none, left, center),
+      tops[i] === 0 ? 0 : total,
+      total,
+    ];
+  }
+
+  return sum(none, left, center, right);
+}
+```
+
+<ProblemLink
+  codingSite="programmers"
+  href="https://school.programmers.co.kr/learn/courses/30/lessons/258705"
+  title="산 모양 타일링"
+/>
