@@ -81,6 +81,7 @@
 | 125       | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)                                                                                                      | [보러가기](src/2023-09/14/leetcode-125.ts)  |
 | 128       | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)                                                                             | [보러가기](src/2022-07/05/leetcode-128.ts)  |
 | 129       | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers)                                                                                      | [보러가기](src/2024-01/14/leetcode-129.ts)  |
+| 131       | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning)                                                                                        | [보러가기](src/2024-01/15/leetcode-131.ts)  |
 | 134       | [Gas Station](https://leetcode.com/problems/gas-station)                                                                                                                | [보러가기](src/2023-01/07/leetcode-134.ts)  |
 | 135       | [Candy](https://leetcode.com/problems/candy/)                                                                                                                           | [보러가기](src/2022-07/04/leetcode-135.ts)  |
 | 138       | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer)                                                                            | [보러가기](src/2023-09/05/leetcode-138.ts)  |
@@ -546,6 +547,7 @@
 | 1935      | [Maximum Number of Words You Can Type](https://leetcode.com/problems/maximum-number-of-words-you-can-type)                                                              | [보러가기](src/2024-01/12/leetcode-1935.ts) |
 | 1941      | [Check if All Characters Have Equal Number of Occurrences](https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences)                      | [보러가기](src/2024-01/13/leetcode-1941.ts) |
 | 1945      | [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert)                                                            | [보러가기](src/2024-01/14/leetcode-1945.ts) |
+| 1952      | [Three Divisors](https://leetcode.com/problems/three-divisors)                                                                                                          | [보러가기](src/2024-01/15/leetcode-1952.ts) |
 | 1962      | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [보러가기](src/2022-12/28/leetcode-1962.ts) |
 | 1964      | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [보러가기](src/2023-05/07/leetcode-1964.ts) |
 | 1971      | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [보러가기](src/2022-12/19/leetcode-1971.ts) |
@@ -684,6 +686,7 @@
 | 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)              | [보러가기](src/2023-06/14/programmers-169199.ts) |
 | 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                | [보러가기](src/2023-05/25/programmers-172927.ts) |
 | 258705    | [산 모양 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/258705)           | [보러가기](src/2024-01/13/programmers-258705.ts) |
+| 258707    | [n + 1 카드게임](https://school.programmers.co.kr/learn/courses/30/lessons/258707)           | [보러가기](src/2024-01/15/programmers-258707.ts) |
 | 258709    | [주사위 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/258709)            | [보러가기](src/2024-01/12/programmers-258709.ts) |
 | 258711    | [도넛과 막대 그래프](https://school.programmers.co.kr/learn/courses/30/lessons/258711)       | [보러가기](src/2024-01/11/programmers-258711.ts) |
 | 258712    | [가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)      | [보러가기](src/2024-01/10/programmers-258712.ts) |
