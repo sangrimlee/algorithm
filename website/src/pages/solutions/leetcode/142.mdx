@@ -1,0 +1,47 @@
+---
+title: Linked List Cycle II
+tags:
+  - Hash Table
+  - Linked List
+  - Two Pointers
+---
+
+# 142. Linked List Cycle II
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function detectCycle(head: ListNode | null): ListNode | null {
+  let slow = head;
+  let fast = head;
+  while (slow && slow.next && fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (slow === fast) break;
+  }
+  if (!(fast && fast.next)) {
+    return null;
+  }
+  let entry = head;
+  while (entry && slow && entry !== slow) {
+    entry = entry.next;
+    slow = slow.next;
+  }
+  return entry;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/linked-list-cycle-ii"
+  title="Linked List Cycle II"
+/>
