@@ -89,7 +89,6 @@ export function selectDice(dice: number[][]): number[] {
     let wins = 0;
     for (const value of result) {
       wins += lowerbound(opponentResult, value);
-      console.log(opponentResult, value, lowerbound(opponentResult, value));
     }
 
     if (maxWins < wins) {
