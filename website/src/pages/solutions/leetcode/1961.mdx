@@ -1,0 +1,39 @@
+---
+title: Check If String Is a Prefix of Array
+tags:
+  - Array
+  - String
+---
+
+# 1961. Check If String Is a Prefix of Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isPrefixString(s: string, words: string[]): boolean {
+  let currentIndex = 0;
+  for (const word of words) {
+    const prefix = s.substring(currentIndex, currentIndex + word.length);
+    if (prefix !== word) {
+      return false;
+    }
+    currentIndex += word.length;
+    if (currentIndex === s.length) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-string-is-a-prefix-of-array"
+  title="Check If String Is a Prefix of Array"
+/>

@@ -88,6 +88,7 @@
 | 139       | [Word Break](https://leetcode.com/problems/word-break)                                                                                                                  | [보러가기](src/2023-08/04/leetcode-139.ts)  |
 | 141       | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)                                                                                                    | [보러가기](src/2023-09/04/leetcode-141.ts)  |
 | 142       | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii)                                                                                              | [보러가기](src/2024-01/16/leetcode-142.ts)  |
+| 143       | [Reorder List](https://leetcode.com/problems/reorder-list)                                                                                                              | [보러가기](src/2024-01/17/leetcode-143.ts)  |
 | 144       | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                                                          | [보러가기](src/2023-01/09/leetcode-144.ts)  |
 | 146       | [LRU Cache](https://leetcode.com/problems/lru-cache)                                                                                                                    | [보러가기](src/2023-07/18/leetcode-146.ts)  |
 | 148       | [Sort List](https://leetcode.com/problems/sort-list)                                                                                                                    | [보러가기](src/2023-08/21/leetcode-148.ts)  |
@@ -550,6 +551,7 @@
 | 1945      | [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert)                                                            | [보러가기](src/2024-01/14/leetcode-1945.ts) |
 | 1952      | [Three Divisors](https://leetcode.com/problems/three-divisors)                                                                                                          | [보러가기](src/2024-01/15/leetcode-1952.ts) |
 | 1957      | [Delete Characters to Make Fancy String](https://leetcode.com/problems/delete-characters-to-make-fancy-string)                                                          | [보러가기](src/2024-01/16/leetcode-1957.ts) |
+| 1961      | [Check If String Is a Prefix of Array](https://leetcode.com/problems/check-if-string-is-a-prefix-of-array)                                                              | [보러가기](src/2024-01/17/leetcode-1961.ts) |
 | 1962      | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [보러가기](src/2022-12/28/leetcode-1962.ts) |
 | 1964      | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [보러가기](src/2023-05/07/leetcode-1964.ts) |
 | 1971      | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [보러가기](src/2022-12/19/leetcode-1971.ts) |
@@ -635,60 +637,61 @@
 
 ### Programmers
 
-| 문제 번호 | 제목                                                                                         |                       풀이                       |
-| :-------- | :------------------------------------------------------------------------------------------- | :----------------------------------------------: |
-| 1843      | [사칙연산](https://school.programmers.co.kr/learn/courses/30/lessons/1843)                   |  [보러가기](src/2023-05/16/programmers-1843.ts)  |
-| 12920     | [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)               | [보러가기](src/2022-06/22/programmers-12920.ts)  |
-| 68645     | [삼각 달팽이](https://programmers.co.kr/learn/courses/30/lessons/68645)                      |  [보러가기](src/2022-06/6/programmers-68645.ts)  |
-| 68936     | [쿼드압축 후 개수 세기](https://programmers.co.kr/learn/courses/30/lessons/68936)            |  [보러가기](src/2022-06/7/programmers-68936.ts)  |
-| 70129     | [이진 변환 반복하기](https://programmers.co.kr/learn/courses/30/lessons/70129)               |  [보러가기](src/2022-06/7/programmers-70129.ts)  |
-| 70130     | [스타 수열](https://programmers.co.kr/learn/courses/30/lessons/70130)                        | [보러가기](src/2022-06/10/programmers-70130.ts)  |
-| 118666    | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666)       | [보러가기](src/2023-11/13/programmers-118666.ts) |
-| 118667    | [두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)     | [보러가기](src/2023-11/14/programmers-118667.ts) |
-| 118668    | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)         | [보러가기](src/2023-11/15/programmers-118668.ts) |
-| 118669    | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)          | [보러가기](src/2023-11/15/programmers-118669.ts) |
-| 118670    | [행렬과 연산](https://school.programmers.co.kr/learn/courses/30/lessons/118670)              | [보러가기](src/2023-11/16/programmers-118670.ts) |
-| 121683    | [외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683)            | [보러가기](src/2023-09/06/programmers-121683.ts) |
-| 121684    | [체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)                 | [보러가기](src/2023-09/07/programmers-121684.ts) |
-| 121685    | [유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)                 | [보러가기](src/2023-09/07/programmers-121685.ts) |
-| 121686    | [운영체제](https://school.programmers.co.kr/learn/courses/30/lessons/121686)                 | [보러가기](src/2023-09/08/programmers-121686.ts) |
-| 121687    | [실습용 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/121687)              | [보러가기](src/2023-09/09/programmers-121687.ts) |
-| 121688    | [신입사원 교육](https://school.programmers.co.kr/learn/courses/30/lessons/121688)            | [보러가기](src/2023-09/09/programmers-121688.ts) |
-| 121689    | [카페 확장](https://school.programmers.co.kr/learn/courses/30/lessons/121689)                | [보러가기](src/2023-09/09/programmers-121689.ts) |
-| 121690    | [보물 지도](https://school.programmers.co.kr/learn/courses/30/lessons/121690)                | [보러가기](src/2023-09/10/programmers-121690.ts) |
-| 131127    | [할인 행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                | [보러가기](src/2023-03/06/programmers-131127.ts) |
-| 131128    | [숫자 짝꿍](https://school.programmers.co.kr/learn/courses/30/lessons/131128)                | [보러가기](src/2023-03/07/programmers-131128.ts) |
-| 131130    | [혼자 놀기의 달인](https://school.programmers.co.kr/learn/courses/30/lessons/131130)         | [보러가기](src/2023-09/12/programmers-131130.ts) |
-| 131701    | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701) | [보러가기](src/2023-03/03/programmers-131701.ts) |
-| 131704    | [택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)                 | [보러가기](src/2023-03/27/programmers-131704.ts) |
-| 132265    | [롤케이크 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/132265)          | [보러가기](src/2023-03/01/programmers-132265.ts) |
-| 133499    | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499)               | [보러가기](src/2023-03/08/programmers-133499.ts) |
-| 133502    | [햄버거 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/133502)            | [보러가기](src/2023-03/13/programmers-133502.ts) |
-| 134239    | [우박수열 정적분](https://school.programmers.co.kr/learn/courses/30/lessons/134239)          | [보러가기](src/2023-06/11/programmers-134239.ts) |
-| 135807    | [숫자 카드 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/135807)         | [보러가기](src/2023-05/23/programmers-135807.ts) |
-| 135808    | [과일 장수](https://school.programmers.co.kr/learn/courses/30/lessons/135808)                | [보러가기](src/2023-03/06/programmers-135808.ts) |
-| 136798    | [기사단원의 무기](https://school.programmers.co.kr/learn/courses/30/lessons/136798)          | [보러가기](src/2023-03/07/programmers-136798.ts) |
-| 138476    | [귤 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/138476)                | [보러가기](src/2023-03/02/programmers-138476.ts) |
-| 140107    | [점 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/140107)                  | [보러가기](src/2023-03/28/programmers-140107.ts) |
-| 140108    | [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108)            | [보러가기](src/2023-03/08/programmers-140108.ts) |
-| 142085    | [디펜스 게임](https://school.programmers.co.kr/learn/courses/30/lessons/142085)              | [보러가기](src/2023-05/25/programmers-142085.ts) |
-| 142086    | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)    | [보러가기](src/2023-03/03/programmers-142086.ts) |
-| 147355    | [크기가 작은 부분문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355)   | [보러가기](src/2023-03/02/programmers-147355.ts) |
-| 148653    | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)        | [보러가기](src/2023-05/02/programmers-148653.ts) |
-| 150365    | [미로 탈출 명령어](https://school.programmers.co.kr/learn/courses/30/lessons/150365)         | [보러가기](src/2023-11/18/programmers-150365.ts) |
-| 150368    | [이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)        | [보러가기](src/2023-11/17/programmers-150368.ts) |
-| 150369    | [택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)     | [보러가기](src/2023-05/19/programmers-150369.ts) |
-| 150370    | [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)   | [보러가기](src/2023-11/17/programmers-150370.ts) |
-| 154538    | [숫자 변환하기](https://school.programmers.co.kr/learn/courses/30/lessons/154538)            | [보러가기](src/2023-03/27/programmers-154538.ts) |
-| 155652    | [둘만의 암호](https://school.programmers.co.kr/learn/courses/30/lessons/155652)              | [보러가기](src/2023-03/13/programmers-155652.ts) |
-| 159994    | [카드 뭉치](https://school.programmers.co.kr/learn/courses/30/lessons/159994)                | [보러가기](src/2023-03/08/programmers-159994.ts) |
-| 160586    | [대충 만든 자판](https://school.programmers.co.kr/learn/courses/30/lessons/160586)           | [보러가기](src/2023-03/28/programmers-160586.ts) |
-| 161989    | [덧칠하기](https://school.programmers.co.kr/learn/courses/30/lessons/161989)                 | [보러가기](src/2023-03/08/programmers-161989.ts) |
-| 161990    | [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)            | [보러가기](src/2023-03/13/programmers-161990.ts) |
-| 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)              | [보러가기](src/2023-06/14/programmers-169199.ts) |
-| 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                | [보러가기](src/2023-05/25/programmers-172927.ts) |
-| 258705    | [산 모양 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/258705)           | [보러가기](src/2024-01/13/programmers-258705.ts) |
-| 258707    | [n + 1 카드게임](https://school.programmers.co.kr/learn/courses/30/lessons/258707)           | [보러가기](src/2024-01/15/programmers-258707.ts) |
-| 258709    | [주사위 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/258709)            | [보러가기](src/2024-01/12/programmers-258709.ts) |
-| 258711    | [도넛과 막대 그래프](https://school.programmers.co.kr/learn/courses/30/lessons/258711)       | [보러가기](src/2024-01/11/programmers-258711.ts) |
-| 258712    | [가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)      | [보러가기](src/2024-01/10/programmers-258712.ts) |
+| 문제 번호 | 제목                                                                                                |                       풀이                       |
+| :-------- | :-------------------------------------------------------------------------------------------------- | :----------------------------------------------: |
+| 1843      | [사칙연산](https://school.programmers.co.kr/learn/courses/30/lessons/1843)                          |  [보러가기](src/2023-05/16/programmers-1843.ts)  |
+| 12920     | [선입 선출 스케줄링](https://programmers.co.kr/learn/courses/30/lessons/12920)                      | [보러가기](src/2022-06/22/programmers-12920.ts)  |
+| 68645     | [삼각 달팽이](https://programmers.co.kr/learn/courses/30/lessons/68645)                             |  [보러가기](src/2022-06/6/programmers-68645.ts)  |
+| 68936     | [쿼드압축 후 개수 세기](https://programmers.co.kr/learn/courses/30/lessons/68936)                   |  [보러가기](src/2022-06/7/programmers-68936.ts)  |
+| 70129     | [이진 변환 반복하기](https://programmers.co.kr/learn/courses/30/lessons/70129)                      |  [보러가기](src/2022-06/7/programmers-70129.ts)  |
+| 70130     | [스타 수열](https://programmers.co.kr/learn/courses/30/lessons/70130)                               | [보러가기](src/2022-06/10/programmers-70130.ts)  |
+| 118666    | [성격 유형 검사하기](https://school.programmers.co.kr/learn/courses/30/lessons/118666)              | [보러가기](src/2023-11/13/programmers-118666.ts) |
+| 118667    | [두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)            | [보러가기](src/2023-11/14/programmers-118667.ts) |
+| 118668    | [코딩 테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)                | [보러가기](src/2023-11/15/programmers-118668.ts) |
+| 118669    | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)                 | [보러가기](src/2023-11/15/programmers-118669.ts) |
+| 118670    | [행렬과 연산](https://school.programmers.co.kr/learn/courses/30/lessons/118670)                     | [보러가기](src/2023-11/16/programmers-118670.ts) |
+| 121683    | [외톨이 알파벳](https://school.programmers.co.kr/learn/courses/30/lessons/121683)                   | [보러가기](src/2023-09/06/programmers-121683.ts) |
+| 121684    | [체육대회](https://school.programmers.co.kr/learn/courses/30/lessons/121684)                        | [보러가기](src/2023-09/07/programmers-121684.ts) |
+| 121685    | [유전법칙](https://school.programmers.co.kr/learn/courses/30/lessons/121685)                        | [보러가기](src/2023-09/07/programmers-121685.ts) |
+| 121686    | [운영체제](https://school.programmers.co.kr/learn/courses/30/lessons/121686)                        | [보러가기](src/2023-09/08/programmers-121686.ts) |
+| 121687    | [실습용 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/121687)                     | [보러가기](src/2023-09/09/programmers-121687.ts) |
+| 121688    | [신입사원 교육](https://school.programmers.co.kr/learn/courses/30/lessons/121688)                   | [보러가기](src/2023-09/09/programmers-121688.ts) |
+| 121689    | [카페 확장](https://school.programmers.co.kr/learn/courses/30/lessons/121689)                       | [보러가기](src/2023-09/09/programmers-121689.ts) |
+| 121690    | [보물 지도](https://school.programmers.co.kr/learn/courses/30/lessons/121690)                       | [보러가기](src/2023-09/10/programmers-121690.ts) |
+| 131127    | [할인 행사](https://school.programmers.co.kr/learn/courses/30/lessons/131127)                       | [보러가기](src/2023-03/06/programmers-131127.ts) |
+| 131128    | [숫자 짝꿍](https://school.programmers.co.kr/learn/courses/30/lessons/131128)                       | [보러가기](src/2023-03/07/programmers-131128.ts) |
+| 131130    | [혼자 놀기의 달인](https://school.programmers.co.kr/learn/courses/30/lessons/131130)                | [보러가기](src/2023-09/12/programmers-131130.ts) |
+| 131701    | [연속 부분 수열 합의 개수](https://school.programmers.co.kr/learn/courses/30/lessons/131701)        | [보러가기](src/2023-03/03/programmers-131701.ts) |
+| 131704    | [택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)                        | [보러가기](src/2023-03/27/programmers-131704.ts) |
+| 132265    | [롤케이크 자르기](https://school.programmers.co.kr/learn/courses/30/lessons/132265)                 | [보러가기](src/2023-03/01/programmers-132265.ts) |
+| 133499    | [옹알이 (2)](https://school.programmers.co.kr/learn/courses/30/lessons/133499)                      | [보러가기](src/2023-03/08/programmers-133499.ts) |
+| 133502    | [햄버거 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/133502)                   | [보러가기](src/2023-03/13/programmers-133502.ts) |
+| 134239    | [우박수열 정적분](https://school.programmers.co.kr/learn/courses/30/lessons/134239)                 | [보러가기](src/2023-06/11/programmers-134239.ts) |
+| 135807    | [숫자 카드 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/135807)                | [보러가기](src/2023-05/23/programmers-135807.ts) |
+| 135808    | [과일 장수](https://school.programmers.co.kr/learn/courses/30/lessons/135808)                       | [보러가기](src/2023-03/06/programmers-135808.ts) |
+| 136798    | [기사단원의 무기](https://school.programmers.co.kr/learn/courses/30/lessons/136798)                 | [보러가기](src/2023-03/07/programmers-136798.ts) |
+| 138476    | [귤 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/138476)                       | [보러가기](src/2023-03/02/programmers-138476.ts) |
+| 140107    | [점 찍기](https://school.programmers.co.kr/learn/courses/30/lessons/140107)                         | [보러가기](src/2023-03/28/programmers-140107.ts) |
+| 140108    | [문자열 나누기](https://school.programmers.co.kr/learn/courses/30/lessons/140108)                   | [보러가기](src/2023-03/08/programmers-140108.ts) |
+| 142085    | [디펜스 게임](https://school.programmers.co.kr/learn/courses/30/lessons/142085)                     | [보러가기](src/2023-05/25/programmers-142085.ts) |
+| 142086    | [가장 가까운 같은 글자](https://school.programmers.co.kr/learn/courses/30/lessons/142086)           | [보러가기](src/2023-03/03/programmers-142086.ts) |
+| 147355    | [크기가 작은 부분문자열](https://school.programmers.co.kr/learn/courses/30/lessons/147355)          | [보러가기](src/2023-03/02/programmers-147355.ts) |
+| 148653    | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)               | [보러가기](src/2023-05/02/programmers-148653.ts) |
+| 150365    | [미로 탈출 명령어](https://school.programmers.co.kr/learn/courses/30/lessons/150365)                | [보러가기](src/2023-11/18/programmers-150365.ts) |
+| 150368    | [이모티콘 할인행사](https://school.programmers.co.kr/learn/courses/30/lessons/150368)               | [보러가기](src/2023-11/17/programmers-150368.ts) |
+| 150369    | [택배 배달과 수거하기](https://school.programmers.co.kr/learn/courses/30/lessons/150369)            | [보러가기](src/2023-05/19/programmers-150369.ts) |
+| 150370    | [개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)          | [보러가기](src/2023-11/17/programmers-150370.ts) |
+| 154538    | [숫자 변환하기](https://school.programmers.co.kr/learn/courses/30/lessons/154538)                   | [보러가기](src/2023-03/27/programmers-154538.ts) |
+| 155652    | [둘만의 암호](https://school.programmers.co.kr/learn/courses/30/lessons/155652)                     | [보러가기](src/2023-03/13/programmers-155652.ts) |
+| 159994    | [카드 뭉치](https://school.programmers.co.kr/learn/courses/30/lessons/159994)                       | [보러가기](src/2023-03/08/programmers-159994.ts) |
+| 160586    | [대충 만든 자판](https://school.programmers.co.kr/learn/courses/30/lessons/160586)                  | [보러가기](src/2023-03/28/programmers-160586.ts) |
+| 161989    | [덧칠하기](https://school.programmers.co.kr/learn/courses/30/lessons/161989)                        | [보러가기](src/2023-03/08/programmers-161989.ts) |
+| 161990    | [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)                   | [보러가기](src/2023-03/13/programmers-161990.ts) |
+| 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)                     | [보러가기](src/2023-06/14/programmers-169199.ts) |
+| 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                       | [보러가기](src/2023-05/25/programmers-172927.ts) |
+| 250137    | [[PCCP 기출문제] 1번 / 붕대 감기](https://school.programmers.co.kr/learn/courses/30/lessons/250137) | [보러가기](src/2024-01/17/programmers-250137.ts) |
+| 258705    | [산 모양 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/258705)                  | [보러가기](src/2024-01/13/programmers-258705.ts) |
+| 258707    | [n + 1 카드게임](https://school.programmers.co.kr/learn/courses/30/lessons/258707)                  | [보러가기](src/2024-01/15/programmers-258707.ts) |
+| 258709    | [주사위 고르기](https://school.programmers.co.kr/learn/courses/30/lessons/258709)                   | [보러가기](src/2024-01/12/programmers-258709.ts) |
+| 258711    | [도넛과 막대 그래프](https://school.programmers.co.kr/learn/courses/30/lessons/258711)              | [보러가기](src/2024-01/11/programmers-258711.ts) |
+| 258712    | [가장 많이 받은 선물](https://school.programmers.co.kr/learn/courses/30/lessons/258712)             | [보러가기](src/2024-01/10/programmers-258712.ts) |
