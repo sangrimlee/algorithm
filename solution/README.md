@@ -91,6 +91,7 @@
 | 143       | [Reorder List](https://leetcode.com/problems/reorder-list)                                                                                                              | [보러가기](src/2024-01/17/leetcode-143.ts)  |
 | 144       | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal)                                                                          | [보러가기](src/2023-01/09/leetcode-144.ts)  |
 | 146       | [LRU Cache](https://leetcode.com/problems/lru-cache)                                                                                                                    | [보러가기](src/2023-07/18/leetcode-146.ts)  |
+| 147       | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list)                                                                                                | [보러가기](src/2024-01/18/leetcode-147.ts)  |
 | 148       | [Sort List](https://leetcode.com/problems/sort-list)                                                                                                                    | [보러가기](src/2023-08/21/leetcode-148.ts)  |
 | 149       | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                                                              | [보러가기](src/2023-01/08/leetcode-149.ts)  |
 | 150       | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)                                                                      | [보러가기](src/2022-12/17/leetcode-150.ts)  |
@@ -554,7 +555,9 @@
 | 1961      | [Check If String Is a Prefix of Array](https://leetcode.com/problems/check-if-string-is-a-prefix-of-array)                                                              | [보러가기](src/2024-01/17/leetcode-1961.ts) |
 | 1962      | [Remove Stones to Minimize the Total](https://leetcode.com/problems/remove-stones-to-minimize-the-total)                                                                | [보러가기](src/2022-12/28/leetcode-1962.ts) |
 | 1964      | [Find the Longest Valid Obstacle Course at Each Position](https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position)                        | [보러가기](src/2023-05/07/leetcode-1964.ts) |
+| 1967      | [Number of Strings That Appear as Substrings in Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word)                                | [보러가기](src/2024-01/18/leetcode-1967.ts) |
 | 1971      | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph)                                                                              | [보러가기](src/2022-12/19/leetcode-1971.ts) |
+| 1974      | [Minimum Time to Type Word Using Special Typewriter](https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter)                                  | [보러가기](src/2024-01/18/leetcode-1974.ts) |
 | 1980      | [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string)                                                                                    | [보러가기](src/2023-11/16/leetcode-1980.ts) |
 | 1996      | [The Number of Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)                                                   | [보러가기](src/2022-09/09/leetcode-1996.ts) |
 | 2009      | [Minimum Number of Operations to Make Array Continuous](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous)                            | [보러가기](src/2023-10/10/leetcode-2009.ts) |
@@ -689,6 +692,7 @@
 | 161990    | [바탕화면 정리](https://school.programmers.co.kr/learn/courses/30/lessons/161990)                   | [보러가기](src/2023-03/13/programmers-161990.ts) |
 | 169199    | [리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)                     | [보러가기](src/2023-06/14/programmers-169199.ts) |
 | 172927    | [광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)                       | [보러가기](src/2023-05/25/programmers-172927.ts) |
+| 250136    | [[PCCP 기출문제] 2번 / 석유 시추](https://school.programmers.co.kr/learn/courses/30/lessons/250136) | [보러가기](src/2024-01/18/programmers-250136.ts) |
 | 250137    | [[PCCP 기출문제] 1번 / 붕대 감기](https://school.programmers.co.kr/learn/courses/30/lessons/250137) | [보러가기](src/2024-01/17/programmers-250137.ts) |
 | 258705    | [산 모양 타일링](https://school.programmers.co.kr/learn/courses/30/lessons/258705)                  | [보러가기](src/2024-01/13/programmers-258705.ts) |
 | 258707    | [n + 1 카드게임](https://school.programmers.co.kr/learn/courses/30/lessons/258707)                  | [보러가기](src/2024-01/15/programmers-258707.ts) |
