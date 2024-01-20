@@ -1,0 +1,20 @@
+/**
+ * 165. Compare Version Numbers
+ * https://leetcode.com/problems/compare-version-numbers
+ */
+export function compareVersion(version1: string, version2: string): number {
+  function convertVersion(version: string) {
+    return version.split('.').map((v) => parseInt(v));
+  }
+
+  const v1 = convertVersion(version1);
+  const v2 = convertVersion(version2);
+  for (let i = 0; i < Math.max(v1.length, v2.length); i++) {
+    const revision1 = v1[i] ?? 0;
+    const revision2 = v2[i] ?? 0;
+    if (revision1 !== revision2) {
+      return revision1 < revision2 ? -1 : 1;
+    }
+  }
+  return 0;
+}
