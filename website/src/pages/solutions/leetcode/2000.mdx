@@ -1,0 +1,36 @@
+---
+title: Reverse Prefix of Word
+tags:
+  - Two Pointers
+  - String
+---
+
+# 2000. Reverse Prefix of Word
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reversePrefix(word: string, ch: string): string {
+  function reverseString(s: string) {
+    return [...s].reverse().join('');
+  }
+
+  const i = word.indexOf(ch);
+  if (i === -1) {
+    return word;
+  }
+  return reverseString(word.substring(0, i + 1)) + word.substring(i + 1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/reverse-prefix-of-word"
+  title="Reverse Prefix of Word"
+/>
