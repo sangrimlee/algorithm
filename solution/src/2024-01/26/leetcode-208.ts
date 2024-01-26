@@ -1,0 +1,77 @@
+/**
+ * 208. Implement Trie (Prefix Tree)
+ * https://leetcode.com/problems/implement-trie-prefix-tree
+ */
+class TrieNode {
+  private readonly _char: string;
+  private _isEnd: boolean;
+  private readonly children: Map<string, TrieNode>;
+
+  constructor(char: string) {
+    this._char = char;
+    this._isEnd = false;
+    this.children = new Map();
+  }
+
+  get char() {
+    return this._char;
+  }
+
+  get isEnd() {
+    return this._isEnd;
+  }
+
+  set isEnd(value: boolean) {
+    this._isEnd = value;
+  }
+
+  getChildNode(char: string): TrieNode | undefined {
+    return this.children.get(char);
+  }
+
+  addChildNode(char: string): TrieNode {
+    const newChildNode = new TrieNode(char);
+    this.children.set(char, newChildNode);
+    return newChildNode;
+  }
+}
+
+export class Trie {
+  private readonly root: TrieNode;
+
+  constructor() {
+    this.root = new TrieNode('');
+  }
+
+  insert(word: string): void {
+    let currentNode = this.root;
+    for (const char of word) {
+      currentNode = currentNode.getChildNode(char) ?? currentNode.addChildNode(char);
+    }
+    currentNode.isEnd = true;
+  }
+
+  search(word: string): boolean {
+    let currentNode = this.root;
+    for (const char of word) {
+      const nextNode = currentNode.getChildNode(char);
+      if (!nextNode) {
+        return false;
+      }
+      currentNode = nextNode;
+    }
+    return currentNode.isEnd;
+  }
+
+  startsWith(prefix: string): boolean {
+    let currentNode = this.root;
+    for (const char of prefix) {
+      const nextNode = currentNode.getChildNode(char);
+      if (!nextNode) {
+        return false;
+      }
+      currentNode = nextNode;
+    }
+    return true;
+  }
+}
