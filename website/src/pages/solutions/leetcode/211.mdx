@@ -1,0 +1,108 @@
+---
+title: Design Add and Search Words Data Structure
+tags:
+  - String
+  - Depth-First Search
+  - Design
+  - Trie
+---
+
+# 211. Design Add and Search Words Data Structure
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Design" slug="design" />
+  <TopicBadge name="Trie" slug="trie" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+class TrieNode {
+  private readonly _char: string;
+  private _isEnd: boolean;
+  private readonly children: Map<string, TrieNode>;
+
+  constructor(char: string) {
+    this._char = char;
+    this._isEnd = false;
+    this.children = new Map();
+  }
+
+  get char() {
+    return this._char;
+  }
+
+  get isEnd() {
+    return this._isEnd;
+  }
+
+  set isEnd(value: boolean) {
+    this._isEnd = value;
+  }
+
+  getAllChildNode(): TrieNode[] {
+    return [...this.children.values()];
+  }
+
+  getChildNode(char: string): TrieNode | undefined {
+    return this.children.get(char);
+  }
+
+  addChildNode(char: string): TrieNode {
+    const childNode = this.getChildNode(char);
+    if (childNode) {
+      return childNode;
+    }
+    const newChildNode = new TrieNode(char);
+    this.children.set(char, newChildNode);
+    return newChildNode;
+  }
+}
+
+export class WordDictionary {
+  private readonly root: TrieNode;
+
+  constructor() {
+    this.root = new TrieNode('');
+  }
+
+  addWord(word: string): void {
+    let currentNode = this.root;
+    for (const char of word) {
+      currentNode = currentNode.addChildNode(char);
+    }
+    currentNode.isEnd = true;
+  }
+
+  search(word: string): boolean {
+    return this.dfs(this.root, word);
+  }
+
+  private dfs(node: TrieNode, word: string, i = 0): boolean {
+    if (word.length === i) {
+      return node.isEnd;
+    }
+    const char = word[i];
+    if (char === '.') {
+      for (const childNode of node.getAllChildNode()) {
+        if (this.dfs(childNode, word, i + 1)) {
+          return true;
+        }
+      }
+      return false;
+    } else {
+      const childNode = node.getChildNode(char);
+      return childNode ? this.dfs(childNode, word, i + 1) : false;
+    }
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/design-add-and-search-words-data-structure"
+  title="Design Add and Search Words Data Structure"
+/>
