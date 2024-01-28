@@ -1,0 +1,26 @@
+/**
+ * 1074. Number of Submatrices That Sum to Target
+ * https://leetcode.com/problems/number-of-submatrices-that-sum-to-target
+ */
+export function numSubmatrixSumTarget(matrix: number[][], target: number): number {
+  const [m, n] = [matrix.length, matrix[0].length];
+  for (let row = 0; row < m; row++) {
+    for (let col = 1; col < n; col++) {
+      matrix[row][col] += matrix[row][col - 1];
+    }
+  }
+
+  let answer = 0;
+  for (let colStart = 0; colStart < n; colStart++) {
+    for (let colEnd = colStart; colEnd < n; colEnd++) {
+      const counter = new Map<number, number>([[0, 1]]);
+      let sum = 0;
+      for (let row = 0; row < m; row++) {
+        sum += matrix[row][colEnd] - (0 < colStart ? matrix[row][colStart - 1] : 0);
+        answer += counter.get(sum - target) ?? 0;
+        counter.set(sum, (counter.get(sum) ?? 0) + 1);
+      }
+    }
+  }
+  return answer;
+}
