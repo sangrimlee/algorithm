@@ -1,0 +1,36 @@
+---
+title: Two Furthest Houses With Different Colors
+tags:
+  - Array
+  - Greedy
+---
+
+# 2078. Two Furthest Houses With Different Colors
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Greedy" slug="greedy" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxDistance(colors: number[]): number {
+  const n = colors.length;
+  let [start, end] = [0, n - 1];
+  while (colors[0] === colors[end]) {
+    end -= 1;
+  }
+  while (colors[n - 1] === colors[start]) {
+    start += 1;
+  }
+  return Math.max(end, n - 1 - start);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/two-furthest-houses-with-different-colors"
+  title="Two Furthest Houses With Different Colors"
+/>
