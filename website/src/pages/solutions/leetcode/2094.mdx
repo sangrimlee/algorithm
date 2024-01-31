@@ -1,0 +1,60 @@
+---
+title: Finding 3-Digit Even Numbers
+tags:
+  - Array
+  - Hash Table
+  - Sorting
+  - Enumeration
+---
+
+# 2094. Finding 3-Digit Even Numbers
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Enumeration" slug="enumeration" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findEvenNumbers(digits: number[]): number[] {
+  function* getDigits(num: number) {
+    for (const digit of num.toString()) {
+      yield parseInt(digit);
+    }
+  }
+
+  function canMakeNumber(counter: Map<number, number>, num: number) {
+    const digitCounter = new Map<number, number>();
+    for (const digit of getDigits(num)) {
+      digitCounter.set(digit, (digitCounter.get(digit) ?? 0) + 1);
+    }
+
+    return [...digitCounter.entries()].every(
+      ([digit, count]) => count <= (counter.get(digit) ?? 0),
+    );
+  }
+
+  const counter = new Map<number, number>();
+  digits.forEach((digit) => {
+    counter.set(digit, (counter.get(digit) ?? 0) + 1);
+  });
+
+  const answer: number[] = [];
+  for (let num = 100; num <= 999; num += 2) {
+    if (canMakeNumber(counter, num)) {
+      answer.push(num);
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/finding-3-digit-even-numbers"
+  title="Finding 3-Digit Even Numbers"
+/>
