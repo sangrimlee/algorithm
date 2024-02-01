@@ -133,6 +133,7 @@
 | 234       | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)                                                                                         | [보러가기](src/2022-09/02/leetcode-234.ts)  |
 | 236       | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                                                        | [보러가기](src/2024-01/31/leetcode-236.ts)  |
 | 238       | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                                                              | [보러가기](src/2023-07/15/leetcode-238.ts)  |
+| 241       | [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses)                                                                    | [보러가기](src/2024-02/01/leetcode-241.ts)  |
 | 242       | [Valid Anagram](https://leetcode.com/problems/valid-anagram)                                                                                                            | [보러가기](src/2023-12/16/leetcode-242.ts)  |
 | 257       | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths)                                                                                                    | [보러가기](src/2023-09/22/leetcode-257.ts)  |
 | 258       | [Add Digits](https://leetcode.com/problems/add-digits)                                                                                                                  | [보러가기](src/2023-09/22/leetcode-258.ts)  |
@@ -608,6 +609,8 @@
 | 2094      | [Finding 3-Digit Even Numbers](https://leetcode.com/problems/finding-3-digit-even-numbers)                                                                              | [보러가기](src/2024-01/31/leetcode-2094.ts) |
 | 2099      | [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum)                                    | [보러가기](src/2024-01/31/leetcode-2099.ts) |
 | 2101      | [Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs)                                                                                  | [보러가기](src/2023-06/02/leetcode-2101.ts) |
+| 2103      | [Rings and Rods](https://leetcode.com/problems/rings-and-rods)                                                                                                          | [보러가기](src/2024-02/01/leetcode-2103.ts) |
+| 2108      | [Find First Palindromic String in the Array](https://leetcode.com/problems/find-first-palindromic-string-in-the-array)                                                  | [보러가기](src/2024-02/01/leetcode-2108.ts) |
 | 2125      | [Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank)                                                                        | [보러가기](src/2024-01/03/leetcode-2125.ts) |
 | 2130      | [Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)                                                                    | [보러가기](src/2023-05/17/leetcode-2130.ts) |
 | 2131      | [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/)                             | [보러가기](src/2022-11/03/leetcode-2131.ts) |
@@ -679,6 +682,7 @@
 | 2785      | [Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string)                                                                                        | [보러가기](src/2023-11/13/leetcode-2785.ts) |
 | 2849      | [Determine if a Cell Is Reachable at a Given Time](https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time)                                      | [보러가기](src/2023-11/08/leetcode-2849.ts) |
 | 2870      | [Minimum Number of Operations to Make Array Empty](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty)                                      | [보러가기](src/2024-01/04/leetcode-2870.ts) |
+| 2966      | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference)                                              | [보러가기](src/2024-02/01/leetcode-2966.ts) |
 
 ### Programmers
 

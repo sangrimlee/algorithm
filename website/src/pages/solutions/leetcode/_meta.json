@@ -126,6 +126,7 @@
   "234": "234. Palindrome Linked List",
   "236": "236. Lowest Common Ancestor of a Binary Tree",
   "238": "238. Product of Array Except Self",
+  "241": "241. Different Ways to Add Parentheses",
   "242": "242. Valid Anagram",
   "257": "257. Binary Tree Paths",
   "258": "258. Add Digits",
@@ -601,6 +602,8 @@
   "2094": "2094. Finding 3-Digit Even Numbers",
   "2099": "2099. Find Subsequence of Length K With the Largest Sum",
   "2101": "2101. Detonate the Maximum Bombs",
+  "2103": "2103. Rings and Rods",
+  "2108": "2108. Find First Palindromic String in the Array",
   "2125": "2125. Number of Laser Beams in a Bank",
   "2130": "2130. Maximum Twin Sum of a Linked List",
   "2131": "2131. Longest Palindrome by Concatenating Two Letter Words",
@@ -671,5 +674,6 @@
   "2742": "2742. Painting the Walls",
   "2785": "2785. Sort Vowels in a String",
   "2849": "2849. Determine if a Cell Is Reachable at a Given Time",
-  "2870": "2870. Minimum Number of Operations to Make Array Empty"
+  "2870": "2870. Minimum Number of Operations to Make Array Empty",
+  "2966": "2966. Divide Array Into Arrays With Max Difference"
 }

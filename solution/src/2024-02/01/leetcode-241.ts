@@ -1,0 +1,40 @@
+/**
+ * 241. Different Ways to Add Parentheses
+ * https://leetcode.com/problems/different-ways-to-add-parentheses
+ */
+export function diffWaysToCompute(expression: string): number[] {
+  function isOperator(char: string) {
+    return /^[+\-*]$/.test(char);
+  }
+
+  function operate(x: number, y: number, operator: string) {
+    if (operator === '+') {
+      return x + y;
+    }
+    if (operator === '-') {
+      return x - y;
+    }
+    return x * y;
+  }
+
+  function dfs(expression: string): number[] {
+    const result: number[] = [];
+    for (let i = 0; i < expression.length; i++) {
+      if (isOperator(expression[i])) {
+        const leftResult = dfs(expression.substring(0, i));
+        const rightResult = dfs(expression.substring(i + 1));
+        for (const x of leftResult) {
+          for (const y of rightResult) {
+            result.push(operate(x, y, expression[i]));
+          }
+        }
+      }
+    }
+    if (result.length === 0) {
+      result.push(parseInt(expression));
+    }
+    return result;
+  }
+
+  return dfs(expression);
+}
