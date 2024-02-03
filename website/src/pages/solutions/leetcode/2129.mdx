@@ -1,0 +1,32 @@
+---
+title: Capitalize the Title
+tags:
+  - String
+---
+
+# 2129. Capitalize the Title
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function capitalizeTitle(title: string): string {
+  function capitalize(word: string) {
+    if (word.length <= 2) {
+      return word.toLowerCase();
+    }
+    return word.charAt(0).toUpperCase() + word.substring(1).toLowerCase();
+  }
+  return title.split(' ').map(capitalize).join(' ');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/capitalize-the-title"
+  title="Capitalize the Title"
+/>

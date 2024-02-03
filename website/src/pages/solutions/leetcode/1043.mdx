@@ -1,0 +1,41 @@
+---
+title: Partition Array for Maximum Sum
+tags:
+  - Array
+  - Dynamic Programming
+---
+
+# 1043. Partition Array for Maximum Sum
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxSumAfterPartitioning(arr: number[], k: number): number {
+  const n = arr.length;
+  const dp = new Array(n + 1).fill(0);
+
+  for (let i = 1; i <= n; i++) {
+    let maxValue = 0;
+    let maxSum = 0;
+    for (let j = 1; j <= k && j <= i; j++) {
+      maxValue = Math.max(maxValue, arr[i - j]);
+      maxSum = Math.max(maxSum, dp[i - j] + maxValue * j);
+    }
+    dp[i] = maxSum;
+  }
+
+  return dp[n];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/partition-array-for-maximum-sum"
+  title="Partition Array for Maximum Sum"
+/>
