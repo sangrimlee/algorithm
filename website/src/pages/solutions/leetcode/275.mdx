@@ -1,0 +1,38 @@
+---
+title: H-Index II
+tags:
+  - Array
+  - Binary Search
+---
+
+# 275. H-Index II
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function hIndex(citations: number[]): number {
+  const n = citations.length;
+  let [start, end] = [0, n - 1];
+  while (start <= end) {
+    const mid = start + Math.floor((end - start) / 2);
+    if (n - mid <= citations[mid]) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  return n - start;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/h-index-ii"
+  title="H-Index II"
+/>
