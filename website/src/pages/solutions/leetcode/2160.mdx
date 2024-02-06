@@ -1,0 +1,31 @@
+---
+title: Minimum Sum of Four Digit Number After Splitting Digits
+tags:
+  - Math
+  - Greedy
+  - Sorting
+---
+
+# 2160. Minimum Sum of Four Digit Number After Splitting Digits
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumSum(num: number): number {
+  const [a, b, c, d] = [...num.toString()].map(Number).sort((a, b) => a - b);
+  return 10 * (a + b) + c + d;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits"
+  title="Minimum Sum of Four Digit Number After Splitting Digits"
+/>
