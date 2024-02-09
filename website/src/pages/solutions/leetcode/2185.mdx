@@ -1,0 +1,30 @@
+---
+title: Counting Words With a Given Prefix
+tags:
+  - Array
+  - String
+  - String Matching
+---
+
+# 2185. Counting Words With a Given Prefix
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="String Matching" slug="string-matching" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function prefixCount(words: string[], pref: string): number {
+  return words.filter((word) => word.startsWith(pref)).length;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/counting-words-with-a-given-prefix"
+  title="Counting Words With a Given Prefix"
+/>
