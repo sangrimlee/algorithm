@@ -1,0 +1,42 @@
+---
+title: Rearrange Array Elements by Sign
+tags:
+  - Array
+  - Two Pointers
+  - Simulation
+---
+
+# 2149. Rearrange Array Elements by Sign
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function rearrangeArray(nums: number[]): number[] {
+  const answer: number[] = [];
+
+  let [positive, negative] = [0, 0];
+  for (const num of nums) {
+    if (0 < num) {
+      answer[2 * positive] = num;
+      positive += 1;
+    } else {
+      answer[2 * negative + 1] = num;
+      negative += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/rearrange-array-elements-by-sign"
+  title="Rearrange Array Elements by Sign"
+/>
