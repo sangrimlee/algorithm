@@ -1,0 +1,49 @@
+---
+title: Least Number of Unique Integers after K Removals
+tags:
+  - Array
+  - Hash Table
+  - Greedy
+  - Sorting
+  - Counting
+---
+
+# 1481. Least Number of Unique Integers after K Removals
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findLeastNumOfUniqueInts(arr: number[], k: number): number {
+  const counter = new Map<number, number>();
+  for (const num of arr) {
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  }
+  const counts = [...counter.values()].sort((a, b) => a - b);
+
+  let remainRemovals = k;
+  let remainNumber = counts.length;
+  for (const count of counts) {
+    remainRemovals -= count;
+    if (remainRemovals < 0) {
+      return remainNumber;
+    }
+    remainNumber -= 1;
+  }
+  return 0;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals"
+  title="Least Number of Unique Integers after K Removals"
+/>
