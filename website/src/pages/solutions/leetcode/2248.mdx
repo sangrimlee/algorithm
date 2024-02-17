@@ -1,0 +1,40 @@
+---
+title: Intersection of Multiple Arrays
+tags:
+  - Array
+  - Hash Table
+  - Sorting
+  - Counting
+---
+
+# 2248. Intersection of Multiple Arrays
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function intersection(nums: number[][]): number[] {
+  const n = nums.length;
+  const counter = new Map<number, number>();
+  for (const arr of nums) {
+    for (const num of arr) {
+      counter.set(num, (counter.get(num) ?? 0) + 1);
+    }
+  }
+
+  return [...counter.keys()].filter((num) => counter.get(num) === n).sort((a, b) => a - b);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/intersection-of-multiple-arrays"
+  title="Intersection of Multiple Arrays"
+/>
