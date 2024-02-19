@@ -1,0 +1,46 @@
+---
+title: Remove Digit From Number to Maximize Result
+tags:
+  - String
+  - Greedy
+  - Enumeration
+---
+
+# 2259. Remove Digit From Number to Maximize Result
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Enumeration" slug="enumeration" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeDigit(number: string, digit: string): string {
+  function removeChar(s: string, i: number): string {
+    return s.substring(0, i) + s.substring(i + 1);
+  }
+
+  const n = number.length;
+
+  let removeIndex = -1;
+  for (let i = 0; i < n; i++) {
+    if (number[i] === digit) {
+      removeIndex = i;
+      if (i < n - 1 && +digit < +number[i + 1]) {
+        return removeChar(number, i);
+      }
+    }
+  }
+
+  return removeChar(number, removeIndex);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-digit-from-number-to-maximize-result"
+  title="Remove Digit From Number to Maximize Result"
+/>
