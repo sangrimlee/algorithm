@@ -1,0 +1,45 @@
+---
+title: Super Ugly Number
+tags:
+  - Array
+  - Math
+  - Dynamic Programming
+---
+
+# 313. Super Ugly Number
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function nthSuperUglyNumber(n: number, primes: number[]): number {
+  const m = primes.length;
+  const dp = new Array(n).fill(Number.MAX_SAFE_INTEGER);
+  const indices = new Array(m).fill(0);
+  dp[0] = 1;
+
+  for (let i = 1; i < n; i++) {
+    for (let j = 0; j < m; j++) {
+      dp[i] = Math.min(dp[i], primes[j] * dp[indices[j]]);
+    }
+    for (let j = 0; j < m; j++) {
+      if (dp[i] === primes[j] * dp[indices[j]]) {
+        indices[j] += 1;
+      }
+    }
+  }
+  return dp[n - 1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/super-ugly-number"
+  title="Super Ugly Number"
+/>
