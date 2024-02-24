@@ -1,0 +1,36 @@
+---
+title: Count Asterisks
+tags:
+  - String
+---
+
+# 2315. Count Asterisks
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countAsterisks(s: string): number {
+  let answer = 0;
+  let barCount = 0;
+  for (const char of s) {
+    if (char === '*' && barCount % 2 === 0) {
+      answer += 1;
+    }
+    if (char === '|') {
+      barCount += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-asterisks"
+  title="Count Asterisks"
+/>

@@ -1,0 +1,75 @@
+/**
+ * 2092. Find All People With Secret
+ * https://leetcode.com/problems/find-all-people-with-secret
+ */
+class UnionFind {
+  private readonly parents: number[];
+
+  constructor(n: number) {
+    this.parents = Array.from({ length: n }, (_, i) => i);
+  }
+
+  public find(x: number): number {
+    if (this.parents[x] === x) {
+      return x;
+    }
+    this.parents[x] = this.find(this.parents[x]);
+    return this.parents[x];
+  }
+
+  public union(x: number, y: number): void {
+    const rootX = this.find(x);
+    const rootY = this.find(y);
+    if (rootX === rootY) {
+      return;
+    }
+    if (rootX < rootY) {
+      this.parents[rootY] = rootX;
+    } else {
+      this.parents[rootX] = rootY;
+    }
+  }
+
+  public reset(x: number): void {
+    this.parents[x] = x;
+  }
+
+  public isConnected(x: number, y: number): boolean {
+    return this.find(x) === this.find(y);
+  }
+}
+
+export function findAllPeople(n: number, meetings: number[][], firstPerson: number): number[] {
+  meetings.sort((a, b) => a[2] - b[2]);
+
+  const unionFind = new UnionFind(n);
+  unionFind.union(0, firstPerson);
+
+  let currentIndex = 0;
+  const m = meetings.length;
+  const pool = new Set<number>();
+  while (currentIndex < m) {
+    const currentTime = meetings[currentIndex][2];
+    while (currentIndex < m && currentTime === meetings[currentIndex][2]) {
+      const [x, y] = meetings[currentIndex];
+      unionFind.union(x, y);
+      pool.add(x);
+      pool.add(y);
+      currentIndex += 1;
+    }
+    for (const person of pool) {
+      if (!unionFind.isConnected(0, person)) {
+        unionFind.reset(person);
+      }
+    }
+    pool.clear();
+  }
+
+  const answer: number[] = [];
+  for (let person = 0; person < n; person++) {
+    if (unionFind.isConnected(0, person)) {
+      answer.push(person);
+    }
+  }
+  return answer;
+}
