@@ -1,0 +1,42 @@
+---
+title: Maximum Number of Pairs in Array
+tags:
+  - Array
+  - Hash Table
+  - Counting
+---
+
+# 2341. Maximum Number of Pairs in Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numberOfPairs(nums: number[]): number[] {
+  const set = new Set<number>();
+
+  let numOfPairs = 0;
+  for (const num of nums) {
+    if (set.has(num)) {
+      set.delete(num);
+      numOfPairs += 1;
+    } else {
+      set.add(num);
+    }
+  }
+
+  return [numOfPairs, set.size];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-number-of-pairs-in-array"
+  title="Maximum Number of Pairs in Array"
+/>
