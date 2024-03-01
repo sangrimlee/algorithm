@@ -1,0 +1,38 @@
+---
+title: Maximum Odd Binary Number
+tags:
+  - Math
+  - String
+  - Greedy
+---
+
+# 2864. Maximum Odd Binary Number
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Greedy" slug="greedy" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumOddBinaryNumber(s: string): string {
+  const n = s.length;
+
+  let bitCount = 0;
+  for (const char of s) {
+    if (char === '1') {
+      bitCount += 1;
+    }
+  }
+  return '1'.repeat(bitCount - 1) + '0'.repeat(n - bitCount) + '1';
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-odd-binary-number"
+  title="Maximum Odd Binary Number"
+/>
