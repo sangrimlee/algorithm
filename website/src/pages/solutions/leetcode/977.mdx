@@ -1,0 +1,43 @@
+---
+title: Squares of a Sorted Array
+tags:
+  - Array
+  - Two Pointers
+  - Sorting
+---
+
+# 977. Squares of a Sorted Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sortedSquares(nums: number[]): number[] {
+  const n = nums.length;
+  const answer = new Array<number>(n).fill(0);
+
+  let [left, right] = [0, n - 1];
+  for (let i = n - 1; 0 <= i; i--) {
+    if (Math.abs(nums[left]) < Math.abs(nums[right])) {
+      answer[i] = nums[right] ** 2;
+      right -= 1;
+    } else {
+      answer[i] = nums[left] ** 2;
+      left += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/squares-of-a-sorted-array"
+  title="Squares of a Sorted Array"
+/>

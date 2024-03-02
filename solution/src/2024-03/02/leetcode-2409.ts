@@ -1,0 +1,23 @@
+/**
+ * 2409. Count Days Spent Together
+ * https://leetcode.com/problems/count-days-spent-together
+ */
+export function countDaysTogether(
+  arriveAlice: string,
+  leaveAlice: string,
+  arriveBob: string,
+  leaveBob: string,
+): number {
+  const numberOfDays = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  function getDays(date: string) {
+    let totalDays = 0;
+    const [month, day] = date.split('-').map((v) => parseInt(v));
+    for (let m = 1; m < month; m++) {
+      totalDays += numberOfDays[m];
+    }
+    return totalDays + day;
+  }
+  const startDays = Math.max(getDays(arriveAlice), getDays(arriveBob));
+  const endDays = Math.min(getDays(leaveAlice), getDays(leaveBob));
+  return Math.max(endDays - startDays + 1, 0);
+}
