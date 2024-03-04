@@ -1,0 +1,53 @@
+---
+title: Bag of Tokens
+tags:
+  - Array
+  - Two Pointers
+  - Greedy
+  - Sorting
+---
+
+# 948. Bag of Tokens
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function bagOfTokensScore(tokens: number[], power: number): number {
+  tokens.sort((a, b) => a - b);
+
+  let score = 0;
+  let maxScore = 0;
+  let remainPower = power;
+  let [start, end] = [0, tokens.length - 1];
+  while (start <= end) {
+    if (tokens[start] <= remainPower) {
+      remainPower -= tokens[start];
+      score += 1;
+      maxScore = Math.max(maxScore, score);
+      start += 1;
+    } else if (1 <= score) {
+      remainPower += tokens[end];
+      score -= 1;
+      end -= 1;
+    } else {
+      return maxScore;
+    }
+  }
+
+  return maxScore;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/bag-of-tokens"
+  title="Bag of Tokens"
+/>
