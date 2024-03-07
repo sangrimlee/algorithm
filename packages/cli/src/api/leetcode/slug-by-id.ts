@@ -52,6 +52,7 @@ export const getLeetCodeAllProblem = async () => {
     });
     return statStatusPairs;
   } catch (error) {
+    console.error(error);
     throw new Error('네트워크 요청에 실패하였습니다. 잠시 후에 다시 시도해주세요.');
   }
 };

@@ -16,6 +16,7 @@ export const getProgrammersProblemById = async (id: string) => {
     );
     return parseProgrammers(html);
   } catch (error) {
+    console.error(error);
     throw new Error('문제를 불러오는 중에 오류가 발생하였습니다. 문제 번호를 확인해주세요.');
   }
 };
