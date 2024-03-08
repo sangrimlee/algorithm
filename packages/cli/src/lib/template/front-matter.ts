@@ -5,6 +5,10 @@ function createPlainFrontMatter(key: string, value: string | number) {
 }
 
 function createArrayFrontMatter(key: string, values: (string | number)[]) {
+  if (values.length === 0) {
+    return '';
+  }
+
   return dedent`${key}:
   ${values.map((value) => `- ${value}`).join('\n')}`;
 }
