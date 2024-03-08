@@ -723,6 +723,7 @@
   "2455": "2455. Average Value of Even Numbers That Are Divisible by Three",
   "2460": "2460. Apply Operations to an Array",
   "2462": "2462. Total Cost to Hire K Workers",
+  "2465": "2465. Number of Distinct Averages",
   "2466": "2466. Count Ways To Build Good Strings",
   "2482": "2482. Difference Between Ones and Zeros in Row and Column",
   "2483": "2483. Minimum Penalty for a Shop",
@@ -774,5 +775,6 @@
   "2864": "2864. Maximum Odd Binary Number",
   "2870": "2870. Minimum Number of Operations to Make Array Empty",
   "2966": "2966. Divide Array Into Arrays With Max Difference",
-  "2971": "2971. Find Polygon With the Largest Perimeter"
+  "2971": "2971. Find Polygon With the Largest Perimeter",
+  "3005": "3005. Count Elements With Maximum Frequency"
 }

@@ -730,6 +730,7 @@
 | 2455      | [Average Value of Even Numbers That Are Divisible by Three](https://leetcode.com/problems/average-value-of-even-numbers-that-are-divisible-by-three)                    | [보러가기](src/2024-03/07/leetcode-2455.ts) |
 | 2460      | [Apply Operations to an Array](https://leetcode.com/problems/apply-operations-to-an-array)                                                                              | [보러가기](src/2024-03/07/leetcode-2460.ts) |
 | 2462      | [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers)                                                                              | [보러가기](src/2023-06/26/leetcode-2462.ts) |
+| 2465      | [Number of Distinct Averages](https://leetcode.com/problems/number-of-distinct-averages)                                                                                | [보러가기](src/2024-03/08/leetcode-2465.ts) |
 | 2466      | [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings)                                                                      | [보러가기](src/2023-05/13/leetcode-2466.ts) |
 | 2482      | [Difference Between Ones and Zeros in Row and Column](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column)                                | [보러가기](src/2023-12/14/leetcode-2482.ts) |
 | 2483      | [Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop)                                                                                  | [보러가기](src/2023-08/29/leetcode-2483.ts) |
@@ -782,6 +783,7 @@
 | 2870      | [Minimum Number of Operations to Make Array Empty](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty)                                      | [보러가기](src/2024-01/04/leetcode-2870.ts) |
 | 2966      | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference)                                              | [보러가기](src/2024-02/01/leetcode-2966.ts) |
 | 2971      | [Find Polygon With the Largest Perimeter](https://leetcode.com/problems/find-polygon-with-the-largest-perimeter)                                                        | [보러가기](src/2024-02/15/leetcode-2971.ts) |
+| 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 
 ### Programmers
 
