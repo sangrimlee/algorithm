@@ -14,10 +14,14 @@ import { EXTNAME } from '@/constants';
 import { CodingSite, LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
 
 async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
-  const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
-  const template = await createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
-
-  await ensureWriteFile(pagePath, template);
+  try {
+    const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
+    const template = await createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
+    await ensureWriteFile(pagePath, template);
+  } catch (error) {
+    const template = await createLeetCodeSolutionPageTemplate(solution);
+    await ensureWriteFile(pagePath, template);
+  }
 }
 
 async function generateProgrammersSolutionPage(solution: ProgrammersSolution, pagePath: string) {

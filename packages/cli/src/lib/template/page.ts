@@ -35,21 +35,26 @@ ${createComponentTemplate('ProblemLink', {
 
 export function createLeetCodeSolutionPageTemplate(
   { id, title, code, url }: LeetCodeSolution,
-  difficulty: string,
-  topics: { name: string; slug: string }[],
+  difficulty?: string,
+  topics?: { name: string; slug: string }[],
 ) {
   return format(
     dedent`${createFrontMatterTemplate({
       title,
-      tags: topics.map(({ name }) => name),
+      tags: topics?.map(({ name }) => name) ?? [],
     })}
 
 # ${id}. ${title}
 
+${
+  difficulty && topics
+    ? `
 <Badges>
-${createComponentTemplate('LevelBadge', { level: difficulty.toLowerCase() })}
-${topics.map((topic) => createComponentTemplate('TopicBadge', topic)).join('\n')}
-</Badges>
+  ${createComponentTemplate('LevelBadge', { level: difficulty.toLowerCase() })}
+  ${topics.map((topic) => createComponentTemplate('TopicBadge', topic)).join('\n')}
+</Badges>`
+    : ''
+}
 
 ## Solution
 
