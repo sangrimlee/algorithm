@@ -7,6 +7,7 @@ import { Command } from 'commander';
 
 import {
   generateLeetCode,
+  generateLeetCodeTemplate,
   generateLeetCodeDailyChallenge,
   generateProgrammers,
 } from '@/lib/generate';
@@ -26,18 +27,19 @@ async function main() {
   const generateType = await choiceGenereateTypePrompt();
   switch (generateType) {
     case 'LeetCode': {
-      const titleSlug = await leetCodePrompt();
-      await generateLeetCode(outputDir, titleSlug);
-      break;
+      const id = await leetCodePrompt();
+      return await generateLeetCode(outputDir, id);
+    }
+    case 'LeetCode Template': {
+      const id = await leetCodePrompt();
+      return await generateLeetCodeTemplate(outputDir, id);
+    }
+    case 'LeetCode Daily Challenge': {
+      return await generateLeetCodeDailyChallenge(outputDir);
     }
     case 'Programmers': {
       const problemNumber = await programmersPrompt();
-      await generateProgrammers(outputDir, problemNumber);
-      break;
-    }
-    case 'LeetCode Daily Challenge': {
-      await generateLeetCodeDailyChallenge(outputDir);
-      break;
+      return await generateProgrammers(outputDir, problemNumber);
     }
     default: {
       throw new Error('🚧 Not Implemented. Work in progress.');

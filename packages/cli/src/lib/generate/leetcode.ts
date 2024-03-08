@@ -57,3 +57,22 @@ export async function generateLeetCodeDailyChallenge(outputDir: string) {
     ),
   ]);
 }
+
+export async function generateLeetCodeTemplate(outputDir: string, id: string) {
+  const currentDate = new Date();
+  const datePath = getDatePath(currentDate, outputDir);
+  const dateString = getDateString(currentDate);
+
+  const fileName = kebabcase(CodingSite.LeetCode, id);
+
+  await Promise.all([
+    ensureWriteFile(
+      path.join(datePath, `${fileName}${EXTNAME.TYPESCRIPT}`),
+      createSolutionTemplate(CodingSite.LeetCode, id, '제목', id),
+    ),
+    ensureWriteFile(
+      path.join(datePath, `${fileName}${EXTNAME.TYPESCRIPT_TEST}`),
+      createTestTemplate(CodingSite.LeetCode, dateString, id, []),
+    ),
+  ]);
+}

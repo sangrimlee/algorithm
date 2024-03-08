@@ -1,3 +1,7 @@
-export { generateLeetCode, generateLeetCodeDailyChallenge } from './leetcode';
+export {
+  generateLeetCode,
+  generateLeetCodeDailyChallenge,
+  generateLeetCodeTemplate,
+} from './leetcode';
 export { generateProgrammers } from './programmers';
 export { generateREADME } from './readme';
