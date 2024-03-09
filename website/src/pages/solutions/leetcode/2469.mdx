@@ -1,0 +1,21 @@
+---
+title: Convert the Temperature
+---
+
+# 2469. Convert the Temperature
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function convertTemperature(celsius: number): number[] {
+  const kelvin = celsius + 273.15;
+  const fahrenheit = celsius * 1.8 + 32.0;
+  return [kelvin, fahrenheit];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/convert-the-temperature"
+  title="Convert the Temperature"
+/>

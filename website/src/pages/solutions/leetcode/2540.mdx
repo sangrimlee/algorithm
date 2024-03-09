@@ -1,0 +1,31 @@
+---
+title: Minimum Common Value
+---
+
+# 2540. Minimum Common Value
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getCommon(nums1: number[], nums2: number[]): number {
+  const [m, n] = [nums1.length, nums2.length];
+
+  let [i, j] = [0, 0];
+  while (i < m && j < n) {
+    if (nums1[i] === nums2[j]) {
+      return nums1[i];
+    } else if (nums1[i] < nums2[j]) {
+      i += 1;
+    } else {
+      j += 1;
+    }
+  }
+  return -1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-common-value"
+  title="Minimum Common Value"
+/>
