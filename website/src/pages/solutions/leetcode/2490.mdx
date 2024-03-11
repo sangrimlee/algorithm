@@ -1,0 +1,32 @@
+---
+title: Circular Sentence
+---
+
+# 2490. Circular Sentence
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isCircularSentence(sentence: string): boolean {
+  const n = sentence.length;
+
+  if (sentence[0] !== sentence[n - 1]) {
+    return false;
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (sentence[i] !== ' ') continue;
+    if (sentence[i - 1] !== sentence[i + 1]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/circular-sentence"
+  title="Circular Sentence"
+/>

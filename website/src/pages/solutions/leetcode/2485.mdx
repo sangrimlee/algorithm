@@ -1,0 +1,24 @@
+---
+title: Find the Pivot Integer
+---
+
+# 2485. Find the Pivot Integer
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function pivotInteger(n: number): number {
+  const sum = (n * (n + 1)) / 2;
+  const pivot = Math.sqrt(sum);
+  if (pivot !== Math.floor(pivot)) {
+    return -1;
+  }
+  return pivot;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-pivot-integer"
+  title="Find the Pivot Integer"
+/>
