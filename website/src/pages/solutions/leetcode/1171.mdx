@@ -1,0 +1,48 @@
+---
+title: Remove Zero Sum Consecutive Nodes from Linked List
+tags:
+  - Hash Table
+  - Linked List
+---
+
+# 1171. Remove Zero Sum Consecutive Nodes from Linked List
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function removeZeroSumSublists(head: ListNode | null): ListNode | null {
+  const newHead = new ListNode(0, head);
+
+  let prefix = 0;
+  let currentNode = head;
+  const visited = new Map<number, ListNode>([[0, newHead]]);
+  while (currentNode !== null) {
+    prefix += currentNode.val;
+    visited.set(prefix, currentNode);
+    currentNode = currentNode.next;
+  }
+
+  prefix = 0;
+  currentNode = newHead;
+  while (currentNode !== null) {
+    prefix += currentNode.val;
+    currentNode.next = visited.get(prefix)!.next;
+    currentNode = currentNode.next;
+  }
+  return newHead.next;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list"
+  title="Remove Zero Sum Consecutive Nodes from Linked List"
+/>
