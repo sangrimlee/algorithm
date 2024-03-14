@@ -1,0 +1,40 @@
+---
+title: Binary Subarrays With Sum
+tags:
+  - Array
+  - Hash Table
+  - Sliding Window
+  - Prefix Sum
+---
+
+# 930. Binary Subarrays With Sum
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Sliding Window" slug="sliding-window" />
+  <TopicBadge name="Prefix Sum" slug="prefix-sum" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numSubarraysWithSum(nums: number[], goal: number): number {
+  const counter = new Map<number, number>([[0, 1]]);
+  let answer = 0;
+  let sum = 0;
+  for (const num of nums) {
+    sum += num;
+    answer += counter.get(sum - goal) ?? 0;
+    counter.set(sum, (counter.get(sum) ?? 0) + 1);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-subarrays-with-sum/"
+  title="Binary Subarrays With Sum"
+/>
