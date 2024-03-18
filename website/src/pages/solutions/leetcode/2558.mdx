@@ -1,0 +1,44 @@
+---
+title: Take Gifts From the Richest Pile
+tags:
+  - Array
+  - Heap (Priority Queue)
+  - Simulation
+---
+
+# 2558. Take Gifts From the Richest Pile
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function pickGifts(gifts: number[], k: number): number {
+  const heap = new Heap<number>((a, b) => b - a);
+  gifts.forEach((gift) => heap.push(gift));
+
+  for (let i = 0; i < k; i++) {
+    const gift = heap.pop()!;
+    heap.push(Math.floor(Math.sqrt(gift)));
+  }
+
+  let answer = 0;
+  while (!heap.isEmpty) {
+    answer += heap.pop()!;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/take-gifts-from-the-richest-pile"
+  title="Take Gifts From the Richest Pile"
+/>

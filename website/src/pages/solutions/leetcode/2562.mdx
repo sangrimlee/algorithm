@@ -1,0 +1,41 @@
+---
+title: Find the Array Concatenation Value
+tags:
+  - Array
+  - Two Pointers
+  - Simulation
+---
+
+# 2562. Find the Array Concatenation Value
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findTheArrayConcVal(nums: number[]): number {
+  function concatenate(num1: number, num2: number) {
+    return parseInt(`${num1}${num2}`, 10);
+  }
+
+  let answer = 0;
+  let [start, end] = [0, nums.length - 1];
+  while (start <= end) {
+    answer += start === end ? nums[start] : concatenate(nums[start], nums[end]);
+    start += 1;
+    end -= 1;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-array-concatenation-value"
+  title="Find the Array Concatenation Value"
+/>
