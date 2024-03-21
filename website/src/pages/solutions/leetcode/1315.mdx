@@ -1,0 +1,45 @@
+---
+title: Sum of Nodes with Even-Valued Grandparent
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 1315. Sum of Nodes with Even-Valued Grandparent
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function sumEvenGrandparent(root: TreeNode | null): number {
+  function traverse(node: TreeNode | null, grandparent?: number, parent?: number): number {
+    if (node === null) {
+      return 0;
+    }
+    const prevSum = traverse(node.left, parent, node.val) + traverse(node.right, parent, node.val);
+    if (typeof grandparent !== 'number' || grandparent % 2 === 1) {
+      return prevSum;
+    }
+    return prevSum + node.val;
+  }
+
+  return traverse(root);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent"
+  title="Sum of Nodes with Even-Valued Grandparent"
+/>
