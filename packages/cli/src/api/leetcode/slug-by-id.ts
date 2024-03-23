@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-interface GetLeetCodeSlugByIdResponse {
+interface GetLeetCodeAllProblemResponse {
   acRate: number;
   difficulty: string;
   likes: number;
@@ -17,10 +17,16 @@ interface GetLeetCodeSlugByIdResponse {
   totalSubmissionRaw: number;
 }
 
+const getLeetCodeAllProblem = async () => {
+  const { data } = await axios.get<Record<string, GetLeetCodeAllProblemResponse>>(
+    'https://raw.githubusercontent.com/bunnyxt/lcid/main/problems_all.json',
+  );
+  return data;
+};
+
 export const getLeetCodeSlugById = async (id: string) => {
-  const {
-    data: { titleSlug },
-  } = await axios.get<GetLeetCodeSlugByIdResponse>(`https://lcid.cc/info/${id}`);
+  const allProblem = await getLeetCodeAllProblem();
+  const titleSlug = allProblem[id].titleSlug;
   if (!titleSlug) {
     throw new Error('LeetCode에 없는 문제 번호 입니다.');
   }
