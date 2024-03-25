@@ -1,0 +1,44 @@
+---
+title: Partition Array According to Given Pivot
+tags:
+  - Array
+  - Two Pointers
+  - Simulation
+---
+
+# 2161. Partition Array According to Given Pivot
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function pivotArray(nums: number[], pivot: number): number[] {
+  let pivotCount = 0;
+  const lessThan: number[] = [];
+  const greaterThan: number[] = [];
+
+  nums.forEach((num) => {
+    if (num === pivot) {
+      pivotCount += 1;
+    } else if (num < pivot) {
+      lessThan.push(num);
+    } else {
+      greaterThan.push(num);
+    }
+  });
+
+  return [...lessThan, ...new Array(pivotCount).fill(pivot), ...greaterThan];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/partition-array-according-to-given-pivot"
+  title="Partition Array According to Given Pivot"
+/>
