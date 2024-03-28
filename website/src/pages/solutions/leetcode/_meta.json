@@ -802,6 +802,8 @@
   "2649": "2649. Nested Array Generator",
   "2651": "2651. Calculate Delayed Arrival Time",
   "2652": "2652. Sum Multiples",
+  "2656": "2656. Maximum Sum With Exactly K Elements",
+  "2660": "2660. Determine the Winner of a Bowling Game",
   "2666": "2666. Allow One Function Call",
   "2675": "2675. Array of Objects to Matrix",
   "2676": "2676. Throttle",
@@ -825,6 +827,7 @@
   "2849": "2849. Determine if a Cell Is Reachable at a Given Time",
   "2864": "2864. Maximum Odd Binary Number",
   "2870": "2870. Minimum Number of Operations to Make Array Empty",
+  "2958": "2958. Length of Longest Subarray With at Most K Frequency",
   "2966": "2966. Divide Array Into Arrays With Max Difference",
   "2971": "2971. Find Polygon With the Largest Perimeter",
   "3005": "3005. Count Elements With Maximum Frequency"
