@@ -1,0 +1,42 @@
+---
+title: Find the Distinct Difference Array
+tags:
+  - Array
+  - Hash Table
+---
+
+# 2670. Find the Distinct Difference Array
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function distinctDifferenceArray(nums: number[]): number[] {
+  const answer: number[] = [];
+  const suffix = new Map<number, number>();
+  const prefix = new Map<number, number>();
+  nums.forEach((num) => {
+    suffix.set(num, (suffix.get(num) ?? 0) + 1);
+  });
+  nums.forEach((num) => {
+    suffix.set(num, (suffix.get(num) ?? 0) - 1);
+    prefix.set(num, (prefix.get(num) ?? 0) + 1);
+    if (suffix.get(num) === 0) {
+      suffix.delete(num);
+    }
+    answer.push(prefix.size - suffix.size);
+  });
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-distinct-difference-array"
+  title="Find the Distinct Difference Array"
+/>
