@@ -1,0 +1,25 @@
+/**
+ * 205. Isomorphic Strings
+ * https://leetcode.com/problems/isomorphic-strings
+ */
+export function isIsomorphic(s: string, t: string): boolean {
+  if (s.length !== t.length) {
+    return false;
+  }
+
+  const n = s.length;
+  const sdict = new Map<string, string>();
+  const tdict = new Map<string, string>();
+  for (let i = 0; i < n; i++) {
+    const [sc, tc] = [s[i], t[i]];
+    if (sdict.has(sc) || tdict.has(tc)) {
+      if (sdict.get(sc) !== tc || tdict.get(tc) !== sc) {
+        return false;
+      }
+    } else {
+      sdict.set(sc, tc);
+      tdict.set(tc, sc);
+    }
+  }
+  return true;
+}
