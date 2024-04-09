@@ -1,0 +1,27 @@
+---
+title: Account Balance After Rounded Purchase
+tags:
+  - Math
+---
+
+# 2806. Account Balance After Rounded Purchase
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function accountBalanceAfterPurchase(purchaseAmount: number): number {
+  const roundedAmount = Math.round(purchaseAmount / 10) * 10;
+  return 100 - roundedAmount;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/account-balance-after-rounded-purchase"
+  title="Account Balance After Rounded Purchase"
+/>
