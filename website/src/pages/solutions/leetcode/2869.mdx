@@ -1,0 +1,40 @@
+---
+title: Minimum Operations to Collect Elements
+tags:
+  - Array
+  - Hash Table
+  - Bit Manipulation
+---
+
+# 2869. Minimum Operations to Collect Elements
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minOperations(nums: number[], k: number): number {
+  let answer = 0;
+  let currentIndex = nums.length - 1;
+  const collections = new Set();
+  while (0 <= currentIndex && collections.size < k) {
+    if (nums[currentIndex] <= k) {
+      collections.add(nums[currentIndex]);
+    }
+    currentIndex -= 1;
+    answer += 1;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-operations-to-collect-elements"
+  title="Minimum Operations to Collect Elements"
+/>
