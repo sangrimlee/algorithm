@@ -1,0 +1,30 @@
+---
+title: Divisible and Non-divisible Sums Difference
+tags:
+  - Math
+---
+
+# 2894. Divisible and Non-divisible Sums Difference
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Math" slug="math" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function differenceOfSums(n: number, m: number): number {
+  let answer = 0;
+  for (let num = 1; num <= n; num++) {
+    answer += num % m !== 0 ? num : -num;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/divisible-and-non-divisible-sums-difference"
+  title="Divisible and Non-divisible Sums Difference"
+/>
