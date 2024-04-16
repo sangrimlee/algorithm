@@ -1,0 +1,57 @@
+---
+title: Add One Row to Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 623. Add One Row to Tree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function addOneRow(root: TreeNode | null, val: number, depth: number): TreeNode | null {
+  if (depth === 1) {
+    return new TreeNode(val, root);
+  }
+
+  function dfs(node: TreeNode | null, nodeDepth: number) {
+    if (node === null) {
+      return;
+    }
+    if (nodeDepth < depth - 1) {
+      dfs(node.left, nodeDepth + 1);
+      dfs(node.right, nodeDepth + 1);
+    } else {
+      const leftNode = node.left;
+      node.left = new TreeNode(val);
+      node.left.left = leftNode;
+
+      const rightNode = node.right;
+      node.right = new TreeNode(val);
+      node.right.right = rightNode;
+    }
+  }
+
+  dfs(root, 1);
+  return root;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/add-one-row-to-tree"
+  title="Add One Row to Tree"
+/>
