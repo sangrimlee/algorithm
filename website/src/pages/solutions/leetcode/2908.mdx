@@ -1,0 +1,42 @@
+---
+title: Minimum Sum of Mountain Triplets I
+tags:
+  - Array
+---
+
+# 2908. Minimum Sum of Mountain Triplets I
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumSum(nums: number[]): number {
+  const n = nums.length;
+  const left = [...nums];
+  const right = [...nums];
+  for (let i = 1; i < n; i++) {
+    left[i] = Math.min(left[i], left[i - 1]);
+  }
+  for (let i = n - 2; 0 <= i; i--) {
+    right[i] = Math.min(right[i], right[i + 1]);
+  }
+
+  let answer = Number.MAX_SAFE_INTEGER;
+  for (let i = 1; i < n - 1; i++) {
+    if (left[i - 1] < nums[i] && nums[i] > right[i + 1]) {
+      answer = Math.min(answer, nums[i] + left[i - 1] + right[i + 1]);
+    }
+  }
+  return answer === Number.MAX_SAFE_INTEGER ? -1 : answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-sum-of-mountain-triplets-i"
+  title="Minimum Sum of Mountain Triplets I"
+/>
