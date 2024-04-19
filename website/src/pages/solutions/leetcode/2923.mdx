@@ -1,0 +1,35 @@
+---
+title: Find Champion I
+tags:
+  - Array
+  - Matrix
+---
+
+# 2923. Find Champion I
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findChampion(grid: number[][]): number {
+  const n = grid.length;
+  let champion = 0;
+  for (let team = 0; team < n; team++) {
+    if (champion !== team && grid[champion][team] === 0) {
+      champion = team;
+    }
+  }
+  return champion;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-champion-i"
+  title="Find Champion I"
+/>
