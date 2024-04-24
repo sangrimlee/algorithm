@@ -912,7 +912,9 @@
 | 2958      | [Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency)                                | [보러가기](src/2024-03/28/leetcode-2958.ts) |
 | 2960      | [Count Tested Devices After Test Operations](https://leetcode.com/problems/count-tested-devices-after-test-operations)                                                  | [보러가기](src/2024-04/23/leetcode-2960.ts) |
 | 2962      | [Count Subarrays Where Max Element Appears at Least K Times](https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times)                  | [보러가기](src/2024-03/29/leetcode-2962.ts) |
+| 2965      | [Find Missing and Repeated Values](https://leetcode.com/problems/find-missing-and-repeated-values)                                                                      | [보러가기](src/2024-04/24/leetcode-2965.ts) |
 | 2966      | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference)                                              | [보러가기](src/2024-02/01/leetcode-2966.ts) |
+| 2970      | [Count the Number of Incremovable Subarrays I](https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-i)                                              | [보러가기](src/2024-04/24/leetcode-2970.ts) |
 | 2971      | [Find Polygon With the Largest Perimeter](https://leetcode.com/problems/find-polygon-with-the-largest-perimeter)                                                        | [보러가기](src/2024-02/15/leetcode-2971.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 
