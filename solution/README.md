@@ -592,6 +592,7 @@
 | 1816      | [Truncate Sentence](https://leetcode.com/problems/truncate-sentence)                                                                                                    | [보러가기](src/2023-12/30/leetcode-1816.ts) |
 | 1817      | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes)                                                                      | [보러가기](src/2024-04/10/leetcode-1817.ts) |
 | 1822      | [Sign of the Product of an Array](https://leetcode.com/problems/sign-of-the-product-of-an-array)                                                                        | [보러가기](src/2023-05/02/leetcode-1822.ts) |
+| 1823      | [Find the Winner of the Circular Game](https://leetcode.com/problems/find-the-winner-of-the-circular-game)                                                              | [보러가기](src/2024-04/25/leetcode-1823.ts) |
 | 1827      | [Minimum Operations to Make the Array Increasing](https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing)                                        | [보러가기](src/2023-12/31/leetcode-1827.ts) |
 | 1828      | [Queries on Number of Points Inside a Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle)                                                | [보러가기](src/2024-02/27/leetcode-1828.ts) |
 | 1832      | [Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram)                                                                      | [보러가기](src/2023-12/31/leetcode-1832.ts) |
@@ -745,6 +746,7 @@
 | 2363      | [Merge Similar Items](https://leetcode.com/problems/merge-similar-items)                                                                                                | [보러가기](src/2024-02/28/leetcode-2363.ts) |
 | 2366      | [Minimum Replacements to Sort the Array](https://leetcode.com/problems/minimum-replacements-to-sort-the-array)                                                          | [보러가기](src/2023-08/30/leetcode-2366.ts) |
 | 2367      | [Number of Arithmetic Triplets](https://leetcode.com/problems/number-of-arithmetic-triplets)                                                                            | [보러가기](src/2024-02/28/leetcode-2367.ts) |
+| 2370      | [Longest Ideal Subsequence](https://leetcode.com/problems/longest-ideal-subsequence)                                                                                    | [보러가기](src/2024-04/25/leetcode-2370.ts) |
 | 2373      | [Largest Local Values in a Matrix](https://leetcode.com/problems/largest-local-values-in-a-matrix)                                                                      | [보러가기](src/2024-02/29/leetcode-2373.ts) |
 | 2379      | [Minimum Recolors to Get K Consecutive Black Blocks](https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks)                                  | [보러가기](src/2024-02/29/leetcode-2379.ts) |
 | 2383      | [Minimum Hours of Training to Win a Competition](https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition)                                          | [보러가기](src/2024-03/01/leetcode-2383.ts) |
@@ -916,6 +918,8 @@
 | 2966      | [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference)                                              | [보러가기](src/2024-02/01/leetcode-2966.ts) |
 | 2970      | [Count the Number of Incremovable Subarrays I](https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-i)                                              | [보러가기](src/2024-04/24/leetcode-2970.ts) |
 | 2971      | [Find Polygon With the Largest Perimeter](https://leetcode.com/problems/find-polygon-with-the-largest-perimeter)                                                        | [보러가기](src/2024-02/15/leetcode-2971.ts) |
+| 2974      | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game)                                                                                                | [보러가기](src/2024-04/25/leetcode-2974.ts) |
+| 2980      | [Check if Bitwise OR Has Trailing Zeros](https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros)                                                          | [보러가기](src/2024-04/25/leetcode-2980.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 
 ### Programmers

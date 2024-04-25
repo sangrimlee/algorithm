@@ -1,0 +1,38 @@
+---
+title: Find the Winner of the Circular Game
+tags:
+  - Array
+  - Math
+  - Recursion
+  - Queue
+  - Simulation
+---
+
+# 1823. Find the Winner of the Circular Game
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Math" slug="math" />
+  <TopicBadge name="Recursion" slug="recursion" />
+  <TopicBadge name="Queue" slug="queue" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findTheWinner(n: number, k: number): number {
+  let answer = 0;
+  for (let i = 1; i <= n; i++) {
+    answer = (answer + k) % i;
+  }
+  return answer + 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-winner-of-the-circular-game"
+  title="Find the Winner of the Circular Game"
+/>

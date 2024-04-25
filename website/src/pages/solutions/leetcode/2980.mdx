@@ -1,0 +1,28 @@
+---
+title: Check if Bitwise OR Has Trailing Zeros
+tags:
+  - Array
+  - Bit Manipulation
+---
+
+# 2980. Check if Bitwise OR Has Trailing Zeros
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function hasTrailingZeros(nums: number[]): boolean {
+  return nums.filter((num) => (num & 1) === 0).length >= 2;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros"
+  title="Check if Bitwise OR Has Trailing Zeros"
+/>

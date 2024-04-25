@@ -585,6 +585,7 @@
   "1816": "1816. Truncate Sentence",
   "1817": "1817. Finding the Users Active Minutes",
   "1822": "1822. Sign of the Product of an Array",
+  "1823": "1823. Find the Winner of the Circular Game",
   "1827": "1827. Minimum Operations to Make the Array Increasing",
   "1828": "1828. Queries on Number of Points Inside a Circle",
   "1832": "1832. Check if the Sentence Is Pangram",
@@ -738,6 +739,7 @@
   "2363": "2363. Merge Similar Items",
   "2366": "2366. Minimum Replacements to Sort the Array",
   "2367": "2367. Number of Arithmetic Triplets",
+  "2370": "2370. Longest Ideal Subsequence",
   "2373": "2373. Largest Local Values in a Matrix",
   "2379": "2379. Minimum Recolors to Get K Consecutive Black Blocks",
   "2383": "2383. Minimum Hours of Training to Win a Competition",
@@ -909,5 +911,7 @@
   "2966": "2966. Divide Array Into Arrays With Max Difference",
   "2970": "2970. Count the Number of Incremovable Subarrays I",
   "2971": "2971. Find Polygon With the Largest Perimeter",
+  "2974": "2974. Minimum Number Game",
+  "2980": "2980. Check if Bitwise OR Has Trailing Zeros",
   "3005": "3005. Count Elements With Maximum Frequency"
 }
