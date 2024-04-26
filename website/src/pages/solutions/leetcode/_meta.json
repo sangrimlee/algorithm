@@ -419,6 +419,7 @@
   "1281": "1281. Subtract the Product and Sum of Digits of an Integer",
   "1282": "1282. Group the People Given the Group Size They Belong To",
   "1287": "1287. Element Appearing More Than 25% In Sorted Array",
+  "1289": "1289. Minimum Falling Path Sum II",
   "1290": "1290. Convert Binary Number in a Linked List to Integer",
   "1291": "1291. Sequential Digits",
   "1293": "1293. Shortest Path in a Grid with Obstacles Elimination",
@@ -913,5 +914,7 @@
   "2971": "2971. Find Polygon With the Largest Perimeter",
   "2974": "2974. Minimum Number Game",
   "2980": "2980. Check if Bitwise OR Has Trailing Zeros",
+  "2996": "2996. Smallest Missing Integer Greater Than Sequential Prefix Sum",
+  "3000": "3000. Maximum Area of Longest Diagonal Rectangle",
   "3005": "3005. Count Elements With Maximum Frequency"
 }

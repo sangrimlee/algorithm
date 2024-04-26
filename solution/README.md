@@ -426,6 +426,7 @@
 | 1281      | [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer)                              | [보러가기](src/2023-11/23/leetcode-1281.ts) |
 | 1282      | [Group the People Given the Group Size They Belong To](https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to)                              | [보러가기](src/2023-09/11/leetcode-1282.ts) |
 | 1287      | [Element Appearing More Than 25% In Sorted Array](https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array)                                         | [보러가기](src/2023-11/23/leetcode-1287.ts) |
+| 1289      | [Minimum Falling Path Sum II](https://leetcode.com/problems/minimum-falling-path-sum-ii)                                                                                | [보러가기](src/2024-04/26/leetcode-1289.ts) |
 | 1290      | [Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer)                                    | [보러가기](src/2023-11/24/leetcode-1290.ts) |
 | 1291      | [Sequential Digits](https://leetcode.com/problems/sequential-digits)                                                                                                    | [보러가기](src/2024-02/02/leetcode-1291.ts) |
 | 1293      | [Shortest Path in a Grid with Obstacles Elimination](https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/)                                 | [보러가기](src/2022-10/30/leetcode-1293.ts) |
@@ -920,6 +921,8 @@
 | 2971      | [Find Polygon With the Largest Perimeter](https://leetcode.com/problems/find-polygon-with-the-largest-perimeter)                                                        | [보러가기](src/2024-02/15/leetcode-2971.ts) |
 | 2974      | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game)                                                                                                | [보러가기](src/2024-04/25/leetcode-2974.ts) |
 | 2980      | [Check if Bitwise OR Has Trailing Zeros](https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros)                                                          | [보러가기](src/2024-04/25/leetcode-2980.ts) |
+| 2996      | [Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum)                | [보러가기](src/2024-04/26/leetcode-2996.ts) |
+| 3000      | [Maximum Area of Longest Diagonal Rectangle](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle)                                                  | [보러가기](src/2024-04/26/leetcode-3000.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 
 ### Programmers
