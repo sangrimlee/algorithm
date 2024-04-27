@@ -215,6 +215,7 @@
   "507": "507. Perfect Number",
   "509": "509. Fibonacci Number",
   "513": "513. Find Bottom Left Tree Value",
+  "514": "514. Freedom Trail",
   "515": "515. Find Largest Value in Each Tree Row",
   "520": "520. Detect Capital",
   "521": "521. Longest Uncommon Subsequence I",
@@ -916,5 +917,6 @@
   "2980": "2980. Check if Bitwise OR Has Trailing Zeros",
   "2996": "2996. Smallest Missing Integer Greater Than Sequential Prefix Sum",
   "3000": "3000. Maximum Area of Longest Diagonal Rectangle",
-  "3005": "3005. Count Elements With Maximum Frequency"
+  "3005": "3005. Count Elements With Maximum Frequency",
+  "3010": "3010. Divide an Array Into Subarrays With Minimum Cost I"
 }

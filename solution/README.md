@@ -222,6 +222,7 @@
 | 507       | [Perfect Number](https://leetcode.com/problems/perfect-number)                                                                                                          | [보러가기](src/2023-10/13/leetcode-507.ts)  |
 | 509       | [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)                                                                                                     | [보러가기](src/2022-07/06/leetcode-509.ts)  |
 | 513       | [Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value)                                                                                | [보러가기](src/2024-02/28/leetcode-513.ts)  |
+| 514       | [Freedom Trail](https://leetcode.com/problems/freedom-trail)                                                                                                            | [보러가기](src/2024-04/27/leetcode-514.ts)  |
 | 515       | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row)                                                                | [보러가기](src/2023-10/24/leetcode-515.ts)  |
 | 520       | [Detect Capital](https://leetcode.com/problems/detect-capital)                                                                                                          | [보러가기](src/2023-01/02/leetcode-520.ts)  |
 | 521       | [Longest Uncommon Subsequence I](https://leetcode.com/problems/longest-uncommon-subsequence-i)                                                                          | [보러가기](src/2023-10/14/leetcode-521.ts)  |
@@ -924,6 +925,7 @@
 | 2996      | [Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum)                | [보러가기](src/2024-04/26/leetcode-2996.ts) |
 | 3000      | [Maximum Area of Longest Diagonal Rectangle](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle)                                                  | [보러가기](src/2024-04/26/leetcode-3000.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
+| 3010      | [Divide an Array Into Subarrays With Minimum Cost I](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i)                                  | [보러가기](src/2024-04/27/leetcode-3010.ts) |
 
 ### Programmers
 
