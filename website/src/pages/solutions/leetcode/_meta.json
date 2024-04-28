@@ -751,6 +751,7 @@
   "2395": "2395. Find Subarrays With Equal Sum",
   "2399": "2399. Check Distances Between Same Letters",
   "2402": "2402. Meeting Rooms III",
+  "2405": "2405. Optimal Partition of String",
   "2409": "2409. Count Days Spent Together",
   "2413": "2413. Smallest Even Multiple",
   "2418": "2418. Sort the People",
@@ -918,5 +919,7 @@
   "2996": "2996. Smallest Missing Integer Greater Than Sequential Prefix Sum",
   "3000": "3000. Maximum Area of Longest Diagonal Rectangle",
   "3005": "3005. Count Elements With Maximum Frequency",
-  "3010": "3010. Divide an Array Into Subarrays With Minimum Cost I"
+  "3010": "3010. Divide an Array Into Subarrays With Minimum Cost I",
+  "3014": "3014. Minimum Number of Pushes to Type Word I",
+  "3019": "3019. Number of Changing Keys"
 }

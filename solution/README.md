@@ -758,6 +758,7 @@
 | 2395      | [Find Subarrays With Equal Sum](https://leetcode.com/problems/find-subarrays-with-equal-sum)                                                                            | [보러가기](src/2024-03/01/leetcode-2395.ts) |
 | 2399      | [Check Distances Between Same Letters](https://leetcode.com/problems/check-distances-between-same-letters)                                                              | [보러가기](src/2024-03/02/leetcode-2399.ts) |
 | 2402      | [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii)                                                                                                    | [보러가기](src/2024-02/18/leetcode-2402.ts) |
+| 2405      | [Optimal Partition of String](https://leetcode.com/problems/optimal-partition-of-string)                                                                                | [보러가기](src/2024-04/28/leetcode-2405.ts) |
 | 2409      | [Count Days Spent Together](https://leetcode.com/problems/count-days-spent-together)                                                                                    | [보러가기](src/2024-03/02/leetcode-2409.ts) |
 | 2413      | [Smallest Even Multiple](https://leetcode.com/problems/smallest-even-multiple)                                                                                          | [보러가기](src/2024-03/03/leetcode-2413.ts) |
 | 2418      | [Sort the People](https://leetcode.com/problems/sort-the-people)                                                                                                        | [보러가기](src/2024-03/03/leetcode-2418.ts) |
@@ -926,6 +927,8 @@
 | 3000      | [Maximum Area of Longest Diagonal Rectangle](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle)                                                  | [보러가기](src/2024-04/26/leetcode-3000.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 | 3010      | [Divide an Array Into Subarrays With Minimum Cost I](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i)                                  | [보러가기](src/2024-04/27/leetcode-3010.ts) |
+| 3014      | [Minimum Number of Pushes to Type Word I](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i)                                                        | [보러가기](src/2024-04/28/leetcode-3014.ts) |
+| 3019      | [Number of Changing Keys](https://leetcode.com/problems/number-of-changing-keys)                                                                                        | [보러가기](src/2024-04/28/leetcode-3019.ts) |
 
 ### Programmers
 
