@@ -924,11 +924,13 @@
 | 2974      | [Minimum Number Game](https://leetcode.com/problems/minimum-number-game)                                                                                                | [보러가기](src/2024-04/25/leetcode-2974.ts) |
 | 2980      | [Check if Bitwise OR Has Trailing Zeros](https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros)                                                          | [보러가기](src/2024-04/25/leetcode-2980.ts) |
 | 2996      | [Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum)                | [보러가기](src/2024-04/26/leetcode-2996.ts) |
+| 2997      | [Minimum Number of Operations to Make Array XOR Equal to K](https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k)                    | [보러가기](src/2024-04/29/leetcode-2997.ts) |
 | 3000      | [Maximum Area of Longest Diagonal Rectangle](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle)                                                  | [보러가기](src/2024-04/26/leetcode-3000.ts) |
 | 3005      | [Count Elements With Maximum Frequency](https://leetcode.com/problems/count-elements-with-maximum-frequency)                                                            | [보러가기](src/2024-03/08/leetcode-3005.ts) |
 | 3010      | [Divide an Array Into Subarrays With Minimum Cost I](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i)                                  | [보러가기](src/2024-04/27/leetcode-3010.ts) |
 | 3014      | [Minimum Number of Pushes to Type Word I](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i)                                                        | [보러가기](src/2024-04/28/leetcode-3014.ts) |
 | 3019      | [Number of Changing Keys](https://leetcode.com/problems/number-of-changing-keys)                                                                                        | [보러가기](src/2024-04/28/leetcode-3019.ts) |
+| 3024      | [Type of Triangle](https://leetcode.com/problems/type-of-triangle)                                                                                                      | [보러가기](src/2024-04/29/leetcode-3024.ts) |
 
 ### Programmers
 
