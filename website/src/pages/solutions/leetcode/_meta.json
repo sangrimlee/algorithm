@@ -614,6 +614,7 @@
   "1903": "1903. Largest Odd Number in String",
   "1909": "1909. Remove One Element to Make the Array Strictly Increasing",
   "1913": "1913. Maximum Product Difference Between Two Pairs",
+  "1915": "1915. Number of Wonderful Substrings",
   "1920": "1920. Build Array from Permutation",
   "1921": "1921. Eliminate Maximum Number of Monsters",
   "1925": "1925. Count Square Sum Triples",
@@ -754,6 +755,7 @@
   "2405": "2405. Optimal Partition of String",
   "2409": "2409. Count Days Spent Together",
   "2413": "2413. Smallest Even Multiple",
+  "2415": "2415. Reverse Odd Levels of Binary Tree",
   "2418": "2418. Sort the People",
   "2423": "2423. Remove Letter To Equalize Frequency",
   "2427": "2427. Number of Common Factors",
@@ -923,5 +925,7 @@
   "3010": "3010. Divide an Array Into Subarrays With Minimum Cost I",
   "3014": "3014. Minimum Number of Pushes to Type Word I",
   "3019": "3019. Number of Changing Keys",
-  "3024": "3024. Type of Triangle"
+  "3024": "3024. Type of Triangle",
+  "3028": "3028. Ant on the Boundary",
+  "3033": "3033. Modify the Matrix"
 }

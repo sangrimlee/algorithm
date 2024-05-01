@@ -1,0 +1,39 @@
+---
+title: Modify the Matrix
+tags:
+  - Array
+  - Matrix
+---
+
+# 3033. Modify the Matrix
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function modifiedMatrix(matrix: number[][]): number[][] {
+  const [m, n] = [matrix.length, matrix[0].length];
+  const answer = Array.from({ length: m }, () => new Array(n).fill(0));
+  for (let col = 0; col < n; col++) {
+    let maxValue = -1;
+    for (let row = 0; row < m; row++) {
+      maxValue = Math.max(maxValue, matrix[row][col]);
+    }
+    for (let row = 0; row < m; row++) {
+      answer[row][col] = matrix[row][col] === -1 ? maxValue : matrix[row][col];
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/modify-the-matrix"
+  title="Modify the Matrix"
+/>

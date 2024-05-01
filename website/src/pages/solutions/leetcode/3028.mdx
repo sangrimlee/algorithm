@@ -1,0 +1,38 @@
+---
+title: Ant on the Boundary
+tags:
+  - Array
+  - Simulation
+  - Prefix Sum
+---
+
+# 3028. Ant on the Boundary
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Simulation" slug="simulation" />
+  <TopicBadge name="Prefix Sum" slug="prefix-sum" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function returnToBoundaryCount(nums: number[]): number {
+  let answer = 0;
+  let step = 0;
+  for (const num of nums) {
+    step += num;
+    if (step === 0) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/ant-on-the-boundary"
+  title="Ant on the Boundary"
+/>
