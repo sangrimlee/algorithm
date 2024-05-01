@@ -489,6 +489,7 @@
 | 1464      | [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array)                                                | [보러가기](src/2023-12/03/leetcode-1464.ts) |
 | 1465      | [Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts](https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/) | [보러가기](src/2022-07/02/leetcode-1465.ts) |
 | 1470      | [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array)                                                                                                    | [보러가기](src/2023-12/04/leetcode-1470.ts) |
+| 1472      | [Design Browser History](https://leetcode.com/problems/design-browser-history)                                                                                          | [보러가기](src/2024-05/01/leetcode-1472.ts) |
 | 1475      | [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop)                                          | [보러가기](src/2023-12/04/leetcode-1475.ts) |
 | 1476      | [Subrectangle Queries](https://leetcode.com/problems/subrectangle-queries)                                                                                              | [보러가기](src/2024-02/23/leetcode-1476.ts) |
 | 1480      | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/)                                                                                       | [보러가기](src/2022-06/1/leetcode-1480.ts)  |
@@ -935,6 +936,8 @@
 | 3024      | [Type of Triangle](https://leetcode.com/problems/type-of-triangle)                                                                                                      | [보러가기](src/2024-04/29/leetcode-3024.ts) |
 | 3028      | [Ant on the Boundary](https://leetcode.com/problems/ant-on-the-boundary)                                                                                                | [보러가기](src/2024-04/30/leetcode-3028.ts) |
 | 3033      | [Modify the Matrix](https://leetcode.com/problems/modify-the-matrix)                                                                                                    | [보러가기](src/2024-04/30/leetcode-3033.ts) |
+| 3038      | [Maximum Number of Operations With the Same Score I](https://leetcode.com/problems/maximum-number-of-operations-with-the-same-score-i)                                  | [보러가기](src/2024-05/01/leetcode-3038.ts) |
+| 3042      | [Count Prefix and Suffix Pairs I](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i)                                                                        | [보러가기](src/2024-05/01/leetcode-3042.ts) |
 
 ### Programmers
 

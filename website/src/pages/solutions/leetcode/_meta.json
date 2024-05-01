@@ -482,6 +482,7 @@
   "1464": "1464. Maximum Product of Two Elements in an Array",
   "1465": "1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
   "1470": "1470. Shuffle the Array",
+  "1472": "1472. Design Browser History",
   "1475": "1475. Final Prices With a Special Discount in a Shop",
   "1476": "1476. Subrectangle Queries",
   "1480": "1480. Running Sum of 1d Array",
@@ -927,5 +928,7 @@
   "3019": "3019. Number of Changing Keys",
   "3024": "3024. Type of Triangle",
   "3028": "3028. Ant on the Boundary",
-  "3033": "3033. Modify the Matrix"
+  "3033": "3033. Modify the Matrix",
+  "3038": "3038. Maximum Number of Operations With the Same Score I",
+  "3042": "3042. Count Prefix and Suffix Pairs I"
 }
