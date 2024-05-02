@@ -930,5 +930,7 @@
   "3028": "3028. Ant on the Boundary",
   "3033": "3033. Modify the Matrix",
   "3038": "3038. Maximum Number of Operations With the Same Score I",
-  "3042": "3042. Count Prefix and Suffix Pairs I"
+  "3042": "3042. Count Prefix and Suffix Pairs I",
+  "3046": "3046. Split the Array",
+  "3065": "3065. Minimum Operations to Exceed Threshold Value I"
 }

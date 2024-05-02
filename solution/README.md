@@ -938,6 +938,8 @@
 | 3033      | [Modify the Matrix](https://leetcode.com/problems/modify-the-matrix)                                                                                                    | [보러가기](src/2024-04/30/leetcode-3033.ts) |
 | 3038      | [Maximum Number of Operations With the Same Score I](https://leetcode.com/problems/maximum-number-of-operations-with-the-same-score-i)                                  | [보러가기](src/2024-05/01/leetcode-3038.ts) |
 | 3042      | [Count Prefix and Suffix Pairs I](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i)                                                                        | [보러가기](src/2024-05/01/leetcode-3042.ts) |
+| 3046      | [Split the Array](https://leetcode.com/problems/split-the-array)                                                                                                        | [보러가기](src/2024-05/02/leetcode-3046.ts) |
+| 3065      | [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i)                                          | [보러가기](src/2024-05/02/leetcode-3065.ts) |
 
 ### Programmers
 
