@@ -940,6 +940,8 @@
 | 3042      | [Count Prefix and Suffix Pairs I](https://leetcode.com/problems/count-prefix-and-suffix-pairs-i)                                                                        | [보러가기](src/2024-05/01/leetcode-3042.ts) |
 | 3046      | [Split the Array](https://leetcode.com/problems/split-the-array)                                                                                                        | [보러가기](src/2024-05/02/leetcode-3046.ts) |
 | 3065      | [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i)                                          | [보러가기](src/2024-05/02/leetcode-3065.ts) |
+| 3069      | [Distribute Elements Into Two Arrays I](https://leetcode.com/problems/distribute-elements-into-two-arrays-i)                                                            | [보러가기](src/2024-05/03/leetcode-3069.ts) |
+| 3074      | [Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes)                                                                        | [보러가기](src/2024-05/03/leetcode-3074.ts) |
 
 ### Programmers
 
