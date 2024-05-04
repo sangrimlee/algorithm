@@ -326,6 +326,7 @@
 | 875       | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas)                                                                                                | [보러가기](src/2023-03/08/leetcode-875.ts)  |
 | 876       | [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)                                                                                   | [보러가기](src/2022-12/05/leetcode-876.ts)  |
 | 880       | [Decoded String at Index](https://leetcode.com/problems/decoded-string-at-index)                                                                                        | [보러가기](src/2023-09/27/leetcode-880.ts)  |
+| 881       | [Boats to Save People](https://leetcode.com/problems/boats-to-save-people)                                                                                              | [보러가기](src/2024-05/04/leetcode-881.ts)  |
 | 883       | [Projection Area of 3D Shapes](https://leetcode.com/problems/projection-area-of-3d-shapes)                                                                              | [보러가기](src/2023-10/31/leetcode-883.ts)  |
 | 884       | [Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences)                                                                    | [보러가기](src/2023-11/01/leetcode-884.ts)  |
 | 886       | [Possible Bipartition](https://leetcode.com/problems/possible-bipartition)                                                                                              | [보러가기](src/2022-12/21/leetcode-886.ts)  |
@@ -942,6 +943,8 @@
 | 3065      | [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i)                                          | [보러가기](src/2024-05/02/leetcode-3065.ts) |
 | 3069      | [Distribute Elements Into Two Arrays I](https://leetcode.com/problems/distribute-elements-into-two-arrays-i)                                                            | [보러가기](src/2024-05/03/leetcode-3069.ts) |
 | 3074      | [Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes)                                                                        | [보러가기](src/2024-05/03/leetcode-3074.ts) |
+| 3079      | [Find the Sum of Encrypted Integers](https://leetcode.com/problems/find-the-sum-of-encrypted-integers)                                                                  | [보러가기](src/2024-05/04/leetcode-3079.ts) |
+| 3083      | [Existence of a Substring in a String and Its Reverse](https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse)                              | [보러가기](src/2024-05/04/leetcode-3083.ts) |
 
 ### Programmers
 

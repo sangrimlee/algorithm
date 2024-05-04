@@ -319,6 +319,7 @@
   "875": "875. Koko Eating Bananas",
   "876": "876. Middle of the Linked List",
   "880": "880. Decoded String at Index",
+  "881": "881. Boats to Save People",
   "883": "883. Projection Area of 3D Shapes",
   "884": "884. Uncommon Words from Two Sentences",
   "886": "886. Possible Bipartition",
@@ -934,5 +935,7 @@
   "3046": "3046. Split the Array",
   "3065": "3065. Minimum Operations to Exceed Threshold Value I",
   "3069": "3069. Distribute Elements Into Two Arrays I",
-  "3074": "3074. Apple Redistribution into Boxes"
+  "3074": "3074. Apple Redistribution into Boxes",
+  "3079": "3079. Find the Sum of Encrypted Integers",
+  "3083": "3083. Existence of a Substring in a String and Its Reverse"
 }
