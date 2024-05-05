@@ -945,6 +945,8 @@
 | 3074      | [Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes)                                                                        | [보러가기](src/2024-05/03/leetcode-3074.ts) |
 | 3079      | [Find the Sum of Encrypted Integers](https://leetcode.com/problems/find-the-sum-of-encrypted-integers)                                                                  | [보러가기](src/2024-05/04/leetcode-3079.ts) |
 | 3083      | [Existence of a Substring in a String and Its Reverse](https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse)                              | [보러가기](src/2024-05/04/leetcode-3083.ts) |
+| 3090      | [Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences)                                            | [보러가기](src/2024-05/05/leetcode-3090.ts) |
+| 3095      | [Shortest Subarray With OR at Least K I](https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-i)                                                          | [보러가기](src/2024-05/05/leetcode-3095.ts) |
 
 ### Programmers
 
