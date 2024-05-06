@@ -787,6 +787,7 @@
 | 2482      | [Difference Between Ones and Zeros in Row and Column](https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column)                                | [보러가기](src/2023-12/14/leetcode-2482.ts) |
 | 2483      | [Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop)                                                                                  | [보러가기](src/2023-08/29/leetcode-2483.ts) |
 | 2485      | [Find the Pivot Integer](https://leetcode.com/problems/find-the-pivot-integer)                                                                                          | [보러가기](src/2024-03/11/leetcode-2485.ts) |
+| 2487      | [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list)                                                                            | [보러가기](src/2024-05/06/leetcode-2487.ts) |
 | 2490      | [Circular Sentence](https://leetcode.com/problems/circular-sentence)                                                                                                    | [보러가기](src/2024-03/11/leetcode-2490.ts) |
 | 2496      | [Maximum Value of a String in an Array](https://leetcode.com/problems/maximum-value-of-a-string-in-an-array)                                                            | [보러가기](src/2024-03/12/leetcode-2496.ts) |
 | 2500      | [Delete Greatest Value in Each Row](https://leetcode.com/problems/delete-greatest-value-in-each-row)                                                                    | [보러가기](src/2023-06/13/leetcode-2500.ts) |
@@ -947,6 +948,7 @@
 | 3083      | [Existence of a Substring in a String and Its Reverse](https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse)                              | [보러가기](src/2024-05/04/leetcode-3083.ts) |
 | 3090      | [Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences)                                            | [보러가기](src/2024-05/05/leetcode-3090.ts) |
 | 3095      | [Shortest Subarray With OR at Least K I](https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-i)                                                          | [보러가기](src/2024-05/05/leetcode-3095.ts) |
+| 3099      | [Harshad Number](https://leetcode.com/problems/harshad-number)                                                                                                          | [보러가기](src/2024-05/06/leetcode-3099.ts) |
 
 ### Programmers
 

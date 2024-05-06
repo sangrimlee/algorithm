@@ -1,0 +1,38 @@
+---
+title: Remove Nodes From Linked List
+tags:
+  - Linked List
+  - Stack
+  - Recursion
+  - Monotonic Stack
+---
+
+# 2487. Remove Nodes From Linked List
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Stack" slug="stack" />
+  <TopicBadge name="Recursion" slug="recursion" />
+  <TopicBadge name="Monotonic Stack" slug="monotonic-stack" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function removeNodes(head: ListNode | null): ListNode | null {
+  if (head === null) {
+    return head;
+  }
+  head.next = removeNodes(head.next);
+  return head.next && head.val < head.next.val ? head.next : head;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-nodes-from-linked-list"
+  title="Remove Nodes From Linked List"
+/>

@@ -780,6 +780,7 @@
   "2482": "2482. Difference Between Ones and Zeros in Row and Column",
   "2483": "2483. Minimum Penalty for a Shop",
   "2485": "2485. Find the Pivot Integer",
+  "2487": "2487. Remove Nodes From Linked List",
   "2490": "2490. Circular Sentence",
   "2496": "2496. Maximum Value of a String in an Array",
   "2500": "2500. Delete Greatest Value in Each Row",
@@ -939,5 +940,6 @@
   "3079": "3079. Find the Sum of Encrypted Integers",
   "3083": "3083. Existence of a Substring in a String and Its Reverse",
   "3090": "3090. Maximum Length Substring With Two Occurrences",
-  "3095": "3095. Shortest Subarray With OR at Least K I"
+  "3095": "3095. Shortest Subarray With OR at Least K I",
+  "3099": "3099. Harshad Number"
 }
