@@ -891,6 +891,7 @@
 | 2807      | [Insert Greatest Common Divisors in Linked List](https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list)                                          | [보러가기](src/2024-02/25/leetcode-2807.ts) |
 | 2810      | [Faulty Keyboard](https://leetcode.com/problems/faulty-keyboard)                                                                                                        | [보러가기](src/2024-04/09/leetcode-2810.ts) |
 | 2815      | [Max Pair Sum in an Array](https://leetcode.com/problems/max-pair-sum-in-an-array)                                                                                      | [보러가기](src/2024-04/10/leetcode-2815.ts) |
+| 2816      | [Double a Number Represented as a Linked List](https://leetcode.com/problems/double-a-number-represented-as-a-linked-list)                                              | [보러가기](src/2024-05/07/leetcode-2816.ts) |
 | 2824      | [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target)                                                    | [보러가기](src/2024-04/10/leetcode-2824.ts) |
 | 2828      | [Check if a String Is an Acronym of Words](https://leetcode.com/problems/check-if-a-string-is-an-acronym-of-words)                                                      | [보러가기](src/2024-04/11/leetcode-2828.ts) |
 | 2833      | [Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin)                                                                                  | [보러가기](src/2024-04/11/leetcode-2833.ts) |
@@ -949,6 +950,8 @@
 | 3090      | [Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences)                                            | [보러가기](src/2024-05/05/leetcode-3090.ts) |
 | 3095      | [Shortest Subarray With OR at Least K I](https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-i)                                                          | [보러가기](src/2024-05/05/leetcode-3095.ts) |
 | 3099      | [Harshad Number](https://leetcode.com/problems/harshad-number)                                                                                                          | [보러가기](src/2024-05/06/leetcode-3099.ts) |
+| 3105      | [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray)                | [보러가기](src/2024-05/07/leetcode-3105.ts) |
+| 3110      | [Score of a String](https://leetcode.com/problems/score-of-a-string)                                                                                                    | [보러가기](src/2024-05/07/leetcode-3110.ts) |
 
 ### Programmers
 
