@@ -944,5 +944,7 @@
   "3095": "3095. Shortest Subarray With OR at Least K I",
   "3099": "3099. Harshad Number",
   "3105": "3105. Longest Strictly Increasing or Strictly Decreasing Subarray",
-  "3110": "3110. Score of a String"
+  "3110": "3110. Score of a String",
+  "3114": "3114. Latest Time You Can Obtain After Replacing Characters",
+  "3120": "3120. Count the Number of Special Characters I"
 }

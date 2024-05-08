@@ -952,6 +952,8 @@
 | 3099      | [Harshad Number](https://leetcode.com/problems/harshad-number)                                                                                                          | [보러가기](src/2024-05/06/leetcode-3099.ts) |
 | 3105      | [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray)                | [보러가기](src/2024-05/07/leetcode-3105.ts) |
 | 3110      | [Score of a String](https://leetcode.com/problems/score-of-a-string)                                                                                                    | [보러가기](src/2024-05/07/leetcode-3110.ts) |
+| 3114      | [Latest Time You Can Obtain After Replacing Characters](https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters)                            | [보러가기](src/2024-05/08/leetcode-3114.ts) |
+| 3120      | [Count the Number of Special Characters I](https://leetcode.com/problems/count-the-number-of-special-characters-i)                                                      | [보러가기](src/2024-05/08/leetcode-3120.ts) |
 
 ### Programmers
 
