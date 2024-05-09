@@ -1,0 +1,26 @@
+---
+title: Valid Word
+tags:
+  - String
+---
+
+# 3136. Valid Word
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isValid(word: string): boolean {
+  return /^(?=.*[aeiou])(?=.*[^0-9aeiou])[a-z0-9]{3,}$/i.test(word);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/valid-word"
+  title="Valid Word"
+/>

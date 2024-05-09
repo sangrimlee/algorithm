@@ -945,6 +945,7 @@
 | 3065      | [Minimum Operations to Exceed Threshold Value I](https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i)                                          | [보러가기](src/2024-05/02/leetcode-3065.ts) |
 | 3069      | [Distribute Elements Into Two Arrays I](https://leetcode.com/problems/distribute-elements-into-two-arrays-i)                                                            | [보러가기](src/2024-05/03/leetcode-3069.ts) |
 | 3074      | [Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes)                                                                        | [보러가기](src/2024-05/03/leetcode-3074.ts) |
+| 3075      | [Maximize Happiness of Selected Children](https://leetcode.com/problems/maximize-happiness-of-selected-children)                                                        | [보러가기](src/2024-05/09/leetcode-3075.ts) |
 | 3079      | [Find the Sum of Encrypted Integers](https://leetcode.com/problems/find-the-sum-of-encrypted-integers)                                                                  | [보러가기](src/2024-05/04/leetcode-3079.ts) |
 | 3083      | [Existence of a Substring in a String and Its Reverse](https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse)                              | [보러가기](src/2024-05/04/leetcode-3083.ts) |
 | 3090      | [Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences)                                            | [보러가기](src/2024-05/05/leetcode-3090.ts) |
@@ -954,6 +955,9 @@
 | 3110      | [Score of a String](https://leetcode.com/problems/score-of-a-string)                                                                                                    | [보러가기](src/2024-05/07/leetcode-3110.ts) |
 | 3114      | [Latest Time You Can Obtain After Replacing Characters](https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters)                            | [보러가기](src/2024-05/08/leetcode-3114.ts) |
 | 3120      | [Count the Number of Special Characters I](https://leetcode.com/problems/count-the-number-of-special-characters-i)                                                      | [보러가기](src/2024-05/08/leetcode-3120.ts) |
+| 3127      | [Make a Square with the Same Color](https://leetcode.com/problems/make-a-square-with-the-same-color)                                                                    | [보러가기](src/2024-05/09/leetcode-3127.ts) |
+| 3131      | [Find the Integer Added to Array I](https://leetcode.com/problems/find-the-integer-added-to-array-i)                                                                    | [보러가기](src/2024-05/09/leetcode-3131.ts) |
+| 3136      | [Valid Word](https://leetcode.com/problems/valid-word)                                                                                                                  | [보러가기](src/2024-05/09/leetcode-3136.ts) |
 
 ### Programmers
 

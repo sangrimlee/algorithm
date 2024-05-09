@@ -938,6 +938,7 @@
   "3065": "3065. Minimum Operations to Exceed Threshold Value I",
   "3069": "3069. Distribute Elements Into Two Arrays I",
   "3074": "3074. Apple Redistribution into Boxes",
+  "3075": "3075. Maximize Happiness of Selected Children",
   "3079": "3079. Find the Sum of Encrypted Integers",
   "3083": "3083. Existence of a Substring in a String and Its Reverse",
   "3090": "3090. Maximum Length Substring With Two Occurrences",
@@ -946,5 +947,8 @@
   "3105": "3105. Longest Strictly Increasing or Strictly Decreasing Subarray",
   "3110": "3110. Score of a String",
   "3114": "3114. Latest Time You Can Obtain After Replacing Characters",
-  "3120": "3120. Count the Number of Special Characters I"
+  "3120": "3120. Count the Number of Special Characters I",
+  "3127": "3127. Make a Square with the Same Color",
+  "3131": "3131. Find the Integer Added to Array I",
+  "3136": "3136. Valid Word"
 }
