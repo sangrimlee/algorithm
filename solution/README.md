@@ -965,6 +965,8 @@
 | 3127      | [Make a Square with the Same Color](https://leetcode.com/problems/make-a-square-with-the-same-color)                                                                    | [보러가기](src/2024-05/09/leetcode-3127.ts) |
 | 3131      | [Find the Integer Added to Array I](https://leetcode.com/problems/find-the-integer-added-to-array-i)                                                                    | [보러가기](src/2024-05/09/leetcode-3131.ts) |
 | 3136      | [Valid Word](https://leetcode.com/problems/valid-word)                                                                                                                  | [보러가기](src/2024-05/09/leetcode-3136.ts) |
+| 3142      | [Check if Grid Satisfies Conditions](https://leetcode.com/problems/check-if-grid-satisfies-conditions)                                                                  | [보러가기](src/2024-05/16/leetcode-3142.ts) |
+| 3146      | [Permutation Difference between Two Strings](https://leetcode.com/problems/permutation-difference-between-two-strings)                                                  | [보러가기](src/2024-05/16/leetcode-3146.ts) |
 
 ### Programmers
 
