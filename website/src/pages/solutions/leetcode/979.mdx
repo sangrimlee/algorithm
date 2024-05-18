@@ -1,0 +1,43 @@
+---
+title: Distribute Coins in Binary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 979. Distribute Coins in Binary Tree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function distributeCoins(root: TreeNode | null): number {
+  let answer = 0;
+  function traverse(node: TreeNode | null): number {
+    if (node === null) {
+      return 0;
+    }
+    const left = traverse(node.left);
+    const right = traverse(node.right);
+    answer += Math.abs(left) + Math.abs(right);
+    return node.val + left + right - 1;
+  }
+  traverse(root);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/distribute-coins-in-binary-tree"
+  title="Distribute Coins in Binary Tree"
+/>

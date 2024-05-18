@@ -1,0 +1,57 @@
+---
+title: Find Elements in a Contaminated Binary Tree
+tags:
+  - Hash Table
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Design
+  - Binary Tree
+---
+
+# 1261. Find Elements in a Contaminated Binary Tree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Design" slug="design" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export class FindElements {
+  private readonly values: Set<number>;
+
+  constructor(root: TreeNode | null) {
+    this.values = new Set();
+    this.recover(root, 0);
+  }
+
+  private recover(node: TreeNode | null, value: number) {
+    if (node === null) {
+      return;
+    }
+    node.val = value;
+    this.values.add(value);
+    this.recover(node.left, 2 * value + 1);
+    this.recover(node.right, 2 * value + 2);
+  }
+
+  find(target: number): boolean {
+    return this.values.has(target);
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree"
+  title="Find Elements in a Contaminated Binary Tree"
+/>
