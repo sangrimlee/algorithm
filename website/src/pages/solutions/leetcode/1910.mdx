@@ -1,0 +1,30 @@
+---
+title: Remove All Occurrences of a Substring
+tags:
+  - String
+---
+
+# 1910. Remove All Occurrences of a Substring
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeOccurrences(s: string, part: string): string {
+  let current = s;
+  while (current.indexOf(part) !== -1) {
+    current = current.replace(part, '');
+  }
+  return current;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-all-occurrences-of-a-substring"
+  title="Remove All Occurrences of a Substring"
+/>
