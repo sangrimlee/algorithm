@@ -471,6 +471,7 @@
 | 1365      | [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number)                              | [보러가기](src/2023-11/28/leetcode-1365.ts) |
 | 1370      | [Increasing Decreasing String](https://leetcode.com/problems/increasing-decreasing-string)                                                                              | [보러가기](src/2023-11/28/leetcode-1370.ts) |
 | 1380      | [Lucky Numbers in a Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix)                                                                                    | [보러가기](src/2023-11/29/leetcode-1380.ts) |
+| 1381      | [Design a Stack With Increment Operation](https://leetcode.com/problems/design-a-stack-with-increment-operation)                                                        | [보러가기](src/2024-05/31/leetcode-1381.ts) |
 | 1382      | [Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree)                                                                              | [보러가기](src/2024-04/08/leetcode-1382.ts) |
 | 1385      | [Find the Distance Value Between Two Arrays](https://leetcode.com/problems/find-the-distance-value-between-two-arrays)                                                  | [보러가기](src/2023-11/29/leetcode-1385.ts) |
 | 1389      | [Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order)                                                          | [보러가기](src/2023-11/29/leetcode-1389.ts) |
@@ -983,6 +984,7 @@
 | 3146      | [Permutation Difference between Two Strings](https://leetcode.com/problems/permutation-difference-between-two-strings)                                                  | [보러가기](src/2024-05/16/leetcode-3146.ts) |
 | 3151      | [Special Array I](https://leetcode.com/problems/special-array-i)                                                                                                        | [보러가기](src/2024-05/20/leetcode-3151.ts) |
 | 3158      | [Find the XOR of Numbers Which Appear Twice](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice)                                                  | [보러가기](src/2024-05/30/leetcode-3158.ts) |
+| 3162      | [Find the Number of Good Pairs I](https://leetcode.com/problems/find-the-number-of-good-pairs-i)                                                                        | [보러가기](src/2024-05/31/leetcode-3162.ts) |
 
 ### Programmers
 
