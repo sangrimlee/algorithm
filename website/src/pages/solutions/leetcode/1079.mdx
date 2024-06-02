@@ -1,0 +1,49 @@
+---
+title: Letter Tile Possibilities
+tags:
+  - Hash Table
+  - String
+  - Backtracking
+  - Counting
+---
+
+# 1079. Letter Tile Possibilities
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Backtracking" slug="backtracking" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numTilePossibilities(tiles: string): number {
+  const tileCount = new Array<number>(26).fill(0);
+  for (const tile of tiles) {
+    tileCount[tile.charCodeAt(0) - 'A'.charCodeAt(0)] += 1;
+  }
+
+  function dfs(): number {
+    let result = 0;
+    for (let i = 0; i < 26; i++) {
+      if (tileCount[i] === 0) continue;
+      result += 1;
+      tileCount[i] -= 1;
+      result += dfs();
+      tileCount[i] += 1;
+    }
+    return result;
+  }
+
+  return dfs();
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/letter-tile-possibilities"
+  title="Letter Tile Possibilities"
+/>
