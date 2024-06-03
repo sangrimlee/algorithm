@@ -1,0 +1,37 @@
+---
+title: Append Characters to String to Make Subsequence
+tags:
+  - Two Pointers
+  - String
+  - Greedy
+---
+
+# 2486. Append Characters to String to Make Subsequence
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Greedy" slug="greedy" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function appendCharacters(s: string, t: string): number {
+  const [m, n] = [s.length, t.length];
+  let [sIndex, tIndex] = [0, 0];
+
+  while (sIndex < m && tIndex < n) {
+    tIndex += s[sIndex] === t[tIndex] ? 1 : 0;
+    sIndex += 1;
+  }
+  return n - tIndex;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/append-characters-to-string-to-make-subsequence"
+  title="Append Characters to String to Make Subsequence"
+/>
