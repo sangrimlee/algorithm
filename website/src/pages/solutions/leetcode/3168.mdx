@@ -1,0 +1,34 @@
+---
+title: Minimum Number of Chairs in a Waiting Room
+tags:
+  - String
+  - Simulation
+---
+
+# 3168. Minimum Number of Chairs in a Waiting Room
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Simulation" slug="simulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumChairs(s: string): number {
+  let answer = 0;
+  let chairs = 0;
+  for (const char of s) {
+    chairs += char === 'E' ? 1 : -1;
+    answer = Math.max(answer, chairs);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-chairs-in-a-waiting-room"
+  title="Minimum Number of Chairs in a Waiting Room"
+/>

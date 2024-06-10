@@ -994,6 +994,7 @@
 | 3151      | [Special Array I](https://leetcode.com/problems/special-array-i)                                                                                                        | [보러가기](src/2024-05/20/leetcode-3151.ts) |
 | 3158      | [Find the XOR of Numbers Which Appear Twice](https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice)                                                  | [보러가기](src/2024-05/30/leetcode-3158.ts) |
 | 3162      | [Find the Number of Good Pairs I](https://leetcode.com/problems/find-the-number-of-good-pairs-i)                                                                        | [보러가기](src/2024-05/31/leetcode-3162.ts) |
+| 3168      | [Minimum Number of Chairs in a Waiting Room](https://leetcode.com/problems/minimum-number-of-chairs-in-a-waiting-room)                                                  | [보러가기](src/2024-06/10/leetcode-3168.ts) |
 
 ### Programmers
 
