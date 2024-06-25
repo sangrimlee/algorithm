@@ -1010,6 +1010,7 @@
 | 3168      | [Minimum Number of Chairs in a Waiting Room](https://leetcode.com/problems/minimum-number-of-chairs-in-a-waiting-room)                                                                 | [보러가기](src/2024-06/10/leetcode-3168.ts) |
 | 3174      | [Clear Digits](https://leetcode.com/problems/clear-digits)                                                                                                                             | [보러가기](src/2024-06/11/leetcode-3174.ts) |
 | 3178      | [Find the Child Who Has the Ball After K Seconds](https://leetcode.com/problems/find-the-child-who-has-the-ball-after-k-seconds)                                                       | [보러가기](src/2024-06/11/leetcode-3178.ts) |
+| 3184      | [Count Pairs That Form a Complete Day I](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-i)                                                                         | [보러가기](src/2024-06/25/leetcode-3184.ts) |
 
 ### Programmers
 
