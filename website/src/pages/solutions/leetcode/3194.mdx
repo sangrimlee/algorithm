@@ -1,0 +1,45 @@
+---
+title: Minimum Average of Smallest and Largest Elements
+tags:
+  - Array
+  - Two Pointers
+  - Sorting
+---
+
+# 3194. Minimum Average of Smallest and Largest Elements
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumAverage(nums: number[]): number {
+  const n = nums.length;
+  nums.sort((a, b) => a - b);
+
+  let answer = Number.MAX_SAFE_INTEGER;
+  let [left, right] = [0, n - 1];
+  while (left < right) {
+    answer = Math.min(answer, (nums[left] + nums[right]) / 2);
+    left += 1;
+    right -= 1;
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(n * logn)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements"
+  title="Minimum Average of Smallest and Largest Elements"
+/>
