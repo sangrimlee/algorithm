@@ -1,0 +1,43 @@
+---
+title: Maximum Total Importance of Roads
+tags:
+  - Greedy
+  - Graph
+  - Sorting
+  - Heap (Priority Queue)
+---
+
+# 2285. Maximum Total Importance of Roads
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Greedy" slug="greedy" />
+  <TopicBadge name="Graph" slug="graph" />
+  <TopicBadge name="Sorting" slug="sorting" />
+  <TopicBadge name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumImportance(n: number, roads: number[][]): number {
+  const degrees = new Array(n).fill(0);
+  for (const [a, b] of roads) {
+    degrees[a] += 1;
+    degrees[b] += 1;
+  }
+
+  return degrees.sort((a, b) => a - b).reduce((acc, degree, i) => acc + degree * (i + 1), 0);
+}
+```
+
+### Complexity
+
+- Time: `O(n * logn)`
+- Space: `O(n)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-total-importance-of-roads"
+  title="Maximum Total Importance of Roads"
+/>
