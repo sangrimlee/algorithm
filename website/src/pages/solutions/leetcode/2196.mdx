@@ -1,0 +1,60 @@
+---
+title: Create Binary Tree From Descriptions
+tags:
+  - Array
+  - Hash Table
+  - Tree
+  - Binary Tree
+---
+
+# 2196. Create Binary Tree From Descriptions
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function createBinaryTree(descriptions: number[][]): TreeNode | null {
+  const nodes = new Map<number, TreeNode>();
+  const hasParents = new Map<number, boolean>();
+
+  for (const [parent, child, isLeft] of descriptions) {
+    const parentNode = nodes.get(parent) ?? new TreeNode(parent);
+    const childNode = nodes.get(child) ?? new TreeNode(child);
+    nodes.set(parent, parentNode);
+    nodes.set(child, childNode);
+    hasParents.set(child, true);
+    if (isLeft) {
+      parentNode.left = childNode;
+    } else {
+      parentNode.right = childNode;
+    }
+  }
+
+  for (const [parent] of descriptions) {
+    if (!hasParents.get(parent)) {
+      return nodes.get(parent)!;
+    }
+  }
+  return null;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/create-binary-tree-from-descriptions"
+  title="Create Binary Tree From Descriptions"
+/>
