@@ -1,0 +1,32 @@
+---
+title: Find the Encrypted String
+tags:
+  - String
+---
+
+# 3210. Find the Encrypted String
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getEncryptedString(s: string, k: number): string {
+  const i = k % s.length;
+  return s.substring(i) + s.substring(0, i);
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-encrypted-string"
+  title="Find the Encrypted String"
+/>

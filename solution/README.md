@@ -1037,6 +1037,7 @@
 | 3194      | [Minimum Average of Smallest and Largest Elements](https://leetcode.com/problems/minimum-average-of-smallest-and-largest-elements)                                                     | [보러가기](src/2024-06/27/leetcode-3194.ts) |
 | 3200      | [Maximum Height of a Triangle](https://leetcode.com/problems/maximum-height-of-a-triangle)                                                                                             | [보러가기](src/2024-07/01/leetcode-3200.ts) |
 | 3206      | [Alternating Groups I](https://leetcode.com/problems/alternating-groups-i)                                                                                                             | [보러가기](src/2024-07/22/leetcode-3206.ts) |
+| 3210      | [Find the Encrypted String](https://leetcode.com/problems/find-the-encrypted-string)                                                                                                   | [보러가기](src/2024-07/23/leetcode-3210.ts) |
 | 3211      | [Generate Binary Strings Without Adjacent Zeros](https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/)                                                        | [보러가기](src/2024-07/07/leetcode-3211.ts) |
 
 ### Programmers
