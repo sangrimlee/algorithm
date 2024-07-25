@@ -1040,6 +1040,7 @@
 | 3206      | [Alternating Groups I](https://leetcode.com/problems/alternating-groups-i)                                                                                                             | [보러가기](src/2024-07/22/leetcode-3206.ts) |
 | 3210      | [Find the Encrypted String](https://leetcode.com/problems/find-the-encrypted-string)                                                                                                   | [보러가기](src/2024-07/23/leetcode-3210.ts) |
 | 3211      | [Generate Binary Strings Without Adjacent Zeros](https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros/)                                                        | [보러가기](src/2024-07/07/leetcode-3211.ts) |
+| 3216      | [Lexicographically Smallest String After a Swap](https://leetcode.com/problems/lexicographically-smallest-string-after-a-swap)                                                         | [보러가기](src/2024-07/25/leetcode-3216.ts) |
 
 ### Programmers
 

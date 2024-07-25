@@ -1032,5 +1032,6 @@
   "3200": "3200. Maximum Height of a Triangle",
   "3206": "3206. Alternating Groups I",
   "3210": "3210. Find the Encrypted String",
-  "3211": "3211. Generate Binary Strings Without Adjacent Zeros"
+  "3211": "3211. Generate Binary Strings Without Adjacent Zeros",
+  "3216": "3216. Lexicographically Smallest String After a Swap"
 }
