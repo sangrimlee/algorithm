@@ -1,0 +1,52 @@
+/**
+ * 2976. Minimum Cost to Convert String I
+ * https://leetcode.com/problems/minimum-cost-to-convert-string-i
+ */
+export function minimumCost(
+  source: string,
+  target: string,
+  original: string[],
+  changed: string[],
+  cost: number[],
+): number {
+  const distances = floydWarshall(26, original, changed, cost);
+
+  let answer = 0;
+  for (let i = 0; i < source.length; i++) {
+    const distance = distances[getCharCode(source[i])][getCharCode(target[i])];
+    if (distance === Infinity) {
+      return -1;
+    }
+    answer += distance;
+  }
+  return answer;
+}
+
+function getCharCode(char: string): number {
+  return char.charCodeAt(0) - 'a'.charCodeAt(0);
+}
+
+function floydWarshall(
+  n: number,
+  original: string[],
+  changed: string[],
+  cost: number[],
+): number[][] {
+  const distances = Array.from({ length: n }, (_, i) =>
+    Array.from({ length: n }, (_, j) => (i === j ? 0 : Infinity)),
+  );
+  for (let i = 0; i < original.length; i++) {
+    const from = getCharCode(original[i]);
+    const to = getCharCode(changed[i]);
+    distances[from][to] = Math.min(distances[from][to], cost[i]);
+  }
+
+  for (let k = 0; k < n; k++) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        distances[i][j] = Math.min(distances[i][j], distances[i][k] + distances[k][j]);
+      }
+    }
+  }
+  return distances;
+}
