@@ -1042,5 +1042,6 @@
   "3211": "3211. Generate Binary Strings Without Adjacent Zeros",
   "3216": "3216. Lexicographically Smallest String After a Swap",
   "3222": "3222. Find the Winning Player in Coin Game",
-  "3226": "3226. Number of Bit Changes to Make Two Integers Equal"
+  "3226": "3226. Number of Bit Changes to Make Two Integers Equal",
+  "3232": "3232. Find if Digit Game Can Be Won"
 }

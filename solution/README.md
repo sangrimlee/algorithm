@@ -1050,6 +1050,7 @@
 | 3216      | [Lexicographically Smallest String After a Swap](https://leetcode.com/problems/lexicographically-smallest-string-after-a-swap)                                                           | [보러가기](src/2024-07/25/leetcode-3216.ts) |
 | 3222      | [Find the Winning Player in Coin Game](https://leetcode.com/problems/find-the-winning-player-in-coin-game)                                                                               | [보러가기](src/2024-08/01/leetcode-3222.ts) |
 | 3226      | [Number of Bit Changes to Make Two Integers Equal](https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal)                                                       | [보러가기](src/2024-08/01/leetcode-3226.ts) |
+| 3232      | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won)                                                                                             | [보러가기](src/2024-08/03/leetcode-3232.ts) |
 
 ### Programmers
 
