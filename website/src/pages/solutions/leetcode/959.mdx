@@ -1,0 +1,85 @@
+---
+title: Regions Cut By Slashes
+tags:
+  - Array
+  - Hash Table
+  - Depth-First Search
+  - Breadth-First Search
+  - Union Find
+  - Matrix
+---
+
+# 959. Regions Cut By Slashes
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Hash Table" slug="hash-table" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Union Find" slug="union-find" />
+  <TopicBadge name="Matrix" slug="matrix" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function regionsBySlashes(grid: string[]): number {
+  const n = grid.length;
+  const board: number[][] = Array.from({ length: 3 * n }, () => new Array(3 * n).fill(0));
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (grid[i][j] === '/' || grid[i][j] === '\\') {
+        cutBySlash(board, grid[i][j], i * 3, j * 3);
+      }
+    }
+  }
+
+  let answer = 0;
+  for (let y = 0; y < n * 3; y++) {
+    for (let x = 0; x < n * 3; x++) {
+      if (findRegion(board, y, x)) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+
+function cutBySlash(board: number[][], slash: string, y: number, x: number) {
+  let [cy, cx] = slash === '/' ? [y, x + 2] : [y, x];
+  const [dy, dx] = slash === '/' ? [1, -1] : [1, 1];
+  for (let i = 0; i < 3; i++) {
+    board[cy][cx] = 1;
+    [cy, cx] = [cy + dy, cx + dx];
+  }
+}
+
+function findRegion(board: number[][], y: number, x: number) {
+  if (Math.min(y, x) < 0 || Math.max(y, x) >= board.length || board[y][x] === 1) {
+    return false;
+  }
+  board[y][x] = 1;
+  const directions = [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+  ];
+  for (const [dy, dx] of directions) {
+    findRegion(board, y + dy, x + dx);
+  }
+  return true;
+}
+```
+
+### Complexity
+
+- Time: `O(N^2)`
+- Space: `O(N^2)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/regions-cut-by-slashes"
+  title="Regions Cut By Slashes"
+/>
