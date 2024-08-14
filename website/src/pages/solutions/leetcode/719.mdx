@@ -1,0 +1,63 @@
+---
+title: Find K-th Smallest Pair Distance
+tags:
+  - Array
+  - Two Pointers
+  - Binary Search
+  - Sorting
+---
+
+# 719. Find K-th Smallest Pair Distance
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Two Pointers" slug="two-pointers" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Sorting" slug="sorting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallestDistancePair(nums: number[], k: number): number {
+  nums.sort((a, b) => a - b);
+
+  const n = nums.length;
+  let [left, right] = [0, nums[n - 1] - nums[0]];
+  while (left < right) {
+    const mid = left + Math.floor((right - left) / 2);
+    if (countPair(nums, mid) < k) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+}
+
+function countPair(nums: number[], distance: number) {
+  const n = nums.length;
+  let count = 0;
+  let [i, j] = [0, 0];
+  while (i < n || j < n) {
+    while (j < n && nums[j] - nums[i] <= distance) {
+      j += 1;
+    }
+    count += j - i - 1;
+    i += 1;
+  }
+  return count;
+}
+```
+
+### Complexity
+
+- Time: `O(NlogN)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-k-th-smallest-pair-distance"
+  title="Find K-th Smallest Pair Distance"
+/>
