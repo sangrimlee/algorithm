@@ -1060,6 +1060,7 @@
 | 3226      | [Number of Bit Changes to Make Two Integers Equal](https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal)                                                       | [보러가기](src/2024-08/01/leetcode-3226.ts) |
 | 3232      | [Find if Digit Game Can Be Won](https://leetcode.com/problems/find-if-digit-game-can-be-won)                                                                                             | [보러가기](src/2024-08/03/leetcode-3232.ts) |
 | 3238      | [Find the Number of Winning Players](https://leetcode.com/problems/find-the-number-of-winning-players)                                                                                   | [보러가기](src/2024-08/05/leetcode-3238.ts) |
+| 3239      | [Minimum Number of Flips to Make Binary Grid Palindromic I](https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i)                                     | [보러가기](src/2024-08/15/leetcode-3239.ts) |
 | 3242      | [Design Neighbor Sum Service](https://leetcode.com/problems/design-neighbor-sum-service)                                                                                                 | [보러가기](src/2024-08/12/leetcode-3242.ts) |
 | 3248      | [Snake in Matrix](https://leetcode.com/problems/snake-in-matrix)                                                                                                                         | [보러가기](src/2024-08/13/leetcode-3248.ts) |
 
