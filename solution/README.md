@@ -1065,6 +1065,7 @@
 | 3239      | [Minimum Number of Flips to Make Binary Grid Palindromic I](https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i)                                     | [보러가기](src/2024-08/15/leetcode-3239.ts) |
 | 3242      | [Design Neighbor Sum Service](https://leetcode.com/problems/design-neighbor-sum-service)                                                                                                 | [보러가기](src/2024-08/12/leetcode-3242.ts) |
 | 3248      | [Snake in Matrix](https://leetcode.com/problems/snake-in-matrix)                                                                                                                         | [보러가기](src/2024-08/13/leetcode-3248.ts) |
+| 3258      | [Count Substrings That Satisfy K-Constraint I](https://leetcode.com/problems/count-substrings-that-satisfy-k-constraint-i)                                                               | [보러가기](src/2024-08/18/leetcode-3258.ts) |
 
 ### Programmers
 
