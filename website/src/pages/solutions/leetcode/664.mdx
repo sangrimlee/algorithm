@@ -1,0 +1,65 @@
+---
+title: Strange Printer
+tags:
+  - String
+  - Dynamic Programming
+---
+
+# 664. Strange Printer
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function strangePrinter(s: string): number {
+  const chars = normalize(s);
+  const n = chars.length;
+  if (n <= 2) {
+    return n;
+  }
+
+  const dp: number[][] = Array.from({ length: n }, () =>
+    new Array(n).fill(Number.MAX_SAFE_INTEGER),
+  );
+  for (let start = n - 1; 0 <= start; start--) {
+    dp[start][start] = 1;
+    for (let end = start + 1; end < n; end++) {
+      for (let mid = start; mid < end; mid++) {
+        dp[start][end] = Math.min(dp[start][end], dp[start][mid] + dp[mid + 1][end]);
+      }
+      if (chars[start] === chars[end]) {
+        dp[start][end] -= 1;
+      }
+    }
+  }
+
+  return dp[0][n - 1];
+}
+
+function normalize(s: string): string[] {
+  const chars: string[] = [];
+  for (const char of s) {
+    if (chars.length !== 0 && chars[chars.length - 1] === char) {
+      continue;
+    }
+    chars.push(char);
+  }
+  return chars;
+}
+```
+
+### Complexity
+
+- Time: `O(N^3)`
+- Space: `O(N^2)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/strange-printer"
+  title="Strange Printer"
+/>

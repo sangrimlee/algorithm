@@ -1,0 +1,39 @@
+/**
+ * 664. Strange Printer
+ * https://leetcode.com/problems/strange-printer
+ */
+export function strangePrinter(s: string): number {
+  const chars = normalize(s);
+  const n = chars.length;
+  if (n <= 2) {
+    return n;
+  }
+
+  const dp: number[][] = Array.from({ length: n }, () =>
+    new Array(n).fill(Number.MAX_SAFE_INTEGER),
+  );
+  for (let start = n - 1; 0 <= start; start--) {
+    dp[start][start] = 1;
+    for (let end = start + 1; end < n; end++) {
+      for (let mid = start; mid < end; mid++) {
+        dp[start][end] = Math.min(dp[start][end], dp[start][mid] + dp[mid + 1][end]);
+      }
+      if (chars[start] === chars[end]) {
+        dp[start][end] -= 1;
+      }
+    }
+  }
+
+  return dp[0][n - 1];
+}
+
+function normalize(s: string): string[] {
+  const chars: string[] = [];
+  for (const char of s) {
+    if (chars.length !== 0 && chars[chars.length - 1] === char) {
+      continue;
+    }
+    chars.push(char);
+  }
+  return chars;
+}
