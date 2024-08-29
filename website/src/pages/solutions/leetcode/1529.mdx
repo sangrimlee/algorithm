@@ -1,0 +1,41 @@
+---
+title: Minimum Suffix Flips
+tags:
+  - String
+  - Greedy
+---
+
+# 1529. Minimum Suffix Flips
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Greedy" slug="greedy" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minFlips(target: string): number {
+  let answer = 0;
+  let current = '0';
+  for (const char of target) {
+    if (current !== char) {
+      current = char;
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-suffix-flips"
+  title="Minimum Suffix Flips"
+/>
