@@ -1,0 +1,134 @@
+---
+title: Iterator for Combination
+tags:
+  - String
+  - Backtracking
+  - Design
+  - Iterator
+---
+
+# 1286. Iterator for Combination
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="Backtracking" slug="backtracking" />
+  <TopicBadge name="Design" slug="design" />
+  <TopicBadge name="Iterator" slug="iterator" />
+</Badges>
+
+## Solution
+
+### Solution1: `Backtracking`
+
+`Backtracking`을 통해, 모든 `combinations`를 구하는 방법
+
+```typescript filename="solution.ts" copyclass CombinationIterator {
+  public characters: string;
+  public combinationLength: number;
+  private currentIndex: number;
+  private readonly combinations: string[];
+
+  constructor(characters: string, combinationLength: number) {
+    this.characters = characters;
+    this.combinationLength = combinationLength;
+    this.combinations = [];
+    this.currentIndex = -1;
+    this.generate();
+  }
+
+  private generate(s = '', startIndex = 0) {
+    if (s.length === this.combinationLength) {
+      this.combinations.push(s);
+      return;
+    }
+
+    for (let i = startIndex; i < this.characters.length; i++) {
+      this.generate(s + this.characters[i], i + 1);
+    }
+  }
+
+  next(): string {
+    if (!this.hasNext()) {
+      return '';
+    }
+    this.currentIndex += 1;
+    return this.combinations[this.currentIndex];
+  }
+
+  hasNext(): boolean {
+    return this.currentIndex + 1 < this.combinations.length;
+  }
+}
+```
+
+#### Complexity
+
+- Time
+  - `CombinationIterator`: `O(LCN)`
+  - `next`: `O(1)`
+  - `hasNext`: `O(1)`
+- Space: `O(LCN)`
+
+---
+
+### Solution2: `Bit Manipulation`
+
+`Bit Manipulation`을 사용하여 각각의 `combination`을 구하는 방법
+
+예를 들어, `abc`에서, `ab`는 `110`, `ac`는 `101`과 같이 현재 `combination`을 `Bit`를 사용하여 구할 수 있다.
+
+`updateMask`는 [Gosper's hack](https://stackoverflow.com/questions/18929306/efficient-way-to-find-next-smaller-number-with-same-number-of-1-bits/18930479#18930479)을 사용하여,
+현재 `mask`보다 다음으로 작은 비트의 개수가 `N`인 정수를 구할 수 있습니다.
+
+```typescript filename="solution.ts" copy
+export class CombinationIterator {
+  public characters: string;
+  public length: number;
+  public combinationLength: number;
+  private mask: number;
+
+  constructor(characters: string, combinationLength: number) {
+    this.characters = characters;
+    this.length = characters.length;
+    this.combinationLength = combinationLength;
+    this.mask = ((1 << combinationLength) - 1) << (this.length - combinationLength);
+  }
+
+  private updateMask() {
+    const t = this.mask + 1;
+    const u = t ^ this.mask;
+    const v = t & this.mask;
+    this.mask = v - (v & -v) / (u + 1);
+  }
+
+  next(): string {
+    let combination = '';
+    for (let i = this.length - 1; 0 <= i; i--) {
+      if (this.mask & (1 << i)) {
+        combination += this.characters[this.length - i - 1];
+      }
+    }
+    this.updateMask();
+    return combination;
+  }
+
+  hasNext(): boolean {
+    return Boolean(this.mask);
+  }
+}
+```
+
+#### Complexity
+
+- Time
+  - `CombinationIterator`: `O(L)`
+  - `next`: `O(L)`
+  - `hasNext`: `O(1)`
+- Space: `O(L)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/iterator-for-combination"
+  title="Iterator for Combination"
+/>
