@@ -1,0 +1,39 @@
+---
+title: XOR Queries of a Subarray
+tags:
+  - Array
+  - Bit Manipulation
+  - Prefix Sum
+---
+
+# 1310. XOR Queries of a Subarray
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+  <TopicBadge name="Prefix Sum" slug="prefix-sum" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function xorQueries(arr: number[], queries: number[][]): number[] {
+  const n = arr.length;
+  for (let i = 1; i < n; i++) {
+    arr[i] ^= arr[i - 1];
+  }
+  return queries.map(([left, right]) => (left === 0 ? arr[right] : arr[left - 1] ^ arr[right]));
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/xor-queries-of-a-subarray"
+  title="XOR Queries of a Subarray"
+/>
