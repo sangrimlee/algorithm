@@ -1,0 +1,109 @@
+---
+title: Linked List in Binary Tree
+tags:
+  - Linked List
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 1367. Linked List in Binary Tree
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Linked List" slug="linked-list" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+### Solution1: `DFS` (`Recursion`)
+
+```typescript filename="solution.ts" copy
+import { ListNode, TreeNode } from '@algorithm/lib';
+
+export function isSubPath(head: ListNode | null, root: TreeNode | null): boolean {
+  if (head === null) {
+    return true;
+  }
+  if (root === null) {
+    return false;
+  }
+
+  const arr = [head.val];
+  const dp = [0];
+  let currentIndex = 0;
+  let currentNode = head.next;
+  while (currentNode !== null) {
+    while (0 < currentIndex && currentNode.val !== arr[currentIndex]) {
+      currentIndex = dp[currentIndex - 1];
+    }
+    currentIndex += currentNode.val === arr[currentIndex] ? 1 : 0;
+    arr.push(currentNode.val);
+    dp.push(currentIndex);
+    currentNode = currentNode.next;
+  }
+
+  function dfs(root: TreeNode | null, i: number): boolean {
+    if (root === null) {
+      return false;
+    }
+    while (0 < i && root.val !== arr[i]) {
+      i = dp[i - 1];
+    }
+    i += root.val === arr[i] ? 1 : 0;
+    return i === dp.length || dfs(root.left, i) || dfs(root.right, i);
+  }
+
+  return dfs(root, 0);
+}
+```
+
+#### Complexity
+
+- Time: `O(N * min(L,H))`
+- Space: `O(H)`
+
+---
+
+### Solution2: `DP`
+
+```typescript filename="solution.ts" copy
+import { ListNode, TreeNode } from '@algorithm/lib';
+
+export function isSubPath(head: ListNode | null, root: TreeNode | null): boolean {
+  if (head === null) {
+    return true;
+  }
+  if (root === null) {
+    return false;
+  }
+
+  return dfs(head, root) || isSubPath(head, root.left) || isSubPath(head, root.right);
+}
+
+function dfs(head: ListNode, root: TreeNode): boolean {
+  if (head === null) {
+    return true;
+  }
+  if (root === null) {
+    return false;
+  }
+  return head.val === root.val && (dfs(head.next, root.left) || dfs(head.next, root.right));
+}
+```
+
+#### Complexity
+
+- Time: `O(N + L)`
+- Space: `O(L + H)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/linked-list-in-binary-tree"
+  title="Linked List in Binary Tree"
+/>
