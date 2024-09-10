@@ -1087,6 +1087,7 @@
 | 3270      | [Find the Key of the Numbers](https://leetcode.com/problems/find-the-key-of-the-numbers)                                                                                                 | [보러가기](src/2024-09/03/leetcode-3270.ts) |
 | 3271      | [Hash Divided String](https://leetcode.com/problems/hash-divided-string)                                                                                                                 | [보러가기](src/2024-09/01/leetcode-3271.ts) |
 | 3274      | [Check if Two Chessboard Squares Have the Same Color](https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color)                                                 | [보러가기](src/2024-09/08/leetcode-3274.ts) |
+| 3280      | [Convert Date to Binary](https://leetcode.com/problems/convert-date-to-binary)                                                                                                           | [보러가기](src/2024-09/09/leetcode-3280.ts) |
 
 ### Programmers
 
