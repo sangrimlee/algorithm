@@ -1096,6 +1096,7 @@
 | 3274      | [Check if Two Chessboard Squares Have the Same Color](https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color)                                                 | [보러가기](src/2024-09/08/leetcode-3274.ts) |
 | 3280      | [Convert Date to Binary](https://leetcode.com/problems/convert-date-to-binary)                                                                                                           | [보러가기](src/2024-09/09/leetcode-3280.ts) |
 | 3285      | [Find Indices of Stable Mountains](https://leetcode.com/problems/find-indices-of-stable-mountains)                                                                                       | [보러가기](src/2024-09/17/leetcode-3285.ts) |
+| 3289      | [The Two Sneaky Numbers of Digitville](https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville)                                                                               | [보러가기](src/2024-09/18/leetcode-3289.ts) |
 
 ### Programmers
 
