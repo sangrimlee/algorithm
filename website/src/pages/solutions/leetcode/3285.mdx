@@ -1,0 +1,38 @@
+---
+title: Find Indices of Stable Mountains
+tags:
+  - Array
+---
+
+# 3285. Find Indices of Stable Mountains
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function stableMountains(height: number[], threshold: number): number[] {
+  const n = height.length;
+  const answer: number[] = [];
+  for (let i = 1; i < n; i++) {
+    if (height[i - 1] > threshold) {
+      answer.push(i);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-indices-of-stable-mountains"
+  title="Find Indices of Stable Mountains"
+/>
