@@ -1,0 +1,62 @@
+---
+title: Lexicographical Numbers
+tags:
+  - Depth-First Search
+  - Trie
+---
+
+# 386. Lexicographical Numbers
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Trie" slug="trie" />
+</Badges>
+
+## Solution
+
+### Solution1: `Sort`
+
+```typescript filename="solution.ts" copy
+export function lexicalOrder(n: number): number[] {
+  return Array.from({ length: n }, (_, i) => i + 1).sort();
+}
+```
+
+#### Complexity
+
+- Time: `O(NlogN)`
+- Space: `O(1)`
+  - `sort`로 인하여 `N`만큼의 추가 공간이 필요하지만 고려하지 않음
+
+### Solution2: `DFS`
+
+```typescript filename="solution.ts" copy
+export function lexicalOrder(n: number): number[] {
+  const answer: number[] = [];
+  function dfs(num: number): void {
+    if (n < num) {
+      return;
+    }
+    answer.push(num);
+    for (let digit = 0; digit < 10; digit++) {
+      dfs(10 * num + digit);
+    }
+  }
+  for (let i = 1; i < 10; i++) {
+    dfs(i);
+  }
+  return answer;
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/lexicographical-numbers"
+  title="Lexicographical Numbers"
+/>
