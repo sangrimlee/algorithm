@@ -1110,6 +1110,7 @@
 | 3285      | [Find Indices of Stable Mountains](https://leetcode.com/problems/find-indices-of-stable-mountains)                                                                                       | [보러가기](src/2024-09/17/leetcode-3285.ts) |
 | 3289      | [The Two Sneaky Numbers of Digitville](https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville)                                                                               | [보러가기](src/2024-09/18/leetcode-3289.ts) |
 | 3300      | [Minimum Element After Replacement With Digit Sum](https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum)                                                       | [보러가기](src/2024-09/30/leetcode-3300.ts) |
+| 3304      | [Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i)                                                                       | [보러가기](src/2024-10/02/leetcode-3304.ts) |
 
 ### Programmers
 
