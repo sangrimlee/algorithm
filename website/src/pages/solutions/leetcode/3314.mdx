@@ -1,0 +1,41 @@
+---
+title: Construct the Minimum Bitwise Array I
+tags:
+  - Array
+  - Bit Manipulation
+---
+
+# 3314. Construct the Minimum Bitwise Array I
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Bit Manipulation" slug="bit-manipulation" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minBitwiseArray(nums: number[]): number[] {
+  const answer = [];
+  for (const num of nums) {
+    if (num % 2 === 0) {
+      answer.push(-1);
+    } else {
+      answer.push(num - Math.floor(((num + 1) & (-num - 1)) / 2));
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/construct-the-minimum-bitwise-array-i"
+  title="Construct the Minimum Bitwise Array I"
+/>
