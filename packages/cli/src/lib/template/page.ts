@@ -106,20 +106,34 @@ LeetCode와 Programmers의 문제들을 저만의 방식으로 푼 것을 공유
 ## 문제 풀이 목록
 
 <Tabs items={['LeetCode', 'Programmers']}>
-  <Tab>
-  
+  <Tabs.Tab>
+
 ${leetCodeTable}
 
-  </Tab>
-  <Tab>
+  </Tabs.Tab>
+
+  <Tabs.Tab>
 
 ${programmersTable}
 
-  </Tab>
+  </Tabs.Tab>
 </Tabs>
 
 [Github에서 보기](https://github.com/sangrimlee/algorithm/tree/main/solution)`,
     'mdx',
   );
+  return template;
+}
+
+export async function createSolutionPageMeta(meta: Record<string, string>) {
+  const template = await format(
+    `
+const meta = ${JSON.stringify(meta, null, 2)};
+
+export default meta;
+`,
+    'typescript',
+  );
+
   return template;
 }

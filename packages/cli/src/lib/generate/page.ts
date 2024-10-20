@@ -3,7 +3,7 @@ import path from 'node:path';
 
 import { getLeetCodeQuestionBySlug } from '@/api/leetcode';
 import { groupByCodingSite, getSolutions } from '@/api/solution';
-import { ensureWriteFile, ensureWriteJson } from '@/utils/fs';
+import { ensureWriteFile } from '@/utils/fs';
 import {
   createIntroductionPageTemplate,
   createLeetCodeSolutionPageTemplate,
@@ -12,6 +12,7 @@ import {
 
 import { EXTNAME } from '@/constants';
 import { CodingSite, LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
+import { createSolutionPageMeta } from '../template/page';
 
 async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
   try {
@@ -56,8 +57,12 @@ export async function generateSolutionPageMeta(
       codingSite === CodingSite.LeetCode ? [id, `${id}. ${title}`] : [id, title],
     ),
   );
+  const template = await createSolutionPageMeta(meta);
 
-  await ensureWriteJson(path.join(outDir, codingSite.toLowerCase(), `_meta${EXTNAME.JSON}`), meta);
+  await ensureWriteFile(
+    path.join(outDir, codingSite.toLowerCase(), `_meta${EXTNAME.TYPESCRIPT}`),
+    template,
+  );
 }
 
 export async function generateIntroductionPage(

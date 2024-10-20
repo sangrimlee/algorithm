@@ -5,6 +5,12 @@ import './src/env.mjs';
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './src/theme.config.tsx',
+  latex: {
+    renderer: 'mathjax',
+  },
+  search: {
+    codeblocks: false,
+  },
 });
 
 /** @type {import("next").NextConfig} */
