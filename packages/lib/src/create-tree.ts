@@ -11,25 +11,28 @@ export class TreeNode {
 
 export function createTree(arr: (number | null)[]) {
   const n = arr.length;
-  if (n === 0) {
+  if (n === 0 || typeof arr[0] !== 'number') {
     return null;
   }
 
-  const treeNodes = arr.map((value) => (value !== null ? new TreeNode(value) : null));
-  treeNodes.forEach((currentNode, i) => {
-    if (currentNode) {
-      const leftNode = 2 * (i + 1) - 1;
-      const rightNode = leftNode + 1;
-      if (leftNode < n) {
-        currentNode.left = treeNodes[leftNode];
-      }
-      if (rightNode < n) {
-        currentNode.right = treeNodes[rightNode];
-      }
+  const rootNode = new TreeNode(arr[0]);
+  const queue = [rootNode];
+  for (let i = 1; i < n; i += 2) {
+    const parentNode = queue.shift()!;
+    const [leftValue, rightValue] = [arr[i], arr[i + 1]];
+    if (typeof leftValue === 'number') {
+      const leftNode = new TreeNode(leftValue);
+      parentNode.left = leftNode;
+      queue.push(leftNode);
     }
-  });
 
-  return treeNodes[0];
+    if (typeof rightValue === 'number') {
+      const rightNode = new TreeNode(rightValue);
+      parentNode.right = rightNode;
+      queue.push(rightNode);
+    }
+  }
+  return rootNode;
 }
 
 export function compareTree(node1: TreeNode | null, node2: TreeNode | null): boolean {
