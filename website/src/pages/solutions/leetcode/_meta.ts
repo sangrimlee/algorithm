@@ -606,6 +606,7 @@ const meta = {
   '1588': '1588. Sum of All Odd Length Subarrays',
   '1590': '1590. Make Sum Divisible by P',
   '1592': '1592. Rearrange Spaces Between Words',
+  '1593': '1593. Split a String Into the Max Number of Unique Substrings',
   '1598': '1598. Crawler Log Folder',
   '1603': '1603. Design Parking System',
   '1605': '1605. Find Valid Matrix Given Row and Column Sums',
