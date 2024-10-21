@@ -8,7 +8,7 @@ describe('2022-12-10: Leetcode 1339', () => {
   });
 
   test('Example 2', () => {
-    const root = createTree([1, 2, null, 3, 4, null, null, null, null, 5, 6]);
+    const root = createTree([1, null, 2, 3, 4, null, null, 5, 6]);
     expect(maxProduct(root)).toBe(90);
   });
 });

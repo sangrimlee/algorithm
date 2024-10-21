@@ -6,6 +6,6 @@ describe('2023-07-10: LeetCode 111', () => {
     expect(minDepth(createTree([3, 9, 20, null, null, 15, 7]))).toEqual(2);
   });
   test('Example 2', () => {
-    expect(minDepth(createTree([2, 3, null, 4, null, null, null, 5]))).toEqual(4);
+    expect(minDepth(createTree([2, null, 3, null, 4, null, 5, null, 6]))).toEqual(5);
   });
 });

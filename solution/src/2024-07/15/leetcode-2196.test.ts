@@ -18,7 +18,7 @@ describe('2024-07-15: LeetCode 2196', () => {
     ).toBe(true);
   });
   test('Example 2', () => {
-    const answer = createTree([1, 2, null, null, 3, null, null, null, null, 4]);
+    const answer = createTree([1, 2, null, null, 3, 4]);
     expect(
       compareTree(
         createBinaryTree([
