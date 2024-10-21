@@ -9,6 +9,6 @@ describe('2024-04-17: LeetCode 988', () => {
     expect(smallestFromLeaf(createTree([25, 1, 3, 1, 3, 0, 2]))).toEqual('adz');
   });
   test('Example 3', () => {
-    expect(smallestFromLeaf(createTree([2, 2, 1, null, 1, 0, null, null, null, 0]))).toEqual('abc');
+    expect(smallestFromLeaf(createTree([2, 2, 1, null, 1, 0, null, 0]))).toEqual('abc');
   });
 });

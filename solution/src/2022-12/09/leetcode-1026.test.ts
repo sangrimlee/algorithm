@@ -8,7 +8,7 @@ describe('2022-12-09: Leetcode 1026', () => {
   });
 
   test('Example 2', () => {
-    const root = createTree([1, 2, null, 0, null, null, null, 3]);
+    const root = createTree([1, null, 2, null, 0, 3]);
     expect(maxAncestorDiff(root)).toBe(3);
   });
 });
