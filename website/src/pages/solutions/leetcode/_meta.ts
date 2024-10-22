@@ -930,6 +930,7 @@ const meta = {
   '2574': '2574. Left and Right Sum Differences',
   '2578': '2578. Split With Minimum Sum',
   '2582': '2582. Pass the Pillow',
+  '2583': '2583. Kth Largest Sum in a Binary Tree',
   '2586': '2586. Count the Number of Vowel Strings in Range',
   '2591': '2591. Distribute Money to Maximum Children',
   '2595': '2595. Number of Even and Odd Bits',
