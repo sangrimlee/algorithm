@@ -959,6 +959,7 @@ const meta = {
   '2636': '2636. Promise Pool',
   '2637': '2637. Promise Time Limit',
   '2639': '2639. Find the Width of Columns of a Grid',
+  '2641': '2641. Cousins in Binary Tree II',
   '2642': '2642. Design Graph With Shortest Path Calculator',
   '2643': '2643. Row With Maximum Ones',
   '2644': '2644. Find the Maximum Divisibility Score',
