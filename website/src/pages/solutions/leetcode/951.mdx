@@ -1,0 +1,107 @@
+---
+title: Flip Equivalent Binary Trees
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 951. Flip Equivalent Binary Trees
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Tree" slug="tree" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Binary Tree" slug="binary-tree" />
+</Badges>
+
+## Solution
+
+### Solution1: `Recursion`
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {
+  if (root1 === null && root2 === null) {
+    return true;
+  }
+  if (root1 === null || root2 === null) {
+    return false;
+  }
+  if (root1.val !== root2.val) {
+    return false;
+  }
+
+  return (
+    (flipEquiv(root1.left, root2.right) && flipEquiv(root1.right, root2.left)) ||
+    (flipEquiv(root1.left, root2.left) && flipEquiv(root1.right, root2.right))
+  );
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+---
+
+### Solution2: `Canonical Forms`
+
+- 두 개의 트리를 동일한 형태 (`node.left`가 `node.right`보다 작고, 둘 중 하나가 `null`인 경우, `node.right`가 `null`인 형태)로 만들어서 비교
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {
+  convert(root1);
+  convert(root2);
+  return areEquivalent(root1, root2);
+}
+
+function areEquivalent(root1: TreeNode | null, root2: TreeNode | null): boolean {
+  if (root1 === null && root2 === null) {
+    return true;
+  }
+  if (root1 === null || root2 === null) {
+    return false;
+  }
+  if (root1.val !== root2.val) {
+    return false;
+  }
+  return areEquivalent(root1.left, root2.left) && areEquivalent(root1.right, root2.right);
+}
+
+function convert(node: TreeNode | null): void {
+  if (node === null) {
+    return;
+  }
+  convert(node.left);
+  convert(node.right);
+
+  if (node.right === null) {
+    return;
+  }
+  if (node.left === null) {
+    node.left = node.right;
+    node.right = null;
+    return;
+  }
+
+  if (node.left.val > node.right.val) {
+    [node.left, node.right] = [node.right, node.left];
+  }
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/flip-equivalent-binary-trees"
+  title="Flip Equivalent Binary Trees"
+/>

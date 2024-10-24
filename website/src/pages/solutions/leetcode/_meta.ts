@@ -389,6 +389,7 @@ const meta = {
   '947': '947. Most Stones Removed with Same Row or Column',
   '948': '948. Bag of Tokens',
   '950': '950. Reveal Cards In Increasing Order',
+  '951': '951. Flip Equivalent Binary Trees',
   '953': '953. Verifying an Alien Dictionary',
   '959': '959. Regions Cut By Slashes',
   '961': '961. N-Repeated Element in Size 2N Array',
