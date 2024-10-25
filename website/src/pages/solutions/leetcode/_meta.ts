@@ -468,6 +468,7 @@ const meta = {
   '1220': '1220. Count Vowels Permutation',
   '1221': '1221. Split a String in Balanced Strings',
   '1232': '1232. Check If It Is a Straight Line',
+  '1233': '1233. Remove Sub-Folders from the Filesystem',
   '1239': '1239. Maximum Length of a Concatenated String with Unique Characters',
   '1248': '1248. Count Number of Nice Subarrays',
   '1249': '1249. Minimum Remove to Make Valid Parentheses',
