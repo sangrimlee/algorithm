@@ -1,0 +1,44 @@
+/**
+ * 3318. Find X-Sum of All K-Long Subarrays I
+ * https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i
+ */
+export function findXSum(nums: number[], k: number, x: number): number[] {
+  const n = nums.length;
+  const counter = new Counter(nums.slice(0, k));
+  const answer = [counter.xSum(x)];
+  for (let i = k; i < n; i++) {
+    counter.sub(nums[i - k]);
+    counter.add(nums[i]);
+    answer.push(counter.xSum(x));
+  }
+  return answer;
+}
+
+class Counter {
+  private readonly map: Map<number, number>;
+  constructor(nums: number[]) {
+    this.map = new Map();
+    nums.forEach((num) => {
+      this.add(num);
+    });
+  }
+
+  get(key: number): number {
+    return this.map.get(key) ?? 0;
+  }
+
+  add(key: number) {
+    return this.map.set(key, this.get(key) + 1);
+  }
+
+  sub(key: number) {
+    return this.map.set(key, this.get(key) - 1);
+  }
+
+  xSum(x: number) {
+    return [...this.map.entries()]
+      .sort((a, b) => (a[1] !== b[1] ? b[1] - a[1] : b[0] - a[0]))
+      .slice(0, x)
+      .reduce((prev, curr) => prev + curr[0] * curr[1], 0);
+  }
+}

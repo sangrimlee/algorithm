@@ -1128,6 +1128,7 @@ const meta = {
   '3300': '3300. Minimum Element After Replacement With Digit Sum',
   '3304': '3304. Find the K-th Character in String Game I',
   '3314': '3314. Construct the Minimum Bitwise Array I',
+  '3318': '3318. Find X-Sum of All K-Long Subarrays I',
 };
 
 export default meta;
