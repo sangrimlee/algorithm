@@ -912,6 +912,7 @@ const meta = {
   '2491': '2491. Divide Players Into Teams of Equal Skill',
   '2496': '2496. Maximum Value of a String in an Array',
   '2500': '2500. Delete Greatest Value in Each Row',
+  '2501': '2501. Longest Square Streak in an Array',
   '2506': '2506. Count Pairs Of Similar Strings',
   '2511': '2511. Maximum Enemy Forts That Can Be Captured',
   '2515': '2515. Shortest Distance to Target String in a Circular Array',
