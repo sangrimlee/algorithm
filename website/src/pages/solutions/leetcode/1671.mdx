@@ -1,0 +1,118 @@
+---
+title: Minimum Number of Removals to Make Mountain Array
+tags:
+  - Array
+  - Binary Search
+  - Dynamic Programming
+  - Greedy
+---
+
+# 1671. Minimum Number of Removals to Make Mountain Array
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Binary Search" slug="binary-search" />
+  <TopicBadge name="Dynamic Programming" slug="dynamic-programming" />
+  <TopicBadge name="Greedy" slug="greedy" />
+</Badges>
+
+## Solution
+
+### Solution1: `Dynamic Programming`
+
+```typescript filename="solution.ts" copy
+function minimumMountainRemovals(nums: number[]): number {
+  const n = nums.length;
+  const lis = new Array<number>(n).fill(1);
+  const lds = new Array<number>(n).fill(1);
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < i; j++) {
+      if (nums[j] < nums[i]) {
+        lis[i] = Math.max(lis[i], lis[j] + 1);
+      }
+    }
+  }
+
+  for (let i = n - 1; 0 <= i; i--) {
+    for (let j = i + 1; j < n; j++) {
+      if (nums[j] < nums[i]) {
+        lds[i] = Math.max(lds[i], lds[j] + 1);
+      }
+    }
+  }
+
+  let answer = n;
+  for (let i = 0; i < n; i++) {
+    if (1 < lis[i] && 1 < lds[i]) {
+      answer = Math.min(answer, n - lis[i] - lds[i] + 1);
+    }
+  }
+  return answer;
+}
+```
+
+#### Complexity
+
+- Time: $O(N^2)$
+- Space: $O(N)$
+
+---
+
+### Solution2: `Binary Search`
+
+```typescript filename="solution.ts" copy
+export function minimumMountainRemovals(nums: number[]): number {
+  const n = nums.length;
+  const lisLength = getLISLength(nums);
+  const ldsLength = getLISLength(nums.reverse()).reverse();
+
+  let answer = n;
+  for (let i = 0; i < n; i++) {
+    if (1 < lisLength[i] && 1 < ldsLength[i]) {
+      answer = Math.min(answer, n - lisLength[i] - ldsLength[i] + 1);
+    }
+  }
+  return answer;
+}
+
+function lowerBound(arr: number[], target: number): number {
+  let [left, right] = [0, arr.length];
+  while (left < right) {
+    const mid = left + Math.floor((right - left) / 2);
+    if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+}
+
+function getLISLength(arr: number[]): number[] {
+  const result = new Array<number>(arr.length).fill(1);
+  const lis = [arr[0]];
+  for (let i = 0; i < arr.length; i++) {
+    const index = lowerBound(lis, arr[i]);
+    if (index === lis.length) {
+      lis.push(arr[i]);
+    } else {
+      lis[index] = arr[i];
+    }
+    result[i] = lis.length;
+  }
+  return result;
+}
+```
+
+#### Complexity
+
+- Time: $O(N \cdot log_2N)$
+- Space: $O(N)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array"
+  title="Minimum Number of Removals to Make Mountain Array"
+/>

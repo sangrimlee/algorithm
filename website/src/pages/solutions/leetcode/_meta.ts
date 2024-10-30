@@ -634,6 +634,7 @@ const meta = {
   '1662': '1662. Check If Two String Arrays are Equivalent',
   '1668': '1668. Maximum Repeating Substring',
   '1669': '1669. Merge In Between Linked Lists',
+  '1671': '1671. Minimum Number of Removals to Make Mountain Array',
   '1672': '1672. Richest Customer Wealth',
   '1678': '1678. Goal Parser Interpretation',
   '1679': '1679. Max Number of K-Sum Pairs',
