@@ -899,6 +899,7 @@ const meta = {
   '2458': '2458. Height of Binary Tree After Subtree Removal Queries',
   '2460': '2460. Apply Operations to an Array',
   '2462': '2462. Total Cost to Hire K Workers',
+  '2463': '2463. Minimum Total Distance Traveled',
   '2465': '2465. Number of Distinct Averages',
   '2466': '2466. Count Ways To Build Good Strings',
   '2469': '2469. Convert the Temperature',
