@@ -1140,6 +1140,7 @@
 | 3304      | [Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i)                                                                       | [보러가기](src/2024-10/02/leetcode-3304.ts) |
 | 3314      | [Construct the Minimum Bitwise Array I](https://leetcode.com/problems/construct-the-minimum-bitwise-array-i)                                                                             | [보러가기](src/2024-10/18/leetcode-3314.ts) |
 | 3318      | [Find X-Sum of All K-Long Subarrays I](https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i)                                                                               | [보러가기](src/2024-10/27/leetcode-3318.ts) |
+| 3330      | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i)                                                                                       | [보러가기](src/2024-11/01/leetcode-3330.ts) |
 
 ### Programmers
 
