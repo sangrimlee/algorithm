@@ -442,6 +442,7 @@ const meta = {
   '1106': '1106. Parsing A Boolean Expression',
   '1108': '1108. Defanging an IP Address',
   '1110': '1110. Delete Nodes And Return Forest',
+  '1111': '1111. Maximum Nesting Depth of Two Valid Parentheses Strings',
   '1122': '1122. Relative Sort Array',
   '1123': '1123. Lowest Common Ancestor of Deepest Leaves',
   '1128': '1128. Number of Equivalent Domino Pairs',
