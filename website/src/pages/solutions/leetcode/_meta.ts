@@ -468,6 +468,7 @@ const meta = {
   '1219': '1219. Path with Maximum Gold',
   '1220': '1220. Count Vowels Permutation',
   '1221': '1221. Split a String in Balanced Strings',
+  '1222': '1222. Queens That Can Attack the King',
   '1232': '1232. Check If It Is a Straight Line',
   '1233': '1233. Remove Sub-Folders from the Filesystem',
   '1239': '1239. Maximum Length of a Concatenated String with Unique Characters',
