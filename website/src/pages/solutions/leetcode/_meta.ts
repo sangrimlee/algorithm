@@ -1103,6 +1103,7 @@ const meta = {
   '3158': '3158. Find the XOR of Numbers Which Appear Twice',
   '3159': '3159. Find Occurrences of an Element in an Array',
   '3162': '3162. Find the Number of Good Pairs I',
+  '3163': '3163. String Compression III',
   '3168': '3168. Minimum Number of Chairs in a Waiting Room',
   '3174': '3174. Clear Digits',
   '3178': '3178. Find the Child Who Has the Ball After K Seconds',
