@@ -1045,6 +1045,7 @@ const meta = {
   '2903': '2903. Find Indices With Index and Value Difference I',
   '2908': '2908. Minimum Sum of Mountain Triplets I',
   '2913': '2913. Subarrays Distinct Element Sum of Squares I',
+  '2914': '2914. Minimum Number of Changes to Make Binary String Beautiful',
   '2917': '2917. Find the K-or of an Array',
   '2923': '2923. Find Champion I',
   '2928': '2928. Distribute Candies Among Children I',
