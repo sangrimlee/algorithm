@@ -1071,6 +1071,7 @@ const meta = {
   '3000': '3000. Maximum Area of Longest Diagonal Rectangle',
   '3005': '3005. Count Elements With Maximum Frequency',
   '3010': '3010. Divide an Array Into Subarrays With Minimum Cost I',
+  '3011': '3011. Find if Array Can Be Sorted',
   '3014': '3014. Minimum Number of Pushes to Type Word I',
   '3016': '3016. Minimum Number of Pushes to Type Word II',
   '3019': '3019. Number of Changing Keys',
