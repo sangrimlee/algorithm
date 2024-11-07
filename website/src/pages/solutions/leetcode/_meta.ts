@@ -1139,6 +1139,7 @@ const meta = {
   '3314': '3314. Construct the Minimum Bitwise Array I',
   '3318': '3318. Find X-Sum of All K-Long Subarrays I',
   '3330': '3330. Find the Original Typed String I',
+  '3340': '3340. Check Balanced String',
 };
 
 export default meta;
