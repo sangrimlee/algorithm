@@ -857,6 +857,7 @@ const meta = {
   '2326': '2326. Spiral Matrix IV',
   '2331': '2331. Evaluate Boolean Binary Tree',
   '2335': '2335. Minimum Amount of Time to Fill Cups',
+  '2336': '2336. Smallest Number in Infinite Set',
   '2341': '2341. Maximum Number of Pairs in Array',
   '2347': '2347. Best Poker Hand',
   '2351': '2351. First Letter to Appear Twice',
