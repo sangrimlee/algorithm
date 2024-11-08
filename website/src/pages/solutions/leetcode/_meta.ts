@@ -1139,6 +1139,7 @@ const meta = {
   '3304': '3304. Find the K-th Character in String Game I',
   '3314': '3314. Construct the Minimum Bitwise Array I',
   '3318': '3318. Find X-Sum of All K-Long Subarrays I',
+  '3324': '3324. Find the Sequence of Strings Appeared on the Screen',
   '3330': '3330. Find the Original Typed String I',
   '3340': '3340. Check Balanced String',
 };
