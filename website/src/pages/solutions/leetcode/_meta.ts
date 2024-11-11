@@ -1092,6 +1092,7 @@ const meta = {
   '3083': '3083. Existence of a Substring in a String and Its Reverse',
   '3090': '3090. Maximum Length Substring With Two Occurrences',
   '3095': '3095. Shortest Subarray With OR at Least K I',
+  '3097': '3097. Shortest Subarray With OR at Least K II',
   '3099': '3099. Harshad Number',
   '3105': '3105. Longest Strictly Increasing or Strictly Decreasing Subarray',
   '3110': '3110. Score of a String',
