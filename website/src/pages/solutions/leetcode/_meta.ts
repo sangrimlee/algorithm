@@ -945,6 +945,7 @@ const meta = {
   '2595': '2595. Number of Even and Odd Bits',
   '2597': '2597. The Number of Beautiful Subsets',
   '2600': '2600. K Items With the Maximum Sum',
+  '2601': '2601. Prime Subtraction Operation',
   '2605': '2605. Form Smallest Number From Two Digit Arrays',
   '2609': '2609. Find the Longest Balanced Substring of a Binary String',
   '2610': '2610. Convert an Array Into a 2D Array With Conditions',
