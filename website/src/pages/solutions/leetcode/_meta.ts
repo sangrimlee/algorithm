@@ -769,6 +769,7 @@ const meta = {
   '2058': '2058. Find the Minimum and Maximum Number of Nodes Between Critical Points',
   '2062': '2062. Count Vowel Substrings of a String',
   '2068': '2068. Check Whether Two Strings are Almost Equivalent',
+  '2070': '2070. Most Beautiful Item for Each Query',
   '2073': '2073. Time Needed to Buy Tickets',
   '2078': '2078. Two Furthest Houses With Different Colors',
   '2079': '2079. Watering Plants',
