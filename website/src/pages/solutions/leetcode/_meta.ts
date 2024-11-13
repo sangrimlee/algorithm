@@ -935,6 +935,7 @@ const meta = {
   '2553': '2553. Separate the Digits in an Array',
   '2558': '2558. Take Gifts From the Richest Pile',
   '2562': '2562. Find the Array Concatenation Value',
+  '2563': '2563. Count the Number of Fair Pairs',
   '2566': '2566. Maximum Difference by Remapping a Digit',
   '2570': '2570. Merge Two 2D Arrays by Summing Values',
   '2574': '2574. Left and Right Sum Differences',
