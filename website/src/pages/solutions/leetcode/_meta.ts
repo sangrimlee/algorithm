@@ -768,6 +768,7 @@ const meta = {
   '2057': '2057. Smallest Index With Equal Value',
   '2058': '2058. Find the Minimum and Maximum Number of Nodes Between Critical Points',
   '2062': '2062. Count Vowel Substrings of a String',
+  '2064': '2064. Minimized Maximum of Products Distributed to Any Store',
   '2068': '2068. Check Whether Two Strings are Almost Equivalent',
   '2070': '2070. Most Beautiful Item for Each Query',
   '2073': '2073. Time Needed to Buy Tickets',
