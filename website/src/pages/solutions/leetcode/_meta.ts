@@ -603,6 +603,7 @@ const meta = {
   '1568': '1568. Minimum Number of Days to Disconnect Island',
   '1569': '1569. Number of Ways to Reorder Array to Get Same BST',
   '1572': '1572. Matrix Diagonal Sum',
+  '1574': '1574. Shortest Subarray to be Removed to Make Array Sorted',
   '1576': "1576. Replace All ?'s to Avoid Consecutive Repeating Characters",
   '1578': '1578. Minimum Time to Make Rope Colorful',
   '1579': '1579. Remove Max Number of Edges to Keep Graph Fully Traversable',
