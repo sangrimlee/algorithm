@@ -1133,6 +1133,7 @@ const meta = {
   '3239': '3239. Minimum Number of Flips to Make Binary Grid Palindromic I',
   '3242': '3242. Design Neighbor Sum Service',
   '3248': '3248. Snake in Matrix',
+  '3254': '3254. Find the Power of K-Size Subarrays I',
   '3258': '3258. Count Substrings That Satisfy K-Constraint I',
   '3264': '3264. Final Array State After K Multiplication Operations I',
   '3270': '3270. Find the Key of the Numbers',
