@@ -347,6 +347,7 @@ const meta = {
   '857': '857. Minimum Cost to Hire K Workers',
   '860': '860. Lemonade Change',
   '861': '861. Score After Flipping Matrix',
+  '862': '862. Shortest Subarray with Sum at Least K',
   '863': '863. All Nodes Distance K in Binary Tree',
   '867': '867. Transpose Matrix',
   '868': '868. Binary Gap',
