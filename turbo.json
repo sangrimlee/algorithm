@@ -7,7 +7,6 @@
     },
     "build#website": {
       "dependsOn": ["^build"],
-      "env": ["URL", "NEXT_PUBLIC_URL"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
     "dev": {
@@ -25,5 +24,6 @@
     "test:watch": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["URL", "NEXT_PUBLIC_URL"]
 }
