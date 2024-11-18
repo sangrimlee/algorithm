@@ -1150,6 +1150,7 @@ const meta = {
   '3324': '3324. Find the Sequence of Strings Appeared on the Screen',
   '3330': '3330. Find the Original Typed String I',
   '3340': '3340. Check Balanced String',
+  '3345': '3345. Smallest Divisible Digit Product I',
 };
 
 export default meta;

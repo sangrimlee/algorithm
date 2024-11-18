@@ -1157,6 +1157,7 @@
 | 3324      | [Find the Sequence of Strings Appeared on the Screen](https://leetcode.com/problems/find-the-sequence-of-strings-appeared-on-the-screen)                                                 | [보러가기](src/2024-11/09/leetcode-3324.ts) |
 | 3330      | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i)                                                                                       | [보러가기](src/2024-11/01/leetcode-3330.ts) |
 | 3340      | [Check Balanced String](https://leetcode.com/problems/check-balanced-string)                                                                                                             | [보러가기](src/2024-11/07/leetcode-3340.ts) |
+| 3345      | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i)                                                                                   | [보러가기](src/2024-11/18/leetcode-3345.ts) |
 
 ### Programmers
 
