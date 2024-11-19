@@ -905,6 +905,7 @@ const meta = {
   '2455': '2455. Average Value of Even Numbers That Are Divisible by Three',
   '2458': '2458. Height of Binary Tree After Subtree Removal Queries',
   '2460': '2460. Apply Operations to an Array',
+  '2461': '2461. Maximum Sum of Distinct Subarrays With Length K',
   '2462': '2462. Total Cost to Hire K Workers',
   '2463': '2463. Minimum Total Distance Traveled',
   '2465': '2465. Number of Distinct Averages',
