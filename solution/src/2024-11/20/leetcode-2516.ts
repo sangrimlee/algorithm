@@ -1,0 +1,48 @@
+/**
+ * 2516. Take K of Each Character From Left and Right
+ * https://leetcode.com/problems/take-k-of-each-character-from-left-and-right
+ */
+export function takeCharacters(s: string, k: number): number {
+  const n = s.length;
+  const freqs = new CharCounter(s);
+  for (const char of 'abc') {
+    if (freqs.get(char) < k) {
+      return -1;
+    }
+  }
+
+  let left = 0;
+  let maxWindow = 0;
+  const counter = new CharCounter();
+  for (let right = 0; right < n; right++) {
+    const char = s[right];
+    counter.add(char);
+    while (freqs.get(char) - k < counter.get(char)) {
+      counter.sub(s[left]);
+      left += 1;
+    }
+    maxWindow = Math.max(maxWindow, right - left + 1);
+  }
+  return n - maxWindow;
+}
+
+class CharCounter extends Map<string, number> {
+  constructor(values: string | string[] = []) {
+    super();
+    for (const value of values) {
+      this.add(value);
+    }
+  }
+
+  get(key: string): number {
+    return super.get(key) ?? 0;
+  }
+
+  add(key: string): void {
+    super.set(key, this.get(key) + 1);
+  }
+
+  sub(key: string): void {
+    super.set(key, this.get(key) - 1);
+  }
+}

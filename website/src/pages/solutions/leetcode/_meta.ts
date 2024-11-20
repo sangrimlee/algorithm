@@ -926,6 +926,7 @@ const meta = {
   '2506': '2506. Count Pairs Of Similar Strings',
   '2511': '2511. Maximum Enemy Forts That Can Be Captured',
   '2515': '2515. Shortest Distance to Target String in a Circular Array',
+  '2516': '2516. Take K of Each Character From Left and Right',
   '2520': '2520. Count the Digits That Divide a Number',
   '2525': '2525. Categorize Box According to Criteria',
   '2529': '2529. Maximum Count of Positive Integer and Negative Integer',
