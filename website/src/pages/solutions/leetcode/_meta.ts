@@ -838,6 +838,7 @@ const meta = {
   '2251': '2251. Number of Flowers in Full Bloom',
   '2255': '2255. Count Prefixes of a Given String',
   '2256': '2256. Minimum Average Difference',
+  '2257': '2257. Count Unguarded Cells in the Grid',
   '2259': '2259. Remove Digit From Number to Maximize Result',
   '2264': '2264. Largest 3-Same-Digit Number in String',
   '2265': '2265. Count Nodes Equal to Average of Subtree',
