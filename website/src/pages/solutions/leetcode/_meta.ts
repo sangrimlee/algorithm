@@ -432,6 +432,7 @@ const meta = {
   '1051': '1051. Height Checker',
   '1052': '1052. Grumpy Bookstore Owner',
   '1061': '1061. Lexicographically Smallest Equivalent String',
+  '1072': '1072. Flip Columns For Maximum Number of Equal Rows',
   '1074': '1074. Number of Submatrices That Sum to Target',
   '1078': '1078. Occurrences After Bigram',
   '1079': '1079. Letter Tile Possibilities',
