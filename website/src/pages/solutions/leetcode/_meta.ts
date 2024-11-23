@@ -706,6 +706,7 @@ const meta = {
   '1848': '1848. Minimum Distance to the Target Element',
   '1854': '1854. Maximum Population Year',
   '1859': '1859. Sorting the Sentence',
+  '1861': '1861. Rotating the Box',
   '1863': '1863. Sum of All Subset XOR Totals',
   '1869': '1869. Longer Contiguous Segments of Ones than Zeros',
   '1870': '1870. Minimum Speed to Arrive on Time',
