@@ -744,6 +744,7 @@ const meta = {
   '1967': '1967. Number of Strings That Appear as Substrings in Word',
   '1971': '1971. Find if Path Exists in Graph',
   '1974': '1974. Minimum Time to Type Word Using Special Typewriter',
+  '1975': '1975. Maximum Matrix Sum',
   '1979': '1979. Find Greatest Common Divisor of Array',
   '1980': '1980. Find Unique Binary String',
   '1984': '1984. Minimum Difference Between Highest and Lowest of K Scores',
