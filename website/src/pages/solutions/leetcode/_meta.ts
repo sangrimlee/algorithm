@@ -310,6 +310,7 @@ const meta = {
   '763': '763. Partition Labels',
   '766': '766. Toeplitz Matrix',
   '771': '771. Jewels and Stones',
+  '773': '773. Sliding Puzzle',
   '779': '779. K-th Symbol in Grammar',
   '783': '783. Minimum Distance Between BST Nodes',
   '785': '785. Is Graph Bipartite?',
