@@ -1062,6 +1062,7 @@ const meta = {
   '2914': '2914. Minimum Number of Changes to Make Binary String Beautiful',
   '2917': '2917. Find the K-or of an Array',
   '2923': '2923. Find Champion I',
+  '2924': '2924. Find Champion II',
   '2928': '2928. Distribute Candies Among Children I',
   '2932': '2932. Maximum Strong Pair XOR I',
   '2937': '2937. Make Three Strings Equal',

@@ -1,0 +1,39 @@
+---
+title: Find Champion II
+tags:
+  - Graph
+---
+
+# 2924. Find Champion II
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Graph" slug="graph" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findChampion(n: number, edges: number[][]): number {
+  let championCount = n;
+  const isChampion = new Array<boolean>(n).fill(true);
+  for (const [, loser] of edges) {
+    if (isChampion[loser]) {
+      isChampion[loser] = false;
+      championCount -= 1;
+    }
+  }
+  return championCount === 1 ? isChampion.indexOf(true) : -1;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-champion-ii"
+  title="Find Champion II"
+/>
