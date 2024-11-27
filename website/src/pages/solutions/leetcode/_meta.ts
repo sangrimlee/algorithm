@@ -1141,6 +1141,7 @@ const meta = {
   '3238': '3238. Find the Number of Winning Players',
   '3239': '3239. Minimum Number of Flips to Make Binary Grid Palindromic I',
   '3242': '3242. Design Neighbor Sum Service',
+  '3243': '3243. Shortest Distance After Road Addition Queries I',
   '3248': '3248. Snake in Matrix',
   '3254': '3254. Find the Power of K-Size Subarrays I',
   '3258': '3258. Count Substrings That Satisfy K-Constraint I',
