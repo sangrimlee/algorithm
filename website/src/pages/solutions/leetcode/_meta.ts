@@ -854,6 +854,7 @@ const meta = {
   '2283': '2283. Check if Number Has Equal Digit Count and Digit Value',
   '2285': '2285. Maximum Total Importance of Roads',
   '2287': '2287. Rearrange Characters to Make Target String',
+  '2290': '2290. Minimum Obstacle Removal to Reach Corner',
   '2293': '2293. Min Max Game',
   '2294': '2294. Partition Array Such That Maximum Difference Is K',
   '2299': '2299. Strong Password Checker II',
