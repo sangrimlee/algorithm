@@ -950,6 +950,7 @@ const meta = {
   '2566': '2566. Maximum Difference by Remapping a Digit',
   '2570': '2570. Merge Two 2D Arrays by Summing Values',
   '2574': '2574. Left and Right Sum Differences',
+  '2577': '2577. Minimum Time to Visit a Cell In a Grid',
   '2578': '2578. Split With Minimum Sum',
   '2582': '2582. Pass the Pillow',
   '2583': '2583. Kth Largest Sum in a Binary Tree',
