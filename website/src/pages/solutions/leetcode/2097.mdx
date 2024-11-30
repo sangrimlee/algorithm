@@ -1,0 +1,71 @@
+---
+title: Valid Arrangement of Pairs
+tags:
+  - Depth-First Search
+  - Graph
+  - Eulerian Circuit
+---
+
+# 2097. Valid Arrangement of Pairs
+
+<Badges>
+  <LevelBadge level="hard" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Graph" slug="graph" />
+  <TopicBadge name="Eulerian Circuit" slug="eulerian-circuit" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function validArrangement(pairs: number[][]): number[][] {
+  const graph = new Map<number, number[]>();
+  const degrees = new Map<number, number>();
+  for (const [start, end] of pairs) {
+    if (graph.has(start)) {
+      graph.get(start)!.push(end);
+    } else {
+      graph.set(start, [end]);
+    }
+    degrees.set(start, (degrees.get(start) ?? 0) + 1);
+    degrees.set(end, (degrees.get(end) ?? 0) - 1);
+  }
+
+  let start = pairs[0][0];
+  for (const [node, degree] of degrees) {
+    if (degree === 1) {
+      start = node;
+    }
+  }
+
+  const routes: number[] = [];
+  const stack: number[] = [start];
+  while (0 < stack.length) {
+    let node = stack[stack.length - 1];
+    let nextNodes = graph.get(node) ?? [];
+    while (nextNodes && 0 < nextNodes.length) {
+      stack.push(nextNodes.pop()!);
+      node = stack[stack.length - 1];
+      nextNodes = graph.get(node) ?? [];
+    }
+    routes.push(stack.pop()!);
+  }
+
+  const answer: number[][] = [];
+  for (let i = routes.length - 1; 0 < i; i--) {
+    answer.push([routes[i], routes[i - 1]]);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(V + E)$
+- Space: $O(V + E)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/valid-arrangement-of-pairs"
+  title="Valid Arrangement of Pairs"
+/>
