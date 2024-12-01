@@ -1163,6 +1163,7 @@ const meta = {
   '3330': '3330. Find the Original Typed String I',
   '3340': '3340. Check Balanced String',
   '3345': '3345. Smallest Divisible Digit Product I',
+  '3349': '3349. Adjacent Increasing Subarrays Detection I',
 };
 
 export default meta;
