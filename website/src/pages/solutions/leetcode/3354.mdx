@@ -1,0 +1,52 @@
+---
+title: Make Array Elements Equal to Zero
+tags:
+  - Array
+  - Simulation
+  - Prefix Sum
+---
+
+# 3354. Make Array Elements Equal to Zero
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Simulation" slug="simulation" />
+  <TopicBadge name="Prefix Sum" slug="prefix-sum" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countValidSelections(nums: number[]): number {
+  const n = nums.length;
+  const totalSum = nums.reduce((acc, num) => acc + num, 0);
+
+  let answer = 0;
+  let leftSum = 0;
+  for (let i = 0; i < n; i++) {
+    leftSum += nums[i];
+    if (nums[i] !== 0) {
+      continue;
+    }
+    const rightSum = totalSum - leftSum;
+    if (leftSum === rightSum) {
+      answer += 2;
+    } else if (Math.abs(leftSum - rightSum) === 1) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/make-array-elements-equal-to-zero"
+  title="Make Array Elements Equal to Zero"
+/>

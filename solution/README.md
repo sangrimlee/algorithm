@@ -1171,6 +1171,7 @@
 | 3340      | [Check Balanced String](https://leetcode.com/problems/check-balanced-string)                                                                                                             | [보러가기](src/2024-11/07/leetcode-3340.ts) |
 | 3345      | [Smallest Divisible Digit Product I](https://leetcode.com/problems/smallest-divisible-digit-product-i)                                                                                   | [보러가기](src/2024-11/18/leetcode-3345.ts) |
 | 3349      | [Adjacent Increasing Subarrays Detection I](https://leetcode.com/problems/adjacent-increasing-subarrays-detection-i)                                                                     | [보러가기](src/2024-12/01/leetcode-3349.ts) |
+| 3354      | [Make Array Elements Equal to Zero](https://leetcode.com/problems/make-array-elements-equal-to-zero)                                                                                     | [보러가기](src/2024-12/02/leetcode-3354.ts) |
 
 ### Programmers
 
