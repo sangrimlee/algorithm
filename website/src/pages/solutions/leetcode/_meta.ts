@@ -791,6 +791,7 @@ const meta = {
   '2101': '2101. Detonate the Maximum Bombs',
   '2103': '2103. Rings and Rods',
   '2108': '2108. Find First Palindromic String in the Array',
+  '2109': '2109. Adding Spaces to a String',
   '2114': '2114. Maximum Number of Words Found in Sentences',
   '2119': '2119. A Number After a Double Reversal',
   '2120': '2120. Execution of All Suffix Instructions Staying in a Grid',
