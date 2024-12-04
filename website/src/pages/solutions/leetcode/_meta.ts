@@ -1045,6 +1045,7 @@ const meta = {
   '2815': '2815. Max Pair Sum in an Array',
   '2816': '2816. Double a Number Represented as a Linked List',
   '2824': '2824. Count Pairs Whose Sum is Less than Target',
+  '2825': '2825. Make String a Subsequence Using Cyclic Increments',
   '2828': '2828. Check if a String Is an Acronym of Words',
   '2833': '2833. Furthest Point From Origin',
   '2839': '2839. Check if Strings Can be Made Equal With Operations I',
