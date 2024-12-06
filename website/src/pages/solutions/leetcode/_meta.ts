@@ -947,6 +947,7 @@ const meta = {
   '2545': '2545. Sort the Students by Their Kth Score',
   '2549': '2549. Count Distinct Numbers on Board',
   '2553': '2553. Separate the Digits in an Array',
+  '2554': '2554. Maximum Number of Integers to Choose From a Range I',
   '2558': '2558. Take Gifts From the Richest Pile',
   '2562': '2562. Find the Array Concatenation Value',
   '2563': '2563. Count the Number of Fair Pairs',
