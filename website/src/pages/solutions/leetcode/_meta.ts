@@ -673,6 +673,7 @@ const meta = {
   '1752': '1752. Check if Array Is Sorted and Rotated',
   '1758': '1758. Minimum Changes To Make Alternating Binary String',
   '1759': '1759. Count Number of Homogenous Substrings',
+  '1760': '1760. Minimum Limit of Balls in a Bag',
   '1763': '1763. Longest Nice Substring',
   '1769': '1769. Minimum Number of Operations to Move All Balls to Each Box',
   '1773': '1773. Count Items Matching a Rule',
