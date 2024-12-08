@@ -772,6 +772,7 @@ const meta = {
   '2047': '2047. Number of Valid Words in a Sentence',
   '2050': '2050. Parallel Courses III',
   '2053': '2053. Kth Distinct String in an Array',
+  '2054': '2054. Two Best Non-Overlapping Events',
   '2057': '2057. Smallest Index With Equal Value',
   '2058': '2058. Find the Minimum and Maximum Number of Nodes Between Critical Points',
   '2062': '2062. Count Vowel Substrings of a String',
