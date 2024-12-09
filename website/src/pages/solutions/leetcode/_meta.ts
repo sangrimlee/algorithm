@@ -1127,6 +1127,7 @@ const meta = {
   '3142': '3142. Check if Grid Satisfies Conditions',
   '3146': '3146. Permutation Difference between Two Strings',
   '3151': '3151. Special Array I',
+  '3152': '3152. Special Array II',
   '3158': '3158. Find the XOR of Numbers Which Appear Twice',
   '3159': '3159. Find Occurrences of an Element in an Array',
   '3162': '3162. Find the Number of Good Pairs I',
