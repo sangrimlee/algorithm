@@ -1090,6 +1090,7 @@ const meta = {
   '2974': '2974. Minimum Number Game',
   '2976': '2976. Minimum Cost to Convert String I',
   '2980': '2980. Check if Bitwise OR Has Trailing Zeros',
+  '2981': '2981. Find Longest Special Substring That Occurs Thrice I',
   '2996': '2996. Smallest Missing Integer Greater Than Sequential Prefix Sum',
   '2997': '2997. Minimum Number of Operations to Make Array XOR Equal to K',
   '3000': '3000. Maximum Area of Longest Diagonal Rectangle',
