@@ -1038,6 +1038,7 @@ const meta = {
   '2765': '2765. Longest Alternating Subarray',
   '2769': '2769. Find the Maximum Achievable Number',
   '2778': '2778. Sum of Squares of Special Elements',
+  '2779': '2779. Maximum Beauty of an Array After Applying Operation',
   '2784': '2784. Check if Array is Good',
   '2785': '2785. Sort Vowels in a String',
   '2788': '2788. Split Strings by Separator',
