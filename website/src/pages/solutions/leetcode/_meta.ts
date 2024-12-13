@@ -962,6 +962,7 @@ const meta = {
   '2583': '2583. Kth Largest Sum in a Binary Tree',
   '2586': '2586. Count the Number of Vowel Strings in Range',
   '2591': '2591. Distribute Money to Maximum Children',
+  '2593': '2593. Find Score of an Array After Marking All Elements',
   '2595': '2595. Number of Even and Odd Bits',
   '2597': '2597. The Number of Beautiful Subsets',
   '2600': '2600. K Items With the Maximum Sum',
