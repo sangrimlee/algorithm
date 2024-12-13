@@ -1174,6 +1174,7 @@ const meta = {
   '3345': '3345. Smallest Divisible Digit Product I',
   '3349': '3349. Adjacent Increasing Subarrays Detection I',
   '3354': '3354. Make Array Elements Equal to Zero',
+  '3360': '3360. Stone Removal Game',
 };
 
 export default meta;
