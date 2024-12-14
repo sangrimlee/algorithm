@@ -1036,6 +1036,7 @@ const meta = {
   '2748': '2748. Number of Beautiful Pairs',
   '2751': '2751. Robot Collisions',
   '2760': '2760. Longest Even Odd Subarray With Threshold',
+  '2762': '2762. Continuous Subarrays',
   '2765': '2765. Longest Alternating Subarray',
   '2769': '2769. Find the Maximum Achievable Number',
   '2778': '2778. Sum of Squares of Special Elements',
