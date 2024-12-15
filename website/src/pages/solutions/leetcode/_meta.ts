@@ -681,6 +681,7 @@ const meta = {
   '1784': '1784. Check if Binary String Has at Most One Segment of Ones',
   '1790': '1790. Check if One String Swap Can Make Strings Equal',
   '1791': '1791. Find Center of Star Graph',
+  '1792': '1792. Maximum Average Pass Ratio',
   '1793': '1793. Maximum Score of a Good Subarray',
   '1796': '1796. Second Largest Digit in a String',
   '1799': '1799. Maximize Score After N Operations',
