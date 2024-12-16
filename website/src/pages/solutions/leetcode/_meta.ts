@@ -1178,6 +1178,7 @@ const meta = {
   '3349': '3349. Adjacent Increasing Subarrays Detection I',
   '3354': '3354. Make Array Elements Equal to Zero',
   '3360': '3360. Stone Removal Game',
+  '3364': '3364. Minimum Positive Sum Subarray',
 };
 
 export default meta;
