@@ -821,6 +821,7 @@ const meta = {
   '2176': '2176. Count Equal and Divisible Pairs in an Array',
   '2180': '2180. Count Integers With Even Digit Sum',
   '2181': '2181. Merge Nodes in Between Zeros',
+  '2182': '2182. Construct String With Repeat Limit',
   '2185': '2185. Counting Words With a Given Prefix',
   '2186': '2186. Minimum Number of Steps to Make Two Strings Anagram II',
   '2187': '2187. Minimum Time to Complete Trips',
