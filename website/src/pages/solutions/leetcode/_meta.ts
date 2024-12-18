@@ -1180,6 +1180,8 @@ const meta = {
   '3354': '3354. Make Array Elements Equal to Zero',
   '3360': '3360. Stone Removal Game',
   '3364': '3364. Minimum Positive Sum Subarray',
+  '3370': '3370. Smallest Number With All Set Bits',
+  '3375': '3375. Minimum Operations to Make Array Values Equal to K',
 };
 
 export default meta;

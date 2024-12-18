@@ -1187,6 +1187,8 @@
 | 3354      | [Make Array Elements Equal to Zero](https://leetcode.com/problems/make-array-elements-equal-to-zero)                                                                                     | [보러가기](src/2024-12/02/leetcode-3354.ts) |
 | 3360      | [Stone Removal Game](https://leetcode.com/problems/stone-removal-game)                                                                                                                   | [보러가기](src/2024-12/12/leetcode-3360.ts) |
 | 3364      | [Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray)                                                                                             | [보러가기](src/2024-12/16/leetcode-3364.ts) |
+| 3370      | [Smallest Number With All Set Bits](https://leetcode.com/problems/smallest-number-with-all-set-bits)                                                                                     | [보러가기](src/2024-12/18/leetcode-3370.ts) |
+| 3375      | [Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k)                                                   | [보러가기](src/2024-12/18/leetcode-3375.ts) |
 
 ### Programmers
 
