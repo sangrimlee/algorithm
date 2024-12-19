@@ -309,6 +309,7 @@ const meta = {
   '762': '762. Prime Number of Set Bits in Binary Representation',
   '763': '763. Partition Labels',
   '766': '766. Toeplitz Matrix',
+  '769': '769. Max Chunks To Make Sorted',
   '771': '771. Jewels and Stones',
   '773': '773. Sliding Puzzle',
   '779': '779. K-th Symbol in Grammar',
