@@ -1190,6 +1190,7 @@
 | 3364      | [Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray)                                                                                             | [보러가기](src/2024-12/16/leetcode-3364.ts) |
 | 3370      | [Smallest Number With All Set Bits](https://leetcode.com/problems/smallest-number-with-all-set-bits)                                                                                     | [보러가기](src/2024-12/18/leetcode-3370.ts) |
 | 3375      | [Minimum Operations to Make Array Values Equal to K](https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k)                                                   | [보러가기](src/2024-12/18/leetcode-3375.ts) |
+| 3379      | [Transformed Array](https://leetcode.com/problems/transformed-array)                                                                                                                     | [보러가기](src/2024-12/20/leetcode-3379.ts) |
 
 ### Programmers
 

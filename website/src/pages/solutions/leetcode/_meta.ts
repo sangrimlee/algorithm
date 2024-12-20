@@ -1183,6 +1183,7 @@ const meta = {
   '3364': '3364. Minimum Positive Sum Subarray',
   '3370': '3370. Smallest Number With All Set Bits',
   '3375': '3375. Minimum Operations to Make Array Values Equal to K',
+  '3379': '3379. Transformed Array',
 };
 
 export default meta;
