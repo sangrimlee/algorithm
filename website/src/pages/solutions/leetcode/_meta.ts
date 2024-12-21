@@ -1067,6 +1067,7 @@ const meta = {
   '2864': '2864. Maximum Odd Binary Number',
   '2869': '2869. Minimum Operations to Collect Elements',
   '2870': '2870. Minimum Number of Operations to Make Array Empty',
+  '2872': '2872. Maximum Number of K-Divisible Components',
   '2873': '2873. Maximum Value of an Ordered Triplet I',
   '2894': '2894. Divisible and Non-divisible Sums Difference',
   '2899': '2899. Last Visited Integers',
