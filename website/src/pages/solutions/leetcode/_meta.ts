@@ -1083,6 +1083,7 @@ const meta = {
   '2932': '2932. Maximum Strong Pair XOR I',
   '2937': '2937. Make Three Strings Equal',
   '2938': '2938. Separate Black and White Balls',
+  '2940': '2940. Find Building Where Alice and Bob Can Meet',
   '2942': '2942. Find Words Containing Character',
   '2946': '2946. Matrix Similarity After Cyclic Shifts',
   '2951': '2951. Find the Peaks',
