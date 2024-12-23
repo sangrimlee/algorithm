@@ -925,6 +925,7 @@ const meta = {
   '2465': '2465. Number of Distinct Averages',
   '2466': '2466. Count Ways To Build Good Strings',
   '2469': '2469. Convert the Temperature',
+  '2471': '2471. Minimum Number of Operations to Sort a Binary Tree by Level',
   '2475': '2475. Number of Unequal Triplets in Array',
   '2481': '2481. Minimum Cuts to Divide a Circle',
   '2482': '2482. Difference Between Ones and Zeros in Row and Column',
