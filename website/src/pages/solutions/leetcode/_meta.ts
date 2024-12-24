@@ -1150,6 +1150,7 @@ const meta = {
   '3194': '3194. Minimum Average of Smallest and Largest Elements',
   '3195': '3195. Find the Minimum Area to Cover All Ones I',
   '3200': '3200. Maximum Height of a Triangle',
+  '3203': '3203. Find Minimum Diameter After Merging Two Trees',
   '3206': '3206. Alternating Groups I',
   '3210': '3210. Find the Encrypted String',
   '3211': '3211. Generate Binary Strings Without Adjacent Zeros',
