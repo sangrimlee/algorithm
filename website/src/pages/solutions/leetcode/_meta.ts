@@ -1188,6 +1188,8 @@ const meta = {
   '3370': '3370. Smallest Number With All Set Bits',
   '3375': '3375. Minimum Operations to Make Array Values Equal to K',
   '3379': '3379. Transformed Array',
+  '3386': '3386. Button with Longest Push Time',
+  '3392': '3392. Count Subarrays of Length Three With a Condition',
 };
 
 export default meta;
