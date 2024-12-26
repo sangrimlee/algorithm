@@ -1197,6 +1197,7 @@
 | 3379      | [Transformed Array](https://leetcode.com/problems/transformed-array)                                                                                                                     | [보러가기](src/2024-12/20/leetcode-3379.ts) |
 | 3386      | [Button with Longest Push Time](https://leetcode.com/problems/button-with-longest-push-time)                                                                                             | [보러가기](src/2024-12/25/leetcode-3386.ts) |
 | 3392      | [Count Subarrays of Length Three With a Condition](https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition)                                                       | [보러가기](src/2024-12/25/leetcode-3392.ts) |
+| 3396      | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct)                         | [보러가기](src/2024-12/26/leetcode-3396.ts) |
 
 ### Programmers
 

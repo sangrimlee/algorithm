@@ -1190,6 +1190,7 @@ const meta = {
   '3379': '3379. Transformed Array',
   '3386': '3386. Button with Longest Push Time',
   '3392': '3392. Count Subarrays of Length Three With a Condition',
+  '3396': '3396. Minimum Number of Operations to Make Elements in Array Distinct',
 };
 
 export default meta;
