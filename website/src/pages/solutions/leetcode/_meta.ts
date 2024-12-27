@@ -419,6 +419,7 @@ const meta = {
   '1005': '1005. Maximize Sum Of Array After K Negations',
   '1008': '1008. Construct Binary Search Tree from Preorder Traversal',
   '1013': '1013. Partition Array Into Three Parts With Equal Sum',
+  '1014': '1014. Best Sightseeing Pair',
   '1018': '1018. Binary Prefix Divisible By 5',
   '1021': '1021. Remove Outermost Parentheses',
   '1022': '1022. Sum of Root To Leaf Binary Numbers',
