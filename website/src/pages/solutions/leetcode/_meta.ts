@@ -365,6 +365,7 @@ const meta = {
   '885': '885. Spiral Matrix III',
   '886': '886. Possible Bipartition',
   '888': '888. Fair Candy Swap',
+  '889': '889. Construct Binary Tree from Preorder and Postorder Traversal',
   '890': '890. Find and Replace Pattern',
   '892': '892. Surface Area of 3D Shapes',
   '893': '893. Groups of Special-Equivalent Strings',
