@@ -959,6 +959,7 @@ const meta = {
   '2553': '2553. Separate the Digits in an Array',
   '2554': '2554. Maximum Number of Integers to Choose From a Range I',
   '2558': '2558. Take Gifts From the Richest Pile',
+  '2559': '2559. Count Vowel Strings in Ranges',
   '2562': '2562. Find the Array Concatenation Value',
   '2563': '2563. Count the Number of Fair Pairs',
   '2566': '2566. Maximum Difference by Remapping a Digit',
