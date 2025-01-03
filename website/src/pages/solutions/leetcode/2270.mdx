@@ -1,0 +1,44 @@
+---
+title: Number of Ways to Split Array
+tags:
+  - Array
+  - Prefix Sum
+---
+
+# 2270. Number of Ways to Split Array
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Prefix Sum" slug="prefix-sum" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function waysToSplitArray(nums: number[]): number {
+  const n = nums.length;
+  const total = nums.reduce((acc, num) => acc + num, 0);
+
+  let sum = 0;
+  let answer = 0;
+  for (let i = 0; i < n - 1; i++) {
+    sum += nums[i];
+    if (total <= 2 * sum) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-ways-to-split-array"
+  title="Number of Ways to Split Array"
+/>

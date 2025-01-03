@@ -858,6 +858,7 @@ const meta = {
   '2264': '2264. Largest 3-Same-Digit Number in String',
   '2265': '2265. Count Nodes Equal to Average of Subtree',
   '2269': '2269. Find the K-Beauty of a Number',
+  '2270': '2270. Number of Ways to Split Array',
   '2273': '2273. Find Resultant Array After Removing Anagrams',
   '2275': '2275. Largest Combination With Bitwise AND Greater Than Zero',
   '2278': '2278. Percentage of Letter in String',
