@@ -894,6 +894,7 @@ const meta = {
   '2373': '2373. Largest Local Values in a Matrix',
   '2375': '2375. Construct Smallest Number From DI String',
   '2379': '2379. Minimum Recolors to Get K Consecutive Black Blocks',
+  '2381': '2381. Shifting Letters II',
   '2383': '2383. Minimum Hours of Training to Win a Competition',
   '2385': '2385. Amount of Time for Binary Tree to Be Infected',
   '2389': '2389. Longest Subsequence With Limited Sum',
