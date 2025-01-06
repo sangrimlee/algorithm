@@ -403,6 +403,7 @@ const meta = {
   '965': '965. Univalued Binary Tree',
   '967': '967. Numbers With Same Consecutive Differences',
   '968': '968. Binary Tree Cameras',
+  '969': '969. Pancake Sorting',
   '974': '974. Subarray Sums Divisible by K',
   '977': '977. Squares of a Sorted Array',
   '979': '979. Distribute Coins in Binary Tree',
