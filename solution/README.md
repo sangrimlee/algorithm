@@ -1209,6 +1209,7 @@
 | 3392      | [Count Subarrays of Length Three With a Condition](https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition)                                                       | [보러가기](src/2024-12/25/leetcode-3392.ts) |
 | 3396      | [Minimum Number of Operations to Make Elements in Array Distinct](https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct)                         | [보러가기](src/2024-12/26/leetcode-3396.ts) |
 | 3402      | [Minimum Operations to Make Columns Strictly Increasing](https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing)                                           | [보러가기](src/2024-12/30/leetcode-3402.ts) |
+| 3407      | [Substring Matching Pattern](https://leetcode.com/problems/substring-matching-pattern)                                                                                                   | [보러가기](src/2025-01/07/leetcode-3407.ts) |
 
 ### Programmers
 

@@ -1,0 +1,57 @@
+---
+title: Substring Matching Pattern
+tags:
+  - String
+  - String Matching
+---
+
+# 3407. Substring Matching Pattern
+
+<Badges>
+  <LevelBadge level="easy" />
+  <TopicBadge name="String" slug="string" />
+  <TopicBadge name="String Matching" slug="string-matching" />
+</Badges>
+
+## Solution
+
+### Solution1: Find Index
+
+```typescript filename="solution.ts" copy
+export function hasMatch(s: string, p: string): boolean {
+  const [left, right] = p.split('*');
+  const leftIndex = s.indexOf(left);
+  const rightIndex = s.lastIndexOf(right);
+  if (leftIndex === -1 || rightIndex === -1) {
+    return false;
+  }
+  return leftIndex + left.length <= rightIndex;
+}
+```
+
+#### Complexity
+
+- `m`: `s.length`, `n`: `p.length`
+- Time: $O(m \cdot n)$
+- Space: $O(n)$
+
+---
+
+### Solution2: `RegExp`
+
+```typescript filename="solution.ts" copy
+export function hasMatch(s: string, p: string): boolean {
+  return new RegExp(p.replace('*', '.*')).test(s);
+}
+```
+
+#### Complexity
+
+- Time: $O(2^n)$
+- Space: $O(n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/substring-matching-pattern"
+  title="Substring Matching Pattern"
+/>

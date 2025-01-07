@@ -1202,6 +1202,7 @@ const meta = {
   '3392': '3392. Count Subarrays of Length Three With a Condition',
   '3396': '3396. Minimum Number of Operations to Make Elements in Array Distinct',
   '3402': '3402. Minimum Operations to Make Columns Strictly Increasing',
+  '3407': '3407. Substring Matching Pattern',
 };
 
 export default meta;
