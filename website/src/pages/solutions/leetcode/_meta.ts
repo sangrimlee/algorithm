@@ -1125,6 +1125,7 @@ const meta = {
   '3038': '3038. Maximum Number of Operations With the Same Score I',
   '3042': '3042. Count Prefix and Suffix Pairs I',
   '3043': '3043. Find the Length of the Longest Common Prefix',
+  '3045': '3045. Count Prefix and Suffix Pairs II',
   '3046': '3046. Split the Array',
   '3065': '3065. Minimum Operations to Exceed Threshold Value I',
   '3068': '3068. Find the Maximum Sum of Node Values',
