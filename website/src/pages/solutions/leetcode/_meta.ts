@@ -244,6 +244,7 @@ const meta = {
   '563': '563. Binary Tree Tilt',
   '564': '564. Find the Closest Palindrome',
   '567': '567. Permutation in String',
+  '572': '572. Subtree of Another Tree',
   '575': '575. Distribute Candies',
   '576': '576. Out of Boundary Paths',
   '583': '583. Delete Operation for Two Strings',
