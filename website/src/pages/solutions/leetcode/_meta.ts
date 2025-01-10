@@ -379,6 +379,7 @@ const meta = {
   '907': '907. Sum of Subarray Minimums',
   '908': '908. Smallest Range I',
   '914': '914. X of a Kind in a Deck of Cards',
+  '916': '916. Word Subsets',
   '917': '917. Reverse Only Letters',
   '921': '921. Minimum Add to Make Parentheses Valid',
   '922': '922. Sort Array By Parity II',
