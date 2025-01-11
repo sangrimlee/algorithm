@@ -540,6 +540,7 @@ const meta = {
   '1394': '1394. Find Lucky Integer in an Array',
   '1395': '1395. Count Number of Teams',
   '1399': '1399. Count Largest Group',
+  '1400': '1400. Construct K Palindrome Strings',
   '1403': '1403. Minimum Subsequence in Non-Increasing Order',
   '1404': '1404. Number of Steps to Reduce a Number in Binary Representation to One',
   '1405': '1405. Longest Happy String',
