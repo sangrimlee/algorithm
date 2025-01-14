@@ -1209,6 +1209,7 @@ const meta = {
   '3396': '3396. Minimum Number of Operations to Make Elements in Array Distinct',
   '3402': '3402. Minimum Operations to Make Columns Strictly Increasing',
   '3407': '3407. Substring Matching Pattern',
+  '3417': '3417. Zigzag Grid Traversal With Skip',
 };
 
 export default meta;
