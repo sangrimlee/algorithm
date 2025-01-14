@@ -1172,6 +1172,7 @@ const meta = {
   '3216': '3216. Lexicographically Smallest String After a Swap',
   '3217': '3217. Delete Nodes From Linked List Present in Array',
   '3222': '3222. Find the Winning Player in Coin Game',
+  '3223': '3223. Minimum Length of String After Operations',
   '3226': '3226. Number of Bit Changes to Make Two Integers Equal',
   '3232': '3232. Find if Digit Game Can Be Won',
   '3238': '3238. Find the Number of Winning Players',
