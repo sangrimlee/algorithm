@@ -920,6 +920,7 @@ const meta = {
   '2423': '2423. Remove Letter To Equalize Frequency',
   '2427': '2427. Number of Common Factors',
   '2428': '2428. Maximum Sum of an Hourglass',
+  '2429': '2429. Minimize XOR',
   '2432': '2432. The Employee That Worked on the Longest Task',
   '2433': '2433. Find The Original Array of Prefix Xor',
   '2437': '2437. Number of Valid Clock Times',

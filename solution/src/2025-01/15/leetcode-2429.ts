@@ -1,0 +1,34 @@
+/**
+ * 2429. Minimize XOR
+ * https://leetcode.com/problems/minimize-xor
+ */
+export function minimizeXor(num1: number, num2: number): number {
+  const MAX_BITS = 31;
+  const totalBitCount = countBits(num2);
+
+  let answer = 0;
+  for (let bit = MAX_BITS, bitCount = 0; bit >= 0 && bitCount < totalBitCount; bit--) {
+    if (isSet(num1, bit) || totalBitCount > bit + bitCount) {
+      answer = setBit(answer, bit);
+      bitCount += 1;
+    }
+  }
+  return answer;
+}
+
+function countBits(num: number): number {
+  let count = 0;
+  while (num > 0) {
+    count += num & 1;
+    num >>= 1;
+  }
+  return count;
+}
+
+function isSet(num: number, bit: number): boolean {
+  return (num & (1 << bit)) !== 0;
+}
+
+function setBit(num: number, bit: number): number {
+  return num | (1 << bit);
+}
