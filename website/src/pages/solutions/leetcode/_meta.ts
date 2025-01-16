@@ -918,6 +918,7 @@ const meta = {
   '2418': '2418. Sort the People',
   '2419': '2419. Longest Subarray With Maximum Bitwise AND',
   '2423': '2423. Remove Letter To Equalize Frequency',
+  '2425': '2425. Bitwise XOR of All Pairings',
   '2427': '2427. Number of Common Factors',
   '2428': '2428. Maximum Sum of an Hourglass',
   '2429': '2429. Minimize XOR',
