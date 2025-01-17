@@ -1028,6 +1028,7 @@ const meta = {
   '2677': '2677. Chunk Array',
   '2678': '2678. Number of Senior Citizens',
   '2682': '2682. Find the Losers of the Circular Game',
+  '2683': '2683. Neighboring Bitwise XOR',
   '2684': '2684. Maximum Number of Moves in a Grid',
   '2693': '2693. Call Function with Custom Context',
   '2694': '2694. Event Emitter',
