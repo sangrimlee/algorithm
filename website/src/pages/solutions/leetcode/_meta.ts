@@ -530,6 +530,7 @@ const meta = {
   '1361': '1361. Validate Binary Tree Nodes',
   '1365': '1365. How Many Numbers Are Smaller Than the Current Number',
   '1367': '1367. Linked List in Binary Tree',
+  '1368': '1368. Minimum Cost to Make at Least One Valid Path in a Grid',
   '1370': '1370. Increasing Decreasing String',
   '1371': '1371. Find the Longest Substring Containing Vowels in Even Counts',
   '1380': '1380. Lucky Numbers in a Matrix',
