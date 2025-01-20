@@ -1023,6 +1023,7 @@ const meta = {
   '2656': '2656. Maximum Sum With Exactly K Elements',
   '2657': '2657. Find the Prefix Common Array of Two Arrays',
   '2660': '2660. Determine the Winner of a Bowling Game',
+  '2661': '2661. First Completely Painted Row or Column',
   '2666': '2666. Allow One Function Call',
   '2670': '2670. Find the Distinct Difference Array',
   '2675': '2675. Array of Objects to Matrix',
