@@ -772,6 +772,7 @@ const meta = {
   '2009': '2009. Minimum Number of Operations to Make Array Continuous',
   '2011': '2011. Final Value of Variable After Performing Operations',
   '2016': '2016. Maximum Difference Between Increasing Elements',
+  '2017': '2017. Grid Game',
   '2022': '2022. Convert 1D Array Into 2D Array',
   '2023': '2023. Number of Pairs of Strings With Concatenation Equal to Target',
   '2024': '2024. Maximize the Confusion of an Exam',
