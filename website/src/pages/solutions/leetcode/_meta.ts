@@ -687,6 +687,7 @@ const meta = {
   '1759': '1759. Count Number of Homogenous Substrings',
   '1760': '1760. Minimum Limit of Balls in a Bag',
   '1763': '1763. Longest Nice Substring',
+  '1765': '1765. Map of Highest Peak',
   '1769': '1769. Minimum Number of Operations to Move All Balls to Each Box',
   '1773': '1773. Count Items Matching a Rule',
   '1779': '1779. Find Nearest Point That Has the Same X or Y Coordinate',
