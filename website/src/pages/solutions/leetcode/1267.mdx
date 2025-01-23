@@ -1,0 +1,61 @@
+---
+title: Count Servers that Communicate
+tags:
+  - Array
+  - Depth-First Search
+  - Breadth-First Search
+  - Union Find
+  - Matrix
+  - Counting
+---
+
+# 1267. Count Servers that Communicate
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Array" slug="array" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Union Find" slug="union-find" />
+  <TopicBadge name="Matrix" slug="matrix" />
+  <TopicBadge name="Counting" slug="counting" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countServers(grid: number[][]): number {
+  const [m, n] = [grid.length, grid[0].length];
+  const rowCounts: number[] = new Array(m).fill(0);
+  const colCounts: number[] = new Array(n).fill(0);
+  grid.forEach((servers, row) => {
+    servers.forEach((server, col) => {
+      if (server === 1) {
+        rowCounts[row] += 1;
+        colCounts[col] += 1;
+      }
+    });
+  });
+
+  let answer = 0;
+  grid.forEach((servers, row) => {
+    servers.forEach((server, col) => {
+      if (server === 1 && (1 < rowCounts[row] || 1 < colCounts[col])) {
+        answer += 1;
+      }
+    });
+  });
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(m \cdot n)$
+- Space: $O(m + n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-servers-that-communicate"
+  title="Count Servers that Communicate"
+/>

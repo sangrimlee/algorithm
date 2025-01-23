@@ -490,6 +490,7 @@ const meta = {
   '1255': '1255. Maximum Score Words Formed by Letters',
   '1261': '1261. Find Elements in a Contaminated Binary Tree',
   '1266': '1266. Minimum Time Visiting All Points',
+  '1267': '1267. Count Servers that Communicate',
   '1268': '1268. Search Suggestions System',
   '1269': '1269. Number of Ways to Stay in the Same Place After Some Steps',
   '1275': '1275. Find Winner on a Tic Tac Toe Game',
