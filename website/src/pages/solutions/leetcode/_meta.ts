@@ -1219,6 +1219,7 @@ const meta = {
   '3402': '3402. Minimum Operations to Make Columns Strictly Increasing',
   '3407': '3407. Substring Matching Pattern',
   '3417': '3417. Zigzag Grid Traversal With Skip',
+  '3423': '3423. Maximum Difference Between Adjacent Elements in a Circular Array',
 };
 
 export default meta;
