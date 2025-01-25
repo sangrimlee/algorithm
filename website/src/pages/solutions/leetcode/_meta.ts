@@ -1110,6 +1110,7 @@ const meta = {
   '2940': '2940. Find Building Where Alice and Bob Can Meet',
   '2942': '2942. Find Words Containing Character',
   '2946': '2946. Matrix Similarity After Cyclic Shifts',
+  '2948': '2948. Make Lexicographically Smallest Array by Swapping Elements',
   '2951': '2951. Find the Peaks',
   '2956': '2956. Find Common Elements Between Two Arrays',
   '2958': '2958. Length of Longest Subarray With at Most K Frequency',
