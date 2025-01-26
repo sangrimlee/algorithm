@@ -816,6 +816,7 @@ const meta = {
   '2120': '2120. Execution of All Suffix Instructions Staying in a Grid',
   '2124': "2124. Check if All A's Appears Before All B's",
   '2125': '2125. Number of Laser Beams in a Bank',
+  '2127': '2127. Maximum Employees to Be Invited to a Meeting',
   '2129': '2129. Capitalize the Title',
   '2130': '2130. Maximum Twin Sum of a Linked List',
   '2131': '2131. Longest Palindrome by Concatenating Two Letter Words',
