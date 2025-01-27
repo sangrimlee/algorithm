@@ -573,6 +573,7 @@ const meta = {
   '1458': '1458. Max Dot Product of Two Subsequences',
   '1460': '1460. Make Two Arrays Equal by Reversing Subarrays',
   '1461': '1461. Check If a String Contains All Binary Codes of Size K',
+  '1462': '1462. Course Schedule IV',
   '1463': '1463. Cherry Pickup II',
   '1464': '1464. Maximum Product of Two Elements in an Array',
   '1465': '1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts',
