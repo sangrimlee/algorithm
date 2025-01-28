@@ -1027,6 +1027,7 @@ const meta = {
   '2652': '2652. Sum Multiples',
   '2656': '2656. Maximum Sum With Exactly K Elements',
   '2657': '2657. Find the Prefix Common Array of Two Arrays',
+  '2658': '2658. Maximum Number of Fish in a Grid',
   '2660': '2660. Determine the Winner of a Bowling Game',
   '2661': '2661. First Completely Painted Row or Column',
   '2666': '2666. Allow One Function Call',
