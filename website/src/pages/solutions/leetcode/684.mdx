@@ -1,0 +1,67 @@
+---
+title: Redundant Connection
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Union Find
+  - Graph
+---
+
+# 684. Redundant Connection
+
+<Badges>
+  <LevelBadge level="medium" />
+  <TopicBadge name="Depth-First Search" slug="depth-first-search" />
+  <TopicBadge name="Breadth-First Search" slug="breadth-first-search" />
+  <TopicBadge name="Union Find" slug="union-find" />
+  <TopicBadge name="Graph" slug="graph" />
+</Badges>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findRedundantConnection(edges: number[][]): number[] {
+  const n = edges.length;
+  const parents = Array.from({ length: n }, (_, i) => i);
+
+  function find(a: number): number {
+    if (a === parents[a]) {
+      return a;
+    }
+    parents[a] = find(parents[a]);
+    return parents[a];
+  }
+
+  function union(a: number, b: number): boolean {
+    const parentA = find(a);
+    const parentB = find(b);
+    if (parentA === parentB) {
+      return true;
+    }
+    if (parentA < parentB) {
+      parents[parentB] = parentA;
+    } else {
+      parents[parentA] = parentB;
+    }
+    return false;
+  }
+
+  for (const [a, b] of edges) {
+    if (union(a, b)) {
+      return [a, b];
+    }
+  }
+  return [];
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/redundant-connection"
+  title="Redundant Connection"
+/>

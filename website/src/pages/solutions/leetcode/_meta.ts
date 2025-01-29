@@ -285,6 +285,7 @@ const meta = {
   '678': '678. Valid Parenthesis String',
   '680': '680. Valid Palindrome II',
   '682': '682. Baseball Game',
+  '684': '684. Redundant Connection',
   '688': '688. Knight Probability in Chessboard',
   '689': '689. Maximum Sum of 3 Non-Overlapping Subarrays',
   '693': '693. Binary Number with Alternating Bits',
