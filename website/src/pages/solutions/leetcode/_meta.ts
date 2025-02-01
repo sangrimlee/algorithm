@@ -338,6 +338,7 @@ const meta = {
   '823': '823. Binary Trees With Factors',
   '824': '824. Goat Latin',
   '826': '826. Most Profit Assigning Work',
+  '827': '827. Making A Large Island',
   '830': '830. Positions of Large Groups',
   '832': '832. Flipping an Image',
   '834': '834. Sum of Distances in Tree',
