@@ -957,6 +957,7 @@ const meta = {
   '2487': '2487. Remove Nodes From Linked List',
   '2490': '2490. Circular Sentence',
   '2491': '2491. Divide Players Into Teams of Equal Skill',
+  '2493': '2493. Divide Nodes Into the Maximum Number of Groups',
   '2496': '2496. Maximum Value of a String in an Array',
   '2500': '2500. Delete Greatest Value in Each Row',
   '2501': '2501. Longest Square Streak in an Array',
