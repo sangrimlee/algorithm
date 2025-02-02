@@ -1235,6 +1235,7 @@
 | 3417      | [Zigzag Grid Traversal With Skip](https://leetcode.com/problems/zigzag-grid-traversal-with-skip)                                                                                         | [보러가기](src/2025-01/14/leetcode-3417.ts) |
 | 3423      | [Maximum Difference Between Adjacent Elements in a Circular Array](https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array)                       | [보러가기](src/2025-01/24/leetcode-3423.ts) |
 | 3427      | [Sum of Variable Length Subarrays](https://leetcode.com/problems/sum-of-variable-length-subarrays)                                                                                       | [보러가기](src/2025-02/01/leetcode-3427.ts) |
+| 3432      | [Count Partitions with Even Sum Difference](https://leetcode.com/problems/count-partitions-with-even-sum-difference)                                                                     | [보러가기](src/2025-02/02/leetcode-3432.ts) |
 
 ### Programmers
 

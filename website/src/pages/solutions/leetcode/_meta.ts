@@ -1228,6 +1228,7 @@ const meta = {
   '3417': '3417. Zigzag Grid Traversal With Skip',
   '3423': '3423. Maximum Difference Between Adjacent Elements in a Circular Array',
   '3427': '3427. Sum of Variable Length Subarrays',
+  '3432': '3432. Count Partitions with Even Sum Difference',
 };
 
 export default meta;
