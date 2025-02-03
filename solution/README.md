@@ -1236,6 +1236,7 @@
 | 3423      | [Maximum Difference Between Adjacent Elements in a Circular Array](https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array)                       | [보러가기](src/2025-01/24/leetcode-3423.ts) |
 | 3427      | [Sum of Variable Length Subarrays](https://leetcode.com/problems/sum-of-variable-length-subarrays)                                                                                       | [보러가기](src/2025-02/01/leetcode-3427.ts) |
 | 3432      | [Count Partitions with Even Sum Difference](https://leetcode.com/problems/count-partitions-with-even-sum-difference)                                                                     | [보러가기](src/2025-02/02/leetcode-3432.ts) |
+| 3438      | [Find Valid Pair of Adjacent Digits in String](https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string)                                                               | [보러가기](src/2025-02/03/leetcode-3438.ts) |
 
 ### Programmers
 

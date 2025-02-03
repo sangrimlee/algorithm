@@ -1229,6 +1229,7 @@ const meta = {
   '3423': '3423. Maximum Difference Between Adjacent Elements in a Circular Array',
   '3427': '3427. Sum of Variable Length Subarrays',
   '3432': '3432. Count Partitions with Even Sum Difference',
+  '3438': '3438. Find Valid Pair of Adjacent Digits in String',
 };
 
 export default meta;
