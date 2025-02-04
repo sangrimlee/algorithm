@@ -1230,6 +1230,7 @@ const meta = {
   '3427': '3427. Sum of Variable Length Subarrays',
   '3432': '3432. Count Partitions with Even Sum Difference',
   '3438': '3438. Find Valid Pair of Adjacent Digits in String',
+  '3442': '3442. Maximum Difference Between Even and Odd Frequency I',
 };
 
 export default meta;

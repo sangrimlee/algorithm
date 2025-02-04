@@ -1237,6 +1237,7 @@
 | 3427      | [Sum of Variable Length Subarrays](https://leetcode.com/problems/sum-of-variable-length-subarrays)                                                                                       | [보러가기](src/2025-02/01/leetcode-3427.ts) |
 | 3432      | [Count Partitions with Even Sum Difference](https://leetcode.com/problems/count-partitions-with-even-sum-difference)                                                                     | [보러가기](src/2025-02/02/leetcode-3432.ts) |
 | 3438      | [Find Valid Pair of Adjacent Digits in String](https://leetcode.com/problems/find-valid-pair-of-adjacent-digits-in-string)                                                               | [보러가기](src/2025-02/03/leetcode-3438.ts) |
+| 3442      | [Maximum Difference Between Even and Odd Frequency I](https://leetcode.com/problems/maximum-difference-between-even-and-odd-frequency-i)                                                 | [보러가기](src/2025-02/04/leetcode-3442.ts) |
 
 ### Programmers
 
