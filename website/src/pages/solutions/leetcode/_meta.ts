@@ -643,6 +643,7 @@ const meta = {
   '1630': '1630. Arithmetic Subarrays',
   '1636': '1636. Sort Array by Increasing Frequency',
   '1637': '1637. Widest Vertical Area Between Two Points Containing No Points',
+  '1638': '1638. Count Substrings That Differ by One Character',
   '1639': '1639. Number of Ways to Form a Target String Given a Dictionary',
   '1640': '1640. Check Array Formation Through Concatenation',
   '1642': '1642. Furthest Building You Can Reach',
