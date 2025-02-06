@@ -679,6 +679,7 @@ const meta = {
   '1720': '1720. Decode XORed Array',
   '1721': '1721. Swapping Nodes in a Linked List',
   '1725': '1725. Number Of Rectangles That Can Form The Largest Square',
+  '1726': '1726. Tuple with Same Product',
   '1727': '1727. Largest Submatrix With Rearrangements',
   '1732': '1732. Find the Highest Altitude',
   '1736': '1736. Latest Time by Replacing Hidden Digits',
