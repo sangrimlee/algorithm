@@ -900,6 +900,7 @@ const meta = {
   '2337': '2337. Move Pieces to Obtain a String',
   '2341': '2341. Maximum Number of Pairs in Array',
   '2347': '2347. Best Poker Hand',
+  '2349': '2349. Design a Number Container System',
   '2351': '2351. First Letter to Appear Twice',
   '2352': '2352. Equal Row and Column Pairs',
   '2357': '2357. Make Array Zero by Subtracting Equal Amounts',
