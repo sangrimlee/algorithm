@@ -905,6 +905,7 @@ const meta = {
   '2352': '2352. Equal Row and Column Pairs',
   '2357': '2357. Make Array Zero by Subtracting Equal Amounts',
   '2363': '2363. Merge Similar Items',
+  '2364': '2364. Count Number of Bad Pairs',
   '2366': '2366. Minimum Replacements to Sort the Array',
   '2367': '2367. Number of Arithmetic Triplets',
   '2370': '2370. Longest Ideal Subsequence',
