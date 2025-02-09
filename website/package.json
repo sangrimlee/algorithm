@@ -5,7 +5,7 @@
   "description": "문제 풀이 공유 웹사이트",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
