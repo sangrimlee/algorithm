@@ -1,30 +1,16 @@
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-
 import { cx } from '@/utils/cx';
 
 import { LeetCodeLogo, ProgrammersLogo } from '../logo';
-
-const codingSites = {
-  leetcode: {
-    Logo: LeetCodeLogo,
-    logoClassName: 'h-6 w-[6.25rem]',
-    bgClassName: 'bg-gray-100 dark:bg-gray-900',
-  },
-  programmers: {
-    Logo: ProgrammersLogo,
-    logoClassName: 'h-4 w-[7.5rem]',
-    bgClassName: 'bg-[#1E2A3C]',
-  },
-};
+import { LinkArrowIcon } from 'nextra/icons';
 
 interface ProblemLinkProps {
   href: string;
   title: string;
-  codingSite: keyof typeof codingSites;
+  codingSite: 'leetcode' | 'programmers';
 }
 
 export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
-  const { Logo, logoClassName, bgClassName } = codingSites[codingSite];
+  const CodingSiteLogo = codingSite === 'leetcode' ? LeetCodeLogo : ProgrammersLogo;
 
   return (
     <a
@@ -32,25 +18,31 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
       target="_blank"
       rel="nofollow noreferrer"
       className={cx(
-        'group mt-10 flex w-full justify-start overflow-hidden rounded-lg border',
-        'border-gray-200 dark:border-gray-800',
+        'my-10 flex h-32 w-full overflow-hidden rounded-md border border-neutral-300 transition-colors',
+        'hover:bg-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800',
       )}
     >
-      <div className={cx('flex h-28 w-44 items-center justify-center', bgClassName)}>
-        <Logo className={logoClassName} />
+      <div
+        className={cx(
+          'hidden w-48 items-center justify-center border-r border-neutral-300',
+          'dark:border-neutral-700 sm:flex',
+          codingSite === 'leetcode' ? 'bg-neutral-100 dark:bg-neutral-900' : 'bg-[#1E2A3C]',
+        )}
+      >
+        <CodingSiteLogo className={cx(codingSite === 'leetcode' ? 'w-25 h-6' : 'w-30 h-4')} />
       </div>
-      <div className="flex flex-1 flex-col justify-center px-6 py-4">
-        <strong className="line-clamp-2 text-base">{title}</strong>
-        <div
-          className={cx(
-            'mt-2.5 flex items-center text-sm font-medium',
-            'text-blue-600 dark:text-blue-400',
-          )}
-        >
-          문제 풀러가기
-          <ArrowRightIcon
-            className={cx('ml-1 h-3.5 w-3.5', 'transition-transform group-hover:translate-x-1')}
-          />
+      <div className="flex flex-1 items-center px-6">
+        <div>
+          <p className="line-clamp-2 text-base font-semibold">{title}</p>
+          <p
+            className={cx(
+              'mt-2 inline-flex items-center text-sm font-medium',
+              'text-blue-600 dark:text-blue-400',
+            )}
+          >
+            문제 풀러가기
+            <LinkArrowIcon className="size-4 ml-1" />
+          </p>
         </div>
       </div>
     </a>
