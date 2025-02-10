@@ -196,9 +196,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
-      framer-motion:
-        specifier: ^10.16.4
-        version: 10.16.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      motion:
+        specifier: ^12.4.1
+        version: 12.4.1(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next:
         specifier: ^15.1.6
         version: 15.1.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -2764,12 +2764,15 @@ packages:
   fraction.js@4.3.6:
     resolution: {integrity: sha512-n2aZ9tNfYDwaHhvFTkhFErqOMIb8uyzSQ+vGJBjZyanAKZVbGUQ1sngfk9FdkBw7G26O7AgNjLcecLffD1c7eg==}
 
-  framer-motion@10.16.4:
-    resolution: {integrity: sha512-p9V9nGomS3m6/CALXqv6nFGMuFOxbWsmaOrdmhyQimMIlLl3LC7h7l86wge/Js/8cRu5ktutS/zlzgR7eBOtFA==}
+  framer-motion@12.4.1:
+    resolution: {integrity: sha512-5Ijbea3topSZjadQ0hgc/TcWj2ldMZmNREM7RvAhvsThYOA1HHOA8TT1yKvMu1YXP3jWaFwoZ6Vo9Nw+DUZrzA==}
     peerDependencies:
-      react: ^18.0.0
-      react-dom: ^18.0.0
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
       react:
         optional: true
       react-dom:
@@ -3908,6 +3911,26 @@ packages:
 
   mlly@1.7.2:
     resolution: {integrity: sha512-tN3dvVHYVz4DhSXinXIk7u9syPYaJvio118uomkovAtWBT+RdbP6Lfh/5Lvo519YMmwBafwlh20IPTXIStscpA==}
+
+  motion-dom@12.0.0:
+    resolution: {integrity: sha512-CvYd15OeIR6kHgMdonCc1ihsaUG4MYh/wrkz8gZ3hBX/uamyZCXN9S9qJoYF03GqfTt7thTV/dxnHYX4+55vDg==}
+
+  motion-utils@12.0.0:
+    resolution: {integrity: sha512-MNFiBKbbqnmvOjkPyOKgHUp3Q6oiokLkI1bEwm5QA28cxMZrv0CbbBGDNmhF6DIXsi1pCQBSs0dX8xjeER1tmA==}
+
+  motion@12.4.1:
+    resolution: {integrity: sha512-TBnf5NyZVZFOHOc87fyC6qTSU+6LUe09LwxA1Sna35YL7qgOv1EZv96mu6o7uQ2Rl1GvTSQLeyfrQAEG+zlh+w==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
@@ -6418,7 +6441,7 @@ snapshots:
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.0.0
-      tslib: 2.5.0
+      tslib: 2.8.0
 
   '@react-aria/focus@3.18.4(react@18.2.0)':
     dependencies:
@@ -7969,7 +7992,7 @@ snapshots:
       eslint: 8.51.0
       eslint-import-resolver-node: 0.3.7
       eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0))(eslint@8.51.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0))(eslint@8.51.0))(eslint@8.51.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5)(eslint@8.51.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.51.0)
       eslint-plugin-react: 7.33.2(eslint@8.51.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.51.0)
@@ -8003,7 +8026,7 @@ snapshots:
       enhanced-resolve: 5.13.0
       eslint: 8.51.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0))(eslint@8.51.0))(eslint@8.51.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0))(eslint@8.51.0))(eslint@8.51.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5)(eslint@8.51.0)
       get-tsconfig: 4.5.0
       globby: 13.1.4
       is-core-module: 2.12.0
@@ -8026,7 +8049,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.7)(eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint@8.51.0))(eslint@8.51.0))(eslint@8.51.0):
+  eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.7.5(eslint@8.51.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.5.5)(eslint@8.51.0):
     dependencies:
       array-includes: 3.1.6
       array.prototype.findlastindex: 1.2.3
@@ -8381,9 +8404,11 @@ snapshots:
 
   fraction.js@4.3.6: {}
 
-  framer-motion@10.16.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  framer-motion@12.4.1(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
-      tslib: 2.5.0
+      motion-dom: 12.0.0
+      motion-utils: 12.0.0
+      tslib: 2.8.0
     optionalDependencies:
       '@emotion/is-prop-valid': 0.8.8
       react: 18.2.0
@@ -10103,6 +10128,21 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.2.1
       ufo: 1.5.4
+
+  motion-dom@12.0.0:
+    dependencies:
+      motion-utils: 12.0.0
+
+  motion-utils@12.0.0: {}
+
+  motion@12.4.1(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      framer-motion: 12.4.1(@emotion/is-prop-valid@0.8.8)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      tslib: 2.8.0
+    optionalDependencies:
+      '@emotion/is-prop-valid': 0.8.8
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   ms@2.1.2: {}
 

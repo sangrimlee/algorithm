@@ -1,21 +1,24 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+'use client';
 
-interface FadeInProps {
+import { useRef } from 'react';
+import { motion, useInView } from 'motion/react';
+import type { UseInViewOptions } from 'motion/react';
+
+interface ScaleUpProps {
   className?: string;
+  initialScale?: number;
   delay?: number;
-  viewTriggerOffset?: string;
-  noVertical?: boolean;
+  viewTriggerOffset?: UseInViewOptions['margin'];
   children?: React.ReactNode;
 }
 
-export const FadeIn = ({
-  children,
+export const ScaleUp = ({
   className,
-  noVertical,
+  children,
+  initialScale = 0,
   delay = 0,
   viewTriggerOffset = '0px',
-}: FadeInProps) => {
+}: ScaleUpProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, {
     once: true,
@@ -25,11 +28,11 @@ export const FadeIn = ({
   const fadeInVariants = {
     initial: {
       opacity: 0,
-      y: noVertical ? 0 : 24,
+      scale: initialScale,
     },
     animate: {
       opacity: 1,
-      y: 0,
+      scale: 1,
     },
   };
 
@@ -41,7 +44,7 @@ export const FadeIn = ({
       className={className}
       initial={false}
       transition={{
-        duration: 1,
+        duration: 0.5,
         delay: delay,
       }}
     >

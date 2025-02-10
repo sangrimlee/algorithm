@@ -1,23 +1,24 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+'use client';
 
-interface ScaleUpProps {
+import { useRef } from 'react';
+import { motion, useInView } from 'motion/react';
+import type { UseInViewOptions } from 'motion/react';
+
+interface FadeInProps {
   className?: string;
-  direction: 'left' | 'right';
-  offset?: number;
   delay?: number;
-  viewTriggerOffset?: string;
+  viewTriggerOffset?: UseInViewOptions['margin'];
+  noVertical?: boolean;
   children?: React.ReactNode;
 }
 
-export const SlideHorizontal = ({
-  direction,
-  className,
+export const FadeIn = ({
   children,
+  className,
+  noVertical,
   delay = 0,
-  offset = 24,
   viewTriggerOffset = '0px',
-}: ScaleUpProps) => {
+}: FadeInProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, {
     once: true,
@@ -27,11 +28,11 @@ export const SlideHorizontal = ({
   const fadeInVariants = {
     initial: {
       opacity: 0,
-      x: direction === 'left' ? offset : -offset,
+      y: noVertical ? 0 : 24,
     },
     animate: {
       opacity: 1,
-      x: 0,
+      y: 0,
     },
   };
 
@@ -43,7 +44,7 @@ export const SlideHorizontal = ({
       className={className}
       initial={false}
       transition={{
-        duration: 0.5,
+        duration: 1,
         delay: delay,
       }}
     >
