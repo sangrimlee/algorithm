@@ -1,14 +1,12 @@
 import { Tabs } from 'nextra/components';
 import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs';
 
-import { Badges, LevelBadge, TopicBadge, ProblemLink } from './components/mdx';
+import { Badge, ProblemLink } from './components/mdx';
 
 const themeComponents = getThemeComponents({
-  Badges,
-  LevelBadge,
-  TopicBadge,
   ProblemLink,
   Tabs,
+  Badge,
 });
 
 /** @type {getThemeComponents} */

@@ -1,2 +1,2 @@
-export { LevelBadge, TopicBadge, Badges } from './badges';
+export * as Badge from './badge';
 export { ProblemLink } from './problem-link';
