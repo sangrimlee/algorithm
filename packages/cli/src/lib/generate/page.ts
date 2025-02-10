@@ -34,7 +34,8 @@ function generateSolutionPage(solution: Solution, outDir: string, force: boolean
   const pagePath = path.join(
     outDir,
     solution.codingSite.toLowerCase(),
-    `${solution.id}${EXTNAME.MDX}`,
+    solution.id,
+    `page${EXTNAME.MDX}`,
   );
 
   if (existsSync(pagePath) && !force) {
@@ -52,11 +53,7 @@ export async function generateSolutionPageMeta(
   solutions: Solution[],
   outDir: string,
 ) {
-  const meta = Object.fromEntries(
-    solutions.map(({ id, title, codingSite }) =>
-      codingSite === CodingSite.LeetCode ? [id, `${id}. ${title}`] : [id, title],
-    ),
-  );
+  const meta = Object.fromEntries(solutions.map(({ id, title }) => [id, title]));
   const template = await createSolutionPageMeta(meta);
 
   await ensureWriteFile(
@@ -71,7 +68,7 @@ export async function generateIntroductionPage(
 ) {
   const template = await createIntroductionPageTemplate(groups);
 
-  await ensureWriteFile(path.join(outDir, `index${EXTNAME.MDX}`), template);
+  await ensureWriteFile(path.join(outDir, `page${EXTNAME.MDX}`), template);
 }
 
 export async function generatePage(solutionDir: string, outDir: string, force: boolean) {
