@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
-import { LeetCodeLogo, ProgrammersLogo } from '../logos';
+import { LeetCodeLogo, ProgrammersLogo } from '../logo';
 
 const codingSites = {
   leetcode: {
