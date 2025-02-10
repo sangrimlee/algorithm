@@ -6,27 +6,27 @@ import { Slot } from '@radix-ui/react-slot';
 
 const badgeVariants = cva(
   [
-    'inline-flex items-center rounded-full ring-1 ring-current px-2 py-1 text-xs leading-none font-medium transition-colors',
+    'inline-flex items-center rounded-full ring-1 ring-current px-2.5 py-1.5 text-sm leading-none font-medium transition-colors',
     'focus-visible:outline-none focus-visible:shadow-focus-ring',
   ],
   {
     variants: {
       variant: {
         blue: [
-          'text-blue-600 bg-blue-600/20 hover:bg-blue-600/30',
-          'dark:text-blue-400 dark:bg-blue-400/20 hover:dark:bg-blue-400/30',
+          'text-blue-700 bg-blue-700/10 hover:bg-blue-700/20',
+          'dark:text-blue-300 dark:bg-blue-300/10 hover:dark:bg-blue-300/20',
         ],
         green: [
-          'text-green-600 bg-green-600/20 hover:bg-green-600/30',
-          'dark:text-green-400 dark:bg-green-400/20 hover:dark:bg-green-400/30',
+          'text-green-700 bg-green-700/10 hover:bg-green-700/20',
+          'dark:text-green-300 dark:bg-green-300/10 hover:dark:bg-green-300/20',
         ],
         yellow: [
-          'text-yellow-600 bg-yellow-600/20 hover:bg-yellow-600/30',
-          'dark:text-yellow-400 dark:bg-yellow-400/20 hover:dark:bg-yellow-400/30',
+          'text-yellow-700 bg-yellow-700/10 hover:bg-yellow-700/20',
+          'dark:text-yellow-300 dark:bg-yellow-300/10 hover:dark:bg-yellow-300/20',
         ],
         red: [
-          'text-red-600 bg-red-600/20 hover:bg-red-600/30',
-          'dark:text-red-400 dark:bg-red-400/20 hover:dark:bg-red-400/30',
+          'text-red-700 bg-red-700/10 hover:bg-red-600/20',
+          'dark:text-red-300 dark:bg-red-300/10 hover:dark:bg-red-300/20',
         ],
       },
     },
