@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { clsx } from 'clsx';
 
 import { ScaleUp, SlideHorizontal } from '@/components/animation';
+import { cx } from '@/utils/cx';
 
 export const Profile = () => {
   return (
@@ -12,7 +12,7 @@ export const Profile = () => {
           alt="프로필 이미지"
           width={500}
           height={500}
-          className={clsx('h-12 w-12 rounded-full', 'md:h-14 md:w-14 xl:h-16 xl:w-16')}
+          className={cx('h-12 w-12 rounded-full', 'md:h-14 md:w-14 xl:h-16 xl:w-16')}
         />
       </ScaleUp>
       <SlideHorizontal direction="right" delay={0.8}>

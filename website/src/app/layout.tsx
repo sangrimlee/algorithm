@@ -5,13 +5,13 @@ import type { Metadata } from 'next';
 import { Layout } from 'nextra-theme-docs';
 import { Head } from 'nextra/components';
 import { getPageMap } from 'nextra/page-map';
-import { clsx } from 'clsx';
 import { Analytics } from '@vercel/analytics/react';
 
 import { Footer } from './_components/footer';
 import { NavBar } from './_components/nav-bar';
 import { poppins, pretendard } from './_fonts';
 
+import { cx } from '@/utils/cx';
 import { env } from '@/env';
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default async function RootLayout({ children }) {
     <html
       lang="ko"
       dir="ltr"
-      className={clsx(poppins.variable, pretendard.variable)}
+      className={cx(poppins.variable, pretendard.variable)}
       suppressHydrationWarning
     >
       <Head />

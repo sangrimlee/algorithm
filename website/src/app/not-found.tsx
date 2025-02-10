@@ -1,9 +1,9 @@
-import { clsx } from 'clsx';
+import { cx } from '@/utils/cx';
 
 export default function NotFoundPage() {
   return (
     <main
-      className={clsx(
+      className={cx(
         'min-h-[calc(100vh-var(--nextra-navbar-height))]',
         'relative flex flex-col items-center justify-center',
       )}

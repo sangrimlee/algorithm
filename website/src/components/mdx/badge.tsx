@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cx } from '@/utils/cx';
 
 const levelColors = {
   easy: 'text-green-600 bg-green-600 dark:text-green-400 dark:bg-green-400',
@@ -14,7 +14,7 @@ export const LevelBadge = ({ level }: LevelBadgeProps) => {
   return (
     <>
       <div
-        className={clsx(
+        className={cx(
           'inline-flex items-center justify-center rounded-full px-3.5 py-1 font-medium capitalize',
           'bg-opacity-[0.15] hover:bg-opacity-20 dark:bg-opacity-[0.15] dark:hover:bg-opacity-25',
           levelColors[level],
@@ -34,7 +34,7 @@ interface TopicBadgeProps {
 export const TopicBadge = ({ name, slug }: TopicBadgeProps) => {
   return (
     <a
-      className={clsx(
+      className={cx(
         'inline-flex items-center justify-center rounded-full px-3.5 py-1 font-medium',
         'bg-blue-600 bg-opacity-10 text-blue-600 hover:bg-opacity-20',
         'dark:bg-blue-400 dark:bg-opacity-[0.15]  dark:text-blue-400 dark:hover:bg-opacity-25',
