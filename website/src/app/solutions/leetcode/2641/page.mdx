@@ -1,0 +1,69 @@
+---
+title: Cousins in Binary Tree II
+tags:
+  - Hash Table
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 2641. Cousins in Binary Tree II
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function replaceValueInTree(root: TreeNode | null): TreeNode | null {
+  if (root === null) {
+    return null;
+  }
+  const queue = [root];
+  let prevLevelSum = root.val;
+
+  while (0 < queue.length) {
+    const levelSize = queue.length;
+    let currLevelSum = 0;
+
+    for (let i = 0; i < levelSize; i++) {
+      const node = queue.shift()!;
+      node.val = prevLevelSum - node.val;
+      const siblingSum = (node.left?.val ?? 0) + (node.right?.val ?? 0);
+      if (node.left) {
+        currLevelSum += node.left.val;
+        node.left.val = siblingSum;
+        queue.push(node.left);
+      }
+      if (node.right) {
+        currLevelSum += node.right.val;
+        node.right.val = siblingSum;
+        queue.push(node.right);
+      }
+    }
+    prevLevelSum = currLevelSum;
+  }
+
+  return root;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/cousins-in-binary-tree-ii"
+  title="Cousins in Binary Tree II"
+/>

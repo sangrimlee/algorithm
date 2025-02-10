@@ -1,0 +1,45 @@
+---
+title: Most Frequent Number Following Key In an Array
+tags:
+  - Array
+  - Hash Table
+  - Counting
+---
+
+# 2190. Most Frequent Number Following Key In an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function mostFrequent(nums: number[], key: number): number {
+  const n = nums.length;
+  const targetCounts = new Map<number, number>();
+
+  let answer = 0;
+  let maxCount = -1;
+  for (let i = 0; i < n - 1; i++) {
+    if (nums[i] !== key) continue;
+    const target = nums[i + 1];
+    const targetCount = (targetCounts.get(target) ?? 0) + 1;
+    targetCounts.set(target, targetCount);
+    if (maxCount < targetCount) {
+      answer = target;
+      maxCount = targetCount;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/most-frequent-number-following-key-in-an-array"
+  title="Most Frequent Number Following Key In an Array"
+/>

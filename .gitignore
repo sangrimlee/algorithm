@@ -31,3 +31,6 @@ yarn-error.log*
 # robots & sitemap for deployment
 website/public/robots*
 website/public/sitemap*
+
+# next
+next-env.d.ts

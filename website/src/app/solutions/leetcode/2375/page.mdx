@@ -1,0 +1,44 @@
+---
+title: Construct Smallest Number From DI String
+tags:
+  - String
+  - Backtracking
+  - Stack
+  - Greedy
+---
+
+# 2375. Construct Smallest Number From DI String
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallestNumber(pattern: string): string {
+  const n = pattern.length;
+
+  let answer = '';
+  let stack: number[] = [];
+  for (let i = 0; i <= n; i++) {
+    stack.push(i + 1);
+    if (pattern[i] === 'I' || i === n) {
+      answer += stack.reverse().join('');
+      stack = [];
+    }
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/construct-smallest-number-from-di-string"
+  title="Construct Smallest Number From DI String"
+/>

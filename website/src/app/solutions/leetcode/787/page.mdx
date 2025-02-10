@@ -1,0 +1,67 @@
+---
+title: Cheapest Flights Within K Stops
+tags:
+  - Dynamic Programming
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Heap (Priority Queue)
+  - Shortest Path
+---
+
+# 787. Cheapest Flights Within K Stops
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Graph" slug="graph" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <Badge.Topic name="Shortest Path" slug="shortest-path" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findCheapestPrice(
+  n: number,
+  flights: number[][],
+  src: number,
+  dst: number,
+  k: number,
+): number {
+  const graph = new Array(n).fill(undefined).map(() => new Array<[number, number]>());
+  for (const [from, to, price] of flights) {
+    graph[from].push([to, price]);
+  }
+  const prices = new Array(n).fill(Number.MAX_SAFE_INTEGER);
+  prices[src] = 0;
+
+  let queue = [[src, 0, 0]];
+
+  while (0 < queue.length) {
+    const nextQueue: number[][] = [];
+    for (const [city, price, stop] of queue) {
+      if (stop === k + 1) {
+        continue;
+      }
+      for (const [nextCity, nextPrice] of graph[city]) {
+        if (price + nextPrice < prices[nextCity]) {
+          prices[nextCity] = price + nextPrice;
+          queue.push([nextCity, price + nextPrice, stop + 1]);
+        }
+      }
+    }
+    queue = nextQueue;
+  }
+
+  return prices[dst] === Number.MAX_SAFE_INTEGER ? -1 : prices[dst];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+  title="Cheapest Flights Within K Stops"
+/>

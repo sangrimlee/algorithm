@@ -1,0 +1,46 @@
+---
+title: The Number of Weak Characters in the Game
+tags:
+  - Array
+  - Stack
+  - Greedy
+  - Sorting
+  - Monotonic Stack
+---
+
+# 1996. The Number of Weak Characters in the Game
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Monotonic Stack" slug="monotonic-stack" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numberOfWeakCharacters(properties: number[][]): number {
+  let answer = 0;
+  const stack: number[] = [];
+  properties.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : b[1] - a[1]));
+
+  for (const [, defense] of properties) {
+    while (0 < stack.length && stack[stack.length - 1] < defense) {
+      stack.pop();
+      answer += 1;
+    }
+    stack.push(defense);
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/"
+  title="The Number of Weak Characters in the Game"
+/>

@@ -1,0 +1,54 @@
+---
+title: Find Common Characters
+tags:
+  - Array
+  - Hash Table
+  - String
+---
+
+# 1002. Find Common Characters
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function commonChars(words: string[]): string[] {
+  const charCounter = (word: string) => {
+    const counter = new Map<string, number>();
+    for (const char of word) {
+      counter.set(char, (counter.get(char) ?? 0) + 1);
+    }
+    return counter;
+  };
+
+  const intersect = (counter1: Map<string, number>, counter2: Map<string, number>) => {
+    const intersected = new Map<string, number>();
+    for (const [char, count1] of counter1.entries()) {
+      const count2 = counter2.get(char);
+      if (count2) {
+        intersected.set(char, Math.min(count1, count2));
+      }
+    }
+    return intersected;
+  };
+
+  const counter = words.reduce(
+    (prev, word) => intersect(prev, charCounter(word)),
+    charCounter(words[0]),
+  );
+
+  return [...counter.entries()].flatMap(([char, count]) => new Array(count).fill(char));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-common-characters"
+  title="Find Common Characters"
+/>

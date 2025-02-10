@@ -1,0 +1,30 @@
+---
+title: Can Make Arithmetic Progression From Sequence
+tags:
+  - Array
+  - Sorting
+---
+
+# 1502. Can Make Arithmetic Progression From Sequence
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canMakeArithmeticProgression(arr: number[]): boolean {
+  arr.sort((a, b) => a - b);
+  const difference = arr[1] - arr[0];
+  return arr.every((_, i) => i === 0 || arr[i] - arr[i - 1] === difference);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence"
+  title="Can Make Arithmetic Progression From Sequence"
+/>

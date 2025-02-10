@@ -1,0 +1,50 @@
+---
+title: Largest Combination With Bitwise AND Greater Than Zero
+tags:
+  - Array
+  - Hash Table
+  - Bit Manipulation
+  - Counting
+---
+
+# 2275. Largest Combination With Bitwise AND Greater Than Zero
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function largestCombination(candidates: number[]): number {
+  const MAX_SIZE = 10e7;
+
+  let answer = 0;
+  for (let bit = 1; bit < MAX_SIZE; bit <<= 1) {
+    let count = 0;
+    for (const candidate of candidates) {
+      if ((candidate & bit) !== 0) {
+        count += 1;
+      }
+    }
+    answer = Math.max(answer, count);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(NlogM)`
+  - `M`: `candidates`가 가질 수 있는 가장 큰 값, 문제에서는 `10^7`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero"
+  title="Largest Combination With Bitwise AND Greater Than Zero"
+/>

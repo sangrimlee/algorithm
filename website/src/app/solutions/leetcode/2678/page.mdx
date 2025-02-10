@@ -1,0 +1,31 @@
+---
+title: Number of Senior Citizens
+tags:
+  - Array
+  - String
+---
+
+# 2678. Number of Senior Citizens
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countSeniors(details: string[]): number {
+  function isSenior(detail: string) {
+    return 60 < parseInt(detail.substring(11, 13), 10);
+  }
+  return details.filter(isSenior).length;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-senior-citizens"
+  title="Number of Senior Citizens"
+/>

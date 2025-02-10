@@ -1,0 +1,48 @@
+---
+title: Keys and Rooms
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+---
+
+# 841. Keys and Rooms
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Graph" slug="graph" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canVisitAllRooms(rooms: number[][]): boolean {
+  const n = rooms.length;
+  const visited = new Set<number>([0]);
+
+  let currentRooms = [0];
+
+  while (0 < currentRooms.length) {
+    const nextRooms: number[] = [];
+    for (const currentRoom of currentRooms) {
+      for (const nextRoom of rooms[currentRoom]) {
+        if (!visited.has(nextRoom)) {
+          visited.add(nextRoom);
+          nextRooms.push(nextRoom);
+        }
+      }
+    }
+    currentRooms = nextRooms;
+  }
+
+  return visited.size === n;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/keys-and-rooms"
+  title="Keys and Rooms"
+/>

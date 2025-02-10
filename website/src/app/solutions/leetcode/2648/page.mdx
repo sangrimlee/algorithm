@@ -1,0 +1,26 @@
+---
+title: Generate Fibonacci Sequence
+tags:
+---
+
+# 2648. Generate Fibonacci Sequence
+
+<Badge.Root>
+<Badge.Level level="easy" />
+
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function* fibGenerator(a = 0, b = 1): Generator<number> {
+  yield a;
+  yield* fibGenerator(b, a + b);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/generate-fibonacci-sequence"
+  title="Generate Fibonacci Sequence"
+/>

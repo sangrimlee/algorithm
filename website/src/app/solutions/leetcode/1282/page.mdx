@@ -1,0 +1,40 @@
+---
+title: Group the People Given the Group Size They Belong To
+tags:
+  - Array
+  - Hash Table
+---
+
+# 1282. Group the People Given the Group Size They Belong To
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function groupThePeople(groupSizes: number[]): number[][] {
+  const groups = new Map<number, number[][]>();
+  groupSizes.forEach((groupSize, i) => {
+    const group = groups.get(groupSize);
+    if (!group) {
+      groups.set(groupSize, [[i]]);
+    } else if (group[group.length - 1].length === groupSize) {
+      group.push([i]);
+    } else {
+      group[group.length - 1].push(i);
+    }
+  });
+
+  return Array.from(groups.values()).flatMap((v) => v);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to"
+  title="Group the People Given the Group Size They Belong To"
+/>

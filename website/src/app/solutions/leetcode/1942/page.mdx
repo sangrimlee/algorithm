@@ -1,0 +1,55 @@
+---
+title: The Number of the Smallest Unoccupied Chair
+tags:
+  - Array
+  - Hash Table
+  - Heap (Priority Queue)
+---
+
+# 1942. The Number of the Smallest Unoccupied Chair
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function smallestChair(times: number[][], targetFriend: number): number {
+  const n = times.length;
+  const seats = new Heap<number>((a, b) => a - b);
+  for (let seat = 0; seat < n; seat++) {
+    seats.push(seat);
+  }
+
+  const heap = new Heap<number[]>((a, b) => a[0] - b[0]);
+  const friends: number[][] = times.map((value, i) => [...value, i]).sort((a, b) => a[0] - b[0]);
+  for (const [arrival, leaving, friend] of friends) {
+    while (!heap.isEmpty && heap.peek![0] <= arrival) {
+      seats.push(heap.pop()![1]);
+    }
+    const seat = seats.pop()!;
+    heap.push([leaving, seat]);
+    if (friend === targetFriend) {
+      return seat;
+    }
+  }
+  return -1;
+}
+```
+
+### Complexity
+
+- Time: `O(NlogN)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair"
+  title="The Number of the Smallest Unoccupied Chair"
+/>

@@ -1,0 +1,42 @@
+---
+title: Remove Stones to Minimize the Total
+tags:
+  - Array
+  - Heap (Priority Queue)
+---
+
+# 1962. Remove Stones to Minimize the Total
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function minStoneSum(piles: number[], k: number): number {
+  const heap = new Heap<number>((a, b) => b - a);
+  for (const pile of piles) {
+    heap.push(pile);
+  }
+
+  for (let i = 0; i < k; i++) {
+    const pile = heap.pop();
+    if (pile !== undefined) {
+      heap.push(pile - Math.floor(pile / 2));
+    }
+  }
+
+  return heap.heap.reduce((total, curr) => total + curr, 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-stones-to-minimize-the-total"
+  title="Remove Stones to Minimize the Total"
+/>

@@ -1,0 +1,50 @@
+---
+title: Find the Longest Substring Containing Vowels in Even Counts
+tags:
+  - Hash Table
+  - String
+  - Bit Manipulation
+  - Prefix Sum
+---
+
+# 1371. Find the Longest Substring Containing Vowels in Even Counts
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findTheLongestSubstring(s: string): number {
+  const n = s.length;
+  const vowels = 'aeioou';
+  const firstIndices = new Map<number, number>([[0, -1]]);
+
+  let answer = 0;
+  let prefixXOR = 0;
+  for (let i = 0; i < n; i++) {
+    const bit = vowels.indexOf(s[i]);
+    prefixXOR ^= bit === -1 ? 0 : 1 << bit;
+    const firstIndex = firstIndices.get(prefixXOR) ?? i;
+    firstIndices.set(prefixXOR, firstIndex);
+    answer = Math.max(answer, i - firstIndex);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts"
+  title="Find the Longest Substring Containing Vowels in Even Counts"
+/>

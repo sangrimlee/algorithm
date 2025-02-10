@@ -1,0 +1,46 @@
+---
+title: Number of Recent Calls
+tags:
+  - Design
+  - Queue
+  - Data Stream
+---
+
+# 933. Number of Recent Calls
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Design" slug="design" />
+  <Badge.Topic name="Queue" slug="queue" />
+  <Badge.Topic name="Data Stream" slug="data-stream" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class RecentCounter {
+  private readonly queue: number[];
+
+  constructor() {
+    this.queue = [];
+  }
+
+  shiftUntilPastTime(t: number): void {
+    while (0 < this.queue.length && this.queue[0] < t - 3000) {
+      this.queue.shift();
+    }
+  }
+
+  ping(t: number): number {
+    this.queue.push(t);
+    this.shiftUntilPastTime(t);
+    return this.queue.length;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-recent-calls"
+  title="Number of Recent Calls"
+/>

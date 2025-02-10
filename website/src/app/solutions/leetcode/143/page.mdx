@@ -1,0 +1,51 @@
+---
+title: Reorder List
+tags:
+  - Linked List
+  - Two Pointers
+  - Stack
+  - Recursion
+---
+
+# 143. Reorder List
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Linked List" slug="linked-list" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Recursion" slug="recursion" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function reorderList(head: ListNode | null): void {
+  if (head === null || head.next === null) {
+    return;
+  }
+  let currentNode: ListNode | null = head;
+  const nodes: ListNode[] = [];
+  while (currentNode) {
+    nodes.push(currentNode);
+    currentNode = currentNode.next;
+  }
+
+  let [start, end] = [0, nodes.length - 1];
+  while (start < end) {
+    nodes[start].next = nodes[end];
+    nodes[end].next = nodes[start + 1];
+    start += 1;
+    end -= 1;
+  }
+  nodes[start].next = null;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/reorder-list"
+  title="Reorder List"
+/>

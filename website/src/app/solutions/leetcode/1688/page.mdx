@@ -1,0 +1,32 @@
+---
+title: Count of Matches in Tournament
+tags:
+  - Math
+  - Simulation
+---
+
+# 1688. Count of Matches in Tournament
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numberOfMatches(n: number): number {
+  /**
+   * As n - 1 teams will be eliminated, there will be n - 1 matches played,
+   * with each match eliminating a team.
+   */
+  return n - 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-of-matches-in-tournament"
+  title="Count of Matches in Tournament"
+/>

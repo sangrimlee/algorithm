@@ -1,0 +1,26 @@
+---
+title: Shuffle the Array
+tags:
+  - Array
+---
+
+# 1470. Shuffle the Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function shuffle(nums: number[], n: number): number[] {
+  return nums.map((_, i) => (i % 2 === 0 ? nums[i / 2] : nums[n + Math.floor(i / 2)]));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/shuffle-the-array"
+  title="Shuffle the Array"
+/>

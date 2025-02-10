@@ -1,0 +1,74 @@
+---
+title: Spiral Matrix IV
+tags:
+  - Array
+  - Linked List
+  - Matrix
+  - Simulation
+---
+
+# 2326. Spiral Matrix IV
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Linked List" slug="linked-list" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
+  const answer: number[][] = Array.from({ length: m }, () => new Array(n).fill(-1));
+  let currentNode = head;
+  for (const [y, x] of sprial(m, n)) {
+    if (currentNode === null) {
+      return answer;
+    }
+    answer[y][x] = currentNode.val;
+    currentNode = currentNode.next;
+  }
+  return answer;
+}
+
+function* sprial(m: number, n: number) {
+  const visited: boolean[][] = Array.from({ length: m }, () => new Array(n).fill(false));
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+
+  let currentIndex = 0;
+  let [cy, cx] = [0, -1];
+  let currentDirection = 0;
+  while (currentIndex < m * n) {
+    const [dy, dx] = directions[currentDirection];
+    const [ny, nx] = [cy + dy, cx + dx];
+    if (0 <= ny && ny < m && 0 <= nx && nx < n && !visited[ny][nx]) {
+      visited[ny][nx] = true;
+      yield [ny, nx];
+      currentIndex += 1;
+      [cy, cx] = [ny, nx];
+    } else {
+      currentDirection = (currentDirection + 1) % 4;
+    }
+  }
+}
+```
+
+### Complexity
+
+- Time: `O(M*N)`
+- Space: `O(M*N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/spiral-matrix-iv"
+  title="Spiral Matrix IV"
+/>

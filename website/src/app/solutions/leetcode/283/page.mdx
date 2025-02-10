@@ -1,0 +1,39 @@
+---
+title: Move Zeroes
+tags:
+  - Array
+  - Two Pointers
+---
+
+# 283. Move Zeroes
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function moveZeroes(nums: number[]): void {
+  let nonZeroIndex = 0;
+  for (const num of nums) {
+    if (num !== 0) {
+      nums[nonZeroIndex] = num;
+      nonZeroIndex += 1;
+    }
+  }
+  for (const zeroIndex of range(nonZeroIndex, nums.length)) {
+    nums[zeroIndex] = 0;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/move-zeroes"
+  title="Move Zeroes"
+/>

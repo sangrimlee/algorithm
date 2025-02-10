@@ -1,0 +1,58 @@
+---
+title: Subarrays with K Different Integers
+tags:
+  - Array
+  - Hash Table
+  - Sliding Window
+  - Counting
+---
+
+# 992. Subarrays with K Different Integers
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function subarraysWithKDistinct(nums: number[], k: number): number {
+  const n = nums.length;
+  const counts = new Array(n + 1).fill(0);
+
+  let answer = 0;
+  let [start, mid] = [0, 0];
+  let remain = k;
+  for (const num of nums) {
+    counts[num] += 1;
+    if (counts[num] === 1) {
+      remain -= 1;
+      if (remain < 0) {
+        counts[nums[mid]] = 0;
+        mid += 1;
+        start = mid;
+      }
+    }
+
+    if (remain <= 0) {
+      while (1 < counts[nums[mid]]) {
+        counts[nums[mid]] -= 1;
+        mid += 1;
+      }
+      answer += mid - start + 1;
+    }
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/subarrays-with-k-different-integers"
+  title="Subarrays with K Different Integers"
+/>

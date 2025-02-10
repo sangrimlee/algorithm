@@ -1,0 +1,76 @@
+---
+title: Sum of Square Numbers
+tags:
+  - Math
+  - Two Pointers
+  - Binary Search
+---
+
+# 633. Sum of Square Numbers
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+</Badge.Root>
+
+## Solution
+
+### Solution1: Sqrt
+
+```typescript filename="solution.ts" copy
+export function judgeSquareSum(c: number): boolean {
+  for (let num = 0; num * num <= c; num++) {
+    if (isSquare(c - num * num)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isSquare(num: number) {
+  const sqrt = Math.sqrt(num);
+  return Math.floor(sqrt) === sqrt;
+}
+```
+
+#### Complexity
+
+- Time: `O(sqrt(c) * logC)`
+  - `sqrt(x)`의 연산이 `O(logX)`의 시간복잡도를 가지고 있기 때문이다.
+  - 관련 문제: [Problem 69. Sqrt(x)](https://leetcode.com/problems/sqrtx)
+- Space: `O(1)`
+
+---
+
+### Solution2: Two Pointers
+
+```typescript filename="solution.ts" copy
+export function judgeSquareSum(c: number): boolean {
+  let [start, end] = [0, Math.floor(Math.sqrt(c))];
+  while (start <= end) {
+    const num = start ** 2 + end ** 2;
+    if (num === c) {
+      return true;
+    }
+    if (num < c) {
+      start += 1;
+    } else {
+      end -= 1;
+    }
+  }
+  return false;
+}
+```
+
+#### Complexity
+
+- Time: `O(sqrt(c))`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-square-numbers"
+  title="Sum of Square Numbers"
+/>

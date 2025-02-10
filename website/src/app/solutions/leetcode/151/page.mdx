@@ -1,0 +1,32 @@
+---
+title: Reverse Words in a String
+tags:
+  - Two Pointers
+  - String
+---
+
+# 151. Reverse Words in a String
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reverseWords(s: string): string {
+  return s
+    .split(/ +/)
+    .filter((char) => char !== '')
+    .reverse()
+    .join(' ');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/reverse-words-in-a-string/"
+  title="Reverse Words in a String"
+/>

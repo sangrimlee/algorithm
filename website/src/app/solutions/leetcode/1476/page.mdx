@@ -1,0 +1,52 @@
+---
+title: Subrectangle Queries
+tags:
+  - Array
+  - Design
+  - Matrix
+---
+
+# 1476. Subrectangle Queries
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Design" slug="design" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class SubrectangleQueries {
+  private readonly rectangle: number[][];
+
+  constructor(rectangle: number[][]) {
+    this.rectangle = rectangle;
+  }
+
+  updateSubrectangle(
+    row1: number,
+    col1: number,
+    row2: number,
+    col2: number,
+    newValue: number,
+  ): void {
+    for (let row = row1; row <= row2; row++) {
+      for (let col = col1; col <= col2; col++) {
+        this.rectangle[row][col] = newValue;
+      }
+    }
+  }
+
+  getValue(row: number, col: number): number {
+    return this.rectangle[row][col];
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/subrectangle-queries"
+  title="Subrectangle Queries"
+/>

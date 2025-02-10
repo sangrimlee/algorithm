@@ -1,0 +1,41 @@
+---
+title: Matrix Similarity After Cyclic Shifts
+tags:
+  - Array
+  - Math
+  - Matrix
+  - Simulation
+---
+
+# 2946. Matrix Similarity After Cyclic Shifts
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function areSimilar(mat: number[][], k: number): boolean {
+  const [m, n] = [mat.length, mat[0].length];
+
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (mat[i][j] !== mat[i][(j + k) % n]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts"
+  title="Matrix Similarity After Cyclic Shifts"
+/>

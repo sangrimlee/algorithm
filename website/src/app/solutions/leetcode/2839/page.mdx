@@ -1,0 +1,33 @@
+---
+title: Check if Strings Can be Made Equal With Operations I
+tags:
+  - String
+---
+
+# 2839. Check if Strings Can be Made Equal With Operations I
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canBeEqual(s1: string, s2: string): boolean {
+  function isEqual<T>(set1: Set<T>, set2: Set<T>) {
+    return set1.size === set2.size && [...set1].every((s) => set2.has(s));
+  }
+
+  return (
+    isEqual(new Set([s1[0], s1[2]]), new Set([s2[0], s2[2]])) &&
+    isEqual(new Set([s1[1], s1[3]]), new Set([s2[1], s2[3]]))
+  );
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i"
+  title="Check if Strings Can be Made Equal With Operations I"
+/>

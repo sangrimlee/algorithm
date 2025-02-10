@@ -1,0 +1,46 @@
+---
+title: Remove K Digits
+tags:
+  - String
+  - Stack
+  - Greedy
+  - Monotonic Stack
+---
+
+# 402. Remove K Digits
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Monotonic Stack" slug="monotonic-stack" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeKdigits(num: string, k: number): string {
+  let remain = k;
+  const stack: number[] = [];
+  for (const n of num) {
+    const digit = parseInt(n);
+    while (0 < stack.length && digit < stack[stack.length - 1] && 0 < remain) {
+      stack.pop();
+      remain -= 1;
+    }
+    if (0 < stack.length || digit !== 0) {
+      stack.push(digit);
+    }
+  }
+
+  const answer = remain === 0 ? stack.join('') : stack.slice(0, -remain).join('');
+  return answer === '' ? '0' : answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-k-digits"
+  title="Remove K Digits"
+/>

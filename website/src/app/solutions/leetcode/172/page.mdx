@@ -1,0 +1,30 @@
+---
+title: Factorial Trailing Zeroes
+tags:
+  - Math
+---
+
+# 172. Factorial Trailing Zeroes
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function trailingZeroes(n: number): number {
+  let answer = 0;
+  for (let i = 5; 1 <= n / i; i *= 5) {
+    answer += Math.floor(n / i);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/factorial-trailing-zeroes"
+  title="Factorial Trailing Zeroes"
+/>

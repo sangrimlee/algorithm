@@ -1,0 +1,40 @@
+---
+title: Minimum Amount of Time to Fill Cups
+tags:
+  - Array
+  - Greedy
+  - Sorting
+  - Heap (Priority Queue)
+---
+
+# 2335. Minimum Amount of Time to Fill Cups
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function fillCups(amount: number[]): number {
+  function max(nums: number[]) {
+    return nums.reduce((prev, num) => (prev > num ? prev : num), Number.MIN_SAFE_INTEGER);
+  }
+
+  function sum(nums: number[]) {
+    return nums.reduce((prev, num) => prev + num, 0);
+  }
+
+  return Math.max(max(amount), Math.ceil(sum(amount) / 2));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups"
+  title="Minimum Amount of Time to Fill Cups"
+/>

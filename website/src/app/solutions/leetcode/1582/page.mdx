@@ -1,0 +1,46 @@
+---
+title: Special Positions in a Binary Matrix
+tags:
+  - Array
+  - Matrix
+---
+
+# 1582. Special Positions in a Binary Matrix
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numSpecial(mat: number[][]): number {
+  const [m, n] = [mat.length, mat[0].length];
+  const rows = new Array(m).fill(0);
+  const cols = new Array(n).fill(0);
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      rows[i] += mat[i][j];
+      cols[j] += mat[i][j];
+    }
+  }
+
+  let answer = 0;
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (rows[i] === 1 && cols[j] === 1 && mat[i][j] === 1) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/special-positions-in-a-binary-matrix"
+  title="Special Positions in a Binary Matrix"
+/>

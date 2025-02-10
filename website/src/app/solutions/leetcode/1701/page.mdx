@@ -1,0 +1,40 @@
+---
+title: Average Waiting Time
+tags:
+  - Array
+  - Simulation
+---
+
+# 1701. Average Waiting Time
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function averageWaitingTime(customers: number[][]): number {
+  const n = customers.length;
+  let currentTime = 0;
+  let totalWaitingTime = 0;
+  for (const [arrival, time] of customers) {
+    currentTime = Math.max(currentTime, arrival) + time;
+    totalWaitingTime += currentTime - arrival;
+  }
+  return totalWaitingTime / n;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/average-waiting-time"
+  title="Average Waiting Time"
+/>

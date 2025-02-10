@@ -1,0 +1,47 @@
+---
+title: Find the Prefix Common Array of Two Arrays
+tags:
+  - Array
+  - Hash Table
+  - Bit Manipulation
+---
+
+# 2657. Find the Prefix Common Array of Two Arrays
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findThePrefixCommonArray(A: number[], B: number[]): number[] {
+  const n = A.length;
+  const set = new Set();
+  let prefixCount = 0;
+  function addNumber(num: number) {
+    if (set.has(num)) {
+      prefixCount += 1;
+    } else {
+      set.add(num);
+    }
+  }
+
+  const C = [];
+  for (let i = 0; i < n; i++) {
+    addNumber(A[i]);
+    addNumber(B[i]);
+    C.push(prefixCount);
+  }
+  return C;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays"
+  title="Find the Prefix Common Array of Two Arrays"
+/>

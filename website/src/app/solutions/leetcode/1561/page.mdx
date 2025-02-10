@@ -1,0 +1,41 @@
+---
+title: Maximum Number of Coins You Can Get
+tags:
+  - Array
+  - Math
+  - Greedy
+  - Sorting
+  - Game Theory
+---
+
+# 1561. Maximum Number of Coins You Can Get
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Game Theory" slug="game-theory" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxCoins(piles: number[]): number {
+  piles.sort((a, b) => b - a);
+
+  const n = (2 * piles.length) / 3;
+  let answer = 0;
+  for (let i = 1; i < n; i += 2) {
+    answer += piles[i];
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-number-of-coins-you-can-get"
+  title="Maximum Number of Coins You Can Get"
+/>

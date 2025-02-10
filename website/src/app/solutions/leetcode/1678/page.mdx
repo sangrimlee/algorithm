@@ -1,0 +1,26 @@
+---
+title: Goal Parser Interpretation
+tags:
+  - String
+---
+
+# 1678. Goal Parser Interpretation
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function interpret(command: string): string {
+  return command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/goal-parser-interpretation"
+  title="Goal Parser Interpretation"
+/>

@@ -1,0 +1,54 @@
+---
+title: Design an Ordered Stream
+tags:
+  - Array
+  - Hash Table
+  - Design
+  - Data Stream
+---
+
+# 1656. Design an Ordered Stream
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Design" slug="design" />
+  <Badge.Topic name="Data Stream" slug="data-stream" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class OrderedStream {
+  private ptr: number;
+  private readonly size: number;
+  private readonly data: string[];
+
+  constructor(n: number) {
+    this.ptr = 0;
+    this.size = n;
+    this.data = new Array(n).fill('');
+  }
+
+  insert(idKey: number, value: string): string[] {
+    const i = idKey - 1;
+    this.data[i] = value;
+    if (this.ptr < i) {
+      return [];
+    }
+    const result = [];
+    while (this.ptr < this.size && this.data[this.ptr] !== '') {
+      result.push(this.data[this.ptr]);
+      this.ptr += 1;
+    }
+    return result;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/design-an-ordered-stream"
+  title="Design an Ordered Stream"
+/>

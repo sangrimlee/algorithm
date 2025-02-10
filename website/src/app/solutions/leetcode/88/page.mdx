@@ -1,0 +1,37 @@
+---
+title: Merge Sorted Array
+tags:
+  - Array
+  - Two Pointers
+  - Sorting
+---
+
+# 88. Merge Sorted Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+// Do not return anything, modify nums1 in-place instead.
+export function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+  let [mIndex, nIndex, total] = [m - 1, n - 1, m + n - 1];
+  while (0 <= mIndex && 0 <= nIndex) {
+    nums1[total--] = nums2[nIndex] < nums1[mIndex] ? nums1[mIndex--] : nums2[nIndex--];
+  }
+  while (0 <= nIndex) {
+    nums1[total--] = nums2[nIndex--];
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/merge-sorted-array/"
+  title="Merge Sorted Array"
+/>

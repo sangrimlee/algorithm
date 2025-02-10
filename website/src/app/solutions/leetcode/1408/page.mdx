@@ -1,0 +1,30 @@
+---
+title: String Matching in an Array
+tags:
+  - Array
+  - String
+  - String Matching
+---
+
+# 1408. String Matching in an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="String Matching" slug="string-matching" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function stringMatching(words: string[]): string[] {
+  return words.filter((word) => words.some((w) => w !== word && w.includes(word)));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/string-matching-in-an-array"
+  title="String Matching in an Array"
+/>

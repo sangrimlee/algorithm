@@ -1,0 +1,80 @@
+---
+title: Sentence Similarity III
+tags:
+  - Array
+  - Two Pointers
+  - String
+---
+
+# 1813. Sentence Similarity III
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+### Solution1: `Deque`
+
+```typescript filename="solution.ts" copy
+export function areSentencesSimilar(sentence1: string, sentence2: string): boolean {
+  const words1 = sentence1.split(' ');
+  const words2 = sentence2.split(' ');
+  while (0 < words1.length && 0 < words2.length && words1[0] === words2[0]) {
+    words1.shift();
+    words2.shift();
+  }
+  while (
+    0 < words1.length &&
+    0 < words2.length &&
+    words1[words1.length - 1] === words2[words2.length - 1]
+  ) {
+    words1.pop();
+    words2.pop();
+  }
+  return words1.length === 0 || words2.length === 0;
+}
+```
+
+#### Complexity
+
+- Time: `O(M + N)`
+- Space: `O(M + N)`
+
+---
+
+### Solution2: `Two Pointer`
+
+```typescript filename="solution.ts" copy
+export function areSentencesSimilar(sentence1: string, sentence2: string): boolean {
+  let words1 = sentence1.split(' ');
+  let words2 = sentence2.split(' ');
+  if (words1.length > words2.length) {
+    [words1, words2] = [words2, words1];
+  }
+
+  let [start, end1, end2] = [0, words1.length - 1, words2.length - 1];
+  while (start < words1.length && words1[start] === words2[start]) {
+    start += 1;
+  }
+  while (0 <= end1 && words1[end1] === words2[end2]) {
+    end1 -= 1;
+    end2 -= 1;
+  }
+  return end1 < start;
+}
+```
+
+#### Complexity
+
+- Time: `O(M + N)`
+- Space: `O(M + N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sentence-similarity-iii"
+  title="Sentence Similarity III"
+/>

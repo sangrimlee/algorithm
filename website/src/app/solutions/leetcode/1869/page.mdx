@@ -1,0 +1,30 @@
+---
+title: Longer Contiguous Segments of Ones than Zeros
+tags:
+  - String
+---
+
+# 1869. Longer Contiguous Segments of Ones than Zeros
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkZeroOnes(s: string): boolean {
+  function getMaxLength(arr: string[]) {
+    return arr.reduce((prev, s) => Math.max(prev, s.length), 0);
+  }
+
+  return getMaxLength(s.split(/0+/)) > getMaxLength(s.split(/1+/));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros"
+  title="Longer Contiguous Segments of Ones than Zeros"
+/>

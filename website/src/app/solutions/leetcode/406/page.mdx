@@ -1,0 +1,42 @@
+---
+title: Queue Reconstruction by Height
+tags:
+  - Array
+  - Greedy
+  - Binary Indexed Tree
+  - Segment Tree
+  - Sorting
+---
+
+# 406. Queue Reconstruction by Height
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Binary Indexed Tree" slug="binary-indexed-tree" />
+  <Badge.Topic name="Segment Tree" slug="segment-tree" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reconstructQueue(people: number[][]): number[][] {
+  const answer: number[][] = [];
+
+  people.sort((a, b) => (a[0] !== b[0] ? b[0] - a[0] : a[1] - b[1]));
+
+  people.forEach(([height, k]) => {
+    answer.splice(k, 0, [height, k]);
+  });
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/queue-reconstruction-by-height/"
+  title="Queue Reconstruction by Height"
+/>

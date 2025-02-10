@@ -1,0 +1,28 @@
+---
+title: Smallest Even Multiple
+tags:
+  - Math
+  - Number Theory
+---
+
+# 2413. Smallest Even Multiple
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Number Theory" slug="number-theory" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallestEvenMultiple(n: number): number {
+  return n % 2 === 0 ? n : 2 * n;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/smallest-even-multiple"
+  title="Smallest Even Multiple"
+/>

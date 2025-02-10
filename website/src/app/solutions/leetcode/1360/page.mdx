@@ -1,0 +1,30 @@
+---
+title: Number of Days Between Two Dates
+tags:
+  - Math
+  - String
+---
+
+# 1360. Number of Days Between Two Dates
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function daysBetweenDates(date1: string, date2: string): number {
+  const DAY = 24 * 60 * 60 * 1000;
+  const getTime = (date: string) => new Date(date).getTime();
+  return Math.floor(Math.abs(getTime(date1) - getTime(date2)) / DAY);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-days-between-two-dates"
+  title="Number of Days Between Two Dates"
+/>

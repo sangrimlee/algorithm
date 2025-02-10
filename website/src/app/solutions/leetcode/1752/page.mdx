@@ -1,0 +1,39 @@
+---
+title: Check if Array Is Sorted and Rotated
+tags:
+  - Array
+---
+
+# 1752. Check if Array Is Sorted and Rotated
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function check(nums: number[]): boolean {
+  const n = nums.length;
+
+  let maxLength = 0;
+  let currentLength = 1;
+  for (let i = 0; i < n * 2 - 1; i++) {
+    if (nums[i % n] <= nums[(i + 1) % n]) {
+      currentLength += 1;
+    } else {
+      maxLength = Math.max(maxLength, currentLength);
+      currentLength = 1;
+    }
+  }
+  maxLength = Math.max(maxLength, currentLength);
+  return n <= maxLength;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated"
+  title="Check if Array Is Sorted and Rotated"
+/>

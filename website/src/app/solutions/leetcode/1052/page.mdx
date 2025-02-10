@@ -1,0 +1,51 @@
+---
+title: Grumpy Bookstore Owner
+tags:
+  - Array
+  - Sliding Window
+---
+
+# 1052. Grumpy Bookstore Owner
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxSatisfied(customers: number[], grumpy: number[], minutes: number): number {
+  const n = customers.length;
+  let alreadySatisfied = 0;
+  for (let i = 0; i < n; i++) {
+    if (grumpy[i] === 0) {
+      alreadySatisfied += customers[i];
+      customers[i] = 0;
+    }
+  }
+
+  let maxSatisfied = 0;
+  let currentSatisfied = 0;
+  for (let i = 0; i < n; i++) {
+    currentSatisfied += customers[i];
+    if (minutes <= i) {
+      currentSatisfied -= customers[i - minutes];
+    }
+    maxSatisfied = Math.max(maxSatisfied, currentSatisfied);
+  }
+  return alreadySatisfied + maxSatisfied;
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/grumpy-bookstore-owner"
+  title="Grumpy Bookstore Owner"
+/>

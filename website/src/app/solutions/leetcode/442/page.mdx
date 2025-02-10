@@ -1,0 +1,36 @@
+---
+title: Find All Duplicates in an Array
+tags:
+  - Array
+  - Hash Table
+---
+
+# 442. Find All Duplicates in an Array
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findDuplicates(nums: number[]): number[] {
+  const answer: number[] = [];
+  nums.forEach((num) => {
+    if (nums[Math.abs(num) - 1] < 0) {
+      answer.push(Math.abs(num));
+    } else {
+      nums[Math.abs(num) - 1] *= -1;
+    }
+  });
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-all-duplicates-in-an-array"
+  title="Find All Duplicates in an Array"
+/>

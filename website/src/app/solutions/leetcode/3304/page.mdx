@@ -1,0 +1,79 @@
+---
+title: Find the K-th Character in String Game I
+tags:
+  - Math
+  - Bit Manipulation
+  - Recursion
+  - Simulation
+---
+
+# 3304. Find the K-th Character in String Game I
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Recursion" slug="recursion" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+### Solution1: `Brute Force`
+
+```typescript filename="solution.ts" copy
+export function kthCharacter(k: number): string {
+  let answer = 'a';
+  while (answer.length < k) {
+    let nextCharacters = '';
+    for (const char of answer) {
+      nextCharacters += getNextCharacter(char);
+    }
+    answer += nextCharacters;
+  }
+
+  return answer[k - 1];
+}
+
+function getNextCharacter(char: string) {
+  const aCode = 'a'.charCodeAt(0);
+  const charCode = char.charCodeAt(0);
+  return String.fromCharCode(((charCode - aCode + 1) % 26) + aCode);
+}
+```
+
+#### Complexity
+
+- Time: `O(K)`
+- Space: `O(K)`
+
+### Solution2: `Bit Count`
+
+`s[1xxx]`는 `s[xxx]`의 다음 문자입니다.
+`s[0]`는 `a`이므로 `s[k]`는 `s[0]`의 비트 개수만큼의 다음 문자열이 됩니다.
+
+```typescript filename="solution.ts" copy
+export function kthCharacter(k: number): string {
+  return String.fromCharCode('a'.charCodeAt(0) + bitCount(k - 1));
+}
+
+function bitCount(num: number) {
+  let result = 0;
+  while (0 < num) {
+    result += num & 1;
+    num >>= 1;
+  }
+  return result;
+}
+```
+
+#### Complexity
+
+- Time: `O(logK)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-k-th-character-in-string-game-i"
+  title="Find the K-th Character in String Game I"
+/>

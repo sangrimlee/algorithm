@@ -1,0 +1,45 @@
+---
+title: Maximum Count of Positive Integer and Negative Integer
+tags:
+  - Array
+  - Binary Search
+  - Counting
+---
+
+# 2529. Maximum Count of Positive Integer and Negative Integer
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumCount(nums: number[]): number {
+  const neg = lowerBound(nums, 0);
+  const pos = nums.length - lowerBound(nums, 1);
+  return Math.max(neg, pos);
+}
+
+function lowerBound(arr: number[], target: number) {
+  let [left, right] = [0, arr.length];
+  while (left < right) {
+    const mid = Math.floor((right + left) / 2);
+    if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer"
+  title="Maximum Count of Positive Integer and Negative Integer"
+/>

@@ -20,7 +20,7 @@
     "test:watch": "turbo run test:watch",
     "generate:code": "algorithm -d solution/src",
     "generate:readme": "markdown -d solution/src -o solution",
-    "generate:page": "markdown -d solution/src -o website/src/pages/solutions --format page",
+    "generate:page": "markdown -d solution/src -o website/src/app/solutions --format page",
     "prepare": "husky install"
   },
   "devDependencies": {

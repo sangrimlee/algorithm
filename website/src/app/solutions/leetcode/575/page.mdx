@@ -1,0 +1,28 @@
+---
+title: Distribute Candies
+tags:
+  - Array
+  - Hash Table
+---
+
+# 575. Distribute Candies
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function distributeCandies(candyType: number[]): number {
+  return Math.min(new Set(candyType).size, candyType.length / 2);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/distribute-candies"
+  title="Distribute Candies"
+/>

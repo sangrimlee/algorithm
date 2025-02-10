@@ -1,0 +1,35 @@
+---
+title: Water Bottles
+tags:
+  - Math
+  - Simulation
+---
+
+# 1518. Water Bottles
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numWaterBottles(numBottles: number, numExchange: number): number {
+  let answer = numBottles;
+  let emptyBottles = numBottles;
+  while (numExchange <= emptyBottles) {
+    const fullBottles = Math.floor(emptyBottles / numExchange);
+    answer += fullBottles;
+    emptyBottles = fullBottles + (emptyBottles % numExchange);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/water-bottles"
+  title="Water Bottles"
+/>

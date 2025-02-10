@@ -1,0 +1,47 @@
+---
+title: Maximum Bags With Full Capacity of Rocks
+tags:
+  - Array
+  - Greedy
+  - Sorting
+---
+
+# 2279. Maximum Bags With Full Capacity of Rocks
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumBags(
+  capacities: number[],
+  rocks: number[],
+  additionalRocks: number,
+): number {
+  const remainCapacities = capacities
+    .map((capacity, i) => capacity - rocks[i])
+    .sort((a, b) => a - b);
+
+  let answer = 0;
+  for (const remainCapacity of remainCapacities) {
+    if (additionalRocks < remainCapacity) {
+      return answer;
+    }
+    additionalRocks -= remainCapacity;
+    answer += 1;
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks"
+  title="Maximum Bags With Full Capacity of Rocks"
+/>

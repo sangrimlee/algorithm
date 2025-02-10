@@ -1,0 +1,37 @@
+---
+title: Teemo Attacking
+tags:
+  - Array
+  - Simulation
+---
+
+# 495. Teemo Attacking
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findPoisonedDuration(timeSeries: number[], duration: number): number {
+  let totalTime = 0;
+  let currentTime = 0;
+
+  for (const startTime of timeSeries) {
+    const endTime = startTime + duration;
+    totalTime += endTime - Math.max(currentTime, startTime);
+    currentTime = endTime;
+  }
+
+  return totalTime;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/teemo-attacking"
+  title="Teemo Attacking"
+/>

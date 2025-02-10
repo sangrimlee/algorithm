@@ -1,0 +1,49 @@
+---
+title: Count Prefix and Suffix Pairs I
+tags:
+  - Array
+  - String
+  - Trie
+  - Rolling Hash
+  - String Matching
+  - Hash Function
+---
+
+# 3042. Count Prefix and Suffix Pairs I
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Trie" slug="trie" />
+  <Badge.Topic name="Rolling Hash" slug="rolling-hash" />
+  <Badge.Topic name="String Matching" slug="string-matching" />
+  <Badge.Topic name="Hash Function" slug="hash-function" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPrefixSuffixPairs(words: string[]): number {
+  function isPrefixAndSuffix(str1: string, str2: string) {
+    return str2.startsWith(str1) && str2.endsWith(str1);
+  }
+
+  const n = words.length;
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (isPrefixAndSuffix(words[i], words[j])) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-prefix-and-suffix-pairs-i"
+  title="Count Prefix and Suffix Pairs I"
+/>

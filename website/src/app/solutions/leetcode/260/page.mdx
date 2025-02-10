@@ -1,0 +1,38 @@
+---
+title: Single Number III
+tags:
+  - Array
+  - Bit Manipulation
+---
+
+# 260. Single Number III
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function singleNumber(nums: number[]): number[] {
+  const xor = nums.reduce((prev, num) => prev ^ num, 0);
+  const rightMostBit = xor & ~(xor - 1);
+  let [x, y] = [0, 0];
+  nums.forEach((num) => {
+    if (0 < (num & rightMostBit)) {
+      x ^= num;
+    } else {
+      y ^= num;
+    }
+  });
+  return [x, y];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/single-number-iii"
+  title="Single Number III"
+/>

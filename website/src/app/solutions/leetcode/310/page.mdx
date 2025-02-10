@@ -1,0 +1,63 @@
+---
+title: Minimum Height Trees
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Topological Sort
+---
+
+# 310. Minimum Height Trees
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Graph" slug="graph" />
+  <Badge.Topic name="Topological Sort" slug="topological-sort" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findMinHeightTrees(n: number, edges: number[][]): number[] {
+  if (n <= 2) {
+    return Array.from({ length: n }, (_, i) => i);
+  }
+
+  const neighbors = Array.from({ length: n }, () => new Set<number>());
+  for (const [start, end] of edges) {
+    neighbors[start].add(end);
+    neighbors[end].add(start);
+  }
+
+  let leafNodes: number[] = [];
+  for (let i = 0; i < n; i++) {
+    if (neighbors[i].size === 1) {
+      leafNodes.push(i);
+    }
+  }
+
+  let numberOfRemainNodes = n;
+  while (2 < numberOfRemainNodes) {
+    numberOfRemainNodes -= leafNodes.length;
+    const newLeafNodes = [];
+    for (const leafNode of leafNodes) {
+      for (const neighbor of neighbors[leafNode]) {
+        neighbors[neighbor].delete(leafNode);
+        if (neighbors[neighbor].size === 1) {
+          newLeafNodes.push(neighbor);
+        }
+      }
+      leafNodes = newLeafNodes;
+    }
+  }
+  return leafNodes;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-height-trees"
+  title="Minimum Height Trees"
+/>

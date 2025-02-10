@@ -1,0 +1,44 @@
+---
+title: Separate Black and White Balls
+tags:
+  - Two Pointers
+  - String
+  - Greedy
+---
+
+# 2938. Separate Black and White Balls
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumSteps(s: string): number {
+  let answer = 0;
+  let oneCount = 0;
+  for (const char of s) {
+    if (char === '1') {
+      oneCount += 1;
+    } else {
+      answer += oneCount;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/separate-black-and-white-balls"
+  title="Separate Black and White Balls"
+/>

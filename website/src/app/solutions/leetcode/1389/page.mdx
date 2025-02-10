@@ -1,0 +1,32 @@
+---
+title: Create Target Array in the Given Order
+tags:
+  - Array
+  - Simulation
+---
+
+# 1389. Create Target Array in the Given Order
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function createTargetArray(nums: number[], indices: number[]): number[] {
+  const answer: number[] = [];
+  indices.forEach((index, numIndex) => {
+    answer.splice(index, 0, nums[numIndex]);
+  });
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/create-target-array-in-the-given-order"
+  title="Create Target Array in the Given Order"
+/>

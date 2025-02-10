@@ -1,0 +1,30 @@
+---
+title: Replace All Digits with Characters
+tags:
+  - String
+---
+
+# 1844. Replace All Digits with Characters
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function replaceDigits(s: string): string {
+  const shift = (c: string, x: number) => {
+    return String.fromCharCode(c.charCodeAt(0) + x);
+  };
+
+  return [...s].map((char, i) => (i % 2 === 0 ? char : shift(s[i - 1], +char))).join('');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/replace-all-digits-with-characters"
+  title="Replace All Digits with Characters"
+/>

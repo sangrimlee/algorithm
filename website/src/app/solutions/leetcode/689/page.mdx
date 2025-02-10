@@ -1,0 +1,149 @@
+---
+title: Maximum Sum of 3 Non-Overlapping Subarrays
+tags:
+  - Array
+  - Dynamic Programming
+---
+
+# 689. Maximum Sum of 3 Non-Overlapping Subarrays
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+</Badge.Root>
+
+## Solution
+
+### Solution1: Dynamic Programming
+
+```typescript filename="solution.ts" copy
+export function maxSumOfThreeSubarrays(nums: number[], k: number): number[] {
+  const n = nums.length;
+  const prefixSum: number[] = new Array(n + 1).fill(0);
+  for (let i = 0; i < n; i++) {
+    prefixSum[i + 1] = prefixSum[i] + nums[i];
+  }
+
+  const leftMaxIndex = new Array(n).fill(0);
+  let leftMaxSum = prefixSum[k] - prefixSum[0];
+  for (let i = k; i < n; i++) {
+    const leftSum = prefixSum[i + 1] - prefixSum[i + 1 - k];
+    if (leftMaxSum < leftSum) {
+      leftMaxIndex[i] = i + 1 - k;
+      leftMaxSum = leftSum;
+    } else {
+      leftMaxIndex[i] = leftMaxIndex[i - 1];
+    }
+  }
+
+  const rightMaxIndex = new Array(n).fill(0);
+  rightMaxIndex[n - k] = n - k;
+  let rightMaxSum = prefixSum[n] - prefixSum[n - k];
+  for (let i = n - k - 1; 0 <= i; i--) {
+    const rightSum = prefixSum[i + k] - prefixSum[i];
+    if (rightMaxSum <= rightSum) {
+      rightMaxIndex[i] = i;
+      rightMaxSum = rightSum;
+    } else {
+      rightMaxIndex[i] = rightMaxIndex[i + 1];
+    }
+  }
+
+  let maxSum = 0;
+  let answer = [0, 0, 0];
+  for (let i = k; i <= n - 2 * k; i++) {
+    const leftIndex = leftMaxIndex[i - 1];
+    const rightIndex = rightMaxIndex[i + k];
+    const totalSum =
+      prefixSum[i + k] -
+      prefixSum[i] +
+      prefixSum[leftIndex + k] -
+      prefixSum[leftIndex] +
+      prefixSum[rightIndex + k] -
+      prefixSum[rightIndex];
+
+    if (maxSum < totalSum) {
+      maxSum = totalSum;
+      answer = [leftIndex, i, rightIndex];
+    }
+  }
+  return answer;
+}
+```
+
+#### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$
+
+---
+
+### Solution2: Sliding Window
+
+```typescript filename="solution.ts" copy
+export function maxSumOfThreeSubarrays(nums: number[], k: number): number[] {
+  const n = nums.length;
+
+  let singleSum = rangeSum(nums, 0, k);
+  let doubleSum = rangeSum(nums, k, 2 * k);
+  let tripleSum = rangeSum(nums, 2 * k, 3 * k);
+
+  let bestSingleSum = singleSum;
+  let bestDoubleSum = singleSum + doubleSum;
+  let bestTripleSum = singleSum + doubleSum + tripleSum;
+
+  let bestSingleStart = 0;
+  let bestDoubleStart = [0, k];
+  let bestTripleStart = [0, k, k * 2];
+
+  let singleStart = 1;
+  let doubleStart = k + 1;
+  let tripleStart = 2 * k + 1;
+  while (tripleStart <= n - k) {
+    singleSum += nums[singleStart + k - 1] - nums[singleStart - 1];
+    doubleSum += nums[doubleStart + k - 1] - nums[doubleStart - 1];
+    tripleSum += nums[tripleStart + k - 1] - nums[tripleStart - 1];
+
+    if (bestSingleSum < singleSum) {
+      bestSingleStart = singleStart;
+      bestSingleSum = singleSum;
+    }
+
+    if (bestDoubleSum < bestSingleSum + doubleSum) {
+      bestDoubleStart = [bestSingleStart, doubleStart];
+      bestDoubleSum = bestSingleSum + doubleSum;
+    }
+
+    if (bestTripleSum < bestDoubleSum + tripleSum) {
+      bestTripleStart = [...bestDoubleStart, tripleStart];
+      bestTripleSum = bestDoubleSum + tripleSum;
+    }
+
+    singleStart += 1;
+    doubleStart += 1;
+    tripleStart += 1;
+  }
+
+  return bestTripleStart;
+}
+
+function rangeSum(arr: number[], start: number, end: number) {
+  let sum = 0;
+  for (let i = start; i < end; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+```
+
+#### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays"
+  title="Maximum Sum of 3 Non-Overlapping Subarrays"
+/>

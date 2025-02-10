@@ -1,0 +1,46 @@
+---
+title: Maximum Erasure Value
+tags:
+  - Array
+  - Hash Table
+  - Sliding Window
+---
+
+# 1695. Maximum Erasure Value
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumUniqueSubarray(nums: number[]): number {
+  let answer = 0;
+  const isExist = new Map<number, boolean>();
+
+  let currentIndex = 0;
+  let currentValue = 0;
+  nums.forEach((num) => {
+    while (isExist.get(num)) {
+      isExist.set(nums[currentIndex], false);
+      currentValue -= nums[currentIndex];
+      currentIndex += 1;
+    }
+    isExist.set(num, true);
+    currentValue += num;
+    answer = Math.max(answer, currentValue);
+  });
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-erasure-value/"
+  title="Maximum Erasure Value"
+/>

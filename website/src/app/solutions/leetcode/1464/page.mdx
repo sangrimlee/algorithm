@@ -1,0 +1,39 @@
+---
+title: Maximum Product of Two Elements in an Array
+tags:
+  - Array
+  - Sorting
+  - Heap (Priority Queue)
+---
+
+# 1464. Maximum Product of Two Elements in an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxProduct(nums: number[]): number {
+  const MIN_VALUE = Number.MIN_SAFE_INTEGER;
+  let [first, second] = [MIN_VALUE, MIN_VALUE];
+  nums.forEach((num) => {
+    if (first < num) {
+      [first, second] = [num, first];
+    } else if (second < num) {
+      second = num;
+    }
+  });
+  return (first - 1) * (second - 1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array"
+  title="Maximum Product of Two Elements in an Array"
+/>

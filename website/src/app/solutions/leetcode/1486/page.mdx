@@ -1,0 +1,29 @@
+---
+title: XOR Operation in an Array
+tags:
+  - Math
+  - Bit Manipulation
+---
+
+# 1486. XOR Operation in an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function xorOperation(n: number, start: number): number {
+  const nums = Array.from({ length: n }, (_, i) => start + 2 * i);
+  return nums.reduce((prev, num) => prev ^ num, 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/xor-operation-in-an-array"
+  title="XOR Operation in an Array"
+/>

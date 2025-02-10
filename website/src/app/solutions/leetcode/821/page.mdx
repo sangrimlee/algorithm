@@ -1,0 +1,45 @@
+---
+title: Shortest Distance to a Character
+tags:
+  - Array
+  - Two Pointers
+  - String
+---
+
+# 821. Shortest Distance to a Character
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function shortestToChar(s: string, c: string): number[] {
+  const n = s.length;
+  const distances: number[] = [];
+
+  let prevIndex = -(10 ** 5);
+  let nextIndex = s.indexOf(c);
+  for (let i = 0; i < n; i++) {
+    const prevDistance = Math.abs(prevIndex - i);
+    const nextDistance = Math.abs(nextIndex - i);
+    distances.push(Math.min(prevDistance, nextDistance));
+    if (nextDistance === 0) {
+      prevIndex = nextIndex;
+      nextIndex = s.indexOf(c, i + 1);
+    }
+  }
+
+  return distances;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/shortest-distance-to-a-character"
+  title="Shortest Distance to a Character"
+/>

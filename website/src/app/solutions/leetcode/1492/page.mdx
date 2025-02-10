@@ -1,0 +1,37 @@
+---
+title: The kth Factor of n
+tags:
+  - Math
+  - Number Theory
+---
+
+# 1492. The kth Factor of n
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Number Theory" slug="number-theory" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kthFactor(n: number, k: number): number {
+  let currentIndex = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) {
+      currentIndex += 1;
+    }
+    if (currentIndex === k) {
+      return i;
+    }
+  }
+  return -1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/the-kth-factor-of-n"
+  title="The kth Factor of n"
+/>

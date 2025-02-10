@@ -1,0 +1,29 @@
+---
+title: Sum of Squares of Special Elements
+tags:
+  - Array
+  - Enumeration
+---
+
+# 2778. Sum of Squares of Special Elements
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Enumeration" slug="enumeration" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumOfSquares(nums: number[]): number {
+  const n = nums.length;
+  return nums.reduce((acc, num, i) => (n % (i + 1) === 0 ? acc + num ** 2 : acc), 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-squares-of-special-elements"
+  title="Sum of Squares of Special Elements"
+/>

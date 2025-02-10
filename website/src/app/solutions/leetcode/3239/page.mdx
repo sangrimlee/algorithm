@@ -1,0 +1,54 @@
+---
+title: Minimum Number of Flips to Make Binary Grid Palindromic I
+tags:
+  - Array
+  - Two Pointers
+  - Matrix
+---
+
+# 3239. Minimum Number of Flips to Make Binary Grid Palindromic I
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minFlips(grid: number[][]): number {
+  const [m, n] = [grid.length, grid[0].length];
+
+  let rowFlips = 0;
+  for (let y = 0; y < m; y++) {
+    for (let x = 0; x < n / 2; x++) {
+      if (grid[y][x] !== grid[y][n - 1 - x]) {
+        rowFlips += 1;
+      }
+    }
+  }
+
+  let colFlips = 0;
+  for (let x = 0; x < n; x++) {
+    for (let y = 0; y < m / 2; y++) {
+      if (grid[y][x] !== grid[m - 1 - y][x]) {
+        colFlips += 1;
+      }
+    }
+  }
+  return Math.min(rowFlips, colFlips);
+}
+```
+
+### Complexity
+
+- Time: `O(N * M)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-flips-to-make-binary-grid-palindromic-i"
+  title="Minimum Number of Flips to Make Binary Grid Palindromic I"
+/>

@@ -1,0 +1,26 @@
+---
+title: Find Center of Star Graph
+tags:
+  - Graph
+---
+
+# 1791. Find Center of Star Graph
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Graph" slug="graph" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findCenter(edges: number[][]): number {
+  return edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] ? edges[0][0] : edges[0][1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-center-of-star-graph"
+  title="Find Center of Star Graph"
+/>

@@ -1,0 +1,35 @@
+---
+title: Longest Continuous Increasing Subsequence
+tags:
+  - Array
+---
+
+# 674. Longest Continuous Increasing Subsequence
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findLengthOfLCIS(nums: number[]): number {
+  let answer = 1;
+  let start = 0;
+  for (let end = 1; end < nums.length; end++) {
+    if (nums[end - 1] < nums[end]) {
+      answer = Math.max(answer, end - start + 1);
+    } else {
+      start = end;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-continuous-increasing-subsequence"
+  title="Longest Continuous Increasing Subsequence"
+/>

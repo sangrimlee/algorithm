@@ -1,0 +1,36 @@
+---
+title: Faulty Keyboard
+tags:
+  - String
+  - Simulation
+---
+
+# 2810. Faulty Keyboard
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function finalString(s: string): string {
+  const chars: string[] = [];
+  for (const char of s) {
+    if (char === 'i') {
+      chars.reverse();
+    } else {
+      chars.push(char);
+    }
+  }
+  return chars.join('');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/faulty-keyboard"
+  title="Faulty Keyboard"
+/>

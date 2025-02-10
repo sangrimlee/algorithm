@@ -1,0 +1,36 @@
+---
+title: Find the Winning Player in Coin Game
+tags:
+  - Math
+  - Simulation
+  - Game Theory
+---
+
+# 3222. Find the Winning Player in Coin Game
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+  <Badge.Topic name="Game Theory" slug="game-theory" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function losingPlayer(x: number, y: number): string {
+  const turn = Math.min(x, Math.floor(y / 4));
+  return turn % 2 === 1 ? 'Alice' : 'Bob';
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-winning-player-in-coin-game"
+  title="Find the Winning Player in Coin Game"
+/>

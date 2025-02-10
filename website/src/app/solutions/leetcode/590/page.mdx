@@ -1,0 +1,41 @@
+---
+title: N-ary Tree Postorder Traversal
+tags:
+  - Stack
+  - Tree
+  - Depth-First Search
+---
+
+# 590. N-ary Tree Postorder Traversal
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { NArrayTreeNode as Node } from '@algorithm/lib';
+
+export function postorder(root: Node | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const values: number[] = [];
+  const traverse = (node: Node) => {
+    node.children.forEach(traverse);
+    values.push(node.val);
+  };
+  traverse(root);
+  return values;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/n-ary-tree-postorder-traversal"
+  title="N-ary Tree Postorder Traversal"
+/>

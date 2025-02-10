@@ -1,0 +1,32 @@
+---
+title: Sign of the Product of an Array
+tags:
+  - Array
+  - Math
+---
+
+# 1822. Sign of the Product of an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function arraySign(nums: number[]): number {
+  const sign = (num: number) => {
+    return num === 0 ? 0 : Math.sign(num);
+  };
+
+  return sign(nums.reduce((prev, curr) => prev * sign(curr), 1));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sign-of-the-product-of-an-array"
+  title="Sign of the Product of an Array"
+/>

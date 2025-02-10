@@ -1,0 +1,56 @@
+---
+title: Most Profit Assigning Work
+tags:
+  - Array
+  - Two Pointers
+  - Binary Search
+  - Greedy
+  - Sorting
+---
+
+# 826. Most Profit Assigning Work
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxProfitAssignment(
+  difficulty: number[],
+  profit: number[],
+  worker: number[],
+): number {
+  const n = difficulty.length;
+  const jobs: number[][] = [];
+  for (let i = 0; i < n; i++) {
+    jobs.push([difficulty[i], profit[i]]);
+  }
+  worker.sort((a, b) => a - b);
+  jobs.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]));
+
+  let answer = 0;
+  let jobIndex = 0;
+  let maxProfit = 0;
+  for (const ability of worker) {
+    while (jobIndex < n && ability >= jobs[jobIndex][0]) {
+      maxProfit = Math.max(maxProfit, jobs[jobIndex][1]);
+      jobIndex += 1;
+    }
+    answer += maxProfit;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/most-profit-assigning-work"
+  title="Most Profit Assigning Work"
+/>

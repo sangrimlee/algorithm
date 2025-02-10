@@ -1,0 +1,42 @@
+---
+title: First Missing Positive
+tags:
+  - Array
+  - Hash Table
+---
+
+# 41. First Missing Positive
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function firstMissingPositive(nums: number[]): number {
+  const n = nums.length;
+
+  for (let i = 0; i < n; i++) {
+    while (0 < nums[i] && nums[i] <= n && nums[nums[i] - 1] !== nums[i]) {
+      const num = nums[i];
+      [nums[i], nums[num - 1]] = [nums[num - 1], num];
+    }
+  }
+
+  for (let i = 0; i < n; i++) {
+    if (nums[i] !== i + 1) {
+      return i + 1;
+    }
+  }
+  return n + 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/first-missing-positive"
+  title="First Missing Positive"
+/>

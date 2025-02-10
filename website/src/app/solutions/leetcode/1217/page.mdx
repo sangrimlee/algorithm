@@ -1,0 +1,32 @@
+---
+title: Minimum Cost to Move Chips to The Same Position
+tags:
+  - Array
+  - Math
+  - Greedy
+---
+
+# 1217. Minimum Cost to Move Chips to The Same Position
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minCostToMoveChips(position: number[]): number {
+  const n = position.length;
+  const even = position.reduce((prev, chip) => (chip % 2 ? prev + 1 : prev), 0);
+  return Math.min(even, n - even);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position"
+  title="Minimum Cost to Move Chips to The Same Position"
+/>

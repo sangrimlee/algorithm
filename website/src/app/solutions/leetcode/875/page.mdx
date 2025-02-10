@@ -1,0 +1,42 @@
+---
+title: Koko Eating Bananas
+tags:
+  - Array
+  - Binary Search
+---
+
+# 875. Koko Eating Bananas
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minEatingSpeed(piles: number[], h: number): number {
+  const maxPile = piles.reduce((prev, curr) => Math.max(prev, curr), Number.MIN_SAFE_INTEGER);
+
+  const isFeasible = (speed: number) =>
+    piles.reduce((prev, pile) => prev + Math.ceil(pile / speed), 0) > h;
+
+  let [start, end] = [1, maxPile];
+  while (start < end) {
+    const mid = Math.floor((start + end) / 2);
+    if (isFeasible(mid)) {
+      start = mid + 1;
+    } else {
+      end = mid;
+    }
+  }
+  return start;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/koko-eating-bananas"
+  title="Koko Eating Bananas"
+/>

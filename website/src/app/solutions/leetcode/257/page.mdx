@@ -1,0 +1,59 @@
+---
+title: Binary Tree Paths
+tags:
+  - String
+  - Backtracking
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 257. Binary Tree Paths
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function binaryTreePaths(root: TreeNode | null): string[] {
+  if (!root) {
+    return [];
+  }
+
+  const answer: string[] = [];
+  function dfs(node: TreeNode, paths: number[]) {
+    if (!node.left && !node.right) {
+      answer.push(paths.join('->'));
+      return;
+    }
+    if (node.left) {
+      paths.push(node.left.val);
+      dfs(node.left, paths);
+      paths.pop();
+    }
+    if (node.right) {
+      paths.push(node.right.val);
+      dfs(node.right, paths);
+      paths.pop();
+    }
+  }
+  dfs(root, [root.val]);
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-tree-paths"
+  title="Binary Tree Paths"
+/>

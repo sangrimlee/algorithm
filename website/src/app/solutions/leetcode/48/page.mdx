@@ -1,0 +1,41 @@
+---
+title: Rotate Image
+tags:
+  - Array
+  - Math
+  - Matrix
+---
+
+# 48. Rotate Image
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+/** Do not return anything, modify matrix in-place instead. */
+export function rotate(matrix: number[][]): void {
+  const [m, n] = [matrix.length, matrix[0].length];
+
+  for (let i = 0; i < m; i++) {
+    for (let j = i + 1; j < n; j++) {
+      [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]];
+    }
+  }
+
+  for (let i = 0; i < m; i++) {
+    matrix[i].reverse();
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/rotate-image"
+  title="Rotate Image"
+/>

@@ -1,0 +1,64 @@
+---
+title: Count Prefix and Suffix Pairs II
+tags:
+  - Array
+  - String
+  - Trie
+  - Rolling Hash
+  - String Matching
+  - Hash Function
+---
+
+# 3045. Count Prefix and Suffix Pairs II
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Trie" slug="trie" />
+  <Badge.Topic name="Rolling Hash" slug="rolling-hash" />
+  <Badge.Topic name="String Matching" slug="string-matching" />
+  <Badge.Topic name="Hash Function" slug="hash-function" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPrefixSuffixPairs(words: string[]): number {
+  const rootNode = new TrieNode();
+
+  let answer = 0;
+  for (const word of words) {
+    let node = rootNode;
+    for (let i = 0; i < word.length; i++) {
+      const key = `${word[i]},${word[word.length - i - 1]}`;
+      node = node.getChildNode(key);
+      answer += node.count;
+    }
+    node.count += 1;
+  }
+  return answer;
+}
+
+class TrieNode {
+  public count = 0;
+  private readonly children = new Map<string, TrieNode>();
+
+  getChildNode(char: string): TrieNode {
+    const childNode = this.children.get(char) ?? new TrieNode();
+    this.children.set(char, childNode);
+    return childNode;
+  }
+}
+```
+
+### Complexity
+
+- Time: $O(n \cdot m)$
+- Space: $O(n \cdot m)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-prefix-and-suffix-pairs-ii"
+  title="Count Prefix and Suffix Pairs II"
+/>

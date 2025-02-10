@@ -1,0 +1,30 @@
+---
+title: Sum of All Odd Length Subarrays
+tags:
+  - Array
+  - Math
+  - Prefix Sum
+---
+
+# 1588. Sum of All Odd Length Subarrays
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumOddLengthSubarrays(arr: number[]): number {
+  return arr.reduce((acc, num, i) => acc + num * Math.ceil(((i + 1) * (arr.length - i)) / 2), 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-all-odd-length-subarrays"
+  title="Sum of All Odd Length Subarrays"
+/>

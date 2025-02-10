@@ -1,0 +1,26 @@
+---
+title: Find Numbers with Even Number of Digits
+tags:
+  - Array
+---
+
+# 1295. Find Numbers with Even Number of Digits
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findNumbers(nums: number[]): number {
+  return nums.filter((num) => num.toString().length % 2 === 0).length;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits"
+  title="Find Numbers with Even Number of Digits"
+/>

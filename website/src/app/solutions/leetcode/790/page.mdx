@@ -1,0 +1,36 @@
+---
+title: Domino and Tromino Tiling
+tags:
+  - Dynamic Programming
+---
+
+# 790. Domino and Tromino Tiling
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function numTilings(n: number): number {
+  const MOD = 1e9 + 7;
+
+  const dp = [0, 1, 2, 5].concat(new Array<number>(n).fill(0));
+
+  for (const i of range(4, n + 1)) {
+    dp[i] = (dp[i - 1] * 2 + dp[i - 3]) % MOD;
+  }
+
+  return dp[n];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/domino-and-tromino-tiling"
+  title="Domino and Tromino Tiling"
+/>

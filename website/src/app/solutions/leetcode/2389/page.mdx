@@ -1,0 +1,58 @@
+---
+title: Longest Subsequence With Limited Sum
+tags:
+  - Array
+  - Binary Search
+  - Greedy
+  - Sorting
+  - Prefix Sum
+---
+
+# 2389. Longest Subsequence With Limited Sum
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function answerQueries(nums: number[], queries: number[]): number[] {
+  nums.sort((a, b) => a - b);
+
+  const n = nums.length;
+  const prefixSum = Array.from(nums);
+
+  for (const i of range(1, n)) {
+    prefixSum[i] += prefixSum[i - 1];
+  }
+
+  const binarySearch = (query: number) => {
+    let [start, end] = [0, n];
+    while (start < end) {
+      const mid = Math.floor((start + end) / 2);
+      if (prefixSum[mid] <= query) {
+        start = mid + 1;
+      } else {
+        end = mid;
+      }
+    }
+    return start;
+  };
+
+  return queries.map(binarySearch);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-subsequence-with-limited-sum/"
+  title="Longest Subsequence With Limited Sum"
+/>

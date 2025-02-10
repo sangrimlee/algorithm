@@ -1,0 +1,44 @@
+---
+title: The Two Sneaky Numbers of Digitville
+tags:
+  - Array
+  - Hash Table
+  - Math
+---
+
+# 3289. The Two Sneaky Numbers of Digitville
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Math" slug="math" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getSneakyNumbers(nums: number[]): number[] {
+  const answer: number[] = [];
+  const set = new Set<number>();
+  for (const num of nums) {
+    if (set.has(num)) {
+      answer.push(num);
+    } else {
+      set.add(num);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/the-two-sneaky-numbers-of-digitville"
+  title="The Two Sneaky Numbers of Digitville"
+/>

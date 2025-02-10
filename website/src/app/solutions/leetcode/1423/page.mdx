@@ -1,0 +1,41 @@
+---
+title: Maximum Points You Can Obtain from Cards
+tags:
+  - Array
+  - Sliding Window
+  - Prefix Sum
+---
+
+# 1423. Maximum Points You Can Obtain from Cards
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxScore(cardPoints: number[], k: number): number {
+  const sumCardPoints = (prev: number, curr: number) => prev + curr;
+
+  const n = cardPoints.length;
+  const totalPoint = cardPoints.reduce(sumCardPoints, 0);
+  let prevPoint = cardPoints.slice(0, n - k).reduce(sumCardPoints, 0);
+
+  let answer = totalPoint - prevPoint;
+  for (let i = 0; i < k; i++) {
+    prevPoint = prevPoint - cardPoints[i] + cardPoints[i + (n - k)];
+    answer = Math.max(answer, totalPoint - prevPoint);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/"
+  title="Maximum Points You Can Obtain from Cards"
+/>

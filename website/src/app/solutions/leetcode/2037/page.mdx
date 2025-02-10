@@ -1,0 +1,30 @@
+---
+title: Minimum Number of Moves to Seat Everyone
+tags:
+  - Array
+  - Sorting
+---
+
+# 2037. Minimum Number of Moves to Seat Everyone
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minMovesToSeat(seats: number[], students: number[]): number {
+  seats.sort((a, b) => a - b);
+  students.sort((a, b) => a - b);
+  return seats.reduce((answer, seat, i) => answer + Math.abs(seat - students[i]), 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone"
+  title="Minimum Number of Moves to Seat Everyone"
+/>

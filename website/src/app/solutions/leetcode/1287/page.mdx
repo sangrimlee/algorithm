@@ -1,0 +1,35 @@
+---
+title: Element Appearing More Than 25% In Sorted Array
+tags:
+  - Array
+---
+
+# 1287. Element Appearing More Than 25% In Sorted Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findSpecialInteger(arr: number[]): number {
+  const n = arr.length;
+  const quater = Math.floor(n / 4);
+
+  for (let i = 0; i < n - quater; i++) {
+    if (arr[i] === arr[i + quater]) {
+      return arr[i];
+    }
+  }
+
+  throw new Error('There is no element that appear more than 25%.');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array"
+  title="Element Appearing More Than 25% In Sorted Array"
+/>

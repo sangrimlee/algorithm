@@ -1,0 +1,47 @@
+---
+title: Minimum Number of Operations to Reinitialize a Permutation
+tags:
+  - Array
+  - Math
+  - Simulation
+---
+
+# 1806. Minimum Number of Operations to Reinitialize a Permutation
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reinitializePermutation(n: number): number {
+  const mid = n / 2;
+
+  let answer = 1;
+  let i = mid;
+  while (1 < i) {
+    if (i % 2 === 0) {
+      i /= 2;
+    } else {
+      i = Math.floor(i / 2) + mid;
+    }
+    answer += 1;
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space : `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation"
+  title="Minimum Number of Operations to Reinitialize a Permutation"
+/>

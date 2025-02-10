@@ -1,0 +1,55 @@
+---
+title: Minimum Time to Collect All Apples in a Tree
+tags:
+  - Hash Table
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+---
+
+# 1443. Minimum Time to Collect All Apples in a Tree
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minTime(n: number, edges: number[][], hasApple: boolean[]): number {
+  const tree = new Array(n).fill(undefined).map(() => new Array<number>());
+  for (const [a, b] of edges) {
+    tree[a].push(b);
+    tree[b].push(a);
+  }
+
+  const dfs = (currentNode = 0, parentNode = -1): number => {
+    let [totalTime, childTime] = [0, 0];
+
+    for (const childNode of tree[currentNode]) {
+      if (childNode === parentNode) {
+        continue;
+      }
+      childTime = dfs(childNode, currentNode);
+
+      if (0 < childTime || hasApple[childNode]) {
+        totalTime += childTime + 2;
+      }
+    }
+
+    return totalTime;
+  };
+
+  return dfs(0, -1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree"
+  title="Minimum Time to Collect All Apples in a Tree"
+/>

@@ -1,0 +1,47 @@
+---
+title: Partition Labels
+tags:
+  - Hash Table
+  - Two Pointers
+  - String
+  - Greedy
+---
+
+# 763. Partition Labels
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function partitionLabels(s: string): number[] {
+  const answer: number[] = [];
+  const endIndices = new Map<string, number>();
+  for (let i = 0; i < s.length; i++) {
+    endIndices.set(s[i], i);
+  }
+
+  let startIndex = 0;
+  let endIndex = 0;
+  for (let i = 0; i < s.length; i++) {
+    endIndex = Math.max(endIndex, endIndices.get(s[i])!);
+    if (endIndex === i) {
+      answer.push(endIndex - startIndex + 1);
+      startIndex = endIndex + 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/partition-labels"
+  title="Partition Labels"
+/>

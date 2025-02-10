@@ -1,0 +1,79 @@
+---
+title: Longest Palindrome by Concatenating Two Letter Words
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Greedy
+  - Counting
+---
+
+# 2131. Longest Palindrome by Concatenating Two Letter Words
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function longestPalindrome(words: string[]): number {
+  let answer = 0;
+  let hasCenterValue = false;
+  const counter = new Counter(words);
+
+  for (const word of words) {
+    const reversedWord = [...word].reverse().join('');
+    if (word === reversedWord && 0 < counter.get(word)) {
+      if (2 <= counter.get(word)) {
+        counter.sub(word, 2);
+        answer += 4;
+      } else if (!hasCenterValue) {
+        counter.sub(word);
+        answer += 2;
+        hasCenterValue = true;
+      }
+    } else if (0 < counter.get(word) && 0 < counter.get(reversedWord)) {
+      answer += 4;
+      counter.sub(word);
+      counter.sub(reversedWord);
+    }
+  }
+
+  return answer;
+}
+
+class Counter<V> {
+  counter: Map<V, number>;
+
+  constructor(arr: V[]) {
+    this.counter = new Map();
+    for (const value of arr) {
+      this.add(value);
+    }
+  }
+
+  get(value: V): number {
+    return this.counter.get(value) || 0;
+  }
+
+  add(value: V, count = 1): void {
+    this.counter.set(value, this.get(value) + count);
+  }
+
+  sub(value: V, count = 1): void {
+    this.counter.set(value, this.get(value) - count);
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words/"
+  title="Longest Palindrome by Concatenating Two Letter Words"
+/>

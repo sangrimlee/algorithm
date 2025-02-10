@@ -1,0 +1,42 @@
+---
+title: Longest Unequal Adjacent Groups Subsequence I
+tags:
+  - Array
+  - String
+  - Dynamic Programming
+  - Greedy
+---
+
+# 2900. Longest Unequal Adjacent Groups Subsequence I
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getLongestSubsequence(words: string[], groups: number[]): string[] {
+  const n = words.length;
+
+  const answer = [];
+  let prevGroup = -1;
+  for (let i = 0; i < n; i++) {
+    if (groups[i] !== prevGroup) {
+      prevGroup = groups[i];
+      answer.push(words[i]);
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i"
+  title="Longest Unequal Adjacent Groups Subsequence I"
+/>

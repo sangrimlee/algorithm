@@ -1,0 +1,39 @@
+---
+title: Find the Losers of the Circular Game
+tags:
+  - Array
+  - Hash Table
+  - Simulation
+---
+
+# 2682. Find the Losers of the Circular Game
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function circularGameLosers(n: number, k: number): number[] {
+  const friends = new Set(Array.from({ length: n }, (_, i) => i + 1));
+
+  let [curr, i] = [0, 0];
+  while (friends.has((i % n) + 1)) {
+    curr += 1;
+    friends.delete((i % n) + 1);
+    i += curr * k;
+  }
+
+  return [...friends];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-losers-of-the-circular-game"
+  title="Find the Losers of the Circular Game"
+/>

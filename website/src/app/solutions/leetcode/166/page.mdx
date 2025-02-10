@@ -1,0 +1,65 @@
+---
+title: Fraction to Recurring Decimal
+tags:
+  - Hash Table
+  - Math
+  - String
+---
+
+# 166. Fraction to Recurring Decimal
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function fractionToDecimal(numerator: number, denominator: number): string {
+  if (numerator === 0) {
+    return '0';
+  }
+
+  const answer: string[] = [];
+  if (Math.sign(numerator) !== Math.sign(denominator)) {
+    answer.push('-');
+  }
+
+  const [n, d] = [Math.abs(numerator), Math.abs(denominator)];
+
+  let r = n % d;
+  answer.push(Math.floor(n / d).toString());
+
+  if (r === 0) {
+    return answer.join('');
+  }
+  answer.push('.');
+
+  const remains = new Map<number, number>();
+  remains.set(r, answer.length);
+  while (0 < r) {
+    answer.push(Math.floor((10 * r) / d).toString());
+    r = (10 * r) % d;
+
+    if (!remains.has(r)) {
+      remains.set(r, answer.length);
+    } else {
+      const startIndex = remains.get(r)!;
+      answer.splice(startIndex, 0, '(');
+      answer.push(')');
+      return answer.join('');
+    }
+  }
+
+  return answer.join('');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/fraction-to-recurring-decimal"
+  title="Fraction to Recurring Decimal"
+/>

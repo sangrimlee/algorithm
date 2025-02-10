@@ -1,0 +1,46 @@
+---
+title: X of a Kind in a Deck of Cards
+tags:
+  - Array
+  - Hash Table
+  - Math
+  - Counting
+  - Number Theory
+---
+
+# 914. X of a Kind in a Deck of Cards
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Counting" slug="counting" />
+  <Badge.Topic name="Number Theory" slug="number-theory" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function hasGroupsSizeX(deck: number[]): boolean {
+  const gcd = (a: number, b: number) => {
+    while (0 < b) {
+      [a, b] = [b, a % b];
+    }
+    return a;
+  };
+
+  const counter = new Map<number, number>();
+  for (const num of deck) {
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  }
+  const values = [...counter.values()];
+  return 2 <= values.reduce(gcd, values[0]);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards"
+  title="X of a Kind in a Deck of Cards"
+/>

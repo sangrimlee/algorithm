@@ -1,0 +1,45 @@
+---
+title: Grid Game
+tags:
+  - Array
+  - Matrix
+  - Prefix Sum
+---
+
+# 2017. Grid Game
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function gridGame(grid: number[][]): number {
+  const n = grid[0].length;
+  const firstRowSum = grid[0].reduce((acc, point) => acc + point, 0);
+
+  let answer = Number.MAX_SAFE_INTEGER;
+  let [firstRow, secondRow] = [firstRowSum, 0];
+  for (let turnIndex = 0; turnIndex < n; turnIndex++) {
+    firstRow -= grid[0][turnIndex];
+    answer = Math.min(answer, Math.max(firstRow, secondRow));
+    secondRow += grid[1][turnIndex];
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/grid-game"
+  title="Grid Game"
+/>

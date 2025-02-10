@@ -1,0 +1,42 @@
+---
+title: Maximum Number of Vowels in a Substring of Given Length
+tags:
+  - String
+  - Sliding Window
+---
+
+# 1456. Maximum Number of Vowels in a Substring of Given Length
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxVowels(s: string, k: number): number {
+  const isVowel = (char: string) => /^[aeiou]$/.test(char);
+
+  let answer = 0;
+  let vowelCount = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (k <= i && isVowel(s[i - k])) {
+      vowelCount -= 1;
+    }
+    if (isVowel(s[i])) {
+      vowelCount += 1;
+    }
+    answer = Math.max(answer, vowelCount);
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length"
+  title="Maximum Number of Vowels in a Substring of Given Length"
+/>

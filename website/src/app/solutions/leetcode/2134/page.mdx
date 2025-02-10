@@ -1,0 +1,48 @@
+---
+title: Minimum Swaps to Group All 1's Together II
+tags:
+  - Array
+  - Sliding Window
+---
+
+# 2134. Minimum Swaps to Group All 1's Together II
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minSwaps(nums: number[]): number {
+  const n = nums.length;
+  const totalOneCount = nums.reduce((acc, num) => acc + num, 0);
+
+  let answer = n;
+  let oneCount = 0;
+  let [start, end] = [0, 0];
+  while (start < n) {
+    while (end - start < totalOneCount) {
+      oneCount += nums[end % n];
+      end += 1;
+    }
+    answer = Math.min(answer, totalOneCount - oneCount);
+    oneCount -= nums[start];
+    start += 1;
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii"
+  title="Minimum Swaps to Group All 1's Together II"
+/>

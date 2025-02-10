@@ -1,0 +1,52 @@
+---
+title: Find Score of an Array After Marking All Elements
+tags:
+  - Array
+  - Hash Table
+  - Sorting
+  - Heap (Priority Queue)
+  - Simulation
+---
+
+# 2593. Find Score of an Array After Marking All Elements
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findScore(nums: number[]): number {
+  let answer = 0;
+  const marked = new Set<number>();
+  const sortedNums = nums
+    .map((num, i) => [num, i])
+    .sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]));
+  for (const [num, i] of sortedNums) {
+    if (!marked.has(i)) {
+      answer += num;
+      marked.add(i + 1);
+      marked.add(i - 1);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n \cdot logn)$
+- Space: $O(n + S)$
+  - $S$: 정렬 알고리즘에 필요한 공간 복잡도
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements"
+  title="Find Score of an Array After Marking All Elements"
+/>

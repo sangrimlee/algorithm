@@ -1,0 +1,36 @@
+---
+title: Occurrences After Bigram
+tags:
+  - String
+---
+
+# 1078. Occurrences After Bigram
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findOcurrences(text: string, first: string, second: string): string[] {
+  const words = text.split(' ');
+  const n = words.length;
+
+  const answer = [];
+  for (let i = 2; i < n; i++) {
+    if (words[i - 2] === first && words[i - 1] === second) {
+      answer.push(words[i]);
+    }
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/occurrences-after-bigram"
+  title="Occurrences After Bigram"
+/>

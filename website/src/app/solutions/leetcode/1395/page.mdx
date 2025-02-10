@@ -1,0 +1,58 @@
+---
+title: Count Number of Teams
+tags:
+  - Array
+  - Dynamic Programming
+  - Binary Indexed Tree
+---
+
+# 1395. Count Number of Teams
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Binary Indexed Tree" slug="binary-indexed-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numTeams(rating: number[]): number {
+  const n = rating.length;
+
+  let answer = 0;
+  for (let mid = 1; mid < n - 1; mid++) {
+    let [leftGreater, leftLess] = [0, 0];
+    for (let left = 0; left < mid; left++) {
+      if (rating[left] > rating[mid]) {
+        leftGreater += 1;
+      } else {
+        leftLess += 1;
+      }
+    }
+
+    let [rightGreater, rightLess] = [0, 0];
+    for (let right = mid + 1; right < n; right++) {
+      if (rating[right] > rating[mid]) {
+        rightGreater += 1;
+      } else {
+        rightLess += 1;
+      }
+    }
+    answer += leftGreater * rightLess + leftLess * rightGreater;
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N^2)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-number-of-teams"
+  title="Count Number of Teams"
+/>

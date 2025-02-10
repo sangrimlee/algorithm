@@ -1,0 +1,36 @@
+---
+title: Intersection of Two Arrays
+tags:
+  - Array
+  - Hash Table
+  - Two Pointers
+  - Binary Search
+  - Sorting
+---
+
+# 349. Intersection of Two Arrays
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function intersection(nums1: number[], nums2: number[]): number[] {
+  const set1 = new Set(nums1);
+  const set2 = new Set(nums2);
+  return [...set1].filter((num) => set2.has(num));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/intersection-of-two-arrays"
+  title="Intersection of Two Arrays"
+/>

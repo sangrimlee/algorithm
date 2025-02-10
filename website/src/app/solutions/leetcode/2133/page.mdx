@@ -1,0 +1,44 @@
+---
+title: Check if Every Row and Column Contains All Numbers
+tags:
+  - Array
+  - Hash Table
+  - Matrix
+---
+
+# 2133. Check if Every Row and Column Contains All Numbers
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkValid(matrix: number[][]): boolean {
+  const n = matrix.length;
+
+  for (let i = 0; i < n; i++) {
+    const row = new Set<number>();
+    const col = new Set<number>();
+    for (let j = 0; j < n; j++) {
+      if (row.has(matrix[i][j]) || col.has(matrix[j][i])) {
+        return false;
+      }
+      row.add(matrix[i][j]);
+      col.add(matrix[j][i]);
+    }
+  }
+
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers"
+  title="Check if Every Row and Column Contains All Numbers"
+/>

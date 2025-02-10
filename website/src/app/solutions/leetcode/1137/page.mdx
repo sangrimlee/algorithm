@@ -1,0 +1,40 @@
+---
+title: N-th Tribonacci Number
+tags:
+  - Math
+  - Dynamic Programming
+  - Memoization
+---
+
+# 1137. N-th Tribonacci Number
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Memoization" slug="memoization" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function tribonacci(n: number): number {
+  if (n <= 2) {
+    return Math.ceil(n / 2);
+  }
+
+  let [first, second, third] = [0, 1, 1];
+  for (let i = 3; i <= n; i++) {
+    const sum = first + second + third;
+    [first, second, third] = [second, third, sum];
+  }
+
+  return third;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/n-th-tribonacci-number"
+  title="N-th Tribonacci Number"
+/>

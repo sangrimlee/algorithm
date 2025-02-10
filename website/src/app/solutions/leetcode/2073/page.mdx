@@ -1,0 +1,34 @@
+---
+title: Time Needed to Buy Tickets
+tags:
+  - Array
+  - Queue
+  - Simulation
+---
+
+# 2073. Time Needed to Buy Tickets
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Queue" slug="queue" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function timeRequiredToBuy(tickets: number[], k: number): number {
+  let answer = 0;
+  for (let i = 0; i < tickets.length; i++) {
+    answer += Math.min(i <= k ? tickets[k] : tickets[k] - 1, tickets[i]);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/time-needed-to-buy-tickets"
+  title="Time Needed to Buy Tickets"
+/>

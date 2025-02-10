@@ -1,0 +1,70 @@
+---
+title: K-th Smallest Prime Fraction
+tags:
+  - Array
+  - Two Pointers
+  - Binary Search
+  - Sorting
+  - Heap (Priority Queue)
+---
+
+# 786. K-th Smallest Prime Fraction
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kthSmallestPrimeFraction(arr: number[], k: number): number[] {
+  const n = arr.length;
+  let [left, right] = [0, 1];
+  while (left < right) {
+    const mid = (left + right) / 2;
+    let maxFraction = 0;
+    let smallerFractions = 0;
+    let [numerator, denominator] = [0, 0];
+
+    for (let i = 0, j = 1; i < n - 1; i++) {
+      while (j < n && arr[i] >= mid * arr[j]) {
+        j += 1;
+      }
+      smallerFractions += n - j;
+
+      if (j === n) {
+        break;
+      }
+
+      const fraction = arr[i] / arr[j];
+      if (maxFraction < fraction) {
+        [numerator, denominator] = [i, j];
+        maxFraction = fraction;
+      }
+    }
+
+    if (smallerFractions === k) {
+      return [arr[numerator], arr[denominator]];
+    }
+
+    if (smallerFractions > k) {
+      right = mid;
+    } else {
+      left = mid;
+    }
+  }
+
+  return [];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/k-th-smallest-prime-fraction"
+  title="K-th Smallest Prime Fraction"
+/>

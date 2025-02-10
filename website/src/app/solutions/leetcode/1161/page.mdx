@@ -1,0 +1,57 @@
+---
+title: Maximum Level Sum of a Binary Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 1161. Maximum Level Sum of a Binary Tree
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function maxLevelSum(root: TreeNode | null): number {
+  if (root === null) {
+    return 0;
+  }
+  let [maxValue, minLevel] = [root.val, 1];
+
+  let currentLevel = 1;
+  let currentNodes: TreeNode[] = [root];
+  while (0 < currentNodes.length) {
+    let totalValue = 0;
+    const nextNodes: TreeNode[] = [];
+    for (const currentNode of currentNodes) {
+      totalValue += currentNode.val;
+      currentNode.left && nextNodes.push(currentNode.left);
+      currentNode.right && nextNodes.push(currentNode.right);
+    }
+    if (maxValue < totalValue) {
+      [maxValue, minLevel] = [totalValue, currentLevel];
+    }
+
+    currentLevel += 1;
+    currentNodes = nextNodes;
+  }
+
+  return minLevel;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree"
+  title="Maximum Level Sum of a Binary Tree"
+/>

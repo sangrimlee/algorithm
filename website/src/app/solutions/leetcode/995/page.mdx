@@ -1,0 +1,57 @@
+---
+title: Minimum Number of K Consecutive Bit Flips
+tags:
+  - Array
+  - Bit Manipulation
+  - Queue
+  - Sliding Window
+  - Prefix Sum
+---
+
+# 995. Minimum Number of K Consecutive Bit Flips
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Queue" slug="queue" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minKBitFlips(nums: number[], k: number): number {
+  const n = nums.length;
+  const isFlipped = new Array(n).fill(0);
+
+  let answer = 0;
+  let flipped = 0;
+  for (let i = 0; i < n; i++) {
+    if (k <= i) {
+      flipped ^= isFlipped[i - k];
+    }
+    if (flipped === nums[i]) {
+      if (n < i + k) {
+        return -1;
+      }
+      isFlipped[i] = 1;
+      flipped ^= 1;
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+#### Complexity
+
+- Time: `O(n)`
+- Space: `O(n)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips"
+  title="Minimum Number of K Consecutive Bit Flips"
+/>

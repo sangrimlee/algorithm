@@ -1,0 +1,40 @@
+---
+title: Find the Highest Altitude
+tags:
+  - Array
+  - Prefix Sum
+---
+
+# 1732. Find the Highest Altitude
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function largestAltitude(gains: number[]): number {
+  return gains.reduce(
+    (altitude, gain) => {
+      const nextAltitude = altitude.current + gain;
+      return {
+        largest: Math.max(altitude.largest, nextAltitude),
+        current: nextAltitude,
+      };
+    },
+    {
+      largest: 0,
+      current: 0,
+    },
+  ).largest;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-highest-altitude"
+  title="Find the Highest Altitude"
+/>

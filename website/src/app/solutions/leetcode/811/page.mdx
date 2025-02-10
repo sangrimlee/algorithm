@@ -1,0 +1,48 @@
+---
+title: Subdomain Visit Count
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Counting
+---
+
+# 811. Subdomain Visit Count
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function subdomainVisits(cpdomains: string[]): string[] {
+  const visits = new Map<string, number>();
+  for (const cpdomain of cpdomains) {
+    const [rep, domain] = cpdomain.split(' ');
+    for (const subdomain of subdomains(domain)) {
+      visits.set(subdomain, (visits.get(subdomain) ?? 0) + parseInt(rep));
+    }
+  }
+  return [...visits].map(([subdomain, visit]) => `${visit} ${subdomain}`);
+}
+
+function* subdomains(domain: string) {
+  const levels = domain.split('.').reverse();
+  let subdomain = '';
+  for (const level of levels) {
+    subdomain = subdomain.length === 0 ? level : `${level}.${subdomain}`;
+    yield subdomain;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/subdomain-visit-count"
+  title="Subdomain Visit Count"
+/>

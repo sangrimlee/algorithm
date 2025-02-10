@@ -1,0 +1,38 @@
+---
+title: Apple Redistribution into Boxes
+tags:
+  - Array
+  - Greedy
+  - Sorting
+---
+
+# 3074. Apple Redistribution into Boxes
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumBoxes(apple: number[], capacity: number[]): number {
+  capacity.sort((a, b) => b - a);
+  let remain = apple.reduce((acc, count) => acc + count, 0);
+  for (let i = 0; i < capacity.length; i++) {
+    if (remain <= capacity[i]) {
+      return i + 1;
+    }
+    remain -= capacity[i];
+  }
+  throw new Error("It's impossible to redistribute packs of apples into boxes.");
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/apple-redistribution-into-boxes"
+  title="Apple Redistribution into Boxes"
+/>

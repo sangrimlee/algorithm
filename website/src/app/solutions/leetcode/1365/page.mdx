@@ -1,0 +1,39 @@
+---
+title: How Many Numbers Are Smaller Than the Current Number
+tags:
+  - Array
+  - Hash Table
+  - Sorting
+  - Counting
+---
+
+# 1365. How Many Numbers Are Smaller Than the Current Number
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallerNumbersThanCurrent(nums: number[]): number[] {
+  const smallestIndices = new Map<number, number>();
+  const sortedNums = [...nums].sort((a, b) => a - b);
+  sortedNums.forEach((num, i) => {
+    if (!smallestIndices.has(num)) {
+      smallestIndices.set(num, i);
+    }
+  });
+  return nums.map((num) => smallestIndices.get(num) ?? -1);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number"
+  title="How Many Numbers Are Smaller Than the Current Number"
+/>

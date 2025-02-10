@@ -1,0 +1,58 @@
+---
+title: Find Longest Special Substring That Occurs Thrice I
+tags:
+  - Hash Table
+  - String
+  - Binary Search
+  - Sliding Window
+  - Counting
+---
+
+# 2981. Find Longest Special Substring That Occurs Thrice I
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumLength(s: string): number {
+  const n = s.length;
+  const counter = new Map<string, number>();
+  for (let start = 0; start < n; start++) {
+    let substrLength = 0;
+    for (let end = start; end < n; end++) {
+      if (s[start] !== s[end]) {
+        break;
+      }
+      substrLength += 1;
+      const substr = s[start].repeat(substrLength);
+      counter.set(substr, (counter.get(substr) ?? 0) + 1);
+    }
+  }
+  let answer = -1;
+  for (const [substr, count] of counter) {
+    if (3 <= count) {
+      answer = Math.max(answer, substr.length);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n^2)$
+- Space: $O(n^2)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-longest-special-substring-that-occurs-thrice-i"
+  title="Find Longest Special Substring That Occurs Thrice I"
+/>

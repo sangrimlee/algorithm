@@ -1,0 +1,36 @@
+---
+title: Power of Four
+tags:
+  - Math
+  - Bit Manipulation
+  - Recursion
+---
+
+# 342. Power of Four
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Recursion" slug="recursion" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isPowerOfFour(n: number): boolean {
+  while (1 < n) {
+    if (n % 4 !== 0) {
+      return false;
+    }
+    n /= 4;
+  }
+  return n === 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/power-of-four"
+  title="Power of Four"
+/>

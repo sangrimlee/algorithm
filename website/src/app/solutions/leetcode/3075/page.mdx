@@ -1,0 +1,38 @@
+---
+title: Maximize Happiness of Selected Children
+tags:
+  - Array
+  - Greedy
+  - Sorting
+---
+
+# 3075. Maximize Happiness of Selected Children
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumHappinessSum(happiness: number[], k: number): number {
+  happiness.sort((a, b) => b - a);
+
+  let answer = 0;
+  let decrease = 0;
+  for (let i = 0; i < k; i++) {
+    answer += Math.max(happiness[i] - decrease, 0);
+    decrease += 1;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximize-happiness-of-selected-children"
+  title="Maximize Happiness of Selected Children"
+/>

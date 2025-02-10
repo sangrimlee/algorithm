@@ -1,0 +1,43 @@
+---
+title: Queries on Number of Points Inside a Circle
+tags:
+  - Array
+  - Math
+  - Geometry
+---
+
+# 1828. Queries on Number of Points Inside a Circle
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Geometry" slug="geometry" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPoints(points: number[][], queries: number[][]): number[] {
+  const answer = new Array(queries.length).fill(0);
+  function getDistance(x1: number, y1: number, x2: number, y2: number): number {
+    return (x1 - x2) ** 2 + (y1 - y2) ** 2;
+  }
+
+  queries.forEach(([qx, qy, r], i) => {
+    points.forEach(([px, py]) => {
+      if (getDistance(qx, qy, px, py) <= r ** 2) {
+        answer[i] += 1;
+      }
+    });
+  });
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle"
+  title="Queries on Number of Points Inside a Circle"
+/>

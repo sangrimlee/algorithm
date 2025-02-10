@@ -1,0 +1,96 @@
+---
+title: Find the Safest Path in a Grid
+tags:
+  - Array
+  - Binary Search
+  - Breadth-First Search
+  - Union Find
+  - Matrix
+---
+
+# 2812. Find the Safest Path in a Grid
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Union Find" slug="union-find" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function maximumSafenessFactor(grid: number[][]): number {
+  const n = grid.length;
+  const distances = findDistanceToThieves(grid);
+
+  const heap = new Heap<number[]>((a, b) => b[0] - a[0]);
+  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
+
+  heap.push([distances[0][0], 0, 0]);
+  while (!heap.isEmpty) {
+    const [distance, r, c] = heap.pop()!;
+    if (r === n - 1 && c === n - 1) {
+      return distance;
+    }
+    if (!visited[r][c]) {
+      visited[r][c] = true;
+      for (const [nr, nc] of adjacent(r, c, n)) {
+        heap.push([Math.min(distance, distances[nr][nc]), nr, nc]);
+      }
+    }
+  }
+  return -1;
+}
+
+function* adjacent(r: number, c: number, n: number) {
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+  for (const [dr, dc] of directions) {
+    const [nr, nc] = [r + dr, c + dc];
+    if (0 <= nr && nr < n && 0 <= nc && nc < n) {
+      yield [nr, nc];
+    }
+  }
+}
+
+function findDistanceToThieves(grid: number[][]) {
+  const n = grid.length;
+  const thieves = grid
+    .flatMap((row, r) => row.map((_, c) => [r, c]))
+    .filter(([r, c]) => grid[r][c] === 1);
+
+  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
+  const distances: number[][] = Array.from({ length: n }, () => new Array(n).fill(0));
+
+  let depth = 0;
+  let queue = thieves;
+  while (0 < queue.length) {
+    const nextQueue = [];
+    for (const [r, c] of queue) {
+      if (visited[r][c]) continue;
+      visited[r][c] = true;
+      distances[r][c] = depth;
+      nextQueue.push(...adjacent(r, c, n));
+    }
+    queue = nextQueue;
+    depth += 1;
+  }
+
+  return distances;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-safest-path-in-a-grid"
+  title="Find the Safest Path in a Grid"
+/>

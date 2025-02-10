@@ -1,0 +1,41 @@
+---
+title: Find All K-Distant Indices in an Array
+tags:
+  - Array
+  - Two Pointers
+---
+
+# 2200. Find All K-Distant Indices in an Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findKDistantIndices(nums: number[], key: number, k: number): number[] {
+  const n = nums.length;
+  const answer: number[] = [];
+
+  let currentIndex = 0;
+  for (let pivot = 0; pivot < n; pivot++) {
+    if (nums[pivot] !== key) continue;
+    currentIndex = Math.max(currentIndex, pivot - k);
+    const lastIndex = Math.min(pivot + k, n - 1);
+    while (currentIndex <= lastIndex) {
+      answer.push(currentIndex);
+      currentIndex += 1;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-all-k-distant-indices-in-an-array"
+  title="Find All K-Distant Indices in an Array"
+/>

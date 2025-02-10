@@ -1,0 +1,43 @@
+---
+title: Maximum Population Year
+tags:
+  - Array
+  - Counting
+---
+
+# 1854. Maximum Population Year
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumPopulation(logs: number[][]): number {
+  const populations = new Array(101).fill(0);
+  for (const [birth, death] of logs) {
+    populations[birth - 1950] += 1;
+    populations[death - 1950] -= 1;
+  }
+
+  let answer = 1950;
+  let maxPopulation = populations[0];
+  for (let i = 1; i < populations.length; i++) {
+    populations[i] += populations[i - 1];
+    if (maxPopulation < populations[i]) {
+      maxPopulation = populations[i];
+      answer = i + 1950;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-population-year"
+  title="Maximum Population Year"
+/>

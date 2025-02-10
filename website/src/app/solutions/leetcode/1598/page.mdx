@@ -1,0 +1,39 @@
+---
+title: Crawler Log Folder
+tags:
+  - Array
+  - String
+  - Stack
+---
+
+# 1598. Crawler Log Folder
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Stack" slug="stack" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minOperations(logs: string[]): number {
+  let operations = 0;
+  logs.forEach((log) => {
+    if (log === './') return;
+    if (log === '../') {
+      operations = Math.max(0, operations - 1);
+    } else {
+      operations += 1;
+    }
+  });
+  return operations;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/crawler-log-folder"
+  title="Crawler Log Folder"
+/>

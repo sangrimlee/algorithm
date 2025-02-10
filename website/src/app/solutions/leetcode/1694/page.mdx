@@ -1,0 +1,37 @@
+---
+title: Reformat Phone Number
+tags:
+  - String
+---
+
+# 1694. Reformat Phone Number
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reformatNumber(number: string): string {
+  const removed = number.replace(/[- ]/g, '');
+  const n = removed.length;
+  const nums = [];
+  for (let i = 0; i < n; i += 3) {
+    if (n - i === 4) {
+      nums.push(removed.substring(i, i + 2), removed.substring(i + 2));
+      break;
+    }
+    nums.push(removed.substring(i, i + 3));
+  }
+
+  return nums.join('-');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/reformat-phone-number"
+  title="Reformat Phone Number"
+/>

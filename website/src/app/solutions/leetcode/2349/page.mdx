@@ -1,0 +1,100 @@
+---
+title: Design a Number Container System
+tags:
+  - Hash Table
+  - Design
+  - Heap (Priority Queue)
+  - Ordered Set
+---
+
+# 2349. Design a Number Container System
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Design" slug="design" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+  <Badge.Topic name="Ordered Set" slug="ordered-set" />
+</Badge.Root>
+
+## Solution
+
+1. `container`는 현재 `index`의 `num`을 저장
+2. `heaps`는 현재 `num`을 가지고 있는 `index`를 `Heap`을 저장
+   - `Heap`을 통해, 현재 `num`을 가지고 있는 가장 작은 인덱스를 검색
+   - `change`를 할 때 마다, 해당 `Heap`을 정리하지 않고, `find`를 할 때,
+     현재 `container`에서 `index`가 `num`을 가지고 있는지를 통해 정리
+
+**`change`**
+
+1. `container`에 주어진 `index`에 `num`을 반영
+2. 이전에 `index`가 다른 `num`을 가지고 있는 경우, 해당 `num`의 `Heap`의 가장 작은 인덱스가 주어진 `index`라면, 해당 `index` 삭제
+
+**`find`**
+
+1. `heaps`를 통해, 주어진 `num`을 가지고 있는 `index`들을 저장하고 있는 `Heap`을 검색
+2. `Heap`이 없는 경우, `-1`을 반환
+3. `Heap`을 순환하면서, `container`의 `index`가 가지고 있는 `num`과 일치하는 경우, 해당 `index`를 반환
+4. 일치하지 않는 경우는, `Heap`에서 삭제
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export class NumberContainers {
+  private readonly container: Map<number, number>;
+  private readonly heaps: Map<number, Heap<number>>;
+  constructor() {
+    this.container = new Map();
+    this.heaps = new Map();
+  }
+
+  private getHeap(num: number): Heap<number> {
+    const heap = this.heaps.get(num);
+    if (heap !== undefined) {
+      return heap;
+    }
+    const newHeap = new Heap<number>((a, b) => a - b);
+    this.heaps.set(num, newHeap);
+    return newHeap;
+  }
+
+  change(index: number, num: number): void {
+    const prevNum = this.container.get(index);
+    if (prevNum !== undefined && this.heaps.has(prevNum)) {
+      const prevHeap = this.getHeap(prevNum);
+      if (prevHeap.peek === index) {
+        prevHeap.pop();
+      }
+    }
+    const pq = this.getHeap(num);
+    pq.push(index);
+    this.container.set(index, num);
+  }
+
+  find(num: number) {
+    if (!this.heaps.has(num)) {
+      return -1;
+    }
+
+    const heap = this.getHeap(num);
+    while (!heap.isEmpty) {
+      if (heap.peek !== undefined && this.container.get(heap.peek) === num) {
+        return heap.peek;
+      }
+      heap.pop();
+    }
+    return -1;
+  }
+}
+```
+
+### Complexity
+
+- Time: $O(\log_2 n)$
+- Space: $O(n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/design-a-number-container-system"
+  title="Design a Number Container System"
+/>

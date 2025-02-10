@@ -1,0 +1,38 @@
+---
+title: Monotonic Array
+tags:
+  - Array
+---
+
+# 896. Monotonic Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isMonotonic(nums: number[]): boolean {
+  if (nums.length <= 2) {
+    return true;
+  }
+
+  const lastDiff = nums[nums.length - 1] - nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    const diff = nums[i] - nums[i - 1];
+    if ((lastDiff === 0 && diff !== 0) || lastDiff * diff < 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/monotonic-array"
+  title="Monotonic Array"
+/>

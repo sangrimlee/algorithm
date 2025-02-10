@@ -1,0 +1,72 @@
+---
+title: Make Array Strictly Increasing
+tags:
+  - Array
+  - Binary Search
+  - Dynamic Programming
+  - Sorting
+---
+
+# 1187. Make Array Strictly Increasing
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function makeArrayIncreasing(arr1: number[], arr2: number[]): number {
+  const dp: Record<string, number> = {};
+  arr2.sort((a, b) => a - b);
+
+  const upperBound = (arr: number[], target: number) => {
+    let [start, end] = [0, arr.length];
+    while (start < end) {
+      const mid = Math.floor((start + end) / 2);
+      if (target < arr[mid]) {
+        end = mid;
+      } else {
+        start = mid + 1;
+      }
+    }
+    return start;
+  };
+
+  const dfs = (i: number, prev: number): number => {
+    if (i === arr1.length) {
+      return 0;
+    }
+    const dpKey = `${i}_${prev}`;
+    if (dp[dpKey] !== undefined) {
+      return dp[dpKey];
+    }
+    let cost = Number.MAX_SAFE_INTEGER;
+
+    if (prev < arr1[i]) {
+      cost = dfs(i + 1, arr1[i]);
+    }
+
+    const prevIndex = upperBound(arr2, prev);
+    if (prevIndex < arr2.length) {
+      cost = Math.min(cost, 1 + dfs(i + 1, arr2[prevIndex]));
+    }
+
+    dp[dpKey] = cost;
+    return cost;
+  };
+
+  const result = dfs(0, -1);
+  return result !== Number.MAX_SAFE_INTEGER ? result : -1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/make-array-strictly-increasing"
+  title="Make Array Strictly Increasing"
+/>

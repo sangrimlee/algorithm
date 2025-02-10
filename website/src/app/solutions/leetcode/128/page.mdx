@@ -1,0 +1,50 @@
+---
+title: Longest Consecutive Sequence
+tags:
+  - Array
+  - Hash Table
+  - Union Find
+---
+
+# 128. Longest Consecutive Sequence
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Union Find" slug="union-find" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function longestConsecutive(nums: number[]): number {
+  let answer = 0;
+  const numsMap = new Map<number, boolean>();
+  nums.forEach((num) => {
+    numsMap.set(num, true);
+  });
+
+  nums.forEach((num) => {
+    if (!numsMap.has(num - 1)) {
+      let currentNum = num;
+      let currentLength = 1;
+
+      while (numsMap.has(currentNum + 1)) {
+        currentNum += 1;
+        currentLength += 1;
+      }
+
+      answer = Math.max(answer, currentLength);
+    }
+  });
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-consecutive-sequence/"
+  title="Longest Consecutive Sequence"
+/>

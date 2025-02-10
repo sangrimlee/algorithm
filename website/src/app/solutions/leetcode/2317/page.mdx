@@ -1,0 +1,30 @@
+---
+title: Maximum XOR After Operations
+tags:
+  - Array
+  - Math
+  - Bit Manipulation
+---
+
+# 2317. Maximum XOR After Operations
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumXOR(nums: number[]): number {
+  return nums.reduce((answer, num) => answer | num, 0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-xor-after-operations"
+  title="Maximum XOR After Operations"
+/>

@@ -1,0 +1,51 @@
+---
+title: Longest Subarray With Maximum Bitwise AND
+tags:
+  - Array
+  - Bit Manipulation
+  - Brainteaser
+---
+
+# 2419. Longest Subarray With Maximum Bitwise AND
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Brainteaser" slug="brainteaser" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function longestSubarray(nums: number[]): number {
+  let answer = 0;
+  let maxValue = 0;
+  let maxLength = 0;
+
+  for (const num of nums) {
+    if (maxValue < num) {
+      maxValue = num;
+      maxLength = 1;
+      answer = maxLength;
+    } else if (maxValue === num) {
+      maxLength += 1;
+    } else {
+      maxLength = 0;
+    }
+    answer = Math.max(answer, maxLength);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and"
+  title="Longest Subarray With Maximum Bitwise AND"
+/>

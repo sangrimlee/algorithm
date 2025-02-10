@@ -1,0 +1,46 @@
+---
+title: Execute Asynchronous Functions in Parallel
+tags:
+---
+
+# 2721. Execute Asynchronous Functions in Parallel
+
+<Badge.Root>
+<Badge.Level level="medium" />
+
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function promiseAll<T>(funcs: (() => Promise<T>)[]): Promise<T[]> {
+  if (funcs.length === 0) {
+    return Promise.resolve([]);
+  }
+
+  let resolvedCount = 0;
+  const result: T[] = [];
+
+  return new Promise<T[]>((resolve, reject) => {
+    funcs.forEach((func, i) => {
+      func()
+        .then((value) => {
+          result[i] = value;
+          resolvedCount += 1;
+          if (resolvedCount === funcs.length) {
+            resolve(result);
+          }
+        })
+        .catch((reason) => {
+          reject(reason);
+        });
+    });
+  });
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/execute-asynchronous-functions-in-parallel"
+  title="Execute Asynchronous Functions in Parallel"
+/>

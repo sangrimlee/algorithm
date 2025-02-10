@@ -1,0 +1,58 @@
+---
+title: Recover Binary Search Tree
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Search Tree
+  - Binary Tree
+---
+
+# 99. Recover Binary Search Tree
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Binary Search Tree" slug="binary-search-tree" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function recoverTree(root: TreeNode | null): void {
+  const MIN_VALUE = Number.MIN_SAFE_INTEGER;
+
+  let firstNode = new TreeNode(MIN_VALUE);
+  let secondNode = new TreeNode(MIN_VALUE);
+  let prevNode = new TreeNode(MIN_VALUE);
+  function inorder(node: TreeNode | null): void {
+    if (node === null) {
+      return;
+    }
+    inorder(node.left);
+    if (node.val <= prevNode.val) {
+      if (firstNode.val === MIN_VALUE) {
+        firstNode = prevNode;
+      }
+      secondNode = node;
+    }
+    prevNode = node;
+    inorder(node.right);
+  }
+  inorder(root);
+
+  if (firstNode !== null && secondNode !== null) {
+    [firstNode.val, secondNode.val] = [secondNode.val, firstNode.val];
+  }
+  return;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/recover-binary-search-tree"
+  title="Recover Binary Search Tree"
+/>

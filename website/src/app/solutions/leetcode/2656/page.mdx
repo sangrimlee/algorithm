@@ -1,0 +1,29 @@
+---
+title: Maximum Sum With Exactly K Elements
+tags:
+  - Array
+  - Greedy
+---
+
+# 2656. Maximum Sum With Exactly K Elements
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximizeSum(nums: number[], k: number): number {
+  const maxNum = nums.reduce((max, num) => (max < num ? num : max), 0);
+  return maxNum * k + (k * (k - 1)) / 2;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-sum-with-exactly-k-elements"
+  title="Maximum Sum With Exactly K Elements"
+/>

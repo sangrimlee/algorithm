@@ -1,0 +1,46 @@
+---
+title: Binary Tree Inorder Traversal
+tags:
+  - Stack
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 94. Binary Tree Inorder Traversal
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function inorderTraversal(root: TreeNode | null): number[] {
+  const answer: number[] = [];
+
+  function inorder(node: TreeNode | null) {
+    if (node === null) {
+      return;
+    }
+    inorder(node.left);
+    answer.push(node.val);
+    inorder(node.right);
+  }
+
+  inorder(root);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/binary-tree-inorder-traversal/"
+  title="Binary Tree Inorder Traversal"
+/>

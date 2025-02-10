@@ -1,0 +1,48 @@
+---
+title: Battleships in a Board
+tags:
+  - Array
+  - Depth-First Search
+  - Matrix
+---
+
+# 419. Battleships in a Board
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countBattleships(board: string[][]): number {
+  const [m, n] = [board.length, board[0].length];
+
+  function isBattleship(y: number, x: number) {
+    return (
+      board[y][x] === 'X' &&
+      (y === 0 || board[y - 1][x] === '.') &&
+      (x === 0 || board[y][x - 1] === '.')
+    );
+  }
+
+  let answer = 0;
+  for (let y = 0; y < m; y++) {
+    for (let x = 0; x < n; x++) {
+      if (isBattleship(y, x)) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/battleships-in-a-board"
+  title="Battleships in a Board"
+/>

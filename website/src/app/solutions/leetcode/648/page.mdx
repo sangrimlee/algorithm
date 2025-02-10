@@ -1,0 +1,96 @@
+---
+title: Replace Words
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Trie
+---
+
+# 648. Replace Words
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Trie" slug="trie" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function replaceWords(dictionary: string[], sentence: string): string {
+  const trie = new Trie(dictionary);
+  return sentence
+    .split(' ')
+    .map((word) => trie.search(word))
+    .join(' ');
+}
+
+class TrieNode {
+  private readonly children: Map<string, TrieNode>;
+  public isEnd: boolean;
+
+  constructor() {
+    this.children = new Map();
+    this.isEnd = false;
+  }
+
+  getChild(char: string): TrieNode | undefined {
+    return this.children.get(char);
+  }
+
+  addChild(char: string): TrieNode {
+    const childNode = this.getChild(char);
+    if (childNode) {
+      return childNode;
+    }
+    const newNode = new TrieNode();
+    this.children.set(char, newNode);
+    return newNode;
+  }
+}
+
+class Trie {
+  private readonly root: TrieNode;
+
+  constructor(words: string[]) {
+    this.root = new TrieNode();
+    for (const word of words) {
+      this.insert(word);
+    }
+  }
+
+  insert(word: string): void {
+    let curretNode = this.root;
+    for (const char of word) {
+      curretNode = curretNode.addChild(char);
+    }
+    curretNode.isEnd = true;
+  }
+
+  search(word: string): string {
+    let prefix = '';
+    let currentNode = this.root;
+    for (const char of word) {
+      const nextNode = currentNode.getChild(char);
+      if (!nextNode) {
+        return word;
+      }
+      prefix += char;
+      if (nextNode.isEnd) {
+        return prefix;
+      }
+      currentNode = nextNode;
+    }
+    return word;
+  }
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/replace-words"
+  title="Replace Words"
+/>

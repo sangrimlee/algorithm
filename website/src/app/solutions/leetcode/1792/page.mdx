@@ -1,0 +1,59 @@
+---
+title: Maximum Average Pass Ratio
+tags:
+  - Array
+  - Greedy
+  - Heap (Priority Queue)
+---
+
+# 1792. Maximum Average Pass Ratio
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function maxAverageRatio(classes: number[][], extraStudents: number): number {
+  const n = classes.length;
+  const heap = new Heap<number[]>(sortByRatioDiff);
+  for (const [pass, total] of classes) {
+    heap.push([pass, total]);
+  }
+
+  for (let i = 0; i < extraStudents; i++) {
+    const [pass, total] = heap.pop()!;
+    heap.push([pass + 1, total + 1]);
+  }
+
+  let totalPassRatio = 0;
+  while (!heap.isEmpty) {
+    const [pass, total] = heap.pop()!;
+    totalPassRatio += pass / total;
+  }
+  return totalPassRatio / n;
+}
+
+function sortByRatioDiff([pass1, total1]: number[], [pass2, total2]: number[]) {
+  const ratioDiff1 = (pass1 + 1) / (total1 + 1) - pass1 / total1;
+  const ratioDiff2 = (pass2 + 1) / (total2 + 1) - pass2 / total2;
+  return ratioDiff2 - ratioDiff1;
+}
+```
+
+### Complexity
+
+- Time: $O(extraStudents \cdot logn)$
+- Space: $O(n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-average-pass-ratio"
+  title="Maximum Average Pass Ratio"
+/>

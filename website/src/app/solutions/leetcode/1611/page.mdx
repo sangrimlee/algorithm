@@ -1,0 +1,43 @@
+---
+title: Minimum One Bit Operations to Make Integers Zero
+tags:
+  - Dynamic Programming
+  - Bit Manipulation
+  - Memoization
+---
+
+# 1611. Minimum One Bit Operations to Make Integers Zero
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Memoization" slug="memoization" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumOneBitOperations(n: number): number {
+  if (n <= 1) {
+    return n;
+  }
+
+  let answer = 0;
+  let [k, mask] = [0, 1];
+  while (mask <= n) {
+    if (n & mask) {
+      answer = 2 ** (k + 1) - 1 - answer;
+    }
+    mask <<= 1;
+    k += 1;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero"
+  title="Minimum One Bit Operations to Make Integers Zero"
+/>

@@ -1,0 +1,59 @@
+---
+title: Minimum Number of Steps to Make Two Strings Anagram
+tags:
+  - Hash Table
+  - String
+  - Counting
+---
+
+# 1347. Minimum Number of Steps to Make Two Strings Anagram
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+class CharCounter {
+  private readonly map: Map<string, number>;
+
+  constructor(s: string) {
+    this.map = new Map();
+    for (const char of s) {
+      this.add(char);
+    }
+  }
+
+  get(key: string): number {
+    return this.map.get(key) ?? 0;
+  }
+
+  add(key: string) {
+    return this.map.set(key, this.get(key) + 1);
+  }
+
+  entries() {
+    return this.map.entries();
+  }
+}
+
+export function minSteps(s: string, t: string): number {
+  const sCounter = new CharCounter(s);
+  const tCounter = new CharCounter(t);
+
+  return [...sCounter.entries()].reduce(
+    (prev, [char, count]) => prev + Math.max(count - tCounter.get(char), 0),
+    0,
+  );
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram"
+  title="Minimum Number of Steps to Make Two Strings Anagram"
+/>

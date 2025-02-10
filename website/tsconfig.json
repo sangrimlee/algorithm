@@ -1,11 +1,14 @@
 {
   "extends": "@algorithm/tsconfig/nextjs.json",
   "compilerOptions": {
+    "moduleResolution": "Bundler",
+    "strictNullChecks": true,
+    "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "src"],
+  "include": [".", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

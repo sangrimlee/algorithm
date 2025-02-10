@@ -1,0 +1,38 @@
+---
+title: Split the Array
+tags:
+  - Array
+  - Hash Table
+  - Counting
+---
+
+# 3046. Split the Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isPossibleToSplit(nums: number[]): boolean {
+  const counter = new Map<number, number>();
+  for (const num of nums) {
+    const count = counter.get(num) ?? 0;
+    if (2 <= count) {
+      return false;
+    }
+    counter.set(num, count + 1);
+  }
+  return true;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/split-the-array"
+  title="Split the Array"
+/>

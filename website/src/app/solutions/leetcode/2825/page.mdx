@@ -1,0 +1,47 @@
+---
+title: Make String a Subsequence Using Cyclic Increments
+tags:
+  - Two Pointers
+  - String
+---
+
+# 2825. Make String a Subsequence Using Cyclic Increments
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Two Pointers" slug="two-pointers" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canMakeSubsequence(str1: string, str2: string): boolean {
+  const [m, n] = [str1.length, str2.length];
+  let [i, j] = [0, 0];
+  while (i < m && j < n) {
+    if (canChange(str1[i], str2[j])) {
+      j += 1;
+    }
+    i += 1;
+  }
+  return j === n;
+}
+
+function canChange(char1: string, char2: string) {
+  const code1 = char1.charCodeAt(0);
+  const code2 = char2.charCodeAt(0);
+  return code1 === code2 || code1 + 1 === code2 || code1 - 25 === code2;
+}
+```
+
+### Complexity
+
+- Time: $O(min(m, n))$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments"
+  title="Make String a Subsequence Using Cyclic Increments"
+/>

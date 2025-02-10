@@ -1,0 +1,30 @@
+---
+title: Valid Boomerang
+tags:
+  - Array
+  - Math
+  - Geometry
+---
+
+# 1037. Valid Boomerang
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Geometry" slug="geometry" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isBoomerang([[x1, y1], [x2, y2], [x3, y3]]: number[][]): boolean {
+  return (y1 - y2) * (x1 - x3) !== (y1 - y3) * (x1 - x2);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/valid-boomerang"
+  title="Valid Boomerang"
+/>

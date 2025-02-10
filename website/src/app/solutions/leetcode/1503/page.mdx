@@ -1,0 +1,37 @@
+---
+title: Last Moment Before All Ants Fall Out of a Plank
+tags:
+  - Array
+  - Brainteaser
+  - Simulation
+---
+
+# 1503. Last Moment Before All Ants Fall Out of a Plank
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Brainteaser" slug="brainteaser" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getLastMoment(n: number, left: number[], right: number[]): number {
+  let result = 0;
+  for (const i of left) {
+    result = Math.max(result, i);
+  }
+  for (const i of right) {
+    result = Math.max(result, n - i);
+  }
+  return result;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank"
+  title="Last Moment Before All Ants Fall Out of a Plank"
+/>

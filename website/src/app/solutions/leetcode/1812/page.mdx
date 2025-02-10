@@ -1,0 +1,28 @@
+---
+title: Determine Color of a Chessboard Square
+tags:
+  - Math
+  - String
+---
+
+# 1812. Determine Color of a Chessboard Square
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function squareIsWhite(coordinates: string): boolean {
+  return coordinates.charCodeAt(0) % 2 !== parseInt(coordinates[1]) % 2;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/determine-color-of-a-chessboard-square"
+  title="Determine Color of a Chessboard Square"
+/>

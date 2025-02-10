@@ -1,0 +1,50 @@
+---
+title: Frequency of the Most Frequent Element
+tags:
+  - Array
+  - Binary Search
+  - Greedy
+  - Sliding Window
+  - Sorting
+  - Prefix Sum
+---
+
+# 1838. Frequency of the Most Frequent Element
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxFrequency(nums: number[], k: number): number {
+  nums.sort((a, b) => a - b);
+
+  let answer = 0;
+  let [start, rangeSum] = [0, 0];
+  for (let end = 0; end < nums.length; end++) {
+    const num = nums[end];
+    rangeSum += num;
+    while (k < num * (end - start + 1) - rangeSum) {
+      rangeSum -= nums[start];
+      start += 1;
+    }
+    answer = Math.max(answer, end - start + 1);
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/frequency-of-the-most-frequent-element"
+  title="Frequency of the Most Frequent Element"
+/>

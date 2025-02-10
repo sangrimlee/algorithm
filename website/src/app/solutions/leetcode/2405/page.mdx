@@ -1,0 +1,40 @@
+---
+title: Optimal Partition of String
+tags:
+  - Hash Table
+  - String
+  - Greedy
+---
+
+# 2405. Optimal Partition of String
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function partitionString(s: string): number {
+  const set = new Set<string>();
+
+  let answer = 1;
+  for (const char of s) {
+    if (set.has(char)) {
+      set.clear();
+      answer += 1;
+    }
+    set.add(char);
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/optimal-partition-of-string"
+  title="Optimal Partition of String"
+/>

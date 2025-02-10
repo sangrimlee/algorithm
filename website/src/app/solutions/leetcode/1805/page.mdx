@@ -1,0 +1,33 @@
+---
+title: Number of Different Integers in a String
+tags:
+  - Hash Table
+  - String
+---
+
+# 1805. Number of Different Integers in a String
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function numDifferentIntegers(word: string): number {
+  function removeLeadingZero(num: string) {
+    const removed = num.replace(/^0+/, '');
+    return removed.length === 0 ? '0' : removed;
+  }
+  const nums = [...word.matchAll(/[0-9]+/g)].map(([num]) => removeLeadingZero(num));
+  return new Set(nums).size;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-different-integers-in-a-string"
+  title="Number of Different Integers in a String"
+/>

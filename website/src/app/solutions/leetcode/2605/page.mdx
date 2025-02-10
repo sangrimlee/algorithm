@@ -1,0 +1,44 @@
+---
+title: Form Smallest Number From Two Digit Arrays
+tags:
+  - Array
+  - Hash Table
+  - Enumeration
+---
+
+# 2605. Form Smallest Number From Two Digit Arrays
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Enumeration" slug="enumeration" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minNumber(nums1: number[], nums2: number[]): number {
+  const min1 = min(nums1);
+  const min2 = min(nums2);
+  const intersection = intersect(new Set(nums1), new Set(nums2));
+  if (intersection.length === 0) {
+    return Math.min(min1, min2) * 10 + Math.max(min1, min2);
+  }
+  return min(intersection);
+}
+
+function min(nums: number[]) {
+  return nums.reduce((prev, num) => (prev < num ? prev : num), Number.MAX_SAFE_INTEGER);
+}
+
+function intersect(set1: Set<number>, set2: Set<number>) {
+  return [...set1].filter((num) => set2.has(num));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays"
+  title="Form Smallest Number From Two Digit Arrays"
+/>

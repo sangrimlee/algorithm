@@ -1,0 +1,52 @@
+---
+title: Sum of Subarray Minimums
+tags:
+  - Array
+  - Dynamic Programming
+  - Stack
+  - Monotonic Stack
+---
+
+# 907. Sum of Subarray Minimums
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Stack" slug="stack" />
+  <Badge.Topic name="Monotonic Stack" slug="monotonic-stack" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumSubarrayMins(arr: number[]): number {
+  const N = arr.length;
+  const MOD = 1_000_000_007;
+  const stack: number[] = [];
+  const dp: number[] = new Array(N).fill(0);
+
+  for (let i = 0; i < N; i++) {
+    while (0 < stack.length && arr[i] < arr[stack[stack.length - 1]]) {
+      stack.pop();
+    }
+
+    if (0 < stack.length) {
+      const smallerIndex = stack[stack.length - 1];
+      dp[i] = dp[smallerIndex] + (i - smallerIndex) * arr[i];
+    } else {
+      dp[i] = (i + 1) * arr[i];
+    }
+    stack.push(i);
+  }
+
+  const answer = dp.reduce((prev, curr) => (prev + curr) % MOD, 0);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-subarray-minimums/"
+  title="Sum of Subarray Minimums"
+/>

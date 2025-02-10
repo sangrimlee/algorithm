@@ -1,0 +1,51 @@
+---
+title: Get Equal Substrings Within Budget
+tags:
+  - String
+  - Binary Search
+  - Sliding Window
+  - Prefix Sum
+---
+
+# 1208. Get Equal Substrings Within Budget
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Sliding Window" slug="sliding-window" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function equalSubstring(s: string, t: string, maxCost: number): number {
+  function getCost(i: number): number {
+    return Math.abs(s.charCodeAt(i) - t.charCodeAt(i));
+  }
+
+  const n = s.length;
+
+  let answer = 0;
+  let start = 0;
+  let currentCost = 0;
+  for (let end = 0; end < n; end++) {
+    currentCost += getCost(end);
+    while (currentCost > maxCost) {
+      currentCost -= getCost(start);
+      start += 1;
+    }
+
+    answer = Math.max(answer, end - start + 1);
+  }
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/get-equal-substrings-within-budget"
+  title="Get Equal Substrings Within Budget"
+/>

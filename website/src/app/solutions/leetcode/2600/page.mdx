@@ -1,0 +1,33 @@
+---
+title: K Items With the Maximum Sum
+tags:
+  - Math
+  - Greedy
+---
+
+# 2600. K Items With the Maximum Sum
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kItemsWithMaximumSum(
+  numOnes: number,
+  numZeros: number,
+  numNegOnes: number,
+  k: number,
+): number {
+  return Math.min(k, numOnes) - Math.max(0, k - numOnes - numZeros);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/k-items-with-the-maximum-sum"
+  title="K Items With the Maximum Sum"
+/>

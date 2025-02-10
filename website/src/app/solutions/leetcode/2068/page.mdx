@@ -1,0 +1,52 @@
+---
+title: Check Whether Two Strings are Almost Equivalent
+tags:
+  - Hash Table
+  - String
+  - Counting
+---
+
+# 2068. Check Whether Two Strings are Almost Equivalent
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Counting" slug="counting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+class CharCounter {
+  private readonly counter: Map<string, number>;
+
+  constructor(word: string) {
+    this.counter = new Map();
+    for (const char of word) {
+      this.add(char);
+    }
+  }
+
+  get(char: string) {
+    return this.counter.get(char) ?? 0;
+  }
+
+  add(char: string) {
+    return this.counter.set(char, this.get(char) + 1);
+  }
+}
+
+export function checkAlmostEquivalent(word1: string, word2: string): boolean {
+  const counter1 = new CharCounter(word1);
+  const counter2 = new CharCounter(word2);
+  const chars = [...new Set(word1 + word2)];
+  return chars.every((char) => Math.abs(counter1.get(char) - counter2.get(char)) <= 3);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent"
+  title="Check Whether Two Strings are Almost Equivalent"
+/>

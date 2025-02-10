@@ -1,0 +1,36 @@
+---
+title: Sum Multiples
+tags:
+  - Math
+---
+
+# 2652. Sum Multiples
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumOfMultiples(n: number): number {
+  function isDivisible(num: number) {
+    return num % 3 === 0 || num % 5 === 0 || num % 7 === 0;
+  }
+
+  let answer = 0;
+  for (let i = 1; i <= n; i++) {
+    if (isDivisible(i)) {
+      answer += i;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-multiples"
+  title="Sum Multiples"
+/>

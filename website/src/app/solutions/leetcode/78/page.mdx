@@ -1,0 +1,41 @@
+---
+title: Subsets
+tags:
+  - Array
+  - Backtracking
+  - Bit Manipulation
+---
+
+# 78. Subsets
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function subsets(nums: number[]): number[][] {
+  const n = nums.length;
+  const answer: number[][] = [];
+
+  function dfs(currentIndex: number, subset: number[]) {
+    if (n <= currentIndex) {
+      answer.push([...subset]);
+      return;
+    }
+    subset.push(nums[currentIndex]);
+    dfs(currentIndex + 1, subset);
+    subset.pop();
+    dfs(currentIndex + 1, subset);
+  }
+
+  dfs(0, []);
+  return answer;
+}
+```
+
+<ProblemLink codingSite="leetcode" href="https://leetcode.com/problems/subsets" title="Subsets" />

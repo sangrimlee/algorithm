@@ -1,0 +1,31 @@
+---
+title: Filter Elements from Array
+tags:
+---
+
+# 2634. Filter Elements from Array
+
+<Badge.Root>
+<Badge.Level level="easy" />
+
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function filter<T>(arr: T[], fn: (n: T, i: number) => unknown): T[] {
+  const result: T[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i], i)) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/filter-elements-from-array"
+  title="Filter Elements from Array"
+/>

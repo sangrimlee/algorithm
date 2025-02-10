@@ -1,0 +1,29 @@
+---
+title: Repeated Substring Pattern
+tags:
+  - String
+  - String Matching
+---
+
+# 459. Repeated Substring Pattern
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="String Matching" slug="string-matching" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function repeatedSubstringPattern(s: string): boolean {
+  const concatenated = s + s;
+  return concatenated.slice(1, -1).indexOf(s) !== -1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/repeated-substring-pattern"
+  title="Repeated Substring Pattern"
+/>

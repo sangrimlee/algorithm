@@ -1,0 +1,39 @@
+---
+title: Check if Two Chessboard Squares Have the Same Color
+tags:
+  - Math
+  - String
+---
+
+# 3274. Check if Two Chessboard Squares Have the Same Color
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkTwoChessboards(coordinate1: string, coordinate2: string): boolean {
+  return getCoordinateColor(coordinate1) === getCoordinateColor(coordinate2);
+}
+
+function getCoordinateColor(coordinate: string): 'black' | 'white' {
+  const col = coordinate.charCodeAt(0) - 'a'.charCodeAt(0);
+  const row = parseInt(coordinate[1]) - 1;
+  return (col + row) % 2 === 0 ? 'black' : 'white';
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/check-if-two-chessboard-squares-have-the-same-color"
+  title="Check if Two Chessboard Squares Have the Same Color"
+/>

@@ -1,0 +1,38 @@
+---
+title: Find Triangular Sum of an Array
+tags:
+  - Array
+  - Math
+  - Simulation
+  - Combinatorics
+---
+
+# 2221. Find Triangular Sum of an Array
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+  <Badge.Topic name="Combinatorics" slug="combinatorics" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function triangularSum(nums: number[]): number {
+  while (1 < nums.length) {
+    for (let i = 0; i < nums.length; i++) {
+      nums[i] = (nums[i] + nums[i + 1]) % 10;
+    }
+    nums.pop();
+  }
+  return nums[0];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-triangular-sum-of-an-array"
+  title="Find Triangular Sum of an Array"
+/>

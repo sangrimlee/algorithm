@@ -1,0 +1,33 @@
+---
+title: Neighboring Bitwise XOR
+tags:
+  - Array
+  - Bit Manipulation
+---
+
+# 2683. Neighboring Bitwise XOR
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function doesValidArrayExist(derived: number[]): boolean {
+  return derived.reduce((prev, curr) => prev ^ curr, 0) === 0;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/neighboring-bitwise-xor"
+  title="Neighboring Bitwise XOR"
+/>

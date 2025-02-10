@@ -1,0 +1,48 @@
+---
+title: Can Place Flowers
+tags:
+  - Array
+  - Greedy
+---
+
+# 605. Can Place Flowers
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canPlaceFlowers(flowerbed: number[], n: number): boolean {
+  let flowerCount = 0;
+
+  for (let i = 0; i < flowerbed.length; i++) {
+    if (flowerbed[i] !== 0) {
+      continue;
+    }
+
+    const isLeftEmpty = i === 0 || flowerbed[i - 1] === 0;
+    const isRightEmpty = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
+
+    if (isLeftEmpty && isRightEmpty) {
+      flowerbed[i] = 1;
+      flowerCount += 1;
+    }
+
+    if (n <= flowerCount) {
+      return true;
+    }
+  }
+
+  return n <= flowerCount;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/can-place-flowers"
+  title="Can Place Flowers"
+/>

@@ -1,0 +1,37 @@
+---
+title: Find Target Indices After Sorting Array
+tags:
+  - Array
+  - Binary Search
+  - Sorting
+---
+
+# 2089. Find Target Indices After Sorting Array
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Binary Search" slug="binary-search" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function targetIndices(nums: number[], target: number): number[] {
+  return nums
+    .sort((a, b) => a - b)
+    .reduce((targets, num, index) => {
+      if (target === num) {
+        targets.push(index);
+      }
+      return targets;
+    }, [] as number[]);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-target-indices-after-sorting-array/"
+  title="Find Target Indices After Sorting Array"
+/>

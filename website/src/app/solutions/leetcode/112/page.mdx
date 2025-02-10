@@ -1,0 +1,44 @@
+---
+title: Path Sum
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 112. Path Sum
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function hasPathSum(root: TreeNode | null, targetSum: number): boolean {
+  if (root === null) {
+    return false;
+  }
+
+  if (root.left === null && root.right === null && root.val === targetSum) {
+    return true;
+  }
+
+  return (
+    hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val)
+  );
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/path-sum/"
+  title="Path Sum"
+/>

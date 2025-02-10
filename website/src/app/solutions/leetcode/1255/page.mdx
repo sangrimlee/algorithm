@@ -1,0 +1,71 @@
+---
+title: Maximum Score Words Formed by Letters
+tags:
+  - Array
+  - String
+  - Dynamic Programming
+  - Backtracking
+  - Bit Manipulation
+  - Bitmask
+---
+
+# 1255. Maximum Score Words Formed by Letters
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+  <Badge.Topic name="Bitmask" slug="bitmask" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxScoreWords(words: string[], letters: string[], scores: number[]): number {
+  const counts = new Array<number>(scores.length).fill(0);
+  for (const letter of letters) {
+    counts[getCharCode(letter)] += 1;
+  }
+
+  function backtrack(currentIndex: number): number {
+    let maxScore = 0;
+    for (let i = currentIndex; i < words.length; i++) {
+      let totalScore = 0;
+      let isValid = true;
+      for (const char of words[i]) {
+        const charCode = getCharCode(char);
+        counts[charCode] -= 1;
+        totalScore += scores[charCode];
+        if (counts[charCode] < 0) {
+          isValid = false;
+        }
+      }
+
+      if (isValid) {
+        totalScore += backtrack(i + 1);
+        maxScore = Math.max(totalScore, maxScore);
+      }
+      for (const char of words[i]) {
+        counts[getCharCode(char)] += 1;
+        totalScore = 0;
+      }
+    }
+    return maxScore;
+  }
+
+  return backtrack(0);
+}
+
+function getCharCode(char: string) {
+  return char.charCodeAt(0) - 'a'.charCodeAt(0);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/maximum-score-words-formed-by-letters"
+  title="Maximum Score Words Formed by Letters"
+/>

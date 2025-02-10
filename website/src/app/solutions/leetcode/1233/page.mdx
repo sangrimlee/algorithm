@@ -1,0 +1,144 @@
+---
+title: Remove Sub-Folders from the Filesystem
+tags:
+  - Array
+  - String
+  - Depth-First Search
+  - Trie
+---
+
+# 1233. Remove Sub-Folders from the Filesystem
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Trie" slug="trie" />
+</Badge.Root>
+
+## Solution
+
+### Solution1: `Set`
+
+```typescript filename="solution.ts" copy
+function removeSubfolders(folders: string[]): string[] {
+  const set = new Set(folders);
+  return folders.filter((folder) => !isSubFolder(set, folder));
+}
+
+function isSubFolder(set: Set<string>, folder: string) {
+  let endIndex = folder.lastIndexOf('/');
+  while (0 < endIndex) {
+    const prefix = folder.substring(0, endIndex);
+    if (set.has(prefix)) {
+      return true;
+    }
+    endIndex = prefix.lastIndexOf('/');
+  }
+  return false;
+}
+```
+
+#### Complexity
+
+- `N`: `folders`의 길이, `L`: `folders`의 요소 중 가장 긴 길이
+- Time: `O(N*L^2)`
+- Space: `O(N*L)`
+
+---
+
+### Solution2: `Sort`
+
+```typescript filename="solution.ts" copy
+function removeSubfolders(folders: string[]): string[] {
+  folders.sort();
+  const result = [folders[0]];
+  for (let i = 1; i < folders.length; i++) {
+    const lastFolder = `${result[result.length - 1]}/`;
+    if (!folders[i].startsWith(lastFolder)) {
+      result.push(folders[i]);
+    }
+  }
+  return result;
+}
+```
+
+#### Complexity
+
+- Time: `O(N*L*logN)`
+- Space: `O(N*L)`
+
+---
+
+### Solution3: `Trie`
+
+```typescript filename="solution.ts" copy
+export function removeSubfolders(folders: string[]): string[] {
+  const trie = new Trie(folders);
+  return folders.filter((folder) => !trie.isSubFolder(folder));
+}
+
+class TrieNode {
+  readonly children: Map<string, TrieNode>;
+  public isEnd: boolean;
+  constructor() {
+    this.children = new Map();
+    this.isEnd = false;
+  }
+
+  getChildNode(folder: string): TrieNode {
+    const childNode = this.children.get(folder);
+    if (childNode) {
+      return childNode;
+    }
+    const newNode = new TrieNode();
+    this.children.set(folder, newNode);
+    return newNode;
+  }
+}
+
+class Trie {
+  private readonly root: TrieNode;
+  constructor(folders: string[]) {
+    this.root = new TrieNode();
+    for (const folder of folders) {
+      this.addFolder(folder);
+    }
+  }
+
+  private getFolderNames(folder: string) {
+    return folder.split('/').slice(1);
+  }
+
+  addFolder(folder: string) {
+    let currentNode = this.root;
+    for (const folderName of this.getFolderNames(folder)) {
+      currentNode = currentNode.getChildNode(folderName);
+    }
+    currentNode.isEnd = true;
+  }
+
+  isSubFolder(folder: string) {
+    let currentNode = this.root;
+    for (const folderName of this.getFolderNames(folder)) {
+      if (currentNode.isEnd) {
+        return true;
+      }
+      currentNode = currentNode.getChildNode(folderName);
+    }
+    return false;
+  }
+}
+```
+
+#### Complexity
+
+- Time: `O(N*L)`
+- Space: `O(N*L)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/remove-sub-folders-from-the-filesystem"
+  title="Remove Sub-Folders from the Filesystem"
+/>

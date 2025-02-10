@@ -1,0 +1,56 @@
+---
+title: Number of Good Leaf Nodes Pairs
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+---
+
+# 1530. Number of Good Leaf Nodes Pairs
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function countPairs(root: TreeNode | null, distance: number): number {
+  let answer = 0;
+  function dfs(node: TreeNode | null) {
+    const result = new Array(distance + 1).fill(0);
+    if (node === null) {
+      return result;
+    }
+    if (node.left === null && node.right === null) {
+      result[1] += 1;
+      return result;
+    }
+
+    const leftDistances = dfs(node.left);
+    const rightDistances = dfs(node.right);
+    for (let left = 1; left <= distance; left++) {
+      for (let right = distance - left; 0 <= right; right--) {
+        answer += leftDistances[left] * rightDistances[right];
+      }
+    }
+    for (let i = distance - 1; 1 <= i; i--) {
+      result[i + 1] = leftDistances[i] + rightDistances[i];
+    }
+    return result;
+  }
+  dfs(root);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-good-leaf-nodes-pairs"
+  title="Number of Good Leaf Nodes Pairs"
+/>

@@ -1,0 +1,46 @@
+---
+title: Difference Between Ones and Zeros in Row and Column
+tags:
+  - Array
+  - Matrix
+  - Simulation
+---
+
+# 2482. Difference Between Ones and Zeros in Row and Column
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function onesMinusZeros(grid: number[][]): number[][] {
+  const [m, n] = [grid.length, grid[0].length];
+  const onesRow = new Array(m).fill(0);
+  const onesCol = new Array(n).fill(0);
+  grid.forEach((row, i) => {
+    row.forEach((value, j) => {
+      if (value === 1) {
+        onesRow[i] += 1;
+        onesCol[j] += 1;
+      }
+    });
+  });
+
+  const getDiff = (i: number, j: number) => {
+    return 2 * (onesRow[i] + onesCol[j]) - (m + n);
+  };
+
+  return grid.map((row, i) => row.map((_, j) => getDiff(i, j)));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column"
+  title="Difference Between Ones and Zeros in Row and Column"
+/>

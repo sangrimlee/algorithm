@@ -1,0 +1,41 @@
+---
+title: Minimum Number of Arrows to Burst Balloons
+tags:
+  - Array
+  - Greedy
+  - Sorting
+---
+
+# 452. Minimum Number of Arrows to Burst Balloons
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+  <Badge.Topic name="Sorting" slug="sorting" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findMinArrowShots(points: number[][]): number {
+  points.sort(([, end1], [, end2]) => end1 - end2);
+
+  let totalArrowShot = 0;
+  let lastPoint = 0;
+  for (const [startPoint, endPoint] of points) {
+    if (totalArrowShot === 0 || lastPoint < startPoint) {
+      totalArrowShot += 1;
+      lastPoint = endPoint;
+    }
+  }
+
+  return totalArrowShot;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons"
+  title="Minimum Number of Arrows to Burst Balloons"
+/>

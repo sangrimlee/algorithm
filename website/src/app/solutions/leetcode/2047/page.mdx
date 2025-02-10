@@ -1,0 +1,30 @@
+---
+title: Number of Valid Words in a Sentence
+tags:
+  - String
+---
+
+# 2047. Number of Valid Words in a Sentence
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countValidWords(sentence: string): number {
+  const words = sentence.split(/\s+/);
+  function isValid(word: string): boolean {
+    return 0 < word.length && /^(?:[a-z]+(?:-[a-z]+)?)?[!.,]?$/.test(word);
+  }
+  return words.filter(isValid).length;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/number-of-valid-words-in-a-sentence"
+  title="Number of Valid Words in a Sentence"
+/>

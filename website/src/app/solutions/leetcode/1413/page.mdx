@@ -1,0 +1,34 @@
+---
+title: Minimum Value to Get Positive Step by Step Sum
+tags:
+  - Array
+  - Prefix Sum
+---
+
+# 1413. Minimum Value to Get Positive Step by Step Sum
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minStartValue(nums: number[]): number {
+  let minValue = 0;
+  let currentValue = 0;
+  nums.forEach((num) => {
+    currentValue += num;
+    minValue = Math.min(minValue, currentValue);
+  });
+  return Math.max(-minValue, 0) + 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum"
+  title="Minimum Value to Get Positive Step by Step Sum"
+/>

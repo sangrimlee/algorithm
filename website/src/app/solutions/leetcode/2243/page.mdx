@@ -1,0 +1,37 @@
+---
+title: Calculate Digit Sum of a String
+tags:
+  - String
+  - Simulation
+---
+
+# 2243. Calculate Digit Sum of a String
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function digitSum(s: string, k: number): string {
+  if (s.length <= k) {
+    return s;
+  }
+  let result = '';
+  for (let i = 0; i < s.length; i += k) {
+    const substr = s.substring(i, i + k);
+    const sum = [...substr].reduce((acc, c) => acc + parseInt(c), 0);
+    result += sum.toString();
+  }
+  return digitSum(result, k);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/calculate-digit-sum-of-a-string"
+  title="Calculate Digit Sum of a String"
+/>

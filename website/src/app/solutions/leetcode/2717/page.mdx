@@ -1,0 +1,32 @@
+---
+title: Semi-Ordered Permutation
+tags:
+  - Array
+  - Simulation
+---
+
+# 2717. Semi-Ordered Permutation
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function semiOrderedPermutation(nums: number[]): number {
+  const n = nums.length;
+  const first = nums.findIndex((num) => num === 1);
+  const last = nums.findIndex((num) => num === n);
+  const operations = first + (n - 1 - last);
+  return first <= last ? operations : operations - 1;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/semi-ordered-permutation"
+  title="Semi-Ordered Permutation"
+/>

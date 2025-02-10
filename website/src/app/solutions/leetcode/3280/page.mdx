@@ -1,0 +1,31 @@
+---
+title: Convert Date to Binary
+---
+
+# 3280. Convert Date to Binary
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function convertDateToBinary(date: string): string {
+  return date
+    .split('-')
+    .map((v) => parseInt(v).toString(2))
+    .join('-');
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(1)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/convert-date-to-binary"
+  title="Convert Date to Binary"
+/>

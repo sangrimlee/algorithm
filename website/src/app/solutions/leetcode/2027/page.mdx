@@ -1,0 +1,35 @@
+---
+title: Minimum Moves to Convert String
+tags:
+  - String
+  - Greedy
+---
+
+# 2027. Minimum Moves to Convert String
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumMoves(s: string): number {
+  let answer = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === 'X') {
+      answer += 1;
+      i += 2;
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-moves-to-convert-string"
+  title="Minimum Moves to Convert String"
+/>

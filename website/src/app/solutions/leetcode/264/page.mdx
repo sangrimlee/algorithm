@@ -1,0 +1,48 @@
+---
+title: Ugly Number II
+tags:
+  - Hash Table
+  - Math
+  - Dynamic Programming
+  - Heap (Priority Queue)
+---
+
+# 264. Ugly Number II
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Heap (Priority Queue)" slug="heap-priority-queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function nthUglyNumber(n: number): number {
+  const dp = new Array(n).fill(0);
+  dp[0] = 1;
+
+  let [x, y, z] = [0, 0, 0];
+  for (let i = 1; i < n; i++) {
+    dp[i] = Math.min(dp[x] * 2, dp[y] * 3, dp[z] * 5);
+    if (dp[i] === dp[x] * 2) {
+      x += 1;
+    }
+    if (dp[i] === dp[y] * 3) {
+      y += 1;
+    }
+    if (dp[i] === dp[z] * 5) {
+      z += 1;
+    }
+  }
+  return dp[n - 1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/ugly-number-ii"
+  title="Ugly Number II"
+/>

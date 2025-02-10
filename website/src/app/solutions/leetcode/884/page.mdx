@@ -1,0 +1,40 @@
+---
+title: Uncommon Words from Two Sentences
+tags:
+  - Hash Table
+  - String
+---
+
+# 884. Uncommon Words from Two Sentences
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function uncommonFromSentences(s1: string, s2: string): string[] {
+  const counts = new Map<string, number>();
+  const words = [...s1.split(' '), ...s2.split(' ')];
+  for (const word of words) {
+    counts.set(word, (counts.get(word) ?? 0) + 1);
+  }
+
+  const answer = [];
+  for (const [word, count] of counts.entries()) {
+    if (count === 1) {
+      answer.push(word);
+    }
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/uncommon-words-from-two-sentences"
+  title="Uncommon Words from Two Sentences"
+/>

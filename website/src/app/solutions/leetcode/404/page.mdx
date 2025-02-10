@@ -1,0 +1,44 @@
+---
+title: Sum of Left Leaves
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 404. Sum of Left Leaves
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function sumOfLeftLeaves(root: TreeNode | null): number {
+  const sum = (node: TreeNode | null, isLeft = false): number => {
+    if (!node) {
+      return 0;
+    }
+    if (!node.left && !node.right) {
+      return isLeft ? node.val : 0;
+    }
+    return sum(node.left, true) + sum(node.right, false);
+  };
+
+  return sum(root);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/sum-of-left-leaves"
+  title="Sum of Left Leaves"
+/>

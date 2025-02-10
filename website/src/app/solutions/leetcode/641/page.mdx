@@ -1,0 +1,127 @@
+---
+title: Design Circular Deque
+tags:
+  - Array
+  - Linked List
+  - Design
+  - Queue
+---
+
+# 641. Design Circular Deque
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Linked List" slug="linked-list" />
+  <Badge.Topic name="Design" slug="design" />
+  <Badge.Topic name="Queue" slug="queue" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class MyCircularDeque {
+  public size: number;
+  private readonly maxSize: number;
+  private head: CircularNode;
+  private tail: CircularNode;
+
+  constructor(k: number) {
+    this.maxSize = k;
+    this.size = 0;
+    this.head = new CircularNode(-1);
+    this.tail = new CircularNode(-1);
+    this.head.next = this.tail;
+    this.tail.prev = this.head;
+  }
+
+  insertFront(value: number): boolean {
+    if (this.isFull()) {
+      return false;
+    }
+    const newNode = new CircularNode(value, this.head, this.head.next);
+    if (this.head.next) {
+      this.head.next.prev = newNode;
+    }
+    this.head.next = newNode;
+    this.size += 1;
+    return true;
+  }
+
+  insertLast(value: number): boolean {
+    if (this.isFull()) {
+      return false;
+    }
+    const newNode = new CircularNode(value, this.tail.prev, this.tail);
+    if (this.tail.prev) {
+      this.tail.prev.next = newNode;
+    }
+    this.tail.prev = newNode;
+    this.size += 1;
+    return true;
+  }
+
+  deleteFront(): boolean {
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.head.next = this.head.next?.next;
+    if (this.head.next) {
+      this.head.next.prev = this.head;
+    }
+    this.size -= 1;
+    return true;
+  }
+
+  deleteLast(): boolean {
+    if (this.isEmpty()) {
+      return false;
+    }
+    this.tail.prev = this.tail.prev?.prev;
+    if (this.tail.prev) {
+      this.tail.prev.next = this.tail;
+    }
+    this.size -= 1;
+    return true;
+  }
+
+  getFront(): number {
+    return this.head.next?.value ?? -1;
+  }
+
+  getRear(): number {
+    return this.tail.prev?.value ?? -1;
+  }
+
+  isEmpty(): boolean {
+    return this.size === 0;
+  }
+
+  isFull(): boolean {
+    return this.size === this.maxSize;
+  }
+}
+
+class CircularNode {
+  public value: number;
+  public prev: CircularNode | undefined;
+  public next: CircularNode | undefined;
+
+  constructor(value: number, prev?: CircularNode, next?: CircularNode) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(k)`
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/design-circular-deque"
+  title="Design Circular Deque"
+/>

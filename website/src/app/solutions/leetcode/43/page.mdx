@@ -1,0 +1,45 @@
+---
+title: Multiply Strings
+tags:
+  - Math
+  - String
+  - Simulation
+---
+
+# 43. Multiply Strings
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Simulation" slug="simulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function multiply(num1: string, num2: string): string {
+  const [m, n] = [num1.length, num2.length];
+
+  const result = new Array(m + n).fill(0);
+  for (let i = m - 1; 0 <= i; i--) {
+    for (let j = n - 1; 0 <= j; j--) {
+      const multiply = parseInt(num1[i]) * parseInt(num2[j]);
+      const sum = multiply + result[i + j + 1];
+      result[i + j] += Math.floor(sum / 10);
+      result[i + j + 1] = sum % 10;
+    }
+  }
+  const answer = result.reduce(
+    (prev, curr) => (prev === '' && curr === 0 ? prev : `${prev}${curr}`),
+    '',
+  );
+  return answer.length === 0 ? '0' : answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/multiply-strings"
+  title="Multiply Strings"
+/>

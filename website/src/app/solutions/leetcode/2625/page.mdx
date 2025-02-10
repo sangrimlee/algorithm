@@ -1,0 +1,47 @@
+---
+title: Flatten Deeply Nested Array
+tags:
+---
+
+# 2625. Flatten Deeply Nested Array
+
+<Badge.Root>
+<Badge.Level level="medium" />
+
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+type MultiDimensionalArray = (number | MultiDimensionalArray)[];
+
+export function flat(arr: MultiDimensionalArray, n: number): MultiDimensionalArray {
+  const createStackWithDepth = (arr: MultiDimensionalArray, depth: number) => {
+    return arr.map((value) => ({ value, depth }));
+  };
+
+  const stack = createStackWithDepth(arr, n);
+  const result: MultiDimensionalArray = [];
+
+  while (0 < stack.length) {
+    const peek = stack.pop();
+    if (peek === undefined) {
+      continue;
+    }
+    const { value, depth } = peek;
+    if (Array.isArray(value) && 0 < depth) {
+      stack.push(...createStackWithDepth(value, depth - 1));
+    } else {
+      result.push(value);
+    }
+  }
+
+  return result.reverse();
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/flatten-deeply-nested-array"
+  title="Flatten Deeply Nested Array"
+/>

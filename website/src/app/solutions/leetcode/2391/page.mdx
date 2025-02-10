@@ -1,0 +1,52 @@
+---
+title: Minimum Amount of Time to Collect Garbage
+tags:
+  - Array
+  - String
+  - Prefix Sum
+---
+
+# 2391. Minimum Amount of Time to Collect Garbage
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function garbageCollection(garbages: string[], travel: number[]): number {
+  for (let i = 1; i < travel.length; i++) {
+    travel[i] = travel[i - 1] + travel[i];
+  }
+
+  const lastGarbages = {
+    M: 0,
+    P: 0,
+    G: 0,
+  };
+
+  let answer = 0;
+  garbages.forEach((garbage, i) => {
+    for (const char of garbage) {
+      lastGarbages[char as keyof typeof lastGarbages] = i;
+    }
+    answer += garbage.length;
+  });
+
+  Object.values(lastGarbages).forEach((lastGarbage) => {
+    answer += lastGarbage === 0 ? 0 : travel[lastGarbage - 1];
+  });
+
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage"
+  title="Minimum Amount of Time to Collect Garbage"
+/>

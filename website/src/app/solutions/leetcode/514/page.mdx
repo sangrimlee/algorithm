@@ -1,0 +1,49 @@
+---
+title: Freedom Trail
+tags:
+  - String
+  - Dynamic Programming
+  - Depth-First Search
+  - Breadth-First Search
+---
+
+# 514. Freedom Trail
+
+<Badge.Root>
+  <Badge.Level level="hard" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findRotateSteps(ring: string, key: string): number {
+  const [m, n] = [ring.length, key.length];
+
+  let prev = new Array(m).fill(0);
+  for (let j = n - 1; 0 <= j; j--) {
+    const curr = new Array(m).fill(Number.MAX_SAFE_INTEGER);
+    for (let i = 0; i < m; i++) {
+      for (let k = 0; k < m; k++) {
+        if (ring[k] === key[j]) {
+          const diff = Math.abs(i - k);
+          const step = Math.min(diff, m - diff);
+          curr[i] = Math.min(curr[i], step + prev[k] + 1);
+        }
+      }
+    }
+    prev = curr;
+  }
+
+  return prev[0];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/freedom-trail"
+  title="Freedom Trail"
+/>

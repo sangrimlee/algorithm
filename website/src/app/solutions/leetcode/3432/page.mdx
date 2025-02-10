@@ -1,0 +1,47 @@
+---
+title: Count Partitions with Even Sum Difference
+tags:
+  - Array
+  - Math
+  - Prefix Sum
+---
+
+# 3432. Count Partitions with Even Sum Difference
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Prefix Sum" slug="prefix-sum" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPartitions(nums: number[]): number {
+  const n = nums.length;
+  const totalSum = nums.reduce((acc, num) => acc + num, 0);
+
+  let answer = 0;
+  let currentSum = 0;
+  for (let i = 0; i < n - 1; i++) {
+    currentSum += nums[i];
+    const difference = totalSum - 2 * currentSum;
+    if (difference % 2 === 0) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/count-partitions-with-even-sum-difference"
+  title="Count Partitions with Even Sum Difference"
+/>

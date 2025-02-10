@@ -1,0 +1,31 @@
+---
+title: Find Unique Binary String
+tags:
+  - Array
+  - String
+  - Backtracking
+---
+
+# 1980. Find Unique Binary String
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findDifferentBinaryString(nums: string[]): string {
+  const not = (bit: string) => (bit === '0' ? '1' : '0');
+  return nums.reduce((answer, num, i) => answer + not(num[i]), '');
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-unique-binary-string"
+  title="Find Unique Binary String"
+/>

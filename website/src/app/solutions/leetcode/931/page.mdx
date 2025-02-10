@@ -1,0 +1,49 @@
+---
+title: Minimum Falling Path Sum
+tags:
+  - Array
+  - Dynamic Programming
+  - Matrix
+---
+
+# 931. Minimum Falling Path Sum
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Dynamic Programming" slug="dynamic-programming" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function minFallingPathSum(matrix: number[][]): number {
+  const maxSize = Number.MAX_SAFE_INTEGER;
+  const n = matrix.length;
+  const dp = new Array(n).fill(undefined).map(() => new Array<number>(n).fill(maxSize));
+  dp[0] = matrix[0];
+
+  for (const row of range(1, n)) {
+    for (const col of range(n)) {
+      const prevMinValue = Math.min(
+        dp[row - 1][col - 1] ?? maxSize,
+        dp[row - 1][col],
+        dp[row - 1][col + 1] ?? maxSize,
+      );
+      dp[row][col] = matrix[row][col] + prevMinValue;
+    }
+  }
+
+  const answer = Math.min(...dp[n - 1]);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-falling-path-sum"
+  title="Minimum Falling Path Sum"
+/>

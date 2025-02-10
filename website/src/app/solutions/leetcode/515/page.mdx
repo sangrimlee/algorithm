@@ -1,0 +1,44 @@
+---
+title: Find Largest Value in Each Tree Row
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+---
+
+# 515. Find Largest Value in Each Tree Row
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Tree" slug="tree" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Binary Tree" slug="binary-tree" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function largestValues(root: TreeNode | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const answer: number[] = [];
+  const find = (node: TreeNode, depth: number) => {
+    answer[depth] = Math.max(answer[depth] ?? Number.MIN_SAFE_INTEGER, node.val);
+    node.left && find(node.left, depth + 1);
+    node.right && find(node.right, depth + 1);
+  };
+  find(root, 0);
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-largest-value-in-each-tree-row"
+  title="Find Largest Value in Each Tree Row"
+/>

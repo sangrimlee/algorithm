@@ -1,0 +1,49 @@
+---
+title: All Paths From Source to Target
+tags:
+  - Backtracking
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+---
+
+# 797. All Paths From Source to Target
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Depth-First Search" slug="depth-first-search" />
+  <Badge.Topic name="Breadth-First Search" slug="breadth-first-search" />
+  <Badge.Topic name="Graph" slug="graph" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function allPathsSourceTarget(graph: number[][]): number[][] {
+  const n = graph.length;
+  const routes: number[][] = [];
+
+  const dfs = (node: number, route: number[]) => {
+    if (node === n - 1) {
+      routes.push([...route]);
+      return;
+    }
+
+    for (const nextNode of graph[node]) {
+      route.push(nextNode);
+      dfs(nextNode, route);
+      route.pop();
+    }
+  };
+
+  dfs(0, [0]);
+  return routes;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/all-paths-from-source-to-target"
+  title="All Paths From Source to Target"
+/>

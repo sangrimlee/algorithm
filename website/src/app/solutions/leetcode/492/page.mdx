@@ -1,0 +1,32 @@
+---
+title: Construct the Rectangle
+tags:
+  - Math
+---
+
+# 492. Construct the Rectangle
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Math" slug="math" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function constructRectangle(area: number): number[] {
+  const maxWidth = Math.floor(Math.sqrt(area));
+  for (let width = maxWidth; 1 < width; width--) {
+    if (area % width === 0) {
+      return [area / width, width];
+    }
+  }
+  return [area, 1];
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/construct-the-rectangle"
+  title="Construct the Rectangle"
+/>

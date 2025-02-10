@@ -1,0 +1,30 @@
+---
+title: Gray Code
+tags:
+  - Math
+  - Backtracking
+  - Bit Manipulation
+---
+
+# 89. Gray Code
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+  <Badge.Topic name="Bit Manipulation" slug="bit-manipulation" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function grayCode(n: number): number[] {
+  return new Array(1 << n).fill(0).map((_, i) => i ^ (i >> 1));
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/gray-code"
+  title="Gray Code"
+/>

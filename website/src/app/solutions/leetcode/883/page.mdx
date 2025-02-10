@@ -1,0 +1,46 @@
+---
+title: Projection Area of 3D Shapes
+tags:
+  - Array
+  - Math
+  - Geometry
+  - Matrix
+---
+
+# 883. Projection Area of 3D Shapes
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Geometry" slug="geometry" />
+  <Badge.Topic name="Matrix" slug="matrix" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function projectionArea(grid: number[][]): number {
+  const n = grid.length;
+  let [xy, yz, xz] = [0, 0, 0];
+  for (let i = 0; i < n; i++) {
+    let cyz = 0;
+    let cxz = 0;
+    for (let j = 0; j < n; j++) {
+      xy += Math.min(1, grid[i][j]);
+      cyz = Math.max(cyz, grid[i][j]);
+      cxz = Math.max(cxz, grid[j][i]);
+    }
+    yz += cyz;
+    xz += cxz;
+  }
+
+  return xy + yz + xz;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/projection-area-of-3d-shapes"
+  title="Projection Area of 3D Shapes"
+/>

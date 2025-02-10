@@ -1,0 +1,26 @@
+---
+title: Smallest Index With Equal Value
+tags:
+  - Array
+---
+
+# 2057. Smallest Index With Equal Value
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Array" slug="array" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallestEqual(nums: number[]): number {
+  return nums.findIndex((num, i) => num === i % 10);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/smallest-index-with-equal-value"
+  title="Smallest Index With Equal Value"
+/>

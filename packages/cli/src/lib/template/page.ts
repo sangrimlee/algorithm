@@ -47,12 +47,12 @@ export function createLeetCodeSolutionPageTemplate(
 # ${id}. ${title}
 
 ${
-  difficulty && topics
+  difficulty || topics
     ? `
-<Badges>
-  ${createComponentTemplate('LevelBadge', { level: difficulty.toLowerCase() })}
-  ${topics.map((topic) => createComponentTemplate('TopicBadge', topic)).join('\n')}
-</Badges>`
+<Badge.Root>
+  ${difficulty ? createComponentTemplate('Badge.Level', { level: difficulty.toLowerCase() }) : ''}
+  ${topics ? topics.map((topic) => createComponentTemplate('Badge.Topic', topic)).join('\n') : ''}
+</Badge.Root>`
     : ''
 }
 
@@ -127,8 +127,9 @@ ${programmersTable}
 
 export async function createSolutionPageMeta(meta: Record<string, string>) {
   const template = await format(
-    `
-const meta = ${JSON.stringify(meta, null, 2)};
+    `import type { MetaRecord } from 'nextra';
+
+const meta: MetaRecord = ${JSON.stringify(meta, null, 2)};
 
 export default meta;
 `,

@@ -1,0 +1,31 @@
+---
+title: Decrypt String from Alphabet to Integer Mapping
+tags:
+  - String
+---
+
+# 1309. Decrypt String from Alphabet to Integer Mapping
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function freqAlphabets(s: string): string {
+  const decrypt = (chars: string) => {
+    const code = parseInt(chars.replace('#', '')) + 96;
+    return String.fromCharCode(code);
+  };
+
+  return s.replace(/(\d\d#|\d)/g, decrypt);
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping"
+  title="Decrypt String from Alphabet to Integer Mapping"
+/>

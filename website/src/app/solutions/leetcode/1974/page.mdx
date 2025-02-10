@@ -1,0 +1,43 @@
+---
+title: Minimum Time to Type Word Using Special Typewriter
+tags:
+  - String
+  - Greedy
+---
+
+# 1974. Minimum Time to Type Word Using Special Typewriter
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Greedy" slug="greedy" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minTimeToType(word: string): number {
+  function getCharPoint(char: string) {
+    return char.charCodeAt(0) - 'a'.charCodeAt(0);
+  }
+
+  function getMoveTime(start: number, end: number) {
+    return Math.min((end - start + 26) % 26, (start - end + 26) % 26);
+  }
+
+  let answer = 0;
+  let currPoint = 0;
+  for (const char of word) {
+    const nextPoint = getCharPoint(char);
+    answer += getMoveTime(currPoint, nextPoint) + 1;
+    currPoint = nextPoint;
+  }
+  return answer;
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter"
+  title="Minimum Time to Type Word Using Special Typewriter"
+/>

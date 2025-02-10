@@ -1,0 +1,39 @@
+---
+title: Greatest English Letter in Upper and Lower Case
+tags:
+  - Hash Table
+  - String
+  - Enumeration
+---
+
+# 2309. Greatest English Letter in Upper and Lower Case
+
+<Badge.Root>
+  <Badge.Level level="easy" />
+  <Badge.Topic name="Hash Table" slug="hash-table" />
+  <Badge.Topic name="String" slug="string" />
+  <Badge.Topic name="Enumeration" slug="enumeration" />
+</Badge.Root>
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function greatestLetter(s: string): string {
+  const set = new Set(s);
+
+  const [start, end] = ['A'.charCodeAt(0), 'Z'.charCodeAt(0)];
+  for (let charCode = end; start <= charCode; charCode--) {
+    const char = String.fromCharCode(charCode);
+    if (set.has(char) && set.has(char.toLowerCase())) {
+      return char;
+    }
+  }
+  return '';
+}
+```
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case"
+  title="Greatest English Letter in Upper and Lower Case"
+/>
