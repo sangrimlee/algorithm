@@ -30,16 +30,16 @@
   }
 
   .bg-grid {
-    @apply [--bg-grid-color:var(--color-gray-200)] dark:[--bg-grid-color:var(--color-gray-800)];
+    @apply [--bg-grid-color:var(--color-gray-600)] dark:[--bg-grid-color:var(--color-gray-400)];
     background-color: transparent;
     background-size: 4rem 4rem;
     background-image: linear-gradient(
-        color-mix(in oklab, var(--color-blue-400) 10%, transparent) 1px,
+        color-mix(in oklab, var(--bg-grid-color) 5%, transparent) 1px,
         transparent 1px
       ),
       linear-gradient(
         to right,
-        color-mix(in oklab, var(--color-blue-400) 10%, transparent) 1px,
+        color-mix(in oklab, var(--bg-grid-color) 5%, transparent) 1px,
         transparent 1px
       );
   }

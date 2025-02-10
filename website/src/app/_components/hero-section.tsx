@@ -1,57 +1,103 @@
-import Link from 'next/link';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
+'use client';
 
-import { FadeIn } from '@/components/animation';
+import Link from 'next/link';
+import { motion } from 'motion/react';
+import type { Variants } from 'motion/react';
+
 import { cx } from '@/utils/cx';
+import { Button } from '@/components/ui/button';
+
+const vairants = {
+  section: {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  },
+  item: {
+    hidden: { opacity: 0, y: 24 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  },
+} satisfies Record<string, Variants>;
 
 export const HeroSection = () => {
   return (
-    <section className="flex flex-1 flex-col items-center justify-center pt-36 md:pt-48">
-      <FadeIn className="flex flex-col items-center">
-        <div>
-          <h1
-            className={cx(
-              'font-logo text-center text-5xl font-extrabold tracking-tight text-slate-900',
-              'dark:text-slate-100 md:text-6xl xl:text-7xl',
-            )}
-          >
-            Algorithm
-          </h1>
-          <p
-            className={cx(
-              'mt-6 max-w-lg px-8 text-center text-slate-600 dark:text-slate-400',
-              'text-base md:mt-8 md:max-w-xl md:text-xl xl:mt-10 xl:max-w-2xl xl:text-2xl',
-            )}
-          >
-            The solutions written in TypeScript for problems of LeetCode and Programmers.
-          </p>
-        </div>
-        <div className="mt-6 space-x-4 md:mt-10">
-          <Link
-            className={cx(
-              'inline-flex items-center justify-center rounded-full px-4 py-1.5 text-sm font-medium md:text-base',
-              'bg-blue-600/10 text-blue-600 hover:bg-blue-600/20',
-              'dark:bg-blue-400/10 dark:bg-opacity-[0.15] dark:text-blue-400 dark:hover:bg-blue-400/20',
-            )}
-            href="/solutions/leetcode/1"
-          >
+    <motion.section
+      initial="hidden"
+      animate="show"
+      variants={vairants.section}
+      className={cx('mx-auto flex flex-1 flex-col items-center justify-center py-8')}
+    >
+      <motion.h1
+        variants={vairants.item}
+        className={cx(
+          'font-logo mx-auto max-w-sm text-center text-3xl font-bold leading-[1.2] tracking-tight',
+          'sm:max-w-lg sm:text-5xl sm:leading-[1.1]',
+          'xl:max-w-xl xl:text-6xl',
+          'text-gray-950 dark:text-gray-50',
+        )}
+      >
+        Algorithm Problem
+        <br />
+        with TypeScript
+      </motion.h1>
+      <motion.p
+        variants={vairants.item}
+        className={cx(
+          'mx-auto mt-4 max-w-sm text-center text-base',
+          'sm:mt-6 sm:max-w-md sm:text-lg',
+          'xl:mt-8 xl:max-w-lg xl:text-xl',
+          'text-gray-600 dark:text-gray-400',
+        )}
+      >
+        Explore 1,000+ problems solved in TypeScript. — New solution weekly.
+      </motion.p>
+      <motion.div
+        variants={vairants.item}
+        className={cx('mt-6 flex flex-wrap items-center justify-center gap-4', 'sm:mt-8 xl:mt-10')}
+      >
+        <Button
+          asChild
+          variant="default"
+          size="lg"
+          rounded="full"
+          className="min-w-44 hidden sm:inline-flex"
+        >
+          <Link href="/solutions/leetcode/1">
             <span>LeetCode</span>
-            <ArrowRightIcon className="ml-1.5 h-3.5 w-3.5 md:h-4 md:w-4" />
           </Link>
-          <Link
-            className={cx(
-              'inline-flex items-center justify-center rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200',
-              'md:text-base',
-              'bg-blue-600/10 text-blue-600 hover:bg-blue-600/20',
-              'dark:bg-blue-400/10 dark:bg-opacity-[0.15] dark:text-blue-400 dark:hover:bg-blue-400/20',
-            )}
-            href="/solutions/programmers/1843"
-          >
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          rounded="full"
+          className="min-w-44 hidden sm:inline-flex"
+        >
+          <Link href="/solutions/programmers/1843">
             <span>Programmers</span>
-            <ArrowRightIcon className="ml-1.5 h-3.5 w-3.5 md:h-4 md:w-4" />
           </Link>
-        </div>
-      </FadeIn>
-    </section>
+        </Button>
+        <Button asChild variant="default" size="md" rounded="full" className="min-w-40 sm:hidden">
+          <Link href="/solutions/leetcode/1">
+            <span>LeetCode</span>
+          </Link>
+        </Button>
+        <Button asChild variant="outline" size="md" rounded="full" className="min-w-40 sm:hidden">
+          <Link href="/solutions/programmers/1843">
+            <span>Programmers</span>
+          </Link>
+        </Button>
+      </motion.div>
+    </motion.section>
   );
 };
