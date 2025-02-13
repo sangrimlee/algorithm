@@ -1,0 +1,22 @@
+{
+  "name": "@algorithm/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore"
+  },
+  "prettier": "@algorithm/prettier-config",
+  "dependencies": {
+    "prettier": "catalog:",
+    "prettier-plugin-packagejson": "^2.5.8"
+  },
+  "devDependencies": {
+    "@algorithm/tsconfig": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
