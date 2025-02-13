@@ -2,6 +2,7 @@ import jseslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import turboPlugin from 'eslint-plugin-turbo';
 import importPlugin from 'eslint-plugin-import';
+import globals from 'globals';
 
 export default tseslint.config(
   jseslint.configs.recommended,
@@ -15,6 +16,9 @@ export default tseslint.config(
   {
     linterOptions: { reportUnusedDisableDirectives: true },
     languageOptions: {
+      globals: {
+        ...globals.node,
+      },
       parserOptions: { projectService: true },
     },
   },

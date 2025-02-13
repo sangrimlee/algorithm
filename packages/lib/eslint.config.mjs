@@ -1,3 +1,3 @@
 import { configs } from '@algorithm/eslint-config';
 
-export default [{ ignores: ['dist/**'] }, ...configs.base, configs.prettier];
+export default [{ ignores: ['dist/**'] }, ...configs.base, ...configs.jest, configs.prettier];

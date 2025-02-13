@@ -4,6 +4,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
 
 export default tseslint.config(
   reactPlugin.configs.flat.recommended ?? {},
@@ -23,8 +24,11 @@ export default tseslint.config(
       ...nextPlugin.configs['core-web-vitals'].rules,
       '@next/next/no-duplicate-head': 'off',
     },
+  },
+  {
     languageOptions: {
       globals: {
+        ...globals.browser,
         React: 'writable',
       },
     },
