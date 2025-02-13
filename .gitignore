@@ -34,3 +34,6 @@ website/public/sitemap*
 
 # next
 next-env.d.ts
+
+# cache
+.eslintcache
