@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "문제 풀이",
+  "type": "module",
   "main": "src/index.ts",
   "scripts": {
     "format": "prettier --check . --ignore-path ../.gitignore",

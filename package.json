@@ -10,6 +10,7 @@
     "name": "sangrimlee",
     "email": "contact@sangrim.dev"
   },
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
