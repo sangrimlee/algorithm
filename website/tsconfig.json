@@ -1,8 +1,6 @@
 {
-  "extends": "@algorithm/tsconfig/nextjs.json",
+  "extends": "@algorithm/tsconfig/react-app.json",
   "compilerOptions": {
-    "moduleResolution": "Bundler",
-    "strictNullChecks": true,
     "plugins": [{ "name": "next" }],
     "baseUrl": ".",
     "paths": {
