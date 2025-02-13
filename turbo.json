@@ -1,18 +1,16 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "ui": "tui",
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
-    },
-    "build#website": {
-      "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**"]
     },
     "dev": {
       "cache": false
     },
     "lint": {
+      "dependsOn": ["^build", "^lint"],
       "cache": true
     },
     "format": {
@@ -24,6 +22,5 @@
     "test:watch": {
       "cache": false
     }
-  },
-  "globalEnv": ["URL", "NEXT_PUBLIC_URL"]
+  }
 }
