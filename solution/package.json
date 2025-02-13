@@ -1,21 +1,22 @@
 {
   "name": "@algorithm/solution",
-  "description": "문제 풀이",
   "version": "0.0.0",
-  "license": "MIT",
   "private": true,
+  "description": "문제 풀이",
   "main": "src/index.ts",
   "scripts": {
+    "format": "prettier --check . --ignore-path ../.gitignore",
     "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write --cache \"./src/**/*.ts\"",
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "prettier": "@algorithm/prettier-config",
   "dependencies": {
     "@algorithm/lib": "workspace:*"
   },
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
+    "@algorithm/prettier-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/jest": "catalog:jest",
     "@types/node": "catalog:",

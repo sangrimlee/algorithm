@@ -1,9 +1,8 @@
 {
   "name": "@algorithm/cli",
-  "description": "Template generation cli",
   "version": "1.0.3",
-  "license": "MIT",
   "private": true,
+  "description": "Template generation cli",
   "bin": {
     "algorithm": "./bin/algorithm.cjs",
     "markdown": "./bin/markdown.cjs"
@@ -11,9 +10,10 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write --cache \"./src/**/*.ts\""
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint --fix \"src/**/*.ts\""
   },
+  "prettier": "@algorithm/prettier-config",
   "dependencies": {
     "axios": "^1.6.7",
     "cheerio": "^1.0.0-rc.12",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
+    "@algorithm/prettier-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/inquirer": "8.2.6",
     "@types/node": "catalog:",

@@ -1,22 +1,23 @@
 {
   "name": "@algorithm/lib",
-  "description": "문제 풀이를 위한 유틸리티 라이브러리",
   "version": "0.0.0",
   "private": true,
-  "license": "MIT",
+  "description": "문제 풀이를 위한 유틸리티 라이브러리",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write --cache \"./src/**/*.ts\"",
     "test": "jest",
     "test:watch": "jest --watch"
   },
+  "prettier": "@algorithm/prettier-config",
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
+    "@algorithm/prettier-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/jest": "catalog:jest",
     "@types/node": "catalog:",
