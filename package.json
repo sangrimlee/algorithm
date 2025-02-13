@@ -19,7 +19,6 @@
     "generate:page": "markdown -d solution/src -o website/src/app/solutions --format page",
     "generate:readme": "markdown -d solution/src -o solution",
     "lint": "turbo run lint",
-    "prepare": "husky install",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch"
   },
@@ -29,8 +28,6 @@
     "@algorithm/eslint-config": "workspace:*",
     "@algorithm/prettier-config": "workspace:*",
     "eslint": "catalog:",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
     "prettier": "catalog:",
     "turbo": "^2.4.2"
   },
