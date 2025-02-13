@@ -13,10 +13,12 @@
 
     /** Keep TSC performant in monorepos */
     "incremental": true,
+    "disableSourceOfProjectReferenceRedirect": true,
+    "tsBuildInfoFile": "${configDir}/tsbuildinfo.json",
 
     /** Strictness */
     "strict": true,
-    "noUncheckedIndexedAccess": true,
+    "strictNullChecks": true,
     "checkJs": true,
 
     /** Transpile using Bundler (not tsc) */
