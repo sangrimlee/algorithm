@@ -21,5 +21,11 @@ export default tseslint.config(
       },
       parserOptions: { projectService: true },
     },
+    settings: {
+      'import/resolver': {
+        node: true,
+        typescript: true,
+      },
+    },
   },
 );
