@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import path from 'node:path';
 
-import dotenv from 'dotenv';
+import * as path from 'node:path';
 
+import * as dotenv from 'dotenv';
 import { Command } from 'commander';
 
 import {
@@ -19,7 +19,11 @@ const program = new Command('Code template Generator for @algorithm');
 
 program.option('-d, --dir <dir>', 'Output directory', '.').parse();
 
-const options = program.opts();
+interface AlgorithmOptions {
+  dir: string;
+}
+
+const options = program.opts<AlgorithmOptions>();
 
 const outputDir = path.join(process.cwd(), options.dir);
 
@@ -28,18 +32,22 @@ async function main() {
   switch (generateType) {
     case 'LeetCode': {
       const id = await leetCodePrompt();
-      return await generateLeetCode(outputDir, id);
+      await generateLeetCode(outputDir, id);
+      return;
     }
     case 'LeetCode Template': {
       const id = await leetCodePrompt();
-      return await generateLeetCodeTemplate(outputDir, id);
+      await generateLeetCodeTemplate(outputDir, id);
+      return;
     }
     case 'LeetCode Daily Challenge': {
-      return await generateLeetCodeDailyChallenge(outputDir);
+      await generateLeetCodeDailyChallenge(outputDir);
+      return;
     }
     case 'Programmers': {
       const problemNumber = await programmersPrompt();
-      return await generateProgrammers(outputDir, problemNumber);
+      await generateProgrammers(outputDir, problemNumber);
+      return;
     }
     default: {
       throw new Error('🚧 Not Implemented. Work in progress.');
@@ -51,6 +59,6 @@ main()
   .then(() => {
     console.log("🚀  Finished! Let's Coding🔥🔥");
   })
-  .catch((error) => {
+  .catch((error: unknown) => {
     console.error(error);
   });

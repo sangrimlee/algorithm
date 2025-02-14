@@ -1,8 +1,8 @@
 import path from 'node:path';
 
 import { findFirstMatch } from '@/utils/regex';
-
-import { CodingSite, Solution, isCodingSite } from '@/types';
+import { CodingSite, isCodingSite } from '@/types';
+import type { Solution } from '@/types';
 
 const COMMENT_REGEX = /\/\*(\*(?!\/)|[^*])*\*\//;
 const URL_REGEX =
@@ -18,11 +18,11 @@ function parseSolutionFile(solutionFile: string) {
   return { url, title };
 }
 
-export async function parseSolution(
+export function parseSolution(
   solutionPath: string,
   solutionFile: string,
   outDir: string,
-): Promise<Solution> {
+): Solution {
   const fileName = path.basename(solutionPath);
   const code = solutionFile.replace(COMMENT_REGEX, '').trim();
   const { url, title } = parseSolutionFile(solutionFile);
@@ -35,7 +35,7 @@ export async function parseSolution(
     return { ...solution, codingSite };
   }
 
-  const matched = url.match(/([^/]+)\/?$/);
+  const matched = /([^/]+)\/?$/.exec(url);
   const slug = matched ? matched[1] : '';
   return {
     ...solution,

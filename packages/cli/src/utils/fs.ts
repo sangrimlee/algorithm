@@ -33,10 +33,10 @@ export function readFile(filePath: string) {
  * @param filePath 생성할 파일 경로
  * @param data 파일 데이터
  */
-export async function ensureWriteJson<O extends object>(filePath: string, object: O) {
+export async function ensureWriteJson(filePath: string, obj: object) {
   const dirPath = path.dirname(filePath);
   if (!existsSync(dirPath)) {
     await fs.mkdir(dirPath, { recursive: true });
   }
-  await fs.writeFile(filePath, JSON.stringify(object, null, 2), 'utf-8');
+  await fs.writeFile(filePath, JSON.stringify(obj, null, 2), 'utf-8');
 }

@@ -20,7 +20,14 @@ program
   .option('--force', 'Force generate page', false)
   .parse();
 
-const options = program.opts();
+interface MarkdownOptions {
+  dir: string;
+  outdir: string;
+  format: 'README' | 'PAGE';
+  force: boolean;
+}
+
+const options = program.opts<MarkdownOptions>();
 
 const solutionDir = path.join(process.cwd(), options.dir);
 const outDir = path.join(process.cwd(), options.outdir);
@@ -34,13 +41,13 @@ function main() {
     return generatePage(solutionDir, outDir, options.force);
   }
 
-  return Promise.reject('format should be PAGE or README.');
+  throw new Error('format should be PAGE or README.');
 }
 
 main()
   .then(() => {
     console.log('🚀 Finished!');
   })
-  .catch((error) => {
+  .catch((error: unknown) => {
     console.error(error);
   });

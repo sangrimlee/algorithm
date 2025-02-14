@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 
-import { TestCase } from '@/types';
+import type { TestCase } from '@/types';
 
 function getTestCases($: cheerio.CheerioAPI) {
   const testCases: TestCase[] = [];

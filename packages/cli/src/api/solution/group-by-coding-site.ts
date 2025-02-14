@@ -1,4 +1,4 @@
-import { CodingSite, Solution } from '@/types';
+import type { CodingSite, Solution } from '@/types';
 
 export function groupByCodingSite(solutions: Solution[]) {
   const groups = new Map<CodingSite, Solution[]>();

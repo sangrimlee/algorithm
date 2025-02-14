@@ -1,7 +1,7 @@
 import { dedent } from 'ts-dedent';
 
 function createPlainFrontMatter(key: string, value: string | number) {
-  return `${key}: ${value}`;
+  return `${key}: ${value.toString()}`;
 }
 
 function createArrayFrontMatter(key: string, values: (string | number)[]) {
@@ -10,7 +10,7 @@ function createArrayFrontMatter(key: string, values: (string | number)[]) {
   }
 
   return dedent`${key}:
-  ${values.map((value) => `- ${value}`).join('\n')}`;
+  ${values.map((value) => `- ${value.toString()}`).join('\n')}`;
 }
 
 export function createFrontMatterTemplate(

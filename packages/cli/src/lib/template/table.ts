@@ -19,7 +19,8 @@ type TableAlign = keyof typeof TABLE_ALIGN;
 
 function createTableAlignTemplate(aligns: TableAlign | TableAlign[]) {
   if (typeof aligns === 'string') {
-    return createTableRowTemplate(new Array(aligns.length).fill(TABLE_ALIGN[aligns]));
+    const cols = new Array<string>(aligns.length).fill(TABLE_ALIGN[aligns]);
+    return createTableRowTemplate(cols);
   }
   return createTableRowTemplate(aligns.map((align) => TABLE_ALIGN[align]));
 }

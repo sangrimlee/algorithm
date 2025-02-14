@@ -25,15 +25,15 @@ interface LeetCodeQuestion {
   title: string;
   titleSlug: string;
   content: string;
-  codeSnippets: Array<{
+  codeSnippets: {
     langSlug: string;
     code: string;
-  }>;
+  }[];
   difficulty: string;
-  topicTags: Array<{
+  topicTags: {
     name: string;
     slug: string;
-  }>;
+  }[];
 }
 
 interface LeetCodeQuestionResponse {
