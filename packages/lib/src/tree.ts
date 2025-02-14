@@ -2,10 +2,10 @@ export class TreeNode {
   val: number;
   left: TreeNode | null;
   right: TreeNode | null;
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.left = left === undefined ? null : left;
-    this.right = right === undefined ? null : right;
+  constructor(val = 0, left: TreeNode | null = null, right: TreeNode | null = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
   }
 }
 
@@ -18,7 +18,8 @@ export function createTree(arr: (number | null)[]) {
   const rootNode = new TreeNode(arr[0]);
   const queue = [rootNode];
   for (let i = 1; i < n; i += 2) {
-    const parentNode = queue.shift()!;
+    const parentNode = queue.shift();
+    if (parentNode === undefined) break;
     const [leftValue, rightValue] = [arr[i], arr[i + 1]];
     if (typeof leftValue === 'number') {
       const leftNode = new TreeNode(leftValue);
@@ -52,15 +53,15 @@ export function compareTree(node1: TreeNode | null, node2: TreeNode | null): boo
 export class NArrayTreeNode {
   val: number;
   children: NArrayTreeNode[];
-  constructor(val?: number) {
-    this.val = val === undefined ? 0 : val;
+  constructor(val = 0) {
+    this.val = val;
     this.children = [];
   }
 }
 
-export function createNArrayTree(tree: {
-  [key: number]: number[] | undefined;
-}): NArrayTreeNode | null {
+export function createNArrayTree(
+  tree: Record<number, number[] | undefined>,
+): NArrayTreeNode | null {
   if (!tree[1]) {
     return null;
   }

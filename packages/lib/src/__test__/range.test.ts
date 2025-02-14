@@ -21,5 +21,5 @@ test('range can not reach end', () => {
 });
 
 test('step is zero', () => {
-  expect(() => [...range(10, 20, 0)]).toThrowError();
+  expect(() => [...range(10, 20, 0)]).toThrow();
 });

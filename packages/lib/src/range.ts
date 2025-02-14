@@ -14,7 +14,7 @@ export function* range(start: number, end?: number, step = 1) {
     throw new Error('Value Error: range() arg 3 must not be zero');
   }
   let value = end === undefined ? 0 : start;
-  const endValue = end === undefined ? start : end;
+  const endValue = end ?? start;
 
   const outOfRange = (value: number) => {
     if (step < 0) {
