@@ -1,4 +1,4 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { CODING_SITE_URL } from '@/constants';
 import { CodingSite } from '@/types';

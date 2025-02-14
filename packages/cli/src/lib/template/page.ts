@@ -1,4 +1,4 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { createCodeBlockTemplate } from './code-block';
 import { LeetCodeSolution, ProgrammersSolution, Solution } from '@/types/types';

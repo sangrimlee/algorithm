@@ -1,4 +1,4 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { CodingSite, TestCase } from '@/types';
 

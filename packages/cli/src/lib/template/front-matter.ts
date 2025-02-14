@@ -1,4 +1,4 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 function createPlainFrontMatter(key: string, value: string | number) {
   return `${key}: ${value}`;
