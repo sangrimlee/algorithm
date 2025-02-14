@@ -3,10 +3,14 @@
   "version": "1.0.3",
   "private": true,
   "description": "Template generation cli",
+  "type": "module",
   "bin": {
-    "algorithm": "./bin/algorithm.cjs",
-    "markdown": "./bin/markdown.cjs"
+    "algorithm": "./dist/algorithm.js",
+    "markdown": "./dist/markdown.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
