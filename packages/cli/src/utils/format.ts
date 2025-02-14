@@ -1,10 +1,8 @@
-import prettier from 'prettier';
+import { format as prettier } from 'prettier';
+import type { Options } from 'prettier';
 
-export function format(
-  source: string,
-  parser: prettier.LiteralUnion<prettier.BuiltInParserName, string> | prettier.CustomParser,
-) {
-  return prettier.format(source, {
+export function format(source: string, parser: Options['parser']) {
+  return prettier(source, {
     printWidth: 100,
     semi: true,
     tabWidth: 2,
