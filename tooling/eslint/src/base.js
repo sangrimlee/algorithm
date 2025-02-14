@@ -31,6 +31,31 @@ export default tseslint.config(
       'import/default': 'off',
       'import/no-named-as-default-member': 'off',
       'import/no-unresolved': 'off',
+      /**
+       * 추가적인 규칙 추가
+       */
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/consistent-type-imports': [
+        'warn',
+        { prefer: 'type-imports', fixStyle: 'separate-type-imports' },
+      ],
+      '@typescript-eslint/no-misused-promises': [2, { checksVoidReturn: { attributes: false } }],
+      '@typescript-eslint/no-unnecessary-condition': [
+        'error',
+        {
+          allowConstantLoopConditions: true,
+        },
+      ],
+      '@typescript-eslint/no-non-null-assertion': 'error',
+      'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     },
   },
   {
