@@ -10,7 +10,8 @@
     "dev": "next dev --turbopack",
     "format": "prettier . --check --cache --ignore-path ../.gitignore",
     "lint": "eslint --cache",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

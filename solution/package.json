@@ -9,7 +9,8 @@
     "format": "prettier . --check --cache --ignore-path ../.gitignore",
     "lint": "eslint --cache",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit"
   },
   "prettier": "@algorithm/prettier-config",
   "dependencies": {

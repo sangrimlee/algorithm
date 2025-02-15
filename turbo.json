@@ -21,6 +21,10 @@
     },
     "test:watch": {
       "cache": false
+    },
+    "typecheck": {
+      "dependsOn": ["^build", "^typecheck"],
+      "cache": true
     }
   }
 }

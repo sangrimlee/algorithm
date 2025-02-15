@@ -15,7 +15,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "format": "prettier . --check --cache --ignore-path ../../.gitignore",
-    "lint": "eslint --cache"
+    "lint": "eslint --cache",
+    "typecheck": "tsc --noEmit"
   },
   "prettier": "@algorithm/prettier-config",
   "dependencies": {
