@@ -34,18 +34,12 @@
     "prettier": "catalog:",
     "turbo": "^2.4.2"
   },
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@9.15.5",
   "engines": {
     "node": ">=22"
   },
   "volta": {
     "node": "22.14.0",
-    "pnpm": "10.3.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
-    ]
+    "pnpm": "9.15.5"
   }
 }
