@@ -5,10 +5,11 @@
   "description": "Template generation cli",
   "type": "module",
   "bin": {
-    "algorithm": "./dist/algorithm.js",
-    "markdown": "./dist/markdown.js"
+    "algorithm": "./bin/algorithm.js",
+    "markdown": "./bin/markdown.js"
   },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
