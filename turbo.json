@@ -6,14 +6,20 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
+    "clean": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
+    },
     "dev": {
       "cache": false
     },
-    "lint": {
-      "dependsOn": ["^build", "^lint"],
+    "format": {
       "cache": true
     },
-    "format": {
+    "lint": {
+      "dependsOn": ["^build", "^lint"],
       "cache": true
     },
     "test": {
