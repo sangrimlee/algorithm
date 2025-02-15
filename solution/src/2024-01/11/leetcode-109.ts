@@ -1,4 +1,4 @@
-import type { ListNode} from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 import { TreeNode } from '@algorithm/lib';
 
 /**

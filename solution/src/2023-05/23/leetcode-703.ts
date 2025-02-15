@@ -11,7 +11,9 @@ export class KthLargest {
   constructor(k: number, nums: number[]) {
     this.k = k;
     this.heap = new Heap((a, b) => a - b);
-    nums.forEach((num) => { this.heap.push(num); });
+    nums.forEach((num) => {
+      this.heap.push(num);
+    });
     this.popUntilKth();
   }
 

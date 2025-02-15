@@ -6,7 +6,9 @@ import { Heap } from '@algorithm/lib';
  */
 export function newRecruits(ability: number[], n: number): number {
   const heap = new Heap<number>((a, b) => a - b);
-  ability.forEach((a) => { heap.push(a); });
+  ability.forEach((a) => {
+    heap.push(a);
+  });
 
   for (let i = 0; i < n; i++) {
     const sumAbility = (heap.pop() ?? 0) + (heap.pop() ?? 0);

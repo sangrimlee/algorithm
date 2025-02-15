@@ -21,7 +21,8 @@ export function nextPermutation(nums: number[]): void {
     start -= 1;
   }
   if (start === -1) {
-    reverse(); return;
+    reverse();
+    return;
   }
   let end = n - 1;
   while (nums[end] < nums[start]) {

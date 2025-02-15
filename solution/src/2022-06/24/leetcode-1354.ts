@@ -98,7 +98,9 @@ class Heap<T> {
 
 export function isPossible(target: number[]): boolean {
   const heap = new Heap<number>((a, b) => b - a);
-  target.forEach((value) => { heap.push(value); });
+  target.forEach((value) => {
+    heap.push(value);
+  });
 
   let totalValue = target.reduce((a, b) => a + b, 0);
 
