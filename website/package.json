@@ -8,7 +8,7 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "dev": "next dev --turbopack",
-    "format": "prettier --check . --ignore-path ../.gitignore",
+    "format": "prettier . --check --cache --ignore-path ../.gitignore",
     "lint": "eslint --cache",
     "start": "next start"
   },

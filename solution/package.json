@@ -6,7 +6,7 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "format": "prettier --check . --ignore-path ../.gitignore",
+    "format": "prettier . --check --cache --ignore-path ../.gitignore",
     "lint": "eslint --cache",
     "test": "jest",
     "test:watch": "jest --watch"

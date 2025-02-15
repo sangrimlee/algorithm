@@ -14,8 +14,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "format": "turbo run format -- --cache",
-    "format:fix": "turbo run format -- --write --cache",
+    "format": "turbo run format",
+    "format:fix": "turbo run format -- --write",
     "generate:code": "algorithm -d solution/src",
     "generate:page": "markdown -d solution/src -o website/src/app/solutions --format page",
     "generate:readme": "markdown -d solution/src -o solution",

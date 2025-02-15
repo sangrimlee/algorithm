@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./src/index.js",
   "scripts": {
-    "format": "prettier --check . --ignore-path ../../.gitignore"
+    "format": "prettier . --check --cache --ignore-path ../../.gitignore"
   },
   "prettier": "@algorithm/prettier-config",
   "dependencies": {

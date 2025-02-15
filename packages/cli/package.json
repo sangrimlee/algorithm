@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format": "prettier . --check --cache --ignore-path ../../.gitignore",
     "lint": "eslint --cache"
   },
   "prettier": "@algorithm/prettier-config",
