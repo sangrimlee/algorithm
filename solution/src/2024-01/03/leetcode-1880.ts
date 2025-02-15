@@ -4,7 +4,10 @@
  */
 export function isSumEqual(firstWord: string, secondWord: string, targetWord: string): boolean {
   function convert(word: string) {
-    const numericString = [...word].map((char) => char.charCodeAt(0) - 'a'.charCodeAt(0)).join('');
+    const numericString = word
+      .split('')
+      .map((char) => char.charCodeAt(0) - 'a'.charCodeAt(0))
+      .join('');
     return parseInt(numericString, 10);
   }
 

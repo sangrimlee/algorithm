@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 142. Linked List Cycle II
@@ -7,12 +7,12 @@ import { ListNode } from '@algorithm/lib';
 export function detectCycle(head: ListNode | null): ListNode | null {
   let slow = head;
   let fast = head;
-  while (slow && slow.next && fast && fast.next) {
+  while (slow?.next && fast?.next) {
     slow = slow.next;
     fast = fast.next.next;
     if (slow === fast) break;
   }
-  if (!(fast && fast.next)) {
+  if (!fast?.next) {
     return null;
   }
   let entry = head;

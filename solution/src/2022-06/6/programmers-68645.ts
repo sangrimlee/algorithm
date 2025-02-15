@@ -8,7 +8,7 @@ interface Position {
 }
 
 export function solution(n: number): number[] {
-  const result = Array.from({ length: n }).map((_, i) => new Array(i + 1).fill(0));
+  const result = Array.from({ length: n }).map((_, i) => new Array<number>(i + 1).fill(0));
 
   function nextPosition(position: Position, direction: number): Position {
     const dy = [1, 0, -1];

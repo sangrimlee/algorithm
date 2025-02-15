@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/only-throw-error */
+
 import { range } from '@algorithm/lib';
 
 /**
@@ -12,7 +14,7 @@ export function ricochetRobot(board: string[]): number {
     [1, 0],
     [-1, 0],
   ];
-  const visited = Array.from({ length: m }).map(() => new Array(n).fill(false));
+  const visited = Array.from({ length: m }).map(() => new Array<boolean>(n).fill(false));
 
   const isMovable = (y: number, x: number) =>
     0 <= y && y < m && 0 <= x && x < n && board[y][x] !== 'D';

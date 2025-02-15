@@ -23,7 +23,9 @@ export function maxProbability(
   const probs = new Array(n).fill(0);
   probs[start] = 1;
   while (!heap.isEmpty) {
-    const [prob, node] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [prob, node] = peek;
     if (node === end) {
       return prob;
     }

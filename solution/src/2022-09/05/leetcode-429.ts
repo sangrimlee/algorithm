@@ -1,4 +1,4 @@
-import { NArrayTreeNode } from '@algorithm/lib';
+import type { NArrayTreeNode } from '@algorithm/lib';
 
 /**
  * 429. N-ary Tree Level Order Traversal

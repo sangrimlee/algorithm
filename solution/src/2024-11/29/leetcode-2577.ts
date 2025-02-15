@@ -17,11 +17,13 @@ export function minimumTime(grid: number[][]): number {
     [-1, 0],
   ];
 
-  const visited: boolean[][] = Array.from({ length: m }, () => new Array(n).fill(false));
+  const visited: boolean[][] = Array.from({ length: m }, () => new Array<boolean>(n).fill(false));
   const heap = new Heap<number[]>((a, b) => a[0] - b[0]);
   heap.push([0, 0, 0]);
   while (!heap.isEmpty) {
-    const [time, y, x] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [time, y, x] = peek;
     if (y === m - 1 && x === n - 1) {
       return time;
     }

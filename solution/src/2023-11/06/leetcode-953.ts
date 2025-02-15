@@ -5,11 +5,14 @@
 export function isAlienSorted(words: string[], order: string): boolean {
   const aCode = 'a'.charCodeAt(0);
   const dict = Object.fromEntries(
-    [...order].map((alphabet, i) => [alphabet, String.fromCharCode(aCode + i)]),
+    order.split('').map((alphabet, i) => [alphabet, String.fromCharCode(aCode + i)]),
   );
 
   const translate = (word: string) => {
-    return [...word].map((char) => dict[char]).join('');
+    return word
+      .split('')
+      .map((char) => dict[char])
+      .join('');
   };
 
   const n = words.length;

@@ -1,11 +1,11 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 2326. Spiral Matrix IV
  * https://leetcode.com/problems/spiral-matrix-iv
  */
 export function spiralMatrix(m: number, n: number, head: ListNode | null): number[][] {
-  const answer: number[][] = Array.from({ length: m }, () => new Array(n).fill(-1));
+  const answer: number[][] = Array.from({ length: m }, () => new Array<number>(n).fill(-1));
   let currentNode = head;
   for (const [y, x] of sprial(m, n)) {
     if (currentNode === null) {
@@ -18,7 +18,7 @@ export function spiralMatrix(m: number, n: number, head: ListNode | null): numbe
 }
 
 function* sprial(m: number, n: number) {
-  const visited: boolean[][] = Array.from({ length: m }, () => new Array(n).fill(false));
+  const visited: boolean[][] = Array.from({ length: m }, () => new Array<boolean>(n).fill(false));
   const directions = [
     [0, 1],
     [1, 0],

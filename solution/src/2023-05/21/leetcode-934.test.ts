@@ -7,7 +7,7 @@ describe('2023-05-21: LeetCode 934', () => {
         [0, 1],
         [1, 0],
       ]),
-    ).toEqual(1);
+    ).toBe(1);
   });
   test('Example 2', () => {
     expect(
@@ -16,7 +16,7 @@ describe('2023-05-21: LeetCode 934', () => {
         [0, 0, 0],
         [0, 0, 1],
       ]),
-    ).toEqual(2);
+    ).toBe(2);
   });
   test('Example 3', () => {
     expect(
@@ -27,6 +27,6 @@ describe('2023-05-21: LeetCode 934', () => {
         [1, 0, 0, 0, 1],
         [1, 1, 1, 1, 1],
       ]),
-    ).toEqual(1);
+    ).toBe(1);
   });
 });

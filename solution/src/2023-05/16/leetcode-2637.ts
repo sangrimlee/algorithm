@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/prefer-promise-reject-errors -- 문제 조건이 string 형식의 `reject`를 하는 내용 */
+
 /**
  * 2637. Promise Time Limit
  * https://leetcode.com/problems/promise-time-limit

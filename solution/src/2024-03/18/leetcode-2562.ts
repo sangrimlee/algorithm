@@ -4,7 +4,7 @@
  */
 export function findTheArrayConcVal(nums: number[]): number {
   function concatenate(num1: number, num2: number) {
-    return parseInt(`${num1}${num2}`, 10);
+    return parseInt(`${num1.toString()}${num2.toString()}`, 10);
   }
 
   let answer = 0;

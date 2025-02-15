@@ -16,12 +16,15 @@ export function repeatLimitedString(s: string, repeatLimit: number): string {
 
   const answer: string[] = [];
   while (!heap.isEmpty) {
-    const [charCode, count] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [charCode, count] = peek;
     const char = String.fromCharCode(charCode);
     const usedCount = Math.min(count, repeatLimit);
     answer.push(char.repeat(usedCount));
-    if (usedCount < count && !heap.isEmpty) {
-      const [nextCharCode, nextCount] = heap.pop()!;
+    if (usedCount < count && heap.peek) {
+      const [nextCharCode, nextCount] = heap.peek;
+      heap.pop();
       answer.push(String.fromCharCode(nextCharCode));
       if (1 < nextCount) {
         heap.push([nextCharCode, nextCount - 1]);

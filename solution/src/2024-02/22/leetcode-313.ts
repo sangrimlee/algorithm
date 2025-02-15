@@ -4,8 +4,8 @@
  */
 export function nthSuperUglyNumber(n: number, primes: number[]): number {
   const m = primes.length;
-  const dp = new Array(n).fill(Number.MAX_SAFE_INTEGER);
-  const indices = new Array(m).fill(0);
+  const dp = new Array<number>(n).fill(Number.MAX_SAFE_INTEGER);
+  const indices = new Array<number>(m).fill(0);
   dp[0] = 1;
 
   for (let i = 1; i < n; i++) {

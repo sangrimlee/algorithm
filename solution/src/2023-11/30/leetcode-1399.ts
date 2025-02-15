@@ -4,7 +4,10 @@
  */
 export function countLargestGroup(n: number): number {
   const sumOfDigits = (n: number) => {
-    return [...n.toString()].reduce((sum, digit) => sum + +digit, 0);
+    return n
+      .toString()
+      .split('')
+      .reduce((sum, digit) => sum + +digit, 0);
   };
   const groups = new Map<number, number>();
   let largestGroupSize = 0;

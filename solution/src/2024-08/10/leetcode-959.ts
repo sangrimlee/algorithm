@@ -4,7 +4,7 @@
  */
 export function regionsBySlashes(grid: string[]): number {
   const n = grid.length;
-  const board: number[][] = Array.from({ length: 3 * n }, () => new Array(3 * n).fill(0));
+  const board: number[][] = Array.from({ length: 3 * n }, () => new Array<number>(3 * n).fill(0));
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < n; j++) {
       if (grid[i][j] === '/' || grid[i][j] === '\\') {

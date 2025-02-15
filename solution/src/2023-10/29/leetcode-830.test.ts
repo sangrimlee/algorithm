@@ -22,7 +22,7 @@ describe('2023-10-29: LeetCode 830', () => {
       [16, 19],
     ]);
   });
-  test('Example 2', () => {
+  test('Example 5', () => {
     expect(largeGroupPositions('aaa')).toEqual([[0, 2]]);
   });
 });

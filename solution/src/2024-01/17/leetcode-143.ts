@@ -1,11 +1,11 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 143. Reorder List
  * https://leetcode.com/problems/reorder-list
  */
 export function reorderList(head: ListNode | null): void {
-  if (head === null || head.next === null) {
+  if (!head?.next) {
     return;
   }
   let currentNode: ListNode | null = head;

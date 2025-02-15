@@ -4,7 +4,7 @@
  */
 export function minCostClimbingStairs(cost: number[]): number {
   const n = cost.length;
-  const dp = new Array(n).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(n).fill(Number.MAX_SAFE_INTEGER);
   dp[0] = cost[0];
   dp[1] = cost[1];
   for (let i = 2; i < n; i++) {

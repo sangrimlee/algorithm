@@ -6,8 +6,8 @@ describe('2023-05-13: LeetCode 2623', () => {
     const memoizedSum = memoize(sum);
     expect(memoizedSum(2, 2)).toBe(4);
     expect(memoizedSum(2, 2)).toBe(4);
-    expect(sum).toBeCalledTimes(1);
+    expect(sum).toHaveBeenCalledTimes(1);
     expect(memoizedSum(1, 2)).toBe(3);
-    expect(sum).toBeCalledTimes(2);
+    expect(sum).toHaveBeenCalledTimes(2);
   });
 });

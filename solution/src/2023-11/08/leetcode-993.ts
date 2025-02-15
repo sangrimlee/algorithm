@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 993. Cousins in Binary Tree
@@ -18,8 +18,12 @@ export function isCousins(root: TreeNode | null, x: number, y: number): boolean 
     if (node.val === x || node.val == y) {
       cousins[node.val] = { depth, parent: parentNode ? parentNode.val : -1 };
     }
-    node.left && dfs(node.left, node, depth + 1);
-    node.right && dfs(node.right, node, depth + 1);
+    if (node.left) {
+      dfs(node.left, node, depth + 1);
+    }
+    if (node.right) {
+      dfs(node.right, node, depth + 1);
+    }
   };
   dfs(root);
 

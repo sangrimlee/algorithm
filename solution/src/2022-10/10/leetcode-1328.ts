@@ -8,7 +8,7 @@ export function breakPalindrome(palindrome: string): string {
     return '';
   }
 
-  const arr = [...palindrome];
+  const arr = palindrome.split('');
   const i = arr.findIndex((c) => c !== 'a');
   const isMid = n % 2 === 1 && i === Math.floor(n / 2);
   if (i === -1 || isMid) {

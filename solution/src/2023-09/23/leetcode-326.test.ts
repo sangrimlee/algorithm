@@ -13,7 +13,7 @@ describe('2023-09-23: LeetCode 326', () => {
   test('Example 4', () => {
     expect(isPowerOfThree(59049)).toBe(true);
   });
-  test('Example 4', () => {
+  test('Example 5', () => {
     expect(isPowerOfThree(-59049)).toBe(false);
   });
 });

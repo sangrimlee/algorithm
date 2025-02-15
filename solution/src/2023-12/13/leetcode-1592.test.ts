@@ -7,7 +7,7 @@ describe('2023-12-13: LeetCode 1592', () => {
   test('Example 2', () => {
     expect(reorderSpaces(' practice   makes   perfect')).toBe('practice   makes   perfect ');
   });
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(reorderSpaces('  hello')).toBe('hello  ');
   });
 });

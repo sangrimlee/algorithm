@@ -4,7 +4,7 @@
  */
 export class RandomizedSet {
   private readonly map: Map<number, number>;
-  private readonly arr: Array<number>;
+  private readonly arr: number[];
 
   constructor() {
     this.map = new Map();

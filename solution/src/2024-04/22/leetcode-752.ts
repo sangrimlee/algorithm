@@ -8,7 +8,7 @@ export function openLock(deadends: string[], target: string): number {
       const index = Math.floor(i / 2);
       const diff = i % 2 === 0 ? -1 : 1;
       const nextDigit = (parseInt(code[index]) + diff + 10) % 10;
-      yield `${code.substring(0, index)}${nextDigit}${code.substring(index + 1)}`;
+      yield `${code.substring(0, index)}${nextDigit.toString()}${code.substring(index + 1)}`;
     }
   }
 

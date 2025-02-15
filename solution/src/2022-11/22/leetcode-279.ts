@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/perfect-squares/
  */
 export function numSquares(n: number): number {
-  const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(n + 1).fill(Number.MAX_SAFE_INTEGER);
   for (let i = 1; i <= Math.sqrt(n); i++) {
     dp[i ** 2] = 1;
   }

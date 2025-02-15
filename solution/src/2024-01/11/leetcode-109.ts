@@ -1,4 +1,5 @@
-import { ListNode, TreeNode } from '@algorithm/lib';
+import type { ListNode} from '@algorithm/lib';
+import { TreeNode } from '@algorithm/lib';
 
 /**
  * 109. Convert Sorted List to Binary Search Tree

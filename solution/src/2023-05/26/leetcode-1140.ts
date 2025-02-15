@@ -5,7 +5,7 @@
 export function stoneGameII(piles: number[]): number {
   const n = piles.length;
   const dp: number[][][] = Array.from({ length: 2 }).map(() =>
-    Array.from({ length: n + 1 }).map(() => new Array(n + 1).fill(-1)),
+    Array.from({ length: n + 1 }).map(() => new Array<number>(n + 1).fill(-1)),
   );
 
   const solve = (p = 0, i = 0, m = 1) => {

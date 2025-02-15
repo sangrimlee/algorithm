@@ -6,7 +6,7 @@ export function oddString(words: string[]): string {
   function getDifference(word: string): string {
     let difference = '';
     for (let i = 0; i < word.length - 1; i++) {
-      difference += `${word.charCodeAt(i + 1) - word.charCodeAt(i)}_`;
+      difference += `${(word.charCodeAt(i + 1) - word.charCodeAt(i)).toString()}_`;
     }
     return difference;
   }
@@ -17,7 +17,7 @@ export function oddString(words: string[]): string {
     if (!differences.has(difference)) {
       differences.set(difference, [word]);
     } else {
-      differences.get(difference)!.push(word);
+      differences.get(difference)?.push(word);
     }
   }
 

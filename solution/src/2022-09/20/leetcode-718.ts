@@ -4,7 +4,7 @@
  */
 export function findLength(nums1: number[], nums2: number[]): number {
   const [N, M] = [nums1.length, nums2.length];
-  const dp = new Array(N + 1).fill(undefined).map(() => new Array(M + 1).fill(0));
+  const dp = new Array(N + 1).fill(undefined).map(() => new Array<number>(M + 1).fill(0));
 
   for (let i = N - 1; 0 <= i; i--) {
     for (let j = M - 1; 0 <= j; j--) {

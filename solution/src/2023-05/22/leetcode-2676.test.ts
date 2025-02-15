@@ -12,7 +12,7 @@ describe('2023-05-22: LeetCode 2676', () => {
     throttled(1);
 
     jest.runAllTimers();
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 
   test('Example 2', () => {
@@ -26,11 +26,11 @@ describe('2023-05-22: LeetCode 2676', () => {
     /* 75 */
     jest.advanceTimersByTime(25);
     throttled(2);
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
 
     /* 100 */
     jest.runAllTimers();
-    expect(fn).toBeCalledTimes(2);
+    expect(fn).toHaveBeenCalledTimes(2);
   });
 
   test('Example 3', () => {
@@ -44,7 +44,7 @@ describe('2023-05-22: LeetCode 2676', () => {
     /* 75 */
     jest.advanceTimersByTime(25);
     throttled(2);
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
 
     /* 90 */
     jest.advanceTimersByTime(15);
@@ -52,7 +52,7 @@ describe('2023-05-22: LeetCode 2676', () => {
 
     /* 120 */
     jest.advanceTimersByTime(30);
-    expect(fn).toBeCalledTimes(2);
+    expect(fn).toHaveBeenCalledTimes(2);
 
     /* 140 */
     jest.advanceTimersByTime(20);
@@ -60,13 +60,13 @@ describe('2023-05-22: LeetCode 2676', () => {
 
     /* 190 */
     jest.advanceTimersByTime(50);
-    expect(fn).toBeCalledTimes(3);
+    expect(fn).toHaveBeenCalledTimes(3);
 
     /* 300 */
     jest.advanceTimersByTime(110);
     throttled(9, 4);
 
     jest.runAllTimers();
-    expect(fn).toBeCalledTimes(4);
+    expect(fn).toHaveBeenCalledTimes(4);
   });
 });

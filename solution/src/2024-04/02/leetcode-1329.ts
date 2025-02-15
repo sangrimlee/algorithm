@@ -19,7 +19,10 @@ export function diagonalSort(mat: number[][]): number[][] {
 
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
-      mat[i][j] = diagonals.get(i - j)!.pop()!;
+      const diagonal = diagonals.get(i - j)?.pop();
+      if (diagonal !== undefined) {
+        mat[i][j] = diagonal;
+      }
     }
   }
   return mat;

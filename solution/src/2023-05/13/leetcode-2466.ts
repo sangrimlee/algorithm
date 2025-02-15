@@ -6,7 +6,7 @@ import { range } from '@algorithm/lib';
  */
 export function countGoodStrings(low: number, high: number, zero: number, one: number): number {
   const MOD = 10 ** 9 + 7;
-  const dp = new Array(high + 1).fill(0);
+  const dp = new Array<number>(high + 1).fill(0);
   dp[0] = 1;
 
   let answer = 0;

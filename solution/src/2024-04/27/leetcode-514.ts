@@ -5,9 +5,9 @@
 export function findRotateSteps(ring: string, key: string): number {
   const [m, n] = [ring.length, key.length];
 
-  let prev = new Array(m).fill(0);
+  let prev = new Array<number>(m).fill(0);
   for (let j = n - 1; 0 <= j; j--) {
-    const curr = new Array(m).fill(Number.MAX_SAFE_INTEGER);
+    const curr = new Array<number>(m).fill(Number.MAX_SAFE_INTEGER);
     for (let i = 0; i < m; i++) {
       for (let k = 0; k < m; k++) {
         if (ring[k] === key[j]) {

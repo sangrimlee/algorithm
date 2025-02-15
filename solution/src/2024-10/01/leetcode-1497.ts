@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k
  */
 export function canArrange(arr: number[], k: number): boolean {
-  const counter = new Array(k).fill(0);
+  const counter = new Array<number>(k).fill(0);
   for (const num of arr) {
     const remainder = ((num % k) + k) % k;
     counter[remainder] += 1;

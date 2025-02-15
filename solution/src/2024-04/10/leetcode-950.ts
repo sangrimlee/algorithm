@@ -7,7 +7,10 @@ export function deckRevealedIncreasing(deck: number[]): number[] {
   const queue: number[] = [];
   deck.forEach((card) => {
     if (0 < queue.length) {
-      queue.push(queue.shift()!);
+      const value = queue.shift();
+      if (value !== undefined) {
+        queue.push(value);
+      }
     }
     queue.push(card);
   });

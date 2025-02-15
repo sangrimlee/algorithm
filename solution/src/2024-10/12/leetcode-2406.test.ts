@@ -22,7 +22,7 @@ describe('2024-10-12: LeetCode 2406', () => {
       ]),
     ).toBe(1);
   });
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(minGroups([[1, 1]])).toBe(1);
   });
 });

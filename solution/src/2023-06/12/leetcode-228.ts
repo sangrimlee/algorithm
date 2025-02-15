@@ -9,7 +9,7 @@ export function summaryRanges(nums: number[]): string[] {
 
   const answer = [];
   const createRange = (start: number, end: number) => {
-    return start === end - 1 ? `${start}` : `${start}->${end - 1}`;
+    return start === end - 1 ? start.toString() : `${start.toString()}->${(end - 1).toString()}`;
   };
 
   let [start, end] = [nums[0], nums[0]];

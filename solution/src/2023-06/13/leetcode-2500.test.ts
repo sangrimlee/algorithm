@@ -7,9 +7,9 @@ describe('2023-06-13: LeetCode 2500', () => {
         [1, 2, 4],
         [3, 3, 1],
       ]),
-    ).toEqual(8);
+    ).toBe(8);
   });
   test('Example 2', () => {
-    expect(deleteGreatestValue([[10]])).toEqual(10);
+    expect(deleteGreatestValue([[10]])).toBe(10);
   });
 });

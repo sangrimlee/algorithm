@@ -17,7 +17,7 @@ class Node<T> {
 }
 
 export class Deque<T> {
-  private size: number = 0;
+  private size = 0;
   private firstNode: Node<T> | null = null;
   private lastNode: Node<T> | null = null;
 
@@ -99,7 +99,10 @@ export class Deque<T> {
     if (this.size === 0) {
       return;
     }
-    this.pushLeft(this.pop()!);
+    const last = this.pop();
+    if (last !== undefined) {
+      this.pushLeft(last);
+    }
   }
 
   *[Symbol.iterator]() {
@@ -130,10 +133,23 @@ export function matrixAndOpertaion(rc: number[][], operations: Operation[]): num
   };
 
   const rotate = () => {
-    mid.first!.pushLeft(left.popLeft()!);
-    right.pushLeft(mid.first!.pop()!);
-    mid.last!.push(right.pop()!);
-    left.push(mid.last!.popLeft()!);
+    const leftValue = left.popLeft();
+    if (mid.first && leftValue !== undefined) {
+      mid.first.pushLeft(leftValue);
+      const lastValue = mid.first.pop();
+      if (lastValue !== undefined) {
+        right.pushLeft(lastValue);
+      }
+    }
+
+    const rightValue = right.pop();
+    if (mid.last && rightValue !== undefined) {
+      mid.last.push(rightValue);
+      const firstValue = mid.last.popLeft();
+      if (firstValue !== undefined) {
+        left.push(firstValue);
+      }
+    }
   };
 
   operations.forEach((op) => {
@@ -146,7 +162,12 @@ export function matrixAndOpertaion(rc: number[][], operations: Operation[]): num
 
   const answer: number[][] = [];
   for (let i = 0; i < m; i++) {
-    answer.push([left.popLeft()!, ...mid.popLeft()!, right.popLeft()!]);
+    const leftValue = left.popLeft();
+    const midValue = mid.popLeft();
+    const rightValue = right.popLeft();
+    if (leftValue !== undefined && midValue !== undefined && rightValue !== undefined) {
+      answer.push([leftValue, ...midValue, rightValue]);
+    }
   }
 
   return answer;

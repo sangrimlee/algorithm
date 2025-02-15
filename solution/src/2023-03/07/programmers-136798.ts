@@ -20,5 +20,9 @@ export function knightlyWeapon(number: number, limit: number, power: number) {
     return divisorCount <= limit ? divisorCount : power;
   };
 
-  return new Array(number).fill(undefined).reduce((prev, _, i) => prev + getPower(i + 1), 0);
+  let answer = 0;
+  for (let i = 0; i < number; i++) {
+    answer += getPower(i + 1);
+  }
+  return answer;
 }

@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2471. Minimum Number of Operations to Sort a Binary Tree by Level
@@ -38,7 +38,7 @@ function getMinSwap(original: number[]) {
     if (original[from] === target[from]) {
       continue;
     }
-    const to = indices.get(target[from])!;
+    const to = indices.get(target[from]) ?? 0;
     indices.set(original[from], to);
     [original[from], original[to]] = [original[to], original[from]];
     swap += 1;

@@ -34,9 +34,10 @@ export function exist(board: string[][], word: string): boolean {
   for (let y = 0; y < n; y++) {
     for (let x = 0; x < m; x++) {
       if (board[y][x] === word[0]) {
-        const visited: boolean[][] = new Array(n)
-          .fill(undefined)
-          .map(() => new Array(m).fill(false));
+        const visited: boolean[][] = Array.from({ length: n }, () =>
+          new Array<boolean>(m).fill(false),
+        );
+
         visited[y][x] = true;
         if (dfs(y, x, 0, visited)) {
           return true;

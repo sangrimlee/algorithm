@@ -15,7 +15,7 @@ export function removeDuplicates(nums: number[]): number {
 
 function* range(start: number, end?: number) {
   let value = end === undefined ? 0 : start;
-  const endValue = end === undefined ? start : end;
+  const endValue = end ?? start;
   while (value < endValue) {
     yield value++;
   }

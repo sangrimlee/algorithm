@@ -6,7 +6,7 @@ export function shortestPalindrome(s: string): string {
   if (s.length === 0) {
     return s;
   }
-  const modified = `^#${[...s].join('#')}#$`;
+  const modified = `^#${s.split('').join('#')}#$`;
   const n = modified.length;
   const radius = new Array<number>(n).fill(0);
 
@@ -38,5 +38,5 @@ export function shortestPalindrome(s: string): string {
 }
 
 function toReversed(str: string): string {
-  return [...str].reverse().join('');
+  return str.split('').reverse().join('');
 }

@@ -17,8 +17,8 @@ export function closeStrings(word1: string, word2: string): boolean {
   const counter2 = new Map<string, number>();
 
   for (let i = 0; i < word1.length; i++) {
-    counter1.set(word1[i], (counter1.get(word1[i]) || 0) + 1);
-    counter2.set(word2[i], (counter2.get(word2[i]) || 0) + 1);
+    counter1.set(word1[i], (counter1.get(word1[i]) ?? 0) + 1);
+    counter2.set(word2[i], (counter2.get(word2[i]) ?? 0) + 1);
   }
 
   const count1 = Array.from(counter1.values()).sort((a, b) => a - b);
@@ -27,7 +27,7 @@ export function closeStrings(word1: string, word2: string): boolean {
   return shallowCompare(count1, count2);
 }
 
-function shallowCompare<T>(arr1: Array<T>, arr2: Array<T>) {
+function shallowCompare<T>(arr1: T[], arr2: T[]) {
   if (arr1.length !== arr2.length) {
     return false;
   }

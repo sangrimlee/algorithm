@@ -89,14 +89,14 @@ export class AllOne {
     if (!this.tail.prev || this.tail.prev === this.head) {
       return '';
     }
-    return this.tail.prev.keys.values().next().value;
+    return this.tail.prev.keys.values().next().value ?? '';
   }
 
   getMinKey(): string {
     if (!this.head.next || this.head.next === this.tail) {
       return '';
     }
-    return this.head.next.keys.values().next().value;
+    return this.head.next.keys.values().next().value ?? '';
   }
 
   removeNode(node: Node): void {

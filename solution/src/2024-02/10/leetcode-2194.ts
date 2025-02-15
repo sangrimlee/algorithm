@@ -4,7 +4,7 @@
  */
 export function cellsInRange(s: string): string[] {
   function parse(s: string) {
-    const [r, c] = [...s];
+    const [r, c] = s;
     return [r.charCodeAt(0), parseInt(c, 10)];
   }
 
@@ -15,7 +15,7 @@ export function cellsInRange(s: string): string[] {
   const answer: string[] = [];
   for (let r = r1; r <= r2; r++) {
     for (let c = c1; c <= c2; c++) {
-      answer.push(`${String.fromCharCode(r)}${c}`);
+      answer.push(`${String.fromCharCode(r)}${c.toString()}`);
     }
   }
   return answer;

@@ -11,13 +11,15 @@ export function minimumObstacles(grid: number[][]): number {
     [-1, 0],
   ];
   const minObstacles: number[][] = Array.from({ length: m }, () =>
-    new Array(n).fill(Number.MAX_SAFE_INTEGER),
+    new Array<number>(n).fill(Number.MAX_SAFE_INTEGER),
   );
   minObstacles[0][0] = 0;
 
   const deque = new Deque([[0, 0, 0]]);
   while (0 < deque.length) {
-    const [y, x, obstacles] = deque.popLeft()!;
+    const first = deque.popLeft();
+    if (first === undefined) break;
+    const [y, x, obstacles] = first;
     for (const [dy, dx] of directions) {
       const [ny, nx] = [y + dy, x + dx];
       if (isValid(m, n, ny, nx) && minObstacles[ny][nx] === Number.MAX_SAFE_INTEGER) {
@@ -53,7 +55,7 @@ class DequeNode<T> {
 class Deque<T> {
   private head: DequeNode<T> | null = null;
   private tail: DequeNode<T> | null = null;
-  private size: number = 0;
+  private size = 0;
   constructor(values: T[] = []) {
     values.forEach((value) => {
       this.push(value);
@@ -75,7 +77,9 @@ class Deque<T> {
       this.tail = newNode;
     } else {
       newNode.next = this.head;
-      this.head!.prev = newNode;
+      if (this.head) {
+        this.head.prev = newNode;
+      }
       this.head = newNode;
     }
     this.size += 1;
@@ -87,7 +91,9 @@ class Deque<T> {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      this.tail!.next = newNode;
+      if (this.tail) {
+        this.tail.next = newNode;
+      }
       newNode.prev = this.tail;
       this.tail = newNode;
     }
@@ -95,11 +101,11 @@ class Deque<T> {
   }
 
   popLeft(): T | undefined {
-    if (this.isEmpty()) {
+    if (this.isEmpty() || !this.head) {
       return undefined;
     }
-    const removedNode = this.head!;
-    this.head = this.head!.next;
+    const removedNode = this.head;
+    this.head = this.head.next;
     if (this.head) {
       this.head.prev = null;
     } else {
@@ -110,11 +116,11 @@ class Deque<T> {
   }
 
   pop() {
-    if (this.isEmpty()) {
+    if (this.isEmpty() || !this.tail) {
       return undefined;
     }
-    const removedNode = this.tail!;
-    this.tail = this.tail!.prev;
+    const removedNode = this.tail;
+    this.tail = this.tail.prev;
     if (this.tail) {
       this.tail.next = null;
     } else {

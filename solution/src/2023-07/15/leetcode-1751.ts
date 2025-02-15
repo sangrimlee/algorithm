@@ -22,7 +22,7 @@ export function maxValue(events: number[][], k: number): number {
   };
 
   const n = events.length;
-  const dp = Array.from({ length: k + 1 }).map(() => new Array(n).fill(-1));
+  const dp = Array.from({ length: k + 1 }).map(() => new Array<number>(n).fill(-1));
   const nextEventIndicies = events.map(([, endDay]) => findNearestEvent(endDay));
 
   const dfs = (currentIndex: number, remainCount: number) => {

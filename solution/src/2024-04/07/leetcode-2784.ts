@@ -4,7 +4,7 @@
  */
 export function isGood(nums: number[]): boolean {
   const n = nums.length - 1;
-  const counts = new Array(n).fill(0);
+  const counts = new Array<number>(n).fill(0);
 
   for (const num of nums) {
     if (n < num) {

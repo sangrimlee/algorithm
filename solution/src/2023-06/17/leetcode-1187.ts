@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/make-array-strictly-increasing
  */
 export function makeArrayIncreasing(arr1: number[], arr2: number[]): number {
-  const dp: Record<string, number> = {};
+  const dp = new Map<string, number>();
   arr2.sort((a, b) => a - b);
 
   const upperBound = (arr: number[], target: number) => {
@@ -23,9 +23,10 @@ export function makeArrayIncreasing(arr1: number[], arr2: number[]): number {
     if (i === arr1.length) {
       return 0;
     }
-    const dpKey = `${i}_${prev}`;
-    if (dp[dpKey] !== undefined) {
-      return dp[dpKey];
+    const dpKey = `${i.toString()}_${prev.toString()}`;
+    const dpValue = dp.get(dpKey);
+    if (dpValue !== undefined) {
+      return dpValue;
     }
     let cost = Number.MAX_SAFE_INTEGER;
 
@@ -38,7 +39,7 @@ export function makeArrayIncreasing(arr1: number[], arr2: number[]): number {
       cost = Math.min(cost, 1 + dfs(i + 1, arr2[prevIndex]));
     }
 
-    dp[dpKey] = cost;
+    dp.set(dpKey, cost);
     return cost;
   };
 

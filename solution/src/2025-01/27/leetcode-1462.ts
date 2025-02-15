@@ -8,7 +8,7 @@ export function checkIfPrerequisite(
   queries: number[][],
 ): boolean[] {
   const graph: number[][] = Array.from({ length: numCourses }, () => []);
-  const inDegrees: number[] = new Array(numCourses).fill(0);
+  const inDegrees: number[] = new Array<number>(numCourses).fill(0);
   for (const [a, b] of prerequisites) {
     inDegrees[b] += 1;
     graph[a].push(b);

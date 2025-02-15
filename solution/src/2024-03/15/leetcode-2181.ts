@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 2181. Merge Nodes in Between Zeros

@@ -6,7 +6,7 @@ export function construct2DArray(original: number[], m: number, n: number): numb
   if (original.length !== m * n) {
     return [];
   }
-  const answer = Array.from({ length: m }).map(() => new Array(n).fill(0));
+  const answer = Array.from({ length: m }).map(() => new Array<number>(n).fill(0));
   original.forEach((num, i) => {
     answer[Math.floor(i / n)][i % n] = num;
   });

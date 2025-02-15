@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2641. Cousins in Binary Tree II
@@ -14,9 +14,9 @@ export function replaceValueInTree(root: TreeNode | null): TreeNode | null {
   while (0 < queue.length) {
     const levelSize = queue.length;
     let currLevelSum = 0;
-
     for (let i = 0; i < levelSize; i++) {
-      const node = queue.shift()!;
+      const node = queue.shift();
+      if (node === undefined) break;
       node.val = prevLevelSum - node.val;
       const siblingSum = (node.left?.val ?? 0) + (node.right?.val ?? 0);
       if (node.left) {

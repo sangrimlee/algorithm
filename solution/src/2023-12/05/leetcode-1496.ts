@@ -18,11 +18,15 @@ export function isPathCrossing(path: string): boolean {
     }
   };
 
+  const getKey = (...values: number[]) => {
+    return values.toString();
+  };
+
   let [cy, cx] = [0, 0];
-  const visited = new Set([`${cy},${cx}`]);
+  const visited = new Set([getKey(cy, cx)]);
   for (const direction of path) {
     const [ny, nx] = move(cy, cx, direction);
-    const keyOfPos = `${ny},${nx}`;
+    const keyOfPos = getKey(ny, nx);
     if (visited.has(keyOfPos)) {
       return true;
     }

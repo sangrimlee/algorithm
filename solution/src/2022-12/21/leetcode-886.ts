@@ -5,8 +5,8 @@ import { range } from '@algorithm/lib';
  * https://leetcode.com/problems/possible-bipartition
  */
 export function possibleBipartition(n: number, dislikes: number[][]): boolean {
-  const colors: number[] = new Array(n + 1).fill(0); // 0: None, 1 or -1
-  const graph: number[][] = new Array(n + 1).fill(undefined).map(() => []);
+  const colors: number[] = new Array<number>(n + 1).fill(0); // 0: None, 1 or -1
+  const graph: number[][] = Array.from({ length: n + 1 }, () => []);
 
   for (const [a, b] of dislikes) {
     graph[a].push(b);

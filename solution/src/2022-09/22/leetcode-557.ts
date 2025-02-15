@@ -5,6 +5,6 @@
 export function reverseWords(s: string): string {
   const BLANK = '';
   const SPACE = ' ';
-  const reverseWord = (word: string) => [...word].reverse().join(BLANK);
+  const reverseWord = (word: string) => word.split('').reverse().join(BLANK);
   return s.split(SPACE).map(reverseWord).join(SPACE);
 }

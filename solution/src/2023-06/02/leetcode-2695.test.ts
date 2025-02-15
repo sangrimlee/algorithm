@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable */
 import { ArrayWrapper } from './leetcode-2695';
 
 describe('2023-06-02: LeetCode 2695', () => {

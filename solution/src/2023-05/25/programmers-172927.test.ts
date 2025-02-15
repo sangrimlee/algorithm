@@ -7,7 +7,7 @@ describe('2023-05-25: Programmers 172927', () => {
         [1, 3, 2],
         ['diamond', 'diamond', 'diamond', 'iron', 'iron', 'diamond', 'iron', 'stone'],
       ),
-    ).toEqual(12);
+    ).toBe(12);
   });
   test('Example 2', () => {
     expect(
@@ -27,6 +27,6 @@ describe('2023-05-25: Programmers 172927', () => {
           'diamond',
         ],
       ),
-    ).toEqual(50);
+    ).toBe(50);
   });
 });

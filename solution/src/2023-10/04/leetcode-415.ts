@@ -11,9 +11,9 @@ export function addStrings(num1: string, num2: string): string {
   let carry = 0;
   for (let i = maxLength - 1; 0 <= i; i--) {
     const sum = parseInt(numString1[i], 10) + parseInt(numString2[i], 10) + carry;
-    answer = (sum % 10) + answer;
+    answer = `${(sum % 10).toString()}${answer}`;
     carry = Math.floor(sum / 10);
   }
 
-  return carry === 0 ? answer : carry + answer;
+  return carry === 0 ? answer : `${carry.toString()}${answer}`;
 }

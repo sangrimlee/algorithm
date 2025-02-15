@@ -8,7 +8,7 @@ export function countUnguarded(
   guards: number[][],
   walls: number[][],
 ): number {
-  const grid = Array.from({ length: m }, () => new Array(n).fill(0));
+  const grid = Array.from({ length: m }, () => new Array<number>(n).fill(0));
   const directions = [
     [0, 1],
     [0, -1],

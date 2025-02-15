@@ -18,7 +18,9 @@ export function secondMinimum(n: number, edges: number[][], time: number, change
   const visited = new Set();
 
   while (!heap.isEmpty) {
-    const [city, currentTime] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [city, currentTime] = peek;
     if (city === n && minTime[city] < currentTime) {
       return currentTime;
     }

@@ -9,7 +9,7 @@ export function deleteGreatestValue(grid: number[][]): number {
   while (0 < grid[0].length) {
     let maxValue = 0;
     grid.forEach((row) => {
-      maxValue = Math.max(row.pop() || 0, maxValue);
+      maxValue = Math.max(row.pop() ?? 0, maxValue);
     });
     answer += maxValue;
   }

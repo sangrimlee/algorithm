@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes
  */
 export function findSmallestSetOfVertices(n: number, edges: number[][]): number[] {
-  const indegrees = new Array(n).fill(0);
+  const indegrees = new Array<number>(n).fill(0);
 
   for (const [, to] of edges) {
     indegrees[to] += 1;

@@ -37,7 +37,7 @@ describe('2024-11-22: LeetCode 1072', () => {
       ]),
     ).toBe(2);
   });
-  test('Example 4', () => {
+  test('Example 5', () => {
     expect(maxEqualRowsAfterFlips([[0], [1], [0], [0], [1], [1], [1], [1], [0], [1]])).toBe(10);
   });
 });

@@ -25,9 +25,9 @@ export function calculate(s: string): number {
       } else if (sign === '-') {
         stack.push(-num);
       } else if (sign === '*') {
-        stack.push(stack.pop()! * num);
+        stack.push((stack.pop() ?? 0) * num);
       } else {
-        stack.push(Math.trunc(stack.pop()! / num));
+        stack.push(Math.trunc((stack.pop() ?? 0) / num));
       }
       num = 0;
       sign = char;

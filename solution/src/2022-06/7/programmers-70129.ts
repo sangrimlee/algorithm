@@ -14,7 +14,7 @@ export function solution(s: string): [number, number] {
     const zeroCount = s.match(/0/g)?.length ?? 0;
     removeCount += 1;
     removeZeroCount += zeroCount;
-    return removeZero((s.length - zeroCount).toString(2));
+    removeZero((s.length - zeroCount).toString(2));
   }
 
   removeZero(s);

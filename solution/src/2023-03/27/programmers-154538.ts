@@ -5,10 +5,10 @@ import { range } from '@algorithm/lib';
  * https://school.programmers.co.kr/learn/courses/30/lessons/154538
  */
 export function convertNumbers(x: number, y: number, n: number) {
-  const dp = new Array(y + 1).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(y + 1).fill(Number.MAX_SAFE_INTEGER);
   dp[x] = 0;
 
-  const nextValueFns: Array<(i: number) => number> = [(i) => i + n, (i) => i * 2, (i) => i * 3];
+  const nextValueFns: ((i: number) => number)[] = [(i) => i + n, (i) => i * 2, (i) => i * 3];
 
   for (const i of range(x, y)) {
     for (const nextValueFn of nextValueFns) {

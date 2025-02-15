@@ -3,7 +3,7 @@ import { debounce } from './leetcode-2627';
 jest.useFakeTimers();
 
 describe('2023-05-19: LeetCode 2627', () => {
-  it('execute once', () => {
+  test('Example 1', () => {
     const fn = jest.fn();
     const debouncedFn = debounce(fn, 100);
 
@@ -13,10 +13,10 @@ describe('2023-05-19: LeetCode 2627', () => {
 
     jest.runAllTimers();
 
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 
-  it('execute once', () => {
+  test('Example 2', () => {
     const fn = jest.fn();
     const debouncedFn = debounce(fn, 100);
 
@@ -26,6 +26,6 @@ describe('2023-05-19: LeetCode 2627', () => {
     debouncedFn();
     jest.runAllTimers();
 
-    expect(fn).toBeCalledTimes(1);
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 });

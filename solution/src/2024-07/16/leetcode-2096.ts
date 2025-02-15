@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2096. Step-By-Step Directions From a Binary Tree Node to Another
@@ -27,7 +27,7 @@ function getLCA(node: TreeNode | null, startValue: number, destValue: number): T
   if (leftNode && rightNode) {
     return node;
   }
-  return leftNode ? leftNode : rightNode;
+  return leftNode ?? rightNode;
 }
 
 function getPath(node: TreeNode | null, value: number, paths: string[]): string {

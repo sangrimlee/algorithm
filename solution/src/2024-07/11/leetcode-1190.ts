@@ -8,7 +8,7 @@ export function reverseParentheses(s: string): string {
     if (char === '(') {
       stack.push('');
     } else if (char === ')') {
-      const prev = stack.pop()!;
+      const prev = stack.pop() ?? '';
       stack[stack.length - 1] += reverseString(prev);
     } else {
       stack[stack.length - 1] += char;
@@ -19,5 +19,5 @@ export function reverseParentheses(s: string): string {
 }
 
 function reverseString(s: string) {
-  return [...s].reverse().join('');
+  return s.split('').reverse().join('');
 }

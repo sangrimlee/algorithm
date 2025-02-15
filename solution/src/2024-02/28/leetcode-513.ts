@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 513. Find Bottom Left Tree Value
@@ -12,7 +12,8 @@ export function findBottomLeftValue(root: TreeNode | null): number {
   let answer = root.val;
   const queue: TreeNode[] = [root];
   while (0 < queue.length) {
-    const node = queue.shift()!;
+    const node = queue.shift();
+    if (node === undefined) break;
     answer = node.val;
     if (node.right) {
       queue.push(node.right);

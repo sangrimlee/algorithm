@@ -6,12 +6,12 @@ expect.extend({
     if (sum === 0) {
       return {
         pass: true,
-        message: () => `Expected ${received} to be sum zero.`,
+        message: () => `Expected ${received.toString()} to be sum zero.`,
       };
     }
     return {
       pass: false,
-      message: () => `Expected ${received} to be sum zero.`,
+      message: () => `Expected ${received.toString()} to be sum zero.`,
     };
   },
 });

@@ -13,7 +13,7 @@ describe('2022-06-20: LeetCode 820', () => {
     expect(minimumLengthEncoding(['time', 'time', 'time', 'time', 'time', 'time'])).toBe(5);
   });
 
-  test('Example 3', () => {
+  test('Example 4', () => {
     expect(minimumLengthEncoding(['leetcode', 'mycode', 'code'])).toBe(16);
   });
 });

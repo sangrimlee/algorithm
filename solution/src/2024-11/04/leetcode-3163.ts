@@ -10,10 +10,10 @@ export function compressedString(word: string): string {
     if (prev === char && prevCount < 9) {
       prevCount += 1;
     } else {
-      answer += `${prevCount}${prev}`;
+      answer += `${prevCount.toString()}${prev}`;
       [prev, prevCount] = [char, 1];
     }
   }
-  answer += `${prevCount}${prev}`;
+  answer += `${prevCount.toString()}${prev}`;
   return answer;
 }

@@ -15,7 +15,7 @@ export function studyCodingTest(alp: number, cop: number, problems: number[][]):
   }
 
   const dp = Array.from({ length: maxAlp + 1 }).map(() =>
-    new Array(maxCop + 1).fill(Number.MAX_SAFE_INTEGER),
+    new Array<number>(maxCop + 1).fill(Number.MAX_SAFE_INTEGER),
   );
   dp[alp][cop] = 0;
   problems.push([0, 0, 1, 0, 1], [0, 0, 0, 1, 1]);

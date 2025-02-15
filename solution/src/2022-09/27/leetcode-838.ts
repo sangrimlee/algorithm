@@ -5,7 +5,7 @@
 export function pushDominoes(dominoes: string): string {
   const N = dominoes.length;
   const arr = dominoes.split('');
-  const forces: number[] = new Array(N).fill(0);
+  const forces = new Array<number>(N).fill(0);
 
   arr.reduce((force, domino, i) => {
     let nextForce: number;

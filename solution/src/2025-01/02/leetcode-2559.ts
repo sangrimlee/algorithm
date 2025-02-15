@@ -8,7 +8,7 @@ export function vowelStrings(words: string[], queries: number[][]): number[] {
     return vowels.has(word[0]) && vowels.has(word[word.length - 1]);
   };
 
-  const prefixSum = new Array(words.length + 1).fill(0);
+  const prefixSum = new Array<number>(words.length + 1).fill(0);
   words.forEach((word, i) => {
     prefixSum[i + 1] = prefixSum[i] + (isVowelString(word) ? 1 : 0);
   });

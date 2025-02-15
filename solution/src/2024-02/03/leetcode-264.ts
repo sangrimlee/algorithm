@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/ugly-number-ii
  */
 export function nthUglyNumber(n: number): number {
-  const dp = new Array(n).fill(0);
+  const dp = new Array<number>(n).fill(0);
   dp[0] = 1;
 
   let [x, y, z] = [0, 0, 0];

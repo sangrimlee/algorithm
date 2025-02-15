@@ -17,7 +17,7 @@ export function maxPoints(points: number[][]): number {
     for (const j of range(n)) {
       if (i !== j) {
         const gradient = Math.atan2(points[j][1] - points[i][1], points[j][0] - points[i][0]);
-        gradientCounts.set(gradient, (gradientCounts.get(gradient) || 0) + 1);
+        gradientCounts.set(gradient, (gradientCounts.get(gradient) ?? 0) + 1);
       }
     }
     const maxGradientCount = Math.max(...gradientCounts.values());

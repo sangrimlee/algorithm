@@ -4,7 +4,7 @@
  */
 export function minPathSum(grid: number[][]): number {
   const [N, M] = [grid.length, grid[0].length];
-  const memo: number[][] = new Array(N).fill(undefined).map(() => new Array(M).fill(-1));
+  const memo: number[][] = Array.from({ length: N }, () => new Array<number>(M).fill(-1));
 
   const dp = (y: number, x: number) => {
     if (y === 0 && x === 0) {

@@ -11,7 +11,7 @@ export function furthestBuilding(heights: number[], bricks: number, ladders: num
       heap.push(heightDiff);
     }
     if (ladders < heap.length) {
-      bricks -= heap.pop() || 0;
+      bricks -= heap.pop() ?? 0;
     }
     if (bricks < 0) {
       return currentIndex;

@@ -6,5 +6,5 @@ export function isAcronym(words: string[], s: string): boolean {
   if (words.length !== s.length) {
     return false;
   }
-  return words.every((word, i) => word[0] === s[i]);
+  return words.every((word, i) => word.startsWith(s[i]));
 }

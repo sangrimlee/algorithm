@@ -13,7 +13,7 @@ export function kInversePairs(n: number, k: number): number {
   if (k === 0 || k === sum(n)) {
     return 1;
   }
-  const dp: number[][] = Array.from({ length: n + 1 }).map(() => new Array(k + 1).fill(0));
+  const dp: number[][] = Array.from({ length: n + 1 }, () => new Array<number>(k + 1).fill(0));
   dp[2][0] = 1;
   dp[2][1] = 1;
   for (let i = 3; i <= n; i++) {

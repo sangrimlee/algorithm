@@ -31,19 +31,26 @@ export function mostBooked(n: number, meetings: number[][]): number {
 
   const bookedCount = new Array<number>(n).fill(0);
   for (const [start, end] of meetings) {
-    while (0 < reservations.length && reservations.peek![0] <= start) {
-      const [, room] = reservations.pop()!;
-      availables.push(room);
+    while (0 < reservations.length && reservations.peek && reservations.peek[0] <= start) {
+      const peek = reservations.pop();
+      if (peek) {
+        availables.push(peek[1]);
+      }
     }
 
     if (0 < availables.length) {
-      const room = availables.pop()!;
-      reservations.push([end, room]);
-      bookedCount[room] += 1;
+      const room = availables.pop();
+      if (room !== undefined) {
+        reservations.push([end, room]);
+        bookedCount[room] += 1;
+      }
     } else {
-      const [time, room] = reservations.pop()!;
-      reservations.push([time + end - start, room]);
-      bookedCount[room] += 1;
+      const reservation = reservations.pop();
+      if (reservation) {
+        const [time, room] = reservation;
+        reservations.push([time + end - start, room]);
+        bookedCount[room] += 1;
+      }
     }
   }
 

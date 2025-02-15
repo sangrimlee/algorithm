@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 876. Middle of the Linked List
@@ -13,9 +13,9 @@ export function middleNode(head: ListNode | null): ListNode | null {
     return head;
   }
 
-  let [left, right]: Array<ListNode | null> = [head, head];
-  while (right && right.next) {
-    right = right?.next?.next ?? null;
+  let [left, right]: (ListNode | null)[] = [head, head];
+  while (right?.next) {
+    right = right.next.next ?? null;
     left = left?.next ?? null;
   }
 

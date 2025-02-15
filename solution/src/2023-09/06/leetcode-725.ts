@@ -1,10 +1,10 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 725. Split Linked List in Parts
  * https://leetcode.com/problems/split-linked-list-in-parts
  */
-export function splitListToParts(head: ListNode | null, k: number): Array<ListNode | null> {
+export function splitListToParts(head: ListNode | null, k: number): (ListNode | null)[] {
   const getTotalLength = () => {
     let totalLength = 0;
     let currentNode = head;

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/only-throw-error */
+
 /**
  * 2726. Calculator with Method Chaining
  * https://leetcode.com/problems/calculator-with-method-chaining
@@ -8,22 +10,22 @@ export class Calculator {
     this.value = value;
   }
 
-  add(value: number): Calculator {
+  add(value: number): this {
     this.value += value;
     return this;
   }
 
-  subtract(value: number): Calculator {
+  subtract(value: number): this {
     this.value -= value;
     return this;
   }
 
-  multiply(value: number): Calculator {
+  multiply(value: number): this {
     this.value *= value;
     return this;
   }
 
-  divide(value: number): Calculator {
+  divide(value: number): this {
     if (value === 0) {
       throw 'Division by zero is not allowed';
     }
@@ -31,7 +33,7 @@ export class Calculator {
     return this;
   }
 
-  power(value: number): Calculator {
+  power(value: number): this {
     this.value **= value;
     return this;
   }

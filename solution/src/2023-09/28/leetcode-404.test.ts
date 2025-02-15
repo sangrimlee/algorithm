@@ -8,6 +8,6 @@ describe('2023-09-28: LeetCode 404', () => {
   });
   test('Example 2', () => {
     const tree = createTree([1]);
-    expect(sumOfLeftLeaves(tree)).toEqual(0);
+    expect(sumOfLeftLeaves(tree)).toBe(0);
   });
 });

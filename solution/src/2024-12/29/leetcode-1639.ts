@@ -5,7 +5,7 @@
 export function numWays(words: string[], target: string): number {
   const MOD = 10 ** 9 + 7;
   const [wordLength, targetLength] = [words[0].length, target.length];
-  const dp: number[] = new Array(targetLength + 1).fill(0);
+  const dp: number[] = new Array<number>(targetLength + 1).fill(0);
   dp[0] = 1;
 
   const counter = new CharCounter();
@@ -24,7 +24,7 @@ export function numWays(words: string[], target: string): number {
 class CharCounter {
   private readonly counter: number[];
   constructor() {
-    this.counter = new Array(26).fill(0);
+    this.counter = new Array<number>(26).fill(0);
   }
 
   private getIndex(char: string): number {

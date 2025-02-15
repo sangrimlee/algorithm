@@ -10,7 +10,7 @@ describe('2023-11-08: LeetCode 989', () => {
   test('Example 3', () => {
     expect(addToArrayForm([2, 1, 5], 806)).toEqual([1, 0, 2, 1]);
   });
-  test('Example 3', () => {
+  test('Example 4', () => {
     expect(
       addToArrayForm([1, 2, 6, 3, 0, 7, 1, 7, 1, 9, 7, 5, 6, 6, 4, 4, 0, 0, 6, 3], 516),
     ).toEqual([1, 2, 6, 3, 0, 7, 1, 7, 1, 9, 7, 5, 6, 6, 4, 4, 0, 5, 7, 9]);

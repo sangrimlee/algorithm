@@ -4,7 +4,7 @@
  */
 export function winningPlayerCount(n: number, pick: number[][]): number {
   const winPlayers = new Set<number>();
-  const players: number[][] = Array.from({ length: n }, () => new Array(11).fill(0));
+  const players: number[][] = Array.from({ length: n }, () => new Array<number>(11).fill(0));
 
   for (const [player, color] of pick) {
     players[player][color] += 1;

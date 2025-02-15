@@ -4,7 +4,7 @@
  */
 export function reversePrefix(word: string, ch: string): string {
   function reverseString(s: string) {
-    return [...s].reverse().join('');
+    return s.split('').reverse().join('');
   }
 
   const i = word.indexOf(ch);

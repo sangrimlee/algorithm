@@ -5,12 +5,12 @@ describe('2023-09-07: Programmers 121683', () => {
     expect(aloneAlphabet('edeaaabbccd')).toBe('de');
   });
   test('Example 2', () => {
-    expect(aloneAlphabet('eeddee')).toEqual('e');
+    expect(aloneAlphabet('eeddee')).toBe('e');
   });
   test('Example 3', () => {
-    expect(aloneAlphabet('string')).toEqual('N');
+    expect(aloneAlphabet('string')).toBe('N');
   });
   test('Example 4', () => {
-    expect(aloneAlphabet('zbzbz')).toEqual('bz');
+    expect(aloneAlphabet('zbzbz')).toBe('bz');
   });
 });

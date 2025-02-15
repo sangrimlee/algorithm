@@ -6,7 +6,7 @@ export function sumSubarrayMins(arr: number[]): number {
   const N = arr.length;
   const MOD = 1_000_000_007;
   const stack: number[] = [];
-  const dp: number[] = new Array(N).fill(0);
+  const dp: number[] = new Array<number>(N).fill(0);
 
   for (let i = 0; i < N; i++) {
     while (0 < stack.length && arr[i] < arr[stack[stack.length - 1]]) {

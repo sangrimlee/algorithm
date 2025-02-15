@@ -18,7 +18,10 @@ export class BrowserHistory {
 
   back(steps: number): string {
     while (0 < steps && 1 < this.history.length) {
-      this.future.push(this.history.pop()!);
+      const lastHistory = this.history.pop();
+      if (lastHistory !== undefined) {
+        this.future.push(lastHistory);
+      }
       steps -= 1;
     }
     return this.history[this.history.length - 1];
@@ -26,7 +29,10 @@ export class BrowserHistory {
 
   forward(steps: number): string {
     while (0 < steps && 0 < this.future.length) {
-      this.history.push(this.future.pop()!);
+      const recentFuture = this.future.pop();
+      if (recentFuture !== undefined) {
+        this.history.push(recentFuture);
+      }
       steps -= 1;
     }
     return this.history[this.history.length - 1];

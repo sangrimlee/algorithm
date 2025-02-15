@@ -7,7 +7,7 @@ export function longestSubsequence(arr: number[], difference: number): number {
 
   let answer = 1;
   for (const value of arr) {
-    const prevValue = dp.get(value - difference) || 0;
+    const prevValue = dp.get(value - difference) ?? 0;
     dp.set(value, prevValue + 1);
     answer = Math.max(answer, prevValue + 1);
   }

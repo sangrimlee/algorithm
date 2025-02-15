@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 863. All Nodes Distance K in Binary Tree
@@ -43,7 +43,7 @@ export function distanceK(
       answer.push(current);
       return;
     }
-    for (const neighbor of graph.get(current) || []) {
+    for (const neighbor of graph.get(current) ?? []) {
       if (!visited.has(neighbor)) {
         visited.add(neighbor);
         dfs(neighbor, distance + 1);

@@ -14,7 +14,9 @@ export function firstCompleteIndex(arr: number[], mat: number[][]): number {
   const rowCounts = new Array<number>(m).fill(0);
   const colCounts = new Array<number>(n).fill(0);
   for (let i = 0; i < arr.length; i++) {
-    const [row, col] = positions.get(arr[i])!;
+    const position = positions.get(arr[i]);
+    if (position === undefined) continue;
+    const [row, col] = position;
     rowCounts[row] += 1;
     colCounts[col] += 1;
 

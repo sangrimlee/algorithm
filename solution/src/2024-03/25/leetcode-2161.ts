@@ -17,5 +17,5 @@ export function pivotArray(nums: number[], pivot: number): number[] {
     }
   });
 
-  return [...lessThan, ...new Array(pivotCount).fill(pivot), ...greaterThan];
+  return [...lessThan, ...new Array<number>(pivotCount).fill(pivot), ...greaterThan];
 }

@@ -16,7 +16,7 @@ export function imageSmoother(img: number[][]): number[][] {
     [1, -1],
   ];
 
-  const result: number[][] = new Array(m).fill(undefined).map(() => new Array(n).fill(0));
+  const result: number[][] = Array.from({ length: m }, () => new Array<number>(n).fill(0));
   for (let y = 0; y < m; y++) {
     for (let x = 0; x < n; x++) {
       let total = 0;

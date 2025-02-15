@@ -11,7 +11,7 @@ describe('2025-01-30: LeetCode 2493', () => {
         [2, 3],
         [4, 6],
       ]),
-    ).toEqual(4);
+    ).toBe(4);
   });
   test('Example 2', () => {
     expect(
@@ -20,6 +20,6 @@ describe('2025-01-30: LeetCode 2493', () => {
         [2, 3],
         [3, 1],
       ]),
-    ).toEqual(-1);
+    ).toBe(-1);
   });
 });

@@ -6,6 +6,9 @@ import { range } from '@algorithm/lib';
  */
 export function selfDividingNumbers(left: number, right: number): number[] {
   const isDivisible = (num: number) =>
-    [...num.toString()].every((digit) => num % parseInt(digit) === 0);
+    num
+      .toString()
+      .split('')
+      .every((digit) => num % parseInt(digit) === 0);
   return [...range(left, right + 1)].filter(isDivisible);
 }

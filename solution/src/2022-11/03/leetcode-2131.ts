@@ -8,7 +8,7 @@ export function longestPalindrome(words: string[]): number {
   const counter = new Counter(words);
 
   for (const word of words) {
-    const reversedWord = [...word].reverse().join('');
+    const reversedWord = word.split('').reverse().join('');
     if (word === reversedWord && 0 < counter.get(word)) {
       if (2 <= counter.get(word)) {
         counter.sub(word, 2);
@@ -39,7 +39,7 @@ class Counter<V> {
   }
 
   get(value: V): number {
-    return this.counter.get(value) || 0;
+    return this.counter.get(value) ?? 0;
   }
 
   add(value: V, count = 1): void {

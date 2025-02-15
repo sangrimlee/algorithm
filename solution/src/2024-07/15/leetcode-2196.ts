@@ -23,7 +23,7 @@ export function createBinaryTree(descriptions: number[][]): TreeNode | null {
 
   for (const [parent] of descriptions) {
     if (!hasParents.get(parent)) {
-      return nodes.get(parent)!;
+      return nodes.get(parent) ?? null;
     }
   }
   return null;

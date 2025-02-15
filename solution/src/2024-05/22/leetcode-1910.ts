@@ -4,7 +4,7 @@
  */
 export function removeOccurrences(s: string, part: string): string {
   let current = s;
-  while (current.indexOf(part) !== -1) {
+  while (current.includes(part)) {
     current = current.replace(part, '');
   }
   return current;

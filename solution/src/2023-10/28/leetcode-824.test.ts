@@ -10,7 +10,7 @@ describe('2023-10-28: LeetCode 824', () => {
     );
   });
 
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(toGoatLatin('Each word consists of lowercase and uppercase letters only')).toBe(
       'Eachmaa ordwmaaa onsistscmaaaa ofmaaaaa owercaselmaaaaaa andmaaaaaaa uppercasemaaaaaaaa etterslmaaaaaaaaa onlymaaaaaaaaaa',
     );

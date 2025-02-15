@@ -13,7 +13,7 @@ export function defenseGame(n: number, k: number, enemy: number[]): number {
   let remain = n;
   for (const i of range(k, enemy.length)) {
     heap.push(i);
-    remain -= heap.pop() || 0;
+    remain -= heap.pop() ?? 0;
     if (remain < 0) {
       return i;
     }

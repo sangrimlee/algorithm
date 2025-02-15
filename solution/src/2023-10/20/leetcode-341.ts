@@ -54,7 +54,10 @@ export class NestedIterator {
   }
 
   next(): number {
-    const top = this.stack.pop()!;
-    return top.getInteger()!;
+    const top = this.stack.pop();
+    if (top === undefined) {
+      return -1;
+    }
+    return top.getInteger() ?? -1;
   }
 }

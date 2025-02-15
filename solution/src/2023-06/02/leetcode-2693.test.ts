@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable */
 import './leetcode-2693';
 
 describe('2023-06-02: LeetCode 2693', () => {

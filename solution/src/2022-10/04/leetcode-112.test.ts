@@ -12,7 +12,7 @@ describe('2022-10-04: LeetCode 112', () => {
     expect(hasPathSum(root, 5)).toBe(false);
   });
 
-  test('Example 1', () => {
+  test('Example 3', () => {
     expect(hasPathSum(null, 0)).toBe(false);
   });
 });

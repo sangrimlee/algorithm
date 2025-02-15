@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 103. Binary Tree Zigzag Level Order Traversal
@@ -15,8 +15,12 @@ export function zigzagLevelOrder(root: TreeNode | null): number[][] {
       answer.push([]);
     }
     answer[level].push(node.val);
-    node.left && levelorder(node.left, level + 1);
-    node.right && levelorder(node.right, level + 1);
+    if (node.left) {
+      levelorder(node.left, level + 1);
+    }
+    if (node.right) {
+      levelorder(node.right, level + 1);
+    }
   }
   levelorder(root, 0);
   return answer.map((row, i) => (i % 2 === 0 ? row : row.reverse()));

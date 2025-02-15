@@ -5,7 +5,7 @@
 export function complexNumberMultiply(num1: string, num2: string): string {
   const [a, b] = parseComplexNumber(num1);
   const [c, d] = parseComplexNumber(num2);
-  return `${a * c - b * d}+${a * d + b * c}i`;
+  return `${(a * c - b * d).toString()}+${(a * d + b * c).toString()}i`;
 }
 
 function parseComplexNumber(num: string) {

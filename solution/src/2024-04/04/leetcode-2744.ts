@@ -4,7 +4,7 @@
  */
 export function maximumNumberOfStringPairs(words: string[]): number {
   function reverseWord(word: string) {
-    return [...word].reverse().join('');
+    return word.split('').reverse().join('');
   }
 
   let answer = 0;

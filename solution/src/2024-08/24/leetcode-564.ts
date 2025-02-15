@@ -37,7 +37,7 @@ export function nearestPalindromic(n: string): string {
 }
 
 function reverse(str: string): string {
-  return [...str].reverse().join('');
+  return str.split('').reverse().join('');
 }
 
 function getDifference(num1: bigint, num2: bigint) {

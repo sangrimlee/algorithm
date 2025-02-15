@@ -5,7 +5,7 @@ import { ListNode } from '@algorithm/lib';
  * https://leetcode.com/problems/sort-list
  */
 export function sortList(head: ListNode | null): ListNode | null {
-  if (!head || !head.next) {
+  if (!head?.next) {
     return head;
   }
 
@@ -16,7 +16,7 @@ export function sortList(head: ListNode | null): ListNode | null {
 const divide = (head: ListNode) => {
   let fast: ListNode | null = head.next;
   let slow: ListNode = head;
-  while (fast && fast.next && slow.next) {
+  while (fast?.next && slow.next) {
     fast = fast.next.next;
     slow = slow.next;
   }

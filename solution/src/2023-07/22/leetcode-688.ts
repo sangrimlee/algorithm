@@ -19,7 +19,7 @@ export function knightProbability(n: number, k: number, row: number, column: num
     return 0 <= y && y < n && 0 <= x && x < n;
   };
   const dp: number[][][] = Array.from({ length: k + 1 }).map(() =>
-    Array.from({ length: n }).map(() => new Array(n).fill(0)),
+    Array.from({ length: n }).map(() => new Array<number>(n).fill(0)),
   );
   dp[0][row][column] = 1;
 

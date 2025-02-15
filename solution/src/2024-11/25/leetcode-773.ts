@@ -16,7 +16,9 @@ export function slidingPuzzle(board: number[][]): number {
   const queue: [string, number][] = [[startState, 0]];
   const visited = new Set([startState]);
   while (0 < queue.length) {
-    const [currentState, moves] = queue.shift()!;
+    const peek = queue.shift();
+    if (peek === undefined) break;
+    const [currentState, moves] = peek;
     if (currentState === '123450') {
       return moves;
     }
@@ -33,7 +35,7 @@ export function slidingPuzzle(board: number[][]): number {
 }
 
 function swap(s: string, i: number, j: number): string {
-  const arr = [...s];
+  const arr = s.split('');
   [arr[i], arr[j]] = [arr[j], arr[i]];
   return arr.join('');
 }

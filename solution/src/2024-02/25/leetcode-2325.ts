@@ -16,7 +16,7 @@ export function decodeMessage(key: string, message: string): string {
 
   let answer = '';
   for (const char of message) {
-    answer += diagram.get(char)!;
+    answer += diagram.get(char) ?? '';
   }
   return answer;
 }

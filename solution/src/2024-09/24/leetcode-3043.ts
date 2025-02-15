@@ -8,10 +8,10 @@ export function longestCommonPrefix(arr1: number[], arr2: number[]): number {
 }
 
 class TrieNode {
-  children: Array<TrieNode | null>;
+  children: (TrieNode | null)[];
 
   constructor() {
-    this.children = new Array(10).fill(null);
+    this.children = new Array<TrieNode | null>(10).fill(null);
   }
 }
 
@@ -20,7 +20,9 @@ class Trie {
 
   constructor(arr: number[]) {
     this.root = new TrieNode();
-    arr.forEach((num) => this.insert(num));
+    arr.forEach((num) => {
+      this.insert(num);
+    });
   }
 
   insert(num: number): void {

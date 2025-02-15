@@ -48,7 +48,7 @@ export function shortestPath(grid: number[][], k: number): number {
 }
 
 function create3DArr<T>(n: number, m: number, k: number, initValue: T): T[][][] {
-  return new Array(n)
-    .fill(undefined)
-    .map(() => new Array(m).fill(undefined).map(() => new Array(k).fill(initValue)));
+  return Array.from({ length: n }, () =>
+    Array.from({ length: m }, () => new Array<T>(k).fill(initValue)),
+  );
 }

@@ -11,5 +11,8 @@ export function smallestNumber(n: number, t: number): number {
 }
 
 function productDigits(num: number) {
-  return [...num.toString()].reduce((acc, digit) => acc * +digit, 1);
+  return num
+    .toString()
+    .split('')
+    .reduce((acc, digit) => acc * +digit, 1);
 }

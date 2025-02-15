@@ -26,7 +26,9 @@ export function trapRainWater(heightMap: number[][]): number {
   let answer = 0;
   let currentHeight = 0;
   while (!heap.isEmpty) {
-    const [height, y, x] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [height, y, x] = peek;
     currentHeight = Math.max(currentHeight, height);
 
     for (const [dy, dx] of directions) {

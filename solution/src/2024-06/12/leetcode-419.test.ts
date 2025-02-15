@@ -8,9 +8,9 @@ describe('2024-06-12: LeetCode 419', () => {
         ['.', '.', '.', 'X'],
         ['.', '.', '.', 'X'],
       ]),
-    ).toEqual(2);
+    ).toBe(2);
   });
   test('Example 2', () => {
-    expect(countBattleships([['.']])).toEqual(0);
+    expect(countBattleships([['.']])).toBe(0);
   });
 });

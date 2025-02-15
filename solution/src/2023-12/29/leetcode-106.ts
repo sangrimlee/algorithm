@@ -11,8 +11,14 @@ export function buildTree(inorder: number[], postorder: number[]): TreeNode | nu
     if (start > end || stack.length === 0) {
       return null;
     }
-    const value = stack.pop()!;
-    const mid = indices.get(value)!;
+    const value = stack.pop();
+    if (value === undefined) {
+      return null;
+    }
+    const mid = indices.get(value);
+    if (mid === undefined) {
+      return null;
+    }
     const node = new TreeNode(value);
     node.right = buildNode(mid + 1, end);
     node.left = buildNode(start, mid - 1);

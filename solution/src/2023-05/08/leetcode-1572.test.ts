@@ -7,7 +7,7 @@ describe('2023-05-08: LeetCode 1572', () => {
       [4, 5, 6],
       [7, 8, 9],
     ];
-    expect(diagonalSum(mat)).toEqual(25);
+    expect(diagonalSum(mat)).toBe(25);
   });
   test('Example 2', () => {
     const mat = [
@@ -16,10 +16,10 @@ describe('2023-05-08: LeetCode 1572', () => {
       [1, 1, 1, 1],
       [1, 1, 1, 1],
     ];
-    expect(diagonalSum(mat)).toEqual(8);
+    expect(diagonalSum(mat)).toBe(8);
   });
   test('Example 3', () => {
     const mat = [[5]];
-    expect(diagonalSum(mat)).toEqual(5);
+    expect(diagonalSum(mat)).toBe(5);
   });
 });

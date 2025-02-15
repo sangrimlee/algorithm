@@ -4,7 +4,7 @@
  */
 export function leftmostBuildingQueries(heights: number[], queries: number[][]): number[] {
   const [n, q] = [heights.length, queries.length];
-  const answer: number[] = new Array(q).fill(-1);
+  const answer: number[] = new Array<number>(q).fill(-1);
   const newQueries: number[][][] = Array.from({ length: n }, () => []);
   queries.forEach(([a, b], i) => {
     [a, b] = a < b ? [a, b] : [b, a];

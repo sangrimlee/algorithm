@@ -21,7 +21,8 @@ export function displayTable(orders: string[][]): string[][] {
     if (!table) continue;
     const row: string[] = [tableNumber];
     for (const food of allFoods) {
-      row.push(`${table.get(food) ?? 0}`);
+      const price = table.get(food) ?? 0;
+      row.push(price.toString());
     }
     answer.push(row);
   }

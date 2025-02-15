@@ -5,6 +5,7 @@ describe('2023-05-29: LeetCode 2618', () => {
     expect(checkIfInstanceOf(new Date(), Date)).toBeTruthy();
   });
   test('Example 2', () => {
+    // eslint-disable-next-line @typescript-eslint/no-extraneous-class -- It's just an example.
     class Animal {}
     class Dog extends Animal {}
 

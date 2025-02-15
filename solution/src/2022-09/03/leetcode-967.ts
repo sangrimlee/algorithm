@@ -13,7 +13,7 @@ export function numsSameConsecDiff(n: number, k: number): number[] {
     const prev = +current[current.length - 1];
     for (let i = 0; i < 10; i++) {
       if (Math.abs(prev - i) === k) {
-        dfs(current + i);
+        dfs(`${current}${i.toString()}`);
       }
     }
   }

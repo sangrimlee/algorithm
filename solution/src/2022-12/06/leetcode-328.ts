@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 328. Odd Even Linked List
@@ -12,7 +12,7 @@ export function oddEvenList(head: ListNode | null): ListNode | null {
   const [oddHead, evenHead] = [head, head.next];
   let [oddNode, evenNode] = [oddHead, evenHead];
 
-  while (evenNode !== null && evenNode.next !== null) {
+  while (evenNode?.next) {
     oddNode.next = evenNode.next;
     oddNode = oddNode.next;
     evenNode.next = oddNode.next;

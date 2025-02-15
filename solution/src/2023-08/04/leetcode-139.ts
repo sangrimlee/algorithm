@@ -4,23 +4,20 @@
  */
 class TrieNode {
   public isWord: boolean;
-  private readonly children: Record<string, TrieNode>;
+  private readonly children: Map<string, TrieNode>;
   constructor() {
     this.isWord = false;
-    this.children = {};
+    this.children = new Map();
   }
 
   getChildNode(char: string): TrieNode {
-    if (this.children[char]) {
-      return this.children[char];
-    }
-    const newNode = new TrieNode();
-    this.children[char] = newNode;
-    return newNode;
+    const childNode = this.children.get(char) ?? new TrieNode();
+    this.children.set(char, childNode);
+    return childNode;
   }
 
   hasChildNode(char: string) {
-    return this.children[char] !== undefined;
+    return this.children.has(char);
   }
 }
 

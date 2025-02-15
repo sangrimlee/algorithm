@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2458. Height of Binary Tree After Subtree Removal Queries
@@ -13,7 +13,7 @@ export function treeQueries(root: TreeNode | null, queries: number[]): number[] 
       return -1;
     }
     if (heights.has(node.val)) {
-      return heights.get(node.val)!;
+      return heights.get(node.val) ?? 0;
     }
     const height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
     heights.set(node.val, height);
@@ -30,5 +30,5 @@ export function treeQueries(root: TreeNode | null, queries: number[]): number[] 
   }
 
   dfs(root, 0, 0);
-  return queries.map((q) => results.get(q)!);
+  return queries.map((q) => results.get(q) ?? 0);
 }

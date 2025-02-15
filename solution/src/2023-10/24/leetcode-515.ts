@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 515. Find Largest Value in Each Tree Row
@@ -11,8 +11,12 @@ export function largestValues(root: TreeNode | null): number[] {
   const answer: number[] = [];
   const find = (node: TreeNode, depth: number) => {
     answer[depth] = Math.max(answer[depth] ?? Number.MIN_SAFE_INTEGER, node.val);
-    node.left && find(node.left, depth + 1);
-    node.right && find(node.right, depth + 1);
+    if (node.left) {
+      find(node.left, depth + 1);
+    }
+    if (node.right) {
+      find(node.right, depth + 1);
+    }
   };
   find(root, 0);
   return answer;

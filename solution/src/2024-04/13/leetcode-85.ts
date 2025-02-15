@@ -6,7 +6,7 @@ export function maximalRectangle(matrix: string[][]): number {
   const [rows, cols] = [matrix.length, matrix[0].length];
 
   let answer = 0;
-  const heights = new Array(cols + 1).fill(0);
+  const heights = new Array<number>(cols + 1).fill(0);
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < cols; col++) {
       const cell = matrix[row][col];
@@ -16,7 +16,9 @@ export function maximalRectangle(matrix: string[][]): number {
     const stack: number[] = [-1];
     for (let col = 0; col <= cols; col++) {
       while (heights[col] < heights[stack[stack.length - 1]]) {
-        const height = heights[stack.pop()!];
+        const i = stack.pop();
+        if (i === undefined) break;
+        const height = heights[i];
         const width = col - 1 - stack[stack.length - 1];
         answer = Math.max(answer, height * width);
       }

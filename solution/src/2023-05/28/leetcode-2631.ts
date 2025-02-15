@@ -9,9 +9,9 @@ declare global {
 }
 
 Array.prototype.groupBy = function (fn) {
-  return this.reduce((group, item) => {
+  return this.reduce((group: Record<string, unknown[]>, item) => {
     const key = fn(item);
-    if (group[key]) {
+    if (Object.hasOwn(group, key)) {
       group[key].push(item);
     } else {
       group[key] = [item];

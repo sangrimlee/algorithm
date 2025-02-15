@@ -4,8 +4,8 @@
  */
 export function countServers(grid: number[][]): number {
   const [m, n] = [grid.length, grid[0].length];
-  const rowCounts: number[] = new Array(m).fill(0);
-  const colCounts: number[] = new Array(n).fill(0);
+  const rowCounts: number[] = new Array<number>(m).fill(0);
+  const colCounts: number[] = new Array<number>(n).fill(0);
   grid.forEach((servers, row) => {
     servers.forEach((server, col) => {
       if (server === 1) {

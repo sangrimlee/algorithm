@@ -5,7 +5,7 @@
 export function multiply(num1: string, num2: string): string {
   const [m, n] = [num1.length, num2.length];
 
-  const result = new Array(m + n).fill(0);
+  const result = new Array<number>(m + n).fill(0);
   for (let i = m - 1; 0 <= i; i--) {
     for (let j = n - 1; 0 <= j; j--) {
       const multiply = parseInt(num1[i]) * parseInt(num2[j]);
@@ -15,7 +15,7 @@ export function multiply(num1: string, num2: string): string {
     }
   }
   const answer = result.reduce(
-    (prev, curr) => (prev === '' && curr === 0 ? prev : `${prev}${curr}`),
+    (prev, curr) => (prev === '' && curr === 0 ? prev : `${prev}${curr.toString()}`),
     '',
   );
   return answer.length === 0 ? '0' : answer;

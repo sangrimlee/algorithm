@@ -4,7 +4,7 @@ describe('2023-06-12: LeetCode 2725', () => {
   test('Example 1', () => {
     jest.useFakeTimers();
 
-    const result: Array<{ time: number; returned: number }> = [];
+    const result: { time: number; returned: number }[] = [];
 
     const fn = (x: number) => x * 2;
     const args = [4];

@@ -28,7 +28,12 @@ export function chooseHikingCourse(
   let minIntensity = Number.MAX_SAFE_INTEGER;
 
   while (!heap.isEmpty) {
-    const [intensity, point] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) {
+      break;
+    }
+    const [intensity, point] = peek;
+
     if (minIntensity < intensity) {
       break;
     }

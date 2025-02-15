@@ -6,7 +6,7 @@ import { range } from '@algorithm/lib';
  */
 export function minDistance(word1: string, word2: string): number {
   const [m, n] = [word1.length, word2.length];
-  const dp: number[][] = Array.from({ length: m + 1 }).map(() => new Array(n + 1).fill(0));
+  const dp: number[][] = Array.from({ length: m + 1 }, () => new Array<number>(n + 1).fill(0));
   for (const i of range(m + 1)) {
     dp[i][0] = i;
   }

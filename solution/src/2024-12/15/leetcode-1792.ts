@@ -11,13 +11,17 @@ export function maxAverageRatio(classes: number[][], extraStudents: number): num
   }
 
   for (let i = 0; i < extraStudents; i++) {
-    const [pass, total] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [pass, total] = peek;
     heap.push([pass + 1, total + 1]);
   }
 
   let totalPassRatio = 0;
   while (!heap.isEmpty) {
-    const [pass, total] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [pass, total] = peek;
     totalPassRatio += pass / total;
   }
   return totalPassRatio / classes.length;

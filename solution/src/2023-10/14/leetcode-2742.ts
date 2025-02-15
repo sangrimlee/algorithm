@@ -4,7 +4,7 @@
  */
 export function paintWalls(cost: number[], time: number[]): number {
   const n = cost.length;
-  const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(n + 1).fill(Number.MAX_SAFE_INTEGER);
   dp[0] = 0;
   for (let i = 0; i < n; i++) {
     for (let j = n; 0 <= j; j--) {

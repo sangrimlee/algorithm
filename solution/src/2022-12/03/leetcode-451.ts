@@ -6,7 +6,7 @@ export function frequencySort(s: string): string {
   const frequency = new Map<string, number>();
 
   for (const char of s) {
-    frequency.set(char, (frequency.get(char) || 0) + 1);
+    frequency.set(char, (frequency.get(char) ?? 0) + 1);
   }
 
   return Array.from(frequency.entries())

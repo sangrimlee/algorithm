@@ -8,7 +8,7 @@ export function minDifficulty(jobDifficulty: number[], d: number): number {
     return -1;
   }
 
-  const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(n + 1).fill(Number.MAX_SAFE_INTEGER);
   dp[n] = 0;
   for (let day = 1; day <= d; day++) {
     for (let i = 0; i <= n - day; i++) {

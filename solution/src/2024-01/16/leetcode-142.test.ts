@@ -27,6 +27,6 @@ describe('2024-01-16: LeetCode 142', () => {
   });
   test('Example 3', () => {
     const head = createCycledLinkedList([1, 2], -1);
-    expect(detectCycle(head)).toEqual(null);
+    expect(detectCycle(head)).toBeNull();
   });
 });

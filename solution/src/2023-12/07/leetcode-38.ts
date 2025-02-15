@@ -14,12 +14,12 @@ export function countAndSay(n: number): string {
         continue;
       }
       if (0 < count) {
-        result += `${count}${num}`;
+        result += `${count.toString()}${num.toString()}`;
       }
       num = char;
       count = 1;
     }
-    result += `${count}${num}`;
+    result += `${count.toString()}${num.toString()}`;
     return result;
   };
 

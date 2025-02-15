@@ -9,7 +9,7 @@ export function readBinaryWatch(turnedOn: number): string[] {
   };
 
   const getTime = (hour: number, minute: number) => {
-    return `${hour}:${minute.toString().padStart(2, '0')}`;
+    return `${hour.toString()}:${minute.toString().padStart(2, '0')}`;
   };
 
   const answer: string[] = [];

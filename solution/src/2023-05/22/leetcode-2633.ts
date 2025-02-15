@@ -2,10 +2,17 @@
  * 2633. Convert Object to JSON String
  * https://leetcode.com/problems/convert-object-to-json-string
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function jsonStringify(object: any): string {
-  if (object === null) {
-    return 'null';
+export function jsonStringify(object: unknown): string {
+  if (object === null || object === undefined) {
+    return String(object);
+  }
+
+  if (typeof object === 'boolean') {
+    return object ? 'true' : 'false';
+  }
+
+  if (typeof object === 'number') {
+    return String(object);
   }
 
   if (typeof object === 'string') {
@@ -22,5 +29,5 @@ export function jsonStringify(object: any): string {
       .join(',')}}`;
   }
 
-  return String(object);
+  return '';
 }

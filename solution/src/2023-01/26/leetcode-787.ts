@@ -9,15 +9,14 @@ export function findCheapestPrice(
   dst: number,
   k: number,
 ): number {
-  const graph = new Array(n).fill(undefined).map(() => new Array<[number, number]>());
+  const graph = Array.from({ length: n }, () => new Array<[number, number]>());
   for (const [from, to, price] of flights) {
     graph[from].push([to, price]);
   }
-  const prices = new Array(n).fill(Number.MAX_SAFE_INTEGER);
+  const prices = new Array<number>(n).fill(Number.MAX_SAFE_INTEGER);
   prices[src] = 0;
 
   let queue = [[src, 0, 0]];
-
   while (0 < queue.length) {
     const nextQueue: number[][] = [];
     for (const [city, price, stop] of queue) {

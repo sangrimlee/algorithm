@@ -64,7 +64,7 @@ class DisjointSet {
 
   constructor(n: number) {
     this.parent = Array.from({ length: n }, (_, i) => i);
-    this.size = new Array(n).fill(1);
+    this.size = new Array<number>(n).fill(1);
   }
 
   find(node: number): number {

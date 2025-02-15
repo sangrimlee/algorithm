@@ -4,7 +4,7 @@
  */
 export function orderlyQueue(s: string, k: number): string {
   if (k !== 1) {
-    return [...s].sort().join('');
+    return s.split('').sort().join('');
   }
 
   const n = s.length;

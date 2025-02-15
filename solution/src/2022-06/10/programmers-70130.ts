@@ -6,7 +6,7 @@
 function createCounter(a: number[]) {
   const counter = new Map<number, number>();
   a.forEach((num) => {
-    counter.set(num, (counter.get(num) || 0) + 1);
+    counter.set(num, (counter.get(num) ?? 0) + 1);
   });
   return counter;
 }

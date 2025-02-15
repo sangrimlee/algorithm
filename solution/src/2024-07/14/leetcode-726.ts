@@ -7,7 +7,7 @@ export function countOfAtoms(formula: string): string {
     if (num === 0) {
       return parseInt(digit);
     }
-    return parseInt(`${digit}${num}`);
+    return parseInt(`${digit}${num.toString()}`);
   }
 
   const n = formula.length;
@@ -38,12 +38,14 @@ export function countOfAtoms(formula: string): string {
       }
       elementCount = 0;
     } else if (char === '(') {
-      coefficient = Math.floor(coefficient / stack.pop()!);
+      coefficient = Math.floor(coefficient / (stack.pop() ?? 1));
       elementCount = 0;
     }
   }
   const elements = [...counter.entries()].sort(([a], [b]) => (a < b ? -1 : 1));
-  return elements.map(([element, count]) => (1 < count ? `${element}${count}` : element)).join('');
+  return elements
+    .map(([element, count]) => (1 < count ? `${element}${count.toString()}` : element))
+    .join('');
 }
 
 class Counter<K> extends Map<K, number> {

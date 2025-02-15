@@ -8,7 +8,7 @@ type TrieNode = Map<string, TrieNode>;
 class SuffixTrie {
   private rootNode: TrieNode;
   constructor() {
-    this.rootNode = new Map();
+    this.rootNode = new Map<string, TrieNode>();
   }
 
   add(word: string) {
@@ -16,11 +16,10 @@ class SuffixTrie {
       const childNode = currentNode.get(char);
       if (childNode) {
         return childNode;
-      } else {
-        const newNode = new Map();
-        currentNode.set(char, newNode);
-        return newNode;
       }
+      const newNode = new Map<string, TrieNode>();
+      currentNode.set(char, newNode);
+      return newNode;
     }, this.rootNode);
   }
 }

@@ -4,7 +4,7 @@
  */
 export function countSubstrings(s: string): number {
   function manachers(str: string) {
-    const s = `#${[...str].join('#')}#`;
+    const s = `#${str.split('').join('#')}#`;
 
     const n = s.length;
     const p = new Array<number>(n).fill(0);

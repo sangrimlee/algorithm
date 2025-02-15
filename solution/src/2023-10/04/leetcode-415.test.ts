@@ -10,7 +10,7 @@ describe('2023-10-04: LeetCode 415', () => {
   test('Example 3', () => {
     expect(addStrings('0', '0')).toBe('0');
   });
-  test('Example 3', () => {
+  test('Example 4', () => {
     expect(addStrings('999', '999')).toBe('1998');
   });
 });

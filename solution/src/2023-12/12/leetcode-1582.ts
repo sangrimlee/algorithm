@@ -4,8 +4,8 @@
  */
 export function numSpecial(mat: number[][]): number {
   const [m, n] = [mat.length, mat[0].length];
-  const rows = new Array(m).fill(0);
-  const cols = new Array(n).fill(0);
+  const rows = new Array<number>(m).fill(0);
+  const cols = new Array<number>(n).fill(0);
   for (let i = 0; i < m; i++) {
     for (let j = 0; j < n; j++) {
       rows[i] += mat[i][j];

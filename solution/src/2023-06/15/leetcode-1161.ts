@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 1161. Maximum Level Sum of a Binary Tree
@@ -17,8 +17,12 @@ export function maxLevelSum(root: TreeNode | null): number {
     const nextNodes: TreeNode[] = [];
     for (const currentNode of currentNodes) {
       totalValue += currentNode.val;
-      currentNode.left && nextNodes.push(currentNode.left);
-      currentNode.right && nextNodes.push(currentNode.right);
+      if (currentNode.left) {
+        nextNodes.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        nextNodes.push(currentNode.right);
+      }
     }
     if (maxValue < totalValue) {
       [maxValue, minLevel] = [totalValue, currentLevel];
