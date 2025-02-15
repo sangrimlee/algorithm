@@ -4,6 +4,7 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
       "outputs": ["dist/**"]
     },
     "clean": {
@@ -13,7 +14,8 @@
       "cache": false
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "format": {
       "cache": true
