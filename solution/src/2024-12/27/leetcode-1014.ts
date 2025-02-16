@@ -4,7 +4,7 @@
  */
 export function maxScoreSightseeingPair(values: number[]): number {
   const n = values.length;
-  const dp = new Array(n).fill(0);
+  const dp = new Array<number>(n).fill(0);
   dp[0] = values[0];
 
   let answer = 0;

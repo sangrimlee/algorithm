@@ -5,7 +5,7 @@
 export function mincostTickets(days: number[], costs: number[]): number {
   const daysSet = new Set(days);
   const n = days[days.length - 1] + 1;
-  const dp = new Array(n).fill(0);
+  const dp = new Array<number>(n).fill(0);
 
   const durations = [1, 7, 30];
 

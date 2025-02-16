@@ -1,4 +1,4 @@
-import { ListNode, TreeNode } from '@algorithm/lib';
+import type { ListNode, TreeNode } from '@algorithm/lib';
 
 /**
  * 1367. Linked List in Binary Tree

@@ -7,9 +7,17 @@ export function minOperations(s: string): number {
   let firstZero = 0;
   for (let i = 0; i < s.length; i++) {
     if (i % 2 === 0) {
-      s[i] === '0' ? firstOne++ : firstZero++;
+      if (s[i] === '0') {
+        firstOne += 1;
+      } else {
+        firstZero += 1;
+      }
     } else {
-      s[i] === '1' ? firstOne++ : firstZero++;
+      if (s[i] === '1') {
+        firstOne += 1;
+      } else {
+        firstZero += 1;
+      }
     }
   }
   return Math.min(firstZero, firstOne);

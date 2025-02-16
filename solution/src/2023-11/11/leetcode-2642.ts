@@ -25,7 +25,11 @@ export class Graph {
     heap.push([node1, 0]);
 
     while (!heap.isEmpty) {
-      const [node, cost] = heap.pop()!;
+      const peek = heap.pop();
+      if (peek === undefined) {
+        break;
+      }
+      const [node, cost] = peek;
       if (node === node2) {
         return cost;
       }

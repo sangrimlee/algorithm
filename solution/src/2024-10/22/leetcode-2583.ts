@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2583. Kth Largest Sum in a Binary Tree

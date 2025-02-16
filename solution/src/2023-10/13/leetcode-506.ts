@@ -8,8 +8,8 @@ export function findRelativeRanks(score: number[]): string[] {
   const getRelativeRank = (rank: number) => {
     return rank < 3 ? medal[rank] : (rank + 1).toString();
   };
-  const relativeRanks = new Array(n).fill('');
-  const ranks = new Array(n)
+  const relativeRanks = new Array<string>(n).fill('');
+  const ranks = new Array<number>(n)
     .fill(0)
     .map((_, i) => i)
     .sort((a, b) => score[b] - score[a]);

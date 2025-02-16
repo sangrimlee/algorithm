@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 1530. Number of Good Leaf Nodes Pairs
@@ -7,7 +7,7 @@ import { TreeNode } from '@algorithm/lib';
 export function countPairs(root: TreeNode | null, distance: number): number {
   let answer = 0;
   function dfs(node: TreeNode | null) {
-    const result = new Array(distance + 1).fill(0);
+    const result = new Array<number>(distance + 1).fill(0);
     if (node === null) {
       return result;
     }

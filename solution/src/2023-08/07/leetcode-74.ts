@@ -5,7 +5,7 @@
 export function searchMatrix(matrix: number[][], target: number): boolean {
   for (const row of matrix) {
     if (target <= row[row.length - 1]) {
-      return row.indexOf(target) !== -1;
+      return row.includes(target);
     }
   }
   return false;

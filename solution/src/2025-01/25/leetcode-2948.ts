@@ -21,7 +21,7 @@ export function lexicographicallySmallestArray(nums: number[], limit: number): n
   const groupIndices = new Array<number>(groups.length).fill(0);
   for (let i = 0; i < n; i++) {
     const num = nums[i];
-    const group = groupByNum.get(num)!;
+    const group = groupByNum.get(num) ?? 0;
     answer[i] = groups[group][groupIndices[group]];
     groupIndices[group] += 1;
   }

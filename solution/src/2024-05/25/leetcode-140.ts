@@ -3,12 +3,14 @@
  * https://leetcode.com/problems/word-break-ii
  */
 export function wordBreak(s: string, wordDict: string[]): string[] {
-  const map = new Map<string, string[]>([['', ['']]]);
+  const memo = new Map<string, string[]>([['', ['']]]);
 
   function dfs(s: string): string[] {
-    if (map.has(s)) {
-      return map.get(s)!;
+    const prevResult = memo.get(s);
+    if (prevResult !== undefined) {
+      return prevResult;
     }
+
     const result: string[] = [];
     for (const word of wordDict) {
       if (!s.startsWith(word)) continue;
@@ -16,7 +18,7 @@ export function wordBreak(s: string, wordDict: string[]): string[] {
         result.push(substr.length === 0 ? word : `${word} ${substr}`);
       }
     }
-    map.set(s, result);
+    memo.set(s, result);
     return result;
   }
 

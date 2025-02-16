@@ -13,7 +13,7 @@ describe('2022-09-10: LeetCode 122', () => {
     expect(maxProfitII([7, 6, 4, 3, 1])).toBe(0);
   });
 
-  test('Example 2', () => {
+  test('Example 4', () => {
     expect(maxProfitII([2, 1, 2, 0, 1])).toBe(2);
   });
 });

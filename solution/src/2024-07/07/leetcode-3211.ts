@@ -10,7 +10,7 @@ export function validStrings(n: number): string[] {
       return;
     }
     dfs(str + '1');
-    if (str[str.length - 1] === '1') {
+    if (str.endsWith('1')) {
       dfs(str + '0');
     }
   }

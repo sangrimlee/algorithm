@@ -6,7 +6,7 @@ export function getMaximumGenerated(n: number): number {
   if (n <= 1) {
     return n;
   }
-  const dp = new Array(n + 1).fill(0);
+  const dp = new Array<number>(n + 1).fill(0);
   dp[1] = 1;
 
   let answer = 1;

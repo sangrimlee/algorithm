@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-argument*/
+
 /**
  * 2676. Throttle
  * https://leetcode.com/problems/throttle
  */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function throttle(fn: (...args: any[]) => void, t: number): (...args: any[]) => void {
   let timeoutId: NodeJS.Timeout | null = null;
   let delayed = 0;

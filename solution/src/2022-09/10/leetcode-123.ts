@@ -5,8 +5,8 @@
 export function maxProfitIII(prices: number[]): number {
   const n = prices.length;
   if (n === 0) return 0;
-  const dp = new Array(3).fill(0);
-  const minPrices = new Array(3).fill(prices[0]);
+  const dp = new Array<number>(3).fill(0);
+  const minPrices = new Array<number>(3).fill(prices[0]);
   for (let i = 1; i < n; i++) {
     for (let k = 1; k <= 2; k++) {
       minPrices[k] = Math.min(minPrices[k], prices[i] - dp[k - 1]);
@@ -16,5 +16,3 @@ export function maxProfitIII(prices: number[]): number {
 
   return dp[2];
 }
-
-maxProfitIII([3, 3, 5, 0, 0, 3, 1, 4]);

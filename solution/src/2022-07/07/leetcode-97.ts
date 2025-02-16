@@ -7,7 +7,7 @@ export function isInterleave(s1: string, s2: string, s3: string): boolean {
   if (n + m !== k) {
     return false;
   }
-  let prevRow = new Array(s2.length).fill(false);
+  let prevRow = new Array<boolean>(s2.length).fill(false);
 
   for (let i = 0; i < n + 1; i++) {
     const currentRow: boolean[] = [];

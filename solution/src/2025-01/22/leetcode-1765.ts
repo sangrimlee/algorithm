@@ -4,7 +4,7 @@
  */
 export function highestPeak(isWater: number[][]): number[][] {
   const [m, n] = [isWater.length, isWater[0].length];
-  const height: number[][] = Array.from({ length: m }, () => new Array(n).fill(-1));
+  const height: number[][] = Array.from({ length: m }, () => new Array<number>(n).fill(-1));
   const directions = [
     [0, 1],
     [1, 0],

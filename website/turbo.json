@@ -5,7 +5,8 @@
     "build": {
       "dependsOn": ["^build"],
       "env": ["URL", "NEXT_PUBLIC_URL"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".vercel/**", ".next/**", "!.next/cache/**"]
     }
   }
 }

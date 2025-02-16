@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 1110. Delete Nodes And Return Forest

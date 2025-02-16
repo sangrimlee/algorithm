@@ -14,7 +14,7 @@ export function mincostToHireWorkers(quality: number[], wage: number[], k: numbe
     heap.push(-q);
     qualitySum += q;
     if (k < heap.length) {
-      qualitySum += heap.pop()!;
+      qualitySum += heap.pop() ?? 0;
     }
     if (k === heap.length) {
       answer = Math.min(answer, qualitySum * r);

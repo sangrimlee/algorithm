@@ -13,7 +13,9 @@ export function rangeSum(nums: number[], n: number, left: number, right: number)
 
   let answer = 0;
   for (let mid = 1; mid <= right; mid++) {
-    const [num, i] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [num, i] = peek;
     if (left <= mid) {
       answer += num;
     }

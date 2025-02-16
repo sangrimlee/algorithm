@@ -14,7 +14,7 @@ export function findPaths(
   }
 
   const MOD = 10 ** 9 + 7;
-  let prev = Array.from({ length: m }).map(() => new Array(n).fill(0));
+  let prev = Array.from({ length: m }).map(() => new Array<number>(n).fill(0));
   prev[startRow][startColumn] = 1;
 
   let answer = 0;
@@ -25,7 +25,7 @@ export function findPaths(
     [0, 1],
   ];
   for (let step = 0; step < maxMove; step++) {
-    const current = Array.from({ length: m }).map(() => new Array(n).fill(0));
+    const current = Array.from({ length: m }).map(() => new Array<number>(n).fill(0));
     for (let row = 0; row < m; row++) {
       for (let col = 0; col < n; col++) {
         for (const [drow, dcol] of directions) {

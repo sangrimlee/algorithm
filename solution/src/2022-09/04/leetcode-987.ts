@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 987. Vertical Order Traversal of a Binary Tree

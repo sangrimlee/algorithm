@@ -1,7 +1,7 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { format } from '@/utils/format';
-import { CodingSite, Solution } from '@/types';
+import type { CodingSite, Solution } from '@/types';
 
 import { createTableTemplate } from './table';
 

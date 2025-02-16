@@ -4,7 +4,7 @@
  */
 export function minHeightShelves(books: number[][], shelfWidth: number): number {
   const n = books.length;
-  const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
+  const dp = new Array<number>(n + 1).fill(Number.MAX_SAFE_INTEGER);
   dp[0] = 0;
 
   for (let i = 1; i <= n; i++) {

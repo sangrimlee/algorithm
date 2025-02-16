@@ -11,7 +11,9 @@ export function getFinalState(nums: number[], k: number, multiplier: number): nu
   });
 
   while (0 < k) {
-    const [minValue, minIndex] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [minValue, minIndex] = peek;
     nums[minIndex] = minValue * multiplier;
     heap.push([minValue * multiplier, minIndex]);
     k -= 1;

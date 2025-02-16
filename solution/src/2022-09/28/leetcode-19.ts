@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 19. Remove Nth Node From End of List
@@ -26,7 +26,7 @@ export function removeNthFromEnd(head: ListNode | null, n: number): ListNode | n
     if (prevNode) prevNode = prevNode.next;
   }
 
-  if (prevNode && prevNode.next) {
+  if (prevNode?.next) {
     prevNode.next = prevNode.next.next;
   }
 

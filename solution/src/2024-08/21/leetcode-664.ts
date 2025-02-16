@@ -10,7 +10,7 @@ export function strangePrinter(s: string): number {
   }
 
   const dp: number[][] = Array.from({ length: n }, () =>
-    new Array(n).fill(Number.MAX_SAFE_INTEGER),
+    new Array<number>(n).fill(Number.MAX_SAFE_INTEGER),
   );
   for (let start = n - 1; 0 <= start; start--) {
     dp[start][start] = 1;

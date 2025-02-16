@@ -11,7 +11,8 @@ import {
 } from '@/lib/template';
 
 import { EXTNAME } from '@/constants';
-import { CodingSite, LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
+import type { LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
+import { CodingSite } from '@/types';
 import { createSolutionPageMeta } from '../template/page';
 
 async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
@@ -19,7 +20,7 @@ async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath
     const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
     const template = await createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
     await ensureWriteFile(pagePath, template);
-  } catch (error) {
+  } catch (_error) {
     const template = await createLeetCodeSolutionPageTemplate(solution);
     await ensureWriteFile(pagePath, template);
   }

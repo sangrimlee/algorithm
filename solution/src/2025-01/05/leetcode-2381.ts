@@ -4,7 +4,7 @@
  */
 export function shiftingLetters(s: string, shifts: number[][]): string {
   const n = s.length;
-  const shiftDiff = new Array(n + 1).fill(0);
+  const shiftDiff = new Array<number>(n + 1).fill(0);
   for (const [start, end, direction] of shifts) {
     const shift = direction === 1 ? 1 : -1;
     shiftDiff[start] += shift;

@@ -9,7 +9,7 @@ describe('2023-09-17: LeetCode 847', () => {
     expect(shortestPathLength([[1], [0, 2, 4], [1, 3, 4], [2], [1, 2]])).toBe(4);
   });
 
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(shortestPathLength([[]])).toBe(0);
   });
 });

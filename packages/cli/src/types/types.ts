@@ -10,10 +10,10 @@ export interface LeetCodeQuestion {
   title: string;
   titleSlug: string;
   content: string;
-  codeSnippets: Array<{
+  codeSnippets: {
     langSlug: string;
     code: string;
-  }>;
+  }[];
 }
 
 export interface BaseSolution {

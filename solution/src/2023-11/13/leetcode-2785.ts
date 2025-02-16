@@ -4,7 +4,10 @@
  */
 export function sortVowels(s: string): string {
   const isVowel = (char: string) => /[aeiou]/i.test(char);
-  const vowels = [...s].filter(isVowel).sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
+  const vowels = s
+    .split('')
+    .filter(isVowel)
+    .sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
 
   let answer = '';
   let vowelIndex = 0;

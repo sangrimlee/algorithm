@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/latest-time-by-replacing-hidden-digits
  */
 export function maximumTime(time: string): string {
-  const times = [...time];
+  const times = time.split('');
   if (times[0] === '?') {
     times[0] = times[1] === '?' || times[1] <= '3' ? '2' : '1';
   }

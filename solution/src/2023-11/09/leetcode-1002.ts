@@ -27,5 +27,5 @@ export function commonChars(words: string[]): string[] {
     charCounter(words[0]),
   );
 
-  return [...counter.entries()].flatMap(([char, count]) => new Array(count).fill(char));
+  return [...counter.entries()].flatMap(([char, count]) => new Array<string>(count).fill(char));
 }

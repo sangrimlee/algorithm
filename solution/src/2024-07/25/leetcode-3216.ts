@@ -7,7 +7,7 @@ export function getSmallestString(s: string): string {
   for (let i = 0; i < n - 1; i++) {
     const [left, right] = [parseInt(s[i]), parseInt(s[i + 1])];
     if ((left + right) % 2 === 0 && left > right) {
-      return `${s.substring(0, i)}${right}${left}${s.substring(i + 2)}`;
+      return `${s.substring(0, i)}${right.toString()}${left.toString()}${s.substring(i + 2)}`;
     }
   }
   return s;

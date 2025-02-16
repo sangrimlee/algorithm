@@ -1,19 +1,26 @@
 {
   "name": "@algorithm/cli",
-  "description": "Template generation cli",
   "version": "1.0.3",
-  "license": "MIT",
   "private": true,
+  "description": "Template generation cli",
+  "type": "module",
   "bin": {
-    "algorithm": "./bin/algorithm.cjs",
-    "markdown": "./bin/markdown.cjs"
+    "algorithm": "./bin/algorithm.js",
+    "markdown": "./bin/markdown.js"
   },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
+    "clean": "git clean -xdf .turbo dist node_modules",
     "dev": "tsup --watch",
-    "lint": "eslint --fix \"src/**/*.ts\"",
-    "format": "prettier --write --cache \"./src/**/*.ts\""
+    "format": "prettier . --check --cache --ignore-path ../../.gitignore",
+    "lint": "eslint --cache",
+    "typecheck": "tsc --noEmit"
   },
+  "prettier": "@algorithm/prettier-config",
   "dependencies": {
     "axios": "^1.6.7",
     "cheerio": "^1.0.0-rc.12",
@@ -21,17 +28,17 @@
     "dotenv": "^16.3.1",
     "glob": "^10.3.10",
     "inquirer": "8.2.5",
-    "prettier": "^3.0.3",
+    "prettier": "catalog:",
     "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
     "@algorithm/eslint-config": "workspace:*",
+    "@algorithm/prettier-config": "workspace:*",
     "@algorithm/tsconfig": "workspace:*",
     "@types/inquirer": "8.2.6",
-    "@types/node": "^20.8.4",
-    "eslint": "^8.51.0",
-    "ts-node": "^10.9.1",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
     "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "catalog:"
   }
 }

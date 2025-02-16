@@ -10,7 +10,7 @@ export function findingUsersActiveMinutes(logs: number[][], k: number): number[]
     logById.set(id, log);
   }
 
-  const answer = new Array(k).fill(0);
+  const answer = new Array<number>(k).fill(0);
   for (const log of logById.values()) {
     const uam = log.size;
     answer[uam - 1] += 1;

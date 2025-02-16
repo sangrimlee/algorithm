@@ -25,7 +25,7 @@ export function findMaximizedCapital(
     if (heap.isEmpty) {
       return totalCapital;
     }
-    totalCapital += heap.pop()!;
+    totalCapital += heap.pop() ?? 0;
   }
   return totalCapital;
 }

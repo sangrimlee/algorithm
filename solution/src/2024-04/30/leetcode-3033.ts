@@ -4,7 +4,7 @@
  */
 export function modifiedMatrix(matrix: number[][]): number[][] {
   const [m, n] = [matrix.length, matrix[0].length];
-  const answer = Array.from({ length: m }, () => new Array(n).fill(0));
+  const answer = Array.from({ length: m }, () => new Array<number>(n).fill(0));
   for (let col = 0; col < n; col++) {
     let maxValue = -1;
     for (let row = 0; row < m; row++) {

@@ -14,10 +14,11 @@ export function smallestChair(times: number[][], targetFriend: number): number {
   const heap = new Heap<number[]>((a, b) => a[0] - b[0]);
   const friends: number[][] = times.map((value, i) => [...value, i]).sort((a, b) => a[0] - b[0]);
   for (const [arrival, leaving, friend] of friends) {
-    while (!heap.isEmpty && heap.peek![0] <= arrival) {
-      seats.push(heap.pop()![1]);
+    while (!heap.isEmpty && heap.peek && heap.peek[0] <= arrival) {
+      seats.push(heap.peek[1]);
+      heap.pop();
     }
-    const seat = seats.pop()!;
+    const seat = seats.pop() ?? -1;
     heap.push([leaving, seat]);
     if (friend === targetFriend) {
       return seat;

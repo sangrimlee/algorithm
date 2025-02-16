@@ -7,10 +7,13 @@ export function getLucky(s: string, k: number): number {
     return char.charCodeAt(0) - 'a'.charCodeAt(0) + 1;
   }
   function convert(s: string) {
-    return [...s].map(getAlphabetPosition).join('');
+    return s.split('').map(getAlphabetPosition).join('');
   }
   function transform(s: string) {
-    return [...s].reduce((prev, char) => prev + parseInt(char), 0).toString();
+    return s
+      .split('')
+      .reduce((prev, char) => prev + parseInt(char), 0)
+      .toString();
   }
 
   let answer = convert(s);

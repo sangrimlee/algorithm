@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 543. Diameter of Binary Tree

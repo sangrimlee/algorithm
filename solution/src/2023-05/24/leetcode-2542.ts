@@ -19,7 +19,7 @@ export function maxScore(nums1: number[], nums2: number[], k: number): number {
   let answer = sumValue * pairs[k - 1][1];
 
   for (const i of range(k, n)) {
-    sumValue -= heap.pop() || 0;
+    sumValue -= heap.pop() ?? 0;
     sumValue += pairs[i][0];
     heap.push(pairs[i][0]);
 

@@ -28,7 +28,10 @@ export class LRUCache {
   put(key: number, value: number): void {
     this.update(key, value);
     if (this.capacity < this.cache.size) {
-      this.cache.delete(this.cache.keys().next().value);
+      const lastKey = this.cache.keys().next().value;
+      if (lastKey !== undefined) {
+        this.cache.delete(lastKey);
+      }
     }
   }
 }

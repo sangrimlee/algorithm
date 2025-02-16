@@ -5,7 +5,7 @@
 export function roughKeyboard(keymap: string[], targets: string[]): number[] {
   const createKeyMap = (keymap: string) => {
     const keyMap = new Map<string, number>();
-    [...keymap].forEach((key, i) => {
+    keymap.split('').forEach((key, i) => {
       if (keyMap.has(key)) {
         return;
       }
@@ -14,11 +14,11 @@ export function roughKeyboard(keymap: string[], targets: string[]): number[] {
     return keyMap;
   };
 
-  const findLeastPressCharTime = (keyMaps: Array<Map<string, number>>, char: string) => {
-    return keyMaps.reduce((prev, keyMap) => Math.min(prev, keyMap.get(char) || Infinity), Infinity);
+  const findLeastPressCharTime = (keyMaps: Map<string, number>[], char: string) => {
+    return keyMaps.reduce((prev, keyMap) => Math.min(prev, keyMap.get(char) ?? Infinity), Infinity);
   };
 
-  const findLeastPressTargetTime = (keyMaps: Array<Map<string, number>>, target: string) => {
+  const findLeastPressTargetTime = (keyMaps: Map<string, number>[], target: string) => {
     let totalPressTime = 0;
     for (const char of target) {
       const pressTime = findLeastPressCharTime(keyMaps, char);

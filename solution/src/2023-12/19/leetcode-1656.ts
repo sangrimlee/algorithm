@@ -10,7 +10,7 @@ export class OrderedStream {
   constructor(n: number) {
     this.ptr = 0;
     this.size = n;
-    this.data = new Array(n).fill('');
+    this.data = new Array<string>(n).fill('');
   }
 
   insert(idKey: number, value: string): string[] {

@@ -4,8 +4,8 @@
  */
 export function maxIncreaseKeepingSkyline(grid: number[][]): number {
   const n = grid.length;
-  const maxRow = new Array(n).fill(0);
-  const maxCol = new Array(n).fill(0);
+  const maxRow = new Array<number>(n).fill(0);
+  const maxCol = new Array<number>(n).fill(0);
 
   for (let row = 0; row < n; row++) {
     for (let col = 0; col < n; col++) {

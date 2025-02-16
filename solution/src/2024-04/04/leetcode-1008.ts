@@ -11,7 +11,7 @@ export function bstFromPreorder(preorder: number[]): TreeNode | null {
     if (stack.length === 0 || bound < stack[stack.length - 1]) {
       return null;
     }
-    const node = new TreeNode(stack.pop()!);
+    const node = new TreeNode(stack.pop());
     node.left = build(node.val);
     node.right = build(bound);
     return node;

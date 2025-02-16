@@ -74,7 +74,7 @@ class Heap {
 
   pop(): number {
     if (this.length <= 1) {
-      return this.heap.pop() || 0;
+      return this.heap.pop() ?? 0;
     }
     const result = this.peek;
     this.swap(0, this.length - 1);

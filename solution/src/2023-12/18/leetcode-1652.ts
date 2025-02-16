@@ -4,7 +4,7 @@
  */
 export function decrypt(code: number[], k: number): number[] {
   if (k === 0) {
-    return new Array(code.length).fill(0);
+    return new Array<number>(code.length).fill(0);
   }
 
   const sum = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);

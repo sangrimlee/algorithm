@@ -1,12 +1,13 @@
+/* eslint-disable */
+
 /**
  * 2694. Event Emitter
  * https://leetcode.com/problems/event-emitter
  */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 type Callback = (...args: any[]) => any;
-type Subscription = {
+interface Subscription {
   unsubscribe: () => void;
-};
+}
 
 export class EventEmitter {
   private readonly events: Map<string, Set<Callback>>;

@@ -1,4 +1,4 @@
-import { NArrayTreeNode } from '@algorithm/lib';
+import type { NArrayTreeNode } from '@algorithm/lib';
 
 /**
  * 559. Maximum Depth of N-ary Tree

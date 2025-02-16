@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 import { allPossibleFBT } from './leetcode-894';
 
 describe('2023-07-23: LeetCode 894', () => {

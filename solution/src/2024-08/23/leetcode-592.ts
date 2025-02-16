@@ -15,7 +15,7 @@ export function fractionAddition(expression: string): string {
     numerator /= gcdValue;
     denominator /= gcdValue;
   }
-  return `${numerator}/${denominator}`;
+  return `${numerator.toString()}/${denominator.toString()}`;
 }
 
 function gcd(a: number, b: number): number {

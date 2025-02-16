@@ -9,13 +9,13 @@ export function findWinners(matches: number[][]): number[][] {
   for (const [winner, loser] of matches) {
     players.add(winner);
     players.add(loser);
-    lostCounts.set(loser, (lostCounts.get(loser) || 0) + 1);
+    lostCounts.set(loser, (lostCounts.get(loser) ?? 0) + 1);
   }
 
   const notLostAnyMatches: number[] = [];
   const lostOneMatch: number[] = [];
   for (const player of players) {
-    const lostCount = lostCounts.get(player) || 0;
+    const lostCount = lostCounts.get(player) ?? 0;
     if (1 < lostCount) {
       continue;
     }

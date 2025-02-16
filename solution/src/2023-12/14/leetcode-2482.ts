@@ -4,8 +4,8 @@
  */
 export function onesMinusZeros(grid: number[][]): number[][] {
   const [m, n] = [grid.length, grid[0].length];
-  const onesRow = new Array(m).fill(0);
-  const onesCol = new Array(n).fill(0);
+  const onesRow = new Array<number>(m).fill(0);
+  const onesCol = new Array<number>(n).fill(0);
   grid.forEach((row, i) => {
     row.forEach((value, j) => {
       if (value === 1) {

@@ -3,13 +3,13 @@
  * https://leetcode.com/problems/number-of-flowers-in-full-bloom
  */
 export function fullBloomFlowers(flowers: number[][], people: number[]): number[] {
-  const blooms = new Map();
+  const blooms = new Map<number, number>();
   for (const [start, end] of flowers) {
     blooms.set(start, (blooms.get(start) ?? 0) + 1);
     blooms.set(end + 1, (blooms.get(end + 1) ?? 0) - 1);
   }
 
-  const answer = new Array(people.length).fill(0);
+  const answer = new Array<number>(people.length).fill(0);
   const times = [...blooms.keys()].sort((a, b) => a - b);
   const peopleWithIndex = people
     .map((time, peopleIndex) => ({ time, peopleIndex }))

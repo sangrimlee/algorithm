@@ -4,7 +4,7 @@ describe('2022-07-04: LeetCode 135', () => {
   test('Example 1', () => {
     expect(candy([1, 0, 2])).toBe(5);
   });
-  test('Example 1', () => {
+  test('Example 2', () => {
     expect(candy([1, 2, 2])).toBe(4);
   });
   test('Example 3', () => {

@@ -12,7 +12,7 @@ describe('2022-09-04: LeetCode 987', () => {
     expect(verticalTraversal(root)).toEqual([[4], [2], [1, 5, 6], [3], [7]]);
   });
 
-  test('Example 2', () => {
+  test('Example 3', () => {
     const root = createTree([1, 2, 3, 4, 6, 5, 7]);
     expect(verticalTraversal(root)).toEqual([[4], [2], [1, 5, 6], [3], [7]]);
   });

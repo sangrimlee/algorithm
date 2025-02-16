@@ -8,8 +8,8 @@ export function countSubarrays(nums: number[], k: number): number {
   let answer = 0;
   let count = 0;
   let start = 0;
-  for (let end = 0; end < nums.length; end++) {
-    count += nums[end] === maxElement ? 1 : 0;
+  for (const num of nums) {
+    count += num === maxElement ? 1 : 0;
     while (k <= count) {
       count -= nums[start] === maxElement ? 1 : 0;
       start += 1;

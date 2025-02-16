@@ -9,7 +9,7 @@
  */
 export function hIndex(citations: number[]): number {
   const n = citations.length;
-  const counts = new Array(n + 1).fill(0);
+  const counts = new Array<number>(n + 1).fill(0);
   for (const citation of citations) {
     if (n <= citation) {
       counts[n] += 1;

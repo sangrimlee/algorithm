@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/course-schedule
  */
 export function canFinish(numCourses: number, prerequisites: number[][]): boolean {
-  const indegrees: number[] = new Array(numCourses).fill(0);
+  const indegrees: number[] = new Array<number>(numCourses).fill(0);
   const graph: number[][] = Array.from({ length: numCourses }).map(() => []);
   prerequisites.forEach(([a, b]) => {
     indegrees[a] += 1;

@@ -26,8 +26,8 @@ export function calculate(s: string): number {
       [result, sign] = [0, 1];
     } else if (char === ')') {
       result += sign * num;
-      result *= signs.pop() || 1;
-      result += nums.pop() || 0;
+      result *= signs.pop() ?? 1;
+      result += nums.pop() ?? 0;
       num = 0;
     }
   }

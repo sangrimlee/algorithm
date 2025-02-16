@@ -24,10 +24,9 @@ export function smallestEquivalentString(s1: string, s2: string, baseStr: string
   }
 
   const lexicographicallySmallest = findLexicographicallySmallest(graph);
-  return [...baseStr].reduce(
-    (prev, curr) => prev + (lexicographicallySmallest.get(curr) || curr),
-    '',
-  );
+  return baseStr
+    .split('')
+    .reduce((prev, curr) => prev + (lexicographicallySmallest.get(curr) ?? curr), '');
 }
 
 const findLexicographicallySmallest = (graph: Map<string, Set<string>>): Map<string, string> => {

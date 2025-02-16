@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/number-of-wonderful-substrings
  */
 export function wonderfulSubstrings(word: string): number {
-  const count = new Array(1025).fill(0);
+  const count = new Array<number>(1025).fill(0);
   count[0] = 1;
 
   let answer = 0;

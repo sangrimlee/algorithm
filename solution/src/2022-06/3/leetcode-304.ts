@@ -11,7 +11,9 @@ export class NumMatrix {
   constructor(matrix: number[][]) {
     this.m = matrix.length;
     this.n = matrix[0].length;
-    this.sumMatrix = Array.from({ length: this.m + 1 }).map(() => new Array(this.n + 1).fill(0));
+    this.sumMatrix = Array.from({ length: this.m + 1 }).map(() =>
+      new Array<number>(this.n + 1).fill(0),
+    );
     matrix.forEach((row, rowIndex) => {
       row.forEach((num, colIndex) => {
         this.sumMatrix[rowIndex + 1][colIndex + 1] =

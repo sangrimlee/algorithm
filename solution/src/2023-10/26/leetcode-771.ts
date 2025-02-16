@@ -4,5 +4,5 @@
  */
 export function numJewelsInStones(jewels: string, stones: string): number {
   const jewel = new Set(jewels);
-  return [...stones].filter((stone) => jewel.has(stone)).length;
+  return stones.split('').filter((stone) => jewel.has(stone)).length;
 }

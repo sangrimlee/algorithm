@@ -4,8 +4,8 @@
  */
 export function luckyNumbers(matrix: number[][]): number[] {
   const [m, n] = [matrix.length, matrix[0].length];
-  const minRows = new Array(m).fill(Number.MAX_SAFE_INTEGER);
-  const maxCols = new Array(n).fill(Number.MIN_SAFE_INTEGER);
+  const minRows = new Array<number>(m).fill(Number.MAX_SAFE_INTEGER);
+  const maxCols = new Array<number>(n).fill(Number.MIN_SAFE_INTEGER);
   matrix.forEach((rows, row) => {
     rows.forEach((num, col) => {
       minRows[row] = Math.min(minRows[row], num);

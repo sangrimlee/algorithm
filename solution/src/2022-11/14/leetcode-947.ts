@@ -8,11 +8,11 @@ export function removeStones(stones: number[][]): number {
   const visited = new Map<string, boolean>();
 
   for (const [y, x] of stones) {
-    rows.set(y, [...(rows.get(y) || []), x]);
-    cols.set(x, [...(cols.get(x) || []), y]);
+    rows.set(y, [...(rows.get(y) ?? []), x]);
+    cols.set(x, [...(cols.get(x) ?? []), y]);
   }
 
-  const createKey = (y: number, x: number) => `${y}-${x}`;
+  const createKey = (y: number, x: number) => `${y.toString()}-${x.toString()}`;
 
   const dfs = (y: number, x: number) => {
     const key = createKey(y, x);

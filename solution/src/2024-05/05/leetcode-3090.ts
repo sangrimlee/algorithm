@@ -5,7 +5,7 @@
 export function maximumLengthSubstring(s: string): number {
   const n = s.length;
   const aCode = 'a'.charCodeAt(0);
-  const charCount = new Array(26).fill(0);
+  const charCount = new Array<number>(26).fill(0);
 
   let answer = 0;
   let [start, end] = [0, 0];

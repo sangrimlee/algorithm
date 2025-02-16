@@ -7,7 +7,7 @@ export function decompressRLElist(nums: number[]): number[] {
   const answer: number[] = [];
   for (let i = 0; i < n; i += 2) {
     const [freq, val] = nums.slice(i, i + 2);
-    answer.push(...new Array(freq).fill(val));
+    answer.push(...new Array<number>(freq).fill(val));
   }
   return answer;
 }

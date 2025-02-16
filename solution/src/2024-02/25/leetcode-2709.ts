@@ -45,7 +45,7 @@ export function canTraverseAllPairs(nums: number[]): boolean {
     while (divisor * divisor <= num) {
       if (num % divisor === 0) {
         if (firstIndices.has(divisor)) {
-          union(i, firstIndices.get(divisor)!);
+          union(i, firstIndices.get(divisor) ?? 0);
         } else {
           firstIndices.set(divisor, i);
         }
@@ -58,7 +58,7 @@ export function canTraverseAllPairs(nums: number[]): boolean {
 
     if (1 < num) {
       if (firstIndices.has(num)) {
-        union(i, firstIndices.get(num)!);
+        union(i, firstIndices.get(num) ?? 0);
       } else {
         firstIndices.set(num, i);
       }

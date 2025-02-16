@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 /**
  * 2624. Snail Traversal
  * https://leetcode.com/problems/snail-traversal
@@ -12,7 +14,7 @@ Array.prototype.snail = function (rowsCount: number, colsCount: number) {
   if (this.length !== rowsCount * colsCount) {
     return [];
   }
-  const arr = Array.from({ length: rowsCount }).map(() => new Array(colsCount).fill(0));
+  const arr = Array.from({ length: rowsCount }).map(() => new Array<number>(colsCount).fill(0));
 
   for (let col = 0; col < colsCount; col++) {
     for (let row = 0; row < rowsCount; row++) {

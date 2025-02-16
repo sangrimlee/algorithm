@@ -11,8 +11,8 @@ export class NeighborSum {
   constructor(grid: number[][]) {
     this.n = grid.length;
     this.grid = grid;
-    this.adjecentSums = new Array(this.n ** 2).fill(0);
-    this.diagonalSums = new Array(this.n ** 2).fill(0);
+    this.adjecentSums = new Array<number>(this.n ** 2).fill(0);
+    this.diagonalSums = new Array<number>(this.n ** 2).fill(0);
     this.initSums();
   }
 

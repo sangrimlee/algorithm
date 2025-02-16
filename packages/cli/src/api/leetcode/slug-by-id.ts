@@ -10,7 +10,7 @@ interface GetLeetCodeAllProblemResponse {
   paidOnly: boolean;
   title: string;
   titleSlug: string;
-  topicTags: Array<{ name: string; id: string; slug: string }>;
+  topicTags: { name: string; id: string; slug: string }[];
   hasSolution: boolean;
   hasVideoSolution: boolean;
   totalAcceptedRaw: number;

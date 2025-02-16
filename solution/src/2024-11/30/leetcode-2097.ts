@@ -7,7 +7,7 @@ export function validArrangement(pairs: number[][]): number[][] {
   const degrees = new Map<number, number>();
   for (const [start, end] of pairs) {
     if (graph.has(start)) {
-      graph.get(start)!.push(end);
+      graph.get(start)?.push(end);
     } else {
       graph.set(start, [end]);
     }
@@ -27,12 +27,12 @@ export function validArrangement(pairs: number[][]): number[][] {
   while (0 < stack.length) {
     let node = stack[stack.length - 1];
     let nextNodes = graph.get(node) ?? [];
-    while (nextNodes && 0 < nextNodes.length) {
-      stack.push(nextNodes.pop()!);
+    while (0 < nextNodes.length) {
+      stack.push(nextNodes.pop() ?? 0);
       node = stack[stack.length - 1];
       nextNodes = graph.get(node) ?? [];
     }
-    routes.push(stack.pop()!);
+    routes.push(stack.pop() ?? 0);
   }
 
   const answer: number[][] = [];

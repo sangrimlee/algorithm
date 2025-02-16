@@ -25,7 +25,7 @@ export function minDays(grid: number[][]): number {
 
 function countIslands(grid: number[][]): number {
   const [m, n] = [grid.length, grid[0].length];
-  const visited = Array.from({ length: m }, () => new Array(n).fill(false));
+  const visited = Array.from({ length: m }, () => new Array<boolean>(n).fill(false));
 
   let islands = 0;
   for (let y = 0; y < m; y++) {

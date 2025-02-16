@@ -37,8 +37,7 @@ describe('2024-12-24: LeetCode 3203', () => {
       ),
     ).toBe(5);
   });
-
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(
       minimumDiameterAfterMerge(
         [],

@@ -32,7 +32,9 @@ class PrefixSum {
 
   constructor(arr: number[][]) {
     this.n = arr.length;
-    this.prefixSum = Array.from({ length: this.n + 1 }).map(() => new Array(this.n + 1).fill(0));
+    this.prefixSum = Array.from({ length: this.n + 1 }).map(() =>
+      new Array<number>(this.n + 1).fill(0),
+    );
     arr.forEach((row, y) => {
       row.forEach((num, x) => {
         this.prefixSum[y + 1][x + 1] =

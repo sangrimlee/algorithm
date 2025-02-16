@@ -3,8 +3,8 @@
  * https://leetcode.com/problems/cells-with-odd-values-in-a-matrix
  */
 export function oddCells(m: number, n: number, indices: number[][]): number {
-  const rows = new Array(m).fill(false);
-  const cols = new Array(n).fill(false);
+  const rows = new Array<number>(m).fill(0);
+  const cols = new Array<number>(n).fill(0);
   for (const [r, c] of indices) {
     rows[r] += 1;
     cols[c] += 1;

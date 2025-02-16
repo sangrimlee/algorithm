@@ -8,7 +8,7 @@ export function halvesAreAlike(s: string): boolean {
 
   const isVowel = (char: string) => /^[aeiou]$/i.test(char);
   const countVowel = (s: string) =>
-    [...s].reduce((prev, char) => (isVowel(char) ? prev + 1 : prev), 0);
+    s.split('').reduce((prev, char) => (isVowel(char) ? prev + 1 : prev), 0);
 
   return countVowel(a) === countVowel(b);
 }

@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 1609. Even Odd Tree
@@ -21,8 +21,12 @@ export function isEvenOddTree(root: TreeNode | null): boolean {
         return false;
       }
       prevValue = currentValue;
-      node.left && nextNodes.push(node.left);
-      node.right && nextNodes.push(node.right);
+      if (node.left) {
+        nextNodes.push(node.left);
+      }
+      if (node.right) {
+        nextNodes.push(node.right);
+      }
     }
     nodes = nextNodes;
     level += 1;

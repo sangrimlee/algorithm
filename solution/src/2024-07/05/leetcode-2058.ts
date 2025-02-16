@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
@@ -33,7 +33,7 @@ export function nodesBetweenCriticalPoints(head: ListNode | null): number[] {
 }
 
 function isCriticalPoint(prevNode: ListNode | null, currentNode: ListNode | null) {
-  if (!prevNode || !currentNode || !currentNode.next) {
+  if (!prevNode || !currentNode?.next) {
     return false;
   }
   return (

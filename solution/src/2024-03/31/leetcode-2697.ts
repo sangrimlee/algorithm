@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/lexicographically-smallest-palindrome
  */
 export function makeSmallestPalindrome(s: string): string {
-  const chars = [...s];
+  const chars = s.split('');
   let [start, end] = [0, s.length - 1];
   while (start <= end) {
     if (chars[start] < chars[end]) {

@@ -4,7 +4,7 @@
  */
 export function maxSumAfterPartitioning(arr: number[], k: number): number {
   const n = arr.length;
-  const dp = new Array(n + 1).fill(0);
+  const dp = new Array<number>(n + 1).fill(0);
 
   for (let i = 1; i <= n; i++) {
     let maxValue = 0;

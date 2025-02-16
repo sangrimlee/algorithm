@@ -23,7 +23,7 @@ function createGraph(n: number, edges: number[][]): number[][] {
 
 function findDiameter(n: number, graph: number[][]): number {
   let queue: number[] = [];
-  const degrees: number[] = new Array(n).fill(0);
+  const degrees: number[] = new Array<number>(n).fill(0);
   for (let node = 0; node < n; node++) {
     degrees[node] = graph[node].length;
     if (degrees[node] === 1) {

@@ -5,7 +5,7 @@ import { range } from '@algorithm/lib';
  * https://leetcode.com/problems/reverse-string-ii
  */
 export function reverseStr(s: string, k: number): string {
-  const reverse = (s: string) => [...s].reverse().join('');
+  const reverse = (s: string) => s.split('').reverse().join('');
 
   const n = s.length;
   let answer = '';

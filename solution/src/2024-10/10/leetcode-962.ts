@@ -14,7 +14,7 @@ export function maxWidthRamp(nums: number[]): number {
   let answer = 0;
   for (let i = n - 1; 0 <= i; i--) {
     while (0 < stack.length && nums[stack[stack.length - 1]] <= nums[i]) {
-      answer = Math.max(answer, i - stack.pop()!);
+      answer = Math.max(answer, i - (stack.pop() ?? 0));
     }
   }
   return answer;

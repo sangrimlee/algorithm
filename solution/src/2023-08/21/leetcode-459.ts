@@ -4,5 +4,5 @@
  */
 export function repeatedSubstringPattern(s: string): boolean {
   const concatenated = s + s;
-  return concatenated.slice(1, -1).indexOf(s) !== -1;
+  return concatenated.slice(1, -1).includes(s);
 }

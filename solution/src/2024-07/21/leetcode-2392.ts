@@ -15,7 +15,7 @@ export function buildMatrix(
 
   const matrix = Array.from({ length: k }, () => new Array<number>(k).fill(0));
 
-  const colRank = new Array(k).fill(0);
+  const colRank = new Array<number>(k).fill(0);
   colOrder.forEach((col, i) => {
     colRank[col] = i;
   });
@@ -26,7 +26,7 @@ export function buildMatrix(
 }
 
 function topologicalSort(k: number, edges: number[][]) {
-  const indegrees: number[] = new Array(k).fill(0);
+  const indegrees: number[] = new Array<number>(k).fill(0);
   const graph: number[][] = Array.from({ length: k }, () => []);
   for (const [start, end] of edges) {
     indegrees[end - 1] += 1;

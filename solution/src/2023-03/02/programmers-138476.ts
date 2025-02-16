@@ -5,7 +5,7 @@
 export function solution(k: number, tangerine: number[]): number {
   const sizeCounts = new Map<number, number>();
   for (const size of tangerine) {
-    sizeCounts.set(size, (sizeCounts.get(size) || 0) + 1);
+    sizeCounts.set(size, (sizeCounts.get(size) ?? 0) + 1);
   }
 
   const counts = Array.from(sizeCounts.values()).sort((a, b) => b - a);

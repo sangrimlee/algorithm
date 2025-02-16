@@ -5,8 +5,8 @@
 export function findTheLongestBalancedSubstring(s: string): number {
   let answer = 0;
   let [zeros, ones] = [0, 0];
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '0') {
+  for (const char of s) {
+    if (char === '0') {
       zeros = 0 < ones ? 1 : zeros + 1;
       ones = 0;
     } else {

@@ -1,5 +1,5 @@
+import type { TreeNode } from '@algorithm/lib';
 import { range } from '@algorithm/lib';
-import { TreeNode } from '@algorithm/lib';
 
 /**
  * 872. Leaf-Similar Trees

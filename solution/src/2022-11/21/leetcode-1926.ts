@@ -11,7 +11,7 @@ export function nearestExit(maze: string[][], entrance: number[]): number {
     [0, -1],
     [0, 1],
   ];
-  const visited = new Array(n).fill(undefined).map(() => new Array(m).fill(false));
+  const visited = Array.from({ length: n }, () => new Array<boolean>(m).fill(false));
   visited[ey][ex] = true;
 
   const isExit = (y: number, x: number) => {

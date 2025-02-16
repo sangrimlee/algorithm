@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle
  */
 export function countPoints(points: number[][], queries: number[][]): number[] {
-  const answer = new Array(queries.length).fill(0);
+  const answer = new Array<number>(queries.length).fill(0);
   function getDistance(x1: number, y1: number, x2: number, y2: number): number {
     return (x1 - x2) ** 2 + (y1 - y2) ** 2;
   }

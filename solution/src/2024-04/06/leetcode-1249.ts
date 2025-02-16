@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses
  */
 export function minRemoveToMakeValid(s: string): string {
-  const chars = [...s];
+  const chars = s.split('');
   const stack: number[] = [];
 
   chars.forEach((char, i) => {
@@ -19,7 +19,10 @@ export function minRemoveToMakeValid(s: string): string {
   });
 
   while (0 < stack.length) {
-    chars[stack.pop()!] = '';
+    const i = stack.pop();
+    if (i !== undefined) {
+      chars[i] = '';
+    }
   }
 
   return chars.join('');

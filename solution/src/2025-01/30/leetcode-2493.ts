@@ -25,7 +25,7 @@ export function magnificentSets(n: number, edges: number[][]): number {
 }
 
 function getGroupSize(n: number, graph: number[][], node: number): number {
-  const prevDepth: number[] = new Array(n).fill(-1);
+  const prevDepth: number[] = new Array<number>(n).fill(-1);
   prevDepth[node] = 0;
 
   let depth = 0;
@@ -54,7 +54,7 @@ class DisjointSet {
 
   constructor(n: number) {
     this.parent = Array.from({ length: n }, (_, i) => i);
-    this.depth = new Array(n).fill(0);
+    this.depth = new Array<number>(n).fill(0);
   }
 
   find(node: number): number {

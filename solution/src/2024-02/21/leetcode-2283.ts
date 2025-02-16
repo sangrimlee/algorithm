@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value
  */
 export function digitCount(num: string): boolean {
-  const counts = new Array(10).fill(0);
+  const counts = new Array<number>(10).fill(0);
   for (const digit of num) {
     counts[+digit] += 1;
   }

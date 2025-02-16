@@ -10,7 +10,7 @@ export function subdomainVisits(cpdomains: string[]): string[] {
       visits.set(subdomain, (visits.get(subdomain) ?? 0) + parseInt(rep));
     }
   }
-  return [...visits].map(([subdomain, visit]) => `${visit} ${subdomain}`);
+  return [...visits].map(([subdomain, visit]) => `${visit.toString()} ${subdomain}`);
 }
 
 function* subdomains(domain: string) {

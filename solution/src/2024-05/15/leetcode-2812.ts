@@ -9,11 +9,13 @@ export function maximumSafenessFactor(grid: number[][]): number {
   const distances = findDistanceToThieves(grid);
 
   const heap = new Heap<number[]>((a, b) => b[0] - a[0]);
-  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
+  const visited: boolean[][] = Array.from({ length: n }, () => new Array<boolean>(n).fill(false));
 
   heap.push([distances[0][0], 0, 0]);
   while (!heap.isEmpty) {
-    const [distance, r, c] = heap.pop()!;
+    const peek = heap.pop();
+    if (peek === undefined) break;
+    const [distance, r, c] = peek;
     if (r === n - 1 && c === n - 1) {
       return distance;
     }
@@ -48,8 +50,8 @@ function findDistanceToThieves(grid: number[][]) {
     .flatMap((row, r) => row.map((_, c) => [r, c]))
     .filter(([r, c]) => grid[r][c] === 1);
 
-  const visited: boolean[][] = Array.from({ length: n }, () => new Array(n).fill(false));
-  const distances: number[][] = Array.from({ length: n }, () => new Array(n).fill(0));
+  const visited: boolean[][] = Array.from({ length: n }, () => new Array<boolean>(n).fill(false));
+  const distances: number[][] = Array.from({ length: n }, () => new Array<number>(n).fill(0));
 
   let depth = 0;
   let queue = thieves;

@@ -1,7 +1,7 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { createCodeBlockTemplate } from './code-block';
-import { LeetCodeSolution, ProgrammersSolution, Solution } from '@/types/types';
+import type { LeetCodeSolution, ProgrammersSolution, Solution } from '@/types/types';
 import { createFrontMatterTemplate } from './front-matter';
 import { createComponentTemplate } from './component';
 import { createTableTemplate } from './table';
@@ -90,10 +90,10 @@ function createIntroductionTableTemplate(solutions?: Solution[]) {
 
 export async function createIntroductionPageTemplate(groups: Map<CodingSite, Solution[]>) {
   const leetCodeTable = await createIntroductionTableTemplate(
-    groups.get(CodingSite.LeetCode) || [],
+    groups.get(CodingSite.LeetCode) ?? [],
   );
   const programmersTable = await createIntroductionTableTemplate(
-    groups.get(CodingSite.Programmers) || [],
+    groups.get(CodingSite.Programmers) ?? [],
   );
 
   const template = await format(

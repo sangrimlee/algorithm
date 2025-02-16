@@ -10,9 +10,9 @@ export function findAndReplacePattern(words: string[], pattern: string): string[
 function normalize(word: string): number[] {
   const result = [];
   const map = new Map<string, number>();
-  for (let i = 0; i < word.length; i++) {
-    const id = map.get(word[i]) ?? map.size;
-    map.set(word[i], id);
+  for (const char of word) {
+    const id = map.get(char) ?? map.size;
+    map.set(char, id);
     result.push(id);
   }
   return result;

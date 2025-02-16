@@ -23,7 +23,7 @@ export function reverseBetween(
 
   const currentNode = prevNode.next;
   for (let i = 0; i < right - left; i++) {
-    if (currentNode && currentNode.next) {
+    if (currentNode?.next) {
       const nextNode = currentNode.next;
       currentNode.next = nextNode.next;
       nextNode.next = prevNode.next;

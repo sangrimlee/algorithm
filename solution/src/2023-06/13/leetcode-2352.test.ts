@@ -8,7 +8,7 @@ describe('2023-06-13: LeetCode 2352', () => {
         [1, 7, 6],
         [2, 7, 7],
       ]),
-    ).toEqual(1);
+    ).toBe(1);
   });
   test('Example 2', () => {
     expect(
@@ -18,6 +18,6 @@ describe('2023-06-13: LeetCode 2352', () => {
         [2, 4, 2, 2],
         [2, 4, 2, 2],
       ]),
-    ).toEqual(3);
+    ).toBe(3);
   });
 });

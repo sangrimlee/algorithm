@@ -9,7 +9,7 @@ export function digitSum(s: string, k: number): string {
   let result = '';
   for (let i = 0; i < s.length; i += k) {
     const substr = s.substring(i, i + k);
-    const sum = [...substr].reduce((acc, c) => acc + parseInt(c), 0);
+    const sum = substr.split('').reduce((acc, c) => acc + parseInt(c), 0);
     result += sum.toString();
   }
   return digitSum(result, k);

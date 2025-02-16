@@ -11,7 +11,7 @@ export function minCost(grid: number[][]): number {
     [1, 0],
     [-1, 0],
   ];
-  const minCost: number[][] = Array.from({ length: m }, () => Array(n).fill(INF));
+  const minCost: number[][] = Array.from({ length: m }, () => Array<number>(n).fill(INF));
 
   function dfs(y: number, x: number, cost: number, queue: [number, number][]) {
     if (y < 0 || m <= y || x < 0 || n <= x || minCost[y][x] !== INF) {

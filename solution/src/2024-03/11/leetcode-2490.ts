@@ -5,7 +5,7 @@
 export function isCircularSentence(sentence: string): boolean {
   const n = sentence.length;
 
-  if (sentence[0] !== sentence[n - 1]) {
+  if (!sentence.startsWith(sentence[n - 1])) {
     return false;
   }
 

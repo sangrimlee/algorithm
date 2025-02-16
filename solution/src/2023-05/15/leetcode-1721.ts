@@ -1,4 +1,4 @@
-import { ListNode } from '@algorithm/lib';
+import type { ListNode } from '@algorithm/lib';
 
 /**
  * 1721. Swapping Nodes in a Linked List
@@ -25,7 +25,7 @@ export function swapNodes(head: ListNode | null, k: number): ListNode | null {
   let [startNode, endNode] = [head, kthNode];
 
   while (startNode.next !== null && endNode.next !== null) {
-    startNode = startNode?.next;
+    startNode = startNode.next;
     endNode = endNode.next;
   }
 

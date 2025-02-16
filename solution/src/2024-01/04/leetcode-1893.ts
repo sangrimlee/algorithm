@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/check-if-all-the-integers-in-a-range-are-covered
  */
 export function isCovered(ranges: number[][], left: number, right: number): boolean {
-  const covered = new Array(52).fill(0);
+  const covered = new Array<number>(52).fill(0);
   ranges.forEach(([start, end]) => {
     covered[start] += 1;
     covered[end + 1] -= 1;

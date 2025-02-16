@@ -5,14 +5,14 @@
 export function solution(toppings: number[]): number {
   const toppingCount = new Map<number, number>();
   for (const topping of toppings) {
-    toppingCount.set(topping, (toppingCount.get(topping) || 0) + 1);
+    toppingCount.set(topping, (toppingCount.get(topping) ?? 0) + 1);
   }
 
   let answer = 0;
   const currentCount = new Map<number, number>();
   for (const topping of toppings) {
-    toppingCount.set(topping, (toppingCount.get(topping) || 0) - 1);
-    currentCount.set(topping, (currentCount.get(topping) || 0) + 1);
+    toppingCount.set(topping, (toppingCount.get(topping) ?? 0) - 1);
+    currentCount.set(topping, (currentCount.get(topping) ?? 0) + 1);
 
     if (toppingCount.get(topping) === 0) {
       toppingCount.delete(topping);

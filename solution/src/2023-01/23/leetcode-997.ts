@@ -7,7 +7,7 @@ export function findJudge(n: number, trust: number[][]): number {
     return 1;
   }
 
-  const trustCount = new Array(n + 1).fill(0);
+  const trustCount = new Array<number>(n + 1).fill(0);
 
   for (const [a, b] of trust) {
     trustCount[a] -= 1;

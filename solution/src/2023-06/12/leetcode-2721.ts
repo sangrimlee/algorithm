@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/prefer-promise-reject-errors */
+
 /**
  * 2721. Execute Asynchronous Functions in Parallel
  * https://leetcode.com/problems/execute-asynchronous-functions-in-parallel
@@ -20,7 +22,7 @@ export function promiseAll<T>(funcs: (() => Promise<T>)[]): Promise<T[]> {
             resolve(result);
           }
         })
-        .catch((reason) => {
+        .catch((reason: unknown) => {
           reject(reason);
         });
     });

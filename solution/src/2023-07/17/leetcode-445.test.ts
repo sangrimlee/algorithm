@@ -18,7 +18,7 @@ describe('2023-07-17: LeetCode 445', () => {
     expect(linkedListToArr(addTwoNumbers(l1, l2))).toEqual([0]);
   });
 
-  test('Example 3', () => {
+  test('Example 4', () => {
     const l1 = createLinkedList([5]);
     const l2 = createLinkedList([5]);
     expect(linkedListToArr(addTwoNumbers(l1, l2))).toEqual([1, 0]);

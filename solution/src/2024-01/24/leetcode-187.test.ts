@@ -10,7 +10,7 @@ describe('2024-01-24: LeetCode 187', () => {
   test('Example 2', () => {
     expect(findRepeatedDnaSequences('AAAAAAAAAAAAA')).toEqual(['AAAAAAAAAA']);
   });
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(findRepeatedDnaSequences('AAAAAAAAAAA')).toEqual(['AAAAAAAAAA']);
   });
 });

@@ -1,4 +1,4 @@
-import { NArrayTreeNode as Node } from '@algorithm/lib';
+import type { NArrayTreeNode as Node } from '@algorithm/lib';
 
 /**
  * 590. N-ary Tree Postorder Traversal

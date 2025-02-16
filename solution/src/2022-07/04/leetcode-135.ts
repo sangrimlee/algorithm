@@ -4,7 +4,7 @@
  */
 export function candy(ratings: number[]): number {
   const n = ratings.length;
-  const candies = new Array(n).fill(1);
+  const candies = new Array<number>(n).fill(1);
   for (let i = 1; i < n; i++) {
     if (ratings[i - 1] < ratings[i]) {
       candies[i] = Math.max(candies[i], candies[i - 1] + 1);

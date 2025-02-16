@@ -25,11 +25,11 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
       <div
         className={cx(
           'hidden w-48 items-center justify-center border-r border-neutral-300',
-          'dark:border-neutral-700 sm:flex',
+          'sm:flex dark:border-neutral-700',
           codingSite === 'leetcode' ? 'bg-neutral-100 dark:bg-neutral-900' : 'bg-[#1E2A3C]',
         )}
       >
-        <CodingSiteLogo className={cx(codingSite === 'leetcode' ? 'w-25 h-6' : 'w-30 h-4')} />
+        <CodingSiteLogo className={cx(codingSite === 'leetcode' ? 'h-6 w-25' : 'h-4 w-30')} />
       </div>
       <div className="flex flex-1 items-center px-6">
         <div>
@@ -41,7 +41,7 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
             )}
           >
             문제 풀러가기
-            <LinkArrowIcon className="size-4 ml-1" />
+            <LinkArrowIcon className="ml-1 size-4" />
           </p>
         </div>
       </div>

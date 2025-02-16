@@ -36,7 +36,9 @@ class Trie {
   rootNode: TrieNode;
   constructor(products: string[]) {
     this.rootNode = new TrieNode();
-    products.forEach((product) => this.addProduct(product));
+    products.forEach((product) => {
+      this.addProduct(product);
+    });
   }
 
   addProduct(product: string) {

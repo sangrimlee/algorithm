@@ -5,7 +5,7 @@
 export function minimumRounds(tasks: number[]): number {
   const counts = new Map<number, number>();
   for (const task of tasks) {
-    counts.set(task, (counts.get(task) || 0) + 1);
+    counts.set(task, (counts.get(task) ?? 0) + 1);
   }
 
   let minimumRound = 0;

@@ -7,7 +7,7 @@ export function minDeletions(s: string): number {
 
   const counter = new Map<string, number>();
   for (const char of s) {
-    counter.set(char, (counter.get(char) || 0) + 1);
+    counter.set(char, (counter.get(char) ?? 0) + 1);
   }
 
   const used = new Map<number, boolean>();

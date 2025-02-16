@@ -4,7 +4,7 @@
  */
 export function numberOfSubarrays(nums: number[], k: number): number {
   const n = nums.length;
-  const count = new Array(n + 1).fill(0);
+  const count = new Array<number>(n + 1).fill(0);
   count[0] = 1;
 
   let answer = 0;

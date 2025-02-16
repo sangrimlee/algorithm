@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 1022. Sum of Root To Leaf Binary Numbers
@@ -15,8 +15,12 @@ export function sumRootToLeaf(root: TreeNode | null): number {
       answer += current;
       return;
     }
-    node.left && dfs(node.left, current);
-    node.right && dfs(node.right, current);
+    if (node.left) {
+      dfs(node.left, current);
+    }
+    if (node.right) {
+      dfs(node.right, current);
+    }
   };
   dfs(root);
   return answer;

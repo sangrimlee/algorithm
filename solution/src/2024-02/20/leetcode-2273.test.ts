@@ -7,7 +7,7 @@ describe('2024-02-20: LeetCode 2273', () => {
   test('Example 2', () => {
     expect(removeAnagrams(['a', 'b', 'c', 'd', 'e'])).toEqual(['a', 'b', 'c', 'd', 'e']);
   });
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(removeAnagrams(['a', 'b', 'a'])).toEqual(['a', 'b', 'a']);
   });
 });

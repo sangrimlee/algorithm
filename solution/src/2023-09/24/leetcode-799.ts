@@ -3,7 +3,9 @@
  * https://leetcode.com/problems/champagne-tower
  */
 export function champagneTower(poured: number, query_row: number, query_glass: number): number {
-  const dp = new Array(query_row + 1).fill(undefined).map((_, i) => new Array(i + 1).fill(0));
+  const dp = new Array(query_row + 1)
+    .fill(undefined)
+    .map((_, i) => new Array<number>(i + 1).fill(0));
   dp[0][0] = poured;
 
   for (let row = 0; row < query_row; row++) {

@@ -2,12 +2,16 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig((options) => {
   return {
-    minify: !options.watch,
     entry: {
-      algorithm: 'src/algorithm.ts',
-      markdown: 'src/markdown.ts',
+      algorithm: './src/algorithm.ts',
+      markdown: './src/markdown.ts',
     },
-    format: ['cjs'],
+    format: ['esm'],
+    sourcemap: true,
+    minify: !options.watch,
     clean: true,
+    dts: true,
+    target: 'node22',
+    outDir: 'dist',
   };
 });

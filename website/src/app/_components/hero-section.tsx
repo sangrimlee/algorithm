@@ -40,7 +40,7 @@ export const HeroSection = () => {
       <motion.h1
         variants={vairants.item}
         className={cx(
-          'font-logo mx-auto max-w-sm text-center text-3xl font-bold leading-[1.2] tracking-tight',
+          'mx-auto max-w-sm text-center font-logo text-3xl leading-[1.2] font-bold tracking-tight',
           'sm:max-w-lg sm:text-5xl sm:leading-[1.1]',
           'xl:max-w-xl xl:text-6xl',
           'text-gray-950 dark:text-gray-50',
@@ -70,7 +70,7 @@ export const HeroSection = () => {
           variant="default"
           size="lg"
           rounded="full"
-          className="min-w-44 hidden sm:inline-flex"
+          className="hidden min-w-44 sm:inline-flex"
         >
           <Link href="/solutions/leetcode/1">
             <span>LeetCode</span>
@@ -81,7 +81,7 @@ export const HeroSection = () => {
           variant="outline"
           size="lg"
           rounded="full"
-          className="min-w-44 hidden sm:inline-flex"
+          className="hidden min-w-44 sm:inline-flex"
         >
           <Link href="/solutions/programmers/1843">
             <span>Programmers</span>

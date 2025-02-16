@@ -12,7 +12,7 @@ export function partitionLabels(s: string): number[] {
   let startIndex = 0;
   let endIndex = 0;
   for (let i = 0; i < s.length; i++) {
-    endIndex = Math.max(endIndex, endIndices.get(s[i])!);
+    endIndex = Math.max(endIndex, endIndices.get(s[i]) ?? 0);
     if (endIndex === i) {
       answer.push(endIndex - startIndex + 1);
       startIndex = endIndex + 1;

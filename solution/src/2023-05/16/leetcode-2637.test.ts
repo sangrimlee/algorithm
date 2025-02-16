@@ -10,7 +10,7 @@ describe('2023-05-16: LeetCode 2637', () => {
       await sleep(100);
       return n * n;
     };
-    await expect(timeLimit(fn, 50)(5)).rejects.toEqual('Time Limit Exceeded');
+    await expect(timeLimit(fn, 50)(5)).rejects.toBe('Time Limit Exceeded');
   });
 
   test('Example 2', async () => {
@@ -31,11 +31,12 @@ describe('2023-05-16: LeetCode 2637', () => {
     await expect(timeLimit(fn, 150)(5, 10)).resolves.toBe(15);
   });
 
-  test('Example 3', async () => {
-    const fn = async () => {
-      throw 'Error';
+  test('Example 4', async () => {
+    const error = new Error('Error');
+    const fn = () => {
+      throw error;
     };
 
-    await expect(timeLimit(fn, 150)()).rejects.toEqual('Error');
+    await expect(timeLimit(fn, 150)()).rejects.toEqual(error);
   });
 });

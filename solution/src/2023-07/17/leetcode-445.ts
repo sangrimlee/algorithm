@@ -21,7 +21,7 @@ export function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNod
   let currentValue = 0;
   let prevNode: ListNode | null = null;
   while (0 < stack1.length || 0 < stack2.length) {
-    currentValue += (stack1.pop() || 0) + (stack2.pop() || 0);
+    currentValue += (stack1.pop() ?? 0) + (stack2.pop() ?? 0);
     prevNode = new ListNode(currentValue % 10, prevNode);
     currentValue = Math.floor(currentValue / 10);
   }

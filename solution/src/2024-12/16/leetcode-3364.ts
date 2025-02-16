@@ -4,7 +4,7 @@
  */
 export function minimumSumSubarray(nums: number[], l: number, r: number): number {
   const n = nums.length;
-  const prefixSum = new Array(n + 1).fill(0);
+  const prefixSum = new Array<number>(n + 1).fill(0);
   for (let i = 0; i < n; i++) {
     prefixSum[i + 1] = prefixSum[i] + nums[i];
   }

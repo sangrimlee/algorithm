@@ -20,7 +20,9 @@ export function removeZeroSumSublists(head: ListNode | null): ListNode | null {
   currentNode = newHead;
   while (currentNode !== null) {
     prefix += currentNode.val;
-    currentNode.next = visited.get(prefix)!.next;
+    const visitedNode = visited.get(prefix);
+    if (!visitedNode) break;
+    currentNode.next = visitedNode.next;
     currentNode = currentNode.next;
   }
   return newHead.next;

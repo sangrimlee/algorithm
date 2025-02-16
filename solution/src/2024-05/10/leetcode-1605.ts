@@ -4,7 +4,7 @@
  */
 export function restoreMatrix(rowSum: number[], colSum: number[]): number[][] {
   const [m, n] = [rowSum.length, colSum.length];
-  const answer = Array.from({ length: m }, () => new Array(n).fill(0));
+  const answer = Array.from({ length: m }, () => new Array<number>(n).fill(0));
   let [row, col] = [0, 0];
   while (row < m && col < n) {
     const value = Math.min(rowSum[row], colSum[col]);

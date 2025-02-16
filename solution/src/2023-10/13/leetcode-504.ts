@@ -11,7 +11,7 @@ export function convertToBase7(num: number): string {
   let n = Math.abs(num);
   let base7 = '';
   while (0 < n) {
-    base7 = `${n % 7}${base7}`;
+    base7 = `${(n % 7).toString()}${base7}`;
     n = Math.floor(n / 7);
   }
   return num < 0 ? `-${base7}` : base7;

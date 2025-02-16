@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+
 /**
  * 2619. Array Prototype Last
  * https://leetcode.com/problems/array-prototype-last

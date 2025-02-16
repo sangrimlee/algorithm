@@ -4,7 +4,7 @@
  */
 export function countTime(time: string): number {
   function getHour(hour: string) {
-    if (hour[0] === '?') {
+    if (hour.startsWith('?')) {
       return hour[1] === '?' ? 24 : hour[1] < '4' ? 3 : 2;
     }
     if (hour[1] === '?') {
@@ -14,7 +14,7 @@ export function countTime(time: string): number {
   }
 
   function getMinute(minute: string) {
-    if (minute[0] === '?') {
+    if (minute.startsWith('?')) {
       return minute[1] === '?' ? 60 : 6;
     }
     return minute[1] === '?' ? 10 : 1;

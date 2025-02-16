@@ -4,16 +4,24 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$"],
       "outputs": ["dist/**"]
     },
-    "dev": {
+    "clean": {
       "cache": false
+    },
+    "//#clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "format": {
+      "cache": true
     },
     "lint": {
       "dependsOn": ["^build", "^lint"],
-      "cache": true
-    },
-    "format": {
       "cache": true
     },
     "test": {
@@ -21,6 +29,10 @@
     },
     "test:watch": {
       "cache": false
+    },
+    "typecheck": {
+      "dependsOn": ["^build", "^typecheck"],
+      "cache": true
     }
   }
 }

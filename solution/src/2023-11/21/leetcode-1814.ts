@@ -5,7 +5,7 @@
 export function countNicePairs(nums: number[]): number {
   const MOD = 10 ** 9 + 7;
   const rev = (num: number) => {
-    return parseInt([...num.toString()].reverse().join(''), 10);
+    return parseInt(num.toString().split('').reverse().join(''), 10);
   };
 
   const counter = new Map<number, number>();

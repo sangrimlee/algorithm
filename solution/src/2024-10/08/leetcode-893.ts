@@ -18,5 +18,5 @@ function createGroup(s: string): string {
       odd[charCode] += 1;
     }
   }
-  return `${odd},${even}`;
+  return [odd, even].join(',');
 }

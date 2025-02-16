@@ -9,7 +9,7 @@ describe('2023-07-19: LeetCode 435', () => {
         [3, 4],
         [1, 3],
       ]),
-    ).toEqual(1);
+    ).toBe(1);
   });
   test('Example 2', () => {
     expect(
@@ -18,7 +18,7 @@ describe('2023-07-19: LeetCode 435', () => {
         [1, 2],
         [1, 2],
       ]),
-    ).toEqual(2);
+    ).toBe(2);
   });
   test('Example 3', () => {
     expect(
@@ -26,6 +26,6 @@ describe('2023-07-19: LeetCode 435', () => {
         [1, 2],
         [2, 3],
       ]),
-    ).toEqual(0);
+    ).toBe(0);
   });
 });

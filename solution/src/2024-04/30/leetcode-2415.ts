@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 2415. Reverse Odd Levels of Binary Tree
@@ -24,8 +24,12 @@ export function reverseOddLevels(root: TreeNode | null): TreeNode | null {
   while (0 < queue.length) {
     const nextQueue = [];
     for (const node of queue) {
-      node.left && nextQueue.push(node.left);
-      node.right && nextQueue.push(node.right);
+      if (node.left) {
+        nextQueue.push(node.left);
+      }
+      if (node.right) {
+        nextQueue.push(node.right);
+      }
     }
     level += 1;
     queue = level % 2 === 1 ? reverseLevels(nextQueue) : nextQueue;

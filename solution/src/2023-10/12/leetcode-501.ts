@@ -1,4 +1,4 @@
-import { TreeNode } from '@algorithm/lib';
+import type { TreeNode } from '@algorithm/lib';
 
 /**
  * 501. Find Mode in Binary Search Tree
@@ -14,8 +14,12 @@ export function findMode(root: TreeNode | null): number[] {
     const modeCount = modeCounter.get(node.val) ?? 0;
     modeCounter.set(node.val, modeCount + 1);
     maxModeCount = Math.max(maxModeCount, modeCount + 1);
-    node.left && dfs(node.left);
-    node.right && dfs(node.right);
+    if (node.left) {
+      dfs(node.left);
+    }
+    if (node.right) {
+      dfs(node.right);
+    }
   };
   dfs(root);
   return [...modeCounter.keys()].filter((mode) => modeCounter.get(mode) === maxModeCount);

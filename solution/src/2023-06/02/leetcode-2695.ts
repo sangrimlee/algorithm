@@ -14,6 +14,6 @@ export class ArrayWrapper {
   }
 
   toString() {
-    return `[${this.nums}]`;
+    return `[${this.nums.toString()}]`;
   }
 }

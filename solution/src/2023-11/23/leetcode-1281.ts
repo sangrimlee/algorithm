@@ -6,6 +6,9 @@ export function subtractProductAndSum(n: number): number {
   const product = (acc: number, num: number) => acc * num;
   const sum = (acc: number, num: number) => acc + num;
 
-  const digits = [...n.toString()].map((v) => +v);
+  const digits = n
+    .toString()
+    .split('')
+    .map((v) => +v);
   return digits.reduce(product, 1) - digits.reduce(sum, 0);
 }

@@ -5,8 +5,8 @@ import { Heap } from '@algorithm/lib';
  * https://leetcode.com/problems/parallel-courses-iii
  */
 export function minimumTime(n: number, relations: number[][], time: number[]): number {
-  const indegrees: number[] = new Array(n).fill(0);
-  const graph: number[][] = new Array(n).fill(undefined).map(() => []);
+  const indegrees: number[] = new Array<number>(n).fill(0);
+  const graph: number[][] = Array.from({ length: n }).map(() => []);
   for (const [prevCourse, nextCourse] of relations) {
     indegrees[nextCourse - 1] += 1;
     graph[prevCourse - 1].push(nextCourse - 1);

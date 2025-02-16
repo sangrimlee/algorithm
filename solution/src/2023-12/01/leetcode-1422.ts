@@ -7,7 +7,7 @@ import { range } from '@algorithm/lib';
 export function maxScore(s: string): number {
   const n = s.length;
   const totalScore = s.replace(/0/g, '').length;
-  let leftScore = s[0] === '0' ? 1 : 0;
+  let leftScore = s.startsWith('0') ? 1 : 0;
   let rightScore = totalScore + leftScore - 1;
 
   let answer = leftScore + rightScore;

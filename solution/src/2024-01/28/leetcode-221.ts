@@ -4,7 +4,7 @@
  */
 export function maximalSquare(matrix: string[][]): number {
   const [m, n] = [matrix.length, matrix[0].length];
-  const dp = Array.from({ length: m + 1 }).map(() => new Array(n + 1).fill(0));
+  const dp = Array.from({ length: m + 1 }, () => new Array<number>(n + 1).fill(0));
 
   let answer = 0;
   for (let row = 0; row < m; row++) {

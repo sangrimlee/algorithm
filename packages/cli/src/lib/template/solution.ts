@@ -1,7 +1,7 @@
-import dedent from 'ts-dedent';
+import { dedent } from 'ts-dedent';
 
 import { CODING_SITE_URL } from '@/constants';
-import { CodingSite } from '@/types';
+import type { CodingSite } from '@/types';
 
 export function createSolutionTemplate(
   codingSite: CodingSite,

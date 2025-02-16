@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences
  */
 export function areOccurrencesEqual(s: string): boolean {
-  const charCount = new Map();
+  const charCount = new Map<string, number>();
   for (const char of s) {
     charCount.set(char, (charCount.get(char) ?? 0) + 1);
   }

@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/maximum-population-year
  */
 export function maximumPopulation(logs: number[][]): number {
-  const populations = new Array(101).fill(0);
+  const populations = new Array<number>(101).fill(0);
   for (const [birth, death] of logs) {
     populations[birth - 1950] += 1;
     populations[death - 1950] -= 1;

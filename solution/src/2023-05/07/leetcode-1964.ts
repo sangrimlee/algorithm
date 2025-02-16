@@ -19,7 +19,7 @@ export function longestObstacleCourseAtEachPosition(obstacles: number[]): number
   };
 
   const n = obstacles.length;
-  const answer: number[] = new Array(n).fill(1);
+  const answer: number[] = new Array<number>(n).fill(1);
   const arr: number[] = [];
 
   obstacles.forEach((height, i) => {

@@ -26,8 +26,5 @@ export function recoverTree(root: TreeNode | null): void {
   }
   inorder(root);
 
-  if (firstNode !== null && secondNode !== null) {
-    [firstNode.val, secondNode.val] = [secondNode.val, firstNode.val];
-  }
-  return;
+  [firstNode.val, secondNode.val] = [secondNode.val, firstNode.val];
 }

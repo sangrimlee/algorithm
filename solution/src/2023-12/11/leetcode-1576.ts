@@ -4,11 +4,13 @@
  */
 export function modifyString(s: string): string {
   const n = s.length;
-  const arr = [...s];
+  const arr = s.split('');
   const replacables = ['a', 'b', 'c'];
   for (let i = 0; i < n; i++) {
-    if (arr[i] !== '?') continue;
-    arr[i] = replacables.find((r) => r !== arr[i - 1] && r !== arr[i + 1])!;
+    if (arr[i] !== '?') {
+      continue;
+    }
+    arr[i] = replacables.find((r) => r !== arr[i - 1] && r !== arr[i + 1]) ?? '';
   }
   return arr.join('');
 }

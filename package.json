@@ -1,40 +1,45 @@
 {
-  "private": true,
   "name": "algorithm",
+  "private": true,
   "description": "프로그래밍 및 알고리즘 문제 풀이 저장소",
-  "author": {
-    "name": "sangrimlee",
-    "email": "contact@sangrim.dev"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sangrimlee/algorithm"
   },
-  "license": "MIT",
+  "author": {
+    "name": "sangrimlee",
+    "email": "contact@sangrim.dev"
+  },
+  "type": "module",
   "scripts": {
     "build": "turbo run build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspace": "turbo run clean",
     "dev": "turbo run dev",
     "format": "turbo run format",
+    "format:fix": "turbo run format -- --write",
+    "generate:code": "algorithm -d solution/src",
+    "generate:page": "markdown -d solution/src -o website/src/app/solutions --format page",
+    "generate:readme": "markdown -d solution/src -o solution",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
     "test": "turbo run test",
     "test:watch": "turbo run test:watch",
-    "generate:code": "algorithm -d solution/src",
-    "generate:readme": "markdown -d solution/src -o solution",
-    "generate:page": "markdown -d solution/src -o website/src/app/solutions --format page",
-    "prepare": "husky install"
+    "typecheck": "turbo run typecheck"
   },
+  "prettier": "@algorithm/prettier-config",
   "devDependencies": {
     "@algorithm/cli": "workspace:*",
-    "@algorithm/eslint-config": "workspace:*",
-    "eslint": "^8.51.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3",
+    "@algorithm/prettier-config": "workspace:*",
+    "prettier": "catalog:",
     "turbo": "^2.4.2"
   },
+  "packageManager": "pnpm@9.15.5",
   "engines": {
-    "node": ">=20",
-    "pnpm": "^9.12.2"
+    "node": ">=22"
   },
-  "packageManager": "pnpm@9.12.2"
+  "volta": {
+    "node": "22.14.0",
+    "pnpm": "9.15.5"
+  }
 }

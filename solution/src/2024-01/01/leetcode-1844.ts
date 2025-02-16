@@ -7,5 +7,8 @@ export function replaceDigits(s: string): string {
     return String.fromCharCode(c.charCodeAt(0) + x);
   };
 
-  return [...s].map((char, i) => (i % 2 === 0 ? char : shift(s[i - 1], +char))).join('');
+  return s
+    .split('')
+    .map((char, i) => (i % 2 === 0 ? char : shift(s[i - 1], +char)))
+    .join('');
 }

@@ -31,7 +31,7 @@ export function fractionToDecimal(numerator: number, denominator: number): strin
     if (!remains.has(r)) {
       remains.set(r, answer.length);
     } else {
-      const startIndex = remains.get(r)!;
+      const startIndex = remains.get(r) ?? 0;
       answer.splice(startIndex, 0, '(');
       answer.push(')');
       return answer.join('');

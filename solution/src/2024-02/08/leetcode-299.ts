@@ -4,8 +4,8 @@
  */
 export function getHint(secret: string, guess: string): string {
   const n = secret.length;
-  const secrets = new Array(10).fill(0);
-  const guesses = new Array(10).fill(0);
+  const secrets = new Array<number>(10).fill(0);
+  const guesses = new Array<number>(10).fill(0);
 
   let [bulls, cows] = [0, 0];
   for (let i = 0; i < n; i++) {
@@ -20,5 +20,5 @@ export function getHint(secret: string, guess: string): string {
   for (let i = 0; i < 10; i++) {
     cows += Math.min(secrets[i], guesses[i]);
   }
-  return `${bulls}A${cows}B`;
+  return `${bulls.toString()}A${cows.toString()}B`;
 }

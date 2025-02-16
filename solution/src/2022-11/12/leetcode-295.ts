@@ -15,15 +15,23 @@ export class MedianFinder {
   addNum(num: number): void {
     if (this.small.length === this.large.length) {
       this.small.push(-num);
-      this.large.push(-(this.small.pop() as number));
+      const smallValue = this.small.pop();
+      if (smallValue !== undefined) {
+        this.large.push(-smallValue);
+      }
     } else {
       this.large.push(num);
-      this.small.push(-(this.large.pop() as number));
+      const largeValue = this.large.pop();
+      if (largeValue !== undefined) {
+        this.small.push(-largeValue);
+      }
     }
   }
 
   findMedian(): number {
-    if (this.large.peek === undefined || this.small.peek === undefined) return 0;
+    if (this.large.peek === undefined || this.small.peek === undefined) {
+      return 0;
+    }
     if (this.small.length === this.large.length) {
       return (this.large.peek - this.small.peek) / 2;
     } else {

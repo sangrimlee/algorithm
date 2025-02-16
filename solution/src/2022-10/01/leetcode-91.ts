@@ -8,9 +8,9 @@ export function numDecodings(s: string): number {
   }
 
   const N = s.length;
-  const dp = new Array(N + 1).fill(0);
+  const dp = new Array<number>(N + 1).fill(0);
   dp[0] = 1;
-  dp[1] = s[0] !== '0' ? 1 : 0;
+  dp[1] = !s.startsWith('0') ? 1 : 0;
 
   for (let i = 2; i <= N; i++) {
     const oneDigit = parseInt(s[i - 1]);

@@ -10,26 +10,25 @@ export function smallestRange(nums: number[][]): number[] {
   const freq = new Map<number, number>();
   let [left, count] = [0, 0];
   let [start, end] = [0, Number.MAX_SAFE_INTEGER];
-
-  for (let right = 0; right < merged.length; right++) {
-    const rightCol = merged[right][1];
+  for (const [rightValue, rightCol] of merged) {
+    let [leftValue, leftCol] = merged[left];
     freq.set(rightCol, (freq.get(rightCol) ?? 0) + 1);
     if (freq.get(rightCol) === 1) {
       count += 1;
     }
 
     while (count === k) {
-      const range = merged[right][0] - merged[left][0];
+      const range = rightValue - leftValue;
       if (range < end - start) {
-        [start, end] = [merged[left][0], merged[right][0]];
+        [start, end] = [leftValue, rightValue];
       }
 
-      const leftCol = merged[left][1];
       freq.set(leftCol, (freq.get(leftCol) ?? 0) - 1);
       if (freq.get(leftCol) === 0) {
         count -= 1;
       }
       left += 1;
+      [leftValue, leftCol] = merged[left];
     }
   }
 

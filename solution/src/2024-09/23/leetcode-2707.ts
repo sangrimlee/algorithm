@@ -48,8 +48,9 @@ class TrieNode {
   }
 
   getChildNode(char: string): TrieNode {
-    if (this.hasChildNode(char)) {
-      return this.children.get(char)!;
+    const childNode = this.children.get(char);
+    if (childNode) {
+      return childNode;
     }
     const newNode = new TrieNode();
     this.children.set(char, newNode);

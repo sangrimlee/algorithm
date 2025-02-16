@@ -23,7 +23,10 @@ export function maximumSwap(num: number): number {
 }
 
 function getDigits(num: number): number[] {
-  return [...num.toString()].map((v) => parseInt(v));
+  return num
+    .toString()
+    .split('')
+    .map((v) => parseInt(v));
 }
 
 function swap(arr: number[], i: number, j: number): void {

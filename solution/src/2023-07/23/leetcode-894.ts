@@ -4,7 +4,7 @@ import { TreeNode } from '@algorithm/lib';
  * 894. All Possible Full Binary Trees
  * https://leetcode.com/problems/all-possible-full-binary-trees
  */
-export function allPossibleFBT(n: number): Array<TreeNode | null> {
+export function allPossibleFBT(n: number): (TreeNode | null)[] {
   if (n % 2 === 0) {
     return [];
   }

@@ -7,7 +7,7 @@ describe('2024-02-16: LeetCode 2239', () => {
   test('Example 2', () => {
     expect(findClosestNumber([2, -1, 1])).toBe(1);
   });
-  test('Example 2', () => {
+  test('Example 3', () => {
     expect(findClosestNumber([-10000, -10000])).toBe(-10000);
   });
 });

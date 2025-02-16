@@ -19,9 +19,9 @@ export function isValidSudoku(board: string[][]): boolean {
   const n = board.length;
 
   for (let y = 0; y < n; y++) {
-    const row = new Array(10).fill(false);
-    const col = new Array(10).fill(false);
-    const square = new Array(10).fill(false);
+    const row = new Array<boolean>(10).fill(false);
+    const col = new Array<boolean>(10).fill(false);
+    const square = new Array<boolean>(10).fill(false);
     for (let x = 0; x < n; x++) {
       const sy = Math.floor(y / 3) * 3 + Math.floor(x / 3);
       const sx = (y % 3) * 3 + (x % 3);

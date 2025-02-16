@@ -7,7 +7,7 @@ export function maxConsecutiveAnswers(answerKey: string, k: number): number {
   const counter = new Map<string, number>();
 
   const getCount = (key: string) => {
-    return counter.get(key) || 0;
+    return counter.get(key) ?? 0;
   };
   const addCount = (key: string) => {
     counter.set(key, getCount(key) + 1);

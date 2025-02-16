@@ -6,8 +6,8 @@ export function maxProfitIV(k: number, prices: number[]): number {
   const n = prices.length;
   if (n === 0) return 0;
 
-  const dp: number[] = new Array(k + 1).fill(0);
-  const minPrices: number[] = new Array(k + 1).fill(prices[0]);
+  const dp = new Array<number>(k + 1).fill(0);
+  const minPrices = new Array<number>(k + 1).fill(prices[0]);
 
   for (let i = 1; i < n; i++) {
     for (let j = 1; j <= k; j++) {

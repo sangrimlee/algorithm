@@ -3,7 +3,7 @@
  * https://leetcode.com/problems/my-calendar-i
  */
 export class MyCalendar {
-  private readonly booked: Array<{ start: number; end: number }>;
+  private readonly booked: { start: number; end: number }[];
 
   constructor() {
     this.booked = [];

@@ -8,10 +8,10 @@ export function parseBoolExpr(expression: string): boolean {
     if (char === ')') {
       const exprs = new Set<string>();
       while (stack[stack.length - 1] !== '(') {
-        exprs.add(stack.pop()!);
+        exprs.add(stack.pop() ?? '');
       }
       stack.pop();
-      const operator = stack.pop()!;
+      const operator = stack.pop() ?? '';
       stack.push(evaluateExpr(exprs, operator) ? 't' : 'f');
     } else if (char !== ',') {
       stack.push(char);

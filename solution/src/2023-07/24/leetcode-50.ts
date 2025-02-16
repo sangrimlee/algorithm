@@ -9,18 +9,21 @@ export function myPow(x: number, n: number): number {
    * return Math.pow(x, n);
    */
 
-  const memo: Record<number, number> = { 0: 1 };
+  const memo = new Map<number, number>([[0, 1]]);
 
   const _pow = (x: number, n: number): number => {
-    if (memo[n] !== undefined) {
-      return memo[n];
+    const memoValue = memo.get(n);
+    if (memoValue !== undefined) {
+      return memoValue;
     }
     if (n % 2 === 0) {
-      memo[n] = _pow(x, Math.floor(n / 2)) ** 2;
-      return memo[n];
+      const powValue = _pow(x, Math.floor(n / 2)) ** 2;
+      memo.set(n, powValue);
+      return powValue;
     } else {
-      memo[n] = _pow(x, Math.floor(n / 2)) ** 2 * x;
-      return memo[n];
+      const powValue = _pow(x, Math.floor(n / 2)) ** 2 * x;
+      memo.set(n, powValue);
+      return powValue;
     }
   };
 
