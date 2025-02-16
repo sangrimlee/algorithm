@@ -1,0 +1,68 @@
+---
+title: Find the Punishment Number of an Integer
+tags:
+  - Math
+  - Backtracking
+---
+
+# 2698. Find the Punishment Number of an Integer
+
+<Badge.Root>
+  <Badge.Level level="medium" />
+  <Badge.Topic name="Math" slug="math" />
+  <Badge.Topic name="Backtracking" slug="backtracking" />
+</Badge.Root>
+
+## 문제 설명
+
+주어진 `n`의 **Punishment Number**를 구합니다.
+
+> **Punishment Number**란, 다음 조건을 만족하는, 모든 정수 `i`의 제곱의 합입니다.
+>
+> 1. `1 <= i <= n`
+> 2. `i * i`을 여러 부분으로 분할했을 때, 각 부분의 합이 `i`가 되어야합니다.
+
+## 문제 풀이
+
+1. `1`부터 `n`까지의 숫자를 순회합니다.
+2. 각 숫자가 위의 조건에 만족하는지 백트래킹을 사용하여 탐색합니다.
+   - 각 인덱스를 순회하고, 해당 인덱스에서 분할한 경우와 하지 않은 경우를 탐색합니다.
+3. 조건을 만족하는 숫자들의 제곱을 합산하여 반환합니다.
+
+```typescript filename="solution.ts" copy
+export function punishmentNumber(n: number): number {
+  let answer = 0;
+  for (let num = 1; num <= n; num++) {
+    if (isPunishmentNumber(num)) {
+      answer += num * num;
+    }
+  }
+  return answer;
+}
+
+function isPunishmentNumber(num: number): boolean {
+  const square = num * num;
+  const str = square.toString();
+  function dfs(i: number, sum: number, curr: string): boolean {
+    if (i === str.length) {
+      return sum + parseInt(curr) === num;
+    }
+    if (curr !== '') {
+      return dfs(i + 1, sum + parseInt(curr), str[i]) || dfs(i + 1, sum, curr + str[i]);
+    }
+    return dfs(i + 1, sum, curr + str[i]);
+  }
+  return dfs(0, 0, '');
+}
+```
+
+## 복잡도
+
+- 시간 복잡도: $O(n \cdot 2^{\log_{10}(n)})$
+- 공간 복잡도: $O(log_{10} n)$
+
+<ProblemLink
+  codingSite="leetcode"
+  href="https://leetcode.com/problems/find-the-punishment-number-of-an-integer"
+  title="Find the Punishment Number of an Integer"
+/>
