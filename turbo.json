@@ -25,6 +25,7 @@
       "cache": true
     },
     "test": {
+      "dependsOn": ["^build"],
       "outputs": []
     },
     "test:watch": {
@@ -34,5 +35,6 @@
       "dependsOn": ["^build", "^typecheck"],
       "cache": true
     }
-  }
+  },
+  "globalPassThroughEnv": ["CI", "npm_lifecycle_event"]
 }
