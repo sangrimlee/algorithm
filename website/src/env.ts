@@ -12,4 +12,5 @@ export const env = createEnv({
     URL: process.env.URL,
     NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   },
+  skipValidation: Boolean(process.env.CI) || process.env.npm_lifecycle_event === 'lint',
 });
