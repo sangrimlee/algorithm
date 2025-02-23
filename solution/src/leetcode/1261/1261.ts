@@ -5,24 +5,24 @@ import type { TreeNode } from '@algorithm/lib';
  * https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree
  */
 export class FindElements {
-  private readonly values: Set<number>;
+  private readonly recoveredValues: Set<number>;
 
   constructor(root: TreeNode | null) {
-    this.values = new Set();
-    this.recover(root, 0);
+    this.recoveredValues = new Set();
+    this.recoverTree(root, 0);
   }
 
-  private recover(node: TreeNode | null, value: number) {
+  private recoverTree(node: TreeNode | null, val: number) {
     if (node === null) {
       return;
     }
-    node.val = value;
-    this.values.add(value);
-    this.recover(node.left, 2 * value + 1);
-    this.recover(node.right, 2 * value + 2);
+    node.val = val;
+    this.recoveredValues.add(val);
+    this.recoverTree(node.left, 2 * val + 1);
+    this.recoverTree(node.right, 2 * val + 2);
   }
 
   find(target: number): boolean {
-    return this.values.has(target);
+    return this.recoveredValues.has(target);
   }
 }

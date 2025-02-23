@@ -4,16 +4,14 @@
  */
 export function smallestNumber(pattern: string): string {
   const n = pattern.length;
-
-  let answer = '';
   let stack: number[] = [];
+  let result = '';
   for (let i = 0; i <= n; i++) {
     stack.push(i + 1);
-    if (pattern[i] === 'I' || i === n) {
-      answer += stack.reverse().join('');
+    if (i === n || pattern[i] === 'I') {
+      result += stack.reverse().join('');
       stack = [];
     }
   }
-
-  return answer;
+  return result;
 }

@@ -13,88 +13,120 @@ tags:
   <Badge.Topic name="Backtracking" slug="backtracking" />
 </Badge.Root>
 
-## Solution
+## 문제 설명
 
-### Solution1: `BFS`
+**Happy string**이란?
 
-```typescript filename="solution.ts" copy
-export function getHappyString(n: number, k: number): string {
-  const nextChars: Record<string, string> = {
-    a: 'bc',
-    b: 'ac',
-    c: 'ab',
-  };
+- 문자 **`'a'`**, **`'b'`**, **`'c'`**만을 포함해야 합니다.
+- **같은 문자가 연속해서 나오면 안됩니다.**
 
-  let currentSize = 1;
-  let queue: string[] = ['a', 'b', 'c'];
-  while (currentSize < n) {
-    const nextQueue: string[] = [];
-    for (const s of queue) {
-      const lastChar = s[s.length - 1];
-      for (const nextChar of nextChars[lastChar]) {
-        nextQueue.push(s + nextChar);
-      }
-    }
-    currentSize += 1;
-    queue = nextQueue;
-  }
+**문제는 다음과 같습니다.**
 
-  return k <= queue.length ? queue[k - 1] : '';
-}
-```
+- 길이가 `n`인 **happy string**을 사전순으로 정렬했을 때, **`k`번째 문자열을 반환해야 합니다.**
+- 가능한 **happy string**의 개수가 **k보다 작다면, `''`**(빈문자열)을 반환합니다.
 
-#### Complexity
+## 문제 풀이
 
-- Time: `O(2^N)`
-- Space: `O(2^N)`
+### `Backtracking`
 
-### Solution2: `Math`
+해당 문제는 **백트래킹**을 사용하여, 모든 경우의 **happy string**을 찾는 방법으로 해결할 수 있습니다.
 
-최대로 만들 수 있는 문자열의 개수는 `3 * (2 ** (n -1))` 개이다.
-따라서, 첫 글자는 `k % (2 ** (n - 1))` 의 값을 통해서 `a`, `b`, `c` 인지 알 수 있다.
-
-동일한 접근법으로 계속해서 다음 문자열을 만들 수 있다. 하지만, 첫 문자와 다르게 두 가지의 선택사항이 있다.
-해당 내용을 `getNextCharacter` 함수로써 구현하였다.
+1. 모든 **happy string**의 경우의 수는 $3 \times 2^{n-1}$이기 때문에, `k` 가 모든 경우의 수 보다 크다면 빈 문자열을 반환합니다.
+2. **Recursion**을 통해, 모든 **happy string**을 찾을 수 있습니다.
+   - 한 자리씩 문자를 추가하며, **happy string**을 만들고, `k`번째 문자열을 찾으면 반환
+   - 같은 문자가 연속해서 나오면 안되므로, **이전 문자와 다른 문자만 추가**
+   - 현재 문자열의 길이가 `n` 이면 `k`번째 문자열인지 확인하고 반환
 
 ```typescript filename="solution.ts" copy
-export function getHappyString(n: number, k: number): string {
-  const totalCount = 3 * (1 << (n - 1));
+function getHappyString(n: number, k: number): string {
+  const LETTERS = 'abc';
+  const totalCount = 3 * 2 ** (n - 1);
   if (totalCount < k) {
     return '';
   }
 
-  let currentIndex = k - 1;
-  let currentSize = 1 << (n - 1);
-  let char = getNextCharacter(currentIndex, currentSize);
-  let answer = char;
-  while (1 < currentSize) {
-    currentIndex %= currentSize;
-    currentSize >>= 1;
-    char = getNextCharacter(currentIndex, currentSize, char);
-    answer += char;
-  }
-  return answer;
-}
+  let count = 0;
+  function backtracking(curr: string): string {
+    if (curr.length === n) {
+      count += 1;
+      return count === k ? curr : '';
+    }
 
-function getNextCharacter(i: number, size: number, prevChar = '') {
-  const group = Math.floor(i / size);
-  switch (prevChar) {
-    case 'a':
-      return ['b', 'c'][group];
-    case 'b':
-      return ['a', 'c'][group];
-    case 'c':
-      return ['a', 'b'][group];
-    default:
-      return ['a', 'b', 'c'][group];
+    for (const letter of LETTERS) {
+      if (curr.endsWith(letter)) {
+        continue;
+      }
+      const result = backtracking(curr + letter);
+      if (result !== '') {
+        return result;
+      }
+    }
+    return '';
   }
+  return backtracking('');
 }
 ```
 
-### Complexity
+**복잡도**
 
-- Time: `O(N)`
-- Space: `O(1)`
+- 시간 복잡도: $O(2^n)$
+- 공간 복잡도: $O(n)$
+
+### **`Combinatorics`**
+
+현재 문제에서는 `n` 의 크기가 작기 때문에, 위의 방법으로 풀어도 크게 상관없지만, `n` 이 커질수록, 위의 문제 풀이는 문제가 될 수 있습니다. **따라서, 필요한 문자열만 바로 찾아가는 방식**을 사용합니다.
+
+1. 첫번째 문자는 `a`, `b`, `c` 세 가지 가능성이 있습니다.
+2. 두번째 문자부터는 이전 문자와 다른 **2가지 문자** 중 하나만 선택 가능합니다.
+3. 따라서, **각 자리의 문자는 남은 경우의 수를 고려하여 직접 결정**할 수 있습니다.
+   - 예를 들어, 첫 번째 문자에 따라 만들 수 있는 나머지 경우의 수는 $2^{n-1}$입니다.
+   - 따라서, $k / 2^{n-1}$의 값을 통해 첫 번째 문자를 결정할 수 있습니다.
+     - 0인 경우는, `a`, 1인 경우는 `b`, 2인 경우는 `c`가 됩니다.
+   - 이후 자리도 같은 방식으로 k 값을 업데이트하면서 다음 문자를 결정할 수 있습니다.
+
+이러한 방식 덕분에 불필요한 **happy string을** 만들지 않고도, **사전순으로 정렬된 상태에서 바로 k번째 happy string을 빠르게 찾을 수 있습니다.**
+
+```typescript filename="solution.ts" copy
+function getHappyString(n: number, k: number): string {
+  const totalCount = 3 * 2 ** (n - 1);
+  if (totalCount < k) {
+    return '';
+  }
+
+  let result = '';
+  let [remainK, currentIndex, currentChar] = [k - 1, 0, ''];
+  while (currentIndex < n) {
+    [remainK, currentIndex, currentChar] = getNextStep(n, remainK, currentIndex, currentChar);
+    result += currentChar;
+  }
+  return result;
+}
+
+function getNextStep(
+  n: number,
+  remainK: number,
+  currentIndex: number,
+  currentChar: string,
+): [number, number, string] {
+  const nextChars: Record<string, string[]> = {
+    a: ['b', 'c'],
+    b: ['a', 'c'],
+    c: ['a', 'b'],
+  };
+  const currentSize = 2 ** (n - currentIndex - 1);
+  const charIndex = Math.floor(remainK / currentSize);
+  const nextChar =
+    currentChar !== '' ? nextChars[currentChar][charIndex] : ['a', 'b', 'c'][charIndex];
+  return [remainK % currentSize, currentIndex + 1, nextChar];
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
+
+---
 
 <ProblemLink
   codingSite="leetcode"

@@ -17,30 +17,48 @@ tags:
   <Badge.Topic name="Counting" slug="counting" />
 </Badge.Root>
 
-## Solution
+## 문제 설명
+
+주어진 문자열 `tiles`에서 각 문자는 하나의 타일을 나타냅니다.
+
+주어진 타일을 사용하여 만들 수 있는 **모든 가능한 문자열의 개수**를 반환하는 문제입니다.
+
+## 문제 풀이
+
+1. `Map`을 사용하여, 주어진 타일(문자)의 개수를 저장합니다.
+2. 백트래킹을 사용하여서, 각 타일을 한 번씩 선택하여 가능한 문자열을 만들어 나갑니다.
+   1. `Map`을 순회합니다.
+   2. 타일의 개수가 0인 경우, 다음 타일을 탐색합니다.
+   3. 타일의 개수가 0이 아닌 경우, 사용한 타일의 개수를 줄이고, 재귀 호출하여 다음 타일을 계속해서 선택합니다. 원래 상태로 되돌리고 계속 다음 타일을 탐색합니다.
 
 ```typescript filename="solution.ts" copy
-export function numTilePossibilities(tiles: string): number {
-  const tileCount = new Array<number>(26).fill(0);
+function numTilePossibilities(tiles: string): number {
+  const tileCounter = new Map<string, number>();
   for (const tile of tiles) {
-    tileCount[tile.charCodeAt(0) - 'A'.charCodeAt(0)] += 1;
+    tileCounter.set(tile, (tileCounter.get(tile) ?? 0) + 1);
   }
 
-  function dfs(): number {
-    let result = 0;
-    for (let i = 0; i < 26; i++) {
-      if (tileCount[i] === 0) continue;
-      result += 1;
-      tileCount[i] -= 1;
-      result += dfs();
-      tileCount[i] += 1;
+  let totalCount = 0;
+  function backtrack(): void {
+    for (const [tile, tileCount] of tileCounter) {
+      if (tileCount === 0) {
+        continue;
+      }
+      totalCount += 1;
+      tileCounter.set(tile, tileCount - 1);
+      backtrack();
+      tileCounter.set(tile, tileCount);
     }
-    return result;
   }
-
-  return dfs();
+  backtrack();
+  return totalCount;
 }
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(2^n)$
+- 공간 복잡도: $O(n)$
 
 <ProblemLink
   codingSite="leetcode"
