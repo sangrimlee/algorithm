@@ -1,0 +1,11 @@
+{
+  "id": "2951",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-peaks",
+  "title": "Find the Peaks",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Enumeration"
+  ]
+}

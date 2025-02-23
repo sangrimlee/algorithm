@@ -1,0 +1,12 @@
+{
+  "id": "1072",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/flip-columns-for-maximum-number-of-equal-rows",
+  "title": "Flip Columns For Maximum Number of Equal Rows",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ]
+}

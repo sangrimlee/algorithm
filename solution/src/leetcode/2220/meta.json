@@ -1,0 +1,10 @@
+{
+  "id": "2220",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-bit-flips-to-convert-number",
+  "title": "Minimum Bit Flips to Convert Number",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Bit Manipulation"
+  ]
+}

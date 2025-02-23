@@ -1,0 +1,13 @@
+{
+  "id": "962",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-width-ramp",
+  "title": "Maximum Width Ramp",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Stack",
+    "Monotonic Stack"
+  ]
+}

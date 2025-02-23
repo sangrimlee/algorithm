@@ -1,0 +1,13 @@
+{
+  "id": "2192",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/all-ancestors-of-a-node-in-a-directed-acyclic-graph",
+  "title": "All Ancestors of a Node in a Directed Acyclic Graph",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort"
+  ]
+}

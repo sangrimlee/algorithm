@@ -1,0 +1,10 @@
+{
+  "id": "2849",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/determine-if-a-cell-is-reachable-at-a-given-time",
+  "title": "Determine if a Cell Is Reachable at a Given Time",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Math"
+  ]
+}

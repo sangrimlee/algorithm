@@ -1,0 +1,11 @@
+{
+  "id": "1721",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/swapping-nodes-in-a-linked-list",
+  "title": "Swapping Nodes in a Linked List",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Two Pointers"
+  ]
+}

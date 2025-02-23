@@ -1,0 +1,13 @@
+{
+  "id": "819",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-common-word",
+  "title": "Most Common Word",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ]
+}

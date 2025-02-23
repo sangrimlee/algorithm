@@ -1,0 +1,11 @@
+{
+  "id": "2395",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-subarrays-with-equal-sum",
+  "title": "Find Subarrays With Equal Sum",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ]
+}

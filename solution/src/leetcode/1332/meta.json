@@ -1,0 +1,11 @@
+{
+  "id": "1332",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-palindromic-subsequences",
+  "title": "Remove Palindromic Subsequences",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ]
+}

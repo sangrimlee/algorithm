@@ -1,0 +1,15 @@
+{
+  "id": "173",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-search-tree-iterator",
+  "title": "Binary Search Tree Iterator",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Stack",
+    "Tree",
+    "Design",
+    "Binary Search Tree",
+    "Binary Tree",
+    "Iterator"
+  ]
+}

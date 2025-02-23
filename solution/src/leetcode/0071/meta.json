@@ -1,0 +1,11 @@
+{
+  "id": "71",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/simplify-path",
+  "title": "Simplify Path",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Stack"
+  ]
+}

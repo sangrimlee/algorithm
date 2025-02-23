@@ -1,0 +1,11 @@
+{
+  "id": "1701",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/average-waiting-time",
+  "title": "Average Waiting Time",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Simulation"
+  ]
+}

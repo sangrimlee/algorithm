@@ -1,0 +1,12 @@
+{
+  "id": "2486",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/append-characters-to-string-to-make-subsequence",
+  "title": "Append Characters to String to Make Subsequence",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Greedy"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "2009",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-make-array-continuous",
+  "title": "Minimum Number of Operations to Make Array Continuous",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Sliding Window"
+  ]
+}

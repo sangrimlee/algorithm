@@ -1,0 +1,10 @@
+{
+  "id": "440",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/k-th-smallest-in-lexicographical-order",
+  "title": "K-th Smallest in Lexicographical Order",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Trie"
+  ]
+}

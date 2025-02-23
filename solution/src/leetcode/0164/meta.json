@@ -1,0 +1,13 @@
+{
+  "id": "164",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-gap",
+  "title": "Maximum Gap",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Sorting",
+    "Bucket Sort",
+    "Radix Sort"
+  ]
+}

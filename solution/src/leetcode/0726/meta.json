@@ -1,0 +1,13 @@
+{
+  "id": "726",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-atoms",
+  "title": "Number of Atoms",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Stack",
+    "Sorting"
+  ]
+}

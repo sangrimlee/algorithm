@@ -1,0 +1,11 @@
+{
+  "id": "1822",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sign-of-the-product-of-an-array",
+  "title": "Sign of the Product of an Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math"
+  ]
+}

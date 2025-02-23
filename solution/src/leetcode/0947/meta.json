@@ -1,0 +1,13 @@
+{
+  "id": "947",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-stones-removed-with-same-row-or-column",
+  "title": "Most Stones Removed with Same Row or Column",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Depth-First Search",
+    "Union Find",
+    "Graph"
+  ]
+}

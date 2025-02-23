@@ -1,0 +1,12 @@
+{
+  "id": "236",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/lowest-common-ancestor-of-a-binary-tree",
+  "title": "Lowest Common Ancestor of a Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

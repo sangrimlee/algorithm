@@ -1,0 +1,11 @@
+{
+  "id": "2325",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/decode-the-message",
+  "title": "Decode the Message",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

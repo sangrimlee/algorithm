@@ -1,0 +1,11 @@
+{
+  "id": "2825",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/make-string-a-subsequence-using-cyclic-increments",
+  "title": "Make String a Subsequence Using Cyclic Increments",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ]
+}

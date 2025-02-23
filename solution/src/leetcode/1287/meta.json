@@ -1,0 +1,10 @@
+{
+  "id": "1287",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/element-appearing-more-than-25-in-sorted-array",
+  "title": "Element Appearing More Than 25% In Sorted Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array"
+  ]
+}

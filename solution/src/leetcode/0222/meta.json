@@ -1,0 +1,13 @@
+{
+  "id": "222",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-complete-tree-nodes",
+  "title": "Count Complete Tree Nodes",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Binary Search",
+    "Bit Manipulation",
+    "Tree",
+    "Binary Tree"
+  ]
+}

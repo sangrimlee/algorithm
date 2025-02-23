@@ -1,0 +1,12 @@
+{
+  "id": "3090",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-length-substring-with-two-occurrences",
+  "title": "Maximum Length Substring With Two Occurrences",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ]
+}

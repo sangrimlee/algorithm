@@ -1,0 +1,11 @@
+{
+  "id": "1704",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/determine-if-string-halves-are-alike",
+  "title": "Determine if String Halves Are Alike",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Counting"
+  ]
+}

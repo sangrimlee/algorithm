@@ -1,0 +1,11 @@
+{
+  "id": "2872",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-k-divisible-components",
+  "title": "Maximum Number of K-Divisible Components",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Tree",
+    "Depth-First Search"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "3243",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-distance-after-road-addition-queries-i",
+  "title": "Shortest Distance After Road Addition Queries I",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Breadth-First Search",
+    "Graph"
+  ]
+}

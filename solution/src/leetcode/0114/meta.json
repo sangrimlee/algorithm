@@ -1,0 +1,14 @@
+{
+  "id": "114",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/flatten-binary-tree-to-linked-list",
+  "title": "Flatten Binary Tree to Linked List",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Stack",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

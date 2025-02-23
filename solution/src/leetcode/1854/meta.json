@@ -1,0 +1,12 @@
+{
+  "id": "1854",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-population-year",
+  "title": "Maximum Population Year",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Counting",
+    "Prefix Sum"
+  ]
+}

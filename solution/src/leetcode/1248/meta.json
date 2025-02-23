@@ -1,0 +1,14 @@
+{
+  "id": "1248",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-nice-subarrays",
+  "title": "Count Number of Nice Subarrays",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Sliding Window",
+    "Prefix Sum"
+  ]
+}

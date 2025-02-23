@@ -1,0 +1,11 @@
+{
+  "id": "664",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/strange-printer",
+  "title": "Strange Printer",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Dynamic Programming"
+  ]
+}

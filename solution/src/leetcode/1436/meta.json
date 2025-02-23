@@ -1,0 +1,12 @@
+{
+  "id": "1436",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/destination-city",
+  "title": "Destination City",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "630",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/course-schedule-iii",
+  "title": "Course Schedule III",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ]
+}

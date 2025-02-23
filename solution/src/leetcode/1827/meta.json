@@ -1,0 +1,11 @@
+{
+  "id": "1827",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-operations-to-make-the-array-increasing",
+  "title": "Minimum Operations to Make the Array Increasing",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Greedy"
+  ]
+}

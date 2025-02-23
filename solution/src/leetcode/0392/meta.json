@@ -1,0 +1,12 @@
+{
+  "id": "392",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/is-subsequence",
+  "title": "Is Subsequence",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Dynamic Programming"
+  ]
+}

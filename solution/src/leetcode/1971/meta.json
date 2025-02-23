@@ -1,0 +1,13 @@
+{
+  "id": "1971",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-if-path-exists-in-graph",
+  "title": "Find if Path Exists in Graph",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph"
+  ]
+}

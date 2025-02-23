@@ -1,0 +1,13 @@
+{
+  "id": "2779",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-beauty-of-an-array-after-applying-operation",
+  "title": "Maximum Beauty of an Array After Applying Operation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Sliding Window",
+    "Sorting"
+  ]
+}

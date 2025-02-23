@@ -1,0 +1,14 @@
+{
+  "id": "706",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-hashmap",
+  "title": "Design HashMap",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Linked List",
+    "Design",
+    "Hash Function"
+  ]
+}

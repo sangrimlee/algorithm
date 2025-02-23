@@ -1,0 +1,12 @@
+{
+  "id": "3095",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-subarray-with-or-at-least-k-i",
+  "title": "Shortest Subarray With OR at Least K I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Bit Manipulation",
+    "Sliding Window"
+  ]
+}

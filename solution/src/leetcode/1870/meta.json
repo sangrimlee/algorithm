@@ -1,0 +1,11 @@
+{
+  "id": "1870",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-speed-to-arrive-on-time",
+  "title": "Minimum Speed to Arrive on Time",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ]
+}

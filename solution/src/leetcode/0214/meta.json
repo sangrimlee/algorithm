@@ -1,0 +1,13 @@
+{
+  "id": "214",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-palindrome",
+  "title": "Shortest Palindrome",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "String",
+    "Rolling Hash",
+    "String Matching",
+    "Hash Function"
+  ]
+}

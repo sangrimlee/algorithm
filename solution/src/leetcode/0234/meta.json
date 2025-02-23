@@ -1,0 +1,13 @@
+{
+  "id": "234",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/palindrome-linked-list",
+  "title": "Palindrome Linked List",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Linked List",
+    "Two Pointers",
+    "Stack",
+    "Recursion"
+  ]
+}

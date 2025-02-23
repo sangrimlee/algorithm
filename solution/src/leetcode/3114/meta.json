@@ -1,0 +1,11 @@
+{
+  "id": "3114",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/latest-time-you-can-obtain-after-replacing-characters",
+  "title": "Latest Time You Can Obtain After Replacing Characters",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Enumeration"
+  ]
+}

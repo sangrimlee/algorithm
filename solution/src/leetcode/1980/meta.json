@@ -1,0 +1,13 @@
+{
+  "id": "1980",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-unique-binary-string",
+  "title": "Find Unique Binary String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Backtracking"
+  ]
+}

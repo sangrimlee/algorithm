@@ -1,0 +1,12 @@
+{
+  "id": "2279",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-bags-with-full-capacity-of-rocks",
+  "title": "Maximum Bags With Full Capacity of Rocks",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ]
+}

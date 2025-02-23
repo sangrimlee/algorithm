@@ -1,0 +1,11 @@
+{
+  "id": "3190",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-minimum-operations-to-make-all-elements-divisible-by-three",
+  "title": "Find Minimum Operations to Make All Elements Divisible by Three",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math"
+  ]
+}

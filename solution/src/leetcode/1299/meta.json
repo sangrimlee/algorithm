@@ -1,0 +1,10 @@
+{
+  "id": "1299",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/replace-elements-with-greatest-element-on-right-side",
+  "title": "Replace Elements with Greatest Element on Right Side",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array"
+  ]
+}

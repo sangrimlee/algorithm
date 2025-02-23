@@ -1,0 +1,13 @@
+{
+  "id": "846",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/hand-of-straights",
+  "title": "Hand of Straights",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting"
+  ]
+}

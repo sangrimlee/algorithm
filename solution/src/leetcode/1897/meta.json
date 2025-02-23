@@ -1,0 +1,12 @@
+{
+  "id": "1897",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/redistribute-characters-to-make-all-strings-equal",
+  "title": "Redistribute Characters to Make All Strings Equal",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ]
+}

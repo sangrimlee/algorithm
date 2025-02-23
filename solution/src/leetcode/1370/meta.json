@@ -1,0 +1,12 @@
+{
+  "id": "1370",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/increasing-decreasing-string",
+  "title": "Increasing Decreasing String",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Counting"
+  ]
+}

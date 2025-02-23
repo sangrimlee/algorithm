@@ -1,0 +1,13 @@
+{
+  "id": "1992",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-all-groups-of-farmland",
+  "title": "Find All Groups of Farmland",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ]
+}

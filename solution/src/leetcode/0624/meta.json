@@ -1,0 +1,11 @@
+{
+  "id": "624",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-distance-in-arrays",
+  "title": "Maximum Distance in Arrays",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Greedy"
+  ]
+}

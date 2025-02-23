@@ -1,0 +1,15 @@
+{
+  "id": "2577",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-time-to-visit-a-cell-in-a-grid",
+  "title": "Minimum Time to Visit a Cell In a Grid",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Breadth-First Search",
+    "Graph",
+    "Heap (Priority Queue)",
+    "Matrix",
+    "Shortest Path"
+  ]
+}

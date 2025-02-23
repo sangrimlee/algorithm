@@ -1,0 +1,13 @@
+{
+  "id": "2225",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-players-with-zero-or-one-losses",
+  "title": "Find Players With Zero or One Losses",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ]
+}

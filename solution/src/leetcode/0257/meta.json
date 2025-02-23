@@ -1,0 +1,14 @@
+{
+  "id": "257",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-tree-paths",
+  "title": "Binary Tree Paths",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Backtracking",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

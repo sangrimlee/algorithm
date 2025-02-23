@@ -1,0 +1,15 @@
+{
+  "id": "2357",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/make-array-zero-by-subtracting-equal-amounts",
+  "title": "Make Array Zero by Subtracting Equal Amounts",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "1996",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/the-number-of-weak-characters-in-the-game",
+  "title": "The Number of Weak Characters in the Game",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Stack",
+    "Greedy",
+    "Sorting",
+    "Monotonic Stack"
+  ]
+}

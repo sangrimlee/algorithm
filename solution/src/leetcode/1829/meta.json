@@ -1,0 +1,12 @@
+{
+  "id": "1829",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-xor-for-each-query",
+  "title": "Maximum XOR for Each Query",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ]
+}

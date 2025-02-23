@@ -1,0 +1,13 @@
+{
+  "id": "2542",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-subsequence-score",
+  "title": "Maximum Subsequence Score",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Greedy",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ]
+}

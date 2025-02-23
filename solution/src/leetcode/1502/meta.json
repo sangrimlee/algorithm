@@ -1,0 +1,11 @@
+{
+  "id": "1502",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/can-make-arithmetic-progression-from-sequence",
+  "title": "Can Make Arithmetic Progression From Sequence",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sorting"
+  ]
+}

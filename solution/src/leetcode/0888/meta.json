@@ -1,0 +1,13 @@
+{
+  "id": "888",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/fair-candy-swap",
+  "title": "Fair Candy Swap",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Sorting"
+  ]
+}

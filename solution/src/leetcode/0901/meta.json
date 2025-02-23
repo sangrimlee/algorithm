@@ -1,0 +1,13 @@
+{
+  "id": "901",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/online-stock-span",
+  "title": "Online Stock Span",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Stack",
+    "Design",
+    "Monotonic Stack",
+    "Data Stream"
+  ]
+}

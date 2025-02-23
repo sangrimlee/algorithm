@@ -1,0 +1,11 @@
+{
+  "id": "1640",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-array-formation-through-concatenation",
+  "title": "Check Array Formation Through Concatenation",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ]
+}

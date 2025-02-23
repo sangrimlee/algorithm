@@ -1,0 +1,12 @@
+{
+  "id": "292",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/nim-game",
+  "title": "Nim Game",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Brainteaser",
+    "Game Theory"
+  ]
+}

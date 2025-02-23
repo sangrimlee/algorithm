@@ -1,0 +1,12 @@
+{
+  "id": "2391",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-amount-of-time-to-collect-garbage",
+  "title": "Minimum Amount of Time to Collect Garbage",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "String",
+    "Prefix Sum"
+  ]
+}

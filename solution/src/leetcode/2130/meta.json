@@ -1,0 +1,12 @@
+{
+  "id": "2130",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-twin-sum-of-a-linked-list",
+  "title": "Maximum Twin Sum of a Linked List",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Two Pointers",
+    "Stack"
+  ]
+}

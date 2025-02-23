@@ -1,0 +1,12 @@
+{
+  "id": "2661",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/first-completely-painted-row-or-column",
+  "title": "First Completely Painted Row or Column",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Matrix"
+  ]
+}

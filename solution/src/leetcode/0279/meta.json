@@ -1,0 +1,12 @@
+{
+  "id": "279",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/perfect-squares",
+  "title": "Perfect Squares",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Dynamic Programming",
+    "Breadth-First Search"
+  ]
+}

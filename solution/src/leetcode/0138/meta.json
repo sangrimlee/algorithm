@@ -1,0 +1,11 @@
+{
+  "id": "138",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/copy-list-with-random-pointer",
+  "title": "Copy List with Random Pointer",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Linked List"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "1726",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/tuple-with-same-product",
+  "title": "Tuple with Same Product",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ]
+}

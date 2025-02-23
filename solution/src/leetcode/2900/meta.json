@@ -1,0 +1,13 @@
+{
+  "id": "2900",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-unequal-adjacent-groups-subsequence-i",
+  "title": "Longest Unequal Adjacent Groups Subsequence I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Greedy"
+  ]
+}

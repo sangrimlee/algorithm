@@ -1,0 +1,13 @@
+{
+  "id": "2375",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/construct-smallest-number-from-di-string",
+  "title": "Construct Smallest Number From DI String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Backtracking",
+    "Stack",
+    "Greedy"
+  ]
+}

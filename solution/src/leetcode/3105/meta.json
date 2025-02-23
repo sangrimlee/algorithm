@@ -1,0 +1,10 @@
+{
+  "id": "3105",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-strictly-increasing-or-strictly-decreasing-subarray",
+  "title": "Longest Strictly Increasing or Strictly Decreasing Subarray",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3178",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-child-who-has-the-ball-after-k-seconds",
+  "title": "Find the Child Who Has the Ball After K Seconds",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Simulation"
+  ]
+}

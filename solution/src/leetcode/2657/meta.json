@@ -1,0 +1,12 @@
+{
+  "id": "2657",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-prefix-common-array-of-two-arrays",
+  "title": "Find the Prefix Common Array of Two Arrays",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Bit Manipulation"
+  ]
+}

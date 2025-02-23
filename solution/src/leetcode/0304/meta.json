@@ -1,0 +1,13 @@
+{
+  "id": "304",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/range-sum-query-2d-immutable",
+  "title": "Range Sum Query 2D - Immutable",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Design",
+    "Matrix",
+    "Prefix Sum"
+  ]
+}

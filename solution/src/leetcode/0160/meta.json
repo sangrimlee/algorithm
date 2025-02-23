@@ -1,0 +1,12 @@
+{
+  "id": "160",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/intersection-of-two-linked-lists",
+  "title": "Intersection of Two Linked Lists",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "Linked List",
+    "Two Pointers"
+  ]
+}

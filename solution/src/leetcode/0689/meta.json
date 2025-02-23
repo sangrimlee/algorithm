@@ -1,0 +1,11 @@
+{
+  "id": "689",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-sum-of-3-non-overlapping-subarrays",
+  "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ]
+}

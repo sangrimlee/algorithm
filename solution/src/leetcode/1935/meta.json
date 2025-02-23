@@ -1,0 +1,11 @@
+{
+  "id": "1935",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-words-you-can-type",
+  "title": "Maximum Number of Words You Can Type",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

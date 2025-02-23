@@ -1,0 +1,10 @@
+{
+  "id": "629",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/k-inverse-pairs-array",
+  "title": "K Inverse Pairs Array",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Dynamic Programming"
+  ]
+}

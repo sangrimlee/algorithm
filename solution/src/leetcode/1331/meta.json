@@ -1,0 +1,12 @@
+{
+  "id": "1331",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/rank-transform-of-an-array",
+  "title": "Rank Transform of an Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ]
+}

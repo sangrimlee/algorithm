@@ -1,0 +1,11 @@
+{
+  "id": "119",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/pascals-triangle-ii",
+  "title": "Pascal's Triangle II",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ]
+}

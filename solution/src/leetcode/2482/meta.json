@@ -1,0 +1,12 @@
+{
+  "id": "2482",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/difference-between-ones-and-zeros-in-row-and-column",
+  "title": "Difference Between Ones and Zeros in Row and Column",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ]
+}

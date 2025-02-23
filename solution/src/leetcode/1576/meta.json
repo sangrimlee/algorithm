@@ -1,0 +1,10 @@
+{
+  "id": "1576",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/replace-all-s-to-avoid-consecutive-repeating-characters",
+  "title": "Replace All ?'s to Avoid Consecutive Repeating Characters",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ]
+}

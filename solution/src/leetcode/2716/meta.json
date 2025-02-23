@@ -1,0 +1,11 @@
+{
+  "id": "2716",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimize-string-length",
+  "title": "Minimize String Length",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

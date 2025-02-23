@@ -1,0 +1,12 @@
+{
+  "id": "1022",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sum-of-root-to-leaf-binary-numbers",
+  "title": "Sum of Root To Leaf Binary Numbers",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

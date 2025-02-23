@@ -1,0 +1,12 @@
+{
+  "id": "974",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/subarray-sums-divisible-by-k",
+  "title": "Subarray Sums Divisible by K",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Prefix Sum"
+  ]
+}

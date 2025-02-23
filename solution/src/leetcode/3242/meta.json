@@ -1,0 +1,14 @@
+{
+  "id": "3242",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-neighbor-sum-service",
+  "title": "Design Neighbor Sum Service",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Design",
+    "Matrix",
+    "Simulation"
+  ]
+}

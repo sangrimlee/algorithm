@@ -1,0 +1,12 @@
+{
+  "id": "1603",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-parking-system",
+  "title": "Design Parking System",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Design",
+    "Simulation",
+    "Counting"
+  ]
+}

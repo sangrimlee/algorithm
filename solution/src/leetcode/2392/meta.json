@@ -1,0 +1,13 @@
+{
+  "id": "2392",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/build-a-matrix-with-conditions",
+  "title": "Build a Matrix With Conditions",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Graph",
+    "Topological Sort",
+    "Matrix"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "2742",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/painting-the-walls",
+  "title": "Painting the Walls",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "3304",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-k-th-character-in-string-game-i",
+  "title": "Find the K-th Character in String Game I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion",
+    "Simulation"
+  ]
+}

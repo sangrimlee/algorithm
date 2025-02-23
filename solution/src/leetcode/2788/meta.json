@@ -1,0 +1,11 @@
+{
+  "id": "2788",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-strings-by-separator",
+  "title": "Split Strings by Separator",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String"
+  ]
+}

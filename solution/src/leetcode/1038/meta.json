@@ -1,0 +1,13 @@
+{
+  "id": "1038",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-search-tree-to-greater-sum-tree",
+  "title": "Binary Search Tree to Greater Sum Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Search Tree",
+    "Binary Tree"
+  ]
+}

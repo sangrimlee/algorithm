@@ -1,0 +1,13 @@
+{
+  "id": "2415",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/reverse-odd-levels-of-binary-tree",
+  "title": "Reverse Odd Levels of Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ]
+}

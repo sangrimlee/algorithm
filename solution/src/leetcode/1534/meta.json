@@ -1,0 +1,11 @@
+{
+  "id": "1534",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-good-triplets",
+  "title": "Count Good Triplets",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Enumeration"
+  ]
+}

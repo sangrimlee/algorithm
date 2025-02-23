@@ -1,0 +1,10 @@
+{
+  "id": "935",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/knight-dialer",
+  "title": "Knight Dialer",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming"
+  ]
+}

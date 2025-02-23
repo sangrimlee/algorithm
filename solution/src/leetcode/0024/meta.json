@@ -1,0 +1,11 @@
+{
+  "id": "24",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/swap-nodes-in-pairs",
+  "title": "Swap Nodes in Pairs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Recursion"
+  ]
+}

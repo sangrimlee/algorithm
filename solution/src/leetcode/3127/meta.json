@@ -1,0 +1,12 @@
+{
+  "id": "3127",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/make-a-square-with-the-same-color",
+  "title": "Make a Square with the Same Color",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Matrix",
+    "Enumeration"
+  ]
+}

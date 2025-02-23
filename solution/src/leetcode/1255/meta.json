@@ -1,0 +1,15 @@
+{
+  "id": "1255",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-score-words-formed-by-letters",
+  "title": "Maximum Score Words Formed by Letters",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Backtracking",
+    "Bit Manipulation",
+    "Bitmask"
+  ]
+}

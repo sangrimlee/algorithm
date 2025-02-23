@@ -1,0 +1,14 @@
+{
+  "id": "2981",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-longest-special-substring-that-occurs-thrice-i",
+  "title": "Find Longest Special Substring That Occurs Thrice I",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Binary Search",
+    "Sliding Window",
+    "Counting"
+  ]
+}

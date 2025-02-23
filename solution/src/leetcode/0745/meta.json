@@ -1,0 +1,14 @@
+{
+  "id": "745",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/prefix-and-suffix-search",
+  "title": "Prefix and Suffix Search",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Design",
+    "Trie"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "1736",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/latest-time-by-replacing-hidden-digits",
+  "title": "Latest Time by Replacing Hidden Digits",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Greedy"
+  ]
+}

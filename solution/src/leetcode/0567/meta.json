@@ -1,0 +1,13 @@
+{
+  "id": "567",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/permutation-in-string",
+  "title": "Permutation in String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Sliding Window"
+  ]
+}

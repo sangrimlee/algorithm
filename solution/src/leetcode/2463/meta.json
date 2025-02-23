@@ -1,0 +1,12 @@
+{
+  "id": "2463",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-total-distance-traveled",
+  "title": "Minimum Total Distance Traveled",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Sorting"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "844",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/backspace-string-compare",
+  "title": "Backspace String Compare",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "Stack",
+    "Simulation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "1530",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-good-leaf-nodes-pairs",
+  "title": "Number of Good Leaf Nodes Pairs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

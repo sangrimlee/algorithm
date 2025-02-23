@@ -1,0 +1,12 @@
+{
+  "id": "2160",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-sum-of-four-digit-number-after-splitting-digits",
+  "title": "Minimum Sum of Four Digit Number After Splitting Digits",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Greedy",
+    "Sorting"
+  ]
+}

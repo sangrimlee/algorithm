@@ -1,0 +1,11 @@
+{
+  "id": "2591",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/distribute-money-to-maximum-children",
+  "title": "Distribute Money to Maximum Children",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Greedy"
+  ]
+}

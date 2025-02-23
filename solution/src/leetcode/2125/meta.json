@@ -1,0 +1,13 @@
+{
+  "id": "2125",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-laser-beams-in-a-bank",
+  "title": "Number of Laser Beams in a Bank",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "String",
+    "Matrix"
+  ]
+}

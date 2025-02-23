@@ -1,0 +1,12 @@
+{
+  "id": "1218",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-arithmetic-subsequence-of-given-difference",
+  "title": "Longest Arithmetic Subsequence of Given Difference",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming"
+  ]
+}

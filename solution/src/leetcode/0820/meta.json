@@ -1,0 +1,13 @@
+{
+  "id": "820",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/short-encoding-of-words",
+  "title": "Short Encoding of Words",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Trie"
+  ]
+}

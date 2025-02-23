@@ -1,0 +1,13 @@
+{
+  "id": "230",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/kth-smallest-element-in-a-bst",
+  "title": "Kth Smallest Element in a BST",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Search Tree",
+    "Binary Tree"
+  ]
+}

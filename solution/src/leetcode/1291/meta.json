@@ -1,0 +1,10 @@
+{
+  "id": "1291",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sequential-digits",
+  "title": "Sequential Digits",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Enumeration"
+  ]
+}

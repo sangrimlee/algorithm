@@ -1,0 +1,11 @@
+{
+  "id": "1925",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-square-sum-triples",
+  "title": "Count Square Sum Triples",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Enumeration"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "3248",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/snake-in-matrix",
+  "title": "Snake in Matrix",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "String",
+    "Simulation"
+  ]
+}

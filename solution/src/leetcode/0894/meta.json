@@ -1,0 +1,14 @@
+{
+  "id": "894",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/all-possible-full-binary-trees",
+  "title": "All Possible Full Binary Trees",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming",
+    "Tree",
+    "Recursion",
+    "Memoization",
+    "Binary Tree"
+  ]
+}

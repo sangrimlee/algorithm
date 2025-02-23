@@ -1,0 +1,12 @@
+{
+  "id": "2545",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sort-the-students-by-their-kth-score",
+  "title": "Sort the Students by Their Kth Score",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Sorting",
+    "Matrix"
+  ]
+}

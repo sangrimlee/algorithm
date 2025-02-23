@@ -1,0 +1,13 @@
+{
+  "id": "2364",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-bad-pairs",
+  "title": "Count Number of Bad Pairs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Counting"
+  ]
+}

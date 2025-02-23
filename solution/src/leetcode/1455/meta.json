@@ -1,0 +1,12 @@
+{
+  "id": "1455",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence",
+  "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String",
+    "String Matching"
+  ]
+}

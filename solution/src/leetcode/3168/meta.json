@@ -1,0 +1,11 @@
+{
+  "id": "3168",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-chairs-in-a-waiting-room",
+  "title": "Minimum Number of Chairs in a Waiting Room",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Simulation"
+  ]
+}

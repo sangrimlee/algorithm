@@ -1,0 +1,11 @@
+{
+  "id": "50",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/powx-n",
+  "title": "Pow(x, n)",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "Recursion"
+  ]
+}

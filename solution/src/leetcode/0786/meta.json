@@ -1,0 +1,14 @@
+{
+  "id": "786",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/k-th-smallest-prime-fraction",
+  "title": "K-th Smallest Prime Fraction",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ]
+}

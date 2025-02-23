@@ -1,0 +1,11 @@
+{
+  "id": "1689",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/partitioning-into-minimum-number-of-deci-binary-numbers",
+  "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Greedy"
+  ]
+}

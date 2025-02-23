@@ -1,0 +1,11 @@
+{
+  "id": "1974",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-time-to-type-word-using-special-typewriter",
+  "title": "Minimum Time to Type Word Using Special Typewriter",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Greedy"
+  ]
+}

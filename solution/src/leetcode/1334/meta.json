@@ -1,0 +1,12 @@
+{
+  "id": "1334",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+  "title": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming",
+    "Graph",
+    "Shortest Path"
+  ]
+}

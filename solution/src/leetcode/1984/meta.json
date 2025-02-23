@@ -1,0 +1,12 @@
+{
+  "id": "1984",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-difference-between-highest-and-lowest-of-k-scores",
+  "title": "Minimum Difference Between Highest and Lowest of K Scores",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sliding Window",
+    "Sorting"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "983",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-cost-for-tickets",
+  "title": "Minimum Cost For Tickets",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming"
+  ]
+}

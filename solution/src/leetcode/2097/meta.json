@@ -1,0 +1,12 @@
+{
+  "id": "2097",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-arrangement-of-pairs",
+  "title": "Valid Arrangement of Pairs",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Depth-First Search",
+    "Graph",
+    "Eulerian Circuit"
+  ]
+}

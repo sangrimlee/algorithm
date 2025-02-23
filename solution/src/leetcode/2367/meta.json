@@ -1,0 +1,13 @@
+{
+  "id": "2367",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-arithmetic-triplets",
+  "title": "Number of Arithmetic Triplets",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "Enumeration"
+  ]
+}

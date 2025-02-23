@@ -1,0 +1,13 @@
+{
+  "id": "811",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/subdomain-visit-count",
+  "title": "Subdomain Visit Count",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Counting"
+  ]
+}

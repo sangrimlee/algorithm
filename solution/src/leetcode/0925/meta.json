@@ -1,0 +1,11 @@
+{
+  "id": "925",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/long-pressed-name",
+  "title": "Long Pressed Name",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Two Pointers",
+    "String"
+  ]
+}

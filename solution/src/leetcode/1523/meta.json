@@ -1,0 +1,10 @@
+{
+  "id": "1523",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-odd-numbers-in-an-interval-range",
+  "title": "Count Odd Numbers in an Interval Range",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math"
+  ]
+}

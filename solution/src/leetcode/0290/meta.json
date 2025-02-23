@@ -1,0 +1,11 @@
+{
+  "id": "290",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/word-pattern",
+  "title": "Word Pattern",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

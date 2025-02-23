@@ -1,0 +1,14 @@
+{
+  "id": "472",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/concatenated-words",
+  "title": "Concatenated Words",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "String",
+    "Dynamic Programming",
+    "Depth-First Search",
+    "Trie"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "3324",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-sequence-of-strings-appeared-on-the-screen",
+  "title": "Find the Sequence of Strings Appeared on the Screen",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Simulation"
+  ]
+}

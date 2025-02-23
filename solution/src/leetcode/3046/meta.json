@@ -1,0 +1,12 @@
+{
+  "id": "3046",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-the-array",
+  "title": "Split the Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ]
+}

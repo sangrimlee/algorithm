@@ -1,0 +1,11 @@
+{
+  "id": "1560",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-visited-sector-in-a-circular-track",
+  "title": "Most Visited Sector in  a Circular Track",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Simulation"
+  ]
+}

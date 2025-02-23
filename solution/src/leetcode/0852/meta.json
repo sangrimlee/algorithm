@@ -1,0 +1,11 @@
+{
+  "id": "852",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/peak-index-in-a-mountain-array",
+  "title": "Peak Index in a Mountain Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "2181",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/merge-nodes-in-between-zeros",
+  "title": "Merge Nodes in Between Zeros",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List",
+    "Simulation"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "31",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/next-permutation",
+  "title": "Next Permutation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers"
+  ]
+}

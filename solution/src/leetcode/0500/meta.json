@@ -1,0 +1,12 @@
+{
+  "id": "500",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/keyboard-row",
+  "title": "Keyboard Row",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String"
+  ]
+}

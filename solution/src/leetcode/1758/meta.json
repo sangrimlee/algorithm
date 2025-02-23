@@ -1,0 +1,10 @@
+{
+  "id": "1758",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-changes-to-make-alternating-binary-string",
+  "title": "Minimum Changes To Make Alternating Binary String",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String"
+  ]
+}

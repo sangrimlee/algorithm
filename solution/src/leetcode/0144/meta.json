@@ -1,0 +1,13 @@
+{
+  "id": "144",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-tree-preorder-traversal",
+  "title": "Binary Tree Preorder Traversal",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Stack",
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

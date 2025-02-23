@@ -1,0 +1,15 @@
+{
+  "id": "1361",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/validate-binary-tree-nodes",
+  "title": "Validate Binary Tree Nodes",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Graph",
+    "Binary Tree"
+  ]
+}

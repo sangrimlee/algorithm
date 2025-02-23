@@ -1,0 +1,12 @@
+{
+  "id": "872",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/leaf-similar-trees",
+  "title": "Leaf-Similar Trees",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

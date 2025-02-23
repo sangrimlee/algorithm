@@ -1,0 +1,12 @@
+{
+  "id": "1232",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-it-is-a-straight-line",
+  "title": "Check If It Is a Straight Line",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math",
+    "Geometry"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "1268",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/search-suggestions-system",
+  "title": "Search Suggestions System",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "String",
+    "Binary Search",
+    "Trie",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ]
+}

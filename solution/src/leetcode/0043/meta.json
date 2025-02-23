@@ -1,0 +1,12 @@
+{
+  "id": "43",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/multiply-strings",
+  "title": "Multiply Strings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Math",
+    "String",
+    "Simulation"
+  ]
+}

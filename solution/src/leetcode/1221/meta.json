@@ -1,0 +1,12 @@
+{
+  "id": "1221",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-a-string-in-balanced-strings",
+  "title": "Split a String in Balanced Strings",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Greedy",
+    "Counting"
+  ]
+}

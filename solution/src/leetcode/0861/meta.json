@@ -1,0 +1,13 @@
+{
+  "id": "861",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/score-after-flipping-matrix",
+  "title": "Score After Flipping Matrix",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Greedy",
+    "Bit Manipulation",
+    "Matrix"
+  ]
+}

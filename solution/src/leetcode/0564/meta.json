@@ -1,0 +1,11 @@
+{
+  "id": "564",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-closest-palindrome",
+  "title": "Find the Closest Palindrome",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Math",
+    "String"
+  ]
+}

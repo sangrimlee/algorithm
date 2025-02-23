@@ -1,0 +1,11 @@
+{
+  "id": "1732",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-highest-altitude",
+  "title": "Find the Highest Altitude",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Prefix Sum"
+  ]
+}

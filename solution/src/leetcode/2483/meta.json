@@ -1,0 +1,11 @@
+{
+  "id": "2483",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-penalty-for-a-shop",
+  "title": "Minimum Penalty for a Shop",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Prefix Sum"
+  ]
+}

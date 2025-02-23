@@ -1,0 +1,12 @@
+{
+  "id": "3432",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-partitions-with-even-sum-difference",
+  "title": "Count Partitions with Even Sum Difference",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math",
+    "Prefix Sum"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "338",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/counting-bits",
+  "title": "Counting Bits",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Dynamic Programming",
+    "Bit Manipulation"
+  ]
+}

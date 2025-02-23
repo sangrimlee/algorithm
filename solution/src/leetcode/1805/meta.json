@@ -1,0 +1,11 @@
+{
+  "id": "1805",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-different-integers-in-a-string",
+  "title": "Number of Different Integers in a String",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

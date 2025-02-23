@@ -1,0 +1,12 @@
+{
+  "id": "814",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-tree-pruning",
+  "title": "Binary Tree Pruning",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "2390",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/removing-stars-from-a-string",
+  "title": "Removing Stars From a String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Stack",
+    "Simulation"
+  ]
+}

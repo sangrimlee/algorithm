@@ -1,0 +1,13 @@
+{
+  "id": "2462",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/total-cost-to-hire-k-workers",
+  "title": "Total Cost to Hire K Workers",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Heap (Priority Queue)",
+    "Simulation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "1464",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-product-of-two-elements-in-an-array",
+  "title": "Maximum Product of Two Elements in an Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sorting",
+    "Heap (Priority Queue)"
+  ]
+}

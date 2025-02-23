@@ -1,0 +1,14 @@
+{
+  "id": "1457",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/pseudo-palindromic-paths-in-a-binary-tree",
+  "title": "Pseudo-Palindromic Paths in a Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Bit Manipulation",
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ]
+}

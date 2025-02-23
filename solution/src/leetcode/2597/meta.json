@@ -1,0 +1,16 @@
+{
+  "id": "2597",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/the-number-of-beautiful-subsets",
+  "title": "The Number of Beautiful Subsets",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Dynamic Programming",
+    "Backtracking",
+    "Sorting",
+    "Combinatorics"
+  ]
+}

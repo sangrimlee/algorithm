@@ -1,0 +1,14 @@
+{
+  "id": "2182",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/construct-string-with-repeat-limit",
+  "title": "Construct String With Repeat Limit",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Greedy",
+    "Heap (Priority Queue)",
+    "Counting"
+  ]
+}

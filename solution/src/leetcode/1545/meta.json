@@ -1,0 +1,12 @@
+{
+  "id": "1545",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-kth-bit-in-nth-binary-string",
+  "title": "Find Kth Bit in Nth Binary String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Recursion",
+    "Simulation"
+  ]
+}

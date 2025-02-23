@@ -1,0 +1,11 @@
+{
+  "id": "1945",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sum-of-digits-of-string-after-convert",
+  "title": "Sum of Digits of String After Convert",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Simulation"
+  ]
+}

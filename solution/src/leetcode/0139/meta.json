@@ -1,0 +1,15 @@
+{
+  "id": "139",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/word-break",
+  "title": "Word Break",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Dynamic Programming",
+    "Trie",
+    "Memoization"
+  ]
+}

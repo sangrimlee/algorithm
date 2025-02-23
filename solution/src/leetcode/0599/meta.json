@@ -1,0 +1,12 @@
+{
+  "id": "599",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-index-sum-of-two-lists",
+  "title": "Minimum Index Sum of Two Lists",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String"
+  ]
+}

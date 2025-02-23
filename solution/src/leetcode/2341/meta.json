@@ -1,0 +1,12 @@
+{
+  "id": "2341",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-pairs-in-array",
+  "title": "Maximum Number of Pairs in Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ]
+}

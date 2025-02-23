@@ -1,0 +1,12 @@
+{
+  "id": "2682",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-losers-of-the-circular-game",
+  "title": "Find the Losers of the Circular Game",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Simulation"
+  ]
+}

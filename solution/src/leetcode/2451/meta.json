@@ -1,0 +1,12 @@
+{
+  "id": "2451",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/odd-string-difference",
+  "title": "Odd String Difference",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "496",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/next-greater-element-i",
+  "title": "Next Greater Element I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Stack",
+    "Monotonic Stack"
+  ]
+}

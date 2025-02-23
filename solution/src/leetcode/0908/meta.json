@@ -1,0 +1,11 @@
+{
+  "id": "908",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/smallest-range-i",
+  "title": "Smallest Range I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math"
+  ]
+}

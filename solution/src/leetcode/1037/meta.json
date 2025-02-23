@@ -1,0 +1,12 @@
+{
+  "id": "1037",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-boomerang",
+  "title": "Valid Boomerang",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Math",
+    "Geometry"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "229",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/majority-element-ii",
+  "title": "Majority Element II",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ]
+}

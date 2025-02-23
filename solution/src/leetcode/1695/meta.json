@@ -1,0 +1,12 @@
+{
+  "id": "1695",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-erasure-value",
+  "title": "Maximum Erasure Value",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sliding Window"
+  ]
+}

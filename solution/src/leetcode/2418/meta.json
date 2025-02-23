@@ -1,0 +1,13 @@
+{
+  "id": "2418",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sort-the-people",
+  "title": "Sort the People",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ]
+}

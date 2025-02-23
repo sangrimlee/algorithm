@@ -1,0 +1,13 @@
+{
+  "id": "264",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/ugly-number-ii",
+  "title": "Ugly Number II",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Math",
+    "Dynamic Programming",
+    "Heap (Priority Queue)"
+  ]
+}

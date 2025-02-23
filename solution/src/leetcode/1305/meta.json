@@ -1,0 +1,14 @@
+{
+  "id": "1305",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/all-elements-in-two-binary-search-trees",
+  "title": "All Elements in Two Binary Search Trees",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Search Tree",
+    "Sorting",
+    "Binary Tree"
+  ]
+}

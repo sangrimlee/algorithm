@@ -1,0 +1,12 @@
+{
+  "id": "2017",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/grid-game",
+  "title": "Grid Game",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Matrix",
+    "Prefix Sum"
+  ]
+}

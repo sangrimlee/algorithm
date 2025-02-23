@@ -1,0 +1,11 @@
+{
+  "id": "1579",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-max-number-of-edges-to-keep-graph-fully-traversable",
+  "title": "Remove Max Number of Edges to Keep Graph Fully Traversable",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Union Find",
+    "Graph"
+  ]
+}

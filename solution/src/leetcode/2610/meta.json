@@ -1,0 +1,11 @@
+{
+  "id": "2610",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/convert-an-array-into-a-2d-array-with-conditions",
+  "title": "Convert an Array Into a 2D Array With Conditions",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table"
+  ]
+}

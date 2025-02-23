@@ -1,0 +1,11 @@
+{
+  "id": "2739",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/total-distance-traveled",
+  "title": "Total Distance Traveled",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Simulation"
+  ]
+}

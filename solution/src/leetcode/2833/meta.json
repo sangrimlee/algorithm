@@ -1,0 +1,11 @@
+{
+  "id": "2833",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/furthest-point-from-origin",
+  "title": "Furthest Point From Origin",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Counting"
+  ]
+}

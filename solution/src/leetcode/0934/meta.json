@@ -1,0 +1,13 @@
+{
+  "id": "934",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-bridge",
+  "title": "Shortest Bridge",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Matrix"
+  ]
+}

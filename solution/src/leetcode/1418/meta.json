@@ -1,0 +1,14 @@
+{
+  "id": "1418",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/display-table-of-food-orders-in-a-restaurant",
+  "title": "Display Table of Food Orders in a Restaurant",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting",
+    "Ordered Set"
+  ]
+}

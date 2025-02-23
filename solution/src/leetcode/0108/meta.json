@@ -1,0 +1,14 @@
+{
+  "id": "108",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/convert-sorted-array-to-binary-search-tree",
+  "title": "Convert Sorted Array to Binary Search Tree",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Divide and Conquer",
+    "Tree",
+    "Binary Search Tree",
+    "Binary Tree"
+  ]
+}

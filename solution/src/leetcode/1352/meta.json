@@ -1,0 +1,14 @@
+{
+  "id": "1352",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/product-of-the-last-k-numbers",
+  "title": "Product of the Last K Numbers",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Design",
+    "Data Stream",
+    "Prefix Sum"
+  ]
+}

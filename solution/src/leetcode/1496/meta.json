@@ -1,0 +1,11 @@
+{
+  "id": "1496",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/path-crossing",
+  "title": "Path Crossing",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

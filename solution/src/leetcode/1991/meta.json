@@ -1,0 +1,11 @@
+{
+  "id": "1991",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-middle-index-in-array",
+  "title": "Find the Middle Index in Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Prefix Sum"
+  ]
+}

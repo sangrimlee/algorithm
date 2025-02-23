@@ -1,0 +1,14 @@
+{
+  "id": "1823",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-winner-of-the-circular-game",
+  "title": "Find the Winner of the Circular Game",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Recursion",
+    "Queue",
+    "Simulation"
+  ]
+}

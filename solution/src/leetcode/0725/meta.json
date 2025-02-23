@@ -1,0 +1,10 @@
+{
+  "id": "725",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-linked-list-in-parts",
+  "title": "Split Linked List in Parts",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Linked List"
+  ]
+}

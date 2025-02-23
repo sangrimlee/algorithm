@@ -1,0 +1,11 @@
+{
+  "id": "1290",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/convert-binary-number-in-a-linked-list-to-integer",
+  "title": "Convert Binary Number in a Linked List to Integer",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Linked List",
+    "Math"
+  ]
+}

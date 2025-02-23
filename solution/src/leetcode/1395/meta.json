@@ -1,0 +1,13 @@
+{
+  "id": "1395",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-teams",
+  "title": "Count Number of Teams",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ]
+}

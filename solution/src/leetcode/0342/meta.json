@@ -1,0 +1,12 @@
+{
+  "id": "342",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/power-of-four",
+  "title": "Power of Four",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Bit Manipulation",
+    "Recursion"
+  ]
+}

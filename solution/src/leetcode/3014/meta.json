@@ -1,0 +1,12 @@
+{
+  "id": "3014",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-pushes-to-type-word-i",
+  "title": "Minimum Number of Pushes to Type Word I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "String",
+    "Greedy"
+  ]
+}

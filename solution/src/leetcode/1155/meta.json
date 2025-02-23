@@ -1,0 +1,10 @@
+{
+  "id": "1155",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-dice-rolls-with-target-sum",
+  "title": "Number of Dice Rolls With Target Sum",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming"
+  ]
+}

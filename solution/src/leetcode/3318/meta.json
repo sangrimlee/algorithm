@@ -1,0 +1,13 @@
+{
+  "id": "3318",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-x-sum-of-all-k-long-subarrays-i",
+  "title": "Find X-Sum of All K-Long Subarrays I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sliding Window",
+    "Heap (Priority Queue)"
+  ]
+}

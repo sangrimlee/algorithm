@@ -1,0 +1,11 @@
+{
+  "id": "1637",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/widest-vertical-area-between-two-points-containing-no-points",
+  "title": "Widest Vertical Area Between Two Points Containing No Points",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sorting"
+  ]
+}

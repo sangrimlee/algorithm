@@ -1,0 +1,13 @@
+{
+  "id": "310",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-height-trees",
+  "title": "Minimum Height Trees",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "313",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/super-ugly-number",
+  "title": "Super Ugly Number",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Dynamic Programming"
+  ]
+}

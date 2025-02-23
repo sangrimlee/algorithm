@@ -1,0 +1,11 @@
+{
+  "id": "583",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/delete-operation-for-two-strings",
+  "title": "Delete Operation for Two Strings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Dynamic Programming"
+  ]
+}

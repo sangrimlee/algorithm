@@ -1,0 +1,12 @@
+{
+  "id": "75",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sort-colors",
+  "title": "Sort Colors",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "76",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-window-substring",
+  "title": "Minimum Window Substring",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ]
+}

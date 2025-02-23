@@ -1,0 +1,12 @@
+{
+  "id": "412",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/fizz-buzz",
+  "title": "Fizz Buzz",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "String",
+    "Simulation"
+  ]
+}

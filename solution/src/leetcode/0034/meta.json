@@ -1,0 +1,11 @@
+{
+  "id": "34",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-first-and-last-position-of-element-in-sorted-array",
+  "title": "Find First and Last Position of Element in Sorted Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Search"
+  ]
+}

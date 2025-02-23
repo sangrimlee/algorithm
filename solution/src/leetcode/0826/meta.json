@@ -1,0 +1,14 @@
+{
+  "id": "826",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-profit-assigning-work",
+  "title": "Most Profit Assigning Work",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Binary Search",
+    "Greedy",
+    "Sorting"
+  ]
+}

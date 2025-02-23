@@ -1,0 +1,13 @@
+{
+  "id": "2351",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/first-letter-to-appear-twice",
+  "title": "First Letter to Appear Twice",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Counting"
+  ]
+}

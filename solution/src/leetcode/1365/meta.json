@@ -1,0 +1,13 @@
+{
+  "id": "1365",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/how-many-numbers-are-smaller-than-the-current-number",
+  "title": "How Many Numbers Are Smaller Than the Current Number",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Counting"
+  ]
+}

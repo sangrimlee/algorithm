@@ -1,0 +1,12 @@
+{
+  "id": "2257",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-unguarded-cells-in-the-grid",
+  "title": "Count Unguarded Cells in the Grid",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ]
+}

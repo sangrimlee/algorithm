@@ -1,0 +1,12 @@
+{
+  "id": "3",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-substring-without-repeating-characters",
+  "title": "Longest Substring Without Repeating Characters",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Sliding Window"
+  ]
+}

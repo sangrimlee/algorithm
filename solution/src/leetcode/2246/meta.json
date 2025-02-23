@@ -1,0 +1,15 @@
+{
+  "id": "2246",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-path-with-different-adjacent-characters",
+  "title": "Longest Path With Different Adjacent Characters",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "String",
+    "Tree",
+    "Depth-First Search",
+    "Graph",
+    "Topological Sort"
+  ]
+}

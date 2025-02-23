@@ -1,0 +1,12 @@
+{
+  "id": "2190",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-frequent-number-following-key-in-an-array",
+  "title": "Most Frequent Number Following Key In an Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Counting"
+  ]
+}

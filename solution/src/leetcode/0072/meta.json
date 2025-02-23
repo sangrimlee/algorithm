@@ -1,0 +1,11 @@
+{
+  "id": "72",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/edit-distance",
+  "title": "Edit Distance",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Dynamic Programming"
+  ]
+}

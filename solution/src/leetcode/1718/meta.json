@@ -1,0 +1,11 @@
+{
+  "id": "1718",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/construct-the-lexicographically-largest-valid-sequence",
+  "title": "Construct the Lexicographically Largest Valid Sequence",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Backtracking"
+  ]
+}

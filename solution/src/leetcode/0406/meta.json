@@ -1,0 +1,13 @@
+{
+  "id": "406",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/queue-reconstruction-by-height",
+  "title": "Queue Reconstruction by Height",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Sorting"
+  ]
+}

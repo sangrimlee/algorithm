@@ -1,0 +1,12 @@
+{
+  "id": "1282",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/group-the-people-given-the-group-size-they-belong-to",
+  "title": "Group the People Given the Group Size They Belong To",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Greedy"
+  ]
+}

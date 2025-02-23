@@ -1,0 +1,13 @@
+{
+  "id": "2583",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/kth-largest-sum-in-a-binary-tree",
+  "title": "Kth Largest Sum in a Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Tree",
+    "Breadth-First Search",
+    "Sorting",
+    "Binary Tree"
+  ]
+}

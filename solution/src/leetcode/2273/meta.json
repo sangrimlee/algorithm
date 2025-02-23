@@ -1,0 +1,13 @@
+{
+  "id": "2273",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-resultant-array-after-removing-anagrams",
+  "title": "Find Resultant Array After Removing Anagrams",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "String",
+    "Sorting"
+  ]
+}

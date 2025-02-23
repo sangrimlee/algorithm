@@ -1,0 +1,13 @@
+{
+  "id": "1930",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/unique-length-3-palindromic-subsequences",
+  "title": "Unique Length-3 Palindromic Subsequences",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Prefix Sum"
+  ]
+}

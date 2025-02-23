@@ -1,0 +1,14 @@
+{
+  "id": "2501",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-square-streak-in-an-array",
+  "title": "Longest Square Streak in an Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Binary Search",
+    "Dynamic Programming",
+    "Sorting"
+  ]
+}

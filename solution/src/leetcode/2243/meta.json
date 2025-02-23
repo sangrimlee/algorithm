@@ -1,0 +1,11 @@
+{
+  "id": "2243",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/calculate-digit-sum-of-a-string",
+  "title": "Calculate Digit Sum of a String",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "String",
+    "Simulation"
+  ]
+}

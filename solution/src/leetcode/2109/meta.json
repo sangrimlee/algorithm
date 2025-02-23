@@ -1,0 +1,13 @@
+{
+  "id": "2109",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/adding-spaces-to-a-string",
+  "title": "Adding Spaces to a String",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "String",
+    "Simulation"
+  ]
+}

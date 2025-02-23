@@ -1,0 +1,14 @@
+{
+  "id": "2458",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/height-of-binary-tree-after-subtree-removal-queries",
+  "title": "Height of Binary Tree After Subtree Removal Queries",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ]
+}

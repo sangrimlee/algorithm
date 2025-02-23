@@ -1,0 +1,15 @@
+{
+  "id": "654",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-binary-tree",
+  "title": "Maximum Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Divide and Conquer",
+    "Stack",
+    "Tree",
+    "Monotonic Stack",
+    "Binary Tree"
+  ]
+}

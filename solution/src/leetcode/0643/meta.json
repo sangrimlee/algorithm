@@ -1,0 +1,11 @@
+{
+  "id": "643",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-average-subarray-i",
+  "title": "Maximum Average Subarray I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Sliding Window"
+  ]
+}

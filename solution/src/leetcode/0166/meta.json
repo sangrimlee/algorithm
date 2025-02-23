@@ -1,0 +1,12 @@
+{
+  "id": "166",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/fraction-to-recurring-decimal",
+  "title": "Fraction to Recurring Decimal",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "Math",
+    "String"
+  ]
+}

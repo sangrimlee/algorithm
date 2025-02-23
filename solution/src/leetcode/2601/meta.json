@@ -1,0 +1,14 @@
+{
+  "id": "2601",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/prime-subtraction-operation",
+  "title": "Prime Subtraction Operation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Math",
+    "Binary Search",
+    "Greedy",
+    "Number Theory"
+  ]
+}

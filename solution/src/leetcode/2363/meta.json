@@ -1,0 +1,13 @@
+{
+  "id": "2363",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/merge-similar-items",
+  "title": "Merge Similar Items",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Sorting",
+    "Ordered Set"
+  ]
+}

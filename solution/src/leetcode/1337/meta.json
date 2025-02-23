@@ -1,0 +1,14 @@
+{
+  "id": "1337",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/the-k-weakest-rows-in-a-matrix",
+  "title": "The K Weakest Rows in a Matrix",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Sorting",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ]
+}

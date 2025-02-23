@@ -1,0 +1,13 @@
+{
+  "id": "1877",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimize-maximum-pair-sum-in-array",
+  "title": "Minimize Maximum Pair Sum in Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Greedy",
+    "Sorting"
+  ]
+}

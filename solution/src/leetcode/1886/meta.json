@@ -1,0 +1,11 @@
+{
+  "id": "1886",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/determine-whether-matrix-can-be-obtained-by-rotation",
+  "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Matrix"
+  ]
+}

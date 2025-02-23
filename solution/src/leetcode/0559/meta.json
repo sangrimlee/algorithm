@@ -1,0 +1,12 @@
+{
+  "id": "559",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-depth-of-n-ary-tree",
+  "title": "Maximum Depth of N-ary Tree",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search"
+  ]
+}

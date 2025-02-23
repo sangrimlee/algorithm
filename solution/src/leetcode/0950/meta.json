@@ -1,0 +1,13 @@
+{
+  "id": "950",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/reveal-cards-in-increasing-order",
+  "title": "Reveal Cards In Increasing Order",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Queue",
+    "Sorting",
+    "Simulation"
+  ]
+}

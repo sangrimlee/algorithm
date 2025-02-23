@@ -1,0 +1,11 @@
+{
+  "id": "766",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/toeplitz-matrix",
+  "title": "Toeplitz Matrix",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Matrix"
+  ]
+}

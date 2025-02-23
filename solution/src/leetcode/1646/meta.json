@@ -1,0 +1,11 @@
+{
+  "id": "1646",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/get-maximum-in-generated-array",
+  "title": "Get Maximum in Generated Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Array",
+    "Simulation"
+  ]
+}

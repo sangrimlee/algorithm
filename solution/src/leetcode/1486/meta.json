@@ -1,0 +1,11 @@
+{
+  "id": "1486",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/xor-operation-in-an-array",
+  "title": "XOR Operation in an Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Math",
+    "Bit Manipulation"
+  ]
+}

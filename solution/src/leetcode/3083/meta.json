@@ -1,0 +1,11 @@
+{
+  "id": "3083",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/existence-of-a-substring-in-a-string-and-its-reverse",
+  "title": "Existence of a Substring in a String and Its Reverse",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Hash Table",
+    "String"
+  ]
+}

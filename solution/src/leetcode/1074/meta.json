@@ -1,0 +1,13 @@
+{
+  "id": "1074",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-submatrices-that-sum-to-target",
+  "title": "Number of Submatrices That Sum to Target",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Matrix",
+    "Prefix Sum"
+  ]
+}

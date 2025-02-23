@@ -1,0 +1,14 @@
+{
+  "id": "847",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-path-visiting-all-nodes",
+  "title": "Shortest Path Visiting All Nodes",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Breadth-First Search",
+    "Graph",
+    "Bitmask"
+  ]
+}

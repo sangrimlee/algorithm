@@ -1,0 +1,13 @@
+{
+  "id": "823",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-trees-with-factors",
+  "title": "Binary Trees With Factors",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Sorting"
+  ]
+}

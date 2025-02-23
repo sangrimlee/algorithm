@@ -1,0 +1,13 @@
+{
+  "id": "1462",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/course-schedule-iv",
+  "title": "Course Schedule IV",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Graph",
+    "Topological Sort"
+  ]
+}

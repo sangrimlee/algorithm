@@ -1,0 +1,12 @@
+{
+  "id": "3211",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/generate-binary-strings-without-adjacent-zeros",
+  "title": "Generate Binary Strings Without Adjacent Zeros",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "String",
+    "Backtracking",
+    "Bit Manipulation"
+  ]
+}

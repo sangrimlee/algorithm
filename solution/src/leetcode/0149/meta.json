@@ -1,0 +1,13 @@
+{
+  "id": "149",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/max-points-on-a-line",
+  "title": "Max Points on a Line",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Math",
+    "Geometry"
+  ]
+}

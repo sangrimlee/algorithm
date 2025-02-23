@@ -1,0 +1,12 @@
+{
+  "id": "3160",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-number-of-distinct-colors-among-the-balls",
+  "title": "Find the Number of Distinct Colors Among the Balls",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Simulation"
+  ]
+}

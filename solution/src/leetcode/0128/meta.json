@@ -1,0 +1,12 @@
+{
+  "id": "128",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-consecutive-sequence",
+  "title": "Longest Consecutive Sequence",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Hash Table",
+    "Union Find"
+  ]
+}
