@@ -17,25 +17,51 @@ tags:
   <Badge.Topic name="Greedy" slug="greedy" />
 </Badge.Root>
 
-## Solution
+## 문제 설명
+
+`I`와 `D`로 구성된 길이 `n`인 문자열 `pattern`이 주어집니다.
+
+다음 조건을 사용하여, 길이 `n+1`인 문자열 `num`을 생성합니다.
+
+- `num`은 `1`부터 `9`까지의 숫자로 구성되며, 각 숫자는 **최대 한 번만 사용합니다.**
+- `pattern[i] === 'I' 라면, num[i] < num[i + 1]`
+- `pattern[i] === 'D' 라면, num[i] > num[i + 1]`
+
+조건을 충족하는 `num` 중에서 **사전순으로(lexicographically) 가장 작은 문자열**을 반환합니다.
+
+## 문제 풀이
+
+`Stack`을 활용해서 해결할 수 있습니다.
+
+패턴이 `D` 인 경우, 숫자의 순서를 뒤집어야 하므로, 스택에 저장 했다가 나중에 추가하는 방식으로 해결할 수 있습니다.
+
+1. **1부터 순서대로 `stack` 에 추가합니다.**
+2. **마지막 인덱스** 또는 **`pattern[i] === 'I'`** 인 경우,
+   - 현재 `stack`을 뒤집어서, `result`에 추가합니다.
+   - 현재 `stack`을 초기화하여, 다음 숫자를 저장할 준비를 합니다.
+3. `I`를 만나기 전까지는 패턴은 `D`이므로, `stack`에 쌓아두었다가, `I`를 만나면, 기존의 스택을 뒤집어서 감소하는 패턴을 추가합니다.
+4. 숫자를 1부터 순서대로 사용하기 때문에, **사전순으로 가장 작은 문자열**을 만들 수 있습니다.
 
 ```typescript filename="solution.ts" copy
-export function smallestNumber(pattern: string): string {
+function smallestNumber(pattern: string): string {
   const n = pattern.length;
-
-  let answer = '';
   let stack: number[] = [];
+  let result = '';
   for (let i = 0; i <= n; i++) {
     stack.push(i + 1);
-    if (pattern[i] === 'I' || i === n) {
-      answer += stack.reverse().join('');
+    if (i === n || pattern[i] === 'I') {
+      result += stack.reverse().join('');
       stack = [];
     }
   }
-
-  return answer;
+  return result;
 }
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
 
 <ProblemLink
   codingSite="leetcode"
