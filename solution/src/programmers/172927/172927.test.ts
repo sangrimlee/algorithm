@@ -1,6 +1,6 @@
 import { mineForMinerals } from './172927';
 
-describe('LeetCode 172927', () => {
+describe('Programmers 172927', () => {
   test('Example 1', () => {
     expect(
       mineForMinerals(

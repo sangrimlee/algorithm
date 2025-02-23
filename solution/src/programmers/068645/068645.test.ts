@@ -1,6 +1,6 @@
 import { solution } from './068645';
 
-describe('LeetCode 068645', () => {
+describe('Programmers 068645', () => {
   test('Example 1', () => {
     expect(solution(4)).toEqual([1, 2, 9, 3, 10, 8, 4, 5, 6, 7]);
   });

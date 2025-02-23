@@ -1,6 +1,6 @@
 import { bundleOfCards } from './159994';
 
-describe('LeetCode 159994', () => {
+describe('Programmers 159994', () => {
   test('Example 1', () => {
     expect(
       bundleOfCards(['i', 'drink', 'water'], ['want', 'to'], ['i', 'want', 'to', 'drink', 'water']),

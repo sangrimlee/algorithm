@@ -1,6 +1,6 @@
 import { fourOperations } from './001843';
 
-describe('LeetCode 001843', () => {
+describe('Programmers 001843', () => {
   test('Example 1', () => {
     expect(fourOperations(['1', '-', '3', '+', '5', '-', '8'])).toBe(1);
   });

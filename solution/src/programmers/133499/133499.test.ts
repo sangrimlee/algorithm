@@ -1,6 +1,6 @@
 import { babblingII } from './133499';
 
-describe('LeetCode 133499', () => {
+describe('Programmers 133499', () => {
   test('Example 1', () => {
     expect(babblingII(['aya', 'yee', 'u', 'maa'])).toBe(1);
   });

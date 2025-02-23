@@ -1,6 +1,6 @@
 import { convertNumbers } from './154538';
 
-describe('LeetCode 154538', () => {
+describe('Programmers 154538', () => {
   test('Example 1', () => {
     expect(convertNumbers(10, 40, 5)).toBe(2);
   });

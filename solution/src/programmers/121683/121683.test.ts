@@ -1,6 +1,6 @@
 import { aloneAlphabet } from './121683';
 
-describe('LeetCode 121683', () => {
+describe('Programmers 121683', () => {
   test('Example 1', () => {
     expect(aloneAlphabet('edeaaabbccd')).toBe('de');
   });

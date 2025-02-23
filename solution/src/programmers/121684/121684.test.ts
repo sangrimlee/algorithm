@@ -1,6 +1,6 @@
 import { trackMeet } from './121684';
 
-describe('LeetCode 121684', () => {
+describe('Programmers 121684', () => {
   test('Example 1', () => {
     expect(
       trackMeet([

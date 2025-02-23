@@ -1,6 +1,6 @@
 import { drillOil } from './250136';
 
-describe('LeetCode 250136', () => {
+describe('Programmers 250136', () => {
   test('Example 1', () => {
     expect(
       drillOil([

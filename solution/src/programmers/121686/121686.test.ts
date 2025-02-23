@@ -1,6 +1,6 @@
 import { operatingSystem } from './121686';
 
-describe('LeetCode 121686', () => {
+describe('Programmers 121686', () => {
   test('Example 1', () => {
     expect(
       operatingSystem([

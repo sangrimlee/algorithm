@@ -1,6 +1,6 @@
 import { countMoutainTile } from './258705';
 
-describe('LeetCode 258705', () => {
+describe('Programmers 258705', () => {
   test('Example 1', () => {
     expect(countMoutainTile(4, [1, 1, 0, 1])).toBe(149);
   });

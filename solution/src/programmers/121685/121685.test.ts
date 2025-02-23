@@ -1,6 +1,6 @@
 import { inheritance } from './121685';
 
-describe('LeetCode 121685', () => {
+describe('Programmers 121685', () => {
   test('Example 1', () => {
     expect(inheritance([[3, 5]])).toEqual(['RR']);
   });

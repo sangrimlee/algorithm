@@ -1,6 +1,6 @@
 import { divideCard } from './135807';
 
-describe('LeetCode 135807', () => {
+describe('Programmers 135807', () => {
   test('Example 1', () => {
     expect(divideCard([10, 17], [5, 20])).toBe(0);
   });

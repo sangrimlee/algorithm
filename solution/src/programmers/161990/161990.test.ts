@@ -1,6 +1,6 @@
 import { cleanUpWallpaper } from './161990';
 
-describe('LeetCode 161990', () => {
+describe('Programmers 161990', () => {
   test('Example 1', () => {
     expect(cleanUpWallpaper(['.#...', '..#..', '...#.'])).toEqual([0, 1, 3, 4]);
   });

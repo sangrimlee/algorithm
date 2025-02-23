@@ -1,6 +1,6 @@
 import { magicalElevator } from './148653';
 
-describe('LeetCode 148653', () => {
+describe('Programmers 148653', () => {
   test('Example 1', () => {
     expect(magicalElevator(16)).toBe(6);
   });

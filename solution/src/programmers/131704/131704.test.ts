@@ -1,6 +1,6 @@
 import { courierBox } from './131704';
 
-describe('LeetCode 131704', () => {
+describe('Programmers 131704', () => {
   test('Example 1', () => {
     expect(courierBox([4, 3, 1, 2, 5])).toBe(2);
   });

@@ -1,6 +1,6 @@
 import { chooseHikingCourse } from './118669';
 
-describe('LeetCode 118669', () => {
+describe('Programmers 118669', () => {
   test('Example 1', () => {
     expect(
       chooseHikingCourse(

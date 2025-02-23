@@ -1,6 +1,6 @@
 import { expandCafe } from './121689';
 
-describe('LeetCode 121689', () => {
+describe('Programmers 121689', () => {
   test('Example 1', () => {
     expect(expandCafe([5, 12, 30], [1, 2, 0, 1], 10)).toBe(3);
   });

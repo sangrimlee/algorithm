@@ -1,6 +1,6 @@
 import { studyCodingTest } from './118668';
 
-describe('LeetCode 118668', () => {
+describe('Programmers 118668', () => {
   test('Example 1', () => {
     expect(
       studyCodingTest(10, 10, [

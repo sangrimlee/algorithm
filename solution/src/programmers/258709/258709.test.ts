@@ -1,6 +1,6 @@
 import { selectDice } from './258709';
 
-describe('LeetCode 258709', () => {
+describe('Programmers 258709', () => {
   test('Example 1', () => {
     expect(
       selectDice([

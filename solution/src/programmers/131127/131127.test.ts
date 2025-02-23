@@ -1,6 +1,6 @@
 import { salePromotion } from './131127';
 
-describe('LeetCode 131127', () => {
+describe('Programmers 131127', () => {
   test('Example 1', () => {
     expect(
       salePromotion(

@@ -1,6 +1,6 @@
 import { matrixAndOpertaion } from './118670';
 
-describe('LeetCode 118670', () => {
+describe('Programmers 118670', () => {
   test('Example 1', () => {
     expect(
       matrixAndOpertaion(

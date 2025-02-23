@@ -1,6 +1,6 @@
 import { newRecruits } from './121688';
 
-describe('LeetCode 121688', () => {
+describe('Programmers 121688', () => {
   test('Example 1', () => {
     expect(newRecruits([10, 3, 7, 2], 2)).toBe(37);
   });

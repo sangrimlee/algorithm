@@ -1,6 +1,6 @@
 import { markingDot } from './140107';
 
-describe('LeetCode 140107', () => {
+describe('Programmers 140107', () => {
   test('Example 1', () => {
     expect(markingDot(2, 4)).toBe(6);
   });

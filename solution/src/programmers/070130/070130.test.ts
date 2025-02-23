@@ -1,6 +1,6 @@
 import { solution } from './070130';
 
-describe('LeetCode 070130', () => {
+describe('Programmers 070130', () => {
   test('Example 1', () => {
     expect(solution([0])).toBe(0);
   });

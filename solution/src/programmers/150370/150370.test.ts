@@ -1,6 +1,6 @@
 import { validPrivacies } from './150370';
 
-describe('LeetCode 150370', () => {
+describe('Programmers 150370', () => {
   test('Example 1', () => {
     expect(
       validPrivacies(

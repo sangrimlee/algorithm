@@ -1,6 +1,6 @@
 import { knightlyWeapon } from './136798';
 
-describe('LeetCode 136798', () => {
+describe('Programmers 136798', () => {
   test('Example 1', () => {
     expect(knightlyWeapon(5, 3, 2)).toBe(10);
   });

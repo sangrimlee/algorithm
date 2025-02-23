@@ -1,6 +1,6 @@
 import { treasureMap } from './121690';
 
-describe('LeetCode 121690', () => {
+describe('Programmers 121690', () => {
   test('Example 1', () => {
     expect(
       treasureMap(4, 4, [

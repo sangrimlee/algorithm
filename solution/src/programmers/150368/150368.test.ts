@@ -1,6 +1,6 @@
 import { saleEmoticons } from './150368';
 
-describe('LeetCode 150368', () => {
+describe('Programmers 150368', () => {
   test('Example 1', () => {
     expect(
       saleEmoticons(

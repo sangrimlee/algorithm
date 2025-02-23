@@ -1,6 +1,6 @@
 import { windBandage } from './250137';
 
-describe('LeetCode 250137', () => {
+describe('Programmers 250137', () => {
   test('Example 1', () => {
     expect(
       windBandage([5, 1, 5], 30, [

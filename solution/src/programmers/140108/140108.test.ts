@@ -1,6 +1,6 @@
 import { splitString } from './140108';
 
-describe('LeetCode 140108', () => {
+describe('Programmers 140108', () => {
   test('Example 1', () => {
     expect(splitString('banana')).toBe(3);
   });

@@ -1,6 +1,6 @@
 import { overPainting } from './161989';
 
-describe('LeetCode 161989', () => {
+describe('Programmers 161989', () => {
   test('Example 1', () => {
     expect(overPainting(8, 4, [2, 3, 6])).toBe(2);
   });

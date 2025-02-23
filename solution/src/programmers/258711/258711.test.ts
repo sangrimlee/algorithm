@@ -1,6 +1,6 @@
 import { countGraph } from './258711';
 
-describe('LeetCode 258711', () => {
+describe('Programmers 258711', () => {
   test('Example 1', () => {
     expect(
       countGraph([

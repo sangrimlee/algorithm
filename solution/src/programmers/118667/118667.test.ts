@@ -1,6 +1,6 @@
 import { makeEqualSum } from './118667';
 
-describe('LeetCode 118667', () => {
+describe('Programmers 118667', () => {
   test('Example 1', () => {
     expect(makeEqualSum([3, 2, 7, 2], [4, 6, 5, 1])).toBe(2);
   });

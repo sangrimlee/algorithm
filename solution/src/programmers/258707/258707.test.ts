@@ -1,6 +1,6 @@
 import { cardGame } from './258707';
 
-describe('LeetCode 258707', () => {
+describe('Programmers 258707', () => {
   test('Example 1', () => {
     expect(cardGame(4, [3, 6, 7, 2, 1, 10, 5, 9, 8, 12, 11, 4])).toBe(5);
   });

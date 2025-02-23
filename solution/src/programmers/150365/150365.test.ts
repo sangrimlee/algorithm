@@ -1,6 +1,6 @@
 import { escapeMaze } from './150365';
 
-describe('LeetCode 150365', () => {
+describe('Programmers 150365', () => {
   test('Example 1', () => {
     expect(escapeMaze(3, 4, 2, 3, 3, 1, 5)).toBe('dllrl');
   });

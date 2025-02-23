@@ -1,6 +1,6 @@
 import { hailStoneNumberDefiniteIntegral } from './134239';
 
-describe('LeetCode 134239', () => {
+describe('Programmers 134239', () => {
   test('Example 1', () => {
     expect(
       hailStoneNumberDefiniteIntegral(5, [

@@ -1,6 +1,6 @@
 import { partnerNumber } from './131128';
 
-describe('LeetCode 131128', () => {
+describe('Programmers 131128', () => {
   test('Example 1', () => {
     expect(partnerNumber('100', '2345')).toBe('-1');
   });

@@ -1,6 +1,6 @@
 import { roughKeyboard } from './160586';
 
-describe('LeetCode 160586', () => {
+describe('Programmers 160586', () => {
   test('Example 1', () => {
     expect(roughKeyboard(['ABACD', 'BCEFD'], ['ABCD', 'AABB'])).toEqual([9, 4]);
   });
