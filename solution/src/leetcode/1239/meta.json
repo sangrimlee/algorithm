@@ -1,0 +1,8 @@
+{
+  "id": "1239",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-length-of-a-concatenated-string-with-unique-characters",
+  "title": "Maximum Length of a Concatenated String with Unique Characters",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "String", "Backtracking", "Bit Manipulation"]
+}

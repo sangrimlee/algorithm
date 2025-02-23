@@ -1,0 +1,8 @@
+{
+  "id": "101",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/symmetric-tree",
+  "title": "Symmetric Tree",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
+}

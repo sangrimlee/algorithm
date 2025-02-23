@@ -1,0 +1,8 @@
+{
+  "id": "386",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/lexicographical-numbers",
+  "title": "Lexicographical Numbers",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Depth-First Search", "Trie"]
+}

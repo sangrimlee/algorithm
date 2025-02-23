@@ -1,0 +1,8 @@
+{
+  "id": "735",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/asteroid-collision",
+  "title": "Asteroid Collision",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Stack", "Simulation"]
+}

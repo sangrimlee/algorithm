@@ -1,0 +1,8 @@
+{
+  "id": "1208",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/get-equal-substrings-within-budget",
+  "title": "Get Equal Substrings Within Budget",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Binary Search", "Sliding Window", "Prefix Sum"]
+}

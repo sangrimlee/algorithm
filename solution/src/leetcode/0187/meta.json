@@ -1,0 +1,15 @@
+{
+  "id": "187",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/repeated-dna-sequences",
+  "title": "Repeated DNA Sequences",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Hash Table",
+    "String",
+    "Bit Manipulation",
+    "Sliding Window",
+    "Rolling Hash",
+    "Hash Function"
+  ]
+}

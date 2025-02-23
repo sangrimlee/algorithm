@@ -1,0 +1,8 @@
+{
+  "id": "1448",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-good-nodes-in-binary-tree",
+  "title": "Count Good Nodes in Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "1249",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-remove-to-make-valid-parentheses",
+  "title": "Minimum Remove to Make Valid Parentheses",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Stack"]
+}

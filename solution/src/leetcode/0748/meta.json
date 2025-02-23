@@ -1,0 +1,8 @@
+{
+  "id": "748",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-completing-word",
+  "title": "Shortest Completing Word",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table", "String"]
+}

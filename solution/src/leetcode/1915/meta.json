@@ -1,0 +1,8 @@
+{
+  "id": "1915",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-wonderful-substrings",
+  "title": "Number of Wonderful Substrings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "3222",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-winning-player-in-coin-game",
+  "title": "Find the Winning Player in Coin Game",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Simulation", "Game Theory"]
+}

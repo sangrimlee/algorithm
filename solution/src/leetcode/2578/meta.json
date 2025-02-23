@@ -1,0 +1,8 @@
+{
+  "id": "2578",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-with-minimum-sum",
+  "title": "Split With Minimum Sum",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Greedy", "Sorting"]
+}

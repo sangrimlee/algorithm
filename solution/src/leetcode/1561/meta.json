@@ -1,0 +1,8 @@
+{
+  "id": "1561",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-coins-you-can-get",
+  "title": "Maximum Number of Coins You Can Get",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Math", "Greedy", "Sorting", "Game Theory"]
+}

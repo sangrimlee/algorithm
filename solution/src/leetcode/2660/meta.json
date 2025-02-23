@@ -1,0 +1,8 @@
+{
+  "id": "2660",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/determine-the-winner-of-a-bowling-game",
+  "title": "Determine the Winner of a Bowling Game",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Simulation"]
+}

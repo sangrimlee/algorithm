@@ -1,0 +1,8 @@
+{
+  "id": "874",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/walking-robot-simulation",
+  "title": "Walking Robot Simulation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Simulation"]
+}

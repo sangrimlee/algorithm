@@ -1,0 +1,8 @@
+{
+  "id": "1910",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-all-occurrences-of-a-substring",
+  "title": "Remove All Occurrences of a Substring",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Stack", "Simulation"]
+}

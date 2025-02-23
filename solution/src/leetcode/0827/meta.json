@@ -1,0 +1,8 @@
+{
+  "id": "827",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/making-a-large-island",
+  "title": "Making A Large Island",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Depth-First Search", "Breadth-First Search", "Union Find", "Matrix"]
+}

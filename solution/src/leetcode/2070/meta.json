@@ -1,0 +1,8 @@
+{
+  "id": "2070",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/most-beautiful-item-for-each-query",
+  "title": "Most Beautiful Item for Each Query",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search", "Sorting"]
+}

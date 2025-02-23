@@ -1,0 +1,8 @@
+{
+  "id": "1529",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-suffix-flips",
+  "title": "Minimum Suffix Flips",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Greedy"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "1796",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/second-largest-digit-in-a-string",
+  "title": "Second Largest Digit in a String",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String"]
+}

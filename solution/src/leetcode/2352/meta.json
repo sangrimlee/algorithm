@@ -1,0 +1,8 @@
+{
+  "id": "2352",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/equal-row-and-column-pairs",
+  "title": "Equal Row and Column Pairs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Matrix", "Simulation"]
+}

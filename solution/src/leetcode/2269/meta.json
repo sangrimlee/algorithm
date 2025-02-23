@@ -1,0 +1,8 @@
+{
+  "id": "2269",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-k-beauty-of-a-number",
+  "title": "Find the K-Beauty of a Number",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "String", "Sliding Window"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "409",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-palindrome",
+  "title": "Longest Palindrome",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String", "Greedy"]
+}

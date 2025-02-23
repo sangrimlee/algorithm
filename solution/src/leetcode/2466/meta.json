@@ -1,0 +1,8 @@
+{
+  "id": "2466",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-ways-to-build-good-strings",
+  "title": "Count Ways To Build Good Strings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Dynamic Programming"]
+}

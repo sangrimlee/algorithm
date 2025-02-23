@@ -1,0 +1,8 @@
+{
+  "id": "1624",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/largest-substring-between-two-equal-characters",
+  "title": "Largest Substring Between Two Equal Characters",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String"]
+}

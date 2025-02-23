@@ -1,0 +1,8 @@
+{
+  "id": "2259",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-digit-from-number-to-maximize-result",
+  "title": "Remove Digit From Number to Maximize Result",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Greedy", "Enumeration"]
+}

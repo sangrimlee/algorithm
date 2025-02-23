@@ -1,0 +1,8 @@
+{
+  "id": "2379",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-recolors-to-get-k-consecutive-black-blocks",
+  "title": "Minimum Recolors to Get K Consecutive Black Blocks",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Sliding Window"]
+}

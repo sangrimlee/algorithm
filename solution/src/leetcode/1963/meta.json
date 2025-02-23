@@ -1,0 +1,8 @@
+{
+  "id": "1963",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-swaps-to-make-the-string-balanced",
+  "title": "Minimum Number of Swaps to Make the String Balanced",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Two Pointers", "String", "Stack", "Greedy"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "2187",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-time-to-complete-trips",
+  "title": "Minimum Time to Complete Trips",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search"]
+}

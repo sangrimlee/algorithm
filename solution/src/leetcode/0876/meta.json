@@ -1,0 +1,8 @@
+{
+  "id": "876",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/middle-of-the-linked-list",
+  "title": "Middle of the Linked List",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Linked List", "Two Pointers"]
+}

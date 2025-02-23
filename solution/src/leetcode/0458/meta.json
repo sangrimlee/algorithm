@@ -1,0 +1,8 @@
+{
+  "id": "458",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/poor-pigs",
+  "title": "Poor Pigs",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Math", "Dynamic Programming", "Combinatorics"]
+}

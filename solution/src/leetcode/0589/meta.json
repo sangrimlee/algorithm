@@ -1,0 +1,8 @@
+{
+  "id": "589",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/n-ary-tree-preorder-traversal",
+  "title": "N-ary Tree Preorder Traversal",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Stack", "Tree", "Depth-First Search"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "992",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/subarrays-with-k-different-integers",
+  "title": "Subarrays with K Different Integers",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Hash Table", "Sliding Window", "Counting"]
+}

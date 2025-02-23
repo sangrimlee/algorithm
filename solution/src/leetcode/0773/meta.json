@@ -1,0 +1,15 @@
+{
+  "id": "773",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sliding-puzzle",
+  "title": "Sliding Puzzle",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Dynamic Programming",
+    "Backtracking",
+    "Breadth-First Search",
+    "Memoization",
+    "Matrix"
+  ]
+}

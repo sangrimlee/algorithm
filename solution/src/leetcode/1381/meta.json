@@ -1,0 +1,8 @@
+{
+  "id": "1381",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-a-stack-with-increment-operation",
+  "title": "Design a Stack With Increment Operation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Stack", "Design"]
+}

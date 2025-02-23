@@ -1,0 +1,8 @@
+{
+  "id": "289",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/game-of-life",
+  "title": "Game of Life",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Matrix", "Simulation"]
+}

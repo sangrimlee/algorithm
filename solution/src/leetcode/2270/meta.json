@@ -1,0 +1,8 @@
+{
+  "id": "2270",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-ways-to-split-array",
+  "title": "Number of Ways to Split Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Prefix Sum"]
+}

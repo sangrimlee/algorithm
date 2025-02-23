@@ -1,0 +1,8 @@
+{
+  "id": "1207",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/unique-number-of-occurrences",
+  "title": "Unique Number of Occurrences",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table"]
+}

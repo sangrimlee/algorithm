@@ -1,0 +1,8 @@
+{
+  "id": "1688",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-of-matches-in-tournament",
+  "title": "Count of Matches in Tournament",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Simulation"]
+}

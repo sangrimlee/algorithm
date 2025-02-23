@@ -1,0 +1,8 @@
+{
+  "id": "1104",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/path-in-zigzag-labelled-binary-tree",
+  "title": "Path In Zigzag Labelled Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Math", "Tree", "Binary Tree"]
+}

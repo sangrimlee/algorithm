@@ -1,0 +1,8 @@
+{
+  "id": "802",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-eventual-safe-states",
+  "title": "Find Eventual Safe States",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"]
+}

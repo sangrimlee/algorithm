@@ -1,0 +1,8 @@
+{
+  "id": "2642",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-graph-with-shortest-path-calculator",
+  "title": "Design Graph With Shortest Path Calculator",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Graph", "Design", "Heap (Priority Queue)", "Shortest Path"]
+}

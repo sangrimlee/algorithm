@@ -1,0 +1,8 @@
+{
+  "id": "2161",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/partition-array-according-to-given-pivot",
+  "title": "Partition Array According to Given Pivot",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Two Pointers", "Simulation"]
+}

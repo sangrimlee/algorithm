@@ -1,0 +1,8 @@
+{
+  "id": "2349",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-a-number-container-system",
+  "title": "Design a Number Container System",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "Design", "Heap (Priority Queue)", "Ordered Set"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "648",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/replace-words",
+  "title": "Replace Words",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "String", "Trie"]
+}

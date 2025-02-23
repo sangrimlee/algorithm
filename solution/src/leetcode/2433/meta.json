@@ -1,0 +1,8 @@
+{
+  "id": "2433",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-original-array-of-prefix-xor",
+  "title": "Find The Original Array of Prefix Xor",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Bit Manipulation"]
+}

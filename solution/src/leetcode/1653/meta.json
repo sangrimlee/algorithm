@@ -1,0 +1,8 @@
+{
+  "id": "1653",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-deletions-to-make-string-balanced",
+  "title": "Minimum Deletions to Make String Balanced",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Dynamic Programming", "Stack"]
+}

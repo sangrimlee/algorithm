@@ -1,0 +1,8 @@
+{
+  "id": "1894",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-student-that-will-replace-the-chalk",
+  "title": "Find the Student that Will Replace the Chalk",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search", "Simulation", "Prefix Sum"]
+}

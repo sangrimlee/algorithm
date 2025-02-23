@@ -1,0 +1,8 @@
+{
+  "id": "1046",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/last-stone-weight",
+  "title": "Last Stone Weight",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Heap (Priority Queue)"]
+}

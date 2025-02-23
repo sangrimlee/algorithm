@@ -1,0 +1,8 @@
+{
+  "id": "1611",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-one-bit-operations-to-make-integers-zero",
+  "title": "Minimum One Bit Operations to Make Integers Zero",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Dynamic Programming", "Bit Manipulation", "Memoization"]
+}

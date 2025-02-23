@@ -1,0 +1,8 @@
+{
+  "id": "2938",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/separate-black-and-white-balls",
+  "title": "Separate Black and White Balls",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Two Pointers", "String", "Greedy"]
+}

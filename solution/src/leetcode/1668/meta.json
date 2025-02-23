@@ -1,0 +1,8 @@
+{
+  "id": "1668",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-repeating-substring",
+  "title": "Maximum Repeating Substring",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Dynamic Programming", "String Matching"]
+}

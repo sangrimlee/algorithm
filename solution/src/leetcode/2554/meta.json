@@ -1,0 +1,8 @@
+{
+  "id": "2554",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-integers-to-choose-from-a-range-i",
+  "title": "Maximum Number of Integers to Choose From a Range I",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Binary Search", "Greedy", "Sorting"]
+}

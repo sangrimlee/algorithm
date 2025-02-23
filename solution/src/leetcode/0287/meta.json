@@ -1,0 +1,8 @@
+{
+  "id": "287",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-duplicate-number",
+  "title": "Find the Duplicate Number",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Two Pointers", "Binary Search", "Bit Manipulation"]
+}

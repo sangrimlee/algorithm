@@ -1,0 +1,8 @@
+{
+  "id": "684",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/redundant-connection",
+  "title": "Redundant Connection",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Depth-First Search", "Breadth-First Search", "Union Find", "Graph"]
+}

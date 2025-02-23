@@ -1,0 +1,8 @@
+{
+  "id": "1658",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-operations-to-reduce-x-to-zero",
+  "title": "Minimum Operations to Reduce X to Zero",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Binary Search", "Sliding Window", "Prefix Sum"]
+}

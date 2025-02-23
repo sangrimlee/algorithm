@@ -1,0 +1,8 @@
+{
+  "id": "2383",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-hours-of-training-to-win-a-competition",
+  "title": "Minimum Hours of Training to Win a Competition",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Greedy"]
+}

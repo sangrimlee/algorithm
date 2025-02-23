@@ -1,0 +1,8 @@
+{
+  "id": "1252",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/cells-with-odd-values-in-a-matrix",
+  "title": "Cells with Odd Values in a Matrix",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Math", "Simulation"]
+}

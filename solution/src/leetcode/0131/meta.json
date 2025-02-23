@@ -1,0 +1,8 @@
+{
+  "id": "131",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/palindrome-partitioning",
+  "title": "Palindrome Partitioning",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Dynamic Programming", "Backtracking"]
+}

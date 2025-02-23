@@ -1,0 +1,8 @@
+{
+  "id": "1424",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/diagonal-traverse-ii",
+  "title": "Diagonal Traverse II",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Sorting", "Heap (Priority Queue)"]
+}

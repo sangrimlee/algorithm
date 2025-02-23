@@ -1,0 +1,8 @@
+{
+  "id": "832",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/flipping-an-image",
+  "title": "Flipping an Image",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Two Pointers", "Bit Manipulation", "Matrix", "Simulation"]
+}

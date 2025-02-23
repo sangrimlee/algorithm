@@ -1,0 +1,8 @@
+{
+  "id": "2116",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-a-parentheses-string-can-be-valid",
+  "title": "Check if a Parentheses String Can Be Valid",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["String", "Stack", "Greedy"]
+}

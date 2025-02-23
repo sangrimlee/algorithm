@@ -1,0 +1,8 @@
+{
+  "id": "3011",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-if-array-can-be-sorted",
+  "title": "Find if Array Can Be Sorted",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Bit Manipulation", "Sorting"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "1400",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/construct-k-palindrome-strings",
+  "title": "Construct K Palindrome Strings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "String", "Greedy", "Counting"]
+}

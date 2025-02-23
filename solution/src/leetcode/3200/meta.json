@@ -1,0 +1,8 @@
+{
+  "id": "3200",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-height-of-a-triangle",
+  "title": "Maximum Height of a Triangle",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Enumeration"]
+}

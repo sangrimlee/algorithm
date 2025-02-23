@@ -1,0 +1,8 @@
+{
+  "id": "815",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/bus-routes",
+  "title": "Bus Routes",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Hash Table", "Breadth-First Search"]
+}

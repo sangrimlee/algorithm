@@ -1,0 +1,8 @@
+{
+  "id": "2563",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-the-number-of-fair-pairs",
+  "title": "Count the Number of Fair Pairs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"]
+}

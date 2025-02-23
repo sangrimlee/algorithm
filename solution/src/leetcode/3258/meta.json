@@ -1,0 +1,8 @@
+{
+  "id": "3258",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-substrings-that-satisfy-k-constraint-i",
+  "title": "Count Substrings That Satisfy K-Constraint I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Sliding Window"]
+}

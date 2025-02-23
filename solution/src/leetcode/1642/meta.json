@@ -1,0 +1,8 @@
+{
+  "id": "1642",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/furthest-building-you-can-reach",
+  "title": "Furthest Building You Can Reach",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Greedy", "Heap (Priority Queue)"]
+}

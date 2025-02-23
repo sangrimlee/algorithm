@@ -1,0 +1,8 @@
+{
+  "id": "1876",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/substrings-of-size-three-with-distinct-characters",
+  "title": "Substrings of Size Three with Distinct Characters",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String", "Sliding Window", "Counting"]
+}

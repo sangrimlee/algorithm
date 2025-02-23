@@ -1,0 +1,8 @@
+{
+  "id": "367",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-perfect-square",
+  "title": "Valid Perfect Square",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Binary Search"]
+}

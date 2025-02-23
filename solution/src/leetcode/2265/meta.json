@@ -1,0 +1,8 @@
+{
+  "id": "2265",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-nodes-equal-to-average-of-subtree",
+  "title": "Count Nodes Equal to Average of Subtree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
+}

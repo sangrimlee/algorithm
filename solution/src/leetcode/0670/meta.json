@@ -1,0 +1,8 @@
+{
+  "id": "670",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-swap",
+  "title": "Maximum Swap",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Math", "Greedy"]
+}

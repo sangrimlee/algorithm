@@ -1,0 +1,8 @@
+{
+  "id": "1367",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/linked-list-in-binary-tree",
+  "title": "Linked List in Binary Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Linked List", "Tree", "Depth-First Search", "Binary Tree"]
+}

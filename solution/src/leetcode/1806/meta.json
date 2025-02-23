@@ -1,0 +1,8 @@
+{
+  "id": "1806",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-reinitialize-a-permutation",
+  "title": "Minimum Number of Operations to Reinitialize a Permutation",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Math", "Simulation"]
+}

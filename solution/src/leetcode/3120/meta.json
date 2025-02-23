@@ -1,0 +1,8 @@
+{
+  "id": "3120",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-the-number-of-special-characters-i",
+  "title": "Count the Number of Special Characters I",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String"]
+}

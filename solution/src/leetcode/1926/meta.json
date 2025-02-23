@@ -1,0 +1,8 @@
+{
+  "id": "1926",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/nearest-exit-from-entrance-in-maze",
+  "title": "Nearest Exit from Entrance in Maze",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Breadth-First Search", "Matrix"]
+}

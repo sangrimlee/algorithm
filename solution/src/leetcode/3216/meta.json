@@ -1,0 +1,8 @@
+{
+  "id": "3216",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/lexicographically-smallest-string-after-a-swap",
+  "title": "Lexicographically Smallest String After a Swap",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Greedy"]
+}

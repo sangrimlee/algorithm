@@ -1,0 +1,8 @@
+{
+  "id": "1937",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-points-with-cost",
+  "title": "Maximum Number of Points with Cost",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Dynamic Programming", "Matrix"]
+}

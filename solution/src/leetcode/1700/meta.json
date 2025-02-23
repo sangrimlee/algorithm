@@ -1,0 +1,8 @@
+{
+  "id": "1700",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-students-unable-to-eat-lunch",
+  "title": "Number of Students Unable to Eat Lunch",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Stack", "Queue", "Simulation"]
+}

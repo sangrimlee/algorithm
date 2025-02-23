@@ -1,0 +1,8 @@
+{
+  "id": "893",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/groups-of-special-equivalent-strings",
+  "title": "Groups of Special-Equivalent Strings",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "String", "Sorting"]
+}

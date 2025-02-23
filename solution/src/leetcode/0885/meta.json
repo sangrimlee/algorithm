@@ -1,0 +1,8 @@
+{
+  "id": "885",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/spiral-matrix-iii",
+  "title": "Spiral Matrix III",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Matrix", "Simulation"]
+}

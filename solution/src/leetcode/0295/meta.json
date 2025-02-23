@@ -1,0 +1,8 @@
+{
+  "id": "295",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-median-from-data-stream",
+  "title": "Find Median from Data Stream",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Two Pointers", "Design", "Sorting", "Heap (Priority Queue)", "Data Stream"]
+}

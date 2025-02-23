@@ -1,0 +1,8 @@
+{
+  "id": "3226",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-bit-changes-to-make-two-integers-equal",
+  "title": "Number of Bit Changes to Make Two Integers Equal",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Bit Manipulation"]
+}

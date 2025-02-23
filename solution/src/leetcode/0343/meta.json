@@ -1,0 +1,8 @@
+{
+  "id": "343",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/integer-break",
+  "title": "Integer Break",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Math", "Dynamic Programming"]
+}

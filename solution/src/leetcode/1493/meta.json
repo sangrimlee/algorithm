@@ -1,0 +1,8 @@
+{
+  "id": "1493",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-subarray-of-1s-after-deleting-one-element",
+  "title": "Longest Subarray of 1's After Deleting One Element",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Dynamic Programming", "Sliding Window"]
+}

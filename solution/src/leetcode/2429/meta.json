@@ -1,0 +1,8 @@
+{
+  "id": "2429",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimize-xor",
+  "title": "Minimize XOR",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Greedy", "Bit Manipulation"]
+}

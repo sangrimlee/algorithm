@@ -1,0 +1,8 @@
+{
+  "id": "79",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/word-search",
+  "title": "Word Search",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "String", "Backtracking", "Depth-First Search", "Matrix"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "242",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-anagram",
+  "title": "Valid Anagram",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String", "Sorting"]
+}

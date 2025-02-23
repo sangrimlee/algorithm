@@ -1,0 +1,8 @@
+{
+  "id": "2870",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-make-array-empty",
+  "title": "Minimum Number of Operations to Make Array Empty",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Greedy", "Counting"]
+}

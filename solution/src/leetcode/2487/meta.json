@@ -1,0 +1,8 @@
+{
+  "id": "2487",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-nodes-from-linked-list",
+  "title": "Remove Nodes From Linked List",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Linked List", "Stack", "Recursion", "Monotonic Stack"]
+}

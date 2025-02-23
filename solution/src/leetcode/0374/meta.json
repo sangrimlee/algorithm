@@ -1,0 +1,8 @@
+{
+  "id": "374",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/guess-number-higher-or-lower",
+  "title": "Guess Number Higher or Lower",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Binary Search", "Interactive"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "763",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/partition-labels",
+  "title": "Partition Labels",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "Two Pointers", "String", "Greedy"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "1472",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-browser-history",
+  "title": "Design Browser History",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Linked List", "Stack", "Design", "Doubly-Linked List", "Data Stream"]
+}

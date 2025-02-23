@@ -1,0 +1,8 @@
+{
+  "id": "2050",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/parallel-courses-iii",
+  "title": "Parallel Courses III",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Dynamic Programming", "Graph", "Topological Sort"]
+}

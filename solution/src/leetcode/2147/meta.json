@@ -1,0 +1,8 @@
+{
+  "id": "2147",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-ways-to-divide-a-long-corridor",
+  "title": "Number of Ways to Divide a Long Corridor",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Math", "String", "Dynamic Programming"]
+}

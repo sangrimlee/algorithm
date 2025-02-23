@@ -1,0 +1,8 @@
+{
+  "id": "967",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/numbers-with-same-consecutive-differences",
+  "title": "Numbers With Same Consecutive Differences",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Backtracking", "Breadth-First Search"]
+}

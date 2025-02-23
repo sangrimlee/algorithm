@@ -1,0 +1,8 @@
+{
+  "id": "2224",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-convert-time",
+  "title": "Minimum Number of Operations to Convert Time",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Greedy"]
+}

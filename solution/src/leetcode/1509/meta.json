@@ -1,0 +1,8 @@
+{
+  "id": "1509",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-difference-between-largest-and-smallest-value-in-three-moves",
+  "title": "Minimum Difference Between Largest and Smallest Value in Three Moves",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Greedy", "Sorting"]
+}

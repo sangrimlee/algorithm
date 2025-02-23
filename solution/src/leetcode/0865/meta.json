@@ -1,0 +1,8 @@
+{
+  "id": "865",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/smallest-subtree-with-all-the-deepest-nodes",
+  "title": "Smallest Subtree with all the Deepest Nodes",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
+}

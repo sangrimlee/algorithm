@@ -1,0 +1,8 @@
+{
+  "id": "2406",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/divide-intervals-into-minimum-number-of-groups",
+  "title": "Divide Intervals Into Minimum Number of Groups",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Two Pointers", "Greedy", "Sorting", "Heap (Priority Queue)", "Prefix Sum"]
+}

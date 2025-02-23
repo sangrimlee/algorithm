@@ -1,0 +1,8 @@
+{
+  "id": "2138",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/divide-a-string-into-groups-of-size-k",
+  "title": "Divide a String Into Groups of Size k",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["String", "Simulation"]
+}

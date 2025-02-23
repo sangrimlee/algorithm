@@ -1,0 +1,8 @@
+{
+  "id": "1547",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-cost-to-cut-a-stick",
+  "title": "Minimum Cost to Cut a Stick",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Dynamic Programming", "Sorting"]
+}

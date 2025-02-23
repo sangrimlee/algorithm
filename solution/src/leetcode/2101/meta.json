@@ -1,0 +1,8 @@
+{
+  "id": "2101",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/detonate-the-maximum-bombs",
+  "title": "Detonate the Maximum Bombs",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Math", "Depth-First Search", "Breadth-First Search", "Graph", "Geometry"]
+}

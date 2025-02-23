@@ -1,0 +1,8 @@
+{
+  "id": "2997",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-make-array-xor-equal-to-k",
+  "title": "Minimum Number of Operations to Make Array XOR Equal to K",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Bit Manipulation"]
+}

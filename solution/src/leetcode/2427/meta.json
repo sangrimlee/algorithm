@@ -1,0 +1,8 @@
+{
+  "id": "2427",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-common-factors",
+  "title": "Number of Common Factors",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Enumeration", "Number Theory"]
+}

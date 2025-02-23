@@ -1,0 +1,8 @@
+{
+  "id": "2402",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/meeting-rooms-iii",
+  "title": "Meeting Rooms III",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)", "Simulation"]
+}

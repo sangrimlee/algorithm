@@ -1,0 +1,8 @@
+{
+  "id": "2196",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/create-binary-tree-from-descriptions",
+  "title": "Create Binary Tree From Descriptions",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Tree", "Binary Tree"]
+}

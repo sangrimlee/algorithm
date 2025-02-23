@@ -1,0 +1,8 @@
+{
+  "id": "785",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/is-graph-bipartite",
+  "title": "Is Graph Bipartite?",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Depth-First Search", "Breadth-First Search", "Union Find", "Graph"]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "300",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-increasing-subsequence",
+  "title": "Longest Increasing Subsequence",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search", "Dynamic Programming"]
+}

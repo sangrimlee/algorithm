@@ -1,0 +1,8 @@
+{
+  "id": "3239",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-flips-to-make-binary-grid-palindromic-i",
+  "title": "Minimum Number of Flips to Make Binary Grid Palindromic I",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Two Pointers", "Matrix"]
+}

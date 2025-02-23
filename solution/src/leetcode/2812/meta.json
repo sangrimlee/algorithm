@@ -1,0 +1,15 @@
+{
+  "id": "2812",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-safest-path-in-a-grid",
+  "title": "Find the Safest Path in a Grid",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Breadth-First Search",
+    "Union Find",
+    "Heap (Priority Queue)",
+    "Matrix"
+  ]
+}

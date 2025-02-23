@@ -1,0 +1,14 @@
+{
+  "id": "783",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-distance-between-bst-nodes",
+  "title": "Minimum Distance Between BST Nodes",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Search Tree",
+    "Binary Tree"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id": "33",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/search-in-rotated-sorted-array",
+  "title": "Search in Rotated Sorted Array",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search"]
+}

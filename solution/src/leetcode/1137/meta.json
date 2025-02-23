@@ -1,0 +1,8 @@
+{
+  "id": "1137",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/n-th-tribonacci-number",
+  "title": "N-th Tribonacci Number",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Math", "Dynamic Programming", "Memoization"]
+}

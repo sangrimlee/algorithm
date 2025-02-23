@@ -1,0 +1,8 @@
+{
+  "id": "838",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/push-dominoes",
+  "title": "Push Dominoes",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Two Pointers", "String", "Dynamic Programming"]
+}

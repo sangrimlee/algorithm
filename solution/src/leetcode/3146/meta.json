@@ -1,0 +1,8 @@
+{
+  "id": "3146",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/permutation-difference-between-two-strings",
+  "title": "Permutation Difference between Two Strings",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "String"]
+}

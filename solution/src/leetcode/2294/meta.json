@@ -1,0 +1,8 @@
+{
+  "id": "2294",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/partition-array-such-that-maximum-difference-is-k",
+  "title": "Partition Array Such That Maximum Difference Is K",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Greedy", "Sorting"]
+}

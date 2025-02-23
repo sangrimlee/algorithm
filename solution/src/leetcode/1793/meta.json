@@ -1,0 +1,8 @@
+{
+  "id": "1793",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-score-of-a-good-subarray",
+  "title": "Maximum Score of a Good Subarray",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Two Pointers", "Binary Search", "Stack", "Monotonic Stack"]
+}

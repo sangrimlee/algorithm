@@ -1,0 +1,8 @@
+{
+  "id": "2236",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/root-equals-sum-of-children",
+  "title": "Root Equals Sum of Children",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Tree", "Binary Tree"]
+}

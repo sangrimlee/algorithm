@@ -1,0 +1,8 @@
+{
+  "id": "790",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/domino-and-tromino-tiling",
+  "title": "Domino and Tromino Tiling",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Dynamic Programming"]
+}

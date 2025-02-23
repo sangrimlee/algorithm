@@ -1,0 +1,8 @@
+{
+  "id": "2948",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/make-lexicographically-smallest-array-by-swapping-elements",
+  "title": "Make Lexicographically Smallest Array by Swapping Elements",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Union Find", "Sorting"]
+}

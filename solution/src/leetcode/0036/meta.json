@@ -1,0 +1,8 @@
+{
+  "id": "36",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-sudoku",
+  "title": "Valid Sudoku",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "Matrix"]
+}

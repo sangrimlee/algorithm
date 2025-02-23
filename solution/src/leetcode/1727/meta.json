@@ -1,0 +1,8 @@
+{
+  "id": "1727",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/largest-submatrix-with-rearrangements",
+  "title": "Largest Submatrix With Rearrangements",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Greedy", "Sorting", "Matrix"]
+}

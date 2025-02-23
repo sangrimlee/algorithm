@@ -1,0 +1,8 @@
+{
+  "id": "1171",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-zero-sum-consecutive-nodes-from-linked-list",
+  "title": "Remove Zero Sum Consecutive Nodes from Linked List",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "Linked List"]
+}

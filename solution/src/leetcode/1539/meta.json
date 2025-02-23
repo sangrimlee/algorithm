@@ -1,0 +1,8 @@
+{
+  "id": "1539",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/kth-missing-positive-number",
+  "title": "Kth Missing Positive Number",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Binary Search"]
+}

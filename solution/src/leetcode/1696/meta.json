@@ -1,0 +1,8 @@
+{
+  "id": "1696",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/jump-game-vi",
+  "title": "Jump Game VI",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Dynamic Programming", "Queue", "Heap (Priority Queue)", "Monotonic Queue"]
+}

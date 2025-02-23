@@ -1,0 +1,8 @@
+{
+  "id": "3285",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-indices-of-stable-mountains",
+  "title": "Find Indices of Stable Mountains",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array"]
+}

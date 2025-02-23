@@ -1,0 +1,8 @@
+{
+  "id": "1742",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-number-of-balls-in-a-box",
+  "title": "Maximum Number of Balls in a Box",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Hash Table", "Math", "Counting"]
+}

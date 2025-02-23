@@ -1,0 +1,8 @@
+{
+  "id": "2605",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/form-smallest-number-from-two-digit-arrays",
+  "title": "Form Smallest Number From Two Digit Arrays",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table", "Enumeration"]
+}

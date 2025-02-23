@@ -1,0 +1,8 @@
+{
+  "id": "623",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/add-one-row-to-tree",
+  "title": "Add One Row to Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
+}

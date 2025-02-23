@@ -1,0 +1,8 @@
+{
+  "id": "2206",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/divide-array-into-equal-pairs",
+  "title": "Divide Array Into Equal Pairs",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table", "Bit Manipulation", "Counting"]
+}

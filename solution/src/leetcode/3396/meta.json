@@ -1,0 +1,8 @@
+{
+  "id": "3396",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-make-elements-in-array-distinct",
+  "title": "Minimum Number of Operations to Make Elements in Array Distinct",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table"]
+}

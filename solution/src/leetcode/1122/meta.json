@@ -1,0 +1,8 @@
+{
+  "id": "1122",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/relative-sort-array",
+  "title": "Relative Sort Array",
+  "category": "Algorithms",
+  "difficulty": "Easy",
+  "tags": ["Array", "Hash Table", "Sorting", "Counting Sort"]
+}
