@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/only-throw-error */
-
 import { range } from '@algorithm/lib';
 
 /**
@@ -26,7 +24,7 @@ export function ricochetRobot(board: string[]): number {
         }
       }
     }
-    throw "Can't find robot.";
+    throw new Error("Can't find robot.");
   };
 
   const moveRobot = (y: number, x: number, direction: number) => {
