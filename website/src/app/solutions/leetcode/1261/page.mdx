@@ -21,34 +21,65 @@ tags:
   <Badge.Topic name="Binary Tree" slug="binary-tree" />
 </Badge.Root>
 
-## Solution
+## 문제 설명
+
+주어진 **이진 트리(binary tree)** 는 오염된 상태로, 모든 `val`의 값이 `-1`로 설정되어 있습니다.
+
+하지만 다음과 같은 규칙에 따라 원래의 값을 복구할 수 있습니다.
+
+1. `root.val == 0`, **루트 노드의 값은 0**
+2. **왼쪽 자식 노드:** `treeNode.left.val == 2 * node.val + 1`
+3. **오른쪽 자식 노드:** `treeNode.right.val == 2 * node.val + 2`
+
+**요구사항**
+
+`FindElements` 클래스를 구현해야 합니다.
+
+1. **`constructor(root: TreeNode | null)`**
+   - 오염된 트리를 받아서 원래 값을 복구하는 생성자
+2. **`find(target: number): boolean`**
+   - 복구된 트리에서 `target` 값이 존재하는지 확인하는 함수
+
+## 문제 풀이
+
+1. **`recoverTree`**
+   - **DFS**를 사용하여, 트리 전체를 탐색하면서 값을 복구합니다.
+   - **루트 노드의 값은 항상 0**이므로, 루트 노드부터 재귀적으로 값을 복구합니다.
+   - 복구한 값을 **`Set`** 자료구조에 저장합니다.
+2. **`find`**
+   - 1번 과정에서 복구된 값을 저장한 `Set`에서 `target`이 존재하는지 확인합니다.
 
 ```typescript filename="solution.ts" copy
-import { TreeNode } from '@algorithm/lib';
-
-export class FindElements {
-  private readonly values: Set<number>;
+class FindElements {
+  private readonly recoveredValues: Set<number>;
 
   constructor(root: TreeNode | null) {
-    this.values = new Set();
-    this.recover(root, 0);
+    this.recoveredValues = new Set();
+    this.recoverTree(root, 0);
   }
 
-  private recover(node: TreeNode | null, value: number) {
+  private recoverTree(node: TreeNode | null, val: number) {
     if (node === null) {
       return;
     }
-    node.val = value;
-    this.values.add(value);
-    this.recover(node.left, 2 * value + 1);
-    this.recover(node.right, 2 * value + 2);
+    node.val = val;
+    this.recoveredvals.add(val);
+    this.recoverTree(node.left, 2 * val + 1);
+    this.recoverTree(node.right, 2 * val + 2);
   }
 
   find(target: number): boolean {
-    return this.values.has(target);
+    return this.recoveredValues.has(target);
   }
 }
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+  - **`recoverTree`**: $O(n)$
+  - **`find`**: $O(1)$
+- 공간 복잡도: $O(n)$
 
 <ProblemLink
   codingSite="leetcode"
