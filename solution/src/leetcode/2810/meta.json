@@ -4,8 +4,5 @@
   "title": "Faulty Keyboard",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

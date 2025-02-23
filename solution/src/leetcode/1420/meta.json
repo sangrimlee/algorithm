@@ -4,8 +4,5 @@
   "title": "Build Array Where You Can Find The Maximum Exactly K Comparisons",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming",
-    "Prefix Sum"
-  ]
+  "tags": ["Dynamic Programming", "Prefix Sum"]
 }

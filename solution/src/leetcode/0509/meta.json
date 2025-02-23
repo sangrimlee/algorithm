@@ -4,10 +4,5 @@
   "title": "Fibonacci Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Recursion",
-    "Memoization"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Recursion", "Memoization"]
 }

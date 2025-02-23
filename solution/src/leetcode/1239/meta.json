@@ -4,10 +4,5 @@
   "title": "Maximum Length of a Concatenated String with Unique Characters",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Backtracking",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "String", "Backtracking", "Bit Manipulation"]
 }

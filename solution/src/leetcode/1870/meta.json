@@ -4,8 +4,5 @@
   "title": "Minimum Speed to Arrive on Time",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search"
-  ]
+  "tags": ["Array", "Binary Search"]
 }

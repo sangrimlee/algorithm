@@ -4,9 +4,5 @@
   "title": "Maximum Population Year",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Counting",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Counting", "Prefix Sum"]
 }

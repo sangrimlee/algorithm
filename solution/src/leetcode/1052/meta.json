@@ -4,8 +4,5 @@
   "title": "Grumpy Bookstore Owner",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Sliding Window"]
 }

@@ -4,11 +4,5 @@
   "title": "Concatenated Words",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Dynamic Programming",
-    "Depth-First Search",
-    "Trie"
-  ]
+  "tags": ["Array", "String", "Dynamic Programming", "Depth-First Search", "Trie"]
 }

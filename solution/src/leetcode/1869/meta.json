@@ -4,7 +4,5 @@
   "title": "Longer Contiguous Segments of Ones than Zeros",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

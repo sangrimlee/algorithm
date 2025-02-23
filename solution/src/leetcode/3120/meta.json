@@ -4,8 +4,5 @@
   "title": "Count the Number of Special Characters I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

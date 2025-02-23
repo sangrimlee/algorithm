@@ -4,10 +4,5 @@
   "title": "Partition Labels",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Two Pointers",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Hash Table", "Two Pointers", "String", "Greedy"]
 }

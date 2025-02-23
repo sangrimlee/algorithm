@@ -4,8 +4,5 @@
   "title": "Sum of Values at Indices With K Set Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Bit Manipulation"]
 }

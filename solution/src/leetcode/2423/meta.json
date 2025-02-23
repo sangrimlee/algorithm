@@ -4,9 +4,5 @@
   "title": "Remove Letter To Equalize Frequency",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

@@ -4,9 +4,5 @@
   "title": "Check if One String Swap Can Make Strings Equal",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

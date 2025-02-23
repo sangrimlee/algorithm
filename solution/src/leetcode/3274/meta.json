@@ -4,8 +4,5 @@
   "title": "Check if Two Chessboard Squares Have the Same Color",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String"
-  ]
+  "tags": ["Math", "String"]
 }

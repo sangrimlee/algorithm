@@ -4,8 +4,5 @@
   "title": "Best Time to Buy and Sell Stock",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

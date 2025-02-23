@@ -4,10 +4,5 @@
   "title": "Most Stones Removed with Same Row or Column",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Depth-First Search",
-    "Union Find",
-    "Graph"
-  ]
+  "tags": ["Hash Table", "Depth-First Search", "Union Find", "Graph"]
 }

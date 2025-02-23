@@ -4,8 +4,5 @@
   "title": "Excel Sheet Column Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String"
-  ]
+  "tags": ["Math", "String"]
 }

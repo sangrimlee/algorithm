@@ -4,11 +4,5 @@
   "title": "Longest Nice Substring",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Divide and Conquer",
-    "Bit Manipulation",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "String", "Divide and Conquer", "Bit Manipulation", "Sliding Window"]
 }

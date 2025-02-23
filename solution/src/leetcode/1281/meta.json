@@ -4,7 +4,5 @@
   "title": "Subtract the Product and Sum of Digits of an Integer",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math"
-  ]
+  "tags": ["Math"]
 }

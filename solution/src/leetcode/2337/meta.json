@@ -4,8 +4,5 @@
   "title": "Move Pieces to Obtain a String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String"
-  ]
+  "tags": ["Two Pointers", "String"]
 }

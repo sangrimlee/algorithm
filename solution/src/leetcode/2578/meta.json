@@ -4,9 +4,5 @@
   "title": "Split With Minimum Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Math", "Greedy", "Sorting"]
 }

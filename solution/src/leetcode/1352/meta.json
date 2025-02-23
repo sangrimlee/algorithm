@@ -4,11 +4,5 @@
   "title": "Product of the Last K Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Design",
-    "Data Stream",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Math", "Design", "Data Stream", "Prefix Sum"]
 }

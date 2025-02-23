@@ -4,11 +4,5 @@
   "title": "Smallest Subtree with all the Deepest Nodes",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Hash Table", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

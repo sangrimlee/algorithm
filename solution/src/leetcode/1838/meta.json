@@ -4,12 +4,5 @@
   "title": "Frequency of the Most Frequent Element",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Greedy",
-    "Sliding Window",
-    "Sorting",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Greedy", "Sliding Window", "Sorting", "Prefix Sum"]
 }

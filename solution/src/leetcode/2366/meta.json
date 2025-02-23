@@ -4,9 +4,5 @@
   "title": "Minimum Replacements to Sort the Array",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Array", "Math", "Greedy"]
 }

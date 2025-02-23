@@ -4,7 +4,5 @@
   "title": "Binary Number with Alternating Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Bit Manipulation"
-  ]
+  "tags": ["Bit Manipulation"]
 }

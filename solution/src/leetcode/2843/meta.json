@@ -4,8 +4,5 @@
   "title": "  Count Symmetric Integers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Enumeration"
-  ]
+  "tags": ["Math", "Enumeration"]
 }

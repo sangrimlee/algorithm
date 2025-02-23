@@ -4,8 +4,5 @@
   "title": "Two Furthest Houses With Different Colors",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Greedy"
-  ]
+  "tags": ["Array", "Greedy"]
 }

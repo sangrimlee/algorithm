@@ -4,10 +4,5 @@
   "title": "Non-overlapping Intervals",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Greedy", "Sorting"]
 }

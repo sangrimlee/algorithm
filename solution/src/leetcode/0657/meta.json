@@ -4,8 +4,5 @@
   "title": "Robot Return to Origin",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

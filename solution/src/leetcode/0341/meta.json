@@ -4,12 +4,5 @@
   "title": "Flatten Nested List Iterator",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Stack",
-    "Tree",
-    "Depth-First Search",
-    "Design",
-    "Queue",
-    "Iterator"
-  ]
+  "tags": ["Stack", "Tree", "Depth-First Search", "Design", "Queue", "Iterator"]
 }

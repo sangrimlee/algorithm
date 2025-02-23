@@ -4,8 +4,5 @@
   "title": "Gas Station",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy"
-  ]
+  "tags": ["Array", "Greedy"]
 }

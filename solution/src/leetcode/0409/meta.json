@@ -4,9 +4,5 @@
   "title": "Longest Palindrome",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Hash Table", "String", "Greedy"]
 }

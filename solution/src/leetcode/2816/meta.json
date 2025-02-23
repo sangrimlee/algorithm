@@ -4,9 +4,5 @@
   "title": "Double a Number Represented as a Linked List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Math",
-    "Stack"
-  ]
+  "tags": ["Linked List", "Math", "Stack"]
 }

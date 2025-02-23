@@ -4,12 +4,5 @@
   "title": "Binary Search Tree Iterator",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Stack",
-    "Tree",
-    "Design",
-    "Binary Search Tree",
-    "Binary Tree",
-    "Iterator"
-  ]
+  "tags": ["Stack", "Tree", "Design", "Binary Search Tree", "Binary Tree", "Iterator"]
 }

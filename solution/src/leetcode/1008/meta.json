@@ -4,12 +4,5 @@
   "title": "Construct Binary Search Tree from Preorder Traversal",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Stack",
-    "Tree",
-    "Binary Search Tree",
-    "Monotonic Stack",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Stack", "Tree", "Binary Search Tree", "Monotonic Stack", "Binary Tree"]
 }

@@ -4,9 +4,5 @@
   "title": "Lowest Common Ancestor of a Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
 }

@@ -4,10 +4,5 @@
   "title": "Count Distinct Numbers on Board",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Simulation"]
 }

@@ -4,10 +4,5 @@
   "title": "Spiral Matrix IV",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Linked List",
-    "Matrix",
-    "Simulation"
-  ]
+  "tags": ["Array", "Linked List", "Matrix", "Simulation"]
 }

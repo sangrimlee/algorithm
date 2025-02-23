@@ -4,9 +4,5 @@
   "title": "Leaf-Similar Trees",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
 }

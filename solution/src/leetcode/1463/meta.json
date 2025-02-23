@@ -4,9 +4,5 @@
   "title": "Cherry Pickup II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Matrix"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Matrix"]
 }

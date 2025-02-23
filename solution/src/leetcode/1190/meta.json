@@ -4,8 +4,5 @@
   "title": "Reverse Substrings Between Each Pair of Parentheses",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

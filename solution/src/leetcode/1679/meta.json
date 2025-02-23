@@ -4,10 +4,5 @@
   "title": "Max Number of K-Sum Pairs",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Two Pointers",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Two Pointers", "Sorting"]
 }

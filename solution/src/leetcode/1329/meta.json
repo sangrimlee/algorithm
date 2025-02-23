@@ -4,9 +4,5 @@
   "title": "Sort the Matrix Diagonally",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Matrix"
-  ]
+  "tags": ["Array", "Sorting", "Matrix"]
 }

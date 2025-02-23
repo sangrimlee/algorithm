@@ -4,10 +4,5 @@
   "title": "Find the Difference",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Bit Manipulation",
-    "Sorting"
-  ]
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Sorting"]
 }

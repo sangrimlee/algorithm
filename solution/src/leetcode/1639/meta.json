@@ -4,9 +4,5 @@
   "title": "Number of Ways to Form a Target String Given a Dictionary",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "String", "Dynamic Programming"]
 }

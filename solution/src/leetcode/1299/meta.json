@@ -4,7 +4,5 @@
   "title": "Replace Elements with Greatest Element on Right Side",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

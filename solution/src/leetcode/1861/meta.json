@@ -4,9 +4,5 @@
   "title": "Rotating the Box",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Matrix"
-  ]
+  "tags": ["Array", "Two Pointers", "Matrix"]
 }

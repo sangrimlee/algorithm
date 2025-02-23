@@ -4,9 +4,5 @@
   "title": "Maximum Score From Removing Substrings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack",
-    "Greedy"
-  ]
+  "tags": ["String", "Stack", "Greedy"]
 }

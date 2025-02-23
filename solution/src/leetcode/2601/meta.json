@@ -4,11 +4,5 @@
   "title": "Prime Subtraction Operation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Binary Search",
-    "Greedy",
-    "Number Theory"
-  ]
+  "tags": ["Array", "Math", "Binary Search", "Greedy", "Number Theory"]
 }

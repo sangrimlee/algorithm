@@ -4,10 +4,5 @@
   "title": "All Paths From Source to Target",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Backtracking",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph"
-  ]
+  "tags": ["Backtracking", "Depth-First Search", "Breadth-First Search", "Graph"]
 }

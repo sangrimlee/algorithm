@@ -4,9 +4,5 @@
   "title": "Queries on Number of Points Inside a Circle",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Geometry"
-  ]
+  "tags": ["Array", "Math", "Geometry"]
 }

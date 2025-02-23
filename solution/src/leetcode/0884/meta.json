@@ -4,9 +4,5 @@
   "title": "Uncommon Words from Two Sentences",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

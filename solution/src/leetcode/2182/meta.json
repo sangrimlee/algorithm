@@ -4,11 +4,5 @@
   "title": "Construct String With Repeat Limit",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Greedy",
-    "Heap (Priority Queue)",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Greedy", "Heap (Priority Queue)", "Counting"]
 }

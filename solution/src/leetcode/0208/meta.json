@@ -4,10 +4,5 @@
   "title": "Implement Trie (Prefix Tree)",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Design",
-    "Trie"
-  ]
+  "tags": ["Hash Table", "String", "Design", "Trie"]
 }

@@ -4,9 +4,5 @@
   "title": "Maximum Odd Binary Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Math", "String", "Greedy"]
 }

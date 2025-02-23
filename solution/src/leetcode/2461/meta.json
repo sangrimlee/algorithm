@@ -4,9 +4,5 @@
   "title": "Maximum Sum of Distinct Subarrays With Length K",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window"]
 }

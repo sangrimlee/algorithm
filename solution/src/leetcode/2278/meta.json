@@ -4,7 +4,5 @@
   "title": "Percentage of Letter in String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

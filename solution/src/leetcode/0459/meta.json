@@ -4,8 +4,5 @@
   "title": "Repeated Substring Pattern",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "String Matching"
-  ]
+  "tags": ["String", "String Matching"]
 }

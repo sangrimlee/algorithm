@@ -4,7 +4,5 @@
   "title": "Decrypt String from Alphabet to Integer Mapping",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

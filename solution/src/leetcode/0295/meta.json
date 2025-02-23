@@ -4,11 +4,5 @@
   "title": "Find Median from Data Stream",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Two Pointers",
-    "Design",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Data Stream"
-  ]
+  "tags": ["Two Pointers", "Design", "Sorting", "Heap (Priority Queue)", "Data Stream"]
 }

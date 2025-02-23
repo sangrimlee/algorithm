@@ -4,9 +4,5 @@
   "title": "Greatest English Letter in Upper and Lower Case",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Enumeration"
-  ]
+  "tags": ["Hash Table", "String", "Enumeration"]
 }

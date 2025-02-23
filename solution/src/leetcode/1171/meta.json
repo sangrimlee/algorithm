@@ -4,8 +4,5 @@
   "title": "Remove Zero Sum Consecutive Nodes from Linked List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Linked List"
-  ]
+  "tags": ["Hash Table", "Linked List"]
 }

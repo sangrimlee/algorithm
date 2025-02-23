@@ -4,9 +4,5 @@
   "title": "Basic Calculator II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "String",
-    "Stack"
-  ]
+  "tags": ["Math", "String", "Stack"]
 }

@@ -4,8 +4,5 @@
   "title": "Prime Number of Set Bits in Binary Representation",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Bit Manipulation"
-  ]
+  "tags": ["Math", "Bit Manipulation"]
 }

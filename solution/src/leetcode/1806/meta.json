@@ -4,9 +4,5 @@
   "title": "Minimum Number of Operations to Reinitialize a Permutation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Array", "Math", "Simulation"]
 }

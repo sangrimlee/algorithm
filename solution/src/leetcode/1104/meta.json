@@ -4,9 +4,5 @@
   "title": "Path In Zigzag Labelled Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Math", "Tree", "Binary Tree"]
 }

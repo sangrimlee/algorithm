@@ -4,8 +4,5 @@
   "title": "Determine the Winner of a Bowling Game",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Simulation"
-  ]
+  "tags": ["Array", "Simulation"]
 }

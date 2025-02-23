@@ -4,9 +4,5 @@
   "title": "Rotate Image",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Matrix"
-  ]
+  "tags": ["Array", "Math", "Matrix"]
 }

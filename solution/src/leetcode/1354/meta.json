@@ -4,8 +4,5 @@
   "title": "Construct Target Array With Multiple Sums",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Heap (Priority Queue)"]
 }

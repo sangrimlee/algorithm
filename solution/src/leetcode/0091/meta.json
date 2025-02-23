@@ -4,8 +4,5 @@
   "title": "Decode Ways",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Dynamic Programming"
-  ]
+  "tags": ["String", "Dynamic Programming"]
 }

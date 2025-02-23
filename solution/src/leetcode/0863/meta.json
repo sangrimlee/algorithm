@@ -4,11 +4,5 @@
   "title": "All Nodes Distance K in Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Hash Table", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

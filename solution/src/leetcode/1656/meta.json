@@ -4,10 +4,5 @@
   "title": "Design an Ordered Stream",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Design",
-    "Data Stream"
-  ]
+  "tags": ["Array", "Hash Table", "Design", "Data Stream"]
 }

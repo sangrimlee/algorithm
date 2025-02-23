@@ -4,7 +4,5 @@
   "title": "Remove Trailing Zeros From a String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

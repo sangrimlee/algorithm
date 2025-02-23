@@ -4,9 +4,5 @@
   "title": "Points That Intersect With Cars",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Prefix Sum"]
 }

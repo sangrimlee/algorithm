@@ -4,9 +4,5 @@
   "title": "Subrectangle Queries",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Design",
-    "Matrix"
-  ]
+  "tags": ["Array", "Design", "Matrix"]
 }

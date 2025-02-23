@@ -4,9 +4,5 @@
   "title": "Flip Columns For Maximum Number of Equal Rows",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Matrix"
-  ]
+  "tags": ["Array", "Hash Table", "Matrix"]
 }

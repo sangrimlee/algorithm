@@ -4,9 +4,5 @@
   "title": "Find if Array Can Be Sorted",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Bit Manipulation",
-    "Sorting"
-  ]
+  "tags": ["Array", "Bit Manipulation", "Sorting"]
 }

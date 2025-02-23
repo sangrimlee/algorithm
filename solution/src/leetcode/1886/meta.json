@@ -4,8 +4,5 @@
   "title": "Determine Whether Matrix Can Be Obtained By Rotation",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Matrix"
-  ]
+  "tags": ["Array", "Matrix"]
 }

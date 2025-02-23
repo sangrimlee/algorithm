@@ -4,9 +4,5 @@
   "title": "Contiguous Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Prefix Sum"]
 }

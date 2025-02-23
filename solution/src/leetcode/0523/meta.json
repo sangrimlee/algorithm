@@ -4,10 +4,5 @@
   "title": "Continuous Subarray Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Prefix Sum"]
 }

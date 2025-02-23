@@ -4,10 +4,5 @@
   "title": "Longest Unequal Adjacent Groups Subsequence I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "String",
-    "Dynamic Programming",
-    "Greedy"
-  ]
+  "tags": ["Array", "String", "Dynamic Programming", "Greedy"]
 }

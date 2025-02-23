@@ -4,10 +4,5 @@
   "title": "Step-By-Step Directions From a Binary Tree Node to Another",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["String", "Tree", "Depth-First Search", "Binary Tree"]
 }

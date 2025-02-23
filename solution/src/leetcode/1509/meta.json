@@ -4,9 +4,5 @@
   "title": "Minimum Difference Between Largest and Smallest Value in Three Moves",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

@@ -4,9 +4,5 @@
   "title": "Number of Ways to Divide a Long Corridor",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "String",
-    "Dynamic Programming"
-  ]
+  "tags": ["Math", "String", "Dynamic Programming"]
 }

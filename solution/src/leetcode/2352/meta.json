@@ -4,10 +4,5 @@
   "title": "Equal Row and Column Pairs",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Matrix",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Matrix", "Simulation"]
 }

@@ -4,11 +4,5 @@
   "title": "Minimum Operations to Reduce X to Zero",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Binary Search",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Binary Search", "Sliding Window", "Prefix Sum"]
 }

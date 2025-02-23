@@ -4,10 +4,5 @@
   "title": "Maximum Ice Cream Bars",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting",
-    "Counting Sort"
-  ]
+  "tags": ["Array", "Greedy", "Sorting", "Counting Sort"]
 }

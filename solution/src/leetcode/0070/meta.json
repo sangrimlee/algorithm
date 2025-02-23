@@ -4,9 +4,5 @@
   "title": "Climbing Stairs",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Memoization"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Memoization"]
 }

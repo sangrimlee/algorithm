@@ -4,8 +4,5 @@
   "title": "Count Good Triplets",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Enumeration"]
 }

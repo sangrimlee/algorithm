@@ -4,11 +4,5 @@
   "title": "Count Number of Nice Subarrays",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Sliding Window", "Prefix Sum"]
 }

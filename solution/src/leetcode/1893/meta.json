@@ -4,9 +4,5 @@
   "title": "Check if All the Integers in a Range Are Covered",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Prefix Sum"]
 }

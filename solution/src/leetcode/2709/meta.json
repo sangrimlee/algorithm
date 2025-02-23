@@ -4,10 +4,5 @@
   "title": "Greatest Common Divisor Traversal",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Math",
-    "Union Find",
-    "Number Theory"
-  ]
+  "tags": ["Array", "Math", "Union Find", "Number Theory"]
 }

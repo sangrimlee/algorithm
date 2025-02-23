@@ -4,10 +4,5 @@
   "title": "Freedom Trail",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "String",
-    "Dynamic Programming",
-    "Depth-First Search",
-    "Breadth-First Search"
-  ]
+  "tags": ["String", "Dynamic Programming", "Depth-First Search", "Breadth-First Search"]
 }

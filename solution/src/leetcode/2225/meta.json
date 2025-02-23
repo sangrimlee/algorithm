@@ -4,10 +4,5 @@
   "title": "Find Players With Zero or One Losses",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Counting"]
 }

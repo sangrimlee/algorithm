@@ -4,7 +4,5 @@
   "title": "Minimum Number of Vertices to Reach All Nodes",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Graph"
-  ]
+  "tags": ["Graph"]
 }

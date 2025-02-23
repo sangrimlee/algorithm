@@ -4,8 +4,5 @@
   "title": "Find if Digit Game Can Be Won",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math"
-  ]
+  "tags": ["Array", "Math"]
 }

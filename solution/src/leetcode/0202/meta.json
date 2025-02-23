@@ -4,9 +4,5 @@
   "title": "Happy Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "Math",
-    "Two Pointers"
-  ]
+  "tags": ["Hash Table", "Math", "Two Pointers"]
 }

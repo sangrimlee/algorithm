@@ -4,9 +4,5 @@
   "title": "Increasing Decreasing String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

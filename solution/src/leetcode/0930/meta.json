@@ -4,10 +4,5 @@
   "title": "Binary Subarrays With Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window", "Prefix Sum"]
 }

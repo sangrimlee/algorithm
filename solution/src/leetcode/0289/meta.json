@@ -4,9 +4,5 @@
   "title": "Game of Life",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Matrix",
-    "Simulation"
-  ]
+  "tags": ["Array", "Matrix", "Simulation"]
 }

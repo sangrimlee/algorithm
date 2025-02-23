@@ -4,9 +4,5 @@
   "title": "Linked List Cycle II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Linked List",
-    "Two Pointers"
-  ]
+  "tags": ["Hash Table", "Linked List", "Two Pointers"]
 }

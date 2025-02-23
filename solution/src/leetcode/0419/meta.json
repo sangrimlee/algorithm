@@ -4,9 +4,5 @@
   "title": "Battleships in a Board",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Depth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Depth-First Search", "Matrix"]
 }

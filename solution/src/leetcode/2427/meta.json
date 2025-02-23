@@ -4,9 +4,5 @@
   "title": "Number of Common Factors",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Enumeration",
-    "Number Theory"
-  ]
+  "tags": ["Math", "Enumeration", "Number Theory"]
 }

@@ -4,10 +4,5 @@
   "title": "Find Triangular Sum of an Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Simulation",
-    "Combinatorics"
-  ]
+  "tags": ["Array", "Math", "Simulation", "Combinatorics"]
 }

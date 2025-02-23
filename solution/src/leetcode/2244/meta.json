@@ -4,10 +4,5 @@
   "title": "Minimum Rounds to Complete All Tasks",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Greedy",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Greedy", "Counting"]
 }

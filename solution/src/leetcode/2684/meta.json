@@ -4,9 +4,5 @@
   "title": "Maximum Number of Moves in a Grid",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Matrix"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Matrix"]
 }

@@ -4,11 +4,5 @@
   "title": "Find All People With Secret",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Union Find",
-    "Graph",
-    "Sorting"
-  ]
+  "tags": ["Depth-First Search", "Breadth-First Search", "Union Find", "Graph", "Sorting"]
 }

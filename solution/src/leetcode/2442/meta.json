@@ -4,10 +4,5 @@
   "title": "Count Number of Distinct Integers After Reverse Operations",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Counting"]
 }

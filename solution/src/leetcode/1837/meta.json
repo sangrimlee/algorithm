@@ -4,7 +4,5 @@
   "title": "Sum of Digits in Base K",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math"
-  ]
+  "tags": ["Math"]
 }

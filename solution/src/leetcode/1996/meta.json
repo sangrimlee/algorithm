@@ -4,11 +4,5 @@
   "title": "The Number of Weak Characters in the Game",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Stack",
-    "Greedy",
-    "Sorting",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Stack", "Greedy", "Sorting", "Monotonic Stack"]
 }

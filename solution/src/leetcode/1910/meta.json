@@ -4,9 +4,5 @@
   "title": "Remove All Occurrences of a Substring",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack",
-    "Simulation"
-  ]
+  "tags": ["String", "Stack", "Simulation"]
 }

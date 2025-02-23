@@ -4,9 +4,5 @@
   "title": "Difference Between Ones and Zeros in Row and Column",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Matrix",
-    "Simulation"
-  ]
+  "tags": ["Array", "Matrix", "Simulation"]
 }

@@ -4,9 +4,5 @@
   "title": "Subarray Sums Divisible by K",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Hash Table", "Prefix Sum"]
 }

@@ -4,7 +4,5 @@
   "title": "Goat Latin",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

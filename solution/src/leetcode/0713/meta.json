@@ -4,10 +4,5 @@
   "title": "Subarray Product Less Than K",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"]
 }

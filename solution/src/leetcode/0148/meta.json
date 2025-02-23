@@ -4,11 +4,5 @@
   "title": "Sort List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Two Pointers",
-    "Divide and Conquer",
-    "Sorting",
-    "Merge Sort"
-  ]
+  "tags": ["Linked List", "Two Pointers", "Divide and Conquer", "Sorting", "Merge Sort"]
 }

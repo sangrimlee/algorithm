@@ -4,8 +4,5 @@
   "title": "Maximum Value of a String in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "String"
-  ]
+  "tags": ["Array", "String"]
 }

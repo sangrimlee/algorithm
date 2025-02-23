@@ -4,9 +4,5 @@
   "title": "Maximum Product of Three Numbers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Sorting"
-  ]
+  "tags": ["Array", "Math", "Sorting"]
 }

@@ -4,8 +4,5 @@
   "title": "Construct the Lexicographically Largest Valid Sequence",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Backtracking"
-  ]
+  "tags": ["Array", "Backtracking"]
 }

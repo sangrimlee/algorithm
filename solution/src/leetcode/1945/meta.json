@@ -4,8 +4,5 @@
   "title": "Sum of Digits of String After Convert",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

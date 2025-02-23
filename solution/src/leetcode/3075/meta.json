@@ -4,9 +4,5 @@
   "title": "Maximize Happiness of Selected Children",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

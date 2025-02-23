@@ -4,10 +4,5 @@
   "title": "Hand of Straights",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Greedy", "Sorting"]
 }

@@ -4,9 +4,5 @@
   "title": "Insert Greatest Common Divisors in Linked List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Math",
-    "Number Theory"
-  ]
+  "tags": ["Linked List", "Math", "Number Theory"]
 }

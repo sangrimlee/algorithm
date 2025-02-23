@@ -4,8 +4,5 @@
   "title": "N-Queens",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Backtracking"
-  ]
+  "tags": ["Array", "Backtracking"]
 }

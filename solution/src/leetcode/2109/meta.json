@@ -4,10 +4,5 @@
   "title": "Adding Spaces to a String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "String",
-    "Simulation"
-  ]
+  "tags": ["Array", "Two Pointers", "String", "Simulation"]
 }

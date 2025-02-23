@@ -4,7 +4,5 @@
   "title": "Convert Integer to the Sum of Two No-Zero Integers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math"
-  ]
+  "tags": ["Math"]
 }

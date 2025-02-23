@@ -4,8 +4,5 @@
   "title": "Left and Right Sum Differences",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Prefix Sum"]
 }

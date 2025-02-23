@@ -4,8 +4,5 @@
   "title": "Minimum Value to Get Positive Step by Step Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Prefix Sum"]
 }

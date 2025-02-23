@@ -4,9 +4,5 @@
   "title": "Nearest Exit from Entrance in Maze",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Breadth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Breadth-First Search", "Matrix"]
 }

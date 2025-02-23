@@ -4,9 +4,5 @@
   "title": "Maximum Number of Balls in a Box",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "Math",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "Math", "Counting"]
 }

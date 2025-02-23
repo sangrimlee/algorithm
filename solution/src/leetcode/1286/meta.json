@@ -4,10 +4,5 @@
   "title": "Iterator for Combination",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking",
-    "Design",
-    "Iterator"
-  ]
+  "tags": ["String", "Backtracking", "Design", "Iterator"]
 }

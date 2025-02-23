@@ -4,11 +4,5 @@
   "title": "Most Profit Assigning Work",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Greedy", "Sorting"]
 }

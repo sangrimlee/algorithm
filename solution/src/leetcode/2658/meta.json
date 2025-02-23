@@ -4,11 +4,5 @@
   "title": "Maximum Number of Fish in a Grid",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Union Find",
-    "Matrix"
-  ]
+  "tags": ["Array", "Depth-First Search", "Breadth-First Search", "Union Find", "Matrix"]
 }

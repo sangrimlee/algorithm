@@ -4,8 +4,5 @@
   "title": "Merge Nodes in Between Zeros",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Simulation"
-  ]
+  "tags": ["Linked List", "Simulation"]
 }

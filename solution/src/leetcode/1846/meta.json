@@ -4,9 +4,5 @@
   "title": "Maximum Element After Decreasing and Rearranging",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

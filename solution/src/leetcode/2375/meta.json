@@ -4,10 +4,5 @@
   "title": "Construct Smallest Number From DI String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking",
-    "Stack",
-    "Greedy"
-  ]
+  "tags": ["String", "Backtracking", "Stack", "Greedy"]
 }

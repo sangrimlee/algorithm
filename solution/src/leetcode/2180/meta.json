@@ -4,8 +4,5 @@
   "title": "Count Integers With Even Digit Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Math", "Simulation"]
 }

@@ -4,9 +4,5 @@
   "title": "Longest Happy String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Greedy",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["String", "Greedy", "Heap (Priority Queue)"]
 }

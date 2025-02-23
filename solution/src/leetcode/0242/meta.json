@@ -4,9 +4,5 @@
   "title": "Valid Anagram",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sorting"
-  ]
+  "tags": ["Hash Table", "String", "Sorting"]
 }

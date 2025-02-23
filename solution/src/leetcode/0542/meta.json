@@ -4,10 +4,5 @@
   "title": "01 Matrix",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Breadth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Breadth-First Search", "Matrix"]
 }

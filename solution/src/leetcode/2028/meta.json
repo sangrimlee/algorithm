@@ -4,9 +4,5 @@
   "title": "Find Missing Observations",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Array", "Math", "Simulation"]
 }

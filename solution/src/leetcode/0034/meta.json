@@ -4,8 +4,5 @@
   "title": "Find First and Last Position of Element in Sorted Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search"
-  ]
+  "tags": ["Array", "Binary Search"]
 }

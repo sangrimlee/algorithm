@@ -4,9 +4,5 @@
   "title": "Integer to English Words",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "String",
-    "Recursion"
-  ]
+  "tags": ["Math", "String", "Recursion"]
 }

@@ -4,12 +4,5 @@
   "title": "Detonate the Maximum Bombs",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph",
-    "Geometry"
-  ]
+  "tags": ["Array", "Math", "Depth-First Search", "Breadth-First Search", "Graph", "Geometry"]
 }

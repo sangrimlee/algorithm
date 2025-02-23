@@ -4,9 +4,5 @@
   "title": "Maximum Repeating Substring",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Dynamic Programming",
-    "String Matching"
-  ]
+  "tags": ["String", "Dynamic Programming", "String Matching"]
 }

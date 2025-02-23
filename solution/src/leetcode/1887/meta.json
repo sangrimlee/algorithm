@@ -4,8 +4,5 @@
   "title": "Reduction Operations to Make the Array Elements Equal",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

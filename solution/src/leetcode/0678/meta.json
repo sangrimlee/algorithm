@@ -4,10 +4,5 @@
   "title": "Valid Parenthesis String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Dynamic Programming",
-    "Stack",
-    "Greedy"
-  ]
+  "tags": ["String", "Dynamic Programming", "Stack", "Greedy"]
 }

@@ -4,11 +4,5 @@
   "title": "Maximum Number of Integers to Choose From a Range I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Binary Search",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Binary Search", "Greedy", "Sorting"]
 }

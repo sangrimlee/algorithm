@@ -4,9 +4,5 @@
   "title": "Check if All Characters Have Equal Number of Occurrences",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

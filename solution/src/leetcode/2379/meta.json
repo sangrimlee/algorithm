@@ -4,8 +4,5 @@
   "title": "Minimum Recolors to Get K Consecutive Black Blocks",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["String", "Sliding Window"]
 }

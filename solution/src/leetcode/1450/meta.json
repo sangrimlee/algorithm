@@ -4,7 +4,5 @@
   "title": "Number of Students Doing Homework at a Given Time",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

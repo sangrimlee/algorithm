@@ -4,8 +4,5 @@
   "title": "Convert Binary Number in a Linked List to Integer",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Linked List",
-    "Math"
-  ]
+  "tags": ["Linked List", "Math"]
 }

@@ -4,8 +4,5 @@
   "title": "Valid Perfect Square",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Binary Search"
-  ]
+  "tags": ["Math", "Binary Search"]
 }

@@ -4,9 +4,5 @@
   "title": "Minimum One Bit Operations to Make Integers Zero",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming",
-    "Bit Manipulation",
-    "Memoization"
-  ]
+  "tags": ["Dynamic Programming", "Bit Manipulation", "Memoization"]
 }

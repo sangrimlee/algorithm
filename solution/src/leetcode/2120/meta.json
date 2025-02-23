@@ -4,8 +4,5 @@
   "title": "Execution of All Suffix Instructions Staying in a Grid",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

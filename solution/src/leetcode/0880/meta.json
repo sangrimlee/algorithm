@@ -4,8 +4,5 @@
   "title": "Decoded String at Index",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

@@ -4,11 +4,5 @@
   "title": "Cousins in Binary Tree II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Hash Table", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

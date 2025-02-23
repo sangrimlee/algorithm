@@ -4,11 +4,5 @@
   "title": "Different Ways to Add Parentheses",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "String",
-    "Dynamic Programming",
-    "Recursion",
-    "Memoization"
-  ]
+  "tags": ["Math", "String", "Dynamic Programming", "Recursion", "Memoization"]
 }

@@ -4,9 +4,5 @@
   "title": "Map of Highest Peak",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Breadth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Breadth-First Search", "Matrix"]
 }

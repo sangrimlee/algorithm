@@ -4,7 +4,5 @@
   "title": "Count Ways To Build Good Strings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

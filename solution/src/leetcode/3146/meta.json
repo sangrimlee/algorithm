@@ -4,8 +4,5 @@
   "title": "Permutation Difference between Two Strings",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

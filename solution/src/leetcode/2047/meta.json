@@ -4,7 +4,5 @@
   "title": "Number of Valid Words in a Sentence",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

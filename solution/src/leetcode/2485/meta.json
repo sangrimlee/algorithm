@@ -4,8 +4,5 @@
   "title": "Find the Pivot Integer",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Prefix Sum"
-  ]
+  "tags": ["Math", "Prefix Sum"]
 }

@@ -4,10 +4,5 @@
   "title": "Binary Trees With Factors",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Dynamic Programming",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Dynamic Programming", "Sorting"]
 }

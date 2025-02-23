@@ -4,9 +4,5 @@
   "title": "Second Minimum Time to Reach Destination",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Breadth-First Search",
-    "Graph",
-    "Shortest Path"
-  ]
+  "tags": ["Breadth-First Search", "Graph", "Shortest Path"]
 }

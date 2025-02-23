@@ -4,10 +4,5 @@
   "title": "Ugly Number II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Math",
-    "Dynamic Programming",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Hash Table", "Math", "Dynamic Programming", "Heap (Priority Queue)"]
 }

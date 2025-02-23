@@ -4,9 +4,5 @@
   "title": "Check if Number Has Equal Digit Count and Digit Value",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

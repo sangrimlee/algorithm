@@ -4,10 +4,5 @@
   "title": "Range Sum Query 2D - Immutable",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Design",
-    "Matrix",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Design", "Matrix", "Prefix Sum"]
 }

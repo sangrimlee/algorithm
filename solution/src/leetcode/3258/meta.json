@@ -4,8 +4,5 @@
   "title": "Count Substrings That Satisfy K-Constraint I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["String", "Sliding Window"]
 }

@@ -4,10 +4,5 @@
   "title": "Unique Length-3 Palindromic Subsequences",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Bit Manipulation",
-    "Prefix Sum"
-  ]
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"]
 }

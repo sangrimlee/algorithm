@@ -4,9 +4,5 @@
   "title": "Keys and Rooms",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph"
-  ]
+  "tags": ["Depth-First Search", "Breadth-First Search", "Graph"]
 }

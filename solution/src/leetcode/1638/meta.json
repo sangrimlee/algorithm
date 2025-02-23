@@ -4,10 +4,5 @@
   "title": "Count Substrings That Differ by One Character",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Dynamic Programming",
-    "Enumeration"
-  ]
+  "tags": ["Hash Table", "String", "Dynamic Programming", "Enumeration"]
 }

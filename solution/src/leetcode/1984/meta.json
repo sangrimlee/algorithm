@@ -4,9 +4,5 @@
   "title": "Minimum Difference Between Highest and Lowest of K Scores",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sliding Window",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sliding Window", "Sorting"]
 }

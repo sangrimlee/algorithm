@@ -4,10 +4,5 @@
   "title": "Largest Number",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "String", "Greedy", "Sorting"]
 }

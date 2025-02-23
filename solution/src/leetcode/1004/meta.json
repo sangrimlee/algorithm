@@ -4,10 +4,5 @@
   "title": "Max Consecutive Ones III",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Sliding Window", "Prefix Sum"]
 }

@@ -4,8 +4,5 @@
   "title": "Product of Array Except Self",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Prefix Sum"]
 }

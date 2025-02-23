@@ -4,8 +4,5 @@
   "title": "Pascal's Triangle II",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

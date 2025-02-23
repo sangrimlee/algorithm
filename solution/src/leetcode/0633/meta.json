@@ -4,9 +4,5 @@
   "title": "Sum of Square Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Two Pointers",
-    "Binary Search"
-  ]
+  "tags": ["Math", "Two Pointers", "Binary Search"]
 }

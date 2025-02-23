@@ -4,11 +4,5 @@
   "title": "Flatten Binary Tree to Linked List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Stack",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Linked List", "Stack", "Tree", "Depth-First Search", "Binary Tree"]
 }

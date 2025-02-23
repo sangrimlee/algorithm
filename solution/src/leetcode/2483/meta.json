@@ -4,8 +4,5 @@
   "title": "Minimum Penalty for a Shop",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Prefix Sum"
-  ]
+  "tags": ["String", "Prefix Sum"]
 }

@@ -4,8 +4,5 @@
   "title": "Koko Eating Bananas",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search"
-  ]
+  "tags": ["Array", "Binary Search"]
 }

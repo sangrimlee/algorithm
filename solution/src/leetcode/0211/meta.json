@@ -4,10 +4,5 @@
   "title": "Design Add and Search Words Data Structure",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Depth-First Search",
-    "Design",
-    "Trie"
-  ]
+  "tags": ["String", "Depth-First Search", "Design", "Trie"]
 }

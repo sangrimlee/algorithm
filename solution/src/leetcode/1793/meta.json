@@ -4,11 +4,5 @@
   "title": "Maximum Score of a Good Subarray",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Stack", "Monotonic Stack"]
 }

@@ -4,11 +4,5 @@
   "title": "Pseudo-Palindromic Paths in a Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Bit Manipulation",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Bit Manipulation", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

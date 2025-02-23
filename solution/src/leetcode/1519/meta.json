@@ -4,11 +4,5 @@
   "title": "Number of Nodes in the Sub-Tree With the Same Label",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "Tree", "Depth-First Search", "Breadth-First Search", "Counting"]
 }

@@ -4,8 +4,5 @@
   "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

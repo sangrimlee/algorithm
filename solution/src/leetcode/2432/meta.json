@@ -4,7 +4,5 @@
   "title": "The Employee That Worked on the Longest Task",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

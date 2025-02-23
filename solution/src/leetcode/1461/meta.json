@@ -4,11 +4,5 @@
   "title": "Check If a String Contains All Binary Codes of Size K",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Bit Manipulation",
-    "Rolling Hash",
-    "Hash Function"
-  ]
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Rolling Hash", "Hash Function"]
 }

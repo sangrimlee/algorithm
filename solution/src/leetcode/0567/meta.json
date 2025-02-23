@@ -4,10 +4,5 @@
   "title": "Permutation in String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Two Pointers",
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "Two Pointers", "String", "Sliding Window"]
 }

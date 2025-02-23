@@ -4,8 +4,5 @@
   "title": "The k-th Lexicographical String of All Happy Strings of Length n",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking"
-  ]
+  "tags": ["String", "Backtracking"]
 }

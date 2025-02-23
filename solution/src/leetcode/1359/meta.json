@@ -4,9 +4,5 @@
   "title": "Count All Valid Pickup and Delivery Options",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Combinatorics"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Combinatorics"]
 }

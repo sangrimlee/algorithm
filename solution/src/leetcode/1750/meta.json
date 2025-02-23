@@ -4,8 +4,5 @@
   "title": "Minimum Length of String After Deleting Similar Ends",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String"
-  ]
+  "tags": ["Two Pointers", "String"]
 }

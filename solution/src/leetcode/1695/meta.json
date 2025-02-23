@@ -4,9 +4,5 @@
   "title": "Maximum Erasure Value",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window"]
 }

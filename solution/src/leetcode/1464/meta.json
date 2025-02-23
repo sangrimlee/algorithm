@@ -4,9 +4,5 @@
   "title": "Maximum Product of Two Elements in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Sorting", "Heap (Priority Queue)"]
 }

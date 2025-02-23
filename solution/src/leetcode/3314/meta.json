@@ -4,8 +4,5 @@
   "title": "Construct the Minimum Bitwise Array I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Bit Manipulation"]
 }

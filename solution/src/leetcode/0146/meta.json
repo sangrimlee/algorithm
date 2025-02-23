@@ -4,10 +4,5 @@
   "title": "LRU Cache",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Linked List",
-    "Design",
-    "Doubly-Linked List"
-  ]
+  "tags": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"]
 }

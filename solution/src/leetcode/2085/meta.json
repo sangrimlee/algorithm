@@ -4,10 +4,5 @@
   "title": "Count Common Words With One Occurrence",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Counting"]
 }

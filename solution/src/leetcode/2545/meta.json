@@ -4,9 +4,5 @@
   "title": "Sort the Students by Their Kth Score",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Matrix"
-  ]
+  "tags": ["Array", "Sorting", "Matrix"]
 }

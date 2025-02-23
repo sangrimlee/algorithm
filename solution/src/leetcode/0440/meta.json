@@ -4,7 +4,5 @@
   "title": "K-th Smallest in Lexicographical Order",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Trie"
-  ]
+  "tags": ["Trie"]
 }

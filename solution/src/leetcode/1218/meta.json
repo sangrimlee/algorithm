@@ -4,9 +4,5 @@
   "title": "Longest Arithmetic Subsequence of Given Difference",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Hash Table", "Dynamic Programming"]
 }

@@ -4,9 +4,5 @@
   "title": "Split a String Into the Max Number of Unique Substrings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Backtracking"
-  ]
+  "tags": ["Hash Table", "String", "Backtracking"]
 }

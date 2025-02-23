@@ -4,10 +4,5 @@
   "title": "Remove Duplicate Letters",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack",
-    "Greedy",
-    "Monotonic Stack"
-  ]
+  "tags": ["String", "Stack", "Greedy", "Monotonic Stack"]
 }

@@ -4,12 +4,5 @@
   "title": "Smallest Range Covering Elements from K Lists",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Greedy",
-    "Sliding Window",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Hash Table", "Greedy", "Sliding Window", "Sorting", "Heap (Priority Queue)"]
 }

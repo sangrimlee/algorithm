@@ -4,9 +4,5 @@
   "title": "Orderly Queue",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "String",
-    "Sorting"
-  ]
+  "tags": ["Math", "String", "Sorting"]
 }

@@ -4,9 +4,5 @@
   "title": "Delete Leaves With a Given Value",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
 }

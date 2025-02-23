@@ -4,9 +4,5 @@
   "title": "Nim Game",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Brainteaser",
-    "Game Theory"
-  ]
+  "tags": ["Math", "Brainteaser", "Game Theory"]
 }

@@ -4,8 +4,5 @@
   "title": "Sort Vowels in a String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Sorting"
-  ]
+  "tags": ["String", "Sorting"]
 }

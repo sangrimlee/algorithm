@@ -4,8 +4,5 @@
   "title": "Guess Number Higher or Lower",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Binary Search",
-    "Interactive"
-  ]
+  "tags": ["Binary Search", "Interactive"]
 }

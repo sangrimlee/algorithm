@@ -4,9 +4,5 @@
   "title": "Find Valid Matrix Given Row and Column Sums",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Matrix"
-  ]
+  "tags": ["Array", "Greedy", "Matrix"]
 }

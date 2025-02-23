@@ -4,9 +4,5 @@
   "title": "Tuple with Same Product",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Counting"]
 }

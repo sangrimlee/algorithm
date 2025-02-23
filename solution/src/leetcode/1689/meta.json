@@ -4,8 +4,5 @@
   "title": "Partitioning Into Minimum Number Of Deci-Binary Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

@@ -4,9 +4,5 @@
   "title": "Walking Robot Simulation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Simulation"]
 }

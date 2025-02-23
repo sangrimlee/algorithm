@@ -4,9 +4,5 @@
   "title": "XOR Queries of a Subarray",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Bit Manipulation",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Bit Manipulation", "Prefix Sum"]
 }

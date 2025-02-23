@@ -4,10 +4,5 @@
   "title": "Number of Laser Beams in a Bank",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "String",
-    "Matrix"
-  ]
+  "tags": ["Array", "Math", "String", "Matrix"]
 }

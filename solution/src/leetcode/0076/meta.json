@@ -4,9 +4,5 @@
   "title": "Minimum Window Substring",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "String", "Sliding Window"]
 }

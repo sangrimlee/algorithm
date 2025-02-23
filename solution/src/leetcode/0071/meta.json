@@ -4,8 +4,5 @@
   "title": "Simplify Path",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

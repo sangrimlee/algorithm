@@ -4,10 +4,5 @@
   "title": "All Ancestors of a Node in a Directed Acyclic Graph",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph",
-    "Topological Sort"
-  ]
+  "tags": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"]
 }

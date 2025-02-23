@@ -4,11 +4,5 @@
   "title": "Word Search II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Backtracking",
-    "Trie",
-    "Matrix"
-  ]
+  "tags": ["Array", "String", "Backtracking", "Trie", "Matrix"]
 }

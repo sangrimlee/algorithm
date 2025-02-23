@@ -4,8 +4,5 @@
   "title": "Minimum Moves to Convert String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

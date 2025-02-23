@@ -4,7 +4,5 @@
   "title": "Reformat The String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

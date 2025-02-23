@@ -4,10 +4,5 @@
   "title": "Maximum Total Importance of Roads",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Greedy",
-    "Graph",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Greedy", "Graph", "Sorting", "Heap (Priority Queue)"]
 }

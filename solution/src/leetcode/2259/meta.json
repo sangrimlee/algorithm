@@ -4,9 +4,5 @@
   "title": "Remove Digit From Number to Maximize Result",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy",
-    "Enumeration"
-  ]
+  "tags": ["String", "Greedy", "Enumeration"]
 }

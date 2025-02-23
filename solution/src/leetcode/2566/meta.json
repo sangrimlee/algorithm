@@ -4,8 +4,5 @@
   "title": "Maximum Difference by Remapping a Digit",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Math", "Greedy"]
 }

@@ -4,11 +4,5 @@
   "title": "Word Search",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Backtracking",
-    "Depth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "String", "Backtracking", "Depth-First Search", "Matrix"]
 }

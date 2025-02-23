@@ -4,8 +4,5 @@
   "title": "Minimum Number of Operations to Convert Time",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

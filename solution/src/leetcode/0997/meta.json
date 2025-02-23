@@ -4,9 +4,5 @@
   "title": "Find the Town Judge",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Graph"
-  ]
+  "tags": ["Array", "Hash Table", "Graph"]
 }

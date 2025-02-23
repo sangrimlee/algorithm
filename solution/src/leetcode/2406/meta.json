@@ -4,12 +4,5 @@
   "title": "Divide Intervals Into Minimum Number of Groups",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Greedy",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Two Pointers", "Greedy", "Sorting", "Heap (Priority Queue)", "Prefix Sum"]
 }

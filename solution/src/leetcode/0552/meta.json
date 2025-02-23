@@ -4,7 +4,5 @@
   "title": "Student Attendance Record II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

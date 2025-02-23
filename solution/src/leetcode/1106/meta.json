@@ -4,9 +4,5 @@
   "title": "Parsing A Boolean Expression",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "String",
-    "Stack",
-    "Recursion"
-  ]
+  "tags": ["String", "Stack", "Recursion"]
 }

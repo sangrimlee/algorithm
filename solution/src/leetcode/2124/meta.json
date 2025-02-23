@@ -4,7 +4,5 @@
   "title": "Check if All A's Appears Before All B's",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

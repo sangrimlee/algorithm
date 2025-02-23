@@ -4,10 +4,5 @@
   "title": "Kth Largest Sum in a Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Breadth-First Search",
-    "Sorting",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Breadth-First Search", "Sorting", "Binary Tree"]
 }

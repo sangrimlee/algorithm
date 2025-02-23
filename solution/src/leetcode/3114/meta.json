@@ -4,8 +4,5 @@
   "title": "Latest Time You Can Obtain After Replacing Characters",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Enumeration"
-  ]
+  "tags": ["String", "Enumeration"]
 }

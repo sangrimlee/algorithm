@@ -4,10 +4,5 @@
   "title": "Backspace String Compare",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Stack",
-    "Simulation"
-  ]
+  "tags": ["Two Pointers", "String", "Stack", "Simulation"]
 }

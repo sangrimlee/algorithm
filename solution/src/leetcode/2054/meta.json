@@ -4,11 +4,5 @@
   "title": "Two Best Non-Overlapping Events",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Dynamic Programming",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Binary Search", "Dynamic Programming", "Sorting", "Heap (Priority Queue)"]
 }

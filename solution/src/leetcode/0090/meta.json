@@ -4,9 +4,5 @@
   "title": "Subsets II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Backtracking",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Backtracking", "Bit Manipulation"]
 }

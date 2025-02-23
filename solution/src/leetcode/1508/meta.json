@@ -4,10 +4,5 @@
   "title": "Range Sum of Sorted Subarray Sums",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Sorting"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Sorting"]
 }

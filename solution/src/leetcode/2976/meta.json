@@ -4,10 +4,5 @@
   "title": "Minimum Cost to Convert String I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Graph",
-    "Shortest Path"
-  ]
+  "tags": ["Array", "String", "Graph", "Shortest Path"]
 }

@@ -4,8 +4,5 @@
   "title": "Maximum Number of Vowels in a Substring of Given Length",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["String", "Sliding Window"]
 }

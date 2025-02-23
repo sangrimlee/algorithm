@@ -4,7 +4,5 @@
   "title": "Find the Integer Added to Array I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

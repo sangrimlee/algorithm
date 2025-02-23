@@ -4,11 +4,5 @@
   "title": "My Calendar I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Design",
-    "Segment Tree",
-    "Ordered Set"
-  ]
+  "tags": ["Array", "Binary Search", "Design", "Segment Tree", "Ordered Set"]
 }

@@ -4,7 +4,5 @@
   "title": "Bitwise AND of Numbers Range",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Bit Manipulation"
-  ]
+  "tags": ["Bit Manipulation"]
 }

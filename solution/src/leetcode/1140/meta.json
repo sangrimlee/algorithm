@@ -4,11 +4,5 @@
   "title": "Stone Game II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Dynamic Programming",
-    "Prefix Sum",
-    "Game Theory"
-  ]
+  "tags": ["Array", "Math", "Dynamic Programming", "Prefix Sum", "Game Theory"]
 }

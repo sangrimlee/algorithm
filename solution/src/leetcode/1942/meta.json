@@ -4,9 +4,5 @@
   "title": "The Number of the Smallest Unoccupied Chair",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Hash Table", "Heap (Priority Queue)"]
 }

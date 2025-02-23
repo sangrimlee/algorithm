@@ -4,9 +4,5 @@
   "title": "Distribute Candies Among Children I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Combinatorics",
-    "Enumeration"
-  ]
+  "tags": ["Math", "Combinatorics", "Enumeration"]
 }

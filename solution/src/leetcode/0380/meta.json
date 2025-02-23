@@ -4,11 +4,5 @@
   "title": "Insert Delete GetRandom O(1)",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Design",
-    "Randomized"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Design", "Randomized"]
 }

@@ -4,10 +4,5 @@
   "title": "Largest Divisible Subset",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Dynamic Programming",
-    "Sorting"
-  ]
+  "tags": ["Array", "Math", "Dynamic Programming", "Sorting"]
 }

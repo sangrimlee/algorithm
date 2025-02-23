@@ -4,10 +4,5 @@
   "title": "Sum of Subarray Minimums",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Stack", "Monotonic Stack"]
 }

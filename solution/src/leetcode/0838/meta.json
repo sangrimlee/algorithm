@@ -4,9 +4,5 @@
   "title": "Push Dominoes",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Dynamic Programming"
-  ]
+  "tags": ["Two Pointers", "String", "Dynamic Programming"]
 }

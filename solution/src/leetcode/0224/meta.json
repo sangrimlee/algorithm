@@ -4,10 +4,5 @@
   "title": "Basic Calculator",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "String",
-    "Stack",
-    "Recursion"
-  ]
+  "tags": ["Math", "String", "Stack", "Recursion"]
 }

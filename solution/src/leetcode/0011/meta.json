@@ -4,9 +4,5 @@
   "title": "Container With Most Water",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Greedy"
-  ]
+  "tags": ["Array", "Two Pointers", "Greedy"]
 }

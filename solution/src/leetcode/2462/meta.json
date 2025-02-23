@@ -4,10 +4,5 @@
   "title": "Total Cost to Hire K Workers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Heap (Priority Queue)",
-    "Simulation"
-  ]
+  "tags": ["Array", "Two Pointers", "Heap (Priority Queue)", "Simulation"]
 }

@@ -4,10 +4,5 @@
   "title": "Short Encoding of Words",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Trie"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Trie"]
 }

@@ -4,9 +4,5 @@
   "title": "Flip Equivalent Binary Trees",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
 }

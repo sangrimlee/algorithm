@@ -4,8 +4,5 @@
   "title": "Maximum Swap",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Math", "Greedy"]
 }

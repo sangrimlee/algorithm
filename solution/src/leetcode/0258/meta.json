@@ -4,9 +4,5 @@
   "title": "Add Digits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation",
-    "Number Theory"
-  ]
+  "tags": ["Math", "Simulation", "Number Theory"]
 }

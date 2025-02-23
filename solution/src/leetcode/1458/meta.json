@@ -4,8 +4,5 @@
   "title": "Max Dot Product of Two Subsequences",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

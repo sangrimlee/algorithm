@@ -4,9 +4,5 @@
   "title": "Integer to Roman",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Math",
-    "String"
-  ]
+  "tags": ["Hash Table", "Math", "String"]
 }

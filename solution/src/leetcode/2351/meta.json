@@ -4,10 +4,5 @@
   "title": "First Letter to Appear Twice",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Bit Manipulation",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Counting"]
 }

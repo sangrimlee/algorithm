@@ -4,12 +4,5 @@
   "title": "Search Suggestions System",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Binary Search",
-    "Trie",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "String", "Binary Search", "Trie", "Sorting", "Heap (Priority Queue)"]
 }

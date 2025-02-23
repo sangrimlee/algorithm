@@ -4,10 +4,5 @@
   "title": "Reveal Cards In Increasing Order",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Queue",
-    "Sorting",
-    "Simulation"
-  ]
+  "tags": ["Array", "Queue", "Sorting", "Simulation"]
 }

@@ -4,9 +4,5 @@
   "title": "Length of Longest Subarray With at Most K Frequency",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window"]
 }

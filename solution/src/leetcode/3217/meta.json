@@ -4,9 +4,5 @@
   "title": "Delete Nodes From Linked List Present in Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Linked List"
-  ]
+  "tags": ["Array", "Hash Table", "Linked List"]
 }

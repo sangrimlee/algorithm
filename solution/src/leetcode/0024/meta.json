@@ -4,8 +4,5 @@
   "title": "Swap Nodes in Pairs",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Recursion"
-  ]
+  "tags": ["Linked List", "Recursion"]
 }

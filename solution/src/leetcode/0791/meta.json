@@ -4,9 +4,5 @@
   "title": "Custom Sort String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sorting"
-  ]
+  "tags": ["Hash Table", "String", "Sorting"]
 }

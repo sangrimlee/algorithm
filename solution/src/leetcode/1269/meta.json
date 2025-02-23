@@ -4,7 +4,5 @@
   "title": "Number of Ways to Stay in the Same Place After Some Steps",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

@@ -4,9 +4,5 @@
   "title": "H-Index",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Counting Sort"
-  ]
+  "tags": ["Array", "Sorting", "Counting Sort"]
 }

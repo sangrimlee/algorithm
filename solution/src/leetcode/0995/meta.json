@@ -4,11 +4,5 @@
   "title": "Minimum Number of K Consecutive Bit Flips",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Bit Manipulation",
-    "Queue",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Bit Manipulation", "Queue", "Sliding Window", "Prefix Sum"]
 }

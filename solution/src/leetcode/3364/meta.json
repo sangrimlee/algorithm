@@ -4,9 +4,5 @@
   "title": "Minimum Positive Sum Subarray ",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Sliding Window", "Prefix Sum"]
 }

@@ -4,9 +4,5 @@
   "title": "Jump Game",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Greedy"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Greedy"]
 }

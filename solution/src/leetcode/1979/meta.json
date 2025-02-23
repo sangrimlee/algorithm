@@ -4,9 +4,5 @@
   "title": "Find Greatest Common Divisor of Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Number Theory"
-  ]
+  "tags": ["Array", "Math", "Number Theory"]
 }

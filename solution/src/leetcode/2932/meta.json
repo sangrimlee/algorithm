@@ -4,11 +4,5 @@
   "title": "Maximum Strong Pair XOR I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Bit Manipulation",
-    "Trie",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Hash Table", "Bit Manipulation", "Trie", "Sliding Window"]
 }

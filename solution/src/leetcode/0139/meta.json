@@ -4,12 +4,5 @@
   "title": "Word Break",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Dynamic Programming",
-    "Trie",
-    "Memoization"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Dynamic Programming", "Trie", "Memoization"]
 }

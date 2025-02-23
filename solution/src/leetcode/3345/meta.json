@@ -4,8 +4,5 @@
   "title": "Smallest Divisible Digit Product I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Enumeration"
-  ]
+  "tags": ["Math", "Enumeration"]
 }

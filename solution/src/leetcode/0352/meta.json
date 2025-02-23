@@ -4,9 +4,5 @@
   "title": "Data Stream as Disjoint Intervals",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Binary Search",
-    "Design",
-    "Ordered Set"
-  ]
+  "tags": ["Binary Search", "Design", "Ordered Set"]
 }

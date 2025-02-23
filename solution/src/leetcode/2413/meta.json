@@ -4,8 +4,5 @@
   "title": "Smallest Even Multiple",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Number Theory"
-  ]
+  "tags": ["Math", "Number Theory"]
 }

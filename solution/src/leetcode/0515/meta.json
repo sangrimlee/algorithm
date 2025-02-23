@@ -4,10 +4,5 @@
   "title": "Find Largest Value in Each Tree Row",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

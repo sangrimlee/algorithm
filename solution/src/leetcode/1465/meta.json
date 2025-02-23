@@ -4,9 +4,5 @@
   "title": "Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

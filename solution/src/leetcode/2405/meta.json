@@ -4,9 +4,5 @@
   "title": "Optimal Partition of String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Hash Table", "String", "Greedy"]
 }

@@ -4,11 +4,5 @@
   "title": "Binary Tree Paths",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Backtracking",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["String", "Backtracking", "Tree", "Depth-First Search", "Binary Tree"]
 }

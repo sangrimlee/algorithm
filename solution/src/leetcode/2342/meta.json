@@ -4,10 +4,5 @@
   "title": "Max Sum of a Pair With Equal Sum of Digits",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)"]
 }

@@ -4,8 +4,5 @@
   "title": "Lexicographically Smallest String After a Swap",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

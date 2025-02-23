@@ -4,11 +4,5 @@
   "title": "Meeting Rooms III",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)", "Simulation"]
 }

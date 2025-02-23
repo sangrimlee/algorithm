@@ -4,10 +4,5 @@
   "title": "Binary Tree Inorder Traversal",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Stack",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Stack", "Tree", "Depth-First Search", "Binary Tree"]
 }

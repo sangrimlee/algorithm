@@ -4,11 +4,5 @@
   "title": "Shortest Path Visiting All Nodes",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming",
-    "Bit Manipulation",
-    "Breadth-First Search",
-    "Graph",
-    "Bitmask"
-  ]
+  "tags": ["Dynamic Programming", "Bit Manipulation", "Breadth-First Search", "Graph", "Bitmask"]
 }

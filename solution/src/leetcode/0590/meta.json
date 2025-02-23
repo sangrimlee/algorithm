@@ -4,9 +4,5 @@
   "title": "N-ary Tree Postorder Traversal",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Stack",
-    "Tree",
-    "Depth-First Search"
-  ]
+  "tags": ["Stack", "Tree", "Depth-First Search"]
 }

@@ -4,7 +4,5 @@
   "title": "Minimum Bit Flips to Convert Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Bit Manipulation"
-  ]
+  "tags": ["Bit Manipulation"]
 }

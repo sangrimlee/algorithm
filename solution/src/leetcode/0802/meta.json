@@ -4,10 +4,5 @@
   "title": "Find Eventual Safe States",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph",
-    "Topological Sort"
-  ]
+  "tags": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"]
 }

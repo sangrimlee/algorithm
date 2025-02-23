@@ -4,10 +4,5 @@
   "title": "New 21 Game",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Sliding Window",
-    "Probability and Statistics"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Sliding Window", "Probability and Statistics"]
 }

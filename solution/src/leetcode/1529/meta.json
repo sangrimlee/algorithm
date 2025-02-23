@@ -4,8 +4,5 @@
   "title": "Minimum Suffix Flips",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

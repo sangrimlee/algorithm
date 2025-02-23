@@ -4,10 +4,5 @@
   "title": "Minimum Number of Operations to Make Array Continuous",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Binary Search",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Hash Table", "Binary Search", "Sliding Window"]
 }

@@ -4,8 +4,5 @@
   "title": "Second Largest Digit in a String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

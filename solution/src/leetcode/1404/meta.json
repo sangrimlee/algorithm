@@ -4,8 +4,5 @@
   "title": "Number of Steps to Reduce a Number in Binary Representation to One",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Bit Manipulation"
-  ]
+  "tags": ["String", "Bit Manipulation"]
 }

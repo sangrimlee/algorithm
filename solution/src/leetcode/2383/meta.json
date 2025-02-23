@@ -4,8 +4,5 @@
   "title": "Minimum Hours of Training to Win a Competition",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Greedy"
-  ]
+  "tags": ["Array", "Greedy"]
 }

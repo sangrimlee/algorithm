@@ -4,8 +4,5 @@
   "title": "Minimize String Length",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

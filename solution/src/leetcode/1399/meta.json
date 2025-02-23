@@ -4,8 +4,5 @@
   "title": "Count Largest Group",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "Math"
-  ]
+  "tags": ["Hash Table", "Math"]
 }

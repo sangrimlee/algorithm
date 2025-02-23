@@ -4,10 +4,5 @@
   "title": "Count Number of Maximum Bitwise-OR Subsets",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Backtracking",
-    "Bit Manipulation",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Backtracking", "Bit Manipulation", "Enumeration"]
 }

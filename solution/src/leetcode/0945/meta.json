@@ -4,10 +4,5 @@
   "title": "Minimum Increment to Make Array Unique",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting",
-    "Counting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting", "Counting"]
 }

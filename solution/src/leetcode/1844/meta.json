@@ -4,7 +4,5 @@
   "title": "Replace All Digits with Characters",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

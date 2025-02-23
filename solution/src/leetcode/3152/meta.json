@@ -4,9 +4,5 @@
   "title": "Special Array II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Prefix Sum"]
 }

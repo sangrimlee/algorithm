@@ -4,9 +4,5 @@
   "title": "Maximum Twin Sum of a Linked List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Two Pointers",
-    "Stack"
-  ]
+  "tags": ["Linked List", "Two Pointers", "Stack"]
 }

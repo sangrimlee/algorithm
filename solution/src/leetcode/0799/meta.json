@@ -4,7 +4,5 @@
   "title": "Champagne Tower",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

@@ -4,10 +4,5 @@
   "title": "Minimum Number Game",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Simulation"
-  ]
+  "tags": ["Array", "Sorting", "Heap (Priority Queue)", "Simulation"]
 }

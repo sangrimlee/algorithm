@@ -4,9 +4,5 @@
   "title": "Bus Routes",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Breadth-First Search"
-  ]
+  "tags": ["Array", "Hash Table", "Breadth-First Search"]
 }

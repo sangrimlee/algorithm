@@ -4,10 +4,5 @@
   "title": "Linked List in Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Linked List", "Tree", "Depth-First Search", "Binary Tree"]
 }

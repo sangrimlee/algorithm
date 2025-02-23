@@ -4,10 +4,5 @@
   "title": "Largest Combination With Bitwise AND Greater Than Zero",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Bit Manipulation",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Bit Manipulation", "Counting"]
 }

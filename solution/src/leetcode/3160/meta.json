@@ -4,9 +4,5 @@
   "title": "Find the Number of Distinct Colors Among the Balls",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Simulation"]
 }

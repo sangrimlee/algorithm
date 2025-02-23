@@ -4,9 +4,5 @@
   "title": "Lexicographically Smallest Palindrome",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Two Pointers", "String", "Greedy"]
 }

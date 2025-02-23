@@ -4,10 +4,5 @@
   "title": "Finding 3-Digit Even Numbers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Enumeration"]
 }

@@ -4,8 +4,5 @@
   "title": "Sum of Even Numbers After Queries",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Simulation"
-  ]
+  "tags": ["Array", "Simulation"]
 }

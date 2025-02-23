@@ -4,8 +4,5 @@
   "title": "Counting Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Dynamic Programming",
-    "Bit Manipulation"
-  ]
+  "tags": ["Dynamic Programming", "Bit Manipulation"]
 }

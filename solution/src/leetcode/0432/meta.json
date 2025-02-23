@@ -4,10 +4,5 @@
   "title": "All O`one Data Structure",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Hash Table",
-    "Linked List",
-    "Design",
-    "Doubly-Linked List"
-  ]
+  "tags": ["Hash Table", "Linked List", "Design", "Doubly-Linked List"]
 }

@@ -4,8 +4,5 @@
   "title": "Reverse Words in a String III",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String"
-  ]
+  "tags": ["Two Pointers", "String"]
 }

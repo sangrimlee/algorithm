@@ -4,9 +4,5 @@
   "title": "Minimum Sum of Four Digit Number After Splitting Digits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Math", "Greedy", "Sorting"]
 }

@@ -4,11 +4,5 @@
   "title": "K-th Smallest Prime Fraction",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Sorting", "Heap (Priority Queue)"]
 }

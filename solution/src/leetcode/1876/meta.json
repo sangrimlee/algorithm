@@ -4,10 +4,5 @@
   "title": "Substrings of Size Three with Distinct Characters",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sliding Window",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Sliding Window", "Counting"]
 }

@@ -4,10 +4,5 @@
   "title": "Palindrome Linked List",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Linked List",
-    "Two Pointers",
-    "Stack",
-    "Recursion"
-  ]
+  "tags": ["Linked List", "Two Pointers", "Stack", "Recursion"]
 }

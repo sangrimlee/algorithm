@@ -4,10 +4,5 @@
   "title": "Find the Student that Will Replace the Chalk",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Simulation",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Simulation", "Prefix Sum"]
 }

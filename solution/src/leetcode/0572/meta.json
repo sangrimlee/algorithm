@@ -4,11 +4,5 @@
   "title": "Subtree of Another Tree",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "String Matching",
-    "Binary Tree",
-    "Hash Function"
-  ]
+  "tags": ["Tree", "Depth-First Search", "String Matching", "Binary Tree", "Hash Function"]
 }

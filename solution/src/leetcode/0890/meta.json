@@ -4,9 +4,5 @@
   "title": "Find and Replace Pattern",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Array", "Hash Table", "String"]
 }

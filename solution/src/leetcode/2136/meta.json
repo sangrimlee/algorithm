@@ -4,9 +4,5 @@
   "title": "Earliest Possible Day of Full Bloom",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

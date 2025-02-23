@@ -4,7 +4,5 @@
   "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List"
-  ]
+  "tags": ["Linked List"]
 }

@@ -4,9 +4,5 @@
   "title": "Perfect Squares",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Breadth-First Search"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Breadth-First Search"]
 }

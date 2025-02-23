@@ -4,8 +4,5 @@
   "title": "Find the Middle Index in Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Prefix Sum"]
 }

@@ -4,9 +4,5 @@
   "title": "Minimum Number of Steps to Make Two Strings Anagram",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

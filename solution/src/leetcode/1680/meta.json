@@ -4,9 +4,5 @@
   "title": "Concatenation of Consecutive Binary Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Bit Manipulation",
-    "Simulation"
-  ]
+  "tags": ["Math", "Bit Manipulation", "Simulation"]
 }

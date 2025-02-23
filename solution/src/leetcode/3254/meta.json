@@ -4,8 +4,5 @@
   "title": "Find the Power of K-Size Subarrays I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Sliding Window"]
 }

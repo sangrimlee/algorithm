@@ -4,8 +4,5 @@
   "title": "Binary Watch",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Backtracking",
-    "Bit Manipulation"
-  ]
+  "tags": ["Backtracking", "Bit Manipulation"]
 }

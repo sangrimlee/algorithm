@@ -4,8 +4,5 @@
   "title": "Middle of the Linked List",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Linked List",
-    "Two Pointers"
-  ]
+  "tags": ["Linked List", "Two Pointers"]
 }

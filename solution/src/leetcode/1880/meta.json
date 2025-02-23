@@ -4,7 +4,5 @@
   "title": "Check if Word Equals Summation of Two Words",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

@@ -4,9 +4,5 @@
   "title": "Maximum Length Substring With Two Occurrences",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "String", "Sliding Window"]
 }

@@ -4,9 +4,5 @@
   "title": "Find the Winning Player in Coin Game",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation",
-    "Game Theory"
-  ]
+  "tags": ["Math", "Simulation", "Game Theory"]
 }

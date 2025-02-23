@@ -4,8 +4,5 @@
   "title": "K Radius Subarray Averages",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Sliding Window"]
 }

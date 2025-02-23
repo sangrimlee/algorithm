@@ -4,11 +4,5 @@
   "title": "Smallest String Starting From Leaf",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["String", "Backtracking", "Tree", "Depth-First Search", "Binary Tree"]
 }

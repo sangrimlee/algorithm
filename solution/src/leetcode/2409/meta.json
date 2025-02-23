@@ -4,8 +4,5 @@
   "title": "Count Days Spent Together",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String"
-  ]
+  "tags": ["Math", "String"]
 }

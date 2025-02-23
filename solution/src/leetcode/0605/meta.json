@@ -4,8 +4,5 @@
   "title": "Can Place Flowers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Greedy"
-  ]
+  "tags": ["Array", "Greedy"]
 }

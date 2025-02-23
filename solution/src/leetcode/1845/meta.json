@@ -4,8 +4,5 @@
   "title": "Seat Reservation Manager",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Design",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Design", "Heap (Priority Queue)"]
 }

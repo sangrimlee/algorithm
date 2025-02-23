@@ -4,11 +4,5 @@
   "title": "Delete Nodes And Return Forest",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Hash Table", "Tree", "Depth-First Search", "Binary Tree"]
 }

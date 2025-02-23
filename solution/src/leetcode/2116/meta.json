@@ -4,9 +4,5 @@
   "title": "Check if a Parentheses String Can Be Valid",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack",
-    "Greedy"
-  ]
+  "tags": ["String", "Stack", "Greedy"]
 }

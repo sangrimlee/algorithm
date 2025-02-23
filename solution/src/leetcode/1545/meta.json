@@ -4,9 +4,5 @@
   "title": "Find Kth Bit in Nth Binary String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Recursion",
-    "Simulation"
-  ]
+  "tags": ["String", "Recursion", "Simulation"]
 }

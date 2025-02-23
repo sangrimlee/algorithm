@@ -4,7 +4,5 @@
   "title": "Rearrange Spaces Between Words",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

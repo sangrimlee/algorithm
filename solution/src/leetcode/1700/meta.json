@@ -4,10 +4,5 @@
   "title": "Number of Students Unable to Eat Lunch",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Stack",
-    "Queue",
-    "Simulation"
-  ]
+  "tags": ["Array", "Stack", "Queue", "Simulation"]
 }

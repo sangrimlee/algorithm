@@ -4,8 +4,5 @@
   "title": "Longest Alternating Subarray",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Enumeration"]
 }

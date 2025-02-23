@@ -4,11 +4,5 @@
   "title": "Maximum Number of Coins You Can Get",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Greedy",
-    "Sorting",
-    "Game Theory"
-  ]
+  "tags": ["Array", "Math", "Greedy", "Sorting", "Game Theory"]
 }

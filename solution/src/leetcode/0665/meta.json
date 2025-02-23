@@ -4,7 +4,5 @@
   "title": "Non-decreasing Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

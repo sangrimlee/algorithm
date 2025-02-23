@@ -4,11 +4,5 @@
   "title": "Construct Binary Tree from Preorder and Postorder Traversal",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Divide and Conquer",
-    "Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Hash Table", "Divide and Conquer", "Tree", "Binary Tree"]
 }

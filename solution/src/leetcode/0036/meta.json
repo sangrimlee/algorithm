@@ -4,9 +4,5 @@
   "title": "Valid Sudoku",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Matrix"
-  ]
+  "tags": ["Array", "Hash Table", "Matrix"]
 }

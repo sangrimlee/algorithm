@@ -4,9 +4,5 @@
   "title": "N-th Tribonacci Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Memoization"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Memoization"]
 }

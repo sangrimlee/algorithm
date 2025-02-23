@@ -4,9 +4,5 @@
   "title": "Intersection of Two Linked Lists",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "Linked List",
-    "Two Pointers"
-  ]
+  "tags": ["Hash Table", "Linked List", "Two Pointers"]
 }

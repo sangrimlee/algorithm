@@ -4,10 +4,5 @@
   "title": "Add One Row to Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

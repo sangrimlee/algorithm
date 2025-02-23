@@ -4,8 +4,5 @@
   "title": "The kth Factor of n",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Number Theory"
-  ]
+  "tags": ["Math", "Number Theory"]
 }

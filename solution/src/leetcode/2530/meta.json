@@ -4,9 +4,5 @@
   "title": "Maximal Score After Applying K Operations",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Greedy", "Heap (Priority Queue)"]
 }

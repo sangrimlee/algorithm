@@ -4,8 +4,5 @@
   "title": "Maximum 69 Number",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Math", "Greedy"]
 }

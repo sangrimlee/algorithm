@@ -4,8 +4,5 @@
   "title": "XOR Operation in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Bit Manipulation"
-  ]
+  "tags": ["Math", "Bit Manipulation"]
 }

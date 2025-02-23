@@ -4,8 +4,5 @@
   "title": "Number of Valid Clock Times",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Enumeration"
-  ]
+  "tags": ["String", "Enumeration"]
 }

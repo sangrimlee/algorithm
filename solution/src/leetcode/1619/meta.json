@@ -4,8 +4,5 @@
   "title": "Mean of Array After Removing Some Elements",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

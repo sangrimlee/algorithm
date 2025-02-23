@@ -4,8 +4,5 @@
   "title": "Minimum Swaps to Group All 1's Together II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Sliding Window"]
 }

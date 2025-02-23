@@ -4,8 +4,5 @@
   "title": "Lexicographically Smallest Equivalent String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Union Find"
-  ]
+  "tags": ["String", "Union Find"]
 }

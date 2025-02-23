@@ -4,8 +4,5 @@
   "title": "Root Equals Sum of Children",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Binary Tree"]
 }

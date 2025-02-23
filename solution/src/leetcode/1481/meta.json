@@ -4,11 +4,5 @@
   "title": "Least Number of Unique Integers after K Removals",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Greedy",
-    "Sorting",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Greedy", "Sorting", "Counting"]
 }

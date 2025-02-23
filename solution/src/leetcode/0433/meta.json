@@ -4,9 +4,5 @@
   "title": "Minimum Genetic Mutation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Breadth-First Search"
-  ]
+  "tags": ["Hash Table", "String", "Breadth-First Search"]
 }

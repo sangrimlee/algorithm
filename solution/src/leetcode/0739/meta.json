@@ -4,9 +4,5 @@
   "title": "Daily Temperatures",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Stack", "Monotonic Stack"]
 }

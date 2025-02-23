@@ -4,8 +4,5 @@
   "title": "Degree of an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table"
-  ]
+  "tags": ["Array", "Hash Table"]
 }

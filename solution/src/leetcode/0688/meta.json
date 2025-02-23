@@ -4,7 +4,5 @@
   "title": "Knight Probability in Chessboard",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

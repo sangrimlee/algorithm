@@ -4,9 +4,5 @@
   "title": "Group the People Given the Group Size They Belong To",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Greedy"
-  ]
+  "tags": ["Array", "Hash Table", "Greedy"]
 }

@@ -4,8 +4,5 @@
   "title": "Distribute Money to Maximum Children",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Math", "Greedy"]
 }

@@ -4,10 +4,5 @@
   "title": "Count Subarrays With Fixed Bounds",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Queue",
-    "Sliding Window",
-    "Monotonic Queue"
-  ]
+  "tags": ["Array", "Queue", "Sliding Window", "Monotonic Queue"]
 }

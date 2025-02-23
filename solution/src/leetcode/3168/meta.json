@@ -4,8 +4,5 @@
   "title": "Minimum Number of Chairs in a Waiting Room",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

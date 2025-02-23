@@ -4,8 +4,5 @@
   "title": "Additive Number",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking"
-  ]
+  "tags": ["String", "Backtracking"]
 }

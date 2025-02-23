@@ -4,8 +4,5 @@
   "title": "Painting the Walls",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

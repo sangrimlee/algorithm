@@ -4,9 +4,5 @@
   "title": "Maximum XOR After Operations ",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Math", "Bit Manipulation"]
 }

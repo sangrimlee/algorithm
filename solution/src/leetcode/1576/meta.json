@@ -4,7 +4,5 @@
   "title": "Replace All ?'s to Avoid Consecutive Repeating Characters",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

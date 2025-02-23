@@ -4,8 +4,5 @@
   "title": "Integer Break",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Dynamic Programming"
-  ]
+  "tags": ["Math", "Dynamic Programming"]
 }

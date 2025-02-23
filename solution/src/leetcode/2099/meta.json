@@ -4,10 +4,5 @@
   "title": "Find Subsequence of Length K With the Largest Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Heap (Priority Queue)"]
 }

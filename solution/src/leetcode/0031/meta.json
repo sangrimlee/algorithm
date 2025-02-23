@@ -4,8 +4,5 @@
   "title": "Next Permutation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers"
-  ]
+  "tags": ["Array", "Two Pointers"]
 }

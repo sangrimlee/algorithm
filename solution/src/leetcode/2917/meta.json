@@ -4,8 +4,5 @@
   "title": "Find the K-or of an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Bit Manipulation"]
 }

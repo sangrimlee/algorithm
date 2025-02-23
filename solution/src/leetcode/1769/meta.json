@@ -4,9 +4,5 @@
   "title": "Minimum Number of Operations to Move All Balls to Each Box",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "String", "Prefix Sum"]
 }

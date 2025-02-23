@@ -4,9 +4,5 @@
   "title": "Word Subsets",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Array", "Hash Table", "String"]
 }

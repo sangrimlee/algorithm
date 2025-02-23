@@ -4,8 +4,5 @@
   "title": "Count Number of Homogenous Substrings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "String"
-  ]
+  "tags": ["Math", "String"]
 }

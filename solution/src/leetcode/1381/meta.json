@@ -4,9 +4,5 @@
   "title": "Design a Stack With Increment Operation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Stack",
-    "Design"
-  ]
+  "tags": ["Array", "Stack", "Design"]
 }

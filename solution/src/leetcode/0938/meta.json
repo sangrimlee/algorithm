@@ -4,10 +4,5 @@
   "title": "Range Sum of BST",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Search Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Search Tree", "Binary Tree"]
 }

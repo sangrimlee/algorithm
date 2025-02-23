@@ -4,8 +4,5 @@
   "title": "Find the Sequence of Strings Appeared on the Screen",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

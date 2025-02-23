@@ -4,7 +4,5 @@
   "title": "Count and Say",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

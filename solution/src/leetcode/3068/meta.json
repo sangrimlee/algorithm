@@ -4,12 +4,5 @@
   "title": "Find the Maximum Sum of Node Values",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Greedy",
-    "Bit Manipulation",
-    "Tree",
-    "Sorting"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Greedy", "Bit Manipulation", "Tree", "Sorting"]
 }

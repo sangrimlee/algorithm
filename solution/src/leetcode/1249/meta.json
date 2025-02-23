@@ -4,8 +4,5 @@
   "title": "Minimum Remove to Make Valid Parentheses",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

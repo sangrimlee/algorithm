@@ -4,12 +4,5 @@
   "title": "Maximum Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Divide and Conquer",
-    "Stack",
-    "Tree",
-    "Monotonic Stack",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Divide and Conquer", "Stack", "Tree", "Monotonic Stack", "Binary Tree"]
 }

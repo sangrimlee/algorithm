@@ -4,8 +4,5 @@
   "title": "Find The Original Array of Prefix Xor",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Bit Manipulation"]
 }

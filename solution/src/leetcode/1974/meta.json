@@ -4,8 +4,5 @@
   "title": "Minimum Time to Type Word Using Special Typewriter",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy"
-  ]
+  "tags": ["String", "Greedy"]
 }

@@ -4,8 +4,5 @@
   "title": "Richest Customer Wealth",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Matrix"
-  ]
+  "tags": ["Array", "Matrix"]
 }

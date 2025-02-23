@@ -4,9 +4,5 @@
   "title": "Find the Longest Valid Obstacle Course at Each Position",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Binary Indexed Tree"
-  ]
+  "tags": ["Array", "Binary Search", "Binary Indexed Tree"]
 }

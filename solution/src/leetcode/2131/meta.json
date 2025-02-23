@@ -4,11 +4,5 @@
   "title": "Longest Palindrome by Concatenating Two Letter Words",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Greedy",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Greedy", "Counting"]
 }

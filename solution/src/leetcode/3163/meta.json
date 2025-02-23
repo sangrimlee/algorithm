@@ -4,7 +4,5 @@
   "title": "String Compression III",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

@@ -4,9 +4,5 @@
   "title": "Reverse Prefix of Word",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Stack"
-  ]
+  "tags": ["Two Pointers", "String", "Stack"]
 }

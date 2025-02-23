@@ -4,9 +4,5 @@
   "title": "Minimum Amount of Time to Collect Garbage",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "String", "Prefix Sum"]
 }

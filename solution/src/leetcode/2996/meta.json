@@ -4,9 +4,5 @@
   "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting"]
 }

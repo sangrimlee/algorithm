@@ -4,10 +4,5 @@
   "title": "Smallest Number in Infinite Set",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "Design",
-    "Heap (Priority Queue)",
-    "Ordered Set"
-  ]
+  "tags": ["Hash Table", "Design", "Heap (Priority Queue)", "Ordered Set"]
 }

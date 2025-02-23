@@ -4,11 +4,5 @@
   "title": "Find Longest Special Substring That Occurs Thrice I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Binary Search",
-    "Sliding Window",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Binary Search", "Sliding Window", "Counting"]
 }

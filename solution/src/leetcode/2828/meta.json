@@ -4,8 +4,5 @@
   "title": "Check if a String Is an Acronym of Words",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "String"
-  ]
+  "tags": ["Array", "String"]
 }

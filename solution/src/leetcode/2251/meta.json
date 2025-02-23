@@ -4,12 +4,5 @@
   "title": "Number of Flowers in Full Bloom",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Binary Search",
-    "Sorting",
-    "Prefix Sum",
-    "Ordered Set"
-  ]
+  "tags": ["Array", "Hash Table", "Binary Search", "Sorting", "Prefix Sum", "Ordered Set"]
 }

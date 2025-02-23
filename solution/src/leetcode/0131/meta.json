@@ -4,9 +4,5 @@
   "title": "Palindrome Partitioning",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Dynamic Programming",
-    "Backtracking"
-  ]
+  "tags": ["String", "Dynamic Programming", "Backtracking"]
 }

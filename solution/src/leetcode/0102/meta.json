@@ -4,9 +4,5 @@
   "title": "Binary Tree Level Order Traversal",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Breadth-First Search", "Binary Tree"]
 }

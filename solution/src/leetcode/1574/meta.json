@@ -4,11 +4,5 @@
   "title": "Shortest Subarray to be Removed to Make Array Sorted",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Stack", "Monotonic Stack"]
 }

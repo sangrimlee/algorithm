@@ -4,9 +4,5 @@
   "title": "Minimum Cost to Move Chips to The Same Position",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Array", "Math", "Greedy"]
 }

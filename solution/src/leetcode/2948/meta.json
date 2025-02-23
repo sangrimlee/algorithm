@@ -4,9 +4,5 @@
   "title": "Make Lexicographically Smallest Array by Swapping Elements",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Union Find",
-    "Sorting"
-  ]
+  "tags": ["Array", "Union Find", "Sorting"]
 }

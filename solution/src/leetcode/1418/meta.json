@@ -4,11 +4,5 @@
   "title": "Display Table of Food Orders in a Restaurant",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Sorting",
-    "Ordered Set"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Sorting", "Ordered Set"]
 }

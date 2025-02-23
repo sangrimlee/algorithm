@@ -4,10 +4,5 @@
   "title": "Largest Positive Integer That Exists With Its Negative",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Two Pointers",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Two Pointers", "Sorting"]
 }

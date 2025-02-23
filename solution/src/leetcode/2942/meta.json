@@ -4,8 +4,5 @@
   "title": "Find Words Containing Character",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "String"
-  ]
+  "tags": ["Array", "String"]
 }

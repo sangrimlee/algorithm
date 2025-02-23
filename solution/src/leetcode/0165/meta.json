@@ -4,8 +4,5 @@
   "title": "Compare Version Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String"
-  ]
+  "tags": ["Two Pointers", "String"]
 }

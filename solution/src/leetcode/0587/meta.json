@@ -4,9 +4,5 @@
   "title": "Erect the Fence",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Math",
-    "Geometry"
-  ]
+  "tags": ["Array", "Math", "Geometry"]
 }

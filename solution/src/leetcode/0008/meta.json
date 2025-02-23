@@ -4,7 +4,5 @@
   "title": "String to Integer (atoi)",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

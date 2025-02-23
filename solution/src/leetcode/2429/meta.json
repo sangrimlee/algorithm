@@ -4,8 +4,5 @@
   "title": "Minimize XOR",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Greedy",
-    "Bit Manipulation"
-  ]
+  "tags": ["Greedy", "Bit Manipulation"]
 }

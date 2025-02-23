@@ -4,10 +4,5 @@
   "title": "Find All Groups of Farmland",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Depth-First Search", "Breadth-First Search", "Matrix"]
 }

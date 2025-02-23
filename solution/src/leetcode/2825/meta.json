@@ -4,8 +4,5 @@
   "title": "Make String a Subsequence Using Cyclic Increments",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String"
-  ]
+  "tags": ["Two Pointers", "String"]
 }

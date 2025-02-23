@@ -4,9 +4,5 @@
   "title": "Sum of Absolute Differences in a Sorted Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Math", "Prefix Sum"]
 }

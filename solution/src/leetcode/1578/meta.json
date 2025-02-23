@@ -4,10 +4,5 @@
   "title": "Minimum Time to Make Rope Colorful",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Dynamic Programming",
-    "Greedy"
-  ]
+  "tags": ["Array", "String", "Dynamic Programming", "Greedy"]
 }

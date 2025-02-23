@@ -4,10 +4,5 @@
   "title": "Maximum Running Time of N Computers",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Binary Search", "Greedy", "Sorting"]
 }

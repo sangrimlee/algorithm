@@ -4,11 +4,5 @@
   "title": "All Possible Full Binary Trees",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Dynamic Programming",
-    "Tree",
-    "Recursion",
-    "Memoization",
-    "Binary Tree"
-  ]
+  "tags": ["Dynamic Programming", "Tree", "Recursion", "Memoization", "Binary Tree"]
 }

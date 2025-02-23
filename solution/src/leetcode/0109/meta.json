@@ -4,11 +4,5 @@
   "title": "Convert Sorted List to Binary Search Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Divide and Conquer",
-    "Tree",
-    "Binary Search Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Linked List", "Divide and Conquer", "Tree", "Binary Search Tree", "Binary Tree"]
 }

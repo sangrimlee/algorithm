@@ -4,11 +4,5 @@
   "title": "All Elements in Two Binary Search Trees",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Search Tree",
-    "Sorting",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Search Tree", "Sorting", "Binary Tree"]
 }

@@ -4,11 +4,5 @@
   "title": "Longest Subsequence With Limited Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Greedy",
-    "Sorting",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Binary Search", "Greedy", "Sorting", "Prefix Sum"]
 }

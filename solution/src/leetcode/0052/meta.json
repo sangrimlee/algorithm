@@ -4,7 +4,5 @@
   "title": "N-Queens II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Backtracking"
-  ]
+  "tags": ["Backtracking"]
 }

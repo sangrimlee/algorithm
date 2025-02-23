@@ -4,9 +4,5 @@
   "title": "Maximum Points You Can Obtain from Cards",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Sliding Window", "Prefix Sum"]
 }

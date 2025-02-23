@@ -4,8 +4,5 @@
   "title": "Number of Ways to Split Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Prefix Sum"]
 }

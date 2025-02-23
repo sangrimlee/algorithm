@@ -4,8 +4,5 @@
   "title": "Minimum Cost For Tickets",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

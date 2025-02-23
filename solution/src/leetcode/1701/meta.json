@@ -4,8 +4,5 @@
   "title": "Average Waiting Time",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Simulation"
-  ]
+  "tags": ["Array", "Simulation"]
 }

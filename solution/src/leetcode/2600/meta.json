@@ -4,8 +4,5 @@
   "title": "K Items With the Maximum Sum",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Greedy"
-  ]
+  "tags": ["Math", "Greedy"]
 }

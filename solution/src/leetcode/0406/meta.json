@@ -4,10 +4,5 @@
   "title": "Queue Reconstruction by Height",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Indexed Tree",
-    "Segment Tree",
-    "Sorting"
-  ]
+  "tags": ["Array", "Binary Indexed Tree", "Segment Tree", "Sorting"]
 }

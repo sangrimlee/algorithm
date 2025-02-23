@@ -4,8 +4,5 @@
   "title": "Sorting the Sentence",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Sorting"
-  ]
+  "tags": ["String", "Sorting"]
 }

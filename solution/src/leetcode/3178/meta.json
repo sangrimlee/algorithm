@@ -4,8 +4,5 @@
   "title": "Find the Child Who Has the Ball After K Seconds",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Math", "Simulation"]
 }

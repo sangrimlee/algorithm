@@ -4,9 +4,5 @@
   "title": "Two Out of Three",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Hash Table", "Bit Manipulation"]
 }

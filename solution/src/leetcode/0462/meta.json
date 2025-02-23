@@ -4,9 +4,5 @@
   "title": "Minimum Moves to Equal Array Elements II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Sorting"
-  ]
+  "tags": ["Array", "Math", "Sorting"]
 }

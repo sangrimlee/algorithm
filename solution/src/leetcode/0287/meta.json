@@ -4,10 +4,5 @@
   "title": "Find the Duplicate Number",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Binary Search",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Two Pointers", "Binary Search", "Bit Manipulation"]
 }

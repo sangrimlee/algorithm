@@ -4,9 +4,5 @@
   "title": "Split a String in Balanced Strings",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Greedy",
-    "Counting"
-  ]
+  "tags": ["String", "Greedy", "Counting"]
 }

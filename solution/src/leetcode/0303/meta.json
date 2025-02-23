@@ -4,9 +4,5 @@
   "title": "Range Sum Query - Immutable",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Design",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Design", "Prefix Sum"]
 }

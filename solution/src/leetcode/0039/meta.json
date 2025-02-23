@@ -4,8 +4,5 @@
   "title": "Combination Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Backtracking"
-  ]
+  "tags": ["Array", "Backtracking"]
 }

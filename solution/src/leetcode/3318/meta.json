@@ -4,10 +4,5 @@
   "title": "Find X-Sum of All K-Long Subarrays I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window", "Heap (Priority Queue)"]
 }

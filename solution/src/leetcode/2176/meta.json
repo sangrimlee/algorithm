@@ -4,7 +4,5 @@
   "title": "Count Equal and Divisible Pairs in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

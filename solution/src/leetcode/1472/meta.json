@@ -4,12 +4,5 @@
   "title": "Design Browser History",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Linked List",
-    "Stack",
-    "Design",
-    "Doubly-Linked List",
-    "Data Stream"
-  ]
+  "tags": ["Array", "Linked List", "Stack", "Design", "Doubly-Linked List", "Data Stream"]
 }

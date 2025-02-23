@@ -4,9 +4,5 @@
   "title": "Maximum Matrix Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Matrix"
-  ]
+  "tags": ["Array", "Greedy", "Matrix"]
 }

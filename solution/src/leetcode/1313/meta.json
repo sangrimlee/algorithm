@@ -4,7 +4,5 @@
   "title": "Decompress Run-Length Encoded List",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

@@ -4,10 +4,5 @@
   "title": "Make Array Strictly Increasing",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Dynamic Programming",
-    "Sorting"
-  ]
+  "tags": ["Array", "Binary Search", "Dynamic Programming", "Sorting"]
 }

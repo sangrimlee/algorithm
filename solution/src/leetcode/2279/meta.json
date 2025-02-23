@@ -4,9 +4,5 @@
   "title": "Maximum Bags With Full Capacity of Rocks",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting"
-  ]
+  "tags": ["Array", "Greedy", "Sorting"]
 }

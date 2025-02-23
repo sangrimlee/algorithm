@@ -4,8 +4,5 @@
   "title": "Widest Vertical Area Between Two Points Containing No Points",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

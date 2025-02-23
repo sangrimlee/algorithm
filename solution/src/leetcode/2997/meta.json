@@ -4,8 +4,5 @@
   "title": "Minimum Number of Operations to Make Array XOR Equal to K",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Bit Manipulation"]
 }

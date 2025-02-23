@@ -4,10 +4,5 @@
   "title": "Path with Maximum Probability",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Graph",
-    "Heap (Priority Queue)",
-    "Shortest Path"
-  ]
+  "tags": ["Array", "Graph", "Heap (Priority Queue)", "Shortest Path"]
 }

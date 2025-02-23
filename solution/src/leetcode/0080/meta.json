@@ -4,8 +4,5 @@
   "title": "Remove Duplicates from Sorted Array II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers"
-  ]
+  "tags": ["Array", "Two Pointers"]
 }

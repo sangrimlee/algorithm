@@ -4,9 +4,5 @@
   "title": "Find in Mountain Array",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Interactive"
-  ]
+  "tags": ["Array", "Binary Search", "Interactive"]
 }

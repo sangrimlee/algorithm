@@ -4,9 +4,5 @@
   "title": "Check if Every Row and Column Contains All Numbers",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Matrix"
-  ]
+  "tags": ["Array", "Hash Table", "Matrix"]
 }

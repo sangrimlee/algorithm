@@ -4,7 +4,5 @@
   "title": "Make Three Strings Equal",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

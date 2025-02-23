@@ -4,8 +4,5 @@
   "title": "First Missing Positive",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table"
-  ]
+  "tags": ["Array", "Hash Table"]
 }

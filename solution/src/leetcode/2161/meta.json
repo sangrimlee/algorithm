@@ -4,9 +4,5 @@
   "title": "Partition Array According to Given Pivot",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Simulation"
-  ]
+  "tags": ["Array", "Two Pointers", "Simulation"]
 }

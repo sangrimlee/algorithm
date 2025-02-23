@@ -4,7 +4,5 @@
   "title": "Number of Segments in a String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

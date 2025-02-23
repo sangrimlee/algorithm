@@ -4,7 +4,5 @@
   "title": "Number of Dice Rolls With Target Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

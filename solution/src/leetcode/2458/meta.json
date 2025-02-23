@@ -4,11 +4,5 @@
   "title": "Height of Binary Tree After Subtree Removal Queries",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"]
 }

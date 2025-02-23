@@ -4,12 +4,5 @@
   "title": "Count Prefix and Suffix Pairs II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Trie",
-    "Rolling Hash",
-    "String Matching",
-    "Hash Function"
-  ]
+  "tags": ["Array", "String", "Trie", "Rolling Hash", "String Matching", "Hash Function"]
 }

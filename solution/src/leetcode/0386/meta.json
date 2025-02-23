@@ -4,8 +4,5 @@
   "title": "Lexicographical Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Depth-First Search",
-    "Trie"
-  ]
+  "tags": ["Depth-First Search", "Trie"]
 }

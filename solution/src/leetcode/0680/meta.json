@@ -4,9 +4,5 @@
   "title": "Valid Palindrome II",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Two Pointers", "String", "Greedy"]
 }

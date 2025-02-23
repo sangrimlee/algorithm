@@ -4,9 +4,5 @@
   "title": "Single-Threaded CPU",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Sorting", "Heap (Priority Queue)"]
 }

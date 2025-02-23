@@ -4,8 +4,5 @@
   "title": "Rotate List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Two Pointers"
-  ]
+  "tags": ["Linked List", "Two Pointers"]
 }

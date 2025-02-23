@@ -4,12 +4,5 @@
   "title": "Longest Path With Different Adjacent Characters",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Tree",
-    "Depth-First Search",
-    "Graph",
-    "Topological Sort"
-  ]
+  "tags": ["Array", "String", "Tree", "Depth-First Search", "Graph", "Topological Sort"]
 }

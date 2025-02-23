@@ -4,9 +4,5 @@
   "title": "Complex Number Multiplication",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "String",
-    "Simulation"
-  ]
+  "tags": ["Math", "String", "Simulation"]
 }

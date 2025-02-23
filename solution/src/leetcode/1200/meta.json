@@ -4,8 +4,5 @@
   "title": "Minimum Absolute Difference",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

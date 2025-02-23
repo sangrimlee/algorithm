@@ -4,9 +4,5 @@
   "title": "Maximum Average Pass Ratio",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Greedy", "Heap (Priority Queue)"]
 }

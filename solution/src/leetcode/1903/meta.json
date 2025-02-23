@@ -4,9 +4,5 @@
   "title": "Largest Odd Number in String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Math", "String", "Greedy"]
 }

@@ -4,7 +4,5 @@
   "title": "Largest 3-Same-Digit Number in String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

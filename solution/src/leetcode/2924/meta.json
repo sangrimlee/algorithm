@@ -4,7 +4,5 @@
   "title": "Find Champion II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Graph"
-  ]
+  "tags": ["Graph"]
 }

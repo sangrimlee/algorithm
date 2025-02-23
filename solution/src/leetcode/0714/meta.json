@@ -4,9 +4,5 @@
   "title": "Best Time to Buy and Sell Stock with Transaction Fee",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Greedy"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Greedy"]
 }

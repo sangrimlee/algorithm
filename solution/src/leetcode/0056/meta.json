@@ -4,8 +4,5 @@
   "title": "Merge Intervals",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

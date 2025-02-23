@@ -4,10 +4,5 @@
   "title": "Max Points on a Line",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Geometry"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Geometry"]
 }

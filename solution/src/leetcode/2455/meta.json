@@ -4,8 +4,5 @@
   "title": "Average Value of Even Numbers That Are Divisible by Three",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math"
-  ]
+  "tags": ["Array", "Math"]
 }

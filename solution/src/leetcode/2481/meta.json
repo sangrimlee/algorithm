@@ -4,8 +4,5 @@
   "title": "Minimum Cuts to Divide a Circle",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Geometry"
-  ]
+  "tags": ["Math", "Geometry"]
 }

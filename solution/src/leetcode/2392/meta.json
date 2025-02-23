@@ -4,10 +4,5 @@
   "title": "Build a Matrix With Conditions",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Graph",
-    "Topological Sort",
-    "Matrix"
-  ]
+  "tags": ["Array", "Graph", "Topological Sort", "Matrix"]
 }

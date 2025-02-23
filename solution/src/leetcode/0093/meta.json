@@ -4,8 +4,5 @@
   "title": "Restore IP Addresses",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking"
-  ]
+  "tags": ["String", "Backtracking"]
 }

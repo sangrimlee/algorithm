@@ -4,8 +4,5 @@
   "title": "Maximum Score After Splitting a String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Prefix Sum"
-  ]
+  "tags": ["String", "Prefix Sum"]
 }

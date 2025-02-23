@@ -4,9 +4,5 @@
   "title": "Maximum Employees to Be Invited to a Meeting",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Depth-First Search",
-    "Graph",
-    "Topological Sort"
-  ]
+  "tags": ["Depth-First Search", "Graph", "Topological Sort"]
 }

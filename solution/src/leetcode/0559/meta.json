@@ -4,9 +4,5 @@
   "title": "Maximum Depth of N-ary Tree",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Breadth-First Search"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Breadth-First Search"]
 }

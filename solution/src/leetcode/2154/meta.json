@@ -4,10 +4,5 @@
   "title": "Keep Multiplying Found Values by Two",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting",
-    "Simulation"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting", "Simulation"]
 }

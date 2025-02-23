@@ -4,8 +4,5 @@
   "title": "Count Operations to Obtain Zero",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Math", "Simulation"]
 }

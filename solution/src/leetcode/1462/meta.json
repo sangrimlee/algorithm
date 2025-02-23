@@ -4,10 +4,5 @@
   "title": "Course Schedule IV",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Depth-First Search",
-    "Breadth-First Search",
-    "Graph",
-    "Topological Sort"
-  ]
+  "tags": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"]
 }

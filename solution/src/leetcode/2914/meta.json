@@ -4,7 +4,5 @@
   "title": "Minimum Number of Changes to Make Binary String Beautiful",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

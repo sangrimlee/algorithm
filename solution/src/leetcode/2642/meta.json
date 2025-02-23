@@ -4,10 +4,5 @@
   "title": "Design Graph With Shortest Path Calculator",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Graph",
-    "Design",
-    "Heap (Priority Queue)",
-    "Shortest Path"
-  ]
+  "tags": ["Graph", "Design", "Heap (Priority Queue)", "Shortest Path"]
 }

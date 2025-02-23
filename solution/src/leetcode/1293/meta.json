@@ -4,9 +4,5 @@
   "title": "Shortest Path in a Grid with Obstacles Elimination",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Breadth-First Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Breadth-First Search", "Matrix"]
 }

@@ -4,8 +4,5 @@
   "title": "Numbers With Same Consecutive Differences",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Backtracking",
-    "Breadth-First Search"
-  ]
+  "tags": ["Backtracking", "Breadth-First Search"]
 }

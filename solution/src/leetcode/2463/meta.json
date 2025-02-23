@@ -4,9 +4,5 @@
   "title": "Minimum Total Distance Traveled",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Sorting"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Sorting"]
 }

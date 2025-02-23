@@ -4,8 +4,5 @@
   "title": "Number of 1 Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Divide and Conquer",
-    "Bit Manipulation"
-  ]
+  "tags": ["Divide and Conquer", "Bit Manipulation"]
 }

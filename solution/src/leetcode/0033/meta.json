@@ -4,8 +4,5 @@
   "title": "Search in Rotated Sorted Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search"
-  ]
+  "tags": ["Array", "Binary Search"]
 }

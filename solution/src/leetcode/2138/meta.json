@@ -4,8 +4,5 @@
   "title": "Divide a String Into Groups of Size k",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

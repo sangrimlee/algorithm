@@ -4,9 +4,5 @@
   "title": "Find Valid Pair of Adjacent Digits in String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Counting"]
 }

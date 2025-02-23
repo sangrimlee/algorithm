@@ -4,9 +4,5 @@
   "title": "Super Ugly Number",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Math", "Dynamic Programming"]
 }

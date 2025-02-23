@@ -4,9 +4,5 @@
   "title": "Make a Square with the Same Color",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Matrix",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Matrix", "Enumeration"]
 }

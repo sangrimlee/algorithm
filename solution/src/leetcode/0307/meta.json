@@ -4,10 +4,5 @@
   "title": "Range Sum Query - Mutable",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Design",
-    "Binary Indexed Tree",
-    "Segment Tree"
-  ]
+  "tags": ["Array", "Design", "Binary Indexed Tree", "Segment Tree"]
 }

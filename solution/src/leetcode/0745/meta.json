@@ -4,11 +4,5 @@
   "title": "Prefix and Suffix Search",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Design",
-    "Trie"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Design", "Trie"]
 }

@@ -4,8 +4,5 @@
   "title": "Find the Minimum Area to Cover All Ones I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Matrix"
-  ]
+  "tags": ["Array", "Matrix"]
 }

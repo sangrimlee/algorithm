@@ -4,8 +4,5 @@
   "title": "Maximum Number of K-Divisible Components",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Tree",
-    "Depth-First Search"
-  ]
+  "tags": ["Tree", "Depth-First Search"]
 }

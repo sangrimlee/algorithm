@@ -4,8 +4,5 @@
   "title": "Distribute Candies to People",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Math", "Simulation"]
 }

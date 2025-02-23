@@ -4,9 +4,5 @@
   "title": "Number of Recent Calls",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Design",
-    "Queue",
-    "Data Stream"
-  ]
+  "tags": ["Design", "Queue", "Data Stream"]
 }

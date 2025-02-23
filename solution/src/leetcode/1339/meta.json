@@ -4,9 +4,5 @@
   "title": "Maximum Product of Splitted Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Tree", "Depth-First Search", "Binary Tree"]
 }

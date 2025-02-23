@@ -4,7 +4,5 @@
   "title": "Defanging an IP Address",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

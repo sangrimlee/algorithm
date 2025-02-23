@@ -4,10 +4,5 @@
   "title": "Count Primes",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Math",
-    "Enumeration",
-    "Number Theory"
-  ]
+  "tags": ["Array", "Math", "Enumeration", "Number Theory"]
 }

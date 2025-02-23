@@ -4,9 +4,5 @@
   "title": "Queens That Can Attack the King",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Matrix",
-    "Simulation"
-  ]
+  "tags": ["Array", "Matrix", "Simulation"]
 }

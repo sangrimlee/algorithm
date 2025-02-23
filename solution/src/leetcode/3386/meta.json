@@ -4,7 +4,5 @@
   "title": "Button with Longest Push Time",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array"
-  ]
+  "tags": ["Array"]
 }

@@ -4,8 +4,5 @@
   "title": "Transformed Array",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Simulation"
-  ]
+  "tags": ["Array", "Simulation"]
 }

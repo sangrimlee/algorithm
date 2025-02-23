@@ -4,9 +4,5 @@
   "title": "Poor Pigs",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Math",
-    "Dynamic Programming",
-    "Combinatorics"
-  ]
+  "tags": ["Math", "Dynamic Programming", "Combinatorics"]
 }

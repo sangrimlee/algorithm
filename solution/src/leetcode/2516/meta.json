@@ -4,9 +4,5 @@
   "title": "Take K of Each Character From Left and Right",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "String", "Sliding Window"]
 }

@@ -4,8 +4,5 @@
   "title": "Rings and Rods",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

@@ -4,8 +4,5 @@
   "title": "Determine if String Halves Are Alike",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Counting"
-  ]
+  "tags": ["String", "Counting"]
 }

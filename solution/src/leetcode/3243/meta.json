@@ -4,9 +4,5 @@
   "title": "Shortest Distance After Road Addition Queries I",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Breadth-First Search",
-    "Graph"
-  ]
+  "tags": ["Array", "Breadth-First Search", "Graph"]
 }

@@ -4,8 +4,5 @@
   "title": "Check if the Sentence Is Pangram",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

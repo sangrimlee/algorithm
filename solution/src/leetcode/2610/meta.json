@@ -4,8 +4,5 @@
   "title": "Convert an Array Into a 2D Array With Conditions",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table"
-  ]
+  "tags": ["Array", "Hash Table"]
 }

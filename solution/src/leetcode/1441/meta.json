@@ -4,9 +4,5 @@
   "title": "Build an Array With Stack Operations",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Stack",
-    "Simulation"
-  ]
+  "tags": ["Array", "Stack", "Simulation"]
 }

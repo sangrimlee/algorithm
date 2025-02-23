@@ -4,7 +4,5 @@
   "title": "Longest Uncommon Subsequence I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

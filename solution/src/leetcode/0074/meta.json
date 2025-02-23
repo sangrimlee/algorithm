@@ -4,9 +4,5 @@
   "title": "Search a 2D Matrix",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Matrix"
-  ]
+  "tags": ["Array", "Binary Search", "Matrix"]
 }

@@ -4,10 +4,5 @@
   "title": "Find the Longest Substring Containing Vowels in Even Counts",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Bit Manipulation",
-    "Prefix Sum"
-  ]
+  "tags": ["Hash Table", "String", "Bit Manipulation", "Prefix Sum"]
 }

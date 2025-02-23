@@ -4,9 +4,5 @@
   "title": "Count Special Quadruplets",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Enumeration"
-  ]
+  "tags": ["Array", "Hash Table", "Enumeration"]
 }

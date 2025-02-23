@@ -4,9 +4,5 @@
   "title": "Implement Queue using Stacks",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Stack",
-    "Design",
-    "Queue"
-  ]
+  "tags": ["Stack", "Design", "Queue"]
 }

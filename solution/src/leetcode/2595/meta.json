@@ -4,7 +4,5 @@
   "title": "Number of Even and Odd Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Bit Manipulation"
-  ]
+  "tags": ["Bit Manipulation"]
 }

@@ -4,9 +4,5 @@
   "title": "Type of Triangle",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Sorting"
-  ]
+  "tags": ["Array", "Math", "Sorting"]
 }

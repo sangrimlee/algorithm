@@ -4,7 +4,5 @@
   "title": "K Inverse Pairs Array",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming"
-  ]
+  "tags": ["Dynamic Programming"]
 }

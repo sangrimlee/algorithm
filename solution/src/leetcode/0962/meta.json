@@ -4,10 +4,5 @@
   "title": "Maximum Width Ramp",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Two Pointers", "Stack", "Monotonic Stack"]
 }

@@ -4,10 +4,5 @@
   "title": "Maximum Subsequence Score",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"]
 }

@@ -4,8 +4,5 @@
   "title": "Count Square Sum Triples",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Enumeration"
-  ]
+  "tags": ["Math", "Enumeration"]
 }

@@ -4,9 +4,5 @@
   "title": "Check If a Word Occurs As a Prefix of Any Word in a Sentence",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "String Matching"
-  ]
+  "tags": ["Two Pointers", "String", "String Matching"]
 }

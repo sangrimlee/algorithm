@@ -4,10 +4,5 @@
   "title": "Create Binary Tree From Descriptions",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Tree",
-    "Binary Tree"
-  ]
+  "tags": ["Array", "Hash Table", "Tree", "Binary Tree"]
 }

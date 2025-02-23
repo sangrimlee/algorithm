@@ -4,9 +4,5 @@
   "title": "Longest Consecutive Sequence",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Union Find"
-  ]
+  "tags": ["Array", "Hash Table", "Union Find"]
 }

@@ -4,8 +4,5 @@
   "title": "Divide Two Integers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Bit Manipulation"
-  ]
+  "tags": ["Math", "Bit Manipulation"]
 }

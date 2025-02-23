@@ -4,9 +4,5 @@
   "title": "Longest Subarray of 1's After Deleting One Element",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Sliding Window"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Sliding Window"]
 }

@@ -4,8 +4,5 @@
   "title": "Smallest Number With All Set Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Bit Manipulation"
-  ]
+  "tags": ["Math", "Bit Manipulation"]
 }

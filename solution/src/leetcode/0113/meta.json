@@ -4,10 +4,5 @@
   "title": "Path Sum II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Backtracking",
-    "Tree",
-    "Depth-First Search",
-    "Binary Tree"
-  ]
+  "tags": ["Backtracking", "Tree", "Depth-First Search", "Binary Tree"]
 }

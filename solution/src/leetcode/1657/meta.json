@@ -4,10 +4,5 @@
   "title": "Determine if Two Strings Are Close",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sorting",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Sorting", "Counting"]
 }

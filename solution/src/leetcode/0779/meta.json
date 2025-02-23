@@ -4,9 +4,5 @@
   "title": "K-th Symbol in Grammar",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Bit Manipulation",
-    "Recursion"
-  ]
+  "tags": ["Math", "Bit Manipulation", "Recursion"]
 }

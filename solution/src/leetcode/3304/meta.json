@@ -4,10 +4,5 @@
   "title": "Find the K-th Character in String Game I",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Bit Manipulation",
-    "Recursion",
-    "Simulation"
-  ]
+  "tags": ["Math", "Bit Manipulation", "Recursion", "Simulation"]
 }

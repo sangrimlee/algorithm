@@ -4,9 +4,5 @@
   "title": "Sum of All Odd Length Subarrays",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Math", "Prefix Sum"]
 }

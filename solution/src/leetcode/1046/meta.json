@@ -4,8 +4,5 @@
   "title": "Last Stone Weight",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Heap (Priority Queue)"]
 }

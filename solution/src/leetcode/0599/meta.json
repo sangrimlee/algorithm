@@ -4,9 +4,5 @@
   "title": "Minimum Index Sum of Two Lists",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Array", "Hash Table", "String"]
 }

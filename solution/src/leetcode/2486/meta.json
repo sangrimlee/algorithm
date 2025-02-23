@@ -4,9 +4,5 @@
   "title": "Append Characters to String to Make Subsequence",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Two Pointers", "String", "Greedy"]
 }

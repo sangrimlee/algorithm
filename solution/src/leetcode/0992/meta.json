@@ -4,10 +4,5 @@
   "title": "Subarrays with K Different Integers",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sliding Window",
-    "Counting"
-  ]
+  "tags": ["Array", "Hash Table", "Sliding Window", "Counting"]
 }

@@ -4,11 +4,5 @@
   "title": "Jump Game VI",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Queue",
-    "Heap (Priority Queue)",
-    "Monotonic Queue"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Queue", "Heap (Priority Queue)", "Monotonic Queue"]
 }

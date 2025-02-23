@@ -4,9 +4,5 @@
   "title": "Bitwise XOR of All Pairings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Bit Manipulation",
-    "Brainteaser"
-  ]
+  "tags": ["Array", "Bit Manipulation", "Brainteaser"]
 }

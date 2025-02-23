@@ -4,12 +4,5 @@
   "title": "My Calendar II",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Design",
-    "Segment Tree",
-    "Prefix Sum",
-    "Ordered Set"
-  ]
+  "tags": ["Array", "Binary Search", "Design", "Segment Tree", "Prefix Sum", "Ordered Set"]
 }

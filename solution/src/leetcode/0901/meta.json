@@ -4,10 +4,5 @@
   "title": "Online Stock Span",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Stack",
-    "Design",
-    "Monotonic Stack",
-    "Data Stream"
-  ]
+  "tags": ["Stack", "Design", "Monotonic Stack", "Data Stream"]
 }

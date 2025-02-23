@@ -4,7 +4,5 @@
   "title": "Capitalize the Title",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String"
-  ]
+  "tags": ["String"]
 }

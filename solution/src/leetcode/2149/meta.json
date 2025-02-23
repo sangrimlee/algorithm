@@ -4,9 +4,5 @@
   "title": "Rearrange Array Elements by Sign",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Simulation"
-  ]
+  "tags": ["Array", "Two Pointers", "Simulation"]
 }

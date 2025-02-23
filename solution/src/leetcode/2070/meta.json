@@ -4,9 +4,5 @@
   "title": "Most Beautiful Item for Each Query",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Sorting"
-  ]
+  "tags": ["Array", "Binary Search", "Sorting"]
 }

@@ -4,10 +4,5 @@
   "title": "Find the Length of the Longest Common Prefix",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "String",
-    "Trie"
-  ]
+  "tags": ["Array", "Hash Table", "String", "Trie"]
 }

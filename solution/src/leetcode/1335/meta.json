@@ -4,8 +4,5 @@
   "title": "Minimum Difficulty of a Job Schedule",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Dynamic Programming"
-  ]
+  "tags": ["Array", "Dynamic Programming"]
 }

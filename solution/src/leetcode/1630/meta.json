@@ -4,9 +4,5 @@
   "title": "Arithmetic Subarrays",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Sorting"
-  ]
+  "tags": ["Array", "Hash Table", "Sorting"]
 }

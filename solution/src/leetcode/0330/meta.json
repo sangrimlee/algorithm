@@ -4,8 +4,5 @@
   "title": "Patching Array",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Greedy"
-  ]
+  "tags": ["Array", "Greedy"]
 }

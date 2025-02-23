@@ -4,9 +4,5 @@
   "title": "Minimum Falling Path Sum",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Dynamic Programming",
-    "Matrix"
-  ]
+  "tags": ["Array", "Dynamic Programming", "Matrix"]
 }

@@ -4,8 +4,5 @@
   "title": "Pow(x, n)",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Recursion"
-  ]
+  "tags": ["Math", "Recursion"]
 }

@@ -4,9 +4,5 @@
   "title": "Power of Four",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Bit Manipulation",
-    "Recursion"
-  ]
+  "tags": ["Math", "Bit Manipulation", "Recursion"]
 }

@@ -4,9 +4,5 @@
   "title": "Removing Stars From a String",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Stack",
-    "Simulation"
-  ]
+  "tags": ["String", "Stack", "Simulation"]
 }

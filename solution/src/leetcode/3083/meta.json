@@ -4,8 +4,5 @@
   "title": "Existence of a Substring in a String and Its Reverse",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "String"
-  ]
+  "tags": ["Hash Table", "String"]
 }

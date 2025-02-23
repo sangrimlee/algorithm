@@ -4,8 +4,5 @@
   "title": "Rectangle Area",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math",
-    "Geometry"
-  ]
+  "tags": ["Math", "Geometry"]
 }

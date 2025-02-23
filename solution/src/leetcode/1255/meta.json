@@ -4,12 +4,5 @@
   "title": "Maximum Score Words Formed by Letters",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "String",
-    "Dynamic Programming",
-    "Backtracking",
-    "Bit Manipulation",
-    "Bitmask"
-  ]
+  "tags": ["Array", "String", "Dynamic Programming", "Backtracking", "Bit Manipulation", "Bitmask"]
 }

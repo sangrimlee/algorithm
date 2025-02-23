@@ -4,10 +4,5 @@
   "title": "Magic Squares In Grid",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Math",
-    "Matrix"
-  ]
+  "tags": ["Array", "Hash Table", "Math", "Matrix"]
 }

@@ -4,8 +4,5 @@
   "title": "Count of Matches in Tournament",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Math", "Simulation"]
 }

@@ -4,10 +4,5 @@
   "title": "Prime In Diagonal",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Matrix",
-    "Number Theory"
-  ]
+  "tags": ["Array", "Math", "Matrix", "Number Theory"]
 }

@@ -4,10 +4,5 @@
   "title": "Construct K Palindrome Strings",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Greedy",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Greedy", "Counting"]
 }

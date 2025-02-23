@@ -4,9 +4,5 @@
   "title": "Separate Black and White Balls",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Two Pointers",
-    "String",
-    "Greedy"
-  ]
+  "tags": ["Two Pointers", "String", "Greedy"]
 }

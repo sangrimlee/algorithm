@@ -4,9 +4,5 @@
   "title": "Cells with Odd Values in a Matrix",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Math",
-    "Simulation"
-  ]
+  "tags": ["Array", "Math", "Simulation"]
 }

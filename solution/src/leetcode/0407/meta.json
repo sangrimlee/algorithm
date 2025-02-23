@@ -4,10 +4,5 @@
   "title": "Trapping Rain Water II",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Breadth-First Search",
-    "Heap (Priority Queue)",
-    "Matrix"
-  ]
+  "tags": ["Array", "Breadth-First Search", "Heap (Priority Queue)", "Matrix"]
 }

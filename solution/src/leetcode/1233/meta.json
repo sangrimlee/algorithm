@@ -4,10 +4,5 @@
   "title": "Remove Sub-Folders from the Filesystem",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "String",
-    "Depth-First Search",
-    "Trie"
-  ]
+  "tags": ["Array", "String", "Depth-First Search", "Trie"]
 }

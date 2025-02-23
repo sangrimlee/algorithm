@@ -4,9 +4,5 @@
   "title": "Find the XOR of Numbers Which Appear Twice",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Hash Table",
-    "Bit Manipulation"
-  ]
+  "tags": ["Array", "Hash Table", "Bit Manipulation"]
 }

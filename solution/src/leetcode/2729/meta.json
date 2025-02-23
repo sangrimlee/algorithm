@@ -4,8 +4,5 @@
   "title": "Check if The Number is Fascinating",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Hash Table",
-    "Math"
-  ]
+  "tags": ["Hash Table", "Math"]
 }

@@ -4,8 +4,5 @@
   "title": "Insertion Sort List",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Linked List",
-    "Sorting"
-  ]
+  "tags": ["Linked List", "Sorting"]
 }

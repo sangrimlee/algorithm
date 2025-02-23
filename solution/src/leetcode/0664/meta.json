@@ -4,8 +4,5 @@
   "title": "Strange Printer",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "String",
-    "Dynamic Programming"
-  ]
+  "tags": ["String", "Dynamic Programming"]
 }

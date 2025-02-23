@@ -4,8 +4,5 @@
   "title": "Maximum Nesting Depth of the Parentheses",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Stack"
-  ]
+  "tags": ["String", "Stack"]
 }

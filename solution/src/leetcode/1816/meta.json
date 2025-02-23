@@ -4,8 +4,5 @@
   "title": "Truncate Sentence",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "String"
-  ]
+  "tags": ["Array", "String"]
 }

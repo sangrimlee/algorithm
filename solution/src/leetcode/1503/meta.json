@@ -4,9 +4,5 @@
   "title": "Last Moment Before All Ants Fall Out of a Plank",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Brainteaser",
-    "Simulation"
-  ]
+  "tags": ["Array", "Brainteaser", "Simulation"]
 }

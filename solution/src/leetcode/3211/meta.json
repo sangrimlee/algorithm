@@ -4,9 +4,5 @@
   "title": "Generate Binary Strings Without Adjacent Zeros",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Backtracking",
-    "Bit Manipulation"
-  ]
+  "tags": ["String", "Backtracking", "Bit Manipulation"]
 }

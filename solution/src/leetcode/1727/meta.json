@@ -4,10 +4,5 @@
   "title": "Largest Submatrix With Rearrangements",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting",
-    "Matrix"
-  ]
+  "tags": ["Array", "Greedy", "Sorting", "Matrix"]
 }

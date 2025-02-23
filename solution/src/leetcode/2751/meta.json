@@ -4,10 +4,5 @@
   "title": "Robot Collisions",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Stack",
-    "Sorting",
-    "Simulation"
-  ]
+  "tags": ["Array", "Stack", "Sorting", "Simulation"]
 }

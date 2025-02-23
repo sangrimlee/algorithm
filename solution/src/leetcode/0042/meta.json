@@ -4,11 +4,5 @@
   "title": "Trapping Rain Water",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Two Pointers",
-    "Dynamic Programming",
-    "Stack",
-    "Monotonic Stack"
-  ]
+  "tags": ["Array", "Two Pointers", "Dynamic Programming", "Stack", "Monotonic Stack"]
 }

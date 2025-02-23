@@ -4,10 +4,5 @@
   "title": "Find Polygon With the Largest Perimeter",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Sorting",
-    "Prefix Sum"
-  ]
+  "tags": ["Array", "Greedy", "Sorting", "Prefix Sum"]
 }

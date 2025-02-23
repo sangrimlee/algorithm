@@ -4,10 +4,5 @@
   "title": "Unique Paths III",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Backtracking",
-    "Bit Manipulation",
-    "Matrix"
-  ]
+  "tags": ["Array", "Backtracking", "Bit Manipulation", "Matrix"]
 }

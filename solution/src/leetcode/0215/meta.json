@@ -4,11 +4,5 @@
   "title": "Kth Largest Element in an Array",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Divide and Conquer",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Quickselect"
-  ]
+  "tags": ["Array", "Divide and Conquer", "Sorting", "Heap (Priority Queue)", "Quickselect"]
 }

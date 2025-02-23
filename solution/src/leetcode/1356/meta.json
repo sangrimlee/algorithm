@@ -4,10 +4,5 @@
   "title": "Sort Integers by The Number of 1 Bits",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Array",
-    "Bit Manipulation",
-    "Sorting",
-    "Counting"
-  ]
+  "tags": ["Array", "Bit Manipulation", "Sorting", "Counting"]
 }

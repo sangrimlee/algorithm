@@ -4,12 +4,5 @@
   "title": "Sort Characters By Frequency",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sorting",
-    "Heap (Priority Queue)",
-    "Bucket Sort",
-    "Counting"
-  ]
+  "tags": ["Hash Table", "String", "Sorting", "Heap (Priority Queue)", "Bucket Sort", "Counting"]
 }

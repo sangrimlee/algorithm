@@ -4,8 +4,5 @@
   "title": "Minimum Limit of Balls in a Bag",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search"
-  ]
+  "tags": ["Array", "Binary Search"]
 }

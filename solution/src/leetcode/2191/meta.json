@@ -4,8 +4,5 @@
   "title": "Sort the Jumbled Numbers",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Sorting"
-  ]
+  "tags": ["Array", "Sorting"]
 }

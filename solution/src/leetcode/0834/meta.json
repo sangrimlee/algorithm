@@ -4,10 +4,5 @@
   "title": "Sum of Distances in Tree",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Dynamic Programming",
-    "Tree",
-    "Depth-First Search",
-    "Graph"
-  ]
+  "tags": ["Dynamic Programming", "Tree", "Depth-First Search", "Graph"]
 }

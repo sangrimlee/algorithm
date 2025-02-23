@@ -4,10 +4,5 @@
   "title": "Maximum Beauty of an Array After Applying Operation",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Sliding Window",
-    "Sorting"
-  ]
+  "tags": ["Array", "Binary Search", "Sliding Window", "Sorting"]
 }

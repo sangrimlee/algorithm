@@ -4,7 +4,5 @@
   "title": "Factorial Trailing Zeroes",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Math"
-  ]
+  "tags": ["Math"]
 }

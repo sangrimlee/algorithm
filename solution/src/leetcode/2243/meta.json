@@ -4,8 +4,5 @@
   "title": "Calculate Digit Sum of a String",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Simulation"
-  ]
+  "tags": ["String", "Simulation"]
 }

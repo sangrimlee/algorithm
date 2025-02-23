@@ -4,8 +4,5 @@
   "title": "Determine Color of a Chessboard Square",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "Math",
-    "String"
-  ]
+  "tags": ["Math", "String"]
 }

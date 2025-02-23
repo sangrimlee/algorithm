@@ -4,9 +4,5 @@
   "title": "Furthest Building You Can Reach",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Array",
-    "Greedy",
-    "Heap (Priority Queue)"
-  ]
+  "tags": ["Array", "Greedy", "Heap (Priority Queue)"]
 }

@@ -4,10 +4,5 @@
   "title": "Maximize the Confusion of an Exam",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "String",
-    "Binary Search",
-    "Sliding Window",
-    "Prefix Sum"
-  ]
+  "tags": ["String", "Binary Search", "Sliding Window", "Prefix Sum"]
 }

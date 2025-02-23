@@ -4,9 +4,5 @@
   "title": "Longest Substring Without Repeating Characters",
   "category": "Algorithms",
   "difficulty": "Medium",
-  "tags": [
-    "Hash Table",
-    "String",
-    "Sliding Window"
-  ]
+  "tags": ["Hash Table", "String", "Sliding Window"]
 }

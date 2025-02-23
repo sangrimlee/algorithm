@@ -4,8 +4,5 @@
   "title": "Furthest Point From Origin",
   "category": "Algorithms",
   "difficulty": "Easy",
-  "tags": [
-    "String",
-    "Counting"
-  ]
+  "tags": ["String", "Counting"]
 }

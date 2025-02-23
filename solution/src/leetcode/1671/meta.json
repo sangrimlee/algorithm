@@ -4,10 +4,5 @@
   "title": "Minimum Number of Removals to Make Mountain Array",
   "category": "Algorithms",
   "difficulty": "Hard",
-  "tags": [
-    "Array",
-    "Binary Search",
-    "Dynamic Programming",
-    "Greedy"
-  ]
+  "tags": ["Array", "Binary Search", "Dynamic Programming", "Greedy"]
 }
