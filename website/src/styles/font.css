@@ -1,17 +1,6 @@
-:root {
-  --default-font-family: var(--font-noto-sans);
-  --default-mono-font-family: var(--font-noto-sans-mono);
-}
-
 @theme {
-  --font-sans:
-    var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: var(--font-noto-serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-mono:
-    var(--font-noto-sans-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
-  --font-logo:
-    var(--font-poppins), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-sans: var(--font-noto-sans);
+  --font-serif: var(--font-noto-serif);
+  --font-mono: var(--font-noto-sans-mono);
+  --font-logo: var(--font-poppins);
 }

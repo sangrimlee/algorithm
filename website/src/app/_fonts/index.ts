@@ -5,6 +5,7 @@ export const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
 export const notoSansKR = Noto_Sans_KR({
@@ -12,6 +13,7 @@ export const notoSansKR = Noto_Sans_KR({
   display: 'swap',
   preload: true,
   variable: '--font-noto-sans',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
 export const notoSerifKR = Noto_Serif_KR({
@@ -19,6 +21,7 @@ export const notoSerifKR = Noto_Serif_KR({
   display: 'swap',
   preload: true,
   variable: '--font-noto-serif',
+  fallback: ['ui-serif', 'Georgia', 'Cambria', "'Times New Roman'", 'Times', 'serif'],
 });
 
 export const notoSansMono = Noto_Sans_Mono({
@@ -26,4 +29,14 @@ export const notoSansMono = Noto_Sans_Mono({
   display: 'swap',
   preload: true,
   variable: '--font-noto-sans-mono',
+  fallback: [
+    'ui-monospace',
+    'SFMono-Regular',
+    'Menlo',
+    'Monaco',
+    'Consolas',
+    "'Liberation Mono'",
+    "'Courier New'",
+    'monospace',
+  ],
 });
