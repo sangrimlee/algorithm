@@ -1,6 +1,6 @@
 {
   "id": "2516",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/take-k-of-each-character-from-left-and-right",
+  "url": "https://leetcode.com/problems/take-k-of-each-character-from-left-and-right",
   "title": "Take K of Each Character From Left and Right",
   "category": "Algorithms",
   "difficulty": "Medium",

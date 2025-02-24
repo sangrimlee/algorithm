@@ -1,6 +1,6 @@
 {
   "id": "2980",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-bitwise-or-has-trailing-zeros",
+  "url": "https://leetcode.com/problems/check-if-bitwise-or-has-trailing-zeros",
   "title": "Check if Bitwise OR Has Trailing Zeros",
   "category": "Algorithms",
   "difficulty": "Easy",

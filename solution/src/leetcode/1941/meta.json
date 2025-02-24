@@ -1,6 +1,6 @@
 {
   "id": "1941",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-all-characters-have-equal-number-of-occurrences",
+  "url": "https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences",
   "title": "Check if All Characters Have Equal Number of Occurrences",
   "category": "Algorithms",
   "difficulty": "Easy",

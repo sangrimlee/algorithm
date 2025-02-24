@@ -1,6 +1,6 @@
 {
   "id": "1382",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/balance-a-binary-search-tree",
+  "url": "https://leetcode.com/problems/balance-a-binary-search-tree",
   "title": "Balance a Binary Search Tree",
   "category": "Algorithms",
   "difficulty": "Medium",

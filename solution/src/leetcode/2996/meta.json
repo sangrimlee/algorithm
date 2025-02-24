@@ -1,6 +1,6 @@
 {
   "id": "2996",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/smallest-missing-integer-greater-than-sequential-prefix-sum",
+  "url": "https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum",
   "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
   "category": "Algorithms",
   "difficulty": "Easy",

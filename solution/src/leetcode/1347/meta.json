@@ -1,6 +1,6 @@
 {
   "id": "1347",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-steps-to-make-two-strings-anagram",
+  "url": "https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram",
   "title": "Minimum Number of Steps to Make Two Strings Anagram",
   "category": "Algorithms",
   "difficulty": "Medium",

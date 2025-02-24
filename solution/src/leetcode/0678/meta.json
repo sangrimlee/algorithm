@@ -1,6 +1,6 @@
 {
   "id": "678",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/valid-parenthesis-string",
+  "url": "https://leetcode.com/problems/valid-parenthesis-string",
   "title": "Valid Parenthesis String",
   "category": "Algorithms",
   "difficulty": "Medium",

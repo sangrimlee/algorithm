@@ -1,6 +1,6 @@
 {
   "id": "1332",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-palindromic-subsequences",
+  "url": "https://leetcode.com/problems/remove-palindromic-subsequences",
   "title": "Remove Palindromic Subsequences",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "1679",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/max-number-of-k-sum-pairs",
+  "url": "https://leetcode.com/problems/max-number-of-k-sum-pairs",
   "title": "Max Number of K-Sum Pairs",
   "category": "Algorithms",
   "difficulty": "Medium",

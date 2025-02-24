@@ -1,6 +1,6 @@
 {
   "id": "56",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/merge-intervals",
+  "url": "https://leetcode.com/problems/merge-intervals",
   "title": "Merge Intervals",
   "category": "Algorithms",
   "difficulty": "Medium",

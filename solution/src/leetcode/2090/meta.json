@@ -1,6 +1,6 @@
 {
   "id": "2090",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/k-radius-subarray-averages",
+  "url": "https://leetcode.com/problems/k-radius-subarray-averages",
   "title": "K Radius Subarray Averages",
   "category": "Algorithms",
   "difficulty": "Medium",

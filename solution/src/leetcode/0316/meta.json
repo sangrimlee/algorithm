@@ -1,6 +1,6 @@
 {
   "id": "316",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-duplicate-letters",
+  "url": "https://leetcode.com/problems/remove-duplicate-letters",
   "title": "Remove Duplicate Letters",
   "category": "Algorithms",
   "difficulty": "Medium",

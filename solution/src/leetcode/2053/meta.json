@@ -1,6 +1,6 @@
 {
   "id": "2053",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/kth-distinct-string-in-an-array",
+  "url": "https://leetcode.com/problems/kth-distinct-string-in-an-array",
   "title": "Kth Distinct String in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "2625",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/flatten-deeply-nested-array",
+  "url": "https://leetcode.com/problems/flatten-deeply-nested-array",
   "title": "Flatten Deeply Nested Array",
   "category": "JavaScript",
   "difficulty": "Medium",

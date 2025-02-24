@@ -1,6 +1,6 @@
 {
   "id": "3402",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-operations-to-make-columns-strictly-increasing",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing",
   "title": "Minimum Operations to Make Columns Strictly Increasing",
   "category": "Algorithms",
   "difficulty": "Easy",

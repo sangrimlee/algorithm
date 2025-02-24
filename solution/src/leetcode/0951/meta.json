@@ -1,6 +1,6 @@
 {
   "id": "951",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/flip-equivalent-binary-trees",
+  "url": "https://leetcode.com/problems/flip-equivalent-binary-trees",
   "title": "Flip Equivalent Binary Trees",
   "category": "Algorithms",
   "difficulty": "Medium",

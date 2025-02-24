@@ -1,6 +1,6 @@
 {
   "id": "1784",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-binary-string-has-at-most-one-segment-of-ones",
+  "url": "https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones",
   "title": "Check if Binary String Has at Most One Segment of Ones",
   "category": "Algorithms",
   "difficulty": "Easy",

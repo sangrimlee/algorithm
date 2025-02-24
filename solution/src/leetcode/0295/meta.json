@@ -1,6 +1,6 @@
 {
   "id": "295",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-median-from-data-stream",
+  "url": "https://leetcode.com/problems/find-median-from-data-stream",
   "title": "Find Median from Data Stream",
   "category": "Algorithms",
   "difficulty": "Hard",

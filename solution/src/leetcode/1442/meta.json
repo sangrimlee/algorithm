@@ -1,6 +1,6 @@
 {
   "id": "1442",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-triplets-that-can-form-two-arrays-of-equal-xor",
+  "url": "https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor",
   "title": "Count Triplets That Can Form Two Arrays of Equal XOR",
   "category": "Algorithms",
   "difficulty": "Medium",

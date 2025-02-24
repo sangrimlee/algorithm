@@ -1,6 +1,6 @@
 {
   "id": "1995",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-special-quadruplets",
+  "url": "https://leetcode.com/problems/count-special-quadruplets",
   "title": "Count Special Quadruplets",
   "category": "Algorithms",
   "difficulty": "Easy",

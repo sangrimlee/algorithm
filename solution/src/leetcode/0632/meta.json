@@ -1,6 +1,6 @@
 {
   "id": "632",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/smallest-range-covering-elements-from-k-lists",
+  "url": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists",
   "title": "Smallest Range Covering Elements from K Lists",
   "category": "Algorithms",
   "difficulty": "Hard",

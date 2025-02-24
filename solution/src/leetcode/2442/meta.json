@@ -1,6 +1,6 @@
 {
   "id": "2442",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-distinct-integers-after-reverse-operations",
+  "url": "https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations",
   "title": "Count Number of Distinct Integers After Reverse Operations",
   "category": "Algorithms",
   "difficulty": "Medium",

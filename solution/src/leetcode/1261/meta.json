@@ -1,6 +1,6 @@
 {
   "id": "1261",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-elements-in-a-contaminated-binary-tree",
+  "url": "https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree",
   "title": "Find Elements in a Contaminated Binary Tree",
   "category": "Algorithms",
   "difficulty": "Medium",

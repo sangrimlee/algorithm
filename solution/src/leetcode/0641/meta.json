@@ -1,6 +1,6 @@
 {
   "id": "641",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/design-circular-deque",
+  "url": "https://leetcode.com/problems/design-circular-deque",
   "title": "Design Circular Deque",
   "category": "Algorithms",
   "difficulty": "Medium",

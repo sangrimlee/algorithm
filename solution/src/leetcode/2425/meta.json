@@ -1,6 +1,6 @@
 {
   "id": "2425",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/bitwise-xor-of-all-pairings",
+  "url": "https://leetcode.com/problems/bitwise-xor-of-all-pairings",
   "title": "Bitwise XOR of All Pairings",
   "category": "Algorithms",
   "difficulty": "Medium",

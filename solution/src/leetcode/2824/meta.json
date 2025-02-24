@@ -1,6 +1,6 @@
 {
   "id": "2824",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-pairs-whose-sum-is-less-than-target",
+  "url": "https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target",
   "title": "Count Pairs Whose Sum is Less than Target",
   "category": "Algorithms",
   "difficulty": "Easy",

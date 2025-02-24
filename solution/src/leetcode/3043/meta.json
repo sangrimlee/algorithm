@@ -1,6 +1,6 @@
 {
   "id": "3043",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-length-of-the-longest-common-prefix",
+  "url": "https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix",
   "title": "Find the Length of the Longest Common Prefix",
   "category": "Algorithms",
   "difficulty": "Medium",

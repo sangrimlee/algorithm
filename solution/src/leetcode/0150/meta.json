@@ -1,6 +1,6 @@
 {
   "id": "150",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/evaluate-reverse-polish-notation",
+  "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation",
   "title": "Evaluate Reverse Polish Notation",
   "category": "Algorithms",
   "difficulty": "Medium",

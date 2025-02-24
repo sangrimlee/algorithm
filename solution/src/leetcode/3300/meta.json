@@ -1,6 +1,6 @@
 {
   "id": "3300",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-element-after-replacement-with-digit-sum",
+  "url": "https://leetcode.com/problems/minimum-element-after-replacement-with-digit-sum",
   "title": "Minimum Element After Replacement With Digit Sum",
   "category": "Algorithms",
   "difficulty": "Easy",

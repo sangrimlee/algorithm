@@ -1,6 +1,6 @@
 {
   "id": "19",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-nth-node-from-end-of-list",
+  "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list",
   "title": "Remove Nth Node From End of List",
   "category": "Algorithms",
   "difficulty": "Medium",

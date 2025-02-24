@@ -1,6 +1,6 @@
 {
   "id": "713",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/subarray-product-less-than-k",
+  "url": "https://leetcode.com/problems/subarray-product-less-than-k",
   "title": "Subarray Product Less Than K",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "2099",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-subsequence-of-length-k-with-the-largest-sum",
+  "url": "https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum",
   "title": "Find Subsequence of Length K With the Largest Sum",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "1743",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/restore-the-array-from-adjacent-pairs",
+  "url": "https://leetcode.com/problems/restore-the-array-from-adjacent-pairs",
   "title": "Restore the Array From Adjacent Pairs",
   "category": "Algorithms",
   "difficulty": "Medium",

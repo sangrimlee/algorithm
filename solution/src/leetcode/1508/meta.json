@@ -1,6 +1,6 @@
 {
   "id": "1508",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/range-sum-of-sorted-subarray-sums",
+  "url": "https://leetcode.com/problems/range-sum-of-sorted-subarray-sums",
   "title": "Range Sum of Sorted Subarray Sums",
   "category": "Algorithms",
   "difficulty": "Medium",

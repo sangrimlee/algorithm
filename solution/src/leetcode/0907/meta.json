@@ -1,6 +1,6 @@
 {
   "id": "907",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sum-of-subarray-minimums",
+  "url": "https://leetcode.com/problems/sum-of-subarray-minimums",
   "title": "Sum of Subarray Minimums",
   "category": "Algorithms",
   "difficulty": "Medium",

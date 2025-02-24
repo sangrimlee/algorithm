@@ -1,6 +1,6 @@
 {
   "id": "352",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/data-stream-as-disjoint-intervals",
+  "url": "https://leetcode.com/problems/data-stream-as-disjoint-intervals",
   "title": "Data Stream as Disjoint Intervals",
   "category": "Algorithms",
   "difficulty": "Hard",

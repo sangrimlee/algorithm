@@ -1,6 +1,6 @@
 {
   "id": "1574",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/shortest-subarray-to-be-removed-to-make-array-sorted",
+  "url": "https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted",
   "title": "Shortest Subarray to be Removed to Make Array Sorted",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "1277",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-square-submatrices-with-all-ones",
+  "url": "https://leetcode.com/problems/count-square-submatrices-with-all-ones",
   "title": "Count Square Submatrices with All Ones",
   "category": "Algorithms",
   "difficulty": "Medium",

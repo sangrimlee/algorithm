@@ -1,6 +1,6 @@
 {
   "id": "2385",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/amount-of-time-for-binary-tree-to-be-infected",
+  "url": "https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected",
   "title": "Amount of Time for Binary Tree to Be Infected",
   "category": "Algorithms",
   "difficulty": "Medium",

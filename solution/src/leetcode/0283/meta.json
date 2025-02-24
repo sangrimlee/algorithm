@@ -1,6 +1,6 @@
 {
   "id": "283",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/move-zeroes",
+  "url": "https://leetcode.com/problems/move-zeroes",
   "title": "Move Zeroes",
   "category": "Algorithms",
   "difficulty": "Easy",

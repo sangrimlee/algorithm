@@ -1,6 +1,6 @@
 {
   "id": "1593",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/split-a-string-into-the-max-number-of-unique-substrings",
+  "url": "https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings",
   "title": "Split a String Into the Max Number of Unique Substrings",
   "category": "Algorithms",
   "difficulty": "Medium",

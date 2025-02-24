@@ -1,6 +1,6 @@
 {
   "id": "1325",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/delete-leaves-with-a-given-value",
+  "url": "https://leetcode.com/problems/delete-leaves-with-a-given-value",
   "title": "Delete Leaves With a Given Value",
   "category": "Algorithms",
   "difficulty": "Medium",

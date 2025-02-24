@@ -1,6 +1,6 @@
 {
   "id": "1905",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-sub-islands",
+  "url": "https://leetcode.com/problems/count-sub-islands",
   "title": "Count Sub Islands",
   "category": "Algorithms",
   "difficulty": "Medium",

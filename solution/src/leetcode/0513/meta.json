@@ -1,6 +1,6 @@
 {
   "id": "513",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-bottom-left-tree-value",
+  "url": "https://leetcode.com/problems/find-bottom-left-tree-value",
   "title": "Find Bottom Left Tree Value",
   "category": "Algorithms",
   "difficulty": "Medium",

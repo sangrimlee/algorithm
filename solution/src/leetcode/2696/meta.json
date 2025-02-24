@@ -1,6 +1,6 @@
 {
   "id": "2696",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-string-length-after-removing-substrings",
+  "url": "https://leetcode.com/problems/minimum-string-length-after-removing-substrings",
   "title": "Minimum String Length After Removing Substrings",
   "category": "Algorithms",
   "difficulty": "Easy",

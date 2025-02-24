@@ -1,6 +1,6 @@
 {
   "id": "1750",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-length-of-string-after-deleting-similar-ends",
+  "url": "https://leetcode.com/problems/minimum-length-of-string-after-deleting-similar-ends",
   "title": "Minimum Length of String After Deleting Similar Ends",
   "category": "Algorithms",
   "difficulty": "Medium",

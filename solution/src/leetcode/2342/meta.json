@@ -1,6 +1,6 @@
 {
   "id": "2342",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/max-sum-of-a-pair-with-equal-sum-of-digits",
+  "url": "https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits",
   "title": "Max Sum of a Pair With Equal Sum of Digits",
   "category": "Algorithms",
   "difficulty": "Medium",

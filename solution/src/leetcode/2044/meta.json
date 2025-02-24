@@ -1,6 +1,6 @@
 {
   "id": "2044",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-maximum-bitwise-or-subsets",
+  "url": "https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets",
   "title": "Count Number of Maximum Bitwise-OR Subsets",
   "category": "Algorithms",
   "difficulty": "Medium",

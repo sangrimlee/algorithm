@@ -1,6 +1,6 @@
 {
   "id": "1790",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-one-string-swap-can-make-strings-equal",
+  "url": "https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal",
   "title": "Check if One String Swap Can Make Strings Equal",
   "category": "Algorithms",
   "difficulty": "Easy",

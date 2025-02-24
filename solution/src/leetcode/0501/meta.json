@@ -1,6 +1,6 @@
 {
   "id": "501",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-mode-in-binary-search-tree",
+  "url": "https://leetcode.com/problems/find-mode-in-binary-search-tree",
   "title": "Find Mode in Binary Search Tree",
   "category": "Algorithms",
   "difficulty": "Easy",

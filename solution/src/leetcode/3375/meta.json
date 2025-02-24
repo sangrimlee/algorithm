@@ -1,6 +1,6 @@
 {
   "id": "3375",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-operations-to-make-array-values-equal-to-k",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k",
   "title": "Minimum Operations to Make Array Values Equal to K",
   "category": "Algorithms",
   "difficulty": "Easy",

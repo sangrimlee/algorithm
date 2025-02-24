@@ -1,6 +1,6 @@
 {
   "id": "1638",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-substrings-that-differ-by-one-character",
+  "url": "https://leetcode.com/problems/count-substrings-that-differ-by-one-character",
   "title": "Count Substrings That Differ by One Character",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "1208",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/get-equal-substrings-within-budget",
+  "url": "https://leetcode.com/problems/get-equal-substrings-within-budget",
   "title": "Get Equal Substrings Within Budget",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "208",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/implement-trie-prefix-tree",
+  "url": "https://leetcode.com/problems/implement-trie-prefix-tree",
   "title": "Implement Trie (Prefix Tree)",
   "category": "Algorithms",
   "difficulty": "Medium",

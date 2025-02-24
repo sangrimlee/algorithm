@@ -1,6 +1,6 @@
 {
   "id": "797",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/all-paths-from-source-to-target",
+  "url": "https://leetcode.com/problems/all-paths-from-source-to-target",
   "title": "All Paths From Source to Target",
   "category": "Algorithms",
   "difficulty": "Medium",

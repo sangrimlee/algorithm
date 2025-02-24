@@ -1,6 +1,6 @@
 {
   "id": "131",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/palindrome-partitioning",
+  "url": "https://leetcode.com/problems/palindrome-partitioning",
   "title": "Palindrome Partitioning",
   "category": "Algorithms",
   "difficulty": "Medium",

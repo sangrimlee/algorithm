@@ -1,6 +1,6 @@
 {
   "id": "1061",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/lexicographically-smallest-equivalent-string",
+  "url": "https://leetcode.com/problems/lexicographically-smallest-equivalent-string",
   "title": "Lexicographically Smallest Equivalent String",
   "category": "Algorithms",
   "difficulty": "Medium",

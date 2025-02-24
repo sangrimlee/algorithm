@@ -1,6 +1,6 @@
 {
   "id": "2444",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-subarrays-with-fixed-bounds",
+  "url": "https://leetcode.com/problems/count-subarrays-with-fixed-bounds",
   "title": "Count Subarrays With Fixed Bounds",
   "category": "Algorithms",
   "difficulty": "Hard",

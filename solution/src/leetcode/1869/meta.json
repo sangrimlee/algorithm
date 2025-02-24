@@ -1,6 +1,6 @@
 {
   "id": "1869",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longer-contiguous-segments-of-ones-than-zeros",
+  "url": "https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros",
   "title": "Longer Contiguous Segments of Ones than Zeros",
   "category": "Algorithms",
   "difficulty": "Easy",

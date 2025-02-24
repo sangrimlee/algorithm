@@ -1,6 +1,6 @@
 {
   "id": "2200",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-all-k-distant-indices-in-an-array",
+  "url": "https://leetcode.com/problems/find-all-k-distant-indices-in-an-array",
   "title": "Find All K-Distant Indices in an Array",
   "category": "Algorithms",
   "difficulty": "Easy",

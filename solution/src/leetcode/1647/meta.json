@@ -1,6 +1,6 @@
 {
   "id": "1647",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-deletions-to-make-character-frequencies-unique",
+  "url": "https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique",
   "title": "Minimum Deletions to Make Character Frequencies Unique",
   "category": "Algorithms",
   "difficulty": "Medium",

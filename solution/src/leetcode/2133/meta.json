@@ -1,6 +1,6 @@
 {
   "id": "2133",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-every-row-and-column-contains-all-numbers",
+  "url": "https://leetcode.com/problems/check-if-every-row-and-column-contains-all-numbers",
   "title": "Check if Every Row and Column Contains All Numbers",
   "category": "Algorithms",
   "difficulty": "Easy",

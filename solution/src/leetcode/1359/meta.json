@@ -1,6 +1,6 @@
 {
   "id": "1359",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-all-valid-pickup-and-delivery-options",
+  "url": "https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options",
   "title": "Count All Valid Pickup and Delivery Options",
   "category": "Algorithms",
   "difficulty": "Hard",

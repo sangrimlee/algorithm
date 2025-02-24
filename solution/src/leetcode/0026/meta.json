@@ -1,6 +1,6 @@
 {
   "id": "26",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-duplicates-from-sorted-array",
+  "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array",
   "title": "Remove Duplicates from Sorted Array",
   "category": "Algorithms",
   "difficulty": "Easy",

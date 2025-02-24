@@ -1,6 +1,6 @@
 {
   "id": "785",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/is-graph-bipartite",
+  "url": "https://leetcode.com/problems/is-graph-bipartite",
   "title": "Is Graph Bipartite?",
   "category": "Algorithms",
   "difficulty": "Medium",

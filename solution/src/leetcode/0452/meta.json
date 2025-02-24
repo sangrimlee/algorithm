@@ -1,6 +1,6 @@
 {
   "id": "452",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-arrows-to-burst-balloons",
+  "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons",
   "title": "Minimum Number of Arrows to Burst Balloons",
   "category": "Algorithms",
   "difficulty": "Medium",

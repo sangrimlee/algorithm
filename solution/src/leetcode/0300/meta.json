@@ -1,6 +1,6 @@
 {
   "id": "300",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-increasing-subsequence",
+  "url": "https://leetcode.com/problems/longest-increasing-subsequence",
   "title": "Longest Increasing Subsequence",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "1002",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-common-characters",
+  "url": "https://leetcode.com/problems/find-common-characters",
   "title": "Find Common Characters",
   "category": "Algorithms",
   "difficulty": "Easy",

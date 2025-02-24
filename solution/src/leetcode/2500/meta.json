@@ -1,6 +1,6 @@
 {
   "id": "2500",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/delete-greatest-value-in-each-row",
+  "url": "https://leetcode.com/problems/delete-greatest-value-in-each-row",
   "title": "Delete Greatest Value in Each Row",
   "category": "Algorithms",
   "difficulty": "Easy",

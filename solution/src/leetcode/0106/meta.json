@@ -1,6 +1,6 @@
 {
   "id": "106",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/construct-binary-tree-from-inorder-and-postorder-traversal",
+  "url": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal",
   "title": "Construct Binary Tree from Inorder and Postorder Traversal",
   "category": "Algorithms",
   "difficulty": "Medium",

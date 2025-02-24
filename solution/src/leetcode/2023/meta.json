@@ -1,6 +1,6 @@
 {
   "id": "2023",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-pairs-of-strings-with-concatenation-equal-to-target",
+  "url": "https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target",
   "title": "Number of Pairs of Strings With Concatenation Equal to Target",
   "category": "Algorithms",
   "difficulty": "Medium",
