@@ -1,9 +1,18 @@
 @import 'tailwindcss';
 @import './font.css';
+@import './color.css';
 
 @layer base {
+  * {
+    @apply border-gray-4;
+  }
+
+  ::selection {
+    @apply bg-pink-9 text-white;
+  }
+
   html,
   body {
-    @apply antialiased;
+    @apply bg-gray-1 text-gray-12 antialiased;
   }
 }
