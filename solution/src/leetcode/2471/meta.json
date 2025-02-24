@@ -1,6 +1,6 @@
 {
   "id": "2471",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-sort-a-binary-tree-by-level",
+  "url": "https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level",
   "title": "Minimum Number of Operations to Sort a Binary Tree by Level",
   "category": "Algorithms",
   "difficulty": "Medium",

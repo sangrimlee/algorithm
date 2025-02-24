@@ -1,6 +1,6 @@
 {
   "id": "347",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/top-k-frequent-elements",
+  "url": "https://leetcode.com/problems/top-k-frequent-elements",
   "title": "Top K Frequent Elements",
   "category": "Algorithms",
   "difficulty": "Medium",

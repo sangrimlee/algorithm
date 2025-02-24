@@ -1,6 +1,6 @@
 {
   "id": "2965",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-missing-and-repeated-values",
+  "url": "https://leetcode.com/problems/find-missing-and-repeated-values",
   "title": "Find Missing and Repeated Values",
   "category": "Algorithms",
   "difficulty": "Easy",

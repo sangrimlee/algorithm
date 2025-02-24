@@ -1,6 +1,6 @@
 {
   "id": "146",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/lru-cache",
+  "url": "https://leetcode.com/problems/lru-cache",
   "title": "LRU Cache",
   "category": "Algorithms",
   "difficulty": "Medium",

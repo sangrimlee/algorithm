@@ -1,6 +1,6 @@
 {
   "id": "746",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/min-cost-climbing-stairs",
+  "url": "https://leetcode.com/problems/min-cost-climbing-stairs",
   "title": "Min Cost Climbing Stairs",
   "category": "Algorithms",
   "difficulty": "Easy",

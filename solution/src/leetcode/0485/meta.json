@@ -1,6 +1,6 @@
 {
   "id": "485",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/max-consecutive-ones",
+  "url": "https://leetcode.com/problems/max-consecutive-ones",
   "title": "Max Consecutive Ones",
   "category": "Algorithms",
   "difficulty": "Easy",

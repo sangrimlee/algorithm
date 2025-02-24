@@ -1,6 +1,6 @@
 {
   "id": "1143",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-common-subsequence",
+  "url": "https://leetcode.com/problems/longest-common-subsequence",
   "title": "Longest Common Subsequence",
   "category": "Algorithms",
   "difficulty": "Medium",

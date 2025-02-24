@@ -1,6 +1,6 @@
 {
   "id": "1110",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/delete-nodes-and-return-forest",
+  "url": "https://leetcode.com/problems/delete-nodes-and-return-forest",
   "title": "Delete Nodes And Return Forest",
   "category": "Algorithms",
   "difficulty": "Medium",

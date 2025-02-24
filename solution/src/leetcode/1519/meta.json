@@ -1,6 +1,6 @@
 {
   "id": "1519",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-nodes-in-the-sub-tree-with-the-same-label",
+  "url": "https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label",
   "title": "Number of Nodes in the Sub-Tree With the Same Label",
   "category": "Algorithms",
   "difficulty": "Medium",

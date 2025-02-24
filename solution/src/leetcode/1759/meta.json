@@ -1,6 +1,6 @@
 {
   "id": "1759",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-homogenous-substrings",
+  "url": "https://leetcode.com/problems/count-number-of-homogenous-substrings",
   "title": "Count Number of Homogenous Substrings",
   "category": "Algorithms",
   "difficulty": "Medium",

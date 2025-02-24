@@ -1,6 +1,6 @@
 {
   "id": "1769",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-operations-to-move-all-balls-to-each-box",
+  "url": "https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box",
   "title": "Minimum Number of Operations to Move All Balls to Each Box",
   "category": "Algorithms",
   "difficulty": "Medium",

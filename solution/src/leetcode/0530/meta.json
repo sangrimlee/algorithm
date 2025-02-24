@@ -1,6 +1,6 @@
 {
   "id": "530",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-absolute-difference-in-bst",
+  "url": "https://leetcode.com/problems/minimum-absolute-difference-in-bst",
   "title": "Minimum Absolute Difference in BST",
   "category": "Algorithms",
   "difficulty": "Easy",

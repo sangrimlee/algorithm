@@ -1,6 +1,6 @@
 {
   "id": "1568",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-days-to-disconnect-island",
+  "url": "https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island",
   "title": "Minimum Number of Days to Disconnect Island",
   "category": "Algorithms",
   "difficulty": "Hard",

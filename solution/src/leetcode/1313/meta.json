@@ -1,6 +1,6 @@
 {
   "id": "1313",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/decompress-run-length-encoded-list",
+  "url": "https://leetcode.com/problems/decompress-run-length-encoded-list",
   "title": "Decompress Run-Length Encoded List",
   "category": "Algorithms",
   "difficulty": "Easy",

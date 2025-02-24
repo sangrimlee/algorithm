@@ -1,6 +1,6 @@
 {
   "id": "1557",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-vertices-to-reach-all-nodes",
+  "url": "https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes",
   "title": "Minimum Number of Vertices to Reach All Nodes",
   "category": "Algorithms",
   "difficulty": "Medium",

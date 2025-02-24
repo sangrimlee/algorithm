@@ -1,6 +1,6 @@
 {
   "id": "2108",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-first-palindromic-string-in-the-array",
+  "url": "https://leetcode.com/problems/find-first-palindromic-string-in-the-array",
   "title": "Find First Palindromic String in the Array",
   "category": "Algorithms",
   "difficulty": "Easy",

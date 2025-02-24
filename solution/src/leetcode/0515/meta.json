@@ -1,6 +1,6 @@
 {
   "id": "515",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-largest-value-in-each-tree-row",
+  "url": "https://leetcode.com/problems/find-largest-value-in-each-tree-row",
   "title": "Find Largest Value in Each Tree Row",
   "category": "Algorithms",
   "difficulty": "Medium",

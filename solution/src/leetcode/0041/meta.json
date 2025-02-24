@@ -1,6 +1,6 @@
 {
   "id": "41",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/first-missing-positive",
+  "url": "https://leetcode.com/problems/first-missing-positive",
   "title": "First Missing Positive",
   "category": "Algorithms",
   "difficulty": "Hard",

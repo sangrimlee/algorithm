@@ -1,6 +1,6 @@
 {
   "id": "2124",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/check-if-all-as-appears-before-all-bs",
+  "url": "https://leetcode.com/problems/check-if-all-as-appears-before-all-bs",
   "title": "Check if All A's Appears Before All B's",
   "category": "Algorithms",
   "difficulty": "Easy",

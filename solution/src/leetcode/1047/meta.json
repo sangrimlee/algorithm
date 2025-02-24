@@ -1,6 +1,6 @@
 {
   "id": "1047",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-all-adjacent-duplicates-in-string",
+  "url": "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string",
   "title": "Remove All Adjacent Duplicates In String",
   "category": "Algorithms",
   "difficulty": "Easy",

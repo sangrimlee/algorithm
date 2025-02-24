@@ -1,6 +1,6 @@
 {
   "id": "1779",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-nearest-point-that-has-the-same-x-or-y-coordinate",
+  "url": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate",
   "title": "Find Nearest Point That Has the Same X or Y Coordinate",
   "category": "Algorithms",
   "difficulty": "Easy",

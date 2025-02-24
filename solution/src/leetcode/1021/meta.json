@@ -1,6 +1,6 @@
 {
   "id": "1021",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-outermost-parentheses",
+  "url": "https://leetcode.com/problems/remove-outermost-parentheses",
   "title": "Remove Outermost Parentheses",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "307",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/range-sum-query-mutable",
+  "url": "https://leetcode.com/problems/range-sum-query-mutable",
   "title": "Range Sum Query - Mutable",
   "category": "Algorithms",
   "difficulty": "Medium",

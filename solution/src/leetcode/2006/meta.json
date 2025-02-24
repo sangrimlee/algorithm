@@ -1,6 +1,6 @@
 {
   "id": "2006",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-number-of-pairs-with-absolute-difference-k",
+  "url": "https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k",
   "title": "Count Number of Pairs With Absolute Difference K",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "2419",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-subarray-with-maximum-bitwise-and",
+  "url": "https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and",
   "title": "Longest Subarray With Maximum Bitwise AND",
   "category": "Algorithms",
   "difficulty": "Medium",

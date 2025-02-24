@@ -1,6 +1,6 @@
 {
   "id": "93",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/restore-ip-addresses",
+  "url": "https://leetcode.com/problems/restore-ip-addresses",
   "title": "Restore IP Addresses",
   "category": "Algorithms",
   "difficulty": "Medium",

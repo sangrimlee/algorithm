@@ -1,6 +1,6 @@
 {
   "id": "1275",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-winner-on-a-tic-tac-toe-game",
+  "url": "https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game",
   "title": "Find Winner on a Tic Tac Toe Game",
   "category": "Algorithms",
   "difficulty": "Easy",

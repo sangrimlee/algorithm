@@ -1,6 +1,6 @@
 {
   "id": "2958",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/length-of-longest-subarray-with-at-most-k-frequency",
+  "url": "https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency",
   "title": "Length of Longest Subarray With at Most K Frequency",
   "category": "Algorithms",
   "difficulty": "Medium",

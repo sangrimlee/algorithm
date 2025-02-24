@@ -1,6 +1,6 @@
 {
   "id": "2331",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/evaluate-boolean-binary-tree",
+  "url": "https://leetcode.com/problems/evaluate-boolean-binary-tree",
   "title": "Evaluate Boolean Binary Tree",
   "category": "Algorithms",
   "difficulty": "Easy",

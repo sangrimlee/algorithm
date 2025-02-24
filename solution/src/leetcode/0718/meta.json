@@ -1,6 +1,6 @@
 {
   "id": "718",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-length-of-repeated-subarray",
+  "url": "https://leetcode.com/problems/maximum-length-of-repeated-subarray",
   "title": "Maximum Length of Repeated Subarray",
   "category": "Algorithms",
   "difficulty": "Medium",

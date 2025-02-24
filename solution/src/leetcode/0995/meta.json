@@ -1,6 +1,6 @@
 {
   "id": "995",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-number-of-k-consecutive-bit-flips",
+  "url": "https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips",
   "title": "Minimum Number of K Consecutive Bit Flips",
   "category": "Algorithms",
   "difficulty": "Hard",

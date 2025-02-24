@@ -1,6 +1,6 @@
 {
   "id": "2275",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/largest-combination-with-bitwise-and-greater-than-zero",
+  "url": "https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero",
   "title": "Largest Combination With Bitwise AND Greater Than Zero",
   "category": "Algorithms",
   "difficulty": "Medium",

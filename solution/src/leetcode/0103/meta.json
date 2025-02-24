@@ -1,6 +1,6 @@
 {
   "id": "103",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/binary-tree-zigzag-level-order-traversal",
+  "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal",
   "title": "Binary Tree Zigzag Level Order Traversal",
   "category": "Algorithms",
   "difficulty": "Medium",

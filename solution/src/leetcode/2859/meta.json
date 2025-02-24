@@ -1,6 +1,6 @@
 {
   "id": "2859",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sum-of-values-at-indices-with-k-set-bits",
+  "url": "https://leetcode.com/problems/sum-of-values-at-indices-with-k-set-bits",
   "title": "Sum of Values at Indices With K Set Bits",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "1863",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sum-of-all-subset-xor-totals",
+  "url": "https://leetcode.com/problems/sum-of-all-subset-xor-totals",
   "title": "Sum of All Subset XOR Totals",
   "category": "Algorithms",
   "difficulty": "Easy",

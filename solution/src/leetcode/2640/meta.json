@@ -1,6 +1,6 @@
 {
   "id": "2640",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-score-of-all-prefixes-of-an-array",
+  "url": "https://leetcode.com/problems/find-the-score-of-all-prefixes-of-an-array",
   "title": "Find the Score of All Prefixes of an Array",
   "category": "Algorithms",
   "difficulty": "Medium",

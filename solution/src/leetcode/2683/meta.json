@@ -1,6 +1,6 @@
 {
   "id": "2683",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/neighboring-bitwise-xor",
+  "url": "https://leetcode.com/problems/neighboring-bitwise-xor",
   "title": "Neighboring Bitwise XOR",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "1605",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-valid-matrix-given-row-and-column-sums",
+  "url": "https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums",
   "title": "Find Valid Matrix Given Row and Column Sums",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "2970",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-the-number-of-incremovable-subarrays-i",
+  "url": "https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-i",
   "title": "Count the Number of Incremovable Subarrays I",
   "category": "Algorithms",
   "difficulty": "Easy",

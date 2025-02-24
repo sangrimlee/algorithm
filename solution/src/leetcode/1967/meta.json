@@ -1,6 +1,6 @@
 {
   "id": "1967",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/number-of-strings-that-appear-as-substrings-in-word",
+  "url": "https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word",
   "title": "Number of Strings That Appear as Substrings in Word",
   "category": "Algorithms",
   "difficulty": "Easy",

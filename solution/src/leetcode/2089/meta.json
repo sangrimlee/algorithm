@@ -1,6 +1,6 @@
 {
   "id": "2089",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-target-indices-after-sorting-array",
+  "url": "https://leetcode.com/problems/find-target-indices-after-sorting-array",
   "title": "Find Target Indices After Sorting Array",
   "category": "Algorithms",
   "difficulty": "Easy",

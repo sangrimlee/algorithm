@@ -1,6 +1,6 @@
 {
   "id": "2255",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/count-prefixes-of-a-given-string",
+  "url": "https://leetcode.com/problems/count-prefixes-of-a-given-string",
   "title": "Count Prefixes of a Given String",
   "category": "Algorithms",
   "difficulty": "Easy",

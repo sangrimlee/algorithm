@@ -1,6 +1,6 @@
 {
   "id": "128",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-consecutive-sequence",
+  "url": "https://leetcode.com/problems/longest-consecutive-sequence",
   "title": "Longest Consecutive Sequence",
   "category": "Algorithms",
   "difficulty": "Medium",

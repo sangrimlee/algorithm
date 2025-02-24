@@ -1,6 +1,6 @@
 {
   "id": "5",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/longest-palindromic-substring",
+  "url": "https://leetcode.com/problems/longest-palindromic-substring",
   "title": "Longest Palindromic Substring",
   "category": "Algorithms",
   "difficulty": "Medium",

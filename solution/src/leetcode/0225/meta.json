@@ -1,6 +1,6 @@
 {
   "id": "225",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/implement-stack-using-queues",
+  "url": "https://leetcode.com/problems/implement-stack-using-queues",
   "title": "Implement Stack using Queues",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "1962",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-stones-to-minimize-the-total",
+  "url": "https://leetcode.com/problems/remove-stones-to-minimize-the-total",
   "title": "Remove Stones to Minimize the Total",
   "category": "Algorithms",
   "difficulty": "Medium",

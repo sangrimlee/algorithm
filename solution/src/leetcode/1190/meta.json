@@ -1,6 +1,6 @@
 {
   "id": "1190",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/reverse-substrings-between-each-pair-of-parentheses",
+  "url": "https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses",
   "title": "Reverse Substrings Between Each Pair of Parentheses",
   "category": "Algorithms",
   "difficulty": "Medium",

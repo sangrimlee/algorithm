@@ -1,6 +1,6 @@
 {
   "id": "2593",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-score-of-an-array-after-marking-all-elements",
+  "url": "https://leetcode.com/problems/find-score-of-an-array-after-marking-all-elements",
   "title": "Find Score of an Array After Marking All Elements",
   "category": "Algorithms",
   "difficulty": "Medium",

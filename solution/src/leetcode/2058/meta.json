@@ -1,6 +1,6 @@
 {
   "id": "2058",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
+  "url": "https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points",
   "title": "Find the Minimum and Maximum Number of Nodes Between Critical Points",
   "category": "Algorithms",
   "difficulty": "Medium",

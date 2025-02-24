@@ -1,6 +1,6 @@
 {
   "id": "2623",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/memoize",
+  "url": "https://leetcode.com/problems/memoize",
   "title": "Memoize",
   "category": "JavaScript",
   "difficulty": "Medium",

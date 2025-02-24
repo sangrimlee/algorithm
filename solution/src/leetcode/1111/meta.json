@@ -1,6 +1,6 @@
 {
   "id": "1111",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-nesting-depth-of-two-valid-parentheses-strings",
+  "url": "https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings",
   "title": "Maximum Nesting Depth of Two Valid Parentheses Strings",
   "category": "Algorithms",
   "difficulty": "Medium",

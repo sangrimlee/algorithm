@@ -1,6 +1,6 @@
 {
   "id": "590",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/n-ary-tree-postorder-traversal",
+  "url": "https://leetcode.com/problems/n-ary-tree-postorder-traversal",
   "title": "N-ary Tree Postorder Traversal",
   "category": "Algorithms",
   "difficulty": "Easy",

@@ -1,6 +1,6 @@
 {
   "id": "2273",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-resultant-array-after-removing-anagrams",
+  "url": "https://leetcode.com/problems/find-resultant-array-after-removing-anagrams",
   "title": "Find Resultant Array After Removing Anagrams",
   "category": "Algorithms",
   "difficulty": "Easy",

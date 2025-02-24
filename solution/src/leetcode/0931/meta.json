@@ -1,6 +1,6 @@
 {
   "id": "931",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-falling-path-sum",
+  "url": "https://leetcode.com/problems/minimum-falling-path-sum",
   "title": "Minimum Falling Path Sum",
   "category": "Algorithms",
   "difficulty": "Medium",

@@ -1,6 +1,6 @@
 {
   "id": "1909",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/remove-one-element-to-make-the-array-strictly-increasing",
+  "url": "https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing",
   "title": "Remove One Element to Make the Array Strictly Increasing",
   "category": "Algorithms",
   "difficulty": "Easy",

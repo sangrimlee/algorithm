@@ -1,6 +1,6 @@
 {
   "id": "724",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/find-pivot-index",
+  "url": "https://leetcode.com/problems/find-pivot-index",
   "title": "Find Pivot Index",
   "category": "Algorithms",
   "difficulty": "Easy",

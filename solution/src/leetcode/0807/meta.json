@@ -1,6 +1,6 @@
 {
   "id": "807",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/max-increase-to-keep-city-skyline",
+  "url": "https://leetcode.com/problems/max-increase-to-keep-city-skyline",
   "title": "Max Increase to Keep City Skyline",
   "category": "Algorithms",
   "difficulty": "Medium",

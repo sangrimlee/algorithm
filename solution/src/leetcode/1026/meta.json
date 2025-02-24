@@ -1,6 +1,6 @@
 {
   "id": "1026",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/maximum-difference-between-node-and-ancestor",
+  "url": "https://leetcode.com/problems/maximum-difference-between-node-and-ancestor",
   "title": "Maximum Difference Between Node and Ancestor",
   "category": "Algorithms",
   "difficulty": "Medium",

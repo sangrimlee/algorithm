@@ -1,6 +1,6 @@
 {
   "id": "1356",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/sort-integers-by-the-number-of-1-bits",
+  "url": "https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits",
   "title": "Sort Integers by The Number of 1 Bits",
   "category": "Algorithms",
   "difficulty": "Easy",

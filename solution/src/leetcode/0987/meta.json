@@ -1,6 +1,6 @@
 {
   "id": "987",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/vertical-order-traversal-of-a-binary-tree",
+  "url": "https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree",
   "title": "Vertical Order Traversal of a Binary Tree",
   "category": "Algorithms",
   "difficulty": "Hard",

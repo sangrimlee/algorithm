@@ -1,6 +1,6 @@
 {
   "id": "921",
-  "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/minimum-add-to-make-parentheses-valid",
+  "url": "https://leetcode.com/problems/minimum-add-to-make-parentheses-valid",
   "title": "Minimum Add to Make Parentheses Valid",
   "category": "Algorithms",
   "difficulty": "Medium",
