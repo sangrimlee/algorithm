@@ -1,10 +1,6 @@
-import 'nextra-theme-docs/style.css';
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Layout } from 'nextra-theme-docs';
-import { Head } from 'nextra/components';
-import { getPageMap } from 'nextra/page-map';
 import { Analytics } from '@vercel/analytics/react';
 
 import { Footer } from './_components/footer';
@@ -45,7 +41,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="ko"
@@ -53,21 +49,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       className={cx(poppins.variable, pretendard.variable)}
       suppressHydrationWarning
     >
-      <Head />
+      <head></head>
       <body>
         <Analytics />
-        <Layout
-          navbar={<NavBar />}
-          footer={<Footer />}
-          pageMap={await getPageMap()}
-          sidebar={{
-            autoCollapse: true,
-            defaultMenuCollapseLevel: 1,
-          }}
-          docsRepositoryBase="https://github.com/sangrimlee/algorithm/tree/main/website"
-        >
-          {children}
-        </Layout>
+        <NavBar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

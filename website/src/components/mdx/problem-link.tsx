@@ -1,7 +1,7 @@
 import { cx } from '@/utils/cx';
 
 import { LeetCodeLogo, ProgrammersLogo } from '../logo';
-import { LinkArrowIcon } from 'nextra/icons';
+import { ArrowUpRightIcon } from '@heroicons/react/24/outline';
 
 interface ProblemLinkProps {
   href: string;
@@ -41,7 +41,7 @@ export const ProblemLink = ({ href, title, codingSite }: ProblemLinkProps) => {
             )}
           >
             문제 풀러가기
-            <LinkArrowIcon className="ml-1 size-4" />
+            <ArrowUpRightIcon className="ml-1 size-4" />
           </p>
         </div>
       </div>
