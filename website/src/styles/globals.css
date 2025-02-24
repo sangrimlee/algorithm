@@ -1,19 +1,15 @@
 @import 'tailwindcss';
+@import './font.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: var(--font-pretendard);
-  --font-logo: var(--font-poppins);
   --shadow-focus-ring: 0 0 0 2px var(--focus-color, currentColor);
 }
 
 @layer base {
-  :root {
-    --focus-color: var(--color-blue-600);
-  }
-  .dark {
-    --focus-color: var(--color-blue-400);
+  body {
+    @apply antialiased;
   }
 }
 

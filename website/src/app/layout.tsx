@@ -1,11 +1,11 @@
-import './globals.css';
+import '@/styles/globals.css';
 
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 
 import { Footer } from './_components/footer';
 import { NavBar } from './_components/nav-bar';
-import { poppins, pretendard } from './_fonts';
+import { notoSansKR, notoSansMono, notoSerifKR, poppins } from './_fonts';
 
 import { cx } from '@/utils/cx';
 import { env } from '@/env';
@@ -46,7 +46,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="ko"
       dir="ltr"
-      className={cx(poppins.variable, pretendard.variable)}
+      className={cx(
+        poppins.variable,
+        notoSansKR.variable,
+        notoSerifKR.variable,
+        notoSansMono.variable,
+      )}
       suppressHydrationWarning
     >
       <head></head>
