@@ -9,6 +9,7 @@ import { notoSansKR, notoSansMono, notoSerifKR, poppins } from './_fonts';
 
 import { cx } from '@/utils/cx';
 import { env } from '@/env';
+import StyledJsxRegistry from './registry';
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.URL),
@@ -57,9 +58,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head></head>
       <body>
         <Analytics />
-        <NavBar />
-        <main>{children}</main>
-        <Footer />
+        <StyledJsxRegistry>
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+        </StyledJsxRegistry>
       </body>
     </html>
   );
