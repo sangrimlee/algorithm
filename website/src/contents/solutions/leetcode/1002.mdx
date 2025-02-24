@@ -4,9 +4,9 @@ title: Find Common Characters
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- String
+  - Array
+  - Hash Table
+  - String
 url: https://leetcode.com/problems/find-common-characters
 ---
 
@@ -41,4 +41,3 @@ export function commonChars(words: string[]): string[] {
   return [...counter.entries()].flatMap(([char, count]) => new Array(count).fill(char));
 }
 ```
-

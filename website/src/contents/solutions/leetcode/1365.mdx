@@ -4,10 +4,10 @@ title: How Many Numbers Are Smaller Than the Current Number
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- Sorting
-- Counting
+  - Array
+  - Hash Table
+  - Sorting
+  - Counting
 url: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number
 ---
 
@@ -25,4 +25,3 @@ export function smallerNumbersThanCurrent(nums: number[]): number[] {
   return nums.map((num) => smallestIndices.get(num) ?? -1);
 }
 ```
-

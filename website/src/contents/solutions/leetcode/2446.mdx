@@ -4,8 +4,8 @@ title: Determine if Two Events Have Conflict
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- String
+  - Array
+  - String
 url: https://leetcode.com/problems/determine-if-two-events-have-conflict
 ---
 
@@ -22,4 +22,3 @@ export function haveConflict(event1: string[], event2: string[]): boolean {
   return Math.max(startTime1, startTime2) <= Math.min(endTime1, endTime2);
 }
 ```
-

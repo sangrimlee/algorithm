@@ -4,10 +4,10 @@ title: Find Mode in Binary Search Tree
 category: Algorithms
 difficulty: Easy
 tags:
-- Tree
-- Depth-First Search
-- Binary Search Tree
-- Binary Tree
+  - Tree
+  - Depth-First Search
+  - Binary Search Tree
+  - Binary Tree
 url: https://leetcode.com/problems/find-mode-in-binary-search-tree
 ---
 
@@ -33,4 +33,3 @@ export function findMode(root: TreeNode | null): number[] {
   return [...modeCounter.keys()].filter((mode) => modeCounter.get(mode) === maxModeCount);
 }
 ```
-

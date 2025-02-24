@@ -4,7 +4,7 @@ title: Check if Numbers Are Ascending in a Sentence
 category: Algorithms
 difficulty: Easy
 tags:
-- String
+  - String
 url: https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence
 ---
 
@@ -16,4 +16,3 @@ export function areNumbersAscending(s: string): boolean {
   return nums.every((num, i) => i === 0 || parseInt(nums[i - 1]) < parseInt(num));
 }
 ```
-

@@ -4,10 +4,10 @@ title: Remove Nodes From Linked List
 category: Algorithms
 difficulty: Medium
 tags:
-- Linked List
-- Stack
-- Recursion
-- Monotonic Stack
+  - Linked List
+  - Stack
+  - Recursion
+  - Monotonic Stack
 url: https://leetcode.com/problems/remove-nodes-from-linked-list
 ---
 
@@ -24,4 +24,3 @@ export function removeNodes(head: ListNode | null): ListNode | null {
   return head.next && head.val < head.next.val ? head.next : head;
 }
 ```
-

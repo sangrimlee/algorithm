@@ -4,10 +4,10 @@ title: Minimum Number of Moves to Seat Everyone
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Greedy
-- Sorting
-- Counting Sort
+  - Array
+  - Greedy
+  - Sorting
+  - Counting Sort
 url: https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone
 ---
 
@@ -20,4 +20,3 @@ export function minMovesToSeat(seats: number[], students: number[]): number {
   return seats.reduce((answer, seat, i) => answer + Math.abs(seat - students[i]), 0);
 }
 ```
-

@@ -3,7 +3,6 @@ id: '2629'
 title: Function Composition
 category: JavaScript
 difficulty: Easy
-tags: []
 url: https://leetcode.com/problems/function-composition
 ---
 
@@ -16,4 +15,3 @@ export function compose(functions: F[]): F {
   return (x) => functions.reduceRight((acc, func) => func(acc), x);
 }
 ```
-

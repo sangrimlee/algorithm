@@ -4,8 +4,8 @@ title: Largest Number At Least Twice of Others
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Sorting
+  - Array
+  - Sorting
 url: https://leetcode.com/problems/largest-number-at-least-twice-of-others
 ---
 
@@ -26,4 +26,3 @@ export function dominantIndex(nums: number[]): number {
   return 2 * nums[secondLargestIndex] <= nums[largestIndex] ? largestIndex : -1;
 }
 ```
-

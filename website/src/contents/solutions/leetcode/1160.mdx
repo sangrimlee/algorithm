@@ -4,10 +4,10 @@ title: Find Words That Can Be Formed by Characters
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- String
-- Counting
+  - Array
+  - Hash Table
+  - String
+  - Counting
 url: https://leetcode.com/problems/find-words-that-can-be-formed-by-characters
 ---
 
@@ -39,4 +39,3 @@ export function countCharacters(words: string[], chars: string): number {
   return words.reduce((prev, word) => (isGoodWord(word) ? prev + word.length : prev), 0);
 }
 ```
-

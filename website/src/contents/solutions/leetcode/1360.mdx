@@ -4,8 +4,8 @@ title: Number of Days Between Two Dates
 category: Algorithms
 difficulty: Easy
 tags:
-- Math
-- String
+  - Math
+  - String
 url: https://leetcode.com/problems/number-of-days-between-two-dates
 ---
 
@@ -18,4 +18,3 @@ export function daysBetweenDates(date1: string, date2: string): number {
   return Math.floor(Math.abs(getTime(date1) - getTime(date2)) / DAY);
 }
 ```
-

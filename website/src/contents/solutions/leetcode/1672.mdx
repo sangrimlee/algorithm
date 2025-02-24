@@ -4,8 +4,8 @@ title: Richest Customer Wealth
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Matrix
+  - Array
+  - Matrix
 url: https://leetcode.com/problems/richest-customer-wealth
 ---
 
@@ -17,4 +17,3 @@ export function maximumWealth(accounts: number[][]): number {
   return accounts.reduce((prev, account) => Math.max(prev, sum(account)), 0);
 }
 ```
-

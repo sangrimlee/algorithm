@@ -4,9 +4,9 @@ title: Binary Tree Zigzag Level Order Traversal
 category: Algorithms
 difficulty: Medium
 tags:
-- Tree
-- Breadth-First Search
-- Binary Tree
+  - Tree
+  - Breadth-First Search
+  - Binary Tree
 url: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal
 ---
 
@@ -33,4 +33,3 @@ export function zigzagLevelOrder(root: TreeNode | null): number[][] {
   return answer.map((row, i) => (i % 2 === 0 ? row : row.reverse()));
 }
 ```
-

@@ -4,12 +4,12 @@ title: Constrained Subsequence Sum
 category: Algorithms
 difficulty: Hard
 tags:
-- Array
-- Dynamic Programming
-- Queue
-- Sliding Window
-- Heap (Priority Queue)
-- Monotonic Queue
+  - Array
+  - Dynamic Programming
+  - Queue
+  - Sliding Window
+  - Heap (Priority Queue)
+  - Monotonic Queue
 url: https://leetcode.com/problems/constrained-subsequence-sum
 ---
 
@@ -34,4 +34,3 @@ export function constrainedSubsetSum(nums: number[], k: number): number {
   return nums.reduce((prev, curr) => Math.max(prev, curr), Number.MIN_SAFE_INTEGER);
 }
 ```
-

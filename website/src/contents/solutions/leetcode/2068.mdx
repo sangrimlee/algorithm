@@ -4,9 +4,9 @@ title: Check Whether Two Strings are Almost Equivalent
 category: Algorithms
 difficulty: Easy
 tags:
-- Hash Table
-- String
-- Counting
+  - Hash Table
+  - String
+  - Counting
 url: https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent
 ---
 
@@ -39,4 +39,3 @@ export function checkAlmostEquivalent(word1: string, word2: string): boolean {
   return chars.every((char) => Math.abs(counter1.get(char) - counter2.get(char)) <= 3);
 }
 ```
-

@@ -4,10 +4,10 @@ title: Find Eventual Safe States
 category: Algorithms
 difficulty: Medium
 tags:
-- Depth-First Search
-- Breadth-First Search
-- Graph
-- Topological Sort
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Topological Sort
 url: https://leetcode.com/problems/find-eventual-safe-states
 ---
 
@@ -46,4 +46,3 @@ export function eventualSafeNodes(graph: number[][]): number[] {
   return [...range(n)].filter((node) => !inStack[node]);
 }
 ```
-

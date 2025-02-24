@@ -3,7 +3,6 @@ id: '2723'
 title: Add Two Promises
 category: JavaScript
 difficulty: Easy
-tags: []
 url: https://leetcode.com/problems/add-two-promises
 ---
 
@@ -20,4 +19,3 @@ export function addTwoPromises(
   return Promise.all([promise1, promise2]).then((nums) => nums.reduce((a, b) => a + b, 0));
 }
 ```
-

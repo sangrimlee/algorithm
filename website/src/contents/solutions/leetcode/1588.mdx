@@ -4,9 +4,9 @@ title: Sum of All Odd Length Subarrays
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Math
-- Prefix Sum
+  - Array
+  - Math
+  - Prefix Sum
 url: https://leetcode.com/problems/sum-of-all-odd-length-subarrays
 ---
 
@@ -17,4 +17,3 @@ export function sumOddLengthSubarrays(arr: number[]): number {
   return arr.reduce((acc, num, i) => acc + num * Math.ceil(((i + 1) * (arr.length - i)) / 2), 0);
 }
 ```
-

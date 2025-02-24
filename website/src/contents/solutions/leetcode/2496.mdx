@@ -4,8 +4,8 @@ title: Maximum Value of a String in an Array
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- String
+  - Array
+  - String
 url: https://leetcode.com/problems/maximum-value-of-a-string-in-an-array
 ---
 
@@ -19,4 +19,3 @@ export function maximumValue(strs: string[]): number {
   return strs.reduce((prev, str) => Math.max(prev, getValue(str)), 0);
 }
 ```
-

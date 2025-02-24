@@ -4,9 +4,9 @@ title: Maximum Depth of N-ary Tree
 category: Algorithms
 difficulty: Easy
 tags:
-- Tree
-- Depth-First Search
-- Breadth-First Search
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
 url: https://leetcode.com/problems/maximum-depth-of-n-ary-tree
 ---
 
@@ -22,4 +22,3 @@ export function maxDepth(root: NArrayTreeNode | null): number {
   return 1 + root.children.reduce((prev, node) => Math.max(prev, maxDepth(node)), 0);
 }
 ```
-

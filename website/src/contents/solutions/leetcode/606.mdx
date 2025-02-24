@@ -4,10 +4,10 @@ title: Construct String from Binary Tree
 category: Algorithms
 difficulty: Medium
 tags:
-- String
-- Tree
-- Depth-First Search
-- Binary Tree
+  - String
+  - Tree
+  - Depth-First Search
+  - Binary Tree
 url: https://leetcode.com/problems/construct-string-from-binary-tree
 ---
 
@@ -29,4 +29,3 @@ export function tree2str(root: TreeNode | null): string {
   return `${root.val}(${tree2str(root.left)})(${tree2str(root.right)})`;
 }
 ```
-

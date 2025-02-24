@@ -4,7 +4,7 @@ title: Valid Word
 category: Algorithms
 difficulty: Easy
 tags:
-- String
+  - String
 url: https://leetcode.com/problems/valid-word
 ---
 
@@ -15,4 +15,3 @@ export function isValid(word: string): boolean {
   return /^(?=.*[aeiou])(?=.*[^0-9aeiou])[a-z0-9]{3,}$/i.test(word);
 }
 ```
-

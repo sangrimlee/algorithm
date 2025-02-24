@@ -4,10 +4,10 @@ title: Maximum Gap
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Sorting
-- Bucket Sort
-- Radix Sort
+  - Array
+  - Sorting
+  - Bucket Sort
+  - Radix Sort
 url: https://leetcode.com/problems/maximum-gap
 ---
 
@@ -20,4 +20,3 @@ export function maximumGap(nums: number[]): number {
     .reduce((prev, num, i) => (i === 0 ? prev : Math.max(prev, Math.abs(nums[i - 1] - num))), 0);
 }
 ```
-

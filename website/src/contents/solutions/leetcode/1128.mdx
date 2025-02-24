@@ -4,9 +4,9 @@ title: Number of Equivalent Domino Pairs
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- Counting
+  - Array
+  - Hash Table
+  - Counting
 url: https://leetcode.com/problems/number-of-equivalent-domino-pairs
 ---
 
@@ -26,4 +26,3 @@ export function numEquivDominoPairs(dominoes: number[][]): number {
   return [...counts.values()].reduce((prev, count) => prev + (count * (count - 1)) / 2, 0);
 }
 ```
-

@@ -4,8 +4,8 @@ title: Find Common Elements Between Two Arrays
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
+  - Array
+  - Hash Table
 url: https://leetcode.com/problems/find-common-elements-between-two-arrays
 ---
 
@@ -18,4 +18,3 @@ export function findIntersectionValues(nums1: number[], nums2: number[]): number
   return [nums1.filter((num) => set2.has(num)).length, nums2.filter((num) => set1.has(num)).length];
 }
 ```
-

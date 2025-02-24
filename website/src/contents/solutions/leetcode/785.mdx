@@ -4,10 +4,10 @@ title: Is Graph Bipartite?
 category: Algorithms
 difficulty: Medium
 tags:
-- Depth-First Search
-- Breadth-First Search
-- Union Find
-- Graph
+  - Depth-First Search
+  - Breadth-First Search
+  - Union Find
+  - Graph
 url: https://leetcode.com/problems/is-graph-bipartite
 ---
 
@@ -32,4 +32,3 @@ export function isBipartite(graph: number[][]): boolean {
     .every((index) => colors[index] !== -1 || dfs(0, index));
 }
 ```
-

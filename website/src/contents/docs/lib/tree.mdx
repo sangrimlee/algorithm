@@ -103,9 +103,7 @@ class NArrayTreeNode {
 주어진 `Object`의 `key`값이 `val`이며 `value`는 `children`인 `NArrayTreeNode`를 생성합니다.
 
 ```typescript copy
-function createNArrayTree(tree: {
-  [key: number]: number[] | undefined;
-}): NArrayTreeNode | null {
+function createNArrayTree(tree: { [key: number]: number[] | undefined }): NArrayTreeNode | null {
   if (!tree[1]) {
     return null;
   }
@@ -116,8 +114,7 @@ function createNArrayTree(tree: {
   while (0 < currentNodes.length) {
     const currentNode = currentNodes.shift();
     if (currentNode) {
-      const children =
-        tree[currentNode.val]?.map((value) => new NArrayTreeNode(value)) ?? [];
+      const children = tree[currentNode.val]?.map((value) => new NArrayTreeNode(value)) ?? [];
       currentNode.children = children;
       currentNodes.push(...children);
     }

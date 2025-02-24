@@ -4,9 +4,9 @@ title: Remove Stones to Minimize the Total
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Greedy
-- Heap (Priority Queue)
+  - Array
+  - Greedy
+  - Heap (Priority Queue)
 url: https://leetcode.com/problems/remove-stones-to-minimize-the-total
 ---
 
@@ -31,4 +31,3 @@ export function minStoneSum(piles: number[], k: number): number {
   return heap.heap.reduce((total, curr) => total + curr, 0);
 }
 ```
-

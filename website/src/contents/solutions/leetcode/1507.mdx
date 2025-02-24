@@ -4,7 +4,7 @@ title: Reformat Date
 category: Algorithms
 difficulty: Easy
 tags:
-- String
+  - String
 url: https://leetcode.com/problems/reformat-date
 ---
 
@@ -30,4 +30,3 @@ export function reformatDate(date: string): string {
   return `${year}-${months[month as keyof typeof months]}-${day.slice(0, -2).padStart(2, '0')}`;
 }
 ```
-

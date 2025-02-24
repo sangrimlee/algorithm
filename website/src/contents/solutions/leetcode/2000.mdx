@@ -4,9 +4,9 @@ title: Reverse Prefix of Word
 category: Algorithms
 difficulty: Easy
 tags:
-- Two Pointers
-- String
-- Stack
+  - Two Pointers
+  - String
+  - Stack
 url: https://leetcode.com/problems/reverse-prefix-of-word
 ---
 
@@ -25,4 +25,3 @@ export function reversePrefix(word: string, ch: string): string {
   return reverseString(word.substring(0, i + 1)) + word.substring(i + 1);
 }
 ```
-

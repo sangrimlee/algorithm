@@ -4,8 +4,8 @@ title: Jewels and Stones
 category: Algorithms
 difficulty: Easy
 tags:
-- Hash Table
-- String
+  - Hash Table
+  - String
 url: https://leetcode.com/problems/jewels-and-stones
 ---
 
@@ -17,4 +17,3 @@ export function numJewelsInStones(jewels: string, stones: string): number {
   return [...stones].filter((stone) => jewel.has(stone)).length;
 }
 ```
-

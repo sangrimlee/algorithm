@@ -4,9 +4,9 @@ title: Push Dominoes
 category: Algorithms
 difficulty: Medium
 tags:
-- Two Pointers
-- String
-- Dynamic Programming
+  - Two Pointers
+  - String
+  - Dynamic Programming
 url: https://leetcode.com/problems/push-dominoes
 ---
 
@@ -47,4 +47,3 @@ export function pushDominoes(dominoes: string): string {
   return forces.map((force) => (force === 0 ? '.' : 0 < force ? 'R' : 'L')).join('');
 }
 ```
-

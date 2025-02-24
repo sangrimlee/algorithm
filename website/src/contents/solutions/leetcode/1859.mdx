@@ -4,8 +4,8 @@ title: Sorting the Sentence
 category: Algorithms
 difficulty: Easy
 tags:
-- String
-- Sorting
+  - String
+  - Sorting
 url: https://leetcode.com/problems/sorting-the-sentence
 ---
 
@@ -20,4 +20,3 @@ export function sortSentence(s: string): string {
   return s.split(' ').sort(sortByIndex).map(removeIndex).join(' ');
 }
 ```
-

@@ -4,7 +4,7 @@ title: Replace All Digits with Characters
 category: Algorithms
 difficulty: Easy
 tags:
-- String
+  - String
 url: https://leetcode.com/problems/replace-all-digits-with-characters
 ---
 
@@ -19,4 +19,3 @@ export function replaceDigits(s: string): string {
   return [...s].map((char, i) => (i % 2 === 0 ? char : shift(s[i - 1], +char))).join('');
 }
 ```
-

@@ -4,8 +4,8 @@ title: Day of the Year
 category: Algorithms
 difficulty: Easy
 tags:
-- Math
-- String
+  - Math
+  - String
 url: https://leetcode.com/problems/day-of-the-year
 ---
 
@@ -19,4 +19,3 @@ export function dayOfYear(date: string): number {
   return Math.floor((currentDate.getTime() - firstDateOfYear.getTime()) / msOfDay) + 1;
 }
 ```
-

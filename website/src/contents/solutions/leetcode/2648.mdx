@@ -3,7 +3,6 @@ id: '2648'
 title: Generate Fibonacci Sequence
 category: JavaScript
 difficulty: Easy
-tags: []
 url: https://leetcode.com/problems/generate-fibonacci-sequence
 ---
 
@@ -15,4 +14,3 @@ export function* fibGenerator(a = 0, b = 1): Generator<number> {
   yield* fibGenerator(b, a + b);
 }
 ```
-

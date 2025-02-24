@@ -4,9 +4,9 @@ title: Leaf-Similar Trees
 category: Algorithms
 difficulty: Easy
 tags:
-- Tree
-- Depth-First Search
-- Binary Tree
+  - Tree
+  - Depth-First Search
+  - Binary Tree
 url: https://leetcode.com/problems/leaf-similar-trees
 ---
 
@@ -45,4 +45,3 @@ function getLeafNodes(node: TreeNode | null): number[] {
   return [...getLeafNodes(node.left), ...getLeafNodes(node.right)];
 }
 ```
-

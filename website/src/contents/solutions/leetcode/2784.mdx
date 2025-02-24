@@ -4,9 +4,9 @@ title: Check if Array is Good
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- Sorting
+  - Array
+  - Hash Table
+  - Sorting
 url: https://leetcode.com/problems/check-if-array-is-good
 ---
 
@@ -27,4 +27,3 @@ export function isGood(nums: number[]): boolean {
   return [...counter].every(([num, count]) => (num === n ? count === 2 : count === 1));
 }
 ```
-

@@ -4,8 +4,8 @@ title: Sign of the Product of an Array
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Math
+  - Array
+  - Math
 url: https://leetcode.com/problems/sign-of-the-product-of-an-array
 ---
 
@@ -20,4 +20,3 @@ export function arraySign(nums: number[]): number {
   return sign(nums.reduce((prev, curr) => prev * sign(curr), 1));
 }
 ```
-

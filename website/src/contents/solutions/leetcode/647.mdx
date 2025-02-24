@@ -4,9 +4,9 @@ title: Palindromic Substrings
 category: Algorithms
 difficulty: Medium
 tags:
-- Two Pointers
-- String
-- Dynamic Programming
+  - Two Pointers
+  - String
+  - Dynamic Programming
 url: https://leetcode.com/problems/palindromic-substrings
 ---
 
@@ -39,4 +39,3 @@ export function countSubstrings(s: string): number {
   return manachers(s).reduce((acc, v) => acc + Math.floor((v + 1) / 2), 0);
 }
 ```
-

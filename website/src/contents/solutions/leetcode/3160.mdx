@@ -4,9 +4,9 @@ title: Find the Number of Distinct Colors Among the Balls
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Hash Table
-- Simulation
+  - Array
+  - Hash Table
+  - Simulation
 url: https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls
 ---
 
@@ -48,4 +48,3 @@ export function queryResults(limit: number, queries: number[][]): number[] {
   - `queries`를 반복하기 때문에, `queries`의 길이만큼의 시간 복잡도가 소요.
 - Space: $O(limit + distinct\ color)$
   - `balls`는 최대 `limit`의 공간 복잡도를 사용, `colors`는 `queries`의 고유한 색깔의 개수만큼의 공간 복잡도를 사용
-

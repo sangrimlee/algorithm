@@ -4,9 +4,9 @@ title: Minimum Moves to Equal Array Elements II
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Math
-- Sorting
+  - Array
+  - Math
+  - Sorting
 url: https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii
 ---
 
@@ -20,4 +20,3 @@ export function minMoves2(nums: number[]): number {
   return nums.reduce((prev, curr) => prev + Math.abs(mid - curr), 0);
 }
 ```
-

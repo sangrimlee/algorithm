@@ -4,10 +4,10 @@ title: Array Partition
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Greedy
-- Sorting
-- Counting Sort
+  - Array
+  - Greedy
+  - Sorting
+  - Counting Sort
 url: https://leetcode.com/problems/array-partition
 ---
 
@@ -22,4 +22,3 @@ export function arrayPairSum(nums: number[]): number {
   return [...range(0, n, 2)].reduce((acc, i) => acc + Math.min(nums[i], nums[i] + 1), 0);
 }
 ```
-

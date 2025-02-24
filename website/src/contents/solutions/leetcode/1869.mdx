@@ -4,7 +4,7 @@ title: Longer Contiguous Segments of Ones than Zeros
 category: Algorithms
 difficulty: Easy
 tags:
-- String
+  - String
 url: https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros
 ---
 
@@ -19,4 +19,3 @@ export function checkZeroOnes(s: string): boolean {
   return getMaxLength(s.split(/0+/)) > getMaxLength(s.split(/1+/));
 }
 ```
-

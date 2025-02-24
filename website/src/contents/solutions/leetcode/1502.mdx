@@ -4,8 +4,8 @@ title: Can Make Arithmetic Progression From Sequence
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Sorting
+  - Array
+  - Sorting
 url: https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence
 ---
 
@@ -18,4 +18,3 @@ export function canMakeArithmeticProgression(arr: number[]): boolean {
   return arr.every((_, i) => i === 0 || arr[i] - arr[i - 1] === difference);
 }
 ```
-

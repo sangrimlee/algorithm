@@ -4,10 +4,10 @@ title: Number of Longest Increasing Subsequence
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Dynamic Programming
-- Binary Indexed Tree
-- Segment Tree
+  - Array
+  - Dynamic Programming
+  - Binary Indexed Tree
+  - Segment Tree
 url: https://leetcode.com/problems/number-of-longest-increasing-subsequence
 ---
 
@@ -40,4 +40,3 @@ export function findNumberOfLIS(nums: number[]): number {
   return counts.filter((_, i) => lengths[i] === maxLength).reduce((prev, cnt) => prev + cnt, 0);
 }
 ```
-

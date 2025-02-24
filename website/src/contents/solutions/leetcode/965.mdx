@@ -4,10 +4,10 @@ title: Univalued Binary Tree
 category: Algorithms
 difficulty: Easy
 tags:
-- Tree
-- Depth-First Search
-- Breadth-First Search
-- Binary Tree
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
 url: https://leetcode.com/problems/univalued-binary-tree
 ---
 
@@ -28,4 +28,3 @@ export function isUnivalTree(root: TreeNode | null): boolean {
   return isUnivalTree(root.left) && isUnivalTree(root.right);
 }
 ```
-

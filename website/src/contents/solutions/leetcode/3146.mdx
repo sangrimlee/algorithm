@@ -4,8 +4,8 @@ title: Permutation Difference between Two Strings
 category: Algorithms
 difficulty: Easy
 tags:
-- Hash Table
-- String
+  - Hash Table
+  - String
 url: https://leetcode.com/problems/permutation-difference-between-two-strings
 ---
 
@@ -17,4 +17,3 @@ export function findPermutationDifference(s: string, t: string): number {
   return [...t].reduce((prev, char, i) => prev + Math.abs(indices.get(char)! - i), 0);
 }
 ```
-

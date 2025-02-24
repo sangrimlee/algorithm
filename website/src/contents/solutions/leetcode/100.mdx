@@ -4,10 +4,10 @@ title: Same Tree
 category: Algorithms
 difficulty: Easy
 tags:
-- Tree
-- Depth-First Search
-- Breadth-First Search
-- Binary Tree
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
 url: https://leetcode.com/problems/same-tree
 ---
 
@@ -28,4 +28,3 @@ export function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
   return p.val === q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 }
 ```
-

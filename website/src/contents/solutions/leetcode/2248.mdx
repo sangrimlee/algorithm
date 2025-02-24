@@ -4,10 +4,10 @@ title: Intersection of Multiple Arrays
 category: Algorithms
 difficulty: Easy
 tags:
-- Array
-- Hash Table
-- Sorting
-- Counting
+  - Array
+  - Hash Table
+  - Sorting
+  - Counting
 url: https://leetcode.com/problems/intersection-of-multiple-arrays
 ---
 
@@ -26,4 +26,3 @@ export function intersection(nums: number[][]): number[] {
   return [...counter.keys()].filter((num) => counter.get(num) === n).sort((a, b) => a - b);
 }
 ```
-

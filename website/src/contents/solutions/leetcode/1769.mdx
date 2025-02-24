@@ -4,9 +4,9 @@ title: Minimum Number of Operations to Move All Balls to Each Box
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- String
-- Prefix Sum
+  - Array
+  - String
+  - Prefix Sum
 url: https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box
 ---
 
@@ -32,4 +32,3 @@ export function minOperations(boxes: string): number[] {
   return Array.from({ length: n }, (_, i) => leftDistances[i] + rightDistances[i]);
 }
 ```
-

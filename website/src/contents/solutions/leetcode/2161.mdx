@@ -4,9 +4,9 @@ title: Partition Array According to Given Pivot
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Two Pointers
-- Simulation
+  - Array
+  - Two Pointers
+  - Simulation
 url: https://leetcode.com/problems/partition-array-according-to-given-pivot
 ---
 
@@ -31,4 +31,3 @@ export function pivotArray(nums: number[], pivot: number): number[] {
   return [...lessThan, ...new Array(pivotCount).fill(pivot), ...greaterThan];
 }
 ```
-

@@ -4,12 +4,12 @@ title: Detonate the Maximum Bombs
 category: Algorithms
 difficulty: Medium
 tags:
-- Array
-- Math
-- Depth-First Search
-- Breadth-First Search
-- Graph
-- Geometry
+  - Array
+  - Math
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Geometry
 url: https://leetcode.com/problems/detonate-the-maximum-bombs
 ---
 
@@ -50,4 +50,3 @@ export function maximumDetonation(bombs: number[][]): number {
   return bombs.reduce((answer, _, i) => Math.max(answer, dfs(i, new Set())), 0);
 }
 ```
-
