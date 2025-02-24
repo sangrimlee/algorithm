@@ -1,0 +1,35 @@
+---
+id: '1013'
+title: Partition Array Into Three Parts With Equal Sum
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Greedy
+url: https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canThreePartsEqualSum(arr: number[]): boolean {
+  const total = arr.reduce((acc, curr) => acc + curr, 0);
+  if (total % 3 !== 0) {
+    return false;
+  }
+  const average = total / 3;
+
+  let currentSum = 0;
+  let partCount = 0;
+  for (const num of arr) {
+    currentSum += num;
+    if (currentSum === average) {
+      currentSum = 0;
+      partCount += 1;
+    }
+  }
+
+  return 3 <= partCount;
+}
+```
+

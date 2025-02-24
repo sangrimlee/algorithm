@@ -1,0 +1,34 @@
+---
+id: '2824'
+title: Count Pairs Whose Sum is Less than Target
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Two Pointers
+- Binary Search
+- Sorting
+url: https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPairs(nums: number[], target: number): number {
+  nums.sort((a, b) => a - b);
+
+  let answer = 0;
+  let [start, end] = [0, nums.length - 1];
+  while (start < end) {
+    if (nums[start] + nums[end] < target) {
+      answer += end - start;
+      start += 1;
+    } else {
+      end -= 1;
+    }
+  }
+
+  return answer;
+}
+```
+

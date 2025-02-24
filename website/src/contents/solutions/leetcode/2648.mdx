@@ -1,0 +1,18 @@
+---
+id: '2648'
+title: Generate Fibonacci Sequence
+category: JavaScript
+difficulty: Easy
+tags: []
+url: https://leetcode.com/problems/generate-fibonacci-sequence
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function* fibGenerator(a = 0, b = 1): Generator<number> {
+  yield a;
+  yield* fibGenerator(b, a + b);
+}
+```
+

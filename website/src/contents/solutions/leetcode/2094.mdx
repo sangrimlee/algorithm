@@ -1,0 +1,49 @@
+---
+id: '2094'
+title: Finding 3-Digit Even Numbers
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Sorting
+- Enumeration
+url: https://leetcode.com/problems/finding-3-digit-even-numbers
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findEvenNumbers(digits: number[]): number[] {
+  function* getDigits(num: number) {
+    for (const digit of num.toString()) {
+      yield parseInt(digit);
+    }
+  }
+
+  function canMakeNumber(counter: Map<number, number>, num: number) {
+    const digitCounter = new Map<number, number>();
+    for (const digit of getDigits(num)) {
+      digitCounter.set(digit, (digitCounter.get(digit) ?? 0) + 1);
+    }
+
+    return [...digitCounter.entries()].every(
+      ([digit, count]) => count <= (counter.get(digit) ?? 0),
+    );
+  }
+
+  const counter = new Map<number, number>();
+  digits.forEach((digit) => {
+    counter.set(digit, (counter.get(digit) ?? 0) + 1);
+  });
+
+  const answer: number[] = [];
+  for (let num = 100; num <= 999; num += 2) {
+    if (canMakeNumber(counter, num)) {
+      answer.push(num);
+    }
+  }
+  return answer;
+}
+```
+

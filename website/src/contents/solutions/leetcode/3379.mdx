@@ -1,0 +1,25 @@
+---
+id: '3379'
+title: Transformed Array
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Simulation
+url: https://leetcode.com/problems/transformed-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function constructTransformedArray(nums: number[]): number[] {
+  const n = nums.length;
+  return nums.map((num, i) => nums[(n + i + (num % n)) % n]);
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$
+

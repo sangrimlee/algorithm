@@ -1,0 +1,18 @@
+---
+id: '1450'
+title: Number of Students Doing Homework at a Given Time
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function busyStudent(startTime: number[], endTime: number[], queryTime: number): number {
+  return startTime.filter((start, i) => start <= queryTime && queryTime <= endTime[i]).length;
+}
+```
+

@@ -1,0 +1,36 @@
+---
+id: '111'
+title: Minimum Depth of Binary Tree
+category: Algorithms
+difficulty: Easy
+tags:
+- Tree
+- Depth-First Search
+- Breadth-First Search
+- Binary Tree
+url: https://leetcode.com/problems/minimum-depth-of-binary-tree
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function minDepth(root: TreeNode | null): number {
+  if (root === null) {
+    return 0;
+  }
+
+  const dfs = (node: TreeNode | null, depth: number): number => {
+    if (node === null) {
+      return Number.MAX_SAFE_INTEGER;
+    }
+    if (node.left === null && node.right === null) {
+      return depth;
+    }
+    return Math.min(dfs(node.left, depth + 1), dfs(node.right, depth + 1));
+  };
+  return dfs(root, 1);
+}
+```
+

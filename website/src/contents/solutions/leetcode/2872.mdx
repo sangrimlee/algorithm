@@ -1,0 +1,50 @@
+---
+id: '2872'
+title: Maximum Number of K-Divisible Components
+category: Algorithms
+difficulty: Hard
+tags:
+- Tree
+- Depth-First Search
+url: https://leetcode.com/problems/maximum-number-of-k-divisible-components
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxKDivisibleComponents(
+  n: number,
+  edges: number[][],
+  values: number[],
+  k: number,
+): number {
+  const graph: number[][] = Array.from({ length: n }, () => []);
+  edges.forEach(([a, b]) => {
+    graph[a].push(b);
+    graph[b].push(a);
+  });
+
+  let answer = 0;
+  function dfs(parentNode: number, node: number): number {
+    let result = values[node];
+    for (const childNode of graph[node]) {
+      if (parentNode !== childNode) {
+        result += dfs(node, childNode);
+      }
+    }
+    if (result % k === 0) {
+      answer += 1;
+      return 0;
+    }
+    return result;
+  }
+  dfs(-1, 0);
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n + m)$
+- Space: $O(n + m)$
+

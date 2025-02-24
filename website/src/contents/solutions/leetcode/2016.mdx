@@ -1,0 +1,27 @@
+---
+id: '2016'
+title: Maximum Difference Between Increasing Elements
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/maximum-difference-between-increasing-elements
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumDifference(nums: number[]): number {
+  let answer = -1;
+  let prevMin = Number.MAX_SAFE_INTEGER;
+  for (const num of nums) {
+    if (prevMin < num) {
+      answer = Math.max(answer, num - prevMin);
+    } else {
+      prevMin = num;
+    }
+  }
+  return answer;
+}
+```
+

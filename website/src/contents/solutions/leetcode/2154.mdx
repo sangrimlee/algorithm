@@ -1,0 +1,26 @@
+---
+id: '2154'
+title: Keep Multiplying Found Values by Two
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Sorting
+- Simulation
+url: https://leetcode.com/problems/keep-multiplying-found-values-by-two
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findFinalValue(nums: number[], original: number): number {
+  const set = new Set(nums);
+  let num = original;
+  while (set.has(num)) {
+    num *= 2;
+  }
+  return num;
+}
+```
+

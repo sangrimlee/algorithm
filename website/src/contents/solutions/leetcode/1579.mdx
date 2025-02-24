@@ -1,0 +1,76 @@
+---
+id: '1579'
+title: Remove Max Number of Edges to Keep Graph Fully Traversable
+category: Algorithms
+difficulty: Hard
+tags:
+- Union Find
+- Graph
+url: https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxNumEdgesToRemove(n: number, edges: number[][]): number {
+  const alice = new UnionFind(n);
+  const bob = new UnionFind(n);
+
+  let answer = 0;
+  for (const [type, u, v] of edges) {
+    if (type !== 3) continue;
+    if (!(alice.union(u - 1, v - 1) && bob.union(u - 1, v - 1))) {
+      answer += 1;
+    }
+  }
+
+  for (const [type, u, v] of edges) {
+    if (type === 3) continue;
+    if (type === 1 && !alice.union(u - 1, v - 1)) {
+      answer += 1;
+    } else if (type === 2 && !bob.union(u - 1, v - 1)) {
+      answer += 1;
+    }
+  }
+
+  return alice.isUnited && bob.isUnited ? answer : -1;
+}
+
+class UnionFind {
+  private readonly parents: number[];
+  groupCount: number;
+
+  constructor(n: number) {
+    this.parents = Array.from({ length: n }, (_, i) => i);
+    this.groupCount = n;
+  }
+
+  find(x: number): number {
+    if (x !== this.parents[x]) {
+      this.parents[x] = this.find(this.parents[x]);
+    }
+    return this.parents[x];
+  }
+
+  union(x: number, y: number): boolean {
+    const parentX = this.find(x);
+    const parentY = this.find(y);
+    if (parentX === parentY) {
+      return false;
+    }
+    this.parents[parentX] = parentY;
+    this.groupCount -= 1;
+    return true;
+  }
+
+  get isUnited() {
+    return this.groupCount === 1;
+  }
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+

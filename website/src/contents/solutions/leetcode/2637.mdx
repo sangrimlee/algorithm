@@ -1,0 +1,46 @@
+---
+id: '2637'
+title: Promise Time Limit
+category: JavaScript
+difficulty: Medium
+tags: []
+url: https://leetcode.com/problems/promise-time-limit
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function timeLimit<P, R>(fn: (...params: P[]) => Promise<R>, t: number) {
+  return (...args: P[]) => {
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => {
+        reject('Time Limit Exceeded');
+      }, t);
+
+      fn(...args)
+        .then(resolve)
+        .catch(reject)
+        .finally(() => {
+          clearTimeout(timeout);
+        });
+    });
+  };
+}
+
+/**
+ * Using Promise.race, but it execute unnecessarily setTimeout callback function.
+export function timeLimit2<P, R>(fn: (...params: P[]) => Promise<R>, t: number) {
+  const timeout = (ms: number) =>
+    new Promise((_, reject) => {
+      setTimeout(() => {
+        reject('Time Limit Exceeded');
+      }, ms);
+    });
+
+  return (...args: P[]) => {
+    return Promise.race([fn(...args), timeout(t)]);
+  };
+}
+*/
+```
+

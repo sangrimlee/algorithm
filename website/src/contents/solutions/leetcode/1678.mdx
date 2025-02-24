@@ -1,0 +1,18 @@
+---
+id: '1678'
+title: Goal Parser Interpretation
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/goal-parser-interpretation
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function interpret(command: string): string {
+  return command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
+}
+```
+

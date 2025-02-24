@@ -1,0 +1,22 @@
+---
+id: '172'
+title: Factorial Trailing Zeroes
+category: Algorithms
+difficulty: Medium
+tags:
+- Math
+url: https://leetcode.com/problems/factorial-trailing-zeroes
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function trailingZeroes(n: number): number {
+  let answer = 0;
+  for (let i = 5; 1 <= n / i; i *= 5) {
+    answer += Math.floor(n / i);
+  }
+  return answer;
+}
+```
+

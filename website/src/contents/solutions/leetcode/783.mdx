@@ -1,0 +1,41 @@
+---
+id: '783'
+title: Minimum Distance Between BST Nodes
+category: Algorithms
+difficulty: Easy
+tags:
+- Tree
+- Depth-First Search
+- Breadth-First Search
+- Binary Search Tree
+- Binary Tree
+url: https://leetcode.com/problems/minimum-distance-between-bst-nodes
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function minDiffInBST(root: TreeNode | null): number {
+  if (!root) {
+    return 0;
+  }
+
+  let result = Number.MAX_SAFE_INTEGER;
+  let prevValue = Number.MIN_SAFE_INTEGER;
+  const inorder = (node: TreeNode) => {
+    if (node.left) {
+      inorder(node.left);
+    }
+    result = Math.min(result, node.val - prevValue);
+    prevValue = node.val;
+    if (node.right) {
+      inorder(node.right);
+    }
+  };
+  inorder(root);
+  return result;
+}
+```
+

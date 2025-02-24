@@ -1,0 +1,29 @@
+---
+id: '852'
+title: Peak Index in a Mountain Array
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Binary Search
+url: https://leetcode.com/problems/peak-index-in-a-mountain-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function peakIndexInMountainArray(arr: number[]): number {
+  let [left, right] = [0, arr.length];
+
+  while (left < right) {
+    const mid = Math.floor((left + right) / 2);
+    if (arr[mid] < arr[mid + 1]) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+}
+```
+

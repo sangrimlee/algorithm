@@ -1,0 +1,33 @@
+---
+id: '24'
+title: Swap Nodes in Pairs
+category: Algorithms
+difficulty: Medium
+tags:
+- Linked List
+- Recursion
+url: https://leetcode.com/problems/swap-nodes-in-pairs
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function swapPairs(head: ListNode | null): ListNode | null {
+  if (head === null || head.next === null) {
+    return head;
+  }
+  function swap(node: ListNode | null): ListNode | null {
+    if (node === null || node.next === null) {
+      return node;
+    }
+    const nextNode = node.next;
+    node.next = swap(node.next.next);
+    nextNode.next = node;
+    return nextNode;
+  }
+  return swap(head);
+}
+```
+

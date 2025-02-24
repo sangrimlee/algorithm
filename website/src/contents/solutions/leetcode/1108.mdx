@@ -1,0 +1,18 @@
+---
+id: '1108'
+title: Defanging an IP Address
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/defanging-an-ip-address
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function defangIPaddr(address: string): string {
+  return address.replace(/\./g, '[.]');
+}
+```
+

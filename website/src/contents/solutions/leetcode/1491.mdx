@@ -1,0 +1,24 @@
+---
+id: '1491'
+title: Average Salary Excluding the Minimum and Maximum Salary
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Sorting
+url: https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function average(salary: number[]): number {
+  const [min, max, total] = salary.reduce(
+    ([min, max, total], value) => [Math.min(min, value), Math.max(max, value), total + value],
+    [Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER, 0],
+  );
+
+  return (total - min - max) / (salary.length - 2);
+}
+```
+

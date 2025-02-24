@@ -1,0 +1,23 @@
+---
+id: '2124'
+title: Check if All A's Appears Before All B's
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/check-if-all-as-appears-before-all-bs
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkString(s: string): boolean {
+  const lastAIndex = s.lastIndexOf('a');
+  const firstBIndex = s.indexOf('b');
+  if (lastAIndex === -1 || firstBIndex === -1) {
+    return true;
+  }
+  return lastAIndex < firstBIndex;
+}
+```
+

@@ -1,0 +1,29 @@
+---
+id: '2363'
+title: Merge Similar Items
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Sorting
+- Ordered Set
+url: https://leetcode.com/problems/merge-similar-items
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function mergeSimilarItems(items1: number[][], items2: number[][]): number[][] {
+  const map = new Map<number, number>();
+  function merge(items: number[][]) {
+    for (const [value, weight] of items) {
+      map.set(value, (map.get(value) ?? 0) + weight);
+    }
+  }
+  merge(items1);
+  merge(items2);
+  return Array.from(map.entries()).sort((a, b) => a[0] - b[0]);
+}
+```
+

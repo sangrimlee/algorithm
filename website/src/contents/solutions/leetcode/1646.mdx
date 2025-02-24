@@ -1,0 +1,31 @@
+---
+id: '1646'
+title: Get Maximum in Generated Array
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Simulation
+url: https://leetcode.com/problems/get-maximum-in-generated-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getMaximumGenerated(n: number): number {
+  if (n <= 1) {
+    return n;
+  }
+  const dp = new Array(n + 1).fill(0);
+  dp[1] = 1;
+
+  let answer = 1;
+  for (let i = 2; i <= n; i++) {
+    const prevIndex = Math.floor(i / 2);
+    dp[i] = i % 2 === 0 ? dp[prevIndex] : dp[prevIndex] + dp[prevIndex + 1];
+    answer = Math.max(answer, dp[i]);
+  }
+  return answer;
+}
+```
+

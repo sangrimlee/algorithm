@@ -1,0 +1,26 @@
+---
+id: '198'
+title: House Robber
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Dynamic Programming
+url: https://leetcode.com/problems/house-robber
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function rob(nums: number[]): number {
+  let [prev, curr] = [0, 0];
+  for (const num of nums) {
+    const next = Math.max(curr, prev + num);
+    prev = curr;
+    curr = next;
+  }
+
+  return curr;
+}
+```
+

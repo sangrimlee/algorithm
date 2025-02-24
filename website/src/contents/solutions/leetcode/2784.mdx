@@ -1,0 +1,30 @@
+---
+id: '2784'
+title: Check if Array is Good
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Sorting
+url: https://leetcode.com/problems/check-if-array-is-good
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isGood(nums: number[]): boolean {
+  const n = nums.length - 1;
+  const counter = new Map<number, number>();
+
+  for (const num of nums) {
+    if (n < num) {
+      return false;
+    }
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  }
+
+  return [...counter].every(([num, count]) => (num === n ? count === 2 : count === 1));
+}
+```
+

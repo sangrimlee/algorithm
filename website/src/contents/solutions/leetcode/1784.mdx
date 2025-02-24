@@ -1,0 +1,18 @@
+---
+id: '1784'
+title: Check if Binary String Has at Most One Segment of Ones
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkOnesSegment(s: string): boolean {
+  return !s.includes('01');
+}
+```
+

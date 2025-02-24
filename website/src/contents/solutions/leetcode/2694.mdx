@@ -1,0 +1,64 @@
+---
+id: '2694'
+title: Event Emitter
+category: JavaScript
+difficulty: Medium
+tags: []
+url: https://leetcode.com/problems/event-emitter
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+/* eslint-disable @typescript-eslint/no-explicit-any */
+type Callback = (...args: any[]) => any;
+type Subscription = {
+  unsubscribe: () => void;
+};
+
+export class EventEmitter {
+  private readonly events: Map<string, Set<Callback>>;
+
+  constructor() {
+    this.events = new Map();
+  }
+
+  private addEvent(eventName: string, callback: Callback): void {
+    const callbacks = this.events.get(eventName);
+    if (callbacks === undefined) {
+      this.events.set(eventName, new Set([callback]));
+      return;
+    }
+    callbacks.add(callback);
+  }
+
+  private removeEvent(eventName: string, callback: Callback): void {
+    const callbacks = this.events.get(eventName);
+    if (callbacks === undefined) {
+      return;
+    }
+    callbacks.delete(callback);
+  }
+
+  subscribe(eventName: string, callback: Callback): Subscription {
+    this.addEvent(eventName, callback);
+
+    return {
+      unsubscribe: () => {
+        this.removeEvent(eventName, callback);
+      },
+    };
+  }
+
+  emit(eventName: string, args: any[] = []): any {
+    const callbacks = this.events.get(eventName);
+    if (!callbacks) {
+      return [];
+    }
+    const results: any[] = [];
+    callbacks.forEach((callback) => results.push(callback(...args)));
+    return results;
+  }
+}
+```
+

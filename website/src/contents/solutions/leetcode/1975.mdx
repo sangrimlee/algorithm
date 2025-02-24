@@ -1,0 +1,35 @@
+---
+id: '1975'
+title: Maximum Matrix Sum
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Greedy
+- Matrix
+url: https://leetcode.com/problems/maximum-matrix-sum
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxMatrixSum(matrix: number[][]): number {
+  let answer = 0;
+  let negativeCount = 0;
+  let minValue = Number.MAX_SAFE_INTEGER;
+  matrix.forEach((row) => {
+    row.forEach((value) => {
+      negativeCount += value < 0 ? 1 : 0;
+      answer += Math.abs(value);
+      minValue = Math.min(minValue, Math.abs(value));
+    });
+  });
+  return negativeCount % 2 === 0 ? answer : answer - 2 * minValue;
+}
+```
+
+### Complexity
+
+- Time: $O(n^2)$
+- Space: $O(1)$
+

@@ -1,0 +1,18 @@
+---
+id: '2710'
+title: Remove Trailing Zeros From a String
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/remove-trailing-zeros-from-a-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeTrailingZeros(num: string): string {
+  return num.replace(/0+$/, '');
+}
+```
+

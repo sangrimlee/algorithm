@@ -1,0 +1,23 @@
+---
+id: '1720'
+title: Decode XORed Array
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Bit Manipulation
+url: https://leetcode.com/problems/decode-xored-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function decode(encoded: number[], first: number): number[] {
+  const arr = [first];
+  encoded.forEach((num, i) => {
+    arr.push(num ^ arr[i]);
+  });
+  return arr;
+}
+```
+

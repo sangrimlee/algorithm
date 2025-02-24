@@ -1,0 +1,29 @@
+---
+id: '71'
+title: Simplify Path
+category: Algorithms
+difficulty: Medium
+tags:
+- String
+- Stack
+url: https://leetcode.com/problems/simplify-path
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function simplifyPath(path: string): string {
+  const paths = path.split(/\/+/g);
+  const stack: string[] = [];
+  for (const p of paths) {
+    if (p === '.' || p === '') continue;
+    if (p === '..') {
+      stack.pop();
+    } else {
+      stack.push(p);
+    }
+  }
+  return `/${stack.join('/')}`;
+}
+```
+

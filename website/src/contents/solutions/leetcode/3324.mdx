@@ -1,0 +1,40 @@
+---
+id: '3324'
+title: Find the Sequence of Strings Appeared on the Screen
+category: Algorithms
+difficulty: Medium
+tags:
+- String
+- Simulation
+url: https://leetcode.com/problems/find-the-sequence-of-strings-appeared-on-the-screen
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function stringSequence(target: string): string[] {
+  const answer = [];
+  let s = '';
+  for (const char of target) {
+    for (const alphabet of toAlphabet(char)) {
+      answer.push(s + alphabet);
+    }
+    s += char;
+  }
+  return answer;
+}
+
+function* toAlphabet(char: string) {
+  const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+  for (const alphabet of alphabets) {
+    if (char < alphabet) return;
+    yield alphabet;
+  }
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$, 정답에 대한 복잡도 $O(n)$
+

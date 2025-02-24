@@ -1,0 +1,31 @@
+---
+id: '3024'
+title: Type of Triangle
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Math
+- Sorting
+url: https://leetcode.com/problems/type-of-triangle
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function triangleType(nums: number[]): string {
+  const [a, b, c] = nums.sort((a, b) => a - b);
+  const type = a + b > c ? new Set(nums).size : -1;
+  switch (type) {
+    case 1:
+      return 'equilateral';
+    case 2:
+      return 'isosceles';
+    case 3:
+      return 'scalene';
+    default:
+      return 'none';
+  }
+}
+```
+

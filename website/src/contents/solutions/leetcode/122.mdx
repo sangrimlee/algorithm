@@ -1,0 +1,29 @@
+---
+id: '122'
+title: Best Time to Buy and Sell Stock II
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Dynamic Programming
+- Greedy
+url: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxProfitII(prices: number[]): number {
+  let answer = 0;
+  const stack: number[] = [];
+  for (const price of prices) {
+    const minPrice = stack.pop();
+    if (minPrice !== undefined && minPrice < price) {
+      answer += price - minPrice;
+    }
+    stack.push(price);
+  }
+  return answer;
+}
+```
+

@@ -1,0 +1,24 @@
+---
+id: '3210'
+title: Find the Encrypted String
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/find-the-encrypted-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getEncryptedString(s: string, k: number): string {
+  const i = k % s.length;
+  return s.substring(i) + s.substring(0, i);
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+

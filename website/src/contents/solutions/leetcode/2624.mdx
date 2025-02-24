@@ -1,0 +1,40 @@
+---
+id: '2624'
+title: Snail Traversal
+category: JavaScript
+difficulty: Medium
+tags: []
+url: https://leetcode.com/problems/snail-traversal
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+declare global {
+  interface Array<T> {
+    snail(rowsCount: number, colsCount: number): T[][];
+  }
+}
+
+Array.prototype.snail = function (rowsCount: number, colsCount: number) {
+  if (this.length !== rowsCount * colsCount) {
+    return [];
+  }
+  const arr = Array.from({ length: rowsCount }).map(() => new Array(colsCount).fill(0));
+
+  for (let col = 0; col < colsCount; col++) {
+    for (let row = 0; row < rowsCount; row++) {
+      if (col % 2 === 0) {
+        arr[row][col] = this[col * rowsCount + row];
+      } else {
+        arr[rowsCount - row - 1][col] = this[col * rowsCount + row];
+      }
+    }
+  }
+
+  return arr;
+};
+
+export {};
+```
+

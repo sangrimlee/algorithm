@@ -1,0 +1,28 @@
+---
+id: '1725'
+title: Number Of Rectangles That Can Form The Largest Square
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/number-of-rectangles-that-can-form-the-largest-square
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countGoodRectangles(rectangles: number[][]): number {
+  let maxLen = 0;
+  let maxCount = 0;
+  for (const [l, w] of rectangles) {
+    const sideLen = Math.min(l, w);
+    if (maxLen < sideLen) {
+      [maxCount, maxLen] = [1, sideLen];
+    } else if (maxLen === sideLen) {
+      maxCount += 1;
+    }
+  }
+  return maxCount;
+}
+```
+

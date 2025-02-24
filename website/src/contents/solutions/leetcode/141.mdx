@@ -1,0 +1,36 @@
+---
+id: '141'
+title: Linked List Cycle
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- Linked List
+- Two Pointers
+url: https://leetcode.com/problems/linked-list-cycle
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function hasCycle(head: ListNode | null): boolean {
+  if (head === null) {
+    return false;
+  }
+
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head.next;
+
+  while (slow && fast) {
+    if (slow === fast) {
+      return true;
+    }
+    slow = slow.next;
+    fast = fast.next ? fast.next.next : null;
+  }
+  return false;
+}
+```
+

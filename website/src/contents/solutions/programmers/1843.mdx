@@ -1,0 +1,53 @@
+---
+id: '1843'
+title: 사칙연산
+level: 4
+url: https://school.programmers.co.kr/learn/courses/30/lessons/1843
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function fourOperations(arr: string[]) {
+  const nums: number[] = [];
+  const operations: string[] = [];
+  arr.forEach((value, i) => {
+    if (i % 2 === 0) {
+      nums.push(parseInt(value, 10));
+    } else {
+      operations.push(value);
+    }
+  });
+
+  const operate = (a: [number, number], b: [number, number], op: string): [number, number] => {
+    if (op === '+') {
+      return [a[0] + b[0], a[1] + b[1]];
+    }
+    return [a[0] - b[1], a[1] - b[0]];
+  };
+
+  const n = nums.length;
+  const dp: [number, number][][] = Array.from({ length: n }).map(() =>
+    Array.from({ length: n }).map(() => [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]),
+  );
+
+  for (const i of range(n)) {
+    dp[i][i] = [nums[i], nums[i]];
+  }
+
+  for (const k of range(1, n)) {
+    for (const i of range(n - k)) {
+      for (const j of range(i, i + k)) {
+        const [maxValue, minValue] = operate(dp[i][j], dp[j + 1][i + k], operations[j]);
+        dp[i][i + k][0] = Math.max(dp[i][i + k][0], maxValue);
+        dp[i][i + k][1] = Math.min(dp[i][i + k][1], minValue);
+      }
+    }
+  }
+
+  return dp[0][n - 1][0];
+}
+```
+

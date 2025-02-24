@@ -1,0 +1,22 @@
+---
+id: '3131'
+title: Find the Integer Added to Array I
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/find-the-integer-added-to-array-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function addedInteger(nums1: number[], nums2: number[]): number {
+  return min(nums2) - min(nums1);
+}
+
+function min(arr: number[]) {
+  return arr.reduce((prev, num) => (prev < num ? prev : num), Number.MAX_SAFE_INTEGER);
+}
+```
+

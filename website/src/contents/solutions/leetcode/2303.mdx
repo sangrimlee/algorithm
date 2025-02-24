@@ -1,0 +1,26 @@
+---
+id: '2303'
+title: Calculate Amount Paid in Taxes
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Simulation
+url: https://leetcode.com/problems/calculate-amount-paid-in-taxes
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function calculateTax(brackets: number[][], income: number): number {
+  let answer = 0;
+  let current = 0;
+  for (const [upper, percent] of brackets) {
+    const earned = Math.min(upper, income) - current;
+    answer += (earned * percent) / 100;
+    current += earned;
+  }
+  return answer;
+}
+```
+

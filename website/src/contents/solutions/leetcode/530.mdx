@@ -1,0 +1,39 @@
+---
+id: '530'
+title: Minimum Absolute Difference in BST
+category: Algorithms
+difficulty: Easy
+tags:
+- Tree
+- Depth-First Search
+- Breadth-First Search
+- Binary Search Tree
+- Binary Tree
+url: https://leetcode.com/problems/minimum-absolute-difference-in-bst
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function getMinimumDifference(root: TreeNode | null): number {
+  const nodes: number[] = [];
+
+  const inorder = (node: TreeNode | null) => {
+    if (node === null) {
+      return;
+    }
+    inorder(node.left);
+    nodes.push(node.val);
+    inorder(node.right);
+  };
+
+  inorder(root);
+  return nodes.reduce(
+    (prev, curr, i) => (i === 0 ? prev : Math.min(prev, curr - nodes[i - 1])),
+    Number.MAX_SAFE_INTEGER,
+  );
+}
+```
+

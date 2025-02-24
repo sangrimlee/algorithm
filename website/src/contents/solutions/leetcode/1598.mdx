@@ -1,0 +1,29 @@
+---
+id: '1598'
+title: Crawler Log Folder
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+- Stack
+url: https://leetcode.com/problems/crawler-log-folder
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minOperations(logs: string[]): number {
+  let operations = 0;
+  logs.forEach((log) => {
+    if (log === './') return;
+    if (log === '../') {
+      operations = Math.max(0, operations - 1);
+    } else {
+      operations += 1;
+    }
+  });
+  return operations;
+}
+```
+

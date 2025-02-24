@@ -1,0 +1,29 @@
+---
+id: '950'
+title: Reveal Cards In Increasing Order
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Queue
+- Sorting
+- Simulation
+url: https://leetcode.com/problems/reveal-cards-in-increasing-order
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function deckRevealedIncreasing(deck: number[]): number[] {
+  deck.sort((a, b) => b - a);
+  const queue: number[] = [];
+  deck.forEach((card) => {
+    if (0 < queue.length) {
+      queue.push(queue.shift()!);
+    }
+    queue.push(card);
+  });
+  return queue.reverse();
+}
+```
+

@@ -1,0 +1,30 @@
+---
+id: '1475'
+title: Final Prices With a Special Discount in a Shop
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Stack
+- Monotonic Stack
+url: https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function finalPrices(prices: number[]): number[] {
+  const answer = [...prices];
+  const stack: number[] = [];
+  prices.forEach((price, i) => {
+    while (0 < stack.length && price <= prices[stack[stack.length - 1]]) {
+      const prevIndex = stack.pop()!;
+      answer[prevIndex] -= price;
+    }
+    stack.push(i);
+  });
+
+  return answer;
+}
+```
+

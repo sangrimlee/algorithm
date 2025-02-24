@@ -1,0 +1,27 @@
+---
+id: '2022'
+title: Convert 1D Array Into 2D Array
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Matrix
+- Simulation
+url: https://leetcode.com/problems/convert-1d-array-into-2d-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function construct2DArray(original: number[], m: number, n: number): number[][] {
+  if (original.length !== m * n) {
+    return [];
+  }
+  const answer = Array.from({ length: m }).map(() => new Array(n).fill(0));
+  original.forEach((num, i) => {
+    answer[Math.floor(i / n)][i % n] = num;
+  });
+  return answer;
+}
+```
+

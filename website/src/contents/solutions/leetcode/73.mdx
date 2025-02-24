@@ -1,0 +1,54 @@
+---
+id: '73'
+title: Set Matrix Zeroes
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+- Matrix
+url: https://leetcode.com/problems/set-matrix-zeroes
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+/** Do not return anything, modify matrix in-place instead. */
+export function setZeroes(matrix: number[][]): void {
+  const [m, n] = [matrix.length, matrix[0].length];
+
+  let firstColHasZero = false;
+  let firstRowHasZero = false;
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      if (matrix[i][j] === 0) {
+        matrix[i][0] = 0;
+        matrix[0][j] = 0;
+        firstColHasZero ||= j === 0;
+        firstRowHasZero ||= i === 0;
+      }
+    }
+  }
+
+  for (let i = 1; i < m; i++) {
+    for (let j = 1; j < n; j++) {
+      if (matrix[i][0] === 0 || matrix[0][j] === 0) {
+        matrix[i][j] = 0;
+      }
+    }
+  }
+
+  if (firstColHasZero) {
+    for (let i = 0; i < m; i++) {
+      matrix[i][0] = 0;
+    }
+  }
+
+  if (firstRowHasZero) {
+    for (let j = 0; j < n; j++) {
+      matrix[0][j] = 0;
+    }
+  }
+}
+```
+

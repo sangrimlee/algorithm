@@ -1,0 +1,28 @@
+---
+id: '3028'
+title: Ant on the Boundary
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Simulation
+- Prefix Sum
+url: https://leetcode.com/problems/ant-on-the-boundary
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function returnToBoundaryCount(nums: number[]): number {
+  let answer = 0;
+  let step = 0;
+  for (const num of nums) {
+    step += num;
+    if (step === 0) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+

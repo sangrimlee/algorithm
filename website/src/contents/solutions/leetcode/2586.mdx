@@ -1,0 +1,30 @@
+---
+id: '2586'
+title: Count the Number of Vowel Strings in Range
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+- Counting
+url: https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function vowelStrings(words: string[], left: number, right: number): number {
+  function isVowelString(word: string) {
+    return /[aeiou]/.test(word[0]) && /[aeiou]/.test(word[word.length - 1]);
+  }
+
+  let answer = 0;
+  for (let i = left; i <= right; i++) {
+    if (isVowelString(words[i])) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+

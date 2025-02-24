@@ -1,0 +1,96 @@
+---
+id: '3396'
+title: Minimum Number of Operations to Make Elements in Array Distinct
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+url: https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct
+---
+
+## Solution
+
+### Solution1: Using `Map`
+
+```typescript filename="solution.ts" copy
+export function minimumOperations(nums: number[]): number {
+  const n = nums.length;
+  const counter = new Counter(nums);
+
+  let answer = 0;
+  let i = 0;
+  while (!counter.isDistinct() && i < n) {
+    for (const num of nums.slice(i, i + 3)) {
+      counter.sub(num);
+    }
+    i += 3;
+    answer += 1;
+  }
+
+  return answer;
+}
+
+class Counter extends Map<number, number> {
+  constructor(nums: number[]) {
+    super();
+    nums.forEach((num) => {
+      this.add(num);
+    });
+  }
+
+  get(num: number): number {
+    return super.get(num) ?? 0;
+  }
+
+  add(num: number): this {
+    return super.set(num, this.get(num) + 1);
+  }
+
+  sub(num: number): this {
+    return super.set(num, this.get(num) - 1);
+  }
+
+  isDistinct(): boolean {
+    for (const count of this.values()) {
+      if (1 < count) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+```
+
+#### Complexity
+
+- Time: $O(n^2)$
+- Space: $O(n)$
+
+---
+
+### Solution2: Find Last Duplicate Index
+
+```typescript filename="solution.ts" copy
+export function minimumOperations(nums: number[]): number {
+  const lastDuplicate = findLastDuplicate(nums);
+  return Math.ceil((lastDuplicate + 1) / 3);
+}
+
+function findLastDuplicate(nums: number[]) {
+  const set = new Set<number>();
+  for (let i = nums.length; 0 <= i; i--) {
+    if (set.has(nums[i])) {
+      return i;
+    }
+    set.add(nums[i]);
+  }
+  return -1;
+}
+```
+
+#### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$
+

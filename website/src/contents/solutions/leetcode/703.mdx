@@ -1,0 +1,45 @@
+---
+id: '703'
+title: Kth Largest Element in a Stream
+category: Algorithms
+difficulty: Easy
+tags:
+- Tree
+- Design
+- Binary Search Tree
+- Heap (Priority Queue)
+- Binary Tree
+- Data Stream
+url: https://leetcode.com/problems/kth-largest-element-in-a-stream
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export class KthLargest {
+  private readonly k: number;
+  private readonly heap: Heap<number>;
+
+  constructor(k: number, nums: number[]) {
+    this.k = k;
+    this.heap = new Heap((a, b) => a - b);
+    nums.forEach((num) => this.heap.push(num));
+    this.popUntilKth();
+  }
+
+  private popUntilKth() {
+    while (this.k < this.heap.length) {
+      this.heap.pop();
+    }
+  }
+
+  add(val: number) {
+    this.heap.push(val);
+    this.popUntilKth();
+    return this.heap.peek;
+  }
+}
+```
+

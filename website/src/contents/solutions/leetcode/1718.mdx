@@ -1,0 +1,86 @@
+---
+id: '1718'
+title: Construct the Lexicographically Largest Valid Sequence
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Backtracking
+url: https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence
+---
+
+## 문제 설명
+
+주어진 `n`에 대해 다음 조건을 만족하는 배열을 생성합니다.
+
+1. `1`은 배열에서 하나만 존재합니다.
+2. `2`부터 `n`은 배열에 두 번 나타나고, 두 요소 간의 거리는 해당 값과 같아야합니다.
+3. 예를 들어, `0`번 인덱스의 값이 `2`라면 `2`번 인덱스의 값도 `2`여야 합니다.
+4. 위의 조건에 맞는 배열 중에서 `Lexicographically` 가장 큰 배열을 반환합니다.
+5. `Lexicographically`가 크다는 것은, 같은 길이의 두 배열의 요소가 다른 첫번째 위치에서, 값이 더 크다는 의미입니다.
+
+## 문제 풀이
+
+백트래킹을 사용하여 가능한 모든 배열을 탐색하며, 조건을 만족하는 배열을 찾습니다.
+
+배열의 크기는 `2 * n - 1`이며, 가장 큰 숫자부터 채워 넣는 방식으로 탐색을 진행합니다.
+
+탐색 과정은 다음과 같습니다:
+
+1. 현재 인덱스 `i`의 값이 0이 아니라면, 이미 다른 숫자로 채워져 있으므로 다음 인덱스로 넘어갑니다.
+2. `n`부터 `1`까지 역순으로 숫자를 순회하며, 아직 사용되지 않은 숫자가 있다면 해당 숫자를 `i`에 채웁니다.
+3. 숫자가 1인 경우, 한 번만 채우면 되므로 다음 인덱스로 탐색을 진행합니다.
+4. 숫자가 1이 아닌 경우, `i + num` 위치에도 같은 숫자를 배치해야 합니다.
+   - 만약 `i + num`이 배열 범위 내에 있고, 해당 위치가 비어 있다면 숫자를 배치하고 탐색을 진행합니다.
+5. 위 조건을 만족하지 못하는 경우, 배치한 숫자를 `0`으로 되돌리고 다음 숫자를 시도합니다.
+
+이 과정을 반복하여 조건을 만족하는 배열을 구성합니다.
+
+```typescript filename="solution.ts" copy
+export function constructDistancedSequence(n: number): number[] {
+  const size = 2 * n - 1;
+  const sequence = new Array<number>(size).fill(0);
+  const used = new Array<boolean>(n + 1).fill(false);
+  function construct(i: number) {
+    if (i === size) {
+      return true;
+    }
+    if (sequence[i] !== 0) {
+      return construct(i + 1);
+    }
+
+    for (let num = n; 0 < num; num--) {
+      if (used[num]) {
+        continue;
+      }
+
+      used[num] = true;
+      sequence[i] = num;
+      if (num === 1) {
+        if (construct(i + 1)) {
+          return true;
+        }
+      } else if (i + num < size && sequence[i + num] === 0) {
+        sequence[i + num] = num;
+        if (construct(i + 1)) {
+          return true;
+        }
+        sequence[i + num] = 0;
+      }
+      sequence[i] = 0;
+      used[num] = false;
+    }
+
+    return false;
+  }
+
+  construct(0);
+  return sequence;
+}
+```
+
+## 복잡도
+
+- 시간 복잡도: $O(n!)$
+- 공간 복잡도: $O(n)$
+

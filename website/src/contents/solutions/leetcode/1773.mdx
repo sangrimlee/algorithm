@@ -1,0 +1,20 @@
+---
+id: '1773'
+title: Count Items Matching a Rule
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+url: https://leetcode.com/problems/count-items-matching-a-rule
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countMatches(items: string[][], ruleKey: string, ruleValue: string): number {
+  const itemIndex = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2;
+  return items.filter((item) => item[itemIndex] === ruleValue).length;
+}
+```
+

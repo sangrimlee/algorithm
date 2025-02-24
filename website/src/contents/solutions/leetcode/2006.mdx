@@ -1,0 +1,30 @@
+---
+id: '2006'
+title: Count Number of Pairs With Absolute Difference K
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Counting
+url: https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countKDifference(nums: number[], k: number): number {
+  const n = nums.length;
+
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (Math.abs(nums[i] - nums[j]) === k) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+

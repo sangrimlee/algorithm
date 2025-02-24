@@ -1,0 +1,40 @@
+---
+id: '1190'
+title: Reverse Substrings Between Each Pair of Parentheses
+category: Algorithms
+difficulty: Medium
+tags:
+- String
+- Stack
+url: https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reverseParentheses(s: string): string {
+  const stack = [''];
+  for (const char of s) {
+    if (char === '(') {
+      stack.push('');
+    } else if (char === ')') {
+      const prev = stack.pop()!;
+      stack[stack.length - 1] += reverseString(prev);
+    } else {
+      stack[stack.length - 1] += char;
+    }
+  }
+
+  return stack.join('');
+}
+
+function reverseString(s: string) {
+  return [...s].reverse().join('');
+}
+```
+
+### Complexity
+
+- Time: `O(N^2)`
+- Space: `O(N)`
+

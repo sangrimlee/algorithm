@@ -1,0 +1,24 @@
+---
+id: '2278'
+title: Percentage of Letter in String
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/percentage-of-letter-in-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function percentageLetter(s: string, letter: string): number {
+  let letterCount = 0;
+  for (const char of s) {
+    if (char === letter) {
+      letterCount += 1;
+    }
+  }
+  return Math.floor((letterCount / s.length) * 100);
+}
+```
+

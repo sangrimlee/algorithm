@@ -1,0 +1,22 @@
+---
+id: '2894'
+title: Divisible and Non-divisible Sums Difference
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+url: https://leetcode.com/problems/divisible-and-non-divisible-sums-difference
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function differenceOfSums(n: number, m: number): number {
+  let answer = 0;
+  for (let num = 1; num <= n; num++) {
+    answer += num % m !== 0 ? num : -num;
+  }
+  return answer;
+}
+```
+

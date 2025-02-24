@@ -1,0 +1,35 @@
+---
+id: '3386'
+title: Button with Longest Push Time
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/button-with-longest-push-time
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function buttonWithLongestTime(events: number[][]): number {
+  let longestTime = 0;
+  let longestIndex = 0;
+  let prevTime = 0;
+  for (const [index, time] of events) {
+    const currentTime = time - prevTime;
+    if (longestTime < currentTime) {
+      [longestTime, longestIndex] = [currentTime, index];
+    } else if (longestTime === currentTime) {
+      longestIndex = Math.min(index, longestIndex);
+    }
+    prevTime = time;
+  }
+  return longestIndex;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+

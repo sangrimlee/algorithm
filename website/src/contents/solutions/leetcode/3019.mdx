@@ -1,0 +1,25 @@
+---
+id: '3019'
+title: Number of Changing Keys
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/number-of-changing-keys
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countKeyChanges(s: string): number {
+  const str = s.toLowerCase();
+  let answer = 0;
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] !== str[i + 1]) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+

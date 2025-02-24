@@ -1,0 +1,112 @@
+---
+id: '632'
+title: Smallest Range Covering Elements from K Lists
+category: Algorithms
+difficulty: Hard
+tags:
+- Array
+- Hash Table
+- Greedy
+- Sliding Window
+- Sorting
+- Heap (Priority Queue)
+url: https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists
+---
+
+## Solution
+
+### Solution1: `Heap`
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function smallestRange(nums: number[][]): number[] {
+  const k = nums.length;
+  const heap = new Heap<number[]>(sortArr);
+
+  let maxValue = Number.MIN_SAFE_INTEGER;
+  let [start, end] = [0, Number.MAX_SAFE_INTEGER];
+  for (let i = 0; i < k; i++) {
+    heap.push([nums[i][0], i, 0]);
+    maxValue = Math.max(maxValue, nums[i][0]);
+  }
+
+  while (heap.length === nums.length) {
+    const [minValue, row, col] = heap.pop()!;
+    if (maxValue - minValue < end - start) {
+      start = minValue;
+      end = maxValue;
+    }
+
+    if (col + 1 < nums[row].length) {
+      const nextValue = nums[row][col + 1];
+      heap.push([nextValue, row, col + 1]);
+      maxValue = Math.max(maxValue, nextValue);
+    }
+  }
+
+  return [start, end];
+}
+
+function sortArr(a: number[], b: number[]) {
+  for (let i = 0; i < Math.min(a.length, b.length); i++) {
+    if (a[i] !== b[i]) {
+      return a[i] - b[i];
+    }
+  }
+  return 0;
+}
+```
+
+#### Complexity
+
+`N`: `nums`의 길이, `K`: `nums`의 요소의 길이
+
+- Time: `O(NlogK)`
+- Space: `O(k)`
+
+---
+
+### Solution2: `Two Pointer`
+
+```typescript filename="solution.ts" copy
+export function smallestRange(nums: number[][]): number[] {
+  const k = nums.length;
+  const merged = nums.flatMap((num, col) => num.map((value) => [value, col]));
+  merged.sort((a, b) => a[0] - b[0]);
+
+  const freq = new Map<number, number>();
+  let [left, count] = [0, 0];
+  let [start, end] = [0, Number.MAX_SAFE_INTEGER];
+
+  for (let right = 0; right < merged.length; right++) {
+    const rightCol = merged[right][1];
+    freq.set(rightCol, (freq.get(rightCol) ?? 0) + 1);
+    if (freq.get(rightCol) === 1) {
+      count += 1;
+    }
+
+    while (count === k) {
+      const range = merged[right][0] - merged[left][0];
+      if (range < end - start) {
+        [start, end] = [merged[left][0], merged[right][0]];
+      }
+
+      const leftCol = merged[left][1];
+      freq.set(leftCol, (freq.get(leftCol) ?? 0) - 1);
+      if (freq.get(leftCol) === 0) {
+        count -= 1;
+      }
+      left += 1;
+    }
+  }
+
+  return [start, end];
+}
+```
+
+#### Complexity
+
+- Time: `O(NlogN)`
+- Space: `O(N)`
+

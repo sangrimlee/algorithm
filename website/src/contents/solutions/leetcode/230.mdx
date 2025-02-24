@@ -1,0 +1,37 @@
+---
+id: '230'
+title: Kth Smallest Element in a BST
+category: Algorithms
+difficulty: Medium
+tags:
+- Tree
+- Depth-First Search
+- Binary Search Tree
+- Binary Tree
+url: https://leetcode.com/problems/kth-smallest-element-in-a-bst
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function kthSmallest(root: TreeNode | null, k: number): number {
+  let count = 0;
+  let answer = 0;
+  function countNode(node: TreeNode | null, k: number) {
+    if (node === null) {
+      return;
+    }
+    countNode(node.left, k);
+    count += 1;
+    if (k === count) {
+      answer = node.val;
+    }
+    countNode(node.right, k);
+  }
+  countNode(root, k);
+  return answer;
+}
+```
+

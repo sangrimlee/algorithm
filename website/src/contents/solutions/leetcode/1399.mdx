@@ -1,0 +1,31 @@
+---
+id: '1399'
+title: Count Largest Group
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- Math
+url: https://leetcode.com/problems/count-largest-group
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countLargestGroup(n: number): number {
+  const sumOfDigits = (n: number) => {
+    return [...n.toString()].reduce((sum, digit) => sum + +digit, 0);
+  };
+  const groups = new Map<number, number>();
+  let largestGroupSize = 0;
+  for (let i = 1; i <= n; i++) {
+    const group = sumOfDigits(i);
+    const groupSize = (groups.get(group) ?? 0) + 1;
+    groups.set(group, groupSize);
+    largestGroupSize = Math.max(groupSize, largestGroupSize);
+  }
+
+  return [...groups.values()].filter((groupSize) => groupSize === largestGroupSize).length;
+}
+```
+

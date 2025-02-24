@@ -1,0 +1,22 @@
+---
+id: '1331'
+title: Rank Transform of an Array
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Sorting
+url: https://leetcode.com/problems/rank-transform-of-an-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function arrayRankTransform(arr: number[]): number[] {
+  const ranks = new Map([...new Set(arr)].sort((a, b) => a - b).map((num, i) => [num, i + 1]));
+
+  return arr.map((num) => ranks.get(num) || 0);
+}
+```
+

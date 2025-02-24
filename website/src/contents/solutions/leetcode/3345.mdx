@@ -1,0 +1,32 @@
+---
+id: '3345'
+title: Smallest Divisible Digit Product I
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- Enumeration
+url: https://leetcode.com/problems/smallest-divisible-digit-product-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function smallestNumber(n: number, t: number): number {
+  let curr = n;
+  while (productDigits(curr) % t !== 0) {
+    curr += 1;
+  }
+  return curr;
+}
+
+function productDigits(num: number) {
+  return [...num.toString()].reduce((acc, digit) => acc * +digit, 1);
+}
+```
+
+### Complexity
+
+- Time: $O(t)$
+- Space: $O(1)$
+

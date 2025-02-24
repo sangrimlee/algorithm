@@ -1,0 +1,40 @@
+---
+id: '1861'
+title: Rotating the Box
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Two Pointers
+- Matrix
+url: https://leetcode.com/problems/rotating-the-box
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function rotateTheBox(box: string[][]): string[][] {
+  const [m, n] = [box.length, box[0].length];
+  const answer = Array.from({ length: n }, () => new Array<string>(m).fill('.'));
+  for (let y = 0; y < m; y++) {
+    let lastPosition = n - 1;
+    for (let x = n - 1; 0 <= x; x--) {
+      if (box[y][x] === '.') continue;
+      if (box[y][x] === '#') {
+        answer[lastPosition][m - y - 1] = '#';
+        lastPosition -= 1;
+      } else {
+        answer[x][m - y - 1] = '*';
+        lastPosition = x - 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(m \cdot n)$
+- Space: $O(m \cdot n)$
+

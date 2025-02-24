@@ -1,0 +1,36 @@
+---
+id: '763'
+title: Partition Labels
+category: Algorithms
+difficulty: Medium
+tags:
+- Hash Table
+- Two Pointers
+- String
+- Greedy
+url: https://leetcode.com/problems/partition-labels
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function partitionLabels(s: string): number[] {
+  const answer: number[] = [];
+  const endIndices = new Map<string, number>();
+  for (let i = 0; i < s.length; i++) {
+    endIndices.set(s[i], i);
+  }
+
+  let startIndex = 0;
+  let endIndex = 0;
+  for (let i = 0; i < s.length; i++) {
+    endIndex = Math.max(endIndex, endIndices.get(s[i])!);
+    if (endIndex === i) {
+      answer.push(endIndex - startIndex + 1);
+      startIndex = endIndex + 1;
+    }
+  }
+  return answer;
+}
+```
+

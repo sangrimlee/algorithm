@@ -1,0 +1,22 @@
+---
+id: '728'
+title: Self Dividing Numbers
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+url: https://leetcode.com/problems/self-dividing-numbers
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function selfDividingNumbers(left: number, right: number): number[] {
+  const isDivisible = (num: number) =>
+    [...num.toString()].every((digit) => num % parseInt(digit) === 0);
+  return [...range(left, right + 1)].filter(isDivisible);
+}
+```
+

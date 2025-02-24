@@ -1,0 +1,40 @@
+---
+id: '1497'
+title: Check If Array Pairs Are Divisible by k
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+- Counting
+url: https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function canArrange(arr: number[], k: number): boolean {
+  const counter = new Array(k).fill(0);
+  for (const num of arr) {
+    const remainder = ((num % k) + k) % k;
+    counter[remainder] += 1;
+  }
+
+  if (counter[0] % 2 !== 0) {
+    return false;
+  }
+
+  for (let i = 1; i <= k / 2; i++) {
+    if (counter[i] !== counter[k - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(K)`
+

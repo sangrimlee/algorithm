@@ -1,0 +1,21 @@
+---
+id: '3158'
+title: Find the XOR of Numbers Which Appear Twice
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Bit Manipulation
+url: https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function duplicateNumbersXOR(nums: number[]): number {
+  const arr = [...nums, ...new Set(nums)];
+  return arr.reduce((acc, num) => acc ^ num, 0);
+}
+```
+

@@ -1,0 +1,24 @@
+---
+id: '179'
+title: Largest Number
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- String
+- Greedy
+- Sorting
+url: https://leetcode.com/problems/largest-number
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function largestNumber(nums: number[]): string {
+  return nums
+    .sort((a, b) => (`${a}${b}` > `${b}${a}` ? -1 : 1))
+    .join('')
+    .replace(/^0+/, '0');
+}
+```
+

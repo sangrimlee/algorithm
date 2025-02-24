@@ -1,0 +1,30 @@
+---
+id: '2914'
+title: Minimum Number of Changes to Make Binary String Beautiful
+category: Algorithms
+difficulty: Medium
+tags:
+- String
+url: https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minChanges(s: string): number {
+  const n = s.length;
+  let answer = 0;
+  for (let i = 0; i < n; i += 2) {
+    if (s[i] !== s[i + 1]) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+

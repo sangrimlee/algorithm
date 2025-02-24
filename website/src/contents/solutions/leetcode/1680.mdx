@@ -1,0 +1,26 @@
+---
+id: '1680'
+title: Concatenation of Consecutive Binary Numbers
+category: Algorithms
+difficulty: Medium
+tags:
+- Math
+- Bit Manipulation
+- Simulation
+url: https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function concatenatedBinary(n: number): number {
+  let answer = 1;
+  const MOD = 10 ** 9 + 7;
+  for (let i = 2; i <= n; i++) {
+    const binaryString = i.toString(2);
+    answer = (answer * 2 ** binaryString.length + i) % MOD;
+  }
+  return answer;
+}
+```
+

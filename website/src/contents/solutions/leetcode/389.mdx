@@ -1,0 +1,28 @@
+---
+id: '389'
+title: Find the Difference
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- String
+- Bit Manipulation
+- Sorting
+url: https://leetcode.com/problems/find-the-difference
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findTheDifference(s: string, t: string): string {
+  let answer = 0;
+  for (const char of s) {
+    answer ^= char.charCodeAt(0);
+  }
+  for (const char of t) {
+    answer ^= char.charCodeAt(0);
+  }
+  return String.fromCharCode(answer);
+}
+```
+

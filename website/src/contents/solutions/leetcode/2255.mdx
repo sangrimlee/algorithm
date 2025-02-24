@@ -1,0 +1,19 @@
+---
+id: '2255'
+title: Count Prefixes of a Given String
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+url: https://leetcode.com/problems/count-prefixes-of-a-given-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPrefixes(words: string[], s: string): number {
+  return words.reduce((prev, word) => (s.startsWith(word) ? prev + 1 : prev), 0);
+}
+```
+

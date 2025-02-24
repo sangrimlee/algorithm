@@ -1,0 +1,34 @@
+---
+id: '2028'
+title: Find Missing Observations
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Math
+- Simulation
+url: https://leetcode.com/problems/find-missing-observations
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function missingRolls(rolls: number[], mean: number, n: number): number[] {
+  const m = rolls.length;
+  const totalValue = mean * (n + m);
+  const remainValue = totalValue - rolls.reduce((acc, roll) => acc + roll, 0);
+
+  if (remainValue < n || 6 * n < remainValue) {
+    return [];
+  }
+
+  const [quotient, remainder] = [Math.floor(remainValue / n), remainValue % n];
+  return Array.from({ length: n }, (_, i) => (i < remainder ? quotient + 1 : quotient));
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+

@@ -1,0 +1,44 @@
+---
+id: '1370'
+title: Increasing Decreasing String
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- String
+- Counting
+url: https://leetcode.com/problems/increasing-decreasing-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sortString(s: string): string {
+  const n = s.length;
+  const counter = new Map<string, number>();
+  for (const char of s) {
+    counter.set(char, (counter.get(char) ?? 0) + 1);
+  }
+  const keys = [...counter.keys()].sort();
+  const getCharacters = (reverse = false) => {
+    let characters = '';
+    for (const key of keys) {
+      const count = counter.get(key) ?? 0;
+      if (0 < count) {
+        characters = reverse ? key + characters : characters + key;
+        counter.set(key, count - 1);
+      }
+    }
+    return characters;
+  };
+
+  let answer = '';
+  let reversed = false;
+  while (answer.length < n) {
+    answer += getCharacters(reversed);
+    reversed = !reversed;
+  }
+  return answer;
+}
+```
+

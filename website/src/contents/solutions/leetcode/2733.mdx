@@ -1,0 +1,29 @@
+---
+id: '2733'
+title: Neither Minimum nor Maximum
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Sorting
+url: https://leetcode.com/problems/neither-minimum-nor-maximum
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findNonMinOrMax(nums: number[]): number {
+  const [minValue, maxValue] = nums.reduce(
+    ([prevMin, prevMax], num) => [Math.min(prevMin, num), Math.max(prevMax, num)],
+    [Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER],
+  );
+
+  for (const num of nums) {
+    if (num !== minValue && num !== maxValue) {
+      return num;
+    }
+  }
+  return -1;
+}
+```
+

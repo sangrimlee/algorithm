@@ -1,0 +1,31 @@
+---
+id: '3159'
+title: Find Occurrences of an Element in an Array
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+url: https://leetcode.com/problems/find-occurrences-of-an-element-in-an-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function occurrencesOfElement(nums: number[], queries: number[], x: number): number[] {
+  const indices: number[] = [];
+  nums.forEach((num, i) => {
+    if (num === x) {
+      indices.push(i);
+    }
+  });
+
+  return queries.map((query) => (query <= indices.length ? indices[query - 1] : -1));
+}
+```
+
+### Complexity
+
+- Time: `O(N+M)`
+- Space: `O(N)`
+

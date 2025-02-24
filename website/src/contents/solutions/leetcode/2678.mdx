@@ -1,0 +1,22 @@
+---
+id: '2678'
+title: Number of Senior Citizens
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+url: https://leetcode.com/problems/number-of-senior-citizens
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countSeniors(details: string[]): number {
+  function isSenior(detail: string) {
+    return 60 < parseInt(detail.substring(11, 13), 10);
+  }
+  return details.filter(isSenior).length;
+}
+```
+

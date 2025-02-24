@@ -1,0 +1,36 @@
+---
+id: '1207'
+title: Unique Number of Occurrences
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+url: https://leetcode.com/problems/unique-number-of-occurrences
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function uniqueOccurrences(arr: number[]): boolean {
+  if (arr.length <= 1) {
+    return true;
+  }
+
+  const map = new Map<number, number>();
+  for (const num of arr) {
+    map.set(num, (map.get(num) || 0) + 1);
+  }
+
+  const set = new Set();
+  for (const count of map.values()) {
+    if (set.has(count)) {
+      return false;
+    }
+    set.add(count);
+  }
+
+  return true;
+}
+```
+

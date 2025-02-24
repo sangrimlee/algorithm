@@ -1,0 +1,30 @@
+---
+id: '258'
+title: Add Digits
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- Simulation
+- Number Theory
+url: https://leetcode.com/problems/add-digits
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function addDigits(num: number): number {
+  return ((num - 1) % 9) + 1;
+}
+
+/**
+function addDigits(num: number): number {
+  let current = num;
+  while (10 <= current) {
+    current = [...current.toString()].reduce((acc, curr) => acc + parseInt(curr, 10), 0);
+  }
+  return current;
+};
+*/
+```
+

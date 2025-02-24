@@ -1,0 +1,30 @@
+---
+id: '2044'
+title: Count Number of Maximum Bitwise-OR Subsets
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Backtracking
+- Bit Manipulation
+- Enumeration
+url: https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countMaxOrSubsets(nums: number[]): number {
+  const maxOr = nums.reduce((prev, num) => prev | num, 0);
+
+  function dfs(i: number, or: number): number {
+    if (i === nums.length) {
+      return or === maxOr ? 1 : 0;
+    }
+    return dfs(i + 1, or) + dfs(i + 1, or | nums[i]);
+  }
+
+  return dfs(0, 0);
+}
+```
+

@@ -1,0 +1,25 @@
+---
+id: '58'
+title: Length of Last Word
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/length-of-last-word
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function lengthOfLastWord(s: string): number {
+  let [start, end] = [s.length - 1, -1];
+  while (0 <= start && (s[start] !== ' ' || end < 0)) {
+    if (s[start] !== ' ' && end < 0) {
+      end = start;
+    }
+    start -= 1;
+  }
+  return end - start;
+}
+```
+

@@ -1,0 +1,30 @@
+---
+id: '2997'
+title: Minimum Number of Operations to Make Array XOR Equal to K
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Bit Manipulation
+url: https://leetcode.com/problems/minimum-number-of-operations-to-make-array-xor-equal-to-k
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minOperations(nums: number[], k: number): number {
+  function countBit(num: number) {
+    let count = 0;
+    while (0 < num) {
+      if ((num & 1) === 1) {
+        count += 1;
+      }
+      num >>= 1;
+    }
+    return count;
+  }
+
+  return countBit(nums.reduce((acc, num) => acc ^ num, k));
+}
+```
+

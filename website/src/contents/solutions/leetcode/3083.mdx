@@ -1,0 +1,30 @@
+---
+id: '3083'
+title: Existence of a Substring in a String and Its Reverse
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- String
+url: https://leetcode.com/problems/existence-of-a-substring-in-a-string-and-its-reverse
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isSubstringPresent(s: string): boolean {
+  const n = s.length;
+  const substrings = new Set();
+  for (let i = 0; i < n - 1; i++) {
+    substrings.add(s[i] + s[i + 1]);
+  }
+
+  for (let i = n - 1; 0 < i; i--) {
+    if (substrings.has(s[i] + s[i - 1])) {
+      return true;
+    }
+  }
+  return false;
+}
+```
+

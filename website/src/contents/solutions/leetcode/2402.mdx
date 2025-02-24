@@ -1,0 +1,66 @@
+---
+id: '2402'
+title: Meeting Rooms III
+category: Algorithms
+difficulty: Hard
+tags:
+- Array
+- Hash Table
+- Sorting
+- Heap (Priority Queue)
+- Simulation
+url: https://leetcode.com/problems/meeting-rooms-iii
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function mostBooked(n: number, meetings: number[][]): number {
+  function sortFn<T extends number | number[]>(a: T, b: T): number {
+    if (typeof a === 'number' && typeof b === 'number') {
+      return a - b;
+    }
+    if (Array.isArray(a) && Array.isArray(b)) {
+      for (let i = 0; i < Math.min(a.length, b.length); i++) {
+        if (a[i] !== b[i]) {
+          return a[i] - b[i];
+        }
+      }
+      return a.length - b.length;
+    }
+    return 0;
+  }
+
+  meetings.sort(sortFn);
+
+  const availables = new Heap<number>(sortFn);
+  const reservations = new Heap<[number, number]>(sortFn);
+
+  for (let i = 0; i < n; i++) {
+    availables.push(i);
+  }
+
+  const bookedCount = new Array<number>(n).fill(0);
+  for (const [start, end] of meetings) {
+    while (0 < reservations.length && reservations.peek![0] <= start) {
+      const [, room] = reservations.pop()!;
+      availables.push(room);
+    }
+
+    if (0 < availables.length) {
+      const room = availables.pop()!;
+      reservations.push([end, room]);
+      bookedCount[room] += 1;
+    } else {
+      const [time, room] = reservations.pop()!;
+      reservations.push([time + end - start, room]);
+      bookedCount[room] += 1;
+    }
+  }
+
+  return bookedCount.indexOf(Math.max(...bookedCount));
+}
+```
+

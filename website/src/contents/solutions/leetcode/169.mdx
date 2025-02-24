@@ -1,0 +1,30 @@
+---
+id: '169'
+title: Majority Element
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Divide and Conquer
+- Sorting
+- Counting
+url: https://leetcode.com/problems/majority-element
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function majorityElement(nums: number[]): number {
+  let count = 0;
+  let majority = Infinity;
+  for (const num of nums) {
+    if (count === 0) {
+      majority = num;
+    }
+    count += majority === num ? 1 : -1;
+  }
+  return majority;
+}
+```
+

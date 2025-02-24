@@ -1,0 +1,37 @@
+---
+id: '523'
+title: Continuous Subarray Sum
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+- Math
+- Prefix Sum
+url: https://leetcode.com/problems/continuous-subarray-sum
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkSubarraySum(nums: number[], k: number): boolean {
+  const n = nums.length;
+  const map = new Map<number, number>([[0, -1]]);
+
+  let diff = 0;
+  for (let i = 0; i < n; i++) {
+    diff = (diff + nums[i]) % k;
+
+    const prevIndex = map.get(diff);
+    if (prevIndex !== undefined) {
+      if (i - prevIndex > 1) {
+        return true;
+      }
+    } else {
+      map.set(diff, i);
+    }
+  }
+  return false;
+}
+```
+

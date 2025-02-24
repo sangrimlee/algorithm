@@ -1,0 +1,31 @@
+---
+id: '429'
+title: N-ary Tree Level Order Traversal
+category: Algorithms
+difficulty: Medium
+tags:
+- Tree
+- Breadth-First Search
+url: https://leetcode.com/problems/n-ary-tree-level-order-traversal
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { NArrayTreeNode } from '@algorithm/lib';
+
+export function levelOrder(root: NArrayTreeNode | null): number[][] {
+  if (root === null) {
+    return [];
+  }
+
+  const answer: number[][] = [];
+  let currentNodes = [root];
+  while (0 < currentNodes.length) {
+    answer.push(currentNodes.map((currentNode) => currentNode.val));
+    currentNodes = currentNodes.flatMap((currentNode) => currentNode.children);
+  }
+  return answer;
+}
+```
+

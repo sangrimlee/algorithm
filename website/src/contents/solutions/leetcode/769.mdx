@@ -1,0 +1,36 @@
+---
+id: '769'
+title: Max Chunks To Make Sorted
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Stack
+- Greedy
+- Sorting
+- Monotonic Stack
+url: https://leetcode.com/problems/max-chunks-to-make-sorted
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxChunksToSorted(arr: number[]): number {
+  let answer = 0;
+  let [prefixSum, targetSum] = [0, 0];
+  arr.forEach((num, i) => {
+    prefixSum += num;
+    targetSum += i;
+    if (prefixSum === targetSum) {
+      answer += 1;
+    }
+  });
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+

@@ -1,0 +1,63 @@
+---
+id: '2257'
+title: Count Unguarded Cells in the Grid
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Matrix
+- Simulation
+url: https://leetcode.com/problems/count-unguarded-cells-in-the-grid
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countUnguarded(
+  m: number,
+  n: number,
+  guards: number[][],
+  walls: number[][],
+): number {
+  const grid = Array.from({ length: m }, () => new Array(n).fill(0));
+  const directions = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [-1, 0],
+  ];
+  guards.forEach(([y, x]) => {
+    grid[y][x] = 2;
+  });
+  walls.forEach(([y, x]) => {
+    grid[y][x] = 3;
+  });
+
+  for (const [y, x] of guards) {
+    for (const [dy, dx] of directions) {
+      dfs(grid, y + dy, x + dx, dy, dx);
+    }
+  }
+
+  return grid.reduce((prev, row) => prev + row.filter((v) => v === 0).length, 0);
+}
+
+function dfs(grid: number[][], y: number, x: number, dy: number, dx: number): void {
+  if (!isUnguarded(grid, y, x)) {
+    return;
+  }
+  grid[y][x] = 1;
+  dfs(grid, y + dy, x + dx, dy, dx);
+}
+
+function isUnguarded(grid: number[][], y: number, x: number): boolean {
+  const [m, n] = [grid.length, grid[0].length];
+  return 0 <= y && y < m && 0 <= x && x < n && grid[y][x] !== 2 && grid[y][x] !== 3;
+}
+```
+
+### Complexity
+
+- Time: $O(m \cdot n + g \cdot (m + n))$
+- Space: $O(m \cdot n)$
+

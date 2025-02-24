@@ -1,0 +1,30 @@
+---
+id: '2591'
+title: Distribute Money to Maximum Children
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- Greedy
+url: https://leetcode.com/problems/distribute-money-to-maximum-children
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function distMoney(money: number, children: number): number {
+  const remainMoney = money - children;
+  if (remainMoney < 0) {
+    return -1;
+  }
+  const maxDistMoney = Math.floor(remainMoney / 7);
+  if (maxDistMoney === children && remainMoney % 7 === 0) {
+    return children;
+  }
+  if (maxDistMoney === children - 1 && remainMoney % 7 === 3) {
+    return children - 2;
+  }
+  return Math.min(children - 1, maxDistMoney);
+}
+```
+

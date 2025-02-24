@@ -1,0 +1,34 @@
+---
+id: '837'
+title: New 21 Game
+category: Algorithms
+difficulty: Medium
+tags:
+- Math
+- Dynamic Programming
+- Sliding Window
+- Probability and Statistics
+url: https://leetcode.com/problems/new-21-game
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function new21Game(n: number, k: number, maxPts: number): number {
+  const dp = new Array(n + 1).fill(0);
+  dp[0] = 1;
+
+  for (const i of range(1, n + 1)) {
+    for (const point of range(1, maxPts + 1)) {
+      if (point <= i && i - point < k) {
+        dp[i] += dp[i - point] / maxPts;
+      }
+    }
+  }
+
+  return dp.slice(k).reduce((acc, curr) => acc + curr, 0);
+}
+```
+

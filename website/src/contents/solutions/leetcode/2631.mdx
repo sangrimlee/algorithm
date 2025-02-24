@@ -1,0 +1,33 @@
+---
+id: '2631'
+title: Group By
+category: JavaScript
+difficulty: Medium
+tags: []
+url: https://leetcode.com/problems/group-by
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+declare global {
+  interface Array<T> {
+    groupBy(fn: (item: T) => string): Record<string, T[]>;
+  }
+}
+
+Array.prototype.groupBy = function (fn) {
+  return this.reduce((group, item) => {
+    const key = fn(item);
+    if (group[key]) {
+      group[key].push(item);
+    } else {
+      group[key] = [item];
+    }
+    return group;
+  }, {});
+};
+
+export {};
+```
+

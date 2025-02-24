@@ -1,0 +1,29 @@
+---
+id: '2695'
+title: Array Wrapper
+category: JavaScript
+difficulty: Easy
+tags: []
+url: https://leetcode.com/problems/array-wrapper
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class ArrayWrapper {
+  private readonly nums: number[];
+
+  constructor(nums: number[]) {
+    this.nums = nums;
+  }
+
+  valueOf() {
+    return this.nums.reduce((a, b) => a + b, 0);
+  }
+
+  toString() {
+    return `[${this.nums}]`;
+  }
+}
+```
+

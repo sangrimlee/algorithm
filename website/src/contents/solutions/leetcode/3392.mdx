@@ -1,0 +1,30 @@
+---
+id: '3392'
+title: Count Subarrays of Length Three With a Condition
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countSubarrays(nums: number[]): number {
+  const n = nums.length;
+  let answer = 0;
+  for (let i = 0; i < n - 2; i++) {
+    if (nums[i] + nums[i + 2] === nums[i + 1] / 2) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$
+

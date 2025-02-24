@@ -1,0 +1,21 @@
+---
+id: '1523'
+title: Count Odd Numbers in an Interval Range
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+url: https://leetcode.com/problems/count-odd-numbers-in-an-interval-range
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countOdds(low: number, high: number): number {
+  if (low % 2 === 1 || high % 2 === 1) {
+    return Math.ceil((high - low + 1) / 2);
+  }
+  return (high - low) / 2;
+}
+```
+

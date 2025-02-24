@@ -1,0 +1,27 @@
+---
+id: '2138'
+title: Divide a String Into Groups of Size k
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+- Simulation
+url: https://leetcode.com/problems/divide-a-string-into-groups-of-size-k
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function divideString(s: string, k: number, fill: string): string[] {
+  const n = s.length;
+  const maxLength = Math.ceil(n / k) * k;
+  const paddedStr = s.padEnd(maxLength * k, fill);
+
+  const answer: string[] = [];
+  for (let i = 0; i < maxLength; i += k) {
+    answer.push(paddedStr.substring(i, i + k));
+  }
+  return answer;
+}
+```
+

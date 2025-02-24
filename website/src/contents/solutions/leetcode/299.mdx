@@ -1,0 +1,37 @@
+---
+id: '299'
+title: Bulls and Cows
+category: Algorithms
+difficulty: Medium
+tags:
+- Hash Table
+- String
+- Counting
+url: https://leetcode.com/problems/bulls-and-cows
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function getHint(secret: string, guess: string): string {
+  const n = secret.length;
+  const secrets = new Array(10).fill(0);
+  const guesses = new Array(10).fill(0);
+
+  let [bulls, cows] = [0, 0];
+  for (let i = 0; i < n; i++) {
+    if (secret[i] === guess[i]) {
+      bulls++;
+    } else {
+      secrets[parseInt(secret[i])]++;
+      guesses[parseInt(guess[i])]++;
+    }
+  }
+
+  for (let i = 0; i < 10; i++) {
+    cows += Math.min(secrets[i], guesses[i]);
+  }
+  return `${bulls}A${cows}B`;
+}
+```
+

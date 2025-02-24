@@ -1,0 +1,19 @@
+---
+id: '2677'
+title: Chunk Array
+category: JavaScript
+difficulty: Easy
+tags: []
+url: https://leetcode.com/problems/chunk-array
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function chunk<T>(arr: T[], size: number): T[][] {
+  return Array.from({ length: Math.ceil(arr.length / size) }).map((_, i) =>
+    arr.slice(i * size, (i + 1) * size),
+  );
+}
+```
+

@@ -1,0 +1,25 @@
+---
+id: '2649'
+title: Nested Array Generator
+category: JavaScript
+difficulty: Medium
+tags: []
+url: https://leetcode.com/problems/nested-array-generator
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+type MultidimensionalArray = (MultidimensionalArray | number)[];
+
+export function* inorderTraversal(arr: MultidimensionalArray): Generator<number, void, unknown> {
+  for (const value of arr) {
+    if (Array.isArray(value)) {
+      yield* inorderTraversal(value);
+    } else {
+      yield value;
+    }
+  }
+}
+```
+

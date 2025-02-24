@@ -1,0 +1,33 @@
+---
+id: '2870'
+title: Minimum Number of Operations to Make Array Empty
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+- Greedy
+- Counting
+url: https://leetcode.com/problems/minimum-number-of-operations-to-make-array-empty
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minOperations(nums: number[]): number {
+  const counter = new Map<number, number>();
+  nums.forEach((num) => {
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  });
+
+  let answer = 0;
+  for (const count of counter.values()) {
+    if (count === 1) {
+      return -1;
+    }
+    answer += count % 3 === 0 ? Math.floor(count / 3) : Math.floor(count / 3) + 1;
+  }
+  return answer;
+}
+```
+

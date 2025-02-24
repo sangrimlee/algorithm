@@ -1,0 +1,24 @@
+---
+id: '1941'
+title: Check if All Characters Have Equal Number of Occurrences
+category: Algorithms
+difficulty: Easy
+tags:
+- Hash Table
+- String
+- Counting
+url: https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function areOccurrencesEqual(s: string): boolean {
+  const charCount = new Map();
+  for (const char of s) {
+    charCount.set(char, (charCount.get(char) ?? 0) + 1);
+  }
+  return new Set(charCount.values()).size === 1;
+}
+```
+

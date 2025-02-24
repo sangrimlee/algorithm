@@ -1,0 +1,47 @@
+---
+id: '552'
+title: Student Attendance Record II
+category: Algorithms
+difficulty: Hard
+tags:
+- Dynamic Programming
+url: https://leetcode.com/problems/student-attendance-record-ii
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function checkRecord(n: number): number {
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 3;
+  }
+
+  const MOD = 10 ** 9 + 7;
+  let prev = {
+    P: 1,
+    L: 1,
+    A: 1,
+    LL: 0,
+    PA: 0,
+    LA: 0,
+    LLA: 0,
+  };
+  for (let i = 2; i <= n; i++) {
+    const curr = {
+      P: (prev.P + prev.L + prev.LL) % MOD,
+      L: prev.P % MOD,
+      LL: prev.L % MOD,
+      A: (prev.P + prev.L + prev.LL) % MOD,
+      PA: (prev.PA + prev.LA + prev.LLA + prev.A) % MOD,
+      LA: (prev.PA + prev.A) % MOD,
+      LLA: prev.LA % MOD,
+    };
+    prev = curr;
+  }
+  return Object.values(prev).reduce((acc, value) => (acc + value) % MOD, 0);
+}
+```
+

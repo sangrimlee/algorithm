@@ -1,0 +1,24 @@
+---
+id: '1910'
+title: Remove All Occurrences of a Substring
+category: Algorithms
+difficulty: Medium
+tags:
+- String
+- Stack
+- Simulation
+url: https://leetcode.com/problems/remove-all-occurrences-of-a-substring
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeOccurrences(s: string, part: string): string {
+  let current = s;
+  while (current.indexOf(part) !== -1) {
+    current = current.replace(part, '');
+  }
+  return current;
+}
+```
+

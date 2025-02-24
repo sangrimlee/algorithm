@@ -1,0 +1,39 @@
+---
+id: '2181'
+title: Merge Nodes in Between Zeros
+category: Algorithms
+difficulty: Medium
+tags:
+- Linked List
+- Simulation
+url: https://leetcode.com/problems/merge-nodes-in-between-zeros
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function mergeNodes(head: ListNode | null): ListNode | null {
+  if (head === null) {
+    return head;
+  }
+
+  let left = head;
+  let right = head.next;
+  let sum = 0;
+  while (left.next !== null && right !== null) {
+    if (right.val === 0) {
+      left = left.next;
+      left.val = sum;
+      sum = 0;
+    } else {
+      sum += right.val;
+    }
+    right = right.next;
+  }
+  left.next = null;
+  return head.next;
+}
+```
+

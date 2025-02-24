@@ -1,0 +1,40 @@
+---
+id: '2070'
+title: Most Beautiful Item for Each Query
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Binary Search
+- Sorting
+url: https://leetcode.com/problems/most-beautiful-item-for-each-query
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maximumBeauty(items: number[][], queries: number[]): number[] {
+  const [n, m] = [items.length, queries.length];
+  const answer = new Array<number>(m).fill(0);
+  const sortedItems = items.sort((a, b) => a[0] - b[0]);
+  const sortedQueries = queries.map((query, i) => [i, query]).sort((a, b) => a[1] - b[1]);
+
+  let itemIndex = 0;
+  let maxBeauty = 0;
+  for (const [queryIndex, query] of sortedQueries) {
+    while (itemIndex < n && sortedItems[itemIndex][0] <= query) {
+      maxBeauty = Math.max(maxBeauty, sortedItems[itemIndex][1]);
+      itemIndex += 1;
+    }
+    answer[queryIndex] = maxBeauty;
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n \cdot logn + m \cdot logm)$
+- Space: $O(n + m)$
+  - `sort` 알고리즘에 대한 공간복잡도는 고려하지 않음
+

@@ -1,0 +1,26 @@
+---
+id: '1903'
+title: Largest Odd Number in String
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- String
+- Greedy
+url: https://leetcode.com/problems/largest-odd-number-in-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function largestOddNumber(num: string): string {
+  const n = num.length;
+  for (let i = n - 1; 0 <= i; i--) {
+    if (+num[i] % 2 === 1) {
+      return num.substring(0, i + 1);
+    }
+  }
+  return '';
+}
+```
+

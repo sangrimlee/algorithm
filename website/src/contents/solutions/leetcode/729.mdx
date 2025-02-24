@@ -1,0 +1,41 @@
+---
+id: '729'
+title: My Calendar I
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Binary Search
+- Design
+- Segment Tree
+- Ordered Set
+url: https://leetcode.com/problems/my-calendar-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export class MyCalendar {
+  private readonly booked: Array<{ start: number; end: number }>;
+
+  constructor() {
+    this.booked = [];
+  }
+
+  book(start: number, end: number): boolean {
+    for (const b of this.booked) {
+      if (Math.max(b.start, start) < Math.min(b.end, end)) {
+        return false;
+      }
+    }
+    this.booked.push({ start, end });
+    return true;
+  }
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+

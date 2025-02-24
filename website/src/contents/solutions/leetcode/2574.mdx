@@ -1,0 +1,28 @@
+---
+id: '2574'
+title: Left and Right Sum Differences
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Prefix Sum
+url: https://leetcode.com/problems/left-and-right-sum-differences
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function leftRightDifference(nums: number[]): number[] {
+  let leftSum = 0;
+  let rightSum = nums.reduce((acc, num) => acc + num, 0);
+
+  const answer: number[] = [];
+  for (const num of nums) {
+    leftSum += num;
+    answer.push(Math.abs(leftSum - rightSum));
+    rightSum -= num;
+  }
+  return answer;
+}
+```
+

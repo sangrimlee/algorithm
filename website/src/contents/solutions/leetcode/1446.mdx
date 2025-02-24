@@ -1,0 +1,30 @@
+---
+id: '1446'
+title: Consecutive Characters
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/consecutive-characters
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function maxPower(s: string): number {
+  let maxLength = 1;
+  let prevChar = '';
+  let prevLength = 0;
+  for (const char of s) {
+    if (prevChar !== char) {
+      prevChar = char;
+      prevLength = 1;
+    } else {
+      prevLength += 1;
+      maxLength = Math.max(maxLength, prevLength);
+    }
+  }
+  return maxLength;
+}
+```
+

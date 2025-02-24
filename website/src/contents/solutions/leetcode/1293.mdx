@@ -1,0 +1,67 @@
+---
+id: '1293'
+title: Shortest Path in a Grid with Obstacles Elimination
+category: Algorithms
+difficulty: Hard
+tags:
+- Array
+- Breadth-First Search
+- Matrix
+url: https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function shortestPath(grid: number[][], k: number): number {
+  const INF = Number.MAX_SAFE_INTEGER;
+  const DIRECTIONS = [
+    [1, 0],
+    [0, 1],
+    [-1, 0],
+    [0, -1],
+  ];
+
+  const [n, m] = [grid.length, grid[0].length];
+  const costs = create3DArr(n, m, k + 1, INF);
+  for (let i = 0; i <= k; i++) {
+    costs[0][0][k] = 0;
+  }
+
+  let currentStep = [[0, 0, k]];
+  while (0 < currentStep.length) {
+    const nextStep: number[][] = [];
+    for (const [y, x, remain] of currentStep) {
+      for (const [dy, dx] of DIRECTIONS) {
+        const [ny, nx] = [y + dy, x + dx];
+        if (0 <= ny && ny < n && 0 <= nx && nx < m) {
+          // 블록이 없는 경우 경우
+          if (grid[ny][nx] === 0) {
+            if (costs[y][x][remain] + 1 < costs[ny][nx][remain]) {
+              costs[ny][nx][remain] = costs[y][x][remain] + 1;
+              nextStep.push([ny, nx, remain]);
+            }
+          } else {
+            if (0 < remain && costs[y][x][remain] + 1 < costs[ny][nx][remain - 1]) {
+              costs[ny][nx][remain - 1] = costs[y][x][remain] + 1;
+              nextStep.push([ny, nx, remain - 1]);
+            }
+          }
+        }
+      }
+    }
+    currentStep = nextStep;
+  }
+
+  const answer = costs[n - 1][m - 1].reduce((prev, curr) => Math.min(prev, curr), INF);
+
+  return answer === INF ? -1 : answer;
+}
+
+function create3DArr<T>(n: number, m: number, k: number, initValue: T): T[][][] {
+  return new Array(n)
+    .fill(undefined)
+    .map(() => new Array(m).fill(undefined).map(() => new Array(k).fill(initValue)));
+}
+```
+

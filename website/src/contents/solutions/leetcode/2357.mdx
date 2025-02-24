@@ -1,0 +1,23 @@
+---
+id: '2357'
+title: Make Array Zero by Subtracting Equal Amounts
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+- Greedy
+- Sorting
+- Heap (Priority Queue)
+- Simulation
+url: https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function minimumOperations(nums: number[]): number {
+  return new Set(nums.filter((num) => num !== 0)).size;
+}
+```
+

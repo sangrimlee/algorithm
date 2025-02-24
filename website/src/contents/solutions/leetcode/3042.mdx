@@ -1,0 +1,36 @@
+---
+id: '3042'
+title: Count Prefix and Suffix Pairs I
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- String
+- Trie
+- Rolling Hash
+- String Matching
+- Hash Function
+url: https://leetcode.com/problems/count-prefix-and-suffix-pairs-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function countPrefixSuffixPairs(words: string[]): number {
+  function isPrefixAndSuffix(str1: string, str2: string) {
+    return str2.startsWith(str1) && str2.endsWith(str1);
+  }
+
+  const n = words.length;
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (isPrefixAndSuffix(words[i], words[j])) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```
+

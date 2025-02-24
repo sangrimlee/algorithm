@@ -1,0 +1,71 @@
+---
+id: '889'
+title: Construct Binary Tree from Preorder and Postorder Traversal
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Hash Table
+- Divide and Conquer
+- Tree
+- Binary Tree
+url: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal
+---
+
+## 문제 설명
+
+해당 문제는 주어진 두 개의 정수 배열, `preorder`, `postorder`을 바탕으로 원래의 이진 트리를 복원하는것이다.
+
+- `preorder`: **전위 순회(Preorder Traversal)** 의 결과이다.
+- `postorder`: **후위 순회(Postorder Traversal)** 의 결과이다.
+- 모든 노드는 **서로 다른 값**을 가진다.
+- 가능한 정답이 여러 개일 수 있으며, 그 중 하나를 반환하면 된다.
+
+## 문제 풀이
+
+**💡 아이디어**
+
+- **전위 순회(Preorder)**: **`root → left → right`**
+- **후위 순회(Postorder)**: **`left → right → root`**
+- 이 규칙을 이용하면, `preorder`를 사용하여, **루트 노드를 먼저 찾고**, `postorder`를 사용하여 **자식 노드를 찾는 과정을 반복**하여 트리를 복원할 수 있다.
+
+**문제 풀이**
+
+1. `preorder`의 첫번째 값은 트리의 루트 노드이므로, 이를 사용하여, `rootNode`를 생성한다.
+2. **스택을 사용**하여, 부모-자식 관계를 설정한다.
+   - 현재 스택의 가장 위에 있는 노드는, **현재 노드를 추가할 부모 노드**이다.
+   - `preorder`를 순회하며 새로운 노드를 생성하고, 이를 부모의 `left` 또는 `right`에 추가한다.
+3. `postorder` 과 비교하여, **서브 트리를 모두 생성하면 `pop` 한다.**
+   - **`postorder` 에서 `stack` 의 가장 위에 있는 노드가 등장하면, 해당 서브 트리가 완성되었다는 것을 의미한다.**
+   - **`stack`에서 서브 트리가 완성된 노드를 모두 제거한다.**
+
+```typescript filename="solution.ts" copy
+function constructFromPrePost(preorder: number[], postorder: number[]): TreeNode {
+  const rootNode = new TreeNode(preorder[0]);
+  const stack: TreeNode[] = [rootNode];
+
+  let postIndex = 0;
+  for (let preIndex = 1; preIndex < preorder.length; preIndex++) {
+    const node = new TreeNode(preorder[preIndex]);
+    while (stack.length > 0 && stack[stack.length - 1].val === postorder[postIndex]) {
+      stack.pop();
+      postIndex += 1;
+    }
+
+    const parentNode = stack[stack.length - 1];
+    if (!parentNode.left) {
+      parentNode.left = node;
+    } else {
+      parentNode.right = node;
+    }
+    stack.push(node);
+  }
+  return rootNode;
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
+

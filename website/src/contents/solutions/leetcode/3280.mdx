@@ -1,0 +1,27 @@
+---
+id: '3280'
+title: Convert Date to Binary
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- String
+url: https://leetcode.com/problems/convert-date-to-binary
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function convertDateToBinary(date: string): string {
+  return date
+    .split('-')
+    .map((v) => parseInt(v).toString(2))
+    .join('-');
+}
+```
+
+### Complexity
+
+- Time: `O(1)`
+- Space: `O(1)`
+

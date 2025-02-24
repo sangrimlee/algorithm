@@ -1,0 +1,27 @@
+---
+id: '1021'
+title: Remove Outermost Parentheses
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+- Stack
+url: https://leetcode.com/problems/remove-outermost-parentheses
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function removeOuterParentheses(s: string): string {
+  let answer = '';
+  let leftCnt = 0;
+  for (const char of s) {
+    if ((char === '(' && 0 < leftCnt) || (char === ')' && 1 < leftCnt)) {
+      answer += char;
+    }
+    leftCnt += char === '(' ? 1 : -1;
+  }
+  return answer;
+}
+```
+

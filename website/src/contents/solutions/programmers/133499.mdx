@@ -1,0 +1,18 @@
+---
+id: '133499'
+title: 옹알이 (2)
+level: 1
+url: https://school.programmers.co.kr/learn/courses/30/lessons/133499
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function babblingII(babbling: string[]): number {
+  const isPronounceable = (word: string) => {
+    return !/(aya|ye|woo|ma)\1+/.test(word) && /^(aya|ye|woo|ma)+$/.test(word);
+  };
+  return babbling.filter(isPronounceable).length;
+}
+```
+

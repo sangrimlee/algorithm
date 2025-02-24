@@ -1,0 +1,22 @@
+---
+id: '1154'
+title: Day of the Year
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- String
+url: https://leetcode.com/problems/day-of-the-year
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function dayOfYear(date: string): number {
+  const msOfDay = 24 * 60 * 60 * 1000;
+  const currentDate = new Date(date);
+  const firstDateOfYear = new Date(currentDate.getFullYear(), 0, 1);
+  return Math.floor((currentDate.getTime() - firstDateOfYear.getTime()) / msOfDay) + 1;
+}
+```
+

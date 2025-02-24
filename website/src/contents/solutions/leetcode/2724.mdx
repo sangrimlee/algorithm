@@ -1,0 +1,17 @@
+---
+id: '2724'
+title: Sort By
+category: JavaScript
+difficulty: Easy
+tags: []
+url: https://leetcode.com/problems/sort-by
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sortBy<T>(arr: T[], fn: (value: T) => number): T[] {
+  return [...arr].sort((a, b) => fn(a) - fn(b));
+}
+```
+

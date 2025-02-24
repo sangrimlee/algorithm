@@ -1,0 +1,23 @@
+---
+id: '151'
+title: Reverse Words in a String
+category: Algorithms
+difficulty: Medium
+tags:
+- Two Pointers
+- String
+url: https://leetcode.com/problems/reverse-words-in-a-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function reverseWords(s: string): string {
+  return s
+    .split(/ +/)
+    .filter((char) => char !== '')
+    .reverse()
+    .join(' ');
+}
+```
+

@@ -1,0 +1,27 @@
+---
+id: '2739'
+title: Total Distance Traveled
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+- Simulation
+url: https://leetcode.com/problems/total-distance-traveled
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function distanceTraveled(mainTank: number, additionalTank: number): number {
+  let answer = 0;
+  for (let i = 1; i <= mainTank; i++) {
+    if (additionalTank !== 0 && i % 5 === 0) {
+      additionalTank -= 1;
+      mainTank += 1;
+    }
+    answer += 10;
+  }
+  return answer;
+}
+```
+

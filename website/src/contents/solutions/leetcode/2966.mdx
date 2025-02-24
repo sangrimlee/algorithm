@@ -1,0 +1,29 @@
+---
+id: '2966'
+title: Divide Array Into Arrays With Max Difference
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Greedy
+- Sorting
+url: https://leetcode.com/problems/divide-array-into-arrays-with-max-difference
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function divideArray(nums: number[], k: number): number[][] {
+  const n = nums.length;
+  nums.sort((a, b) => a - b);
+  const answer: number[][] = [];
+  for (let i = 0; i < n; i += 3) {
+    if (k < nums[i + 2] - nums[i]) {
+      return [];
+    }
+    answer.push(nums.slice(i, i + 3));
+  }
+  return answer;
+}
+```
+

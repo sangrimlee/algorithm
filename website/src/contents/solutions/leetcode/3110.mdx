@@ -1,0 +1,25 @@
+---
+id: '3110'
+title: Score of a String
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+url: https://leetcode.com/problems/score-of-a-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function scoreOfString(s: string): number {
+  const n = s.length;
+
+  let answer = 0;
+  for (let i = 0; i < n - 1; i++) {
+    const score = Math.abs(s.charCodeAt(i) - s.charCodeAt(i + 1));
+    answer += score;
+  }
+  return answer;
+}
+```
+

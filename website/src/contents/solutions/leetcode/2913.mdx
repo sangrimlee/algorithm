@@ -1,0 +1,29 @@
+---
+id: '2913'
+title: Subarrays Distinct Element Sum of Squares I
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Hash Table
+url: https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumCounts(nums: number[]): number {
+  const n = nums.length;
+
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    const set = new Set<number>();
+    for (let j = i; j < n; j++) {
+      set.add(nums[j]);
+      answer += set.size ** 2;
+    }
+  }
+  return answer;
+}
+```
+

@@ -1,0 +1,35 @@
+---
+id: '876'
+title: Middle of the Linked List
+category: Algorithms
+difficulty: Easy
+tags:
+- Linked List
+- Two Pointers
+url: https://leetcode.com/problems/middle-of-the-linked-list
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { ListNode } from '@algorithm/lib';
+
+export function middleNode(head: ListNode | null): ListNode | null {
+  if (head === null) {
+    return null;
+  }
+
+  if (head.next === null) {
+    return head;
+  }
+
+  let [left, right]: Array<ListNode | null> = [head, head];
+  while (right && right.next) {
+    right = right?.next?.next ?? null;
+    left = left?.next ?? null;
+  }
+
+  return left;
+}
+```
+

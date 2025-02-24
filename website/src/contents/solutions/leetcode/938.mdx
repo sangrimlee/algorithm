@@ -1,0 +1,32 @@
+---
+id: '938'
+title: Range Sum of BST
+category: Algorithms
+difficulty: Easy
+tags:
+- Tree
+- Depth-First Search
+- Binary Search Tree
+- Binary Tree
+url: https://leetcode.com/problems/range-sum-of-bst
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function rangeSumBST(root: TreeNode | null, low: number, high: number): number {
+  if (root === null) {
+    return 0;
+  }
+  if (low <= root.val && root.val <= high) {
+    return root.val + rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high);
+  } else if (root.val < low) {
+    return rangeSumBST(root.right, low, high);
+  } else {
+    return rangeSumBST(root.left, low, high);
+  }
+}
+```
+

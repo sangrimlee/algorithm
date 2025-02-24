@@ -1,0 +1,25 @@
+---
+id: '1560'
+title: Most Visited Sector in  a Circular Track
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Simulation
+url: https://leetcode.com/problems/most-visited-sector-in-a-circular-track
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function mostVisited(n: number, rounds: number[]): number[] {
+  const sectors = Array.from({ length: n }).map((_, i) => i + 1);
+  const startSector = rounds[0];
+  const lastSector = rounds[rounds.length - 1];
+  if (startSector <= lastSector) {
+    return sectors.filter((sector) => startSector <= sector && sector <= lastSector);
+  }
+  return sectors.filter((sector) => startSector <= sector || sector <= lastSector);
+}
+```
+

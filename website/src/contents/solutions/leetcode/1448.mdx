@@ -1,0 +1,38 @@
+---
+id: '1448'
+title: Count Good Nodes in Binary Tree
+category: Algorithms
+difficulty: Medium
+tags:
+- Tree
+- Depth-First Search
+- Breadth-First Search
+- Binary Tree
+url: https://leetcode.com/problems/count-good-nodes-in-binary-tree
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { TreeNode } from '@algorithm/lib';
+
+export function goodNodes(root: TreeNode | null): number {
+  let answer = 0;
+  function traverse(node: TreeNode | null, maxValue: number) {
+    if (node === null) return;
+    if (maxValue <= node.val) {
+      answer += 1;
+    }
+    traverse(node.left, Math.max(maxValue, node.val));
+    traverse(node.right, Math.max(maxValue, node.val));
+  }
+  traverse(root, Number.MIN_SAFE_INTEGER);
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(H)`
+

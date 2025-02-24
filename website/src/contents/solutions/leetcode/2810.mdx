@@ -1,0 +1,27 @@
+---
+id: '2810'
+title: Faulty Keyboard
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+- Simulation
+url: https://leetcode.com/problems/faulty-keyboard
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function finalString(s: string): string {
+  const chars: string[] = [];
+  for (const char of s) {
+    if (char === 'i') {
+      chars.reverse();
+    } else {
+      chars.push(char);
+    }
+  }
+  return chars.join('');
+}
+```
+

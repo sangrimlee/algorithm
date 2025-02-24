@@ -1,0 +1,118 @@
+---
+id: '2182'
+title: Construct String With Repeat Limit
+category: Algorithms
+difficulty: Medium
+tags:
+- Hash Table
+- String
+- Greedy
+- Heap (Priority Queue)
+- Counting
+url: https://leetcode.com/problems/construct-string-with-repeat-limit
+---
+
+## Solution
+
+### Solution1: Greedy with `Map`
+
+```typescript filename="solution.ts" copy
+function repeatLimitedString(s: string, repeatLimit: number): string {
+  const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+  const counter = new Counter(s);
+
+  const answer: string[] = [];
+  let currentIndex = alphabets.length - 1;
+  while (0 <= currentIndex) {
+    const alphabet = alphabets[currentIndex];
+    if (counter.get(alphabet) === 0) {
+      currentIndex -= 1;
+      continue;
+    }
+
+    const used = Math.min(counter.get(alphabet), repeatLimit);
+    answer.push(alphabet.repeat(used));
+    counter.sub(alphabet, used);
+
+    if (0 < counter.get(alphabet)) {
+      let prevIndex = currentIndex - 1;
+      while (0 <= prevIndex && counter.get(alphabets[prevIndex]) === 0) {
+        prevIndex -= 1;
+      }
+      if (prevIndex < 0) break;
+      answer.push(alphabets[prevIndex]);
+      counter.sub(alphabets[prevIndex]);
+    }
+  }
+  return answer.join('');
+}
+
+class Counter extends Map<string, number> {
+  constructor(s: string) {
+    super();
+    for (const char of s) {
+      this.add(char);
+    }
+  }
+
+  get(char: string): number {
+    return super.get(char) ?? 0;
+  }
+
+  add(char: string, amount = 1) {
+    this.set(char, this.get(char) + amount);
+  }
+
+  sub(char: string, amount = 1) {
+    this.set(char, this.get(char) - amount);
+  }
+}
+```
+
+#### Complexity
+
+- $n$: `s`의 길이, $k$: `s`의 고유한 알파벳의 개수
+- Time: $O(n \cdot k)$
+- Space: $O(k)$
+
+---
+
+### Solution2: Greedy with `Heap`
+
+```typescript filename="solution.ts" copy
+import { Heap } from '@algorithm/lib';
+
+export function repeatLimitedString(s: string, repeatLimit: number): string {
+  const counter = new Map<string, number>();
+  for (const char of s) {
+    counter.set(char, (counter.get(char) ?? 0) + 1);
+  }
+  const heap = new Heap<number[]>(([a], [b]) => b - a);
+  for (const [char, count] of counter) {
+    heap.push([char.charCodeAt(0), count]);
+  }
+
+  const answer: string[] = [];
+  while (!heap.isEmpty) {
+    const [charCode, count] = heap.pop()!;
+    const char = String.fromCharCode(charCode);
+    const usedCount = Math.min(count, repeatLimit);
+    answer.push(char.repeat(usedCount));
+    if (usedCount < count && !heap.isEmpty) {
+      const [nextCharCode, nextCount] = heap.pop()!;
+      answer.push(String.fromCharCode(nextCharCode));
+      if (1 < nextCount) {
+        heap.push([nextCharCode, nextCount - 1]);
+      }
+      heap.push([charCode, count - usedCount]);
+    }
+  }
+  return answer.join('');
+}
+```
+
+#### Complexity
+
+- Time: $O(n \cdot logk)$
+- Space: $O(k)$
+

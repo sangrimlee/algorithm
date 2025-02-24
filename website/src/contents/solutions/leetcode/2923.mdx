@@ -1,0 +1,26 @@
+---
+id: '2923'
+title: Find Champion I
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Matrix
+url: https://leetcode.com/problems/find-champion-i
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findChampion(grid: number[][]): number {
+  const n = grid.length;
+  let champion = 0;
+  for (let team = 0; team < n; team++) {
+    if (champion !== team && grid[champion][team] === 0) {
+      champion = team;
+    }
+  }
+  return champion;
+}
+```
+

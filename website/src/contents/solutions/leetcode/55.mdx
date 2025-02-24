@@ -1,0 +1,31 @@
+---
+id: '55'
+title: Jump Game
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Dynamic Programming
+- Greedy
+url: https://leetcode.com/problems/jump-game
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function canJump(nums: number[]): boolean {
+  const n = nums.length;
+
+  let jumpable = 0;
+  for (const i of range(n)) {
+    if (i <= jumpable) {
+      jumpable = Math.max(i + nums[i], jumpable);
+    }
+  }
+
+  return n - 1 <= jumpable;
+}
+```
+

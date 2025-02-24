@@ -1,0 +1,33 @@
+---
+id: '1422'
+title: Maximum Score After Splitting a String
+category: Algorithms
+difficulty: Easy
+tags:
+- String
+- Prefix Sum
+url: https://leetcode.com/problems/maximum-score-after-splitting-a-string
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+import { range } from '@algorithm/lib';
+
+export function maxScore(s: string): number {
+  const n = s.length;
+  const totalScore = s.replace(/0/g, '').length;
+  let leftScore = s[0] === '0' ? 1 : 0;
+  let rightScore = totalScore + leftScore - 1;
+
+  let answer = leftScore + rightScore;
+  for (const i of range(1, n - 2)) {
+    const score = parseInt(s[i]);
+    leftScore += Math.abs(score - 1);
+    rightScore -= score;
+    answer = Math.max(answer, leftScore + rightScore);
+  }
+  return answer;
+}
+```
+

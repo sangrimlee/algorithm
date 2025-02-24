@@ -1,0 +1,20 @@
+---
+id: '2778'
+title: 'Sum of Squares of Special Elements '
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+- Enumeration
+url: https://leetcode.com/problems/sum-of-squares-of-special-elements
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumOfSquares(nums: number[]): number {
+  const n = nums.length;
+  return nums.reduce((acc, num, i) => (n % (i + 1) === 0 ? acc + num ** 2 : acc), 0);
+}
+```
+

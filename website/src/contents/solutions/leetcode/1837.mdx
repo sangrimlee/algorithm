@@ -1,0 +1,24 @@
+---
+id: '1837'
+title: Sum of Digits in Base K
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+url: https://leetcode.com/problems/sum-of-digits-in-base-k
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function sumBase(n: number, k: number): number {
+  let answer = 0;
+  let current = n;
+  while (0 < current) {
+    answer += current % k;
+    current = Math.floor(current / k);
+  }
+  return answer;
+}
+```
+

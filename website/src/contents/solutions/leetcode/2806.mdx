@@ -1,0 +1,19 @@
+---
+id: '2806'
+title: Account Balance After Rounded Purchase
+category: Algorithms
+difficulty: Easy
+tags:
+- Math
+url: https://leetcode.com/problems/account-balance-after-rounded-purchase
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function accountBalanceAfterPurchase(purchaseAmount: number): number {
+  const roundedAmount = Math.round(purchaseAmount / 10) * 10;
+  return 100 - roundedAmount;
+}
+```
+

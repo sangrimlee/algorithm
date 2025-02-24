@@ -1,0 +1,31 @@
+---
+id: '3152'
+title: Special Array II
+category: Algorithms
+difficulty: Medium
+tags:
+- Array
+- Binary Search
+- Prefix Sum
+url: https://leetcode.com/problems/special-array-ii
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function isArraySpecial(nums: number[], queries: number[][]): boolean[] {
+  const prefix: number[] = new Array(nums.length).fill(0);
+  for (let i = 1; i < nums.length; i++) {
+    prefix[i] = prefix[i - 1] + (nums[i - 1] % 2 === nums[i] % 2 ? 1 : 0);
+  }
+  return queries.map(([from, to]) => prefix[from] === prefix[to]);
+}
+```
+
+### Complexity
+
+- $m$: `nums`의 길이
+- $n$: `queries`의 길이
+- Time: $O(m + n)$
+- Space: $O(m + n)$
+

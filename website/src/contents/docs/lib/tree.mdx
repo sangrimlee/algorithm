@@ -1,0 +1,128 @@
+---
+title: Tree
+tags:
+  - Tree
+  - Binary Tree
+---
+
+LeetCode의 문제 중 **Tree** 관련 문제 해결 및 테스트 코드 작성을 위한 `class` 및 `function`입니다.
+
+## `TreeNode`
+
+LeetCode에서 주어지는 `class` 입니다.
+
+[예시 문제](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
+```typescript copy
+class TreeNode {
+  val: number;
+  left: TreeNode | null;
+  right: TreeNode | null;
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.left = left === undefined ? null : left;
+    this.right = right === undefined ? null : right;
+  }
+}
+```
+
+## `createTree`
+
+숫자 배열(`number[]`)을 `TreeNode`로 이루어진 **Bianry Tree**로 변환하는 함수입니다.
+
+```typescript copy
+function createTree(arr: (number | null)[]) {
+  const n = arr.length;
+  if (n === 0 || typeof arr[0] !== 'number') {
+    return null;
+  }
+
+  const rootNode = new TreeNode(arr[0]);
+  const queue = [rootNode];
+  for (let i = 1; i < n; i += 2) {
+    const parentNode = queue.shift()!;
+    const [leftValue, rightValue] = [arr[i], arr[i + 1]];
+    if (typeof leftValue === 'number') {
+      const leftNode = new TreeNode(leftValue);
+      parentNode.left = leftNode;
+      queue.push(leftNode);
+    }
+
+    if (typeof rightValue === 'number') {
+      const rightNode = new TreeNode(rightValue);
+      parentNode.right = rightNode;
+      queue.push(rightNode);
+    }
+  }
+  return rootNode;
+}
+```
+
+## `compareTree`
+
+두 개의 `TreeNode`로 이루어진 **Binary Tree**가 같은 형태인지 판별하는 함수입니다.
+
+```typescript copy
+function compareTree(node1: TreeNode | null, node2: TreeNode | null): boolean {
+  if (node1 === null && node2 === null) {
+    return true;
+  }
+  if (node1 === null || node2 === null) {
+    return false;
+  }
+  return (
+    node1.val === node2.val &&
+    compareTree(node1.left, node2.left) &&
+    compareTree(node1.right, node2.right)
+  );
+}
+```
+
+## `NArrayTreeNode`
+
+LeetCode에서 주어지는 `class` 입니다.
+
+[예시 문제](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)
+
+```typescript copy
+class NArrayTreeNode {
+  val: number;
+  children: NArrayTreeNode[];
+  constructor(val?: number) {
+    this.val = val === undefined ? 0 : val;
+    this.children = [];
+  }
+}
+```
+
+## `createNArrayTree`
+
+`Object`를 `NArrayTreeNode`로 이루어진 **Tree**를 생성하는 함수입니다.
+
+`rootNode`는 `value`가 1인 Node이며,
+주어진 `Object`의 `key`값이 `val`이며 `value`는 `children`인 `NArrayTreeNode`를 생성합니다.
+
+```typescript copy
+function createNArrayTree(tree: {
+  [key: number]: number[] | undefined;
+}): NArrayTreeNode | null {
+  if (!tree[1]) {
+    return null;
+  }
+  const rootNode = new NArrayTreeNode(1);
+  rootNode.children = tree[1].map((value) => new NArrayTreeNode(value));
+
+  const currentNodes = [rootNode];
+  while (0 < currentNodes.length) {
+    const currentNode = currentNodes.shift();
+    if (currentNode) {
+      const children =
+        tree[currentNode.val]?.map((value) => new NArrayTreeNode(value)) ?? [];
+      currentNode.children = children;
+      currentNodes.push(...children);
+    }
+  }
+
+  return rootNode;
+}
+```

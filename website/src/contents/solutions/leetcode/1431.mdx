@@ -1,0 +1,19 @@
+---
+id: '1431'
+title: Kids With the Greatest Number of Candies
+category: Algorithms
+difficulty: Easy
+tags:
+- Array
+url: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
+  const maxCandies = candies.reduce((prev, curr) => Math.max(prev, curr), 0);
+  return candies.map((candy) => candy + extraCandies >= maxCandies);
+}
+```
+

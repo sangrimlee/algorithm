@@ -1,0 +1,55 @@
+---
+id: '576'
+title: Out of Boundary Paths
+category: Algorithms
+difficulty: Medium
+tags:
+- Dynamic Programming
+url: https://leetcode.com/problems/out-of-boundary-paths
+---
+
+## Solution
+
+```typescript filename="solution.ts" copy
+export function findPaths(
+  m: number,
+  n: number,
+  maxMove: number,
+  startRow: number,
+  startColumn: number,
+): number {
+  if (maxMove === 0) {
+    return 0;
+  }
+
+  const MOD = 10 ** 9 + 7;
+  let prev = Array.from({ length: m }).map(() => new Array(n).fill(0));
+  prev[startRow][startColumn] = 1;
+
+  let answer = 0;
+  const directions = [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+  ];
+  for (let step = 0; step < maxMove; step++) {
+    const current = Array.from({ length: m }).map(() => new Array(n).fill(0));
+    for (let row = 0; row < m; row++) {
+      for (let col = 0; col < n; col++) {
+        for (const [drow, dcol] of directions) {
+          const [nrow, ncol] = [row + drow, col + dcol];
+          if (0 <= nrow && nrow < m && 0 <= ncol && ncol < n) {
+            current[nrow][ncol] = (current[nrow][ncol] + prev[row][col]) % MOD;
+          } else {
+            answer = (answer + prev[row][col]) % MOD;
+          }
+        }
+      }
+    }
+    prev = current;
+  }
+  return answer;
+}
+```
+
