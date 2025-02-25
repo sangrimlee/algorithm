@@ -1,6 +1,5 @@
 @theme {
-  --font-sans: var(--font-noto-sans);
-  --font-serif: var(--font-noto-serif);
-  --font-mono: var(--font-noto-sans-mono);
+  --font-sans: var(--font-pretendard);
+  --font-mono: var(--font-nanum-gothic-coding);
   --font-logo: var(--font-poppins);
 }

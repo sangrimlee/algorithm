@@ -1,4 +1,5 @@
-import { Noto_Sans_KR, Noto_Sans_Mono, Noto_Serif_KR, Poppins } from 'next/font/google';
+import { Nanum_Gothic_Coding, Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const poppins = Poppins({
   weight: ['600', '700', '800'],
@@ -8,27 +9,20 @@ export const poppins = Poppins({
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
-export const notoSansKR = Noto_Sans_KR({
-  subsets: ['latin'],
+export const pretendard = localFont({
+  src: './PretendardVariable.woff2',
+  weight: '45 920',
   display: 'swap',
-  preload: true,
-  variable: '--font-noto-sans',
+  variable: '--font-pretendard',
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
-export const notoSerifKR = Noto_Serif_KR({
+export const nanumGothicCoding = Nanum_Gothic_Coding({
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   preload: true,
-  variable: '--font-noto-serif',
-  fallback: ['ui-serif', 'Georgia', 'Cambria', "'Times New Roman'", 'Times', 'serif'],
-});
-
-export const notoSansMono = Noto_Sans_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  preload: true,
-  variable: '--font-noto-sans-mono',
+  variable: '--font-nanum-gothic-coding',
   fallback: [
     'ui-monospace',
     'SFMono-Regular',
