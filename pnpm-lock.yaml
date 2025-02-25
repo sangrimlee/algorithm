@@ -258,6 +258,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      fast-glob:
+        specifier: ^3.3.3
+        version: 3.3.3
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@18.3.1)
