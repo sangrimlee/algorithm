@@ -13,7 +13,7 @@
   }
 
   * {
-    @apply border-gray-4;
+    @apply border-gray-7;
   }
 
   ::selection {

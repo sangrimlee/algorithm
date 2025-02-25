@@ -5,7 +5,7 @@ import { Bars2Icon } from '@heroicons/react/24/outline';
 
 export const NavBar = () => {
   return (
-    <header className="sticky inset-x-0 top-0 z-sticky border-b bg-gray-1/90 backdrop-blur-sm">
+    <header className="sticky inset-x-0 top-0 z-sticky border-b border-gray-6 bg-gray-1/90 backdrop-blur-sm">
       <div className="container flex h-(--navbar-height) items-center justify-between">
         <nav className="hidden items-center sm:flex">
           <Link href="/">
