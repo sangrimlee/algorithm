@@ -44,6 +44,7 @@
     "prettier": "catalog:",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.8",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "catalog:"
   }
 }
