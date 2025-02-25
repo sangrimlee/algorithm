@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
+import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+
 import { GithubLogo, Logo } from '@/components/logo';
-import { Bars2Icon } from '@heroicons/react/24/outline';
 
 export const NavBar = () => {
   return (
@@ -16,7 +17,7 @@ export const NavBar = () => {
         <div className="flex items-center sm:hidden">
           {/* TODO: 모바일 메뉴 추가 */}
           <button type="button">
-            <Bars2Icon className="size-5" />
+            <HamburgerMenuIcon className="size-5" />
           </button>
         </div>
         <div>
