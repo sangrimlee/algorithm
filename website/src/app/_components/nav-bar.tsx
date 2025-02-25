@@ -1,12 +1,13 @@
 import Link from 'next/link';
-
-import { HamburgerMenuIcon } from '@radix-ui/react-icons';
+import { MenuIcon } from 'lucide-react';
 
 import { GithubLogo, Logo } from '@/components/logo';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from './theme-toggle';
 
 export const NavBar = () => {
   return (
-    <header className="sticky inset-x-0 top-0 z-sticky border-b border-gray-6 bg-gray-1/90 backdrop-blur-sm">
+    <header className="sticky inset-x-0 top-0 z-sticky border-b border-dashed border-gray-6 bg-gray-1/90 backdrop-blur-sm">
       <div className="container flex h-(--navbar-height) items-center justify-between">
         <nav className="hidden items-center sm:flex">
           <Link href="/">
@@ -17,18 +18,23 @@ export const NavBar = () => {
         <div className="flex items-center sm:hidden">
           {/* TODO: 모바일 메뉴 추가 */}
           <button type="button">
-            <HamburgerMenuIcon className="size-5" />
+            <MenuIcon className="size-4" />
           </button>
         </div>
-        <div>
-          <a
-            href="https://github.com/sangrimlee/algorithm"
-            target="_blank"
-            rel="noopener nofollow noreferrer"
-          >
-            <span className="sr-only">Github 페이지로 이동</span>
-            <GithubLogo className="size-5" />
-          </a>
+        <div className="-mr-2.5 flex flex-1 items-center justify-end">
+          <nav className="flex items-center sm:gap-1">
+            <Button asChild variant="ghost" size="icon">
+              <a
+                href="https://github.com/sangrimlee/algorithm"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+              >
+                <span className="sr-only">Github 페이지로 이동</span>
+                <GithubLogo />
+              </a>
+            </Button>
+            <ThemeToggle />
+          </nav>
         </div>
       </div>
     </header>

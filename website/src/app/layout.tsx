@@ -57,9 +57,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StyledJsxRegistry>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="light"
+            enableSystem={false}
             enableColorScheme
-            enableSystem
             disableTransitionOnChange
           >
             <NavBar />
