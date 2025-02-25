@@ -4,6 +4,14 @@
 @import './z-index.css';
 
 @layer base {
+  :root {
+    --navbar-height: 3.5rem;
+    --content-height: calc(100svh - var(--navbar-height));
+    --content-width: 90rem;
+    --content-inset-left: max(env(safe-area-inset-left), 1.25rem);
+    --content-inset-right: max(env(safe-area-inset-right), 1.25rem);
+  }
+
   * {
     @apply border-gray-4;
   }
@@ -15,5 +23,11 @@
   html,
   body {
     @apply bg-gray-1 text-gray-12 antialiased;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto max-w-(--content-width) pr-(--content-inset-right) pl-(--content-inset-left);
   }
 }

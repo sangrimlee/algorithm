@@ -3,7 +3,7 @@ import { HeroSection } from './_components/hero-section';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="relative container min-h-(--content-height)">
       <Background />
       <HeroSection />
     </main>
