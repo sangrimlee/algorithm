@@ -11,15 +11,16 @@ const buttonVariants = cva(
     'inline-flex cursor-pointer items-center justify-center gap-2 border border-transparent font-medium whitespace-nowrap transition-colors duration-200',
     'focus-visible:shadow-focus-ring focus-visible:outline-none',
     'disabled:pointer-events-none disabled:border-gray-6 disabled:bg-gray-3 disabled:text-gray-9',
-    '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0',
   ],
   {
     variants: {
       size: {
-        sm: 'min-h-8 px-3 text-xs',
-        md: 'min-h-9 px-4 text-sm',
-        lg: 'min-h-10 px-5 text-sm',
-        icon: 'h-9 w-9',
+        sm: 'min-h-8 px-3 text-xs [&_svg]:size-3.5',
+        md: 'min-h-9 px-4 text-sm [&_svg]:size-4',
+        lg: 'min-h-10 px-5 text-sm [&_svg]:size-4',
+        'icon-sm': 'h-8 w-8 [&_svg]:size-4',
+        icon: 'h-9 w-9 [&_svg]:size-5',
       },
       variant: {
         default: ['bg-gray-12 text-gray-1', 'hover:bg-gray-12/90'],
