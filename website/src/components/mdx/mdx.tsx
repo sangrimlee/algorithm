@@ -7,6 +7,7 @@ import rehypeSlug from 'rehype-slug';
 import rehypeKatex from 'rehype-katex';
 import { rehypePrettyCode } from 'rehype-pretty-code';
 import type { Options as RehypePrettyCodeOptions } from 'rehype-pretty-code';
+import { getSingletonHighlighter } from 'shiki';
 
 import { mdxComponents } from './mdx-components';
 
@@ -18,6 +19,22 @@ const rehypePrettyCodeOptions = {
   theme: {
     dark: 'github-dark',
     light: 'github-light',
+  },
+  onVisitTitle: (element) => {
+    element.tagName = 'div';
+    element.properties = {
+      class: 'code-block__header',
+      'data-language': element.properties['data-language'],
+    };
+  },
+  onVisitCaption: (element) => {
+    element.tagName = 'div';
+    element.properties = {
+      class: 'code-block__footer',
+    };
+  },
+  getHighlighter: (options) => {
+    return getSingletonHighlighter(options);
   },
 } satisfies RehypePrettyCodeOptions;
 
