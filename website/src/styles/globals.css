@@ -6,6 +6,7 @@
 @import './color.css';
 @import './shadow.css';
 @import './z-index.css';
+@import './markdown.css';
 
 @layer base {
   :root {
