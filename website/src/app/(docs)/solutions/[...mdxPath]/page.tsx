@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { generateStaticParamsFor, readMDXFile } from '../../utils';
+import { MDX } from '@/components/mdx';
 
 export const dynamic = 'force-static';
 
@@ -17,5 +18,9 @@ export default async function Page({ params }: PageProps) {
   if (!content) {
     notFound();
   }
-  return <>{content}</>;
+  return (
+    <>
+      <MDX content={content} />
+    </>
+  );
 }
