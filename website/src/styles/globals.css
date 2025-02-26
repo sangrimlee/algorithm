@@ -6,6 +6,8 @@
 @import './color.css';
 @import './shadow.css';
 @import './z-index.css';
+
+@import './code-block.css';
 @import './markdown.css';
 
 @layer base {

@@ -1,0 +1,117 @@
+@layer components {
+  .code-block {
+    @apply relative my-6 overflow-hidden rounded-lg border border-gray-7;
+
+    .code-block__header {
+      @apply flex h-10 items-center justify-start rounded-t-lg border-b bg-gray-3 px-5 font-mono text-sm font-medium;
+    }
+
+    .code-block__footer {
+      @apply flex h-6 items-center justify-end rounded-b-lg border-t bg-gray-3 px-5 font-mono text-xs font-medium text-gray-11;
+    }
+
+    .code-block__pre {
+      @apply overflow-x-auto py-5 text-sm leading-6 font-medium text-gray-12 subpixel-antialiased;
+
+      /* Syntax Highlighting */
+      code,
+      code span {
+        @apply text-(--shiki-light) dark:text-(--shiki-dark);
+      }
+
+      span[data-line] {
+        @apply px-5;
+      }
+
+      /* Line Numbers */
+      code[data-line-numbers] {
+        counter-reset: line;
+      }
+      code[data-line-numbers] > [data-line]::before {
+        @apply mr-4 inline-block text-right text-gray-11;
+        width: 1ch;
+        counter-increment: line;
+        content: counter(line);
+      }
+      code[data-line-numbers-max-digits='2'] > [data-line]::before {
+        width: 2ch;
+      }
+      code[data-line-numbers-max-digits='3'] > [data-line]::before {
+        width: 3ch;
+      }
+      code[data-line-numbers-max-digits='4'] > [data-line]::before {
+        width: 4ch;
+      }
+
+      /* Highlight Line */
+      span[data-line][data-highlighted-line] {
+        @apply bg-blue-3;
+        box-shadow: 2px 0 var(--blue9) inset;
+      }
+
+      /* Highlight Word */
+      mark[data-highlighted-chars] {
+        @apply rounded-sm bg-blue-3 ring-1 ring-blue-7 ring-offset-3 ring-offset-blue-3;
+      }
+      mark[data-chars-id='red'] {
+        @apply bg-red-3 ring-red-7 ring-offset-red-3;
+      }
+      mark[data-chars-id='green'] {
+        @apply bg-green-3 ring-green-7 ring-offset-green-3;
+      }
+      mark[data-chars-id='blue'] {
+        @apply bg-blue-3 ring-blue-7 ring-offset-blue-3;
+      }
+      mark[data-chars-id='amber'],
+      mark[data-chars-id='yellow'] {
+        @apply bg-amber-3 ring-amber-7 ring-offset-amber-3;
+      }
+      mark[data-chars-id='teal'] {
+        @apply bg-teal-3 ring-teal-7 ring-offset-teal-3;
+      }
+      mark[data-chars-id='pink'] {
+        @apply bg-pink-3 ring-pink-7 ring-offset-pink-3;
+      }
+      mark[data-chars-id='purple'] {
+        @apply bg-purple-3 ring-purple-7 ring-offset-purple-3;
+      }
+
+      .code-block__copy-button {
+      }
+    }
+
+    .code-block__copy-button {
+      @apply absolute top-3 right-3 opacity-0;
+      @apply flex size-8 cursor-pointer items-center justify-center rounded-lg border bg-gray-3 text-gray-11 transition;
+      @apply hover:border-gray-8 hover:bg-gray-4;
+
+      .copy-button__icon {
+        @apply absolute size-4 transition;
+      }
+
+      .copy-button__icon_copied {
+        @apply invisible scale-0 opacity-0;
+      }
+
+      &.code-block__copy-button_copied {
+        .copy-button__icon_copy {
+          @apply invisible scale-0 opacity-0;
+        }
+        .copy-button__icon_copied {
+          @apply visible scale-100 opacity-100;
+        }
+      }
+    }
+
+    &:hover {
+      .code-block__copy-button {
+        @apply opacity-100;
+      }
+    }
+    &:has(.code-block__header) {
+      .code-block__copy-button {
+        @apply top-13;
+      }
+    }
+  }
+}
