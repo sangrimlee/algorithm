@@ -1,3 +1,9 @@
-import type { MDXComponents } from 'mdx/types';
+import NextImage from 'next/image';
 
-export const mdxComponents: MDXComponents = {};
+import type { MDXComponents } from 'mdx/types';
+import { Anchor } from './anchor';
+
+export const mdxComponents: MDXComponents = {
+  Image: NextImage,
+  a: Anchor,
+};
