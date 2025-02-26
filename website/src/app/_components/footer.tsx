@@ -18,7 +18,7 @@ export const Footer = () => {
           >
             <GithubLogo className="size-4.5" />
           </a>
-          <hr className="block h-5 w-px border-0 bg-gray-4" />
+          <hr className="block h-5 border-t-0 border-r" />
           <a
             target="_blank"
             rel="noreferrer noopener nofollow"
@@ -28,7 +28,7 @@ export const Footer = () => {
           >
             <XLogo className="size-4" />
           </a>
-          <hr className="block h-5 w-px border-0 bg-gray-4" />
+          <hr className="block h-5 border-t-0 border-r" />
           <a
             target="_blank"
             rel="noreferrer noopener nofollow"
