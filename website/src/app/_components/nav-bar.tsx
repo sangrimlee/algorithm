@@ -22,7 +22,7 @@ export const NavBar = () => {
           </button>
         </div>
         <div className="-mr-2.5 flex flex-1 items-center justify-end">
-          <nav className="flex items-center sm:gap-1">
+          <nav className="flex items-center gap-x-0.5 sm:gap-x-1">
             <Button asChild variant="ghost" size="icon">
               <a
                 href="https://github.com/sangrimlee/algorithm"
