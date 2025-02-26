@@ -51,7 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={cx(poppins.variable, pretendard.variable, nanumGothicCoding.variable)}
       suppressHydrationWarning
     >
-      <head></head>
+      <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.css" />
+      </head>
       <body>
         <Analytics />
         <StyledJsxRegistry>
