@@ -16,6 +16,14 @@ export async function readMDXFile<T>(
   return { content, metadata };
 }
 
+export function readMDXFileBySlug<T>(
+  dirPath: string,
+  slug: string,
+  schema: z.Schema<T>,
+): Promise<{ content: string; metadata: T }> {
+  return readMDXFile(path.join(dirPath, `${slug}.mdx`), schema);
+}
+
 export async function getMDXFiles(dirPath: string): Promise<string[]> {
   const mdxFiles = await glob(path.join(dirPath, '*.mdx'));
   return mdxFiles;
