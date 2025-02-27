@@ -20,6 +20,7 @@
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.7",
     "next": "^15.1.7",
