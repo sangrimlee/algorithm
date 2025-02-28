@@ -1,3 +1,3 @@
-export { getMDXFile } from './utils/get-mdx-file';
-export { getMDXFiles } from './utils/get-mdx-files';
-export { getMDXMetadata } from './utils/get-mdx-metadata';
+export * from './components';
+export { compileMDX } from './utils/compile-mdx';
+export { parseMDXMetadata } from './utils/parse-mdx-metadata';

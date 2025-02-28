@@ -2,15 +2,12 @@ import * as runtime from 'react/jsx-runtime';
 
 import { compile, run } from '@mdx-js/mdx';
 
-import type { MDXComponents } from 'mdx/types';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import { rehypePrettyCode } from 'rehype-pretty-code';
 import type { Options as RehypePrettyCodeOptions } from 'rehype-pretty-code';
 import { getSingletonHighlighter } from 'shiki';
-
-import { mdxComponents } from '../components';
 
 const rehypePrettyCodeOptions = {
   grid: true,
@@ -39,7 +36,7 @@ const rehypePrettyCodeOptions = {
   },
 } satisfies RehypePrettyCodeOptions;
 
-export async function compileMDX(mdxSource: string, components?: MDXComponents) {
+export async function compileMDX(mdxSource: string) {
   const code = String(
     await compile(mdxSource, {
       outputFormat: 'function-body',
@@ -53,6 +50,5 @@ export async function compileMDX(mdxSource: string, components?: MDXComponents) 
     baseUrl: import.meta.url,
   });
 
-  const content = <MDXContent components={{ ...mdxComponents, ...(components ?? {}) }} />;
-  return { content };
+  return MDXContent;
 }
