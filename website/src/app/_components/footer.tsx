@@ -3,8 +3,8 @@ import { BlueSkyLogo, GithubLogo, Logo, XLogo } from '@/components/logo';
 
 export const Footer = () => {
   return (
-    <footer className="container border-t border-gray-6 bg-gray-2 py-10 text-gray-11">
-      <div className="flex w-full flex-col items-center sm:items-start">
+    <footer className="w-full border-t border-gray-6 bg-gray-2 py-10 text-gray-11">
+      <div className="container flex flex-col items-center sm:items-start">
         <Link href="/">
           <Logo />
         </Link>
