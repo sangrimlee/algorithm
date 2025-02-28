@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import * as Breadcrumb from '@/components/ui/breadcrumb';
 import { MDX } from '@/components/mdx';
 import { getFileName } from '@/utils/fs';
 import { getMDXFiles, readMDXFileBySlug } from '@/utils/mdx';
@@ -35,9 +36,28 @@ export default async function LeetCodePage({ params }: PageProps) {
   const { content, metadata } = await readMDXFileBySlug(LEETCODE_PATH, slug, LeetCodeMedata);
 
   return (
-    <div>
-      <h1>{metadata.title}</h1>
-      <MDX content={content} />
-    </div>
+    <>
+      <article className="px-inset min-h-(--content-height) w-full pt-4 pb-8 lg:px-12">
+        <Breadcrumb.Root className="mt-2">
+          <Breadcrumb.List>
+            <Breadcrumb.Item>
+              <Breadcrumb.Link href="/solutions">Solutions</Breadcrumb.Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Separator />
+            <Breadcrumb.Item>
+              <Breadcrumb.Link href="/solutions/leetcode">LeetCode</Breadcrumb.Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Separator />
+            <Breadcrumb.Item>
+              <Breadcrumb.Page>{metadata.title}</Breadcrumb.Page>
+            </Breadcrumb.Item>
+          </Breadcrumb.List>
+        </Breadcrumb.Root>
+        <div className="mt-4 mb-8">
+          <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
+        </div>
+        <MDX content={content} />
+      </article>
+    </>
   );
 }
