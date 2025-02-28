@@ -1,3 +1,5 @@
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
-  return <main className="container">{children}</main>;
+  return (
+    <div className="mx-auto flex w-full max-w-(--content-width) items-start gap-12">{children}</div>
+  );
 }
