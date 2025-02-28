@@ -1,46 +1,62 @@
-import { z } from 'zod';
-
-import { getFileName } from '@/utils/fs';
-import { getMDXFile, getMDXFiles } from '@/features/mdx';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-const PROGRAMMERS_PATH = './src/contents/solutions/programmers';
-
-const ProgrammersMetadata = z.object({
-  id: z.string(),
-  title: z.string(),
-  level: z.number().min(1).max(5),
-  url: z.string(),
-});
-
-interface PageParams {
-  slug: string;
-}
-
-export async function generateStaticParams(): Promise<PageParams[]> {
-  const mdxFiles = await getMDXFiles(PROGRAMMERS_PATH);
-  return mdxFiles.map((mdxFile) => ({
-    slug: getFileName(mdxFile),
-  }));
-}
+import * as Breadcrumb from '@/components/ui/breadcrumb';
+import { MDX } from '@/features/mdx';
+import { getProgrammersPageBySlug, getProgrammersPageSlugs } from '../_api';
 
 interface PageProps {
-  params: Promise<PageParams>;
+  params: Promise<{ slug: string }>;
 }
 
-export default async function LeetCodePage({ params }: PageProps) {
+export const generateStaticParams = getProgrammersPageSlugs;
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const mdx = await getMDXFile(PROGRAMMERS_PATH, slug, ProgrammersMetadata);
-  if (!mdx) {
+  const programmersPage = await getProgrammersPageBySlug(slug);
+  if (!programmersPage) {
     notFound();
   }
 
-  const { content, metadata } = mdx;
+  const { metadata } = programmersPage;
+  return {
+    title: metadata.title,
+    openGraph: {
+      title: metadata.title,
+      type: 'article',
+      url: `/solutions/leetcode/${slug}`,
+    },
+  } satisfies Metadata;
+}
 
+export default async function ProgrammersPage({ params }: PageProps) {
+  const { slug } = await params;
+
+  const programmersPage = await getProgrammersPageBySlug(slug);
+  if (!programmersPage) {
+    notFound();
+  }
+
+  const { content, metadata } = programmersPage;
   return (
-    <div>
-      <h1>{metadata.title}</h1>
-      <div className="markdown">{content}</div>
-    </div>
+    <>
+      <article className="px-inset min-h-(--content-height) w-full pt-4 pb-8 lg:px-12">
+        <Breadcrumb.Root className="mt-2">
+          <Breadcrumb.List>
+            <Breadcrumb.Item>
+              <Breadcrumb.Link href="/solutions/programmers">Programmers</Breadcrumb.Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Separator />
+            <Breadcrumb.Item>
+              <Breadcrumb.Page>{metadata.title}</Breadcrumb.Page>
+            </Breadcrumb.Item>
+          </Breadcrumb.List>
+        </Breadcrumb.Root>
+        <div className="mt-4 mb-8">
+          <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
+        </div>
+        <MDX content={content} />
+      </article>
+    </>
   );
 }
