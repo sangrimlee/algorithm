@@ -1,44 +1,46 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { z } from 'zod';
-
-import { getMDXFile, getMDXFiles } from '@/features/mdx';
-import { getFileName } from '@/utils/fs';
-
-const DOCS_PATH = './src/contents/docs';
-
-const DocsMeta = z.object({
-  title: z.string(),
-  tags: z.string().array().optional(),
-});
-
-interface PageParams {
-  slug: string;
-}
-
-export async function generateStaticParams(): Promise<PageParams[]> {
-  const mdxFiles = await getMDXFiles(DOCS_PATH);
-  return mdxFiles.map((mdxFile) => ({
-    slug: getFileName(mdxFile),
-  }));
-}
+import { MDX } from '@/features/mdx';
+import { getDocPageBySlug, getDocPageSlugs } from '../_api';
 
 interface PageProps {
-  params: Promise<PageParams>;
+  params: Promise<{ slug: string }>;
 }
 
-export default async function LeetCodePage({ params }: PageProps) {
+export const generateStaticParams = getDocPageSlugs;
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const mdx = await getMDXFile(DOCS_PATH, slug, DocsMeta);
-  if (!mdx) {
+  const docPage = await getDocPageBySlug(slug);
+  if (!docPage) {
     notFound();
   }
-  const { content, metadata } = mdx;
 
+  const { metadata } = docPage;
+  return {
+    title: metadata.title,
+    keywords: metadata.tags,
+    openGraph: {
+      title: metadata.title,
+      type: 'article',
+      url: `/docs/${slug}`,
+    },
+  } satisfies Metadata;
+}
+
+export default async function DocPage({ params }: PageProps) {
+  const { slug } = await params;
+  const docPage = await getDocPageBySlug(slug);
+  if (!docPage) {
+    notFound();
+  }
+
+  const { content, metadata } = docPage;
   return (
     <div>
       <h1>{metadata.title}</h1>
-      <div className="markdown">{content}</div>
+      <MDX content={content} />
     </div>
   );
 }
