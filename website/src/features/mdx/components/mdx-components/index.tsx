@@ -1,11 +1,12 @@
 import NextImage from 'next/image';
 
-import type { MDXComponents } from 'mdx/types';
+import type { MDXProps } from 'mdx/types';
+
 import { Anchor } from './anchor';
 import { Heading } from './heading';
 import { CodeBlock, CodeBlockPre } from './code-block';
 
-export const mdxComponents: MDXComponents = {
+export const mdxComponents: MDXProps['components'] = {
   Image: NextImage,
   a: Anchor,
   h2: (props) => <Heading tag="h2" {...props} />,

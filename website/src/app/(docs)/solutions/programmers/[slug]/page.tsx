@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
-import { MDX } from '@/components/mdx';
 import { getFileName } from '@/utils/fs';
-import { getMDXFiles, readMDXFileBySlug } from '@/utils/mdx';
+import { getMDXFile, getMDXFiles } from '@/features/mdx';
+import { notFound } from 'next/navigation';
 
 const PROGRAMMERS_PATH = './src/contents/solutions/programmers';
 
@@ -30,16 +30,17 @@ interface PageProps {
 
 export default async function LeetCodePage({ params }: PageProps) {
   const { slug } = await params;
-  const { content, metadata } = await readMDXFileBySlug(
-    PROGRAMMERS_PATH,
-    slug,
-    ProgrammersMetadata,
-  );
+  const mdx = await getMDXFile(PROGRAMMERS_PATH, slug, ProgrammersMetadata);
+  if (!mdx) {
+    notFound();
+  }
+
+  const { content, metadata } = mdx;
 
   return (
     <div>
       <h1>{metadata.title}</h1>
-      <MDX content={content} />
+      <div className="markdown">{content}</div>
     </div>
   );
 }

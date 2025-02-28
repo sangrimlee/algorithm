@@ -1,15 +1,16 @@
-import type { MDXRemoteProps } from 'next-mdx-remote/rsc';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import * as runtime from 'react/jsx-runtime';
 
+import { compile, run } from '@mdx-js/mdx';
+
+import type { MDXComponents } from 'mdx/types';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
-import rehypeSlug from 'rehype-slug';
 import rehypeKatex from 'rehype-katex';
 import { rehypePrettyCode } from 'rehype-pretty-code';
 import type { Options as RehypePrettyCodeOptions } from 'rehype-pretty-code';
 import { getSingletonHighlighter } from 'shiki';
 
-import { mdxComponents } from './mdx-components';
+import { mdxComponents } from '../components';
 
 const rehypePrettyCodeOptions = {
   grid: true,
@@ -38,22 +39,20 @@ const rehypePrettyCodeOptions = {
   },
 } satisfies RehypePrettyCodeOptions;
 
-const mdxOptions = {
-  mdxOptions: {
-    remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [rehypeSlug, rehypeKatex, [rehypePrettyCode, rehypePrettyCodeOptions]],
-    format: 'mdx',
-  },
-} satisfies MDXRemoteProps['options'];
-
-interface MDXProps {
-  content: string;
-}
-
-export function MDX({ content }: MDXProps) {
-  return (
-    <div className="markdown">
-      <MDXRemote source={content} components={mdxComponents} options={mdxOptions} />
-    </div>
+export async function compileMDX(mdxSource: string, components?: MDXComponents) {
+  const code = String(
+    await compile(mdxSource, {
+      outputFormat: 'function-body',
+      remarkPlugins: [remarkGfm, remarkMath],
+      rehypePlugins: [rehypeKatex, [rehypePrettyCode, rehypePrettyCodeOptions]],
+    }),
   );
+
+  const { default: MDXContent } = await run(code, {
+    ...runtime,
+    baseUrl: import.meta.url,
+  });
+
+  const content = <MDXContent components={{ ...mdxComponents, ...(components ?? {}) }} />;
+  return { content };
 }

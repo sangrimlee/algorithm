@@ -1,9 +1,9 @@
+import { notFound } from 'next/navigation';
 import { z } from 'zod';
 
 import * as Breadcrumb from '@/components/ui/breadcrumb';
-import { MDX } from '@/components/mdx';
+import { getMDXFile, getMDXFiles } from '@/features/mdx';
 import { getFileName } from '@/utils/fs';
-import { getMDXFiles, readMDXFileBySlug } from '@/utils/mdx';
 
 const LEETCODE_PATH = './src/contents/solutions/leetcode';
 
@@ -33,7 +33,12 @@ interface PageProps {
 
 export default async function LeetCodePage({ params }: PageProps) {
   const { slug } = await params;
-  const { content, metadata } = await readMDXFileBySlug(LEETCODE_PATH, slug, LeetCodeMedata);
+  const mdx = await getMDXFile(LEETCODE_PATH, slug, LeetCodeMedata);
+  if (!mdx) {
+    notFound();
+  }
+
+  const { content, metadata } = mdx;
 
   return (
     <>
@@ -56,7 +61,7 @@ export default async function LeetCodePage({ params }: PageProps) {
         <div className="mt-4 mb-8">
           <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
         </div>
-        <MDX content={content} />
+        <div className="markdown">{content}</div>
       </article>
     </>
   );
