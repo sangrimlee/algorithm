@@ -17,3 +17,12 @@ export function readFile(filePath: string): Promise<string> {
 export function getFileName(filePath: string): string {
   return path.basename(filePath, path.extname(filePath));
 }
+
+export async function readDir(dirPath: string, extension: `.${string}`): Promise<string[]> {
+  const isExist = await exists(dirPath);
+  if (!isExist) {
+    return [];
+  }
+  const files = await fs.readdir(dirPath);
+  return files.filter((file) => path.extname(file) === extension);
+}
