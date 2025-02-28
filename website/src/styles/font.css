@@ -1,5 +1,5 @@
 @theme {
   --font-sans: var(--font-pretendard);
-  --font-mono: var(--font-nanum-gothic-coding);
+  --font-mono: var(--font-source-code-pro);
   --font-logo: var(--font-poppins);
 }

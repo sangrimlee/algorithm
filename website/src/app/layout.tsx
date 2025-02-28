@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import { Footer } from './_components/footer';
 import { NavBar } from './_components/nav-bar';
-import { nanumGothicCoding, poppins, pretendard } from './_fonts';
+import { poppins, pretendard, sourceCodePro } from './_fonts';
 
 import { cx } from '@/utils/cx';
 import { env } from '@/env';
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="ko"
       dir="ltr"
-      className={cx(poppins.variable, pretendard.variable, nanumGothicCoding.variable)}
+      className={cx(poppins.variable, pretendard.variable, sourceCodePro.variable)}
       suppressHydrationWarning
     >
       <head>

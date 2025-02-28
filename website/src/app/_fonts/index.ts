@@ -1,4 +1,4 @@
-import { Nanum_Gothic_Coding, Poppins } from 'next/font/google';
+import { Poppins, Source_Code_Pro } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const poppins = Poppins({
@@ -17,12 +17,11 @@ export const pretendard = localFont({
   fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
-export const nanumGothicCoding = Nanum_Gothic_Coding({
-  weight: ['400', '700'],
+export const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
-  variable: '--font-nanum-gothic-coding',
+  variable: '--font-source-code-pro',
   fallback: [
     'ui-monospace',
     'SFMono-Regular',
