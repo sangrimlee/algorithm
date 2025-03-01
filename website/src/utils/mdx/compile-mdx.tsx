@@ -1,13 +1,20 @@
 import * as runtime from 'react/jsx-runtime';
 
 import { compile, run } from '@mdx-js/mdx';
+import type { MDXComponents } from 'mdx/types';
 
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import rehypeSlug from 'rehype-slug';
+import type { TocEntry } from '@stefanprobst/rehype-extract-toc';
+import rehypeExtractToc from '@stefanprobst/rehype-extract-toc';
+import rehypeExtractTocMdx from '@stefanprobst/rehype-extract-toc/mdx';
 import { rehypePrettyCode } from 'rehype-pretty-code';
 import type { Options as RehypePrettyCodeOptions } from 'rehype-pretty-code';
 import { getSingletonHighlighter } from 'shiki';
+
+import { mdxComponents } from '@/components/mdx';
 
 const rehypePrettyCodeOptions = {
   grid: true,
@@ -36,19 +43,28 @@ const rehypePrettyCodeOptions = {
   },
 } satisfies RehypePrettyCodeOptions;
 
-export async function compileMDX(mdxSource: string) {
+export async function compileMDX(mdxSource: string, components?: MDXComponents) {
   const code = String(
     await compile(mdxSource, {
       outputFormat: 'function-body',
       remarkPlugins: [remarkGfm, remarkMath],
-      rehypePlugins: [rehypeKatex, [rehypePrettyCode, rehypePrettyCodeOptions]],
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeKatex,
+        rehypeExtractToc,
+        [rehypeExtractTocMdx, { name: 'toc' }],
+        [rehypePrettyCode, rehypePrettyCodeOptions],
+      ],
     }),
   );
 
-  const { default: MDXContent } = await run(code, {
+  const { default: MDXContent, toc } = await run(code, {
     ...runtime,
     baseUrl: import.meta.url,
   });
-
-  return MDXContent;
+  const tableOfContents = (toc as TocEntry[]).filter((entry) => entry.id !== 'footnote-label');
+  return {
+    content: <MDXContent components={{ ...mdxComponents, ...components }} />,
+    tableOfContents,
+  };
 }

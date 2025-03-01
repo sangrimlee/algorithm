@@ -2,8 +2,8 @@ import path from 'node:path';
 
 import { z } from 'zod';
 
-import { getMDXFile } from '@/features/mdx';
 import { getFileName, readDir } from '@/utils/fs';
+import { getMDXFile } from '@/utils/mdx';
 
 const ProgrammersMetadata = z.object({
   id: z.string(),
@@ -12,10 +12,9 @@ const ProgrammersMetadata = z.object({
   url: z.string(),
 });
 
-export async function getProgrammersPageBySlug(slug: string) {
+export function getProgrammersPageBySlug(slug: string) {
   const filePath = path.join(process.cwd(), './src/contents/solutions/programmers', `${slug}.mdx`);
-  const docPage = await getMDXFile(filePath, ProgrammersMetadata);
-  return docPage;
+  return getMDXFile(filePath, ProgrammersMetadata);
 }
 
 export async function getProgrammersPageSlugs() {

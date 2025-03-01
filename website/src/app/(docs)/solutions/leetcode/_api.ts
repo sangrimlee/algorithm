@@ -2,8 +2,8 @@ import path from 'node:path';
 
 import { z } from 'zod';
 
-import { getMDXFile } from '@/features/mdx';
 import { getFileName, readDir } from '@/utils/fs';
+import { getMDXFile } from '@/utils/mdx';
 
 const LeetCodeMedata = z.object({
   id: z.string(),
@@ -14,10 +14,9 @@ const LeetCodeMedata = z.object({
   url: z.string(),
 });
 
-export async function getLeetCodePageBySlug(slug: string) {
+export function getLeetCodePageBySlug(slug: string) {
   const filePath = path.join(process.cwd(), './src/contents/solutions/leetcode', `${slug}.mdx`);
-  const docPage = await getMDXFile(filePath, LeetCodeMedata);
-  return docPage;
+  return getMDXFile(filePath, LeetCodeMedata);
 }
 
 export async function getLeetCodePageSlugs() {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import * as Breadcrumb from '@/components/ui/breadcrumb';
-import { MDX } from '@/features/mdx';
+import { compileMDX } from '@/utils/mdx';
 import { getProgrammersPageBySlug, getProgrammersPageSlugs } from '../_api';
 
 interface PageProps {
@@ -37,7 +37,8 @@ export default async function ProgrammersPage({ params }: PageProps) {
     notFound();
   }
 
-  const { content, metadata } = programmersPage;
+  const { source, metadata } = programmersPage;
+  const { content } = await compileMDX(source);
   return (
     <>
       <article className="px-inset min-h-(--content-height) w-full pt-4 pb-8 lg:px-12">
@@ -55,7 +56,7 @@ export default async function ProgrammersPage({ params }: PageProps) {
         <div className="mt-4 mb-8">
           <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
         </div>
-        <MDX content={content} />
+        <div className="markdown">{content}</div>
       </article>
     </>
   );

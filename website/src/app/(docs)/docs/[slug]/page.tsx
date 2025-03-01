@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { MDX } from '@/features/mdx';
+import { compileMDX } from '@/utils/mdx';
 import { getDocPageBySlug, getDocPageSlugs } from '../_api';
 
 interface PageProps {
@@ -36,11 +36,13 @@ export default async function DocPage({ params }: PageProps) {
     notFound();
   }
 
-  const { content, metadata } = docPage;
+  const { source, metadata } = docPage;
+  const { content } = await compileMDX(source);
+
   return (
     <div>
       <h1>{metadata.title}</h1>
-      <MDX content={content} />
+      <div className="markdown">{content}</div>
     </div>
   );
 }
