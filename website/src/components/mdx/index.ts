@@ -4,14 +4,16 @@ import type { MDXComponents } from 'mdx/types';
 
 import { Anchor } from './anchor';
 import { CodeBlock, CodeBlockPre } from './code-block';
-import { Heading } from './heading';
+import { H2, H3, H4, H5, H6 } from './heading';
 
 export const mdxComponents: MDXComponents = {
   Image: NextImage,
   a: Anchor,
-  h2: (props) => <Heading tag="h2" {...props} />,
-  h3: (props) => <Heading tag="h3" {...props} />,
-  h4: (props) => <Heading tag="h4" {...props} />,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6,
 
   // CodeBlock
   figure: CodeBlock,
