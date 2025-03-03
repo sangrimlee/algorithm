@@ -75,7 +75,7 @@
       padding-bottom: 0.125em;
       border-bottom-width: 1px;
       border-bottom-color: var(--gray6);
-      scroll-margin-top: calc(var(--navbar-height) + 2em);
+      scroll-margin-top: calc(var(--navbar-height) + 0.5rem);
     }
     :where(h2 strong):not(:where([class~='not-markdown'], [class~='not-markdown'] *)) {
       font-weight: 500;
@@ -89,7 +89,7 @@
       line-height: 1.3;
       margin-top: 1.6em;
       margin-bottom: 0.6em;
-      scroll-margin-top: calc(var(--navbar-height) + 1.6em);
+      scroll-margin-top: calc(var(--navbar-height) + 0.5rem);
     }
     :where(h3 strong):not(:where([class~='not-markdown'], [class~='not-markdown'] *)) {
       font-weight: 500;
@@ -103,7 +103,7 @@
       line-height: 1.5;
       margin-top: 1.5em;
       margin-bottom: 0.5em;
-      scroll-margin-top: calc(var(--navbar-height) + 1.5em);
+      scroll-margin-top: calc(var(--navbar-height) + 0.5rem);
     }
     :where(h4 strong):not(:where([class~='not-markdown'], [class~='not-markdown'] *)) {
       font-weight: 500;
