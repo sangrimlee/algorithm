@@ -37,7 +37,14 @@
   .px-inset {
     @apply pr-(--content-inset-right) pl-(--content-inset-left);
   }
+
   .container {
     @apply mx-auto w-full max-w-(--content-width) pr-(--content-inset-right) pl-(--content-inset-left);
+  }
+
+  .styled-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray7) transparent;
+    scrollbar-gutter: stable;
   }
 }
