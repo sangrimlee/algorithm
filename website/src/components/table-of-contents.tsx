@@ -43,7 +43,7 @@ function createSectionObserver(rootElement: Element, setActiveSection: (slug: st
     }
   };
   const observer = new IntersectionObserver(observerCallback, {
-    rootMargin: '-92px 0px',
+    rootMargin: '-64px 0px',
   });
   Array.from(sections.keys()).forEach((element) => {
     observer.observe(element);
