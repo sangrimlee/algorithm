@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import * as Breadcrumb from '@/components/ui/breadcrumb';
 import { compileMDX } from '@/utils/mdx';
 import { getProgrammersPageBySlug, getProgrammersPageSlugs } from '../_api';
+import { TableOfContents } from '@/components/table-of-contents';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -38,10 +39,10 @@ export default async function ProgrammersPage({ params }: PageProps) {
   }
 
   const { source, metadata } = programmersPage;
-  const { content } = await compileMDX(source);
+  const { content, tableOfContents } = await compileMDX(source);
   return (
     <>
-      <article className="px-inset min-h-(--content-height) w-full pt-4 pb-8 lg:px-12">
+      <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-8">
         <Breadcrumb.Root className="mt-2">
           <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -58,6 +59,11 @@ export default async function ProgrammersPage({ params }: PageProps) {
         </div>
         <div className="markdown">{content}</div>
       </article>
+      <TableOfContents
+        tableOfContents={tableOfContents}
+        githubLink={metadata.githubLink}
+        githubIssueLink={metadata.githubIssueLink}
+      />
     </>
   );
 }
