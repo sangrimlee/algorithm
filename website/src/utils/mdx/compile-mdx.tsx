@@ -3,18 +3,19 @@ import * as runtime from 'react/jsx-runtime';
 import { compile, run } from '@mdx-js/mdx';
 import type { MDXComponents } from 'mdx/types';
 
+import type { TocEntry } from '@stefanprobst/rehype-extract-toc';
+import rehypeExtractToc from '@stefanprobst/rehype-extract-toc';
+import rehypeExtractTocMdx from '@stefanprobst/rehype-extract-toc/mdx';
 import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import rehypeSlug from 'rehype-slug';
-import type { TocEntry } from '@stefanprobst/rehype-extract-toc';
-import rehypeExtractToc from '@stefanprobst/rehype-extract-toc';
-import rehypeExtractTocMdx from '@stefanprobst/rehype-extract-toc/mdx';
 import { rehypePrettyCode } from 'rehype-pretty-code';
 import type { Options as RehypePrettyCodeOptions } from 'rehype-pretty-code';
 import { getSingletonHighlighter } from 'shiki';
 
 import { mdxComponents } from '@/components/mdx';
+import type { TableOfContent } from '@/components/table-of-contents';
 
 const rehypePrettyCodeOptions = {
   grid: true,
@@ -62,9 +63,22 @@ export async function compileMDX(mdxSource: string, components?: MDXComponents) 
     ...runtime,
     baseUrl: import.meta.url,
   });
-  const tableOfContents = (toc as TocEntry[]).filter((entry) => entry.id !== 'footnote-label');
   return {
     content: <MDXContent components={{ ...mdxComponents, ...components }} />,
-    tableOfContents,
+    tableOfContents: transformToc(toc as TocEntry[]),
   };
+}
+
+function transformToc(toc: TocEntry[]): TableOfContent[] {
+  const tableOfContents: TableOfContent[] = [];
+  for (const entry of toc) {
+    if (3 < entry.depth) continue;
+    if (entry.depth !== 1 && entry.id && entry.id !== 'footnote-label') {
+      tableOfContents.push({ level: entry.depth, slug: `#${entry.id}`, text: entry.value });
+    }
+    if (entry.children) {
+      tableOfContents.push(...transformToc(entry.children));
+    }
+  }
+  return tableOfContents;
 }
