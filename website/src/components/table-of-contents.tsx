@@ -97,7 +97,7 @@ export function TableOfContents({
     <nav
       className={cx(
         'sticky top-(--navbar-height) order-last h-(--content-height) w-56 shrink-0',
-        'max-lg:hidden',
+        'max-xl:hidden',
       )}
     >
       <div className="mt-6 mb-1 text-sm font-medium text-gray-12">On this page</div>
