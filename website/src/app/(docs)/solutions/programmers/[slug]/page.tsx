@@ -5,6 +5,7 @@ import * as Breadcrumb from '@/components/ui/breadcrumb';
 import { compileMDX } from '@/utils/mdx';
 import { getProgrammersPageBySlug, getProgrammersPageSlugs } from '../_api';
 import { TableOfContents } from '@/components/table-of-contents';
+import { ProblemLink } from '@/components/problem-link';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -42,7 +43,7 @@ export default async function ProgrammersPage({ params }: PageProps) {
   const { content, tableOfContents } = await compileMDX(source);
   return (
     <>
-      <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-8">
+      <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-16">
         <Breadcrumb.Root className="mt-2">
           <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -58,6 +59,9 @@ export default async function ProgrammersPage({ params }: PageProps) {
           <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
         </div>
         <div className="markdown">{content}</div>
+        <div className="mt-12 border-t pt-6">
+          <ProblemLink site="programmers" title={metadata.title} href={metadata.url} />
+        </div>
       </article>
       <TableOfContents
         tableOfContents={tableOfContents}

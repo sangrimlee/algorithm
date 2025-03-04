@@ -5,6 +5,7 @@ import * as Breadcrumb from '@/components/ui/breadcrumb';
 import { TableOfContents } from '@/components/table-of-contents';
 import { compileMDX } from '@/utils/mdx';
 import { getLeetCodePageBySlug, getLeetCodePageSlugs } from '../_api';
+import { ProblemLink } from '@/components/problem-link';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -43,7 +44,7 @@ export default async function LeetCodePage({ params }: PageProps) {
   const { content, tableOfContents } = await compileMDX(source);
   return (
     <>
-      <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-8">
+      <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-16">
         <Breadcrumb.Root className="mt-2">
           <Breadcrumb.List>
             <Breadcrumb.Item>
@@ -60,6 +61,9 @@ export default async function LeetCodePage({ params }: PageProps) {
         </div>
         <div className="markdown" data-docs="true">
           {content}
+        </div>
+        <div className="mt-12 border-t pt-6">
+          <ProblemLink site="leetcode" title={metadata.title} href={metadata.url} />
         </div>
       </article>
       <TableOfContents
