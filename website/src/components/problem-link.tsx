@@ -29,23 +29,22 @@ export const ProblemLink = ({ href, title, site }: ProblemLinkProps) => {
       href={href}
       target="_blank"
       rel="nofollow noreferrer noopener"
-      className="flex min-h-30 w-full overflow-hidden rounded-lg border transition-colors hover:bg-gray-3"
+      className={cx(
+        'flex w-full overflow-hidden rounded-lg border bg-gray-1 transition-colors sm:min-h-30',
+        'hover:border-gray-8 hover:bg-gray-2',
+      )}
       aria-label={`${name}에서 보기`}
     >
-      <div className="hidden w-48 items-center justify-center border-r bg-gray-2 sm:flex">
+      <div className="hidden w-45 shrink-0 items-center justify-center border-r bg-gray-3 sm:flex">
         <Logo className={className} />
       </div>
-      <div className="flex flex-1 items-center px-6">
-        <div>
-          <div className="mb-2 inline-flex items-center text-sm font-medium sm:hidden">
-            <Logo iconOnly className="mr-1.5 size-3" />
-            <span>{name}</span>
-          </div>
-          <div className={cx('line-clamp-1 text-base font-semibold', 'sm:line-clamp-2')}>
-            {title}
-          </div>
-          <div className="mt-1 text-sm text-gray-11">{href}</div>
+      <div className="flex flex-1 flex-col justify-center p-4 sm:p-6">
+        <div className="mb-2 flex items-center text-xs font-medium sm:hidden">
+          <Logo iconOnly className="mr-1.5 size-3" />
+          <span>{name}</span>
         </div>
+        <div className="line-clamp-2 text-base font-semibold">{title}</div>
+        <div className="mt-1 text-xs break-all text-gray-11">{href}</div>
       </div>
     </a>
   );
