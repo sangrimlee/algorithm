@@ -1,13 +1,16 @@
 'use client';
 
-import { cx } from '@/utils/cx';
+import { cn } from '@/utils/cn';
 
-export const Logo = () => {
+type LogoProps = Omit<React.ComponentPropsWithoutRef<'span'>, 'children'>;
+
+export function Logo({ className, ...props }: LogoProps) {
   return (
-    <>
-      <div className={cx('logo-animation', 'font-logo text-xl font-extrabold tracking-tight')}>
-        Algorithm
-      </div>
+    <span
+      className={cn('logo-animation', 'font-logo text-lg font-extrabold tracking-tight', className)}
+      {...props}
+    >
+      Algorithm
       <style jsx>{`
         .logo-animation {
           mask-image: linear-gradient(60deg, black 25%, rgba(0, 0, 0, 0.25) 50%, black 75%);
@@ -19,6 +22,6 @@ export const Logo = () => {
           }
         }
       `}</style>
-    </>
+    </span>
   );
-};
+}
