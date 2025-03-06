@@ -39,7 +39,7 @@ const ProblemListLink = React.forwardRef<HTMLAnchorElement, ProblemListLinkProps
       <NextLink
         ref={ref}
         className={cn(
-          'flex-1 overflow-hidden py-2.5 text-sm font-medium overflow-ellipsis whitespace-nowrap',
+          'inline-flex h-10 flex-1 items-center gap-x-1.5 overflow-hidden text-sm font-medium overflow-ellipsis whitespace-nowrap',
           className,
         )}
         {...props}
@@ -65,7 +65,7 @@ function getColorByLevel(level: ProblemLevel): string {
   }
   return {
     Easy: 'text-green-11',
-    Medium: 'text-amber-10',
+    Medium: 'text-amber-11',
     Hard: 'text-red-11',
   }[level];
 }
