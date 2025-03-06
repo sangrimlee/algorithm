@@ -66,12 +66,12 @@ export const HeroSection = () => {
         className={cx('mt-6 flex flex-wrap items-center justify-center gap-4', 'sm:mt-8 xl:mt-10')}
       >
         <Button asChild variant="default" size="lg" rounded="full" className="min-w-40">
-          <Link href="/solutions/leetcode/1">
+          <Link href="/solutions/leetcode">
             <span>LeetCode</span>
           </Link>
         </Button>
         <Button asChild variant="outline" size="lg" rounded="full" className="min-w-40">
-          <Link href="/solutions/programmers/1843">
+          <Link href="/solutions/programmers">
             <span>Programmers</span>
           </Link>
         </Button>
