@@ -26,7 +26,8 @@ export default async function LeetCodePage() {
           {problems.map((problem) => (
             <ProblemList.Item key={problem.id}>
               <ProblemList.Link href={`/solutions/leetcode/${problem.id}`}>
-                {problem.id}. {problem.title}
+                <span>{problem.id}.</span>
+                <span>{problem.title}</span>
               </ProblemList.Link>
               <ProblemList.Level level={problem.difficulty} />
             </ProblemList.Item>
