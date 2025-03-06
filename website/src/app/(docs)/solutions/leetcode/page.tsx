@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
+
 import * as Breadcrumb from '@/components/ui/breadcrumb';
 import * as ProblemList from '@/components/problem-list';
 import { getLeetCodeAllProblems } from './_api';
+
+export const metadata = {
+  title: 'LeetCode 문제 목록',
+} satisfies Metadata;
 
 export default async function LeetCodePage() {
   const problems = await getLeetCodeAllProblems();
