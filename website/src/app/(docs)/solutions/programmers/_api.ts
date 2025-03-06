@@ -24,3 +24,12 @@ export async function getProgrammersPageSlugs() {
     slug: getFileName(file),
   }));
 }
+
+export async function getProgrammersAllProblems() {
+  const slugs = await getProgrammersPageSlugs();
+  const problems = await Promise.all(slugs.map(({ slug }) => getProgrammersPageBySlug(slug)));
+  return problems
+    .filter((problem) => problem !== null)
+    .map(({ metadata }) => metadata)
+    .sort((a, b) => Number(a.id) - Number(b.id));
+}
