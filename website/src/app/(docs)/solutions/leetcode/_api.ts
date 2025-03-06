@@ -26,3 +26,12 @@ export async function getLeetCodePageSlugs() {
     slug: getFileName(file),
   }));
 }
+
+export async function getLeetCodeAllProblems() {
+  const slugs = await getLeetCodePageSlugs();
+  const problems = await Promise.all(slugs.map(({ slug }) => getLeetCodePageBySlug(slug)));
+  return problems
+    .filter((problem) => problem !== null)
+    .map(({ metadata }) => metadata)
+    .sort((a, b) => Number(a.id) - Number(b.id));
+}
