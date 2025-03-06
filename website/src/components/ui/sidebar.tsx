@@ -112,7 +112,7 @@ const SidebarLink = React.forwardRef<HTMLAnchorElement, SidebarLinkProps>(
             'font-medium text-gray-11': type === 'link',
             'font-semibold text-gray-12': type === 'label',
           },
-          'relative flex w-full cursor-pointer items-center justify-between rounded-md py-1 pl-2 text-left text-sm transition-colors',
+          'relative flex w-full cursor-pointer items-center justify-between rounded-md py-1 text-left text-sm transition-colors',
           'hover:text-gray-12',
           'data-[active=true]:font-semibold data-[active=true]:text-blue-11',
           className,
