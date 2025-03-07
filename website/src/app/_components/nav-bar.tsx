@@ -3,13 +3,12 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 
-import { MenuIcon } from 'lucide-react';
-
 import { GithubLogo, Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { cx } from '@/utils/cx';
 import { ThemeToggle } from './theme-toggle';
 import { usePathname } from 'next/navigation';
+import { MobileNav } from './mobile-nav';
 
 type NavLinkProps = React.ComponentPropsWithoutRef<typeof Link>;
 function NavLink({ href, className, children, ...props }: NavLinkProps) {
@@ -55,11 +54,8 @@ export function NavBar() {
             </li>
           </ul>
         </nav>
-        <div className="flex items-center sm:hidden">
-          {/* TODO: 모바일 메뉴 추가 */}
-          <button type="button">
-            <MenuIcon className="size-4" />
-          </button>
+        <div className="-ml-2.5 flex items-center sm:hidden">
+          <MobileNav />
         </div>
         <div className="-mr-2.5 flex flex-1 items-center justify-end">
           <nav className="flex items-center gap-x-0.5 sm:gap-x-1">
