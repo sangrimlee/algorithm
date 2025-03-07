@@ -1,25 +1,11 @@
-import * as Sidebar from '@/components/ui/sidebar';
-import { meta } from './_meta';
+import { SideNav } from './_components/side-nav';
+import { MobileNav } from './_components/mobile-nav';
 
 export default function LeetCodeLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Sidebar.Root className="pt-5 max-lg:hidden">
-        <Sidebar.Content>
-          <Sidebar.List>
-            <Sidebar.Item>
-              <Sidebar.Link type="label" href="/solutions/programmers">
-                문제 목록
-              </Sidebar.Link>
-            </Sidebar.Item>
-            {Object.entries(meta).map(([slug, name]) => (
-              <Sidebar.Item key={slug}>
-                <Sidebar.Link href={`/solutions/programmers/${slug}`}>{name}</Sidebar.Link>
-              </Sidebar.Item>
-            ))}
-          </Sidebar.List>
-        </Sidebar.Content>
-      </Sidebar.Root>
+      <MobileNav />
+      <SideNav />
       {children}
     </>
   );
