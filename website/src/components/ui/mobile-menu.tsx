@@ -27,7 +27,7 @@ const MobileMenuContent = React.forwardRef<
       <DialogPrimitive.Content
         ref={ref}
         className={cn(
-          'styled-scrollbar fixed inset-x-0 top-(--navbar-height) bottom-0 z-modal overflow-y-auto bg-gray-1 duration-200 sm:hidden',
+          'styled-scrollbar fixed inset-x-0 top-(--navbar-height) bottom-0 z-modal overflow-y-auto bg-gray-1 duration-200',
           'data-[state=closed]:animate-out data-[state=closed]:fade-out-0',
           'data-[state=open]:animate-in data-[state=open]:fade-in-0',
           className,

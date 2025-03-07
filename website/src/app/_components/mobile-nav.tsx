@@ -22,7 +22,7 @@ export const MobileNav = () => {
           {isOpen ? <XIcon /> : <MenuIcon />}
         </Button>
       </MobileMenu.Trigger>
-      <MobileMenu.Content title="Mobile navigation">
+      <MobileMenu.Content title="모바일 메뉴" className="sm:hidden">
         <MobileMenu.List>
           <MobileMenu.Item>
             <MobileMenu.Link href="/">Home</MobileMenu.Link>
