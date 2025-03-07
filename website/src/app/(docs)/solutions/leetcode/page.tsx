@@ -12,7 +12,7 @@ export default async function LeetCodePage() {
   const problems = await getLeetCodeAllProblems();
 
   return (
-    <article className="min-h-(--content-height) w-full min-w-0 pt-4 pb-16">
+    <article className="min-h-(--content-height) w-full min-w-0 pt-14 pb-16 lg:pt-4">
       <Breadcrumb.Root className="mt-2">
         <Breadcrumb.List>
           <Breadcrumb.Page>LeetCode</Breadcrumb.Page>
