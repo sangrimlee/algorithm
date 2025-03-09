@@ -11,22 +11,108 @@ tags:
 url: https://leetcode.com/problems/find-missing-and-repeated-values
 ---
 
-## Solution
+## 문제 설명
+
+- `n * n` 크기의 2차원 정수 배열 `grid`가 주어집니다.
+- `grid`에는 $1$부터 $n^2$까지의 숫자가 포함되어 있으며, **각 숫자는 한 번씩만 나타납니다.**
+- 하지만, 예외적으로 **특정 숫자 $x$가 두 번 나타나고, 특정 숫자 $y$는 한 번도 나타나지 않습니다.**
+- 중복된 숫자 $x$와 누락된 숫자 $y$를 찾아 `[x, y]`형태의 배열로 반환합니다.
+
+## 문제 풀이
+
+### `Set`
+
+- **`Set`**을 활용하여, 중복된 숫자를 찾는다.
+- 빠진 숫자(`missingValue`)는 $1$**부터 $n^2$까지의 합 - 실제 숫자 합**을 이용하여 찾는다.
 
 ```typescript showLineNumbers
-export function findMissingAndRepeatedValues(grid: number[][]): number[] {
-  let sum = 0;
-  let squareSum = 0;
-  grid.forEach((row) => {
-    row.forEach((num) => {
-      sum += num;
-      squareSum += num ** 2;
-    });
-  });
+function findMissingAndRepeatedValues(grid: number[][]): number[] {
+  const n = grid.length;
+  const totalSum = (n ** 2 * (n ** 2 + 1)) / 2;
+  const set = new Set<number>();
 
-  const n = grid.length ** 2;
-  const c1 = sum - (n * (n + 1)) / 2;
-  const c2 = squareSum - (n * (n + 1) * (2 * n + 1)) / 6;
-  return [(c2 / c1 + c1) / 2, (c2 / c1 - c1) / 2];
+  let actualSum = 0;
+  let twiceValue = 0;
+  for (const row of grid) {
+    for (const value of row) {
+      if (set.has(value)) {
+        twiceValue = value;
+      } else {
+        set.add(value);
+        actualSum += value;
+      }
+    }
+  }
+
+  const missingValue = totalSum - actualSum;
+  return [twiceValue, missingValue];
 }
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(n^2)$
+- 공간 복잡도: $O(n^2)$
+
+---
+
+### `Math`
+
+- 숫자의 합과 제곱합을 이용하여, **중복된 숫자**와 **빠진 숫자**를 찾을 수 있다.
+- 자세한 식은 아래와 같습니다.
+
+$$
+x = twiceValue,\ y = missingValue
+$$
+
+$$
+sumDiff = x - y
+$$
+
+$$
+squareDiff = x^2 - y^2 = (x+y) \times (x-y) = (x+y) \times sumDiff
+$$
+
+$$
+x - y = sumDiff
+$$
+
+$$
+x + y = \frac{squareDiff}{sumDiff}
+$$
+
+$$
+x = \frac{squareDiff/sumDiff + sumDiff}{2}
+$$
+
+$$
+y = \frac{squareDiff/sumDiff - sumDiff}{2}
+$$
+
+```typescript showLineNumbers
+function findMissingAndRepeatedValues(grid: number[][]): number[] {
+  const n = grid.length ** 2;
+  const totalSum = (n * (n + 1)) / 2;
+  const totalSquareSum = (n * (n + 1) * (2 * n + 1)) / 6;
+
+  let actualSum = 0;
+  let actualSquareSum = 0;
+  for (const row of grid) {
+    for (const value of row) {
+      actualSum += value;
+      actualSquareSum += value ** 2;
+    }
+  }
+
+  const sumDiff = actualSum - totalSum;
+  const squareDiff = actualSquareSum - totalSquareSum;
+  const twiceValue = (squareDiff / sumDiff + sumDiff) / 2;
+  const missingValue = (squareDiff / sumDiff - sumDiff) / 2;
+  return [twiceValue, missingValue];
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n^2)$
+- 공간 복잡도: $O(1)$
