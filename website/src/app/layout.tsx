@@ -1,16 +1,18 @@
 import '@/styles/globals.css';
 
 import type { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/react';
 
-import { Footer } from './_components/footer';
-import { NavBar } from './_components/nav-bar';
-import { poppins, pretendard, sourceCodePro } from './_fonts';
+import { ThemeProvider } from 'next-themes';
+
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import { cx } from '@/utils/cx';
 import { env } from '@/env';
+import { Footer } from './_components/footer';
+import { NavBar } from './_components/nav-bar';
+import { poppins, pretendard, sourceCodePro } from './_fonts';
 import StyledJsxRegistry from './registry';
-import { ThemeProvider } from 'next-themes';
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.URL),
@@ -61,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Analytics />
+        <SpeedInsights />
         <StyledJsxRegistry>
           <ThemeProvider
             attribute="class"
