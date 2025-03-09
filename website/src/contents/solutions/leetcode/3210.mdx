@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/find-the-encrypted-string
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function getEncryptedString(s: string, k: number): string {
   const i = k % s.length;
   return s.substring(i) + s.substring(0, i);

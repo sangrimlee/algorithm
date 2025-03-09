@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/most-visited-sector-in-a-circular-track
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function mostVisited(n: number, rounds: number[]): number[] {
   const sectors = Array.from({ length: n }).map((_, i) => i + 1);
   const startSector = rounds[0];

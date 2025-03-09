@@ -12,7 +12,7 @@ LeetCode의 문제 중 **Linked List** 관련 문제 해결 및 테스트 코드
 
 LeetCode에서 주어지는 `class` 입니다.
 
-```typescript copy
+```typescript showLineNumbers
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -27,7 +27,7 @@ class ListNode {
 
 숫자 배열(`number[]`)을 `ListNode`로 이루어진 **Linked List**로 변환하는 함수입니다.
 
-```typescript copy
+```typescript showLineNumbers
 function createLinkedList(arr: number[]): ListNode | null {
   const startNode = new ListNode();
   let currentNode = startNode;
@@ -43,7 +43,7 @@ function createLinkedList(arr: number[]): ListNode | null {
 
 `ListNode`로 이루어진 **Linked List**를 숫자 배열(`number[]`)로 변환하는 함수입니다.
 
-```typescript copy
+```typescript showLineNumbers
 function linkedListToArr(head: ListNode | null): number[] {
   if (head === null) {
     return [];

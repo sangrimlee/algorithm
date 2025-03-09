@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maxi
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function average(salary: number[]): number {
   const [min, max, total] = salary.reduce(
     ([min, max, total], value) => [Math.min(min, value), Math.max(max, value), total + value],

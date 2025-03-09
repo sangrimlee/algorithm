@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/find-the-original-array-of-prefix-xor
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findArray(pref: number[]): number[] {
   return pref.map((p, i) => (i === 0 ? p : p ^ pref[i - 1]));
 }

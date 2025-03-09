@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/determine-color-of-a-chessboard-square
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function squareIsWhite(coordinates: string): boolean {
   return coordinates.charCodeAt(0) % 2 !== parseInt(coordinates[1]) % 2;
 }

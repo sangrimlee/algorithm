@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countPoints(points: number[][], queries: number[][]): number[] {
   const answer = new Array(queries.length).fill(0);
   function getDistance(x1: number, y1: number, x2: number, y2: number): number {

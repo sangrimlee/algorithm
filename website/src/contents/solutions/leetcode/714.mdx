@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transact
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxProfit(prices: number[], fee: number): number {
   const n = prices.length;
   let [cash, hold] = [0, -prices[0]];

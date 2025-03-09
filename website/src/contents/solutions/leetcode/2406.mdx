@@ -17,7 +17,7 @@ url: https://leetcode.com/problems/divide-intervals-into-minimum-number-of-group
 
 ### Solution1: `Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minGroups(intervals: number[][]): number {
   const events: number[][] = [];
   for (const [start, end] of intervals) {
@@ -45,7 +45,7 @@ export function minGroups(intervals: number[][]): number {
 
 ### Solution2: `Line Sweep`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minGroups(intervals: number[][]): number {
   let [minStart, maxEnd] = [Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER];
   for (const [start, end] of intervals) {

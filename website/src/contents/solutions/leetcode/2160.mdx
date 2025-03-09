@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitt
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumSum(num: number): number {
   const [a, b, c, d] = [...num.toString()].map(Number).sort((a, b) => a - b);
   return 10 * (a + b) + c + d;

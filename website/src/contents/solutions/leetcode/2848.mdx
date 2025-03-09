@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/points-that-intersect-with-cars
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numberOfPoints(nums: number[][]): number {
   const prefix = new Array(102).fill(0);
   for (const [start, end] of nums) {

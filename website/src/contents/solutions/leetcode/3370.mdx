@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/smallest-number-with-all-set-bits
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function smallestNumber(n: number): number {
   return (1 << bitLength(n)) - 1;
 }

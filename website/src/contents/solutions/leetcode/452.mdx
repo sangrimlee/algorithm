@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findMinArrowShots(points: number[][]): number {
   points.sort(([, end1], [, end2]) => end1 - end2);
 

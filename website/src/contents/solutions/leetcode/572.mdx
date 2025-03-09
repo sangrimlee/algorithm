@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/subtree-of-another-tree
 
 ### Solution1: `DFS`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { TreeNode } from '@algorithm/lib';
 
 export function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
@@ -54,7 +54,7 @@ function isSameTree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
 주어진 트리를 문자열로 바꿔서, [`KMP` 알고리즘](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)을 사용하여,
 `subRoot`의 패턴이 있는지 확인하는 방법입니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { TreeNode } from '@algorithm/lib';
 
 function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {

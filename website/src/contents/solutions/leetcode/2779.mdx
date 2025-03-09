@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/maximum-beauty-of-an-array-after-applying-ope
 
 ### Solution1: `Sliding Window`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function maximumBeauty(nums: number[], k: number): number {
   const n = nums.length;
   nums.sort((a, b) => a - b);
@@ -41,7 +41,7 @@ function maximumBeauty(nums: number[], k: number): number {
 
 ### Solution2: `Line Sweep`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumBeauty(nums: number[], k: number): number {
   const n = nums.length;
   if (n === 1) {

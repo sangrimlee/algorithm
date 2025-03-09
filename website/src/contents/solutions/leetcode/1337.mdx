@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function kWeakestRows(mat: number[][], k: number): number[] {
   return mat
     .map((row, i) => [row.reduce((acc, curr) => acc + curr, 0), i])

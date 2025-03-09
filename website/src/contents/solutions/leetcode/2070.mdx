@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/most-beautiful-item-for-each-query
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumBeauty(items: number[][], queries: number[]): number[] {
   const [n, m] = [items.length, queries.length];
   const answer = new Array<number>(m).fill(0);

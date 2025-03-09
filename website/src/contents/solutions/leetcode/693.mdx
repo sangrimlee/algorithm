@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/binary-number-with-alternating-bits
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function hasAlternatingBits(n: number): boolean {
   return /^(?:10)*1?$/.test(n.toString(2));
 }

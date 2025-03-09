@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negativ
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumCount(nums: number[]): number {
   const neg = lowerBound(nums, 0);
   const pos = nums.length - lowerBound(nums, 1);

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-greatest-common-divisor-of-array
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findGCD(nums: number[]): number {
   let [min, max] = nums.reduce(
     ([min, max], num) => [Math.min(min, num), Math.max(max, num)],

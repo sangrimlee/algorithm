@@ -13,7 +13,7 @@ LeetCode에서 주어지는 `class` 입니다.
 
 [예시 문제](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
-```typescript copy
+```typescript showLineNumbers
 class TreeNode {
   val: number;
   left: TreeNode | null;
@@ -30,7 +30,7 @@ class TreeNode {
 
 숫자 배열(`number[]`)을 `TreeNode`로 이루어진 **Bianry Tree**로 변환하는 함수입니다.
 
-```typescript copy
+```typescript showLineNumbers
 function createTree(arr: (number | null)[]) {
   const n = arr.length;
   if (n === 0 || typeof arr[0] !== 'number') {
@@ -62,7 +62,7 @@ function createTree(arr: (number | null)[]) {
 
 두 개의 `TreeNode`로 이루어진 **Binary Tree**가 같은 형태인지 판별하는 함수입니다.
 
-```typescript copy
+```typescript showLineNumbers
 function compareTree(node1: TreeNode | null, node2: TreeNode | null): boolean {
   if (node1 === null && node2 === null) {
     return true;
@@ -84,7 +84,7 @@ LeetCode에서 주어지는 `class` 입니다.
 
 [예시 문제](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)
 
-```typescript copy
+```typescript showLineNumbers
 class NArrayTreeNode {
   val: number;
   children: NArrayTreeNode[];
@@ -102,7 +102,7 @@ class NArrayTreeNode {
 `rootNode`는 `value`가 1인 Node이며,
 주어진 `Object`의 `key`값이 `val`이며 `value`는 `children`인 `NArrayTreeNode`를 생성합니다.
 
-```typescript copy
+```typescript showLineNumbers
 function createNArrayTree(tree: { [key: number]: number[] | undefined }): NArrayTreeNode | null {
   if (!tree[1]) {
     return null;

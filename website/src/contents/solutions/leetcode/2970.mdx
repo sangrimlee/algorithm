@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/count-the-number-of-incremovable-subarrays-i
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function incremovableSubarrayCount(nums: number[]): number {
   function isIncreasing(start: number, end: number, startNumber = -1) {
     let lastNumber = startNumber;

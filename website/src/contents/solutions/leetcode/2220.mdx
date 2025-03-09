@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/minimum-bit-flips-to-convert-number
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minBitFlips(start: number, goal: number): number {
   const xor = start ^ goal;
   return xor.toString(2).replace(/0/g, '').length;

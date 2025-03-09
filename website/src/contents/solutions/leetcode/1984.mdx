@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-difference-between-highest-and-lowest
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumDifference(nums: number[], k: number): number {
   nums.sort((a, b) => a - b);
   let answer = Number.MAX_SAFE_INTEGER;

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-and-replace-pattern
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findAndReplacePattern(words: string[], pattern: string): string[] {
   const p = normalize(pattern);
   return words.filter((word) => isEqual(p, normalize(word)));

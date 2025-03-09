@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/remove-digit-from-number-to-maximize-result
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function removeDigit(number: string, digit: string): string {
   function removeChar(s: string, i: number): string {
     return s.substring(0, i) + s.substring(i + 1);

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/sort-colors
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sortColors(nums: number[]): void {
   const numCount = [0, 0, 0];
   nums.forEach((num) => (numCount[num] += 1));

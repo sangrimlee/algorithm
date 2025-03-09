@@ -7,7 +7,7 @@ url: https://school.programmers.co.kr/learn/courses/30/lessons/155652
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function ourSecret(s: string, skip: string, index: number) {
   const alphabet = [...'abcdefghijklmnopqrstuvwxyz'].filter((char) => !skip.includes(char));
   const skipIndex = (char: string) => {

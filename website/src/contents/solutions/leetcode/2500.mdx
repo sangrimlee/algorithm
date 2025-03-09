@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/delete-greatest-value-in-each-row
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function deleteGreatestValue(grid: number[][]): number {
   grid.forEach((row) => row.sort((a, b) => a - b));
 

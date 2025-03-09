@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/sum-of-square-numbers
 
 ### Solution1: Sqrt
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function judgeSquareSum(c: number): boolean {
   for (let num = 0; num * num <= c; num++) {
     if (isSquare(c - num * num)) {
@@ -41,7 +41,7 @@ function isSquare(num: number) {
 
 ### Solution2: Two Pointers
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function judgeSquareSum(c: number): boolean {
   let [start, end] = [0, Math.floor(Math.sqrt(c))];
   while (start <= end) {

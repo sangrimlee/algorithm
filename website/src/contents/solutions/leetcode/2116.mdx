@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/check-if-a-parentheses-string-can-be-valid
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function canBeValid(s: string, locked: string): boolean {
   return (
     s.length % 2 === 0 && validate(s, locked, '(') && validate(reverse(s), reverse(locked), ')')

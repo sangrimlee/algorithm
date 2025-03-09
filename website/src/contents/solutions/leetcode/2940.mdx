@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function leftmostBuildingQueries(heights: number[], queries: number[][]): number[] {
   const [n, q] = [heights.length, queries.length];
   const answer: number[] = new Array(q).fill(-1);

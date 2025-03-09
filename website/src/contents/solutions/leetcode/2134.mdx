@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minSwaps(nums: number[]): number {
   const n = nums.length;
   const totalOneCount = nums.reduce((acc, num) => acc + num, 0);

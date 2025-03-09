@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/maximum-difference-between-adjacent-elements-
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxAdjacentDistance(nums: number[]): number {
   return nums.reduce((prev, _, i) => Math.max(prev, adjacentDistance(nums, i)), 0);
 }

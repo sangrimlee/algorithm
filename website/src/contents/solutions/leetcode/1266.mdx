@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-time-visiting-all-points
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minTimeToVisitAllPoints(points: number[][]): number {
   const minVisitTime = ([x1, y1]: number[], [x2, y2]: number[]) => {
     return Math.max(Math.abs(x1 - x2), Math.abs(y1 - y2));

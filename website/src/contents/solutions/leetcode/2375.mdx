@@ -36,7 +36,7 @@ url: https://leetcode.com/problems/construct-smallest-number-from-di-string
 3. `I`를 만나기 전까지는 패턴은 `D`이므로, `stack`에 쌓아두었다가, `I`를 만나면, 기존의 스택을 뒤집어서 감소하는 패턴을 추가합니다.
 4. 숫자를 1부터 순서대로 사용하기 때문에, **사전순으로 가장 작은 문자열**을 만들 수 있습니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function smallestNumber(pattern: string): string {
   const n = pattern.length;
   let stack: number[] = [];

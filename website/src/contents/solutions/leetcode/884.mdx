@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/uncommon-words-from-two-sentences
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function uncommonFromSentences(s1: string, s2: string): string[] {
   const counts = new Map<string, number>();
   const words = [...s1.split(' '), ...s2.split(' ')];

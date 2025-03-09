@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countSubarrays(nums: number[], k: number): number {
   const maxElement = nums.reduce((max, num) => (max < num ? num : max), 0);
 

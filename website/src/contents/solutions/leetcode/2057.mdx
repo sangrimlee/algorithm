@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/smallest-index-with-equal-value
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function smallestEqual(nums: number[]): number {
   return nums.findIndex((num, i) => num === i % 10);
 }

@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-a
 
 ### Solution1: `Dynamic Programming`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function minimumMountainRemovals(nums: number[]): number {
   const n = nums.length;
   const lis = new Array<number>(n).fill(1);
@@ -56,7 +56,7 @@ function minimumMountainRemovals(nums: number[]): number {
 
 ### Solution2: `Binary Search`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumMountainRemovals(nums: number[]): number {
   const n = nums.length;
   const lisLength = getLISLength(nums);

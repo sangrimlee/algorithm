@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/groups-of-special-equivalent-strings
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numSpecialEquivGroups(words: string[]): number {
   const groups = new Set<string>(words.map(createGroup));
   return groups.size;

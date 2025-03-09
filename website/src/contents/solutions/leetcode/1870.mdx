@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/minimum-speed-to-arrive-on-time
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minSpeedOnTime(dist: number[], hour: number): number {
   const timeRequired = (speed: number) => {
     return dist.reduce((t, d, i) => {

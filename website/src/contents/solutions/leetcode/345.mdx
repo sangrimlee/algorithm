@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/reverse-vowels-of-a-string
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function reverseVowels(s: string): string {
   const vowelSet = new Set<string>('aeiou');
   const isVowel = (char: string) => vowelSet.has(char.toLowerCase());

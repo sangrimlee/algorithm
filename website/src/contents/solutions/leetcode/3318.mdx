@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findXSum(nums: number[], k: number, x: number): number[] {
   const n = nums.length;
   const counter = new Counter(nums.slice(0, k));

@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minMovesToSeat(seats: number[], students: number[]): number {
   seats.sort((a, b) => a - b);
   students.sort((a, b) => a - b);

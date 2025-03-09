@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-the-winning-player-in-coin-game
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function losingPlayer(x: number, y: number): string {
   const turn = Math.min(x, Math.floor(y / 4));
   return turn % 2 === 1 ? 'Alice' : 'Bob';

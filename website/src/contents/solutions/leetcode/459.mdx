@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/repeated-substring-pattern
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function repeatedSubstringPattern(s: string): boolean {
   const concatenated = s + s;
   return concatenated.slice(1, -1).indexOf(s) !== -1;

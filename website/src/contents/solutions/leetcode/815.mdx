@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/bus-routes
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numBusesToDestination(routes: number[][], source: number, target: number): number {
   const busRoutes = new Map<number, Set<number>>();
   for (let bus = 0; bus < routes.length; bus++) {

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/best-poker-hand
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function bestHand(ranks: number[], suits: string[]): string {
   if (suits.every((suit) => suit === suits[0])) {
     return 'Flush';

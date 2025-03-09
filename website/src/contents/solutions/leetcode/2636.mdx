@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/promise-pool
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export async function promisePool(functions: Array<() => Promise<unknown>>, n: number) {
   let i = 0;
   const executeNextFn = async () => {

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-genetic-mutation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minMutation(startGene: string, endGene: string, bank: string[]): number {
   const geneBank = new Set(bank);
   const changeGene = (gene: string, g: string, i: number) =>

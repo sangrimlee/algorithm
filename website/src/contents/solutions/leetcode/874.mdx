@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/walking-robot-simulation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function robotSim(commands: number[], obstacles: number[][]): number {
   const set = new Set(obstacles.map(([x, y]) => `${y},${x}`));
   const directions = [

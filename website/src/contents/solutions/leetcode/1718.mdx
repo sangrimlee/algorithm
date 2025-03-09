@@ -36,7 +36,7 @@ url: https://leetcode.com/problems/construct-the-lexicographically-largest-valid
 
 이 과정을 반복하여 조건을 만족하는 배열을 구성합니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function constructDistancedSequence(n: number): number[] {
   const size = 2 * n - 1;
   const sequence = new Array<number>(size).fill(0);

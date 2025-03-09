@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/apple-redistribution-into-boxes
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumBoxes(apple: number[], capacity: number[]): number {
   capacity.sort((a, b) => b - a);
   let remain = apple.reduce((acc, count) => acc + count, 0);

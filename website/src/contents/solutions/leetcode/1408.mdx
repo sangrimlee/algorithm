@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/string-matching-in-an-array
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function stringMatching(words: string[]): string[] {
   return words.filter((word) => words.some((w) => w !== word && w.includes(word)));
 }

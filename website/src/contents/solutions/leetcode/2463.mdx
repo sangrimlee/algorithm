@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-total-distance-traveled
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumTotalDistance(robots: number[], factories: number[][]): number {
   robots.sort((a, b) => a - b);
   factories.sort((a, b) => a[0] - b[0]);

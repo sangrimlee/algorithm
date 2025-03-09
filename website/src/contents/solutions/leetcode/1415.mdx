@@ -33,7 +33,7 @@ url: https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-
    - 같은 문자가 연속해서 나오면 안되므로, **이전 문자와 다른 문자만 추가**
    - 현재 문자열의 길이가 `n` 이면 `k`번째 문자열인지 확인하고 반환
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function getHappyString(n: number, k: number): string {
   const LETTERS = 'abc';
   const totalCount = 3 * 2 ** (n - 1);
@@ -82,7 +82,7 @@ function getHappyString(n: number, k: number): string {
 
 이러한 방식 덕분에 불필요한 **happy string을** 만들지 않고도, **사전순으로 정렬된 상태에서 바로 k번째 happy string을 빠르게 찾을 수 있습니다.**
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function getHappyString(n: number, k: number): string {
   const totalCount = 3 * 2 ** (n - 1);
   if (totalCount < k) {

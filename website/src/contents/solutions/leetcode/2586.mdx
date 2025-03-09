@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/count-the-number-of-vowel-strings-in-range
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function vowelStrings(words: string[], left: number, right: number): number {
   function isVowelString(word: string) {
     return /[aeiou]/.test(word[0]) && /[aeiou]/.test(word[word.length - 1]);

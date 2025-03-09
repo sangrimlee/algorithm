@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/maximum-repeating-substring
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxRepeating(sequence: string, word: string): number {
   let maxRepeat = 0;
   while (sequence.includes(word.repeat(maxRepeat + 1))) {

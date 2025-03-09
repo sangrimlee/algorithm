@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/goal-parser-interpretation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function interpret(command: string): string {
   return command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
 }

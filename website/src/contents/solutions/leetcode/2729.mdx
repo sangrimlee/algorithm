@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/check-if-the-number-is-fascinating
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function isFascinating(n: number): boolean {
   const c = `${n}${2 * n}${3 * n}`;
   const set = new Set(c);

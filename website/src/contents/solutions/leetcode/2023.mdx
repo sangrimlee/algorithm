@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation
 
 ### Solution1: Brute Force
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numOfPairs(nums: string[], target: string): number {
   const n = nums.length;
   let answer = 0;
@@ -40,7 +40,7 @@ export function numOfPairs(nums: string[], target: string): number {
 
 ### Solution2: Using `Map`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numOfPairs(nums: string[], target: string): number {
   const counter = new Map<string, number>();
   for (const num of nums) {

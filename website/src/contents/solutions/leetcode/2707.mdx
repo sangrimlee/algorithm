@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/extra-characters-in-a-string
 
 ### Solution1: `DP`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minExtraChar(s: string, dictionary: string[]): number {
   const n = s.length;
   const set = new Set<string>(dictionary);
@@ -46,7 +46,7 @@ export function minExtraChar(s: string, dictionary: string[]): number {
 
 ### Solution2: `DP` & `Trie`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minExtraChar(s: string, dictionary: string[]): number {
   const n = s.length;
   const rootNode = createTrie(dictionary);

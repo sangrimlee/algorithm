@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/maximum-score-from-removing-substrings
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumGain(s: string, x: number, y: number): number {
   const [substr1, score1] = x >= y ? ['ab', x] : ['ba', y];
   const [substr2, score2] = x < y ? ['ab', x] : ['ba', y];

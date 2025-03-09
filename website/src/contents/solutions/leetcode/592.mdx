@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/fraction-addition-and-subtraction
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function fractionAddition(expression: string): string {
   const nums = [...expression.matchAll(/[+-]?\d+/g)].map((v) => +v);
 

@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/range-addition-ii
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxCount(m: number, n: number, ops: number[][]): number {
   return ops
     .reduce(([a1, b1], [a2, b2]) => [Math.min(a1, a2), Math.min(b1, b2)], [m, n])

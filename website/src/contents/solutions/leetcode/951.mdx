@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/flip-equivalent-binary-trees
 
 ### Solution1: `Recursion`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { TreeNode } from '@algorithm/lib';
 
 export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {
@@ -46,7 +46,7 @@ export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boole
 
 - 두 개의 트리를 동일한 형태 (`node.left`가 `node.right`보다 작고, 둘 중 하나가 `null`인 경우, `node.right`가 `null`인 형태)로 만들어서 비교
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { TreeNode } from '@algorithm/lib';
 
 export function flipEquiv(root1: TreeNode | null, root2: TreeNode | null): boolean {

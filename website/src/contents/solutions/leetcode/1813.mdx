@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/sentence-similarity-iii
 
 ### Solution1: `Deque`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function areSentencesSimilar(sentence1: string, sentence2: string): boolean {
   const words1 = sentence1.split(' ');
   const words2 = sentence2.split(' ');
@@ -43,7 +43,7 @@ export function areSentencesSimilar(sentence1: string, sentence2: string): boole
 
 ### Solution2: `Two Pointer`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function areSentencesSimilar(sentence1: string, sentence2: string): boolean {
   let words1 = sentence1.split(' ');
   let words2 = sentence2.split(' ');

@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/sum-of-even-numbers-after-queries
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sumEvenAfterQueries(nums: number[], queries: number[][]): number[] {
   const isEven = (num: number) => num % 2 === 0;
   let totalValue = nums.reduce((total, num) => (isEven(num) ? total + num : total), 0);

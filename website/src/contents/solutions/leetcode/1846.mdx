@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/maximum-element-after-decreasing-and-rearrang
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumElementAfterDecrementingAndRearranging(arr: number[]): number {
   return arr.sort((a, b) => a - b).reduce((prev, num) => Math.min(prev + 1, num), 0);
 }

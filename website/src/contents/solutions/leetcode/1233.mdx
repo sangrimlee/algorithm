@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/remove-sub-folders-from-the-filesystem
 
 ### Solution1: `Set`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function removeSubfolders(folders: string[]): string[] {
   const set = new Set(folders);
   return folders.filter((folder) => !isSubFolder(set, folder));
@@ -44,7 +44,7 @@ function isSubFolder(set: Set<string>, folder: string) {
 
 ### Solution2: `Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function removeSubfolders(folders: string[]): string[] {
   folders.sort();
   const result = [folders[0]];
@@ -67,7 +67,7 @@ function removeSubfolders(folders: string[]): string[] {
 
 ### Solution3: `Trie`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function removeSubfolders(folders: string[]): string[] {
   const trie = new Trie(folders);
   return folders.filter((folder) => !trie.isSubFolder(folder));

@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/construct-string-with-repeat-limit
 
 ### Solution1: Greedy with `Map`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function repeatLimitedString(s: string, repeatLimit: number): string {
   const alphabets = 'abcdefghijklmnopqrstuvwxyz';
   const counter = new Counter(s);
@@ -79,7 +79,7 @@ class Counter extends Map<string, number> {
 
 ### Solution2: Greedy with `Heap`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { Heap } from '@algorithm/lib';
 
 export function repeatLimitedString(s: string, repeatLimit: number): string {

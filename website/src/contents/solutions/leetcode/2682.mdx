@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-the-losers-of-the-circular-game
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function circularGameLosers(n: number, k: number): number[] {
   const friends = new Set(Array.from({ length: n }, (_, i) => i + 1));
 

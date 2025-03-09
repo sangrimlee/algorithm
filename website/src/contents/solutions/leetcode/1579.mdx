@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-full
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxNumEdgesToRemove(n: number, edges: number[][]): number {
   const alice = new UnionFind(n);
   const bob = new UnionFind(n);

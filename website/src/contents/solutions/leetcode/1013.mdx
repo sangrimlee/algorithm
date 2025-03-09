@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/partition-array-into-three-parts-with-equal-s
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function canThreePartsEqualSum(arr: number[]): boolean {
   const total = arr.reduce((acc, curr) => acc + curr, 0);
   if (total % 3 !== 0) {

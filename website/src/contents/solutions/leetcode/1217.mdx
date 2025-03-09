@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-positi
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minCostToMoveChips(position: number[]): number {
   const n = position.length;
   const even = position.reduce((prev, chip) => (chip % 2 ? prev + 1 : prev), 0);

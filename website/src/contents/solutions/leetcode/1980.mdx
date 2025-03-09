@@ -26,7 +26,7 @@ url: https://leetcode.com/problems/find-unique-binary-string
 1. `Set` 을 사용해서, `num`에 있는 **이진 문자열을** 숫자로 변환하여 저장
 2. 0부터 차례대로 `Set`에 존재하는지 확인하고 존재하지 않는다면, 해당 숫자를 이진 문자열로 변환하여 반환합니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function findDifferentBinaryString(nums: string[]): string {
   const n = nums.length;
   const set = new Set(nums.map((num) => parseInt(num, 2)));
@@ -54,7 +54,7 @@ function findDifferentBinaryString(nums: string[]): string {
 2. 선택한 **비트를 반전(0 → 1, 1 → 0)** 하여 새로운 문자열을 선택합니다.
 3. 이렇게 만든 문자열은 기존의 문자열 중 어느 것과도 같지 않습니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function findDifferentBinaryString(nums: string[]): string {
   const n = nums.length;
   const answer: string[] = [];

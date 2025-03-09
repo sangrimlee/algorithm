@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/first-completely-painted-row-or-column
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function firstCompleteIndex(arr: number[], mat: number[][]): number {
   const [m, n] = [mat.length, mat[0].length];
   const positions = new Map<number, [number, number]>();

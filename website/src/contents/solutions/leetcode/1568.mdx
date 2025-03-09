@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minDays(grid: number[][]): number {
   const islands = countIslands(grid);
   if (islands !== 1) {

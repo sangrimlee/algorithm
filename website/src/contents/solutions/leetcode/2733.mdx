@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/neither-minimum-nor-maximum
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findNonMinOrMax(nums: number[]): number {
   const [minValue, maxValue] = nums.reduce(
     ([prevMin, prevMax], num) => [Math.min(prevMin, num), Math.max(prevMax, num)],

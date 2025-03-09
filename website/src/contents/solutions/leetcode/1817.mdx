@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/finding-the-users-active-minutes
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findingUsersActiveMinutes(logs: number[][], k: number): number[] {
   const logById = new Map<number, Set<number>>();
   for (const [id, time] of logs) {

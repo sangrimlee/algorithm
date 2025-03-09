@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/sort-vowels-in-a-string
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sortVowels(s: string): string {
   const isVowel = (char: string) => /[aeiou]/i.test(char);
   const vowels = [...s].filter(isVowel).sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));

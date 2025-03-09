@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/substring-matching-pattern
 
 ### Solution1: Find Index
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function hasMatch(s: string, p: string): boolean {
   const [left, right] = p.split('*');
   const leftIndex = s.indexOf(left);
@@ -35,7 +35,7 @@ export function hasMatch(s: string, p: string): boolean {
 
 ### Solution2: `RegExp`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function hasMatch(s: string, p: string): boolean {
   return new RegExp(p.replace('*', '.*')).test(s);
 }

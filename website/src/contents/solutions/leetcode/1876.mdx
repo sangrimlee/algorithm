@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/substrings-of-size-three-with-distinct-charac
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countGoodSubstrings(s: string): number {
   function isGoodSubstring(substring: string) {
     return new Set(substring).size === substring.length;

@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/number-of-different-integers-in-a-string
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numDifferentIntegers(word: string): number {
   function removeLeadingZero(num: string) {
     const removed = num.replace(/^0+/, '');

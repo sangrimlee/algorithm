@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/different-ways-to-add-parentheses
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function diffWaysToCompute(expression: string): number[] {
   function isOperator(char: string) {
     return /^[+\-*]$/.test(char);

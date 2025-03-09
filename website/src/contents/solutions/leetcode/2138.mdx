@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/divide-a-string-into-groups-of-size-k
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function divideString(s: string, k: number, fill: string): string[] {
   const n = s.length;
   const maxLength = Math.ceil(n / k) * k;

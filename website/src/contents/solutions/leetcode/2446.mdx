@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/determine-if-two-events-have-conflict
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function haveConflict(event1: string[], event2: string[]): boolean {
   function convertTime(time: string) {
     const [hour, minute] = time.split(':').map((v) => parseInt(v));

@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/find-closest-number-to-zero
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findClosestNumber(nums: number[]): number {
   return nums.reduce((answer, num) => {
     if (Math.abs(num) === Math.abs(answer)) {

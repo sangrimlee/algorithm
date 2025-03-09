@@ -9,7 +9,7 @@ python의 `range`와 특정 횟수의 루프에 사용되는 제너레이터 함
 
 ## Examples
 
-```typescript copy
+```typescript showLineNumbers
 import { range } from '@algorithm/lib';
 
 [...range(10)]; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -25,7 +25,7 @@ import { range } from '@algorithm/lib';
 
 ## Source
 
-```typescript filename="range.ts" copy
+```typescript showLineNumbers
 function* range(start: number, end?: number, step = 1) {
   let value = end === undefined ? 0 : start;
   const endValue = end === undefined ? start : end;

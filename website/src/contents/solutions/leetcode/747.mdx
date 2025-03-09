@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/largest-number-at-least-twice-of-others
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function dominantIndex(nums: number[]): number {
   let largestIndex = nums[0] < nums[1] ? 1 : 0;
   let secondLargestIndex = largestIndex === 0 ? 1 : 0;

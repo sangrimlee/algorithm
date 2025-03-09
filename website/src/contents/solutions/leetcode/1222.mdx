@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/queens-that-can-attack-the-king
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function queensAttacktheKing(queens: number[][], king: number[]): number[][] {
   const answer: number[][] = [];
   const set = new Set(queens.map((v) => v.toString()));

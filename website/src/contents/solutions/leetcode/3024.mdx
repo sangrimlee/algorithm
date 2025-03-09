@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/type-of-triangle
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function triangleType(nums: number[]): string {
   const [a, b, c] = nums.sort((a, b) => a - b);
   const type = a + b > c ? new Set(nums).size : -1;

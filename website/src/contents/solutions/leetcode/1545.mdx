@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/find-kth-bit-in-nth-binary-string
 
 ### Solution1: `Brute Force`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function findKthBit(n: number, k: number): string {
   let s = '0';
   for (let i = 1; i < n; i++) {
@@ -40,7 +40,7 @@ function reverse(s: string) {
 
 ### Solution2: `Recursion`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function findKthBit(n: number, k: number): string {
   if (n === 1) {
     return '0';
@@ -64,7 +64,7 @@ function findKthBit(n: number, k: number): string {
 
 ### Solution3: `Divide & Conquer`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findKthBit(n: number, k: number): string {
   let invertCount = 0;
   let totalLength = (1 << n) - 1;

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/erect-the-fence
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function outerTrees(points: number[][]): number[][] {
   const stack: number[][] = [];
   points.sort((p, q) => (q[0] - p[0] == 0 ? q[1] - p[1] : q[0] - p[0]));

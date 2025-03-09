@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/lexicographical-numbers
 
 ### Solution1: `Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function lexicalOrder(n: number): number[] {
   return Array.from({ length: n }, (_, i) => i + 1).sort();
 }
@@ -27,7 +27,7 @@ export function lexicalOrder(n: number): number[] {
 
 ### Solution2: `DFS`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function lexicalOrder(n: number): number[] {
   const answer: number[] = [];
   function dfs(num: number): void {

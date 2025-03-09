@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/divide-players-into-teams-of-equal-skill
 
 ### Solution2: `Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function dividePlayers(skill: number[]): number {
   skill.sort((a, b) => a - b);
 
@@ -42,7 +42,7 @@ function dividePlayers(skill: number[]): number {
 
 ### Solution1: `Map`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function dividePlayers(skill: number[]): number {
   const n = skill.length;
   const totalSkill = skill.reduce((acc, s) => acc + s, 0);

@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/count-pairs-that-form-a-complete-day-i
 
 ### Solution1: Brute Force
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countCompleteDayPairs(hours: number[]): number {
   const n = hours.length;
 
@@ -37,7 +37,7 @@ export function countCompleteDayPairs(hours: number[]): number {
 
 ### Solution2: Hash Map
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countCompleteDayPairs(hours: number[]): number {
   let answer = 0;
   const counter = new Map<number, number>();

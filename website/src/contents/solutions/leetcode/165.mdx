@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/compare-version-numbers
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function compareVersion(version1: string, version2: string): number {
   function convertVersion(version: string) {
     return version.split('.').map((v) => parseInt(v));

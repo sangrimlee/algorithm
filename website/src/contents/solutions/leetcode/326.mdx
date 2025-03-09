@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/power-of-three
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function isPowerOfThree(n: number): boolean {
   const maxPowerOfThree = 3 ** 19;
   return 0 < n && maxPowerOfThree % n === 0;

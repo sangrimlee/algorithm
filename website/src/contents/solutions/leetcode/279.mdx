@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/perfect-squares
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numSquares(n: number): number {
   const dp = new Array(n + 1).fill(Number.MAX_SAFE_INTEGER);
   for (let i = 1; i <= Math.sqrt(n); i++) {

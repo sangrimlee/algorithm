@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function busyStudent(startTime: number[], endTime: number[], queryTime: number): number {
   return startTime.filter((start, i) => start <= queryTime && queryTime <= endTime[i]).length;
 }

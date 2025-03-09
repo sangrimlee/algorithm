@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/koko-eating-bananas
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minEatingSpeed(piles: number[], h: number): number {
   const maxPile = piles.reduce((prev, curr) => Math.max(prev, curr), Number.MIN_SAFE_INTEGER);
 

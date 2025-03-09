@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimizedMaximum(n: number, quantities: number[]): number {
   const maxQuantity = quantities.reduce((prev, quantity) => Math.max(prev, quantity), 0);
 

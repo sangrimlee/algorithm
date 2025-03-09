@@ -11,7 +11,7 @@ tags:
 url: https://leetcode.com/problems/count-the-number-of-fair-pairs
 ---
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countFairPairs(nums: number[], lower: number, upper: number): number {
   nums.sort((a, b) => a - b);
   return countMinPairs(nums, upper + 1) - countMinPairs(nums, lower);

@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/row-with-maximum-ones
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function rowAndMaximumOnes(mat: number[][]): number[] {
   function countOnes(row: number[]) {
     return row.reduce((prev, num) => (num === 1 ? prev + 1 : prev), 0);

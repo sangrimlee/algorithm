@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/maximum-number-of-moves-in-a-grid
 
 ### Solution1: `Dynamic Programming`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxMoves(grid: number[][]): number {
   const [m, n] = [grid.length, grid[0].length];
   const dirs = [
@@ -60,7 +60,7 @@ export function maxMoves(grid: number[][]): number {
 
 ### Solution2: `Space Optmization`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxMoves(grid: number[][]): number {
   const [m, n] = [grid.length, grid[0].length];
 

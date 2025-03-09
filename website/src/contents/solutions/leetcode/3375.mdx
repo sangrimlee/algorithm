@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/minimum-operations-to-make-array-values-equal
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minOperations(nums: number[], k: number): number {
   if (nums.some((num) => num < k)) {
     return -1;

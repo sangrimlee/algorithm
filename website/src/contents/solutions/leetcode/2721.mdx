@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/execute-asynchronous-functions-in-parallel
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function promiseAll<T>(funcs: (() => Promise<T>)[]): Promise<T[]> {
   if (funcs.length === 0) {
     return Promise.resolve([]);

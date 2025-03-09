@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function getAncestors(n: number, edges: number[][]): number[][] {
   const answer: number[][] = Array.from({ length: n }, () => []);
   const children: number[][] = Array.from({ length: n }, () => []);

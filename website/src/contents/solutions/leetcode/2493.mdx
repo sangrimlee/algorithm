@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/divide-nodes-into-the-maximum-number-of-group
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function magnificentSets(n: number, edges: number[][]): number {
   const disjointSet = new DisjointSet(n);
   const graph: number[][] = Array.from({ length: n }, () => []);

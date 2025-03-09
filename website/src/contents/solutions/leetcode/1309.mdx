@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mappi
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function freqAlphabets(s: string): string {
   const decrypt = (chars: string) => {
     const code = parseInt(chars.replace('#', '')) + 96;

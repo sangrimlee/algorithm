@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/distribute-candies
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function distributeCandies(candyType: number[]): number {
   return Math.min(new Set(candyType).size, candyType.length / 2);
 }

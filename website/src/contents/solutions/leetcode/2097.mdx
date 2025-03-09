@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/valid-arrangement-of-pairs
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function validArrangement(pairs: number[][]): number[][] {
   const graph = new Map<number, number[]>();
   const degrees = new Map<number, number>();

@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/maximum-ice-cream-bars
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxIceCream(costs: number[], coins: number): number {
   const maxCost = costs.reduce((maxCost, cost) => Math.max(maxCost, cost), 0);
   const costsFrequency = new Array<number>(maxCost + 1).fill(0);

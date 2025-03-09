@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/finding-3-digit-even-numbers
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findEvenNumbers(digits: number[]): number[] {
   function* getDigits(num: number) {
     for (const digit of num.toString()) {

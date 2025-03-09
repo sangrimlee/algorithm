@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/word-subsets
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function wordSubsets(words1: string[], words2: string[]): string[] {
   const totalCounter = countMaxChars(words2);
   return words1.filter((word) => isUniversalWord(word, totalCounter));

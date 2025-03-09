@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/binary-subarrays-with-sum
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numSubarraysWithSum(nums: number[], goal: number): number {
   const counter = new Map<number, number>([[0, 1]]);
   let answer = 0;

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/group-the-people-given-the-group-size-they-be
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function groupThePeople(groupSizes: number[]): number[][] {
   const groups = new Map<number, number[][]>();
   groupSizes.forEach((groupSize, i) => {

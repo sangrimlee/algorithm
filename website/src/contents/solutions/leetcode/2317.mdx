@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/maximum-xor-after-operations
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maximumXOR(nums: number[]): number {
   return nums.reduce((answer, num) => answer | num, 0);
 }

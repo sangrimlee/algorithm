@@ -49,7 +49,7 @@ url: https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
      - 왼쪽 자식이 존재한다면, 오른쪽 자식 노드에 추가
 4. 스택의 가장 밑에 있는 노드가, 루트 노드가 됨
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function recoverFromPreorder(traversal: string): TreeNode | null {
   let currentIndex = 0;
   const stack: TreeNode[] = [];

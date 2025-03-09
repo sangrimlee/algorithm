@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/sort-array-by-parity-ii
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sortArrayByParityII(nums: number[]): number[] {
   const swap = (i: number, j: number) => {
     [nums[i], nums[j]] = [nums[j], nums[i]];

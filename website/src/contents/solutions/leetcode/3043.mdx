@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/find-the-length-of-the-longest-common-prefix
 
 ### Solution1: `Set`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function longestCommonPrefix(arr1: number[], arr2: number[]): number {
   const prefixes = new Set<number>();
   for (const num of arr1) {
@@ -51,7 +51,7 @@ function* getPrefix(num: number) {
 
 ### Soltuion2: `Trie`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function longestCommonPrefix(arr1: number[], arr2: number[]): number {
   const trie = new Trie(arr1);
   return arr2.reduce((prev, num) => Math.max(prev, trie.findLongestPrefix(num)), 0);

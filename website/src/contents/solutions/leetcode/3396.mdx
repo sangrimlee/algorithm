@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/minimum-number-of-operations-to-make-elements
 
 ### Solution1: Using `Map`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumOperations(nums: number[]): number {
   const n = nums.length;
   const counter = new Counter(nums);
@@ -71,7 +71,7 @@ class Counter extends Map<number, number> {
 
 ### Solution2: Find Last Duplicate Index
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumOperations(nums: number[]): number {
   const lastDuplicate = findLastDuplicate(nums);
   return Math.ceil((lastDuplicate + 1) / 3);

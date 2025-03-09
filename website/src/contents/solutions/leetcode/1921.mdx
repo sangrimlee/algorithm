@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/eliminate-maximum-number-of-monsters
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function eliminateMaximum(dists: number[], speeds: number[]): number {
   const n = dists.length;
   const remainMinutes = dists.map((dist, i) => Math.ceil(dist / speeds[i])).sort((a, b) => a - b);

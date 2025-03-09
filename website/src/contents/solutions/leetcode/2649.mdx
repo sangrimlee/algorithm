@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/nested-array-generator
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 type MultidimensionalArray = (MultidimensionalArray | number)[];
 
 export function* inorderTraversal(arr: MultidimensionalArray): Generator<number, void, unknown> {

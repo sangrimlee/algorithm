@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/path-crossing
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function isPathCrossing(path: string): boolean {
   const move = (y: number, x: number, direction: string): [number, number] => {
     switch (direction) {

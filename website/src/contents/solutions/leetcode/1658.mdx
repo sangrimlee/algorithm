@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minOperations(nums: number[], x: number): number {
   const n = nums.length;
   const totalValue = nums.reduce((prev, curr) => prev + curr, 0);

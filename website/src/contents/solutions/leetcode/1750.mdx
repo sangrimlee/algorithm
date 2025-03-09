@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/minimum-length-of-string-after-deleting-simil
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumLength(s: string): number {
   let [start, end] = [0, s.length - 1];
   while (start < end && s[start] === s[end]) {

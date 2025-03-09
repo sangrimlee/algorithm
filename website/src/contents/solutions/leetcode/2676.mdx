@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/throttle
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function throttle(fn: (...args: any[]) => void, t: number): (...args: any[]) => void {
   let timeoutId: NodeJS.Timeout | null = null;

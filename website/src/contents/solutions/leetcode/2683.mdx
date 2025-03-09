@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/neighboring-bitwise-xor
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function doesValidArrayExist(derived: number[]): boolean {
   return derived.reduce((prev, curr) => prev ^ curr, 0) === 0;
 }

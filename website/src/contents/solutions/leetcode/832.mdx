@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/flipping-an-image
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function flipAndInvertImage(image: number[][]): number[][] {
   const invert = (nums: number[]) => nums.map((num) => 1 - num);
   return image.map((row) => invert(row.reverse()));

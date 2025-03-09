@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/tuple-with-same-product
 2. 따라서, 중첩 반복을 통해 모든 경우의 `x*y`를 찾고, 해당 개수를 `productCounts`에 저장합니다.
 3. 그리고, 매 반복마다 **이전의 같은 곱의 값을 가지는 개수 \* 8**만큼 더하면, 모든 튜플의 개수를 알 수 있다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function tupleSameProduct(nums: number[]): number {
   const n = nums.length;
   const productCounts = new Map<number, number>();

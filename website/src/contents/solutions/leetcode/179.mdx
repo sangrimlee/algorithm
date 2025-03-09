@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/largest-number
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function largestNumber(nums: number[]): string {
   return nums
     .sort((a, b) => (`${a}${b}` > `${b}${a}` ? -1 : 1))

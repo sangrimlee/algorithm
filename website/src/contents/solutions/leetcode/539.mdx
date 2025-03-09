@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/minimum-time-difference
 
 ### Solution1: `Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findMinDifference(timePoints: string[]): number {
   const n = timePoints.length;
   const minutes = timePoints.map(toMinute).sort((a, b) => a - b);
@@ -39,7 +39,7 @@ function toMinute(timePoint: string): number {
 
 ### Solution2: `Bucket Sort`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findMinDifference(timePoints: string[]): number {
   const MAX_SIZE = Number.MAX_SAFE_INTEGER;
   const MAX_MINUTE = 24 * 60;

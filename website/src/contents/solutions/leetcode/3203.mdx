@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumDiameterAfterMerge(edges1: number[][], edges2: number[][]): number {
   const [n, m] = [edges1.length + 1, edges2.length + 1];
   const graph1 = createGraph(n, edges1);

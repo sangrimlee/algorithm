@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minTime(n: number, edges: number[][], hasApple: boolean[]): number {
   const tree = new Array(n).fill(undefined).map(() => new Array<number>());
   for (const [a, b] of edges) {

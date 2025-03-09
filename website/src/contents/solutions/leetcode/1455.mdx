@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-wor
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function isPrefixOfWord(sentence: string, searchWord: string): number {
   const words = sentence.split(' ');
   const result = words.findIndex((word) => word.startsWith(searchWord));

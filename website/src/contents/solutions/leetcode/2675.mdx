@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/array-of-objects-to-matrix
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export function jsonToMatrix(arr: any[]): (string | number | boolean | null)[][] {
   const isObject = (obj: any) => obj !== null && typeof obj === 'object';

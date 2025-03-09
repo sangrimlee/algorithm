@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/zigzag-grid-traversal-with-skip
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function zigzagTraversal(grid: number[][]): number[] {
   return grid.flatMap((row, y) => {
     const nums = row.filter((_, x) => y % 2 === x % 2);

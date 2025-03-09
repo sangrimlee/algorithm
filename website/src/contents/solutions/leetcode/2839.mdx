@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-opera
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function canBeEqual(s1: string, s2: string): boolean {
   function isEqual<T>(set1: Set<T>, set2: Set<T>) {
     return set1.size === set2.size && [...set1].every((s) => set2.has(s));

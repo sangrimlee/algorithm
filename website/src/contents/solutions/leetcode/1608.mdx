@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/special-array-with-x-elements-greater-than-or
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function specialArray(nums: number[]): number {
   nums.sort((a, b) => b - a);
   const n = nums.length;

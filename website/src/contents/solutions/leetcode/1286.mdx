@@ -17,7 +17,7 @@ url: https://leetcode.com/problems/iterator-for-combination
 
 `Backtracking`을 통해, 모든 `combinations`를 구하는 방법
 
-```typescript filename="solution.ts" copyclass CombinationIterator {
+```typescript showLineNumbers
   public characters: string;
   public combinationLength: number;
   private currentIndex: number;
@@ -75,7 +75,7 @@ url: https://leetcode.com/problems/iterator-for-combination
 `updateMask`는 [Gosper's hack](https://stackoverflow.com/questions/18929306/efficient-way-to-find-next-smaller-number-with-same-number-of-1-bits/18930479#18930479)을 사용하여,
 현재 `mask`보다 다음으로 작은 비트의 개수가 `N`인 정수를 구할 수 있습니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export class CombinationIterator {
   public characters: string;
   public length: number;

@@ -7,7 +7,7 @@ url: https://school.programmers.co.kr/learn/courses/30/lessons/135807
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function divideCard(arrayA: number[], arrayB: number[]): number {
   const gcd = (a: number, b: number): number => (a % b === 0 ? b : gcd(b, a % b));
 

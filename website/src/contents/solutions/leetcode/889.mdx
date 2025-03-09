@@ -39,7 +39,7 @@ url: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-posto
    - **`postorder` 에서 `stack` 의 가장 위에 있는 노드가 등장하면, 해당 서브 트리가 완성되었다는 것을 의미한다.**
    - **`stack`에서 서브 트리가 완성된 노드를 모두 제거한다.**
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function constructFromPrePost(preorder: number[], postorder: number[]): TreeNode {
   const rootNode = new TreeNode(preorder[0]);
   const stack: TreeNode[] = [rootNode];

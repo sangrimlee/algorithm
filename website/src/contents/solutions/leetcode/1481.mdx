@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/least-number-of-unique-integers-after-k-remov
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findLeastNumOfUniqueInts(arr: number[], k: number): number {
   const counter = new Map<number, number>();
   for (const num of arr) {

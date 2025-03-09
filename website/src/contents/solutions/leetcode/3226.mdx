@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-eq
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minChanges(n: number, k: number): number {
   if ((n & k) !== k) {
     return -1;

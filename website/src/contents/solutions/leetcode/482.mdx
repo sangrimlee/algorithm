@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/license-key-formatting
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function licenseKeyFormatting(s: string, k: number): string {
   const newStr = s.replace(/-/g, '').toUpperCase();
   const startIndex = newStr.length % k;

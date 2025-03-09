@@ -17,7 +17,7 @@ url: https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-
 3. **만약 이전의 색깔의 개수가 0보다 작아지면**, `delete`를 사용하여, `Map`에서 삭제
 4. `Map`의 `size`를 통해, 현재 총 색깔의 개수를 구할 수 있다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function queryResults(limit: number, queries: number[][]): number[] {
   const balls = new Map<number, number>();
   const colors = new Map<number, number>([]);

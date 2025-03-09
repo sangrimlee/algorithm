@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/rotating-the-box
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function rotateTheBox(box: string[][]): string[][] {
   const [m, n] = [box.length, box[0].length];
   const answer = Array.from({ length: n }, () => new Array<string>(m).fill('.'));

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-nei
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findTheCity(n: number, edges: number[][], distanceThreshold: number): number {
   const distance = floydWarshall(n, edges);
 

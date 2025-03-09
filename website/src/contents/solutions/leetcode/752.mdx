@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/open-the-lock
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function openLock(deadends: string[], target: string): number {
   function* next(code: string) {
     for (let i = 0; i < code.length * 2; i++) {

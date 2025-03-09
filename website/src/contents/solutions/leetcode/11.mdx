@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/container-with-most-water
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxArea(height: number[]): number {
   const getArea = (start: number, end: number) =>
     Math.min(height[start], height[end]) * (end - start);

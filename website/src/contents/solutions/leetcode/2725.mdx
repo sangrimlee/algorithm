@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/interval-cancellation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function cancellable<T>(fn: (...args: T[]) => void, args: T[], t: number): () => void {
   fn(...args);
   const intervalId = setInterval(() => {

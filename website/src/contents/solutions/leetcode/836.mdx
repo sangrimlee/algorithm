@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/rectangle-overlap
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function isRectangleOverlap(rec1: number[], rec2: number[]): boolean {
   return (
     Math.max(rec1[0], rec2[0]) < Math.min(rec1[2], rec2[2]) &&

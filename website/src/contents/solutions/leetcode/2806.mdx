@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/account-balance-after-rounded-purchase
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function accountBalanceAfterPurchase(purchaseAmount: number): number {
   const roundedAmount = Math.round(purchaseAmount / 10) * 10;
   return 100 - roundedAmount;

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function garbageCollection(garbages: string[], travel: number[]): number {
   for (let i = 1; i < travel.length; i++) {
     travel[i] = travel[i - 1] + travel[i];

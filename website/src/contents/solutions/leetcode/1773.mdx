@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/count-items-matching-a-rule
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countMatches(items: string[][], ruleKey: string, ruleValue: string): number {
   const itemIndex = ruleKey === 'type' ? 0 : ruleKey === 'color' ? 1 : 2;
   return items.filter((item) => item[itemIndex] === ruleValue).length;

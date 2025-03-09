@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/number-of-equivalent-domino-pairs
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numEquivDominoPairs(dominoes: number[][]): number {
   const hash = ([a, b]: number[]) => {
     return [Math.min(a, b), Math.max(a, b)].join('');

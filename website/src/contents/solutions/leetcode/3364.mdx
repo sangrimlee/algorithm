@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/minimum-positive-sum-subarray
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minimumSumSubarray(nums: number[], l: number, r: number): number {
   const n = nums.length;
   const prefixSum = new Array(n + 1).fill(0);

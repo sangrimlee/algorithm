@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/build-array-from-permutation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function buildArray(nums: number[]): number[] {
   return new Array(nums.length).fill(0).map((_, i) => nums[nums[i]]);
 }

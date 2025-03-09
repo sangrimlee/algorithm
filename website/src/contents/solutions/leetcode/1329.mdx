@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/sort-the-matrix-diagonally
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function diagonalSort(mat: number[][]): number[][] {
   const [m, n] = [mat.length, mat[0].length];
   const diagonals = new Map<number, number[]>();

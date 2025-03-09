@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function smallerNumbersThanCurrent(nums: number[]): number[] {
   const smallestIndices = new Map<number, number>();
   const sortedNums = [...nums].sort((a, b) => a - b);

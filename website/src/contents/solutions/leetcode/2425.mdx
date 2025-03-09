@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/bitwise-xor-of-all-pairings
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function xorAllNums(nums1: number[], nums2: number[]): number {
   const [m, n] = [nums1.length, nums2.length];
   const xor1 = n % 2 === 0 ? 0 : nums1.reduce(xor, 0);

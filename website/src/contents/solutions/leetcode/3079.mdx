@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/find-the-sum-of-encrypted-integers
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sumOfEncryptedInt(nums: number[]): number {
   return nums.reduce((acc, num) => acc + encrypt(num), 0);
 }

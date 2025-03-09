@@ -8,7 +8,7 @@ url: https://leetcode.com/problems/debounce
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function debounce<T extends (...args: any[]) => void>(fn: T, t: number) {
   let timeoutId: NodeJS.Timeout | null = null;

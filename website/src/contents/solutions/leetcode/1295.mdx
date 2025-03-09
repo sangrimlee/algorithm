@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/find-numbers-with-even-number-of-digits
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findNumbers(nums: number[]): number {
   return nums.filter((num) => num.toString().length % 2 === 0).length;
 }

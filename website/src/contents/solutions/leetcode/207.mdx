@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/course-schedule
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function canFinish(numCourses: number, prerequisites: number[][]): boolean {
   const indegrees: number[] = new Array(numCourses).fill(0);
   const graph: number[][] = Array.from({ length: numCourses }).map(() => []);

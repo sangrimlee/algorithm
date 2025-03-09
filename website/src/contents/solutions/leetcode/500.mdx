@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/keyboard-row
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findWords(words: string[]): string[] {
   const rows = [/^[qwertyuiop]+$/i, /^[asdfghjkl]+$/i, /^[zxcvbnm]+$/i];
   return words.filter((word) => rows.some((row) => row.test(word)));

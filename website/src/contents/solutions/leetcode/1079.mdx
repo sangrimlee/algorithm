@@ -25,7 +25,7 @@ url: https://leetcode.com/problems/letter-tile-possibilities
    2. 타일의 개수가 0인 경우, 다음 타일을 탐색합니다.
    3. 타일의 개수가 0이 아닌 경우, 사용한 타일의 개수를 줄이고, 재귀 호출하여 다음 타일을 계속해서 선택합니다. 원래 상태로 되돌리고 계속 다음 타일을 탐색합니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function numTilePossibilities(tiles: string): number {
   const tileCounter = new Map<string, number>();
   for (const tile of tiles) {

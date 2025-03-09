@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/find-the-number-of-winning-players
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function winningPlayerCount(n: number, pick: number[][]): number {
   const winPlayers = new Set<number>();
   const players: number[][] = Array.from({ length: n }, () => new Array(11).fill(0));

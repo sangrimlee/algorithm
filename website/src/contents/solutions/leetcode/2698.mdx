@@ -25,7 +25,7 @@ url: https://leetcode.com/problems/find-the-punishment-number-of-an-integer
    - 각 인덱스를 순회하고, 해당 인덱스에서 분할한 경우와 하지 않은 경우를 탐색합니다.
 3. 조건을 만족하는 숫자들의 제곱을 합산하여 반환합니다.
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function punishmentNumber(n: number): number {
   let answer = 0;
   for (let num = 1; num <= n; num++) {

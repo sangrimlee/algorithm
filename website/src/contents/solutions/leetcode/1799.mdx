@@ -16,7 +16,7 @@ url: https://leetcode.com/problems/maximize-score-after-n-operations
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxScore(nums: number[]): number {
   const gcd = (x: number, y: number): number => {
     return y === 0 ? x : gcd(y, x % y);

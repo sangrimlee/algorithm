@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/longest-palindromic-substring
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function findPalindrome(s: string, start: number, end: number) {
   while (0 <= start && end < s.length && s[start] === s[end]) {
     start--;

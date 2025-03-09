@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/map-of-highest-peak
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function highestPeak(isWater: number[][]): number[][] {
   const [m, n] = [isWater.length, isWater[0].length];
   const height: number[][] = Array.from({ length: m }, () => new Array(n).fill(-1));

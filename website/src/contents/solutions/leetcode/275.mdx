@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/h-index-ii
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function hIndex(citations: number[]): number {
   const n = citations.length;
   let [start, end] = [0, n - 1];

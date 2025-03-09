@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/pass-the-pillow
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function passThePillow(n: number, time: number): number {
   const remain = time % (2 * (n - 1));
   return n - Math.abs(n - 1 - remain);

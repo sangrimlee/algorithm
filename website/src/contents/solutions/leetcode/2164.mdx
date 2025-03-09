@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/sort-even-and-odd-indices-independently
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sortEvenOdd(nums: number[]): number[] {
   const n = nums.length;
   const evens = nums.filter((_, i) => i % 2 === 0).sort((a, b) => a - b);

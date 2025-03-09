@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/count-prefix-and-suffix-pairs-i
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countPrefixSuffixPairs(words: string[]): number {
   function isPrefixAndSuffix(str1: string, str2: string) {
     return str2.startsWith(str1) && str2.endsWith(str1);

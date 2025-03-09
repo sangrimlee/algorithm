@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/minimum-number-of-operations-to-make-array-co
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minOperations(nums: number[]): number {
   const upperbound = (arr: number[], target: number) => {
     let [start, end] = [0, arr.length];

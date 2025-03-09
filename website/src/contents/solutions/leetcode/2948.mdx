@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/make-lexicographically-smallest-array-by-swap
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function lexicographicallySmallestArray(nums: number[], limit: number): number[] {
   const n = nums.length;
   const sortedNums = [...nums].sort((a, b) => a - b);

@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/count-partitions-with-even-sum-difference
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countPartitions(nums: number[]): number {
   const n = nums.length;
   const totalSum = nums.reduce((acc, num) => acc + num, 0);

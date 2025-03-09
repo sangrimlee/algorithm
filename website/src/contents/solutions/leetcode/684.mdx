@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/redundant-connection
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function findRedundantConnection(edges: number[][]): number[] {
   const n = edges.length;
   const parents = Array.from({ length: n }, (_, i) => i);

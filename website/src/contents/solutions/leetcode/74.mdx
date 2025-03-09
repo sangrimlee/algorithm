@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/search-a-2d-matrix
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function searchMatrix(matrix: number[][], target: number): boolean {
   for (const row of matrix) {
     if (target <= row[row.length - 1]) {

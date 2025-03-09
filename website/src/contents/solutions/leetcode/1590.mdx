@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/make-sum-divisible-by-p
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minSubarray(nums: number[], p: number): number {
   const target = nums.reduce((acc, num) => acc + num, 0) % p;
   if (target === 0) {

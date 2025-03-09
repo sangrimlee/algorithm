@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/sum-of-all-subset-xor-totals
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function subsetXORSum(nums: number[]): number {
   function backtrack(prev: number, i: number): number {
     if (i === nums.length) {

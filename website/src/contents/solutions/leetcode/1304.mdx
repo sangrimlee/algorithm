@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function sumZero(n: number): number[] {
   const answer = n % 2 === 0 ? [] : [0];
   for (let num = 1; num <= Math.floor(n / 2); num++) {

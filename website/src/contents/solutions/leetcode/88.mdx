@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/merge-sorted-array
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 // Do not return anything, modify nums1 in-place instead.
 export function merge(nums1: number[], m: number, nums2: number[], n: number): void {
   let [mIndex, nIndex, total] = [m - 1, n - 1, m + n - 1];

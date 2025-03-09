@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-bina
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function minPartitions(n: string): number {
   return n.split('').reduce((prev, curr) => (prev < +curr ? +curr : prev), 0);
 }

@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function maxValue(events: number[][], k: number): number {
   // 시작일 기준으로 정렬
   events.sort(([aStartDay], [bStartDay]) => aStartDay - bStartDay);

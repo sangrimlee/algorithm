@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/relative-sort-array
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function relativeSortArray(arr1: number[], arr2: number[]): number[] {
   const indicies = new Map(arr2.map((num, i) => [num, i]));
   const getIndex = (num: number) => indicies.get(num) ?? arr2.length;

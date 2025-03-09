@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/valid-palindrome-ii
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function validPalindrome(s: string, canRemove = true): boolean {
   let [start, end] = [0, s.length - 1];
   while (start < end) {

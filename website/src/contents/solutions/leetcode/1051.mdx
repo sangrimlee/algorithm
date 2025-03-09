@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/height-checker
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function heightChecker(heights: number[]): number {
   const expected = [...heights].sort((a, b) => a - b);
   return heights.filter((height, i) => height !== expected[i]).length;

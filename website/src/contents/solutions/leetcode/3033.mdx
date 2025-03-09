@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/modify-the-matrix
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function modifiedMatrix(matrix: number[][]): number[][] {
   const [m, n] = [matrix.length, matrix[0].length];
   const answer = Array.from({ length: m }, () => new Array(n).fill(0));

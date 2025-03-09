@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/reformat-phone-number
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function reformatNumber(number: string): string {
   const removed = number.replace(/[- ]/g, '');
   const n = removed.length;

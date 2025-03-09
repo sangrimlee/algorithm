@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/smallest-divisible-digit-product-i
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function smallestNumber(n: number, t: number): number {
   let curr = n;
   while (productDigits(curr) % t !== 0) {

@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/binary-watch
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function readBinaryWatch(turnedOn: number): string[] {
   const countBit = (num: number) => {
     const matched = num.toString(2).match(/1/g);

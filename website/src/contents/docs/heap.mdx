@@ -11,7 +11,7 @@ JavaScript에는 존재하지 않는 **Heap** 자료구조를 구현한 `class`�
 
 ## Examples
 
-```typescript copy
+```typescript showLineNumbers
 import { Heap } from '@algorithm/lib';
 
 const minHeap = new Heap((a, b) => a - b);
@@ -37,7 +37,7 @@ maxHeap.pop(); // 1
 
 ## Source
 
-```typescript filename="heap.ts" copy
+```typescript showLineNumbers
 type Comparator<T> = (a: T, b: T) => number;
 
 class Heap<T> {

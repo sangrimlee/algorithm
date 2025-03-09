@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/final-array-state-after-k-multiplication-oper
 
 ### Solution1: `Brute Force`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 function getFinalState(nums: number[], k: number, multiplier: number): number[] {
   while (0 < k) {
     let [minValue, minIndex] = [Number.MAX_SAFE_INTEGER, -1];
@@ -39,7 +39,7 @@ function getFinalState(nums: number[], k: number, multiplier: number): number[] 
 
 ### Solution2: `Heap`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { Heap } from '@algorithm/lib';
 
 export function getFinalState(nums: number[], k: number, multiplier: number): number[] {

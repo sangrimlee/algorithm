@@ -7,7 +7,7 @@ url: https://school.programmers.co.kr/learn/courses/30/lessons/150370
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function validPrivacies(today: string, terms: string[], privacies: string[]): number[] {
   const getDay = (dayString: string) => {
     const [year, month, day] = dayString.split('.').map((v) => parseInt(v));

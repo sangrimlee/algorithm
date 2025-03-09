@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/number-of-submatrices-that-sum-to-target
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function numSubmatrixSumTarget(matrix: number[][], target: number): number {
   const [m, n] = [matrix.length, matrix[0].length];
   for (let row = 0; row < m; row++) {

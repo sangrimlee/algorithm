@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/regions-cut-by-slashes
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function regionsBySlashes(grid: string[]): number {
   const n = grid.length;
   const board: number[][] = Array.from({ length: 3 * n }, () => new Array(3 * n).fill(0));

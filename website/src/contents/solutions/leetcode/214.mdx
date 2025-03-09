@@ -15,7 +15,7 @@ url: https://leetcode.com/problems/shortest-palindrome
 
 ### Solution1: `Brute Force`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function shortestPalindrome(s: string): string {
   const n = s.length;
   const reversed = toReversed(s);
@@ -41,7 +41,7 @@ function toReversed(str: string): string {
 
 ### Solution2: `KMP(Knuth-Morris-Pratt)` Algorithm
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function shortestPalindrome(s: string): string {
   const n = s.length;
   const reversed = toReversed(s);
@@ -80,7 +80,7 @@ function createPrefixTable(str: string): number[] {
 
 ### Solution3: `Manacher` Algorithm
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function shortestPalindrome(s: string): string {
   if (s.length === 0) {
     return s;

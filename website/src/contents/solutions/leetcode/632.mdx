@@ -17,7 +17,7 @@ url: https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists
 
 ### Solution1: `Heap`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 import { Heap } from '@algorithm/lib';
 
 export function smallestRange(nums: number[][]): number[] {
@@ -69,7 +69,7 @@ function sortArr(a: number[], b: number[]) {
 
 ### Solution2: `Two Pointer`
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function smallestRange(nums: number[][]): number[] {
   const k = nums.length;
   const merged = nums.flatMap((num, col) => num.map((value) => [value, col]));

@@ -14,7 +14,7 @@ url: https://leetcode.com/problems/count-the-number-of-consistent-strings
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function countConsistentStrings(allowed: string, words: string[]): number {
   const allowedSet = new Set(allowed);
   const isAllowed = (word: string) => {

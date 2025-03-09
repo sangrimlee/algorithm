@@ -10,7 +10,7 @@ url: https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function checkZeroOnes(s: string): boolean {
   function getMaxLength(arr: string[]) {
     return arr.reduce((prev, s) => Math.max(prev, s.length), 0);

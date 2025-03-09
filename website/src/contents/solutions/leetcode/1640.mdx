@@ -11,7 +11,7 @@ url: https://leetcode.com/problems/check-array-formation-through-concatenation
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function canFormArray(arr: number[], pieces: number[][]): boolean {
   const indices = new Map(arr.map((v, i) => [v, i]));
   const canFormPiece = (piece: number[]) => {

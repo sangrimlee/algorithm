@@ -13,7 +13,7 @@ url: https://leetcode.com/problems/number-of-arithmetic-triplets
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function arithmeticTriplets(nums: number[], diff: number): number {
   const set = new Set(nums);
   return nums.filter((num) => set.has(num + diff) && set.has(num + diff * 2)).length;

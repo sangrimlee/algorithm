@@ -12,7 +12,7 @@ url: https://leetcode.com/problems/rank-transform-of-an-array
 
 ## Solution
 
-```typescript filename="solution.ts" copy
+```typescript showLineNumbers
 export function arrayRankTransform(arr: number[]): number[] {
   const ranks = new Map([...new Set(arr)].sort((a, b) => a - b).map((num, i) => [num, i + 1]));
 
