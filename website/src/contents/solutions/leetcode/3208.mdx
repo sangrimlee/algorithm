@@ -1,0 +1,56 @@
+---
+id: '3208'
+title: Alternating Groups II
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Sliding Window
+url: https://leetcode.com/problems/alternating-groups-ii
+---
+
+## 문제 설명
+
+주어진 원형 배열 `colors`에서 길이가 `k`인 **교차 색 타일 그룹(빨강과 파랑이 번갈아 나타나는 그룹)의 개수**를 구하는 문제입니다.
+
+- 각 타일은 빨강(0)과 파랑(1)이 있습니다.
+- **그룹은 인접한 k개의 타일로 이루어져야 하며, 각 타일은 인접한 색과 서로 다른 색을 가져야 합니다.**
+- 원형 배열이므로 **첫번째 타일과 마지막 타일이 인접합니다.**
+
+## 문제 풀이
+
+### `Sliding Window`
+
+- `colors` 배열을 원형으로 다루기 위해, **`n + k - 1`**번째 타일까지 순회하며, **i % n**을 사용하여 인덱스를 순회합니다.
+- 현재 타일과 이전 타일의 색에 따라, **현재 그룹의 타일 개수(`currentGrounpCount`)를 변경**합니다.
+  - **현재 타일과 이전 타일의 색과 다르면,** 현재 그룹의 **타일 개수를 증가**시킵니다.
+  - **현재 타일과 이전 타일의 색과 같다면,** 현재 그룹의 **타일 개수를 1로 변경**합니다.
+- **현재 그룹의 타일 개수가 `k` 이상이라면, 교차 색 타일 그룹(`alternatingGroupCount`)을 증가시킵니다.**
+
+```typescript showLineNumbers
+function numberOfAlternatingGroups(colors: number[], k: number): number {
+  const n = colors.length;
+
+  let currentGroupCount = 1;
+  let alternatingGroupCount = 0;
+  let lastColor = colors[0];
+  for (let i = 1; i < n + k - 1; i++) {
+    const currentColor = colors[i % n];
+    if (currentColor === lastColor) {
+      currentGroupCount = 1;
+      continue;
+    }
+    currentGroupCount += 1;
+    if (currentGroupCount >= k) {
+      alternatingGroupCount += 1;
+    }
+    lastColor = currentColor;
+  }
+  return alternatingGroupCount;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n + k)$
+- 공간 복잡도: $O(1)$

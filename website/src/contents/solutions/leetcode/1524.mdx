@@ -1,0 +1,60 @@
+---
+id: '1524'
+title: Number of Sub-arrays With Odd Sum
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Math
+  - Prefix Sum
+  - Dynamic Programming
+url: https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/
+---
+
+## 문제 설명
+
+주어진 정수 배열 `arr`의 **부분 배열이 합이 홀수인 모든 부분 배열의 개수를** 반환하는 문제이다.
+
+단, 결과 값이 매우 클 수 있으므로, $10^9 + 7$로 **모듈러 연산한 값을 반환**해야 한다.
+
+## 문제 풀이
+
+### 누적합(`Prefix Sum`)
+
+- **누적합(`sum`)을 계산**하면서, 현재까지 나온 **짝수 합(`evenCount`)과 홀수 합(`oddCount`)를 카운팅한다.**
+  - **짝수 합: 누적합이 짝수**
+  - **홀수 합: 누적합이 홀수**
+- **현재의 누적합이 짝수 합인 경우**
+  - 부분 배열의 합이 홀수인 부분 배열의 개수는 **기존의 홀수 합 개수**만큼 존재.
+  - **현재의 짝수 합에서, 홀수 합을 빼면, 해당 부분 배열의 합은 홀수가 된다.**
+- **현재의 누적합이 홀수 합인 경우**
+  - 부분 배열의 합이 홀수인 부분 배열의 개수는 **기존의 짝수 합 개수**만큼 존재.
+  - **현재의 홀수 합에서, 짝수 합을 빼면, 해당 부분 배열의 합은 홀수가 된다.**
+
+```typescript showLineNumbers
+export function numOfSubarrays(arr: number[]): number {
+  const MOD = 10 ** 9 + 7;
+
+  let result = 0;
+  let prefixSum = 0;
+  let oddCount = 0;
+  let evenCount = 1; // 초기 누적합 0은 짝수
+  for (const num of arr) {
+    prefixSum += num;
+    if (prefixSum % 2 === 0) {
+      result += oddCount;
+      evenCount += 1;
+    } else {
+      result += evenCount;
+      oddCount += 1;
+    }
+    result %= MOD;
+  }
+  return result;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

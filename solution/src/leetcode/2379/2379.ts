@@ -4,24 +4,22 @@
  */
 export function minimumRecolors(blocks: string, k: number): number {
   const n = blocks.length;
+  let minColorChange = n;
 
-  let answer = Number.MAX_SAFE_INTEGER;
-
-  let wCount = 0;
-  let [start, end] = [0, 0];
-  while (end < n) {
+  let start = 0;
+  let whiteCount = 0;
+  for (let end = 0; end < n; end++) {
     if (blocks[end] === 'W') {
-      wCount += 1;
+      whiteCount += 1;
     }
+
     if (end - start + 1 === k) {
-      answer = Math.min(answer, wCount);
+      minColorChange = Math.min(minColorChange, whiteCount);
       if (blocks[start] === 'W') {
-        wCount -= 1;
+        whiteCount -= 1;
       }
       start += 1;
     }
-    end += 1;
   }
-
-  return answer;
+  return minColorChange;
 }

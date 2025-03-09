@@ -10,26 +10,97 @@ tags:
 url: https://leetcode.com/problems/apply-operations-to-an-array
 ---
 
-## Solution
+## 문제 설명
+
+주어진 정수 배열 `nums` 에서 다음 두 가지 연산을 수행해야 합니다.
+
+1. 연속된 두 원소 `nums[i]`와 `nums[i + 1]`이 같다면:
+   - `nums[i] *= 2`
+   - `nums[i + 1] = 0`
+2. **모든 연산을 수행한 후, 배열 내의 0을 오른쪽으로 이동**해야한다.
+
+## 문제 풀이
+
+### **`Brute Force`**
+
+1. **앞에서부터 탐색하면서, 연산을 수행한다.**
+2. **`nums[i]`가 0이라면**, `zeros`에 추가한다.
+3. **`nums[i]`가 0이 아니라면,** `nonZeros`에 추가한다.
+4. `nonZeros` 배열과 `zeros` 배열을 합쳐서 반환한다.
 
 ```typescript showLineNumbers
-export function applyOperations(nums: number[]): number[] {
-  function operate(nums: number[]): number[] {
-    const result: number[] = [...nums];
-    for (let i = 0; i < result.length - 1; i++) {
-      if (result[i] === result[i + 1]) {
-        result[i] *= 2;
-        result[i + 1] = 0;
-      }
+function applyOperations(nums: number[]): number[] {
+  const n = nums.length;
+  const zeros: number[] = [];
+  const nonZeros: number[] = [];
+  for (let i = 0; i < n; i++) {
+    if (i !== n - 1 && nums[i] === nums[i + 1]) {
+      nums[i] *= 2;
+      nums[i + 1] = 0;
     }
-    return result;
+    if (nums[i] === 0) {
+      zeros.push(nums[i]);
+    } else {
+      nonZeros.push(nums[i]);
+    }
   }
-
-  function shiftAllZero(nums: number[]): number[] {
-    const notZero = nums.filter((num) => num !== 0);
-    return [...notZero, ...new Array<number>(nums.length - notZero.length).fill(0)];
-  }
-
-  return shiftAllZero(operate(nums));
+  return [...nonZeros, ...zeros];
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
+
+---
+
+### One Pass
+
+**공간 복잡도를 줄이고, 한 번의 반복만을 사용**하기 위해, `num`의 값을 직접 변경한다.
+
+1. **마찬가지로, 앞에서 부터 탐색하면서, 연산을 수행한다.**
+2. **`writeIndex` 변수를 사용하여, 0이 아닌 숫자를 앞으로 정렬한다.**
+   - **`nums[i]`가 0이 아니라면, `nums[writeIndex]`와 `nums[i]`를 Swap한 후 `writeIndex`를 증가시킨다.**
+   - **`writeIndex`는 현재 가장 앞쪽에 있는 0이 있는 인덱스. 즉, 0이 아닌 숫자가 배치될 위치**
+
+#### 에시
+
+```typescript
+applyOperations([1, 2, 2, 1, 1, 0]);
+```
+
+| `i` | `nums`               | `writeIndex` 변화         |
+| :-: | :------------------- | :------------------------ |
+|  0  | `[1, 2, 2, 1, 1, 0]` | `0 → 1` (1은 그대로 유지) |
+|  1  | `[1, 4, 0, 1, 1, 0]` | `1 → 2`                   |
+|  2  | `[1, 4, 0, 1, 1, 0]` | 변화 없음                 |
+|  3  | `[1, 4, 0, 2, 0, 0]` | `2 → 3` (swap 수행)       |
+|  4  | `[1, 4, 2, 0, 0, 0]` | 변화 없음                 |
+|  5  | `[1, 4, 2, 0, 0, 0]` | 변화 없음                 |
+
+```typescript showLineNumbers
+function applyOperations(nums: number[]): number[] {
+  const n = nums.length;
+  let writeIndex = 0;
+  for (let i = 0; i < n; i++) {
+    if (i !== n - 1 && nums[i] === nums[i + 1]) {
+      nums[i] *= 2;
+      nums[i + 1] = 0;
+    }
+
+    if (nums[i] !== 0) {
+      if (i !== writeIndex) {
+        [nums[i], nums[writeIndex]] = [nums[writeIndex], nums[i]];
+      }
+      writeIndex += 1;
+    }
+  }
+  return nums;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

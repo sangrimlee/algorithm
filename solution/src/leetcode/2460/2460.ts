@@ -3,21 +3,20 @@
  * https://leetcode.com/problems/apply-operations-to-an-array
  */
 export function applyOperations(nums: number[]): number[] {
-  function operate(nums: number[]): number[] {
-    const result: number[] = [...nums];
-    for (let i = 0; i < result.length - 1; i++) {
-      if (result[i] === result[i + 1]) {
-        result[i] *= 2;
-        result[i + 1] = 0;
-      }
+  const n = nums.length;
+  let writeIndex = 0;
+  for (let i = 0; i < n; i++) {
+    if (i !== n - 1 && nums[i] === nums[i + 1]) {
+      nums[i] *= 2;
+      nums[i + 1] = 0;
     }
-    return result;
-  }
 
-  function shiftAllZero(nums: number[]): number[] {
-    const notZero = nums.filter((num) => num !== 0);
-    return [...notZero, ...new Array<number>(nums.length - notZero.length).fill(0)];
+    if (nums[i] !== 0) {
+      if (i !== writeIndex) {
+        [nums[i], nums[writeIndex]] = [nums[writeIndex], nums[i]];
+      }
+      writeIndex += 1;
+    }
   }
-
-  return shiftAllZero(operate(nums));
+  return nums;
 }

@@ -1,0 +1,75 @@
+---
+id: '1780'
+title: Check if Number is a Sum of Powers of Three
+category: Algorithms
+difficulty: Medium
+tags:
+  - Math
+url: https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three
+---
+
+## 문제 설명
+
+주어진 정수 `n`이 **서로 다른 3의 거듭제곱의 합**으로 표현할 수 있으면 `true`, 그렇지 않으면, `false`을 반환합니다.
+
+## 문제 풀이
+
+### `Greedy`
+
+1. `n`보다 작거나 같은 **가장 큰 3의 거듭제곱**을 찾는다.
+2. `n`을 줄여가면서 탐색을 진행한다.
+   - 현재 `n`보다 `3 * *power`이 작다면 `n`에서 빼준다.
+     - **`n`이 `3 ** power` 이상이면 false를 반환한다.\*\*
+     - **`3 ** power`를 한 번만 사용해야 하는데, 2번 이상 사용해야 한다는 뜻이므로 불가능하다.\*\*
+3. 위 과정을, `n`이 0이 될 때까지 반복하면 `true`를 반환한다.
+
+```typescript showLineNumbers
+function checkPowersOfThree(n: number): boolean {
+  let power = 0;
+  while (3 ** (power + 1) <= n) {
+    power += 1;
+  }
+
+  while (n > 0) {
+    if (n >= 3 ** power) {
+      n -= 3 ** power;
+    }
+    if (n >= 3 ** power) {
+      return false;
+    }
+    power -= 1;
+  }
+
+  return true;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(log_3{n})$
+- 공간 복잡도: $O(1)$
+
+### `Ternary Representation`
+
+> 어떤 수를 **서로 다른 3의 거듭제곱의 합**으로 표현할 수 있다는 것은, **3진법으로 변환했을 때, 각 자리의 값이 0 또는 1만 나와야 한다는 것과 같다.**
+>
+> 따라서, 어떤 자리에서 2가 나오면, **그 수는 서로 다른 3의 거듭제곱의 합으로 표현할 수 없다.**
+
+3진법으로 변환한 수에 2가 포함되면, `false`를 반환하면 된다.
+
+```typescript showLineNumbers
+function checkPowersOfThree(n: number): boolean {
+  while (n > 0) {
+    if (n % 3 === 2) {
+      return false;
+    }
+    n = Math.floor(n / 3);
+  }
+  return true;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(log_3{n})$
+- 공간 복잡도: $O(1)$

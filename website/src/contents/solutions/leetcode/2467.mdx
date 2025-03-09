@@ -1,0 +1,91 @@
+---
+id: '2467'
+title: Most Profitable Path in a Tree
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Breadth-First Search
+  - Depth-First Search
+  - Graph
+  - Tree
+url: https://leetcode.com/problems/most-profitable-path-in-a-tree/
+---
+
+## 문제 설명
+
+- `n` 개의 노드로 구성된 루트 노드가 0인 **무방향 트리**가 주어진다.
+- `edges[i] = [a, b]`는 a와 b가 **연결된 간선**임을 의미한다.
+- `bob`: **Bob**이 시작하는 노드
+- `amount[i]`는 **각 노드에서 얻거나 지불해야 하는 금액**이다.
+  - 양수: 해당 노드에서 얻을 수 있는 금액
+  - 음수: 해당 노드에서 지불해야하는 금액
+
+**게임 규칙**
+
+1. **Alice**는 루트 노드 `0`에서 출발하여, 리프 노드로 이동한다.
+2. **Bob**은 노드 `bob`에서 출발하여, 루트 노드 0으로 이동한다.
+3. 각 노드에 도착할 때 다음과 같은 일이 일어난다:
+   - 각 노드에 **먼저 도착한 사람이 전액을 얻거나 지불한다.** `amount[i]`
+   - **Alice**와 **Bob**이 동시에 도착하면, **얻거나 지불해야 하는 금액을 절반씩 나눈다.** `amount[i] / 2`
+4. **Alice**는 최적의 리프 노드로 이동하여 최대 수익을 얻어야 한다.
+
+위의 게임 결과로 **Alice**가 얻을 수 있는 최대 수익을 반환하여라.
+
+## 문제 풀이
+
+### `DFS`
+
+1. 트리 생성
+   - 주어진 `edges`를 사용하여, 인접리스트 `tree`를 생성한다.
+2. **Bob**의 각 노드에 대한 도착 시간 계산
+   - Bob은 bob에서 출발하여, 각 노드에 도착하는 최소 거리 (시간) `distances[i]`를 계산한다.
+3. **DFS**를 사용하여, **Alice**가 이동할 경로를 탐색
+   - `distances[node] > time`인 경우는 **Alice가 먼저 도착한 경우**
+     - `amount[node]` 전액 추가
+   - `distances[node] === time`인 경우는 **Alice와 Bob이 동시에 도착한 경우**
+     - `amount[node] / 2` 추가
+4. **DFS를 사용하여, 계산한 자식 노드 중 최댓값을 더한다.**
+
+```typescript showLineNumbers
+function mostProfitablePath(edges: number[][], bob: number, amount: number[]): number {
+  const n = amount.length;
+  const distances = new Array<number>(n).fill(n);
+  distances[bob] = 0;
+
+  const tree: number[][] = Array.from({ length: n }, () => []);
+  for (const [a, b] of edges) {
+    tree[a].push(b);
+    tree[b].push(a);
+  }
+
+  function dfs(node: number, parentNode: number, time: number): number {
+    let currentIncome = 0;
+    let maxSubtreeIncome = Number.MIN_SAFE_INTEGER;
+    for (const childNode of tree[node]) {
+      if (childNode === parentNode) {
+        continue;
+      }
+      maxSubtreeIncome = Math.max(maxSubtreeIncome, dfs(childNode, node, time + 1));
+      distances[node] = Math.min(distances[node], distances[childNode] + 1);
+    }
+
+    if (distances[node] > time) {
+      currentIncome += amount[node];
+    } else if (distances[node] === time) {
+      currentIncome += Math.floor(amount[node] / 2);
+    }
+    // 리프 노드인 경우
+    if (maxSubtreeIncome === Number.MIN_SAFE_INTEGER) {
+      return currentIncome;
+    }
+    return currentIncome + maxSubtreeIncome;
+  }
+  return dfs(0, 0, 0);
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
