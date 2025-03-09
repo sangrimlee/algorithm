@@ -21,15 +21,11 @@ interface DailyChallengeResponse {
   data: { activeDailyCodingChallengeQuestion: DailyChallengeQuestion };
 }
 
-export const getLeetCodeDailyChallenge = async () => {
-  try {
-    const { data } = await graphql.query<DailyChallengeResponse>('https://leetcode.com/graphql', {
-      query: DAILY_CODING_CHALLENGE_QUERY,
-    });
+export async function getLeetCodeDailyChallenge(): Promise<string> {
+  const { data } = await graphql.query<DailyChallengeResponse>('https://leetcode.com/graphql', {
+    query: DAILY_CODING_CHALLENGE_QUERY,
+  });
 
-    return data.activeDailyCodingChallengeQuestion;
-  } catch (error) {
-    console.error(error);
-    throw new Error('문제를 불러오는 중에 오류가 발생하였습니다.\n');
-  }
-};
+  const { titleSlug } = data.activeDailyCodingChallengeQuestion.question;
+  return titleSlug;
+}

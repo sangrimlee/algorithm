@@ -1,6 +1,7 @@
 import * as graphql from '@/lib/graphql';
 
 import { parseLeetCode } from '@/lib/parse';
+import type { TestCase } from '@/types';
 
 const LEETCODE_QUESTION_DETAIL_QUERY = `query getQuestionBySlug($titleSlug: String) {
   question(titleSlug: $titleSlug) {
@@ -8,6 +9,7 @@ const LEETCODE_QUESTION_DETAIL_QUERY = `query getQuestionBySlug($titleSlug: Stri
     title
     titleSlug
     content
+    categoryTitle
     codeSnippets {
       langSlug
       code
@@ -20,11 +22,12 @@ const LEETCODE_QUESTION_DETAIL_QUERY = `query getQuestionBySlug($titleSlug: Stri
   }
 }`;
 
-interface LeetCodeQuestion {
+interface LeetCodeQuestionResponseData {
   id: string;
   title: string;
   titleSlug: string;
   content: string;
+  categoryTitle: string;
   codeSnippets: {
     langSlug: string;
     code: string;
@@ -38,33 +41,51 @@ interface LeetCodeQuestion {
 
 interface LeetCodeQuestionResponse {
   data: {
-    question: LeetCodeQuestion;
+    question: LeetCodeQuestionResponseData;
   };
 }
 
-export const getLeetCodeQuestionBySlug = async (titleSlug: string) => {
-  try {
-    const {
-      data: { question },
-    } = await graphql.query<LeetCodeQuestionResponse>('https://leetcode.com/graphql', {
-      query: LEETCODE_QUESTION_DETAIL_QUERY,
-      variables: { titleSlug },
-    });
+export interface LeetCodeQuestion {
+  id: string;
+  title: string;
+  url: string;
+  difficulty: string;
+  category: string;
+  topics: string[];
+  codeSnippet?: string;
+  testCases: TestCase[];
+}
 
-    const { id, title, content, codeSnippets, difficulty, topicTags } = question;
-    const codeSnippet = codeSnippets.find(({ langSlug }) => langSlug === 'typescript')?.code;
-    const { testCases } = parseLeetCode(content);
+export async function getLeetCodeQuestionBySlug(titleSlug: string): Promise<LeetCodeQuestion> {
+  const {
+    data: { question },
+  } = await graphql.query<LeetCodeQuestionResponse>('https://leetcode.com/graphql', {
+    query: LEETCODE_QUESTION_DETAIL_QUERY,
+    variables: { titleSlug },
+  });
 
-    return {
-      id,
-      title,
-      codeSnippet,
-      testCases,
-      difficulty,
-      topics: topicTags,
-    };
-  } catch (error) {
-    console.error(error);
-    throw new Error('문제를 불러오는 중에 오류가 발생하였습니다. 문제 번호를 확인해주세요.');
-  }
-};
+  const {
+    id,
+    title,
+    categoryTitle: category,
+    content,
+    codeSnippets,
+    difficulty,
+    topicTags,
+  } = question;
+  const url = `https://leetcode.com/problems/${titleSlug}`;
+  const codeSnippet = codeSnippets.find(({ langSlug }) => langSlug === 'typescript')?.code;
+  const { testCases } = parseLeetCode(content);
+  const topics = topicTags.map(({ name }) => name);
+
+  return {
+    id,
+    title,
+    url,
+    difficulty,
+    category,
+    topics,
+    codeSnippet,
+    testCases,
+  };
+}

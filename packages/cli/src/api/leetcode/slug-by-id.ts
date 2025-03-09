@@ -17,18 +17,18 @@ interface GetLeetCodeAllProblemResponse {
   totalSubmissionRaw: number;
 }
 
-const getLeetCodeAllProblem = async () => {
+async function getLeetCodeAllProblem(): Promise<Record<string, GetLeetCodeAllProblemResponse>> {
   const { data } = await axios.get<Record<string, GetLeetCodeAllProblemResponse>>(
     'https://raw.githubusercontent.com/bunnyxt/lcid/main/problems_all.json',
   );
   return data;
-};
+}
 
-export const getLeetCodeSlugById = async (id: string) => {
+export async function getLeetCodeSlugById(id: string): Promise<string> {
   const allProblem = await getLeetCodeAllProblem();
   const titleSlug = allProblem[id].titleSlug;
   if (!titleSlug) {
     throw new Error('LeetCode에 없는 문제 번호 입니다.');
   }
   return titleSlug;
-};
+}
