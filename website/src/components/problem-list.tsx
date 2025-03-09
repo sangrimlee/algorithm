@@ -1,6 +1,8 @@
 import NextLink from 'next/link';
 import * as React from 'react';
 
+import type { LeetCodeDiffculty } from '@/schemas/leetcode';
+import type { ProgrammersLevel } from '@/schemas/programmers';
 import { cn } from '@/utils/cn';
 
 type ProblemListRootProps = React.ComponentPropsWithoutRef<'ul'>;
@@ -49,26 +51,18 @@ const ProblemListLink = React.forwardRef<HTMLAnchorElement, ProblemListLinkProps
 );
 ProblemListLink.displayName = 'ProblemList.Link';
 
-type ProblemLevel = number | 'Easy' | 'Medium' | 'Hard';
-type ProblemListLevelProps = Omit<React.ComponentPropsWithoutRef<'span'>, 'children'> & {
-  level: ProblemLevel;
-};
+type ProblemLevel = LeetCodeDiffculty | ProgrammersLevel;
 
-function getColorByLevel(level: ProblemLevel): string {
-  if (typeof level === 'number') {
-    if (level <= 0 || level > 5) {
-      return 'text-gray-11';
-    }
-    return ['text-green-11', 'text-teal-11', 'text-amber-11', 'text-purple-11', 'text-red-11'][
-      level - 1
-    ];
-  }
-  return {
-    Easy: 'text-green-11',
-    Medium: 'text-amber-11',
-    Hard: 'text-red-11',
-  }[level];
-}
+const TEXT_COLOR_BY_LEVEL = {
+  1: 'text-green-11',
+  2: 'text-teal-11',
+  3: 'text-amber-11',
+  4: 'text-pink-11',
+  5: 'text-red-11',
+  Easy: 'text-green-11',
+  Medium: 'text-amber-11',
+  Hard: 'text-red-11',
+} as const;
 
 function getTextByLevel(level: ProblemLevel): string {
   if (typeof level === 'number') {
@@ -77,6 +71,10 @@ function getTextByLevel(level: ProblemLevel): string {
   return level === 'Medium' ? 'Med.' : level;
 }
 
+type ProblemListLevelProps = Omit<React.ComponentPropsWithoutRef<'span'>, 'children'> & {
+  level: ProblemLevel;
+};
+
 const ProblemListLevel = React.forwardRef<HTMLSpanElement, ProblemListLevelProps>(
   ({ level, className, ...props }, ref) => {
     return (
@@ -84,7 +82,7 @@ const ProblemListLevel = React.forwardRef<HTMLSpanElement, ProblemListLevelProps
         ref={ref}
         className={cn(
           'min-w-10 shrink-0 text-center text-sm font-medium',
-          getColorByLevel(level),
+          TEXT_COLOR_BY_LEVEL[level],
           className,
         )}
         {...props}
