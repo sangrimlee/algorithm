@@ -1,6 +1,6 @@
 import { mostProfitablePath } from './2467';
 
-describe('LeetCode 2466', () => {
+describe('LeetCode 2467', () => {
   test('Example 1', () => {
     expect(
       mostProfitablePath(

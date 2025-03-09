@@ -1,5 +1,5 @@
 /**
- * 2466. Most Profitable Path in a Tree
+ * 2467. Most Profitable Path in a Tree
  * https://leetcode.com/problems/most-profitable-path-in-a-tree/
  */
 export function mostProfitablePath(edges: number[][], bob: number, amount: number[]): number {
