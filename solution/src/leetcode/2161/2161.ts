@@ -3,19 +3,24 @@
  * https://leetcode.com/problems/partition-array-according-to-given-pivot
  */
 export function pivotArray(nums: number[], pivot: number): number[] {
-  let pivotCount = 0;
-  const lessThan: number[] = [];
-  const greaterThan: number[] = [];
+  const n = nums.length;
+  const answer = new Array<number>(n).fill(0);
 
-  nums.forEach((num) => {
-    if (num === pivot) {
-      pivotCount += 1;
-    } else if (num < pivot) {
-      lessThan.push(num);
-    } else {
-      greaterThan.push(num);
+  let lessIndex = 0;
+  let greaterIndex = n - 1;
+  for (let i = 0; i < n; i++) {
+    if (nums[i] < pivot) {
+      answer[lessIndex] = nums[i];
+      lessIndex += 1;
     }
-  });
-
-  return [...lessThan, ...new Array<number>(pivotCount).fill(pivot), ...greaterThan];
+    if (nums[n - i - 1] > pivot) {
+      answer[greaterIndex] = nums[n - i - 1];
+      greaterIndex -= 1;
+    }
+  }
+  while (lessIndex <= greaterIndex) {
+    answer[lessIndex] = pivot;
+    lessIndex += 1;
+  }
+  return answer;
 }
