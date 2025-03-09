@@ -19,3 +19,4 @@ catalogs:
 onlyBuiltDependencies:
   - esbuild
   - sharp
+  - '@vercel/speed-insights'
