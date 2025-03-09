@@ -1,0 +1,74 @@
+---
+id: '1749'
+title: Maximum Absolute Sum of Any Subarray
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Dynamic Programming
+url: https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/
+---
+
+## 문제 설명
+
+- 정수 배열 `nums`가 주어진다.
+- **가장 큰 부분 배열의 절댓값 합**을 찾고 그 값을 반환한다.
+
+## 문제 풀이
+
+### `Prefix Sum` (누적합)
+
+즉, 특정 구간 `[i, j]`에 대한 부분 배열의 합은 **`prefixSum[j] - prefixSum[i]`**과 같이 표현할 수 있다.
+
+여기서 **절댓값이 가장 큰 부분 배열의 합은 다음과 같다.**
+
+**`max(prefixSum[j]) - min(prefixSum[i])`**
+
+따라서, **가장 큰 누적합과 가장 작은 누적합의 차**를 통해 가장 큰 부분 배열의 절댓값 합을 찾을 수 있다.
+
+```typescript showLineNumbers
+function maxAbsoluteSum(nums: number[]): number {
+  let prefixSum = 0;
+  let minPrefixSum = 0;
+  let maxPrefixSum = 0;
+  for (const num of nums) {
+    prefixSum += num;
+    minPrefixSum = Math.min(minPrefixSum, prefixSum);
+    maxPrefixSum = Math.max(maxPrefixSum, prefixSum);
+  }
+  return maxPrefixSum - minPrefixSum;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
+
+---
+
+### `Kadane’s Algorithm`
+
+[**Kadane’s Algorithm**](https://en.wikipedia.org/wiki/Maximum_subarray_problem)은
+부분 배열의 최대 합을 빠르게 구하는 알고리즘으로, 마지막으로 가장 큰 부분 배열의 합을 유지하는 방식이다.
+
+이를 변형하여, **현재 가장 큰 부분 배열의 합과, 가장 작은 부분 배열의 합을 찾고, 이 중 절댓값이 가장 큰 값을 찾는 방식**으로 해결할 수 있다.
+
+```typescript showLineNumbers
+function maxAbsoluteSum(nums: number[]): number {
+  let answer = 0;
+  let maxEnding = 0;
+  let minEnding = 0;
+  for (const num of nums) {
+    minEnding = Math.min(minEnding + num, num);
+    maxEnding = Math.max(maxEnding + num, num);
+    answer = Math.max(answer, maxEnding, Math.abs(minEnding));
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
