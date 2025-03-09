@@ -9,30 +9,46 @@ tags:
 url: https://leetcode.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks
 ---
 
-## Solution
+## 문제 설명
+
+1. 문자 `W` 또는 `B` 로 이루어진 문자열 `blocks`가 주어진다.
+2. 정수 `k`가 주어지며, **연속된 `k`개의 `B` 블록**이 필요하다.
+3. **`W`블록을 `B` 블록으로 변경할 수 있다.**
+4. `k`개의 연속된 `B` 블록을 만들 수 있는 **최소한의 변경 횟수**를 반환한다.
+
+## 문제 풀이
+
+### `Sliding Window`
+
+1. 문자열을 순회하면서 `W`의 개수를 계산
+2. **윈도우의 크기가 `k`가 되면 최소 변경 횟수를 갱신**
+3. 윈도우를 이동할 때, **앞의 문자(`start` 위치)를 제거**
 
 ```typescript showLineNumbers
-export function minimumRecolors(blocks: string, k: number): number {
+function minimumRecolors(blocks: string, k: number): number {
   const n = blocks.length;
+  let minColorChange = n;
 
-  let answer = Number.MAX_SAFE_INTEGER;
-
-  let wCount = 0;
-  let [start, end] = [0, 0];
-  while (end < n) {
+  let start = 0;
+  let whiteCount = 0;
+  for (let end = 0; end < n; end++) {
     if (blocks[end] === 'W') {
-      wCount += 1;
+      whiteCount += 1;
     }
+
     if (end - start + 1 === k) {
-      answer = Math.min(answer, wCount);
+      minColorChange = Math.min(minColorChange, whiteCount);
       if (blocks[start] === 'W') {
-        wCount -= 1;
+        whiteCount -= 1;
       }
       start += 1;
     }
-    end += 1;
   }
-
-  return answer;
+  return minColorChange;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
