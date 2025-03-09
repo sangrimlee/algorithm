@@ -1,0 +1,27 @@
+---
+id: '1218'
+title: Longest Arithmetic Subsequence of Given Difference
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Dynamic Programming
+url: https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function longestSubsequence(arr: number[], difference: number): number {
+  const dp = new Map<number, number>();
+
+  let answer = 1;
+  for (const value of arr) {
+    const prevValue = dp.get(value - difference) || 0;
+    dp.set(value, prevValue + 1);
+    answer = Math.max(answer, prevValue + 1);
+  }
+  return answer;
+}
+```

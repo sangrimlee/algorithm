@@ -1,0 +1,25 @@
+---
+id: '2623'
+title: Memoize
+category: JavaScript
+difficulty: Medium
+url: https://leetcode.com/problems/memoize
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function memoize<P, R>(fn: (...params: P[]) => R): (...params: P[]) => R {
+  const cache = new Map<string, R>();
+  return (...args) => {
+    const key = JSON.stringify(args);
+    const cached = cache.get(key);
+    if (cached !== undefined) {
+      return cached;
+    }
+    const ret = fn(...args);
+    cache.set(key, ret);
+    return ret;
+  };
+}
+```

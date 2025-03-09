@@ -1,0 +1,17 @@
+---
+id: '520'
+title: Detect Capital
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+url: https://leetcode.com/problems/detect-capital
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function detectCapitalUse(word: string): boolean {
+  return /^[A-Z]+$|^[A-Z]?[a-z]+$/.test(word);
+}
+```

@@ -1,0 +1,18 @@
+---
+id: '796'
+title: Rotate String
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+  - String Matching
+url: https://leetcode.com/problems/rotate-string
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function rotateString(s: string, goal: string): boolean {
+  return s.length === goal.length && s.repeat(2).includes(goal);
+}
+```

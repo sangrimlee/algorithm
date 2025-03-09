@@ -1,0 +1,73 @@
+---
+id: '2501'
+title: Longest Square Streak in an Array
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Binary Search
+  - Dynamic Programming
+  - Sorting
+url: https://leetcode.com/problems/longest-square-streak-in-an-array
+---
+
+## Solution
+
+### Solution1: `Sort`
+
+```typescript showLineNumbers
+export function longestSquareStreak(nums: number[]): number {
+  nums.sort((a, b) => a - b);
+
+  let answer = -1;
+  const map = new Map<number, number>();
+  for (const num of nums) {
+    const root = Math.sqrt(num);
+    if (Number.isInteger(root) && map.has(root)) {
+      const rootLength = map.get(root)!;
+      map.set(num, rootLength + 1);
+      answer = Math.max(answer, rootLength + 1);
+    } else {
+      map.set(num, 1);
+    }
+  }
+  return answer;
+}
+```
+
+#### Complexity
+
+- Time: $O(n \cdot log_2 n)$
+- Space: $O(n)$
+
+---
+
+### Solution2: `Set`
+
+```typescript showLineNumbers
+export function longestSquareStreak(nums: number[]): number {
+  const MAX_NUM = 10 ** 5;
+  const set = new Set(nums);
+
+  let answer = 0;
+  for (const num of nums) {
+    let current = num;
+    let maxLength = 0;
+    while (set.has(current) && current <= MAX_NUM) {
+      maxLength += 1;
+      current *= current;
+    }
+    answer = Math.max(answer, maxLength);
+  }
+  return answer < 2 ? -1 : answer;
+}
+```
+
+#### Complexity
+
+$n$번의 루프에서 각 요소를 처리하는데 걸리는 시간복잡도는 $O(log_2 10^5)$이기 때문에,
+전체 시간 복잡도는 $O(n)$이 된다.
+
+- Time: $O(n)$
+- Space: $O(n)$

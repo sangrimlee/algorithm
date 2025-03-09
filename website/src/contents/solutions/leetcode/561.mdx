@@ -1,0 +1,24 @@
+---
+id: '561'
+title: Array Partition
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Greedy
+  - Sorting
+  - Counting Sort
+url: https://leetcode.com/problems/array-partition
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function arrayPairSum(nums: number[]): number {
+  const n = nums.length;
+  nums.sort((a, b) => a - b);
+  return [...range(0, n, 2)].reduce((acc, i) => acc + Math.min(nums[i], nums[i] + 1), 0);
+}
+```

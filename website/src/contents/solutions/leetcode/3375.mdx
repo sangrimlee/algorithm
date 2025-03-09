@@ -1,0 +1,28 @@
+---
+id: '3375'
+title: Minimum Operations to Make Array Values Equal to K
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+url: https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minOperations(nums: number[], k: number): number {
+  if (nums.some((num) => num < k)) {
+    return -1;
+  }
+  const set = new Set(nums);
+  set.add(k);
+  return set.size - 1;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$

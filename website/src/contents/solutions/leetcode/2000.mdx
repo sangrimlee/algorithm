@@ -1,0 +1,27 @@
+---
+id: '2000'
+title: Reverse Prefix of Word
+category: Algorithms
+difficulty: Easy
+tags:
+  - Two Pointers
+  - String
+  - Stack
+url: https://leetcode.com/problems/reverse-prefix-of-word
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function reversePrefix(word: string, ch: string): string {
+  function reverseString(s: string) {
+    return [...s].reverse().join('');
+  }
+
+  const i = word.indexOf(ch);
+  if (i === -1) {
+    return word;
+  }
+  return reverseString(word.substring(0, i + 1)) + word.substring(i + 1);
+}
+```

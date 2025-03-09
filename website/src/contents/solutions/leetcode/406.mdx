@@ -1,0 +1,28 @@
+---
+id: '406'
+title: Queue Reconstruction by Height
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Indexed Tree
+  - Segment Tree
+  - Sorting
+url: https://leetcode.com/problems/queue-reconstruction-by-height
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function reconstructQueue(people: number[][]): number[][] {
+  const answer: number[][] = [];
+
+  people.sort((a, b) => (a[0] !== b[0] ? b[0] - a[0] : a[1] - b[1]));
+
+  people.forEach(([height, k]) => {
+    answer.splice(k, 0, [height, k]);
+  });
+
+  return answer;
+}
+```

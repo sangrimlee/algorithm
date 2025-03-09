@@ -1,0 +1,23 @@
+---
+id: '2683'
+title: Neighboring Bitwise XOR
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Bit Manipulation
+url: https://leetcode.com/problems/neighboring-bitwise-xor
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function doesValidArrayExist(derived: number[]): boolean {
+  return derived.reduce((prev, curr) => prev ^ curr, 0) === 0;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$

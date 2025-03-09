@@ -1,0 +1,24 @@
+---
+id: '142086'
+title: 가장 가까운 같은 글자
+level: 1
+url: https://school.programmers.co.kr/learn/courses/30/lessons/142086
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function solution(s: string) {
+  const answer = [];
+  const lastIndicies = new Map<string, number>();
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    const lastIndex = lastIndicies.get(char);
+    answer.push(lastIndex !== undefined ? i - lastIndex : -1);
+    lastIndicies.set(char, i);
+  }
+
+  return answer;
+}
+```

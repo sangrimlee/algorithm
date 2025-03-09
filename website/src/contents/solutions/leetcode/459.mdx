@@ -1,0 +1,19 @@
+---
+id: '459'
+title: Repeated Substring Pattern
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+  - String Matching
+url: https://leetcode.com/problems/repeated-substring-pattern
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function repeatedSubstringPattern(s: string): boolean {
+  const concatenated = s + s;
+  return concatenated.slice(1, -1).indexOf(s) !== -1;
+}
+```

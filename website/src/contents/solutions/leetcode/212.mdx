@@ -1,0 +1,101 @@
+---
+id: '212'
+title: Word Search II
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - String
+  - Backtracking
+  - Trie
+  - Matrix
+url: https://leetcode.com/problems/word-search-ii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findWords(board: string[][], words: string[]): string[] {
+  const answer = new Set<string>();
+
+  const trie = new Trie(words);
+
+  const [n, m] = [board.length, board[0].length];
+  const dfs = (currentNode: TrieNode, y = 0, x = 0, currentPath = '') => {
+    if (currentNode.isEnd) {
+      answer.add(currentPath);
+      currentNode.isEnd = false;
+    }
+    if (y < 0 || n <= y || x < 0 || m <= x || board[y][x] === '#') return;
+
+    const char = board[y][x];
+    const nextNode = currentNode.find(char);
+    if (nextNode === undefined) return;
+
+    board[y][x] = '#';
+    dfs(nextNode, y + 1, x, currentPath + char);
+    dfs(nextNode, y, x + 1, currentPath + char);
+    dfs(nextNode, y - 1, x, currentPath + char);
+    dfs(nextNode, y, x - 1, currentPath + char);
+    board[y][x] = char;
+    return;
+  };
+
+  const rootNode = trie.rootNode;
+
+  for (let y = 0; y < n; y++) {
+    for (let x = 0; x < m; x++) {
+      dfs(rootNode, y, x);
+    }
+  }
+
+  return [...answer].sort();
+}
+
+class TrieNode {
+  public isEnd: boolean;
+  private children: Map<string, TrieNode>;
+
+  constructor() {
+    this.isEnd = false;
+    this.children = new Map();
+  }
+
+  find(char: string): TrieNode | undefined {
+    return this.children.get(char);
+  }
+
+  create(char: string): TrieNode {
+    const newNode = new TrieNode();
+    this.children.set(char, newNode);
+    return newNode;
+  }
+
+  findOrCreate(char: string): TrieNode {
+    const childNode = this.find(char);
+    if (childNode) {
+      return childNode;
+    }
+    return this.create(char);
+  }
+}
+
+class Trie {
+  public rootNode: TrieNode;
+
+  constructor(words: string[]) {
+    this.rootNode = new TrieNode();
+    for (const word of words) {
+      this.insert(word);
+    }
+  }
+
+  insert(word: string) {
+    let currentNode = this.rootNode;
+    for (const char of word) {
+      currentNode = currentNode.findOrCreate(char);
+    }
+    currentNode.isEnd = true;
+  }
+}
+```

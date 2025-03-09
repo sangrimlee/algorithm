@@ -1,0 +1,34 @@
+---
+id: '2125'
+title: Number of Laser Beams in a Bank
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Math
+  - String
+  - Matrix
+url: https://leetcode.com/problems/number-of-laser-beams-in-a-bank
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function numberOfBeams(bank: string[]): number {
+  function countDevice(row: string) {
+    return row.replace(/0+/g, '').length;
+  }
+
+  let answer = 0;
+  let prevNumberOfDevice = 0;
+  bank.forEach((row) => {
+    const numberOfDevice = countDevice(row);
+    if (numberOfDevice === 0) {
+      return;
+    }
+    answer += prevNumberOfDevice * numberOfDevice;
+    prevNumberOfDevice = numberOfDevice;
+  });
+  return answer;
+}
+```

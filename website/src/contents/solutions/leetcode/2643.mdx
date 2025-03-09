@@ -1,0 +1,32 @@
+---
+id: '2643'
+title: Row With Maximum Ones
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Matrix
+url: https://leetcode.com/problems/row-with-maximum-ones
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function rowAndMaximumOnes(mat: number[][]): number[] {
+  function countOnes(row: number[]) {
+    return row.reduce((prev, num) => (num === 1 ? prev + 1 : prev), 0);
+  }
+
+  let rowIndex = -1;
+  let maxOneCount = -1;
+  mat.forEach((row, i) => {
+    const oneCount = countOnes(row);
+    if (maxOneCount < oneCount) {
+      rowIndex = i;
+      maxOneCount = oneCount;
+    }
+  });
+
+  return [rowIndex, maxOneCount];
+}
+```

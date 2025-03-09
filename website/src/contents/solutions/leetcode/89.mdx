@@ -1,0 +1,19 @@
+---
+id: '89'
+title: Gray Code
+category: Algorithms
+difficulty: Medium
+tags:
+  - Math
+  - Backtracking
+  - Bit Manipulation
+url: https://leetcode.com/problems/gray-code
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function grayCode(n: number): number[] {
+  return new Array(1 << n).fill(0).map((_, i) => i ^ (i >> 1));
+}
+```

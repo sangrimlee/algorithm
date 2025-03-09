@@ -1,0 +1,28 @@
+---
+id: '2696'
+title: Minimum String Length After Removing Substrings
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+  - Stack
+  - Simulation
+url: https://leetcode.com/problems/minimum-string-length-after-removing-substrings
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minLength(s: string): number {
+  const stack: string[] = [];
+  for (const char of s) {
+    const last = stack[stack.length - 1] ?? '';
+    if (['AB', 'CD'].includes(last + char)) {
+      stack.pop();
+    } else {
+      stack.push(char);
+    }
+  }
+  return stack.length;
+}
+```

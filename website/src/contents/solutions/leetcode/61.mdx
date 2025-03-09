@@ -1,0 +1,40 @@
+---
+id: '61'
+title: Rotate List
+category: Algorithms
+difficulty: Medium
+tags:
+  - Linked List
+  - Two Pointers
+url: https://leetcode.com/problems/rotate-list
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { ListNode } from '@algorithm/lib';
+
+export function rotateRight(head: ListNode | null, k: number): ListNode | null {
+  if (head === null) {
+    return null;
+  }
+  let lastNode = head;
+  let totalLength = 1;
+  while (lastNode.next !== null) {
+    lastNode = lastNode.next;
+    totalLength += 1;
+  }
+  lastNode.next = head;
+
+  let currentNode = head;
+  let currentIndex = 0;
+  const lastNodeIndex = totalLength - (k % totalLength) - 1;
+  while (currentNode.next !== null && currentIndex < lastNodeIndex) {
+    currentNode = currentNode.next;
+    currentIndex += 1;
+  }
+  const firstNode = currentNode.next;
+  currentNode.next = null;
+  return firstNode;
+}
+```

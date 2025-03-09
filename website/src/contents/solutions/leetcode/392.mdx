@@ -1,0 +1,26 @@
+---
+id: '392'
+title: Is Subsequence
+category: Algorithms
+difficulty: Easy
+tags:
+  - Two Pointers
+  - String
+  - Dynamic Programming
+url: https://leetcode.com/problems/is-subsequence
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function isSubsequence(s: string, t: string): boolean {
+  let [sIndex, tIndex] = [0, 0];
+  while (sIndex < s.length && tIndex < t.length) {
+    if (s[sIndex] === t[tIndex]) {
+      sIndex += 1;
+    }
+    tIndex += 1;
+  }
+  return sIndex === s.length;
+}
+```

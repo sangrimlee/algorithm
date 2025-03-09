@@ -1,0 +1,40 @@
+---
+id: '1726'
+title: Tuple with Same Product
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Counting
+url: https://leetcode.com/problems/tuple-with-same-product
+---
+
+## Solution
+
+1. 같은 곱을 가지는 두 쌍이 만들 수 있는 `tuple`의 개수는 `8`이다.
+2. 따라서, 중첩 반복을 통해 모든 경우의 `x*y`를 찾고, 해당 개수를 `productCounts`에 저장합니다.
+3. 그리고, 매 반복마다 **이전의 같은 곱의 값을 가지는 개수 \* 8**만큼 더하면, 모든 튜플의 개수를 알 수 있다.
+
+```typescript showLineNumbers
+export function tupleSameProduct(nums: number[]): number {
+  const n = nums.length;
+  const productCounts = new Map<number, number>();
+
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      const product = nums[i] * nums[j];
+      const count = productCounts.get(product) ?? 0;
+      productCounts.set(product, count + 1);
+      answer += 8 * count;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n ^ 2)$
+- Space: $O(n ^ 2)$

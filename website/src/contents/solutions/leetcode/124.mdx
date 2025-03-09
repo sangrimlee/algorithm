@@ -1,0 +1,38 @@
+---
+id: '124'
+title: Binary Tree Maximum Path Sum
+category: Algorithms
+difficulty: Hard
+tags:
+  - Dynamic Programming
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/binary-tree-maximum-path-sum
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function maxPathSum(root: TreeNode | null): number {
+  let answer = Number.MIN_SAFE_INTEGER;
+
+  function maxPathSumSubTree(node: TreeNode | null): number {
+    if (node === null) {
+      return 0;
+    }
+
+    const leftPathSum = Math.max(0, maxPathSumSubTree(node.left));
+    const rightPathSum = Math.max(0, maxPathSumSubTree(node.right));
+
+    answer = Math.max(answer, node.val + leftPathSum + rightPathSum);
+
+    return node.val + Math.max(leftPathSum, rightPathSum);
+  }
+  maxPathSumSubTree(root);
+
+  return answer;
+}
+```

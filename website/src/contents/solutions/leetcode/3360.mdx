@@ -1,0 +1,30 @@
+---
+id: '3360'
+title: Stone Removal Game
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Simulation
+url: https://leetcode.com/problems/stone-removal-game
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function canAliceWin(n: number): boolean {
+  let remain = n;
+  for (let turn = 0; turn <= 10; turn++) {
+    if (remain < 10 - turn) {
+      return turn % 2 !== 0;
+    }
+    remain -= 10 - turn;
+  }
+  return true;
+}
+```
+
+### Compleixty
+
+- Time: $O(1)$
+- Space: $O(1)$

@@ -1,0 +1,30 @@
+---
+id: '1732'
+title: Find the Highest Altitude
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Prefix Sum
+url: https://leetcode.com/problems/find-the-highest-altitude
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function largestAltitude(gains: number[]): number {
+  return gains.reduce(
+    (altitude, gain) => {
+      const nextAltitude = altitude.current + gain;
+      return {
+        largest: Math.max(altitude.largest, nextAltitude),
+        current: nextAltitude,
+      };
+    },
+    {
+      largest: 0,
+      current: 0,
+    },
+  ).largest;
+}
+```

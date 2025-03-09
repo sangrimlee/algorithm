@@ -1,0 +1,52 @@
+---
+id: '2054'
+title: Two Best Non-Overlapping Events
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+  - Dynamic Programming
+  - Sorting
+  - Heap (Priority Queue)
+url: https://leetcode.com/problems/two-best-non-overlapping-events
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maxTwoEvents(events: number[][]): number {
+  const times: number[][] = [];
+  for (const [startTime, endTime, value] of events) {
+    times.push([startTime, 1, value]);
+    times.push([endTime + 1, 0, value]);
+  }
+  times.sort(sortArr);
+
+  let answer = 0;
+  let maxValue = 0;
+  for (const [, isStart, value] of times) {
+    if (isStart === 1) {
+      answer = Math.max(answer, value + maxValue);
+    } else {
+      maxValue = Math.max(maxValue, value);
+    }
+  }
+  return answer;
+}
+
+function sortArr(arr1: number[], arr2: number[]): number {
+  const [m, n] = [arr1.length, arr2.length];
+  for (let i = 0; i < Math.min(m, n); i++) {
+    if (arr1[i] !== arr2[i]) {
+      return arr1[i] - arr2[i];
+    }
+  }
+  return m - n;
+}
+```
+
+### Complexity
+
+- Time: $O(n \cdot logn)$
+- Space: $O(n)$

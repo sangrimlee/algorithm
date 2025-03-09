@@ -1,0 +1,24 @@
+---
+id: '2206'
+title: Divide Array Into Equal Pairs
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+  - Bit Manipulation
+  - Counting
+url: https://leetcode.com/problems/divide-array-into-equal-pairs
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function divideArray(nums: number[]): boolean {
+  const counter = new Map<number, number>();
+  nums.forEach((num) => {
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  });
+  return [...counter.values()].every((count) => count % 2 === 0);
+}
+```

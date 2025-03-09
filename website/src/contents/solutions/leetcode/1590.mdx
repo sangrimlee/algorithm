@@ -1,0 +1,41 @@
+---
+id: '1590'
+title: Make Sum Divisible by P
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Prefix Sum
+url: https://leetcode.com/problems/make-sum-divisible-by-p
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minSubarray(nums: number[], p: number): number {
+  const target = nums.reduce((acc, num) => acc + num, 0) % p;
+  if (target === 0) {
+    return 0;
+  }
+
+  const n = nums.length;
+  const dp = new Map<number, number>([[0, -1]]);
+  let answer = n;
+  let prefixSum = 0;
+  for (let i = 0; i < n; i++) {
+    prefixSum += nums[i];
+    const prevIndex = dp.get(((prefixSum % p) - target + p) % p);
+    if (prevIndex !== undefined) {
+      answer = Math.min(answer, i - prevIndex);
+    }
+    dp.set(prefixSum % p, i);
+  }
+  return answer < n ? answer : -1;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`

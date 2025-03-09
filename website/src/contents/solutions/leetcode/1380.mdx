@@ -1,0 +1,29 @@
+---
+id: '1380'
+title: Lucky Numbers in a Matrix
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Matrix
+url: https://leetcode.com/problems/lucky-numbers-in-a-matrix
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function luckyNumbers(matrix: number[][]): number[] {
+  const [m, n] = [matrix.length, matrix[0].length];
+  const minRows = new Array(m).fill(Number.MAX_SAFE_INTEGER);
+  const maxCols = new Array(n).fill(Number.MIN_SAFE_INTEGER);
+  matrix.forEach((rows, row) => {
+    rows.forEach((num, col) => {
+      minRows[row] = Math.min(minRows[row], num);
+      maxCols[col] = Math.max(maxCols[col], num);
+    });
+  });
+
+  const minRowSet = new Set(minRows);
+  return maxCols.filter((num) => minRowSet.has(num));
+}
+```

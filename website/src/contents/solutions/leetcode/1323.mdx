@@ -1,0 +1,18 @@
+---
+id: '1323'
+title: Maximum 69 Number
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Greedy
+url: https://leetcode.com/problems/maximum-69-number
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maximum69Number(num: number): number {
+  return parseInt(num.toString().replace(/6/, '9'));
+}
+```

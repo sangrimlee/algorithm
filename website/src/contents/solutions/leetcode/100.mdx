@@ -1,0 +1,30 @@
+---
+id: '100'
+title: Same Tree
+category: Algorithms
+difficulty: Easy
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/same-tree
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
+  if (p === null && q === null) {
+    return true;
+  }
+
+  if (p === null || q === null) {
+    return false;
+  }
+
+  return p.val === q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+}
+```

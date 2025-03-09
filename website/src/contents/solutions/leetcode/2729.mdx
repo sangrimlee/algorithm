@@ -1,0 +1,20 @@
+---
+id: '2729'
+title: Check if The Number is Fascinating
+category: Algorithms
+difficulty: Easy
+tags:
+  - Hash Table
+  - Math
+url: https://leetcode.com/problems/check-if-the-number-is-fascinating
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function isFascinating(n: number): boolean {
+  const c = `${n}${2 * n}${3 * n}`;
+  const set = new Set(c);
+  return c.length === 9 && set.size === 9 && !set.has('0');
+}
+```

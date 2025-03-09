@@ -1,0 +1,37 @@
+---
+id: '2383'
+title: Minimum Hours of Training to Win a Competition
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Greedy
+url: https://leetcode.com/problems/minimum-hours-of-training-to-win-a-competition
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minNumberOfHours(
+  initialEnergy: number,
+  initialExperience: number,
+  energy: number[],
+  experience: number[],
+): number {
+  const n = energy.length;
+
+  let answer = 0;
+  let [currentEnergy, currentExperience] = [initialEnergy, initialExperience];
+
+  for (let i = 0; i < n; i++) {
+    const nextEnergy = Math.max(energy[i] + 1, currentEnergy);
+    const nextExperience = Math.max(experience[i] + 1, currentExperience);
+    answer += Math.max(nextEnergy - currentEnergy, 0);
+    answer += Math.max(nextExperience - currentExperience, 0);
+    currentEnergy = nextEnergy - energy[i];
+    currentExperience = nextExperience + experience[i];
+  }
+
+  return answer;
+}
+```

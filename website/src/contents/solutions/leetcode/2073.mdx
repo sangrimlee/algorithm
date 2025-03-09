@@ -1,0 +1,23 @@
+---
+id: '2073'
+title: Time Needed to Buy Tickets
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Queue
+  - Simulation
+url: https://leetcode.com/problems/time-needed-to-buy-tickets
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function timeRequiredToBuy(tickets: number[], k: number): number {
+  let answer = 0;
+  for (let i = 0; i < tickets.length; i++) {
+    answer += Math.min(i <= k ? tickets[k] : tickets[k] - 1, tickets[i]);
+  }
+  return answer;
+}
+```

@@ -1,0 +1,33 @@
+---
+id: '2938'
+title: Separate Black and White Balls
+category: Algorithms
+difficulty: Medium
+tags:
+  - Two Pointers
+  - String
+  - Greedy
+url: https://leetcode.com/problems/separate-black-and-white-balls
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumSteps(s: string): number {
+  let answer = 0;
+  let oneCount = 0;
+  for (const char of s) {
+    if (char === '1') {
+      oneCount += 1;
+    } else {
+      answer += oneCount;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`

@@ -1,0 +1,54 @@
+---
+id: '2342'
+title: Max Sum of a Pair With Equal Sum of Digits
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Sorting
+  - Heap (Priority Queue)
+url: https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits
+---
+
+## 문제 설명
+
+주어진 배열 `nums`에서 각 숫자의 자릿수 합이 같은 두 숫자의 합 중 최대값을 찾습니다. 만약 그런 쌍이 없다면 `-1`을 반환합니다.
+
+1. 자릿수 합을 `key`로 하고, 해당 자릿수 합을 가진 숫자 중 최대값을 `value`으로 하는 `Map`을 사용합니다.
+2. 배열을 순회하면서 각 숫자의 자릿수 합을 계산합니다.
+3. `Map`에 저장된 최대값이 있는 경우, 현재 숫자와 최대값의 합을 계산하여 최대값을 갱신합니다.
+4. 현재 숫자와 저장된 최대값 중의 큰 수로 `Map`을 갱신합니다.
+
+## 문제 풀이
+
+```typescript showLineNumbers
+export function maximumSum(nums: number[]): number {
+  let answer = -1;
+  const maxNumBySum = new Map<number, number>();
+  for (const num of nums) {
+    const sum = sumOfDigits(num);
+    const maxNum = maxNumBySum.get(sum) ?? 0;
+    if (0 < maxNum) {
+      answer = Math.max(answer, maxNum + num);
+    }
+    maxNumBySum.set(sum, Math.max(maxNum, num));
+  }
+  return answer;
+}
+
+function sumOfDigits(num: number) {
+  let sum = 0;
+  let curr = num;
+  while (0 < curr) {
+    sum += curr % 10;
+    curr = Math.floor(curr / 10);
+  }
+  return sum;
+}
+```
+
+## 복잡도
+
+- 시간 복잡도: $O(n \cdot log_{10}m)$,`num`을 순회하는데 $O(n)$, 각 숫자의 자릿수의 합을 구하는데 $O(log_{10}m)$의 시간이 소요.
+- 공간 복잡도: $O(n)$

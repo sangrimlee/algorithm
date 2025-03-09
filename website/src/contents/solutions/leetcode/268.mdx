@@ -1,0 +1,27 @@
+---
+id: '268'
+title: Missing Number
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+  - Math
+  - Binary Search
+  - Bit Manipulation
+  - Sorting
+url: https://leetcode.com/problems/missing-number
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function missingNumber(nums: number[]): number {
+  const n = nums.length;
+  let answer = (n * (n + 1)) / 2;
+  for (const num of nums) {
+    answer -= num;
+  }
+  return answer;
+}
+```

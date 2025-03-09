@@ -1,0 +1,31 @@
+---
+id: '1529'
+title: Minimum Suffix Flips
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Greedy
+url: https://leetcode.com/problems/minimum-suffix-flips
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minFlips(target: string): number {
+  let answer = 0;
+  let current = '0';
+  for (const char of target) {
+    if (current !== char) {
+      current = char;
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`

@@ -1,0 +1,22 @@
+---
+id: '1389'
+title: Create Target Array in the Given Order
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Simulation
+url: https://leetcode.com/problems/create-target-array-in-the-given-order
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function createTargetArray(nums: number[], indices: number[]): number[] {
+  const answer: number[] = [];
+  indices.forEach((index, numIndex) => {
+    answer.splice(index, 0, nums[numIndex]);
+  });
+  return answer;
+}
+```

@@ -1,0 +1,56 @@
+---
+id: '688'
+title: Knight Probability in Chessboard
+category: Algorithms
+difficulty: Medium
+tags:
+  - Dynamic Programming
+url: https://leetcode.com/problems/knight-probability-in-chessboard
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function knightProbability(n: number, k: number, row: number, column: number): number {
+  const directions = [
+    [1, 2],
+    [1, -2],
+    [-1, 2],
+    [-1, -2],
+    [2, 1],
+    [2, -1],
+    [-2, 1],
+    [-2, -1],
+  ];
+  const isInBoard = (y: number, x: number) => {
+    return 0 <= y && y < n && 0 <= x && x < n;
+  };
+  const dp: number[][][] = Array.from({ length: k + 1 }).map(() =>
+    Array.from({ length: n }).map(() => new Array(n).fill(0)),
+  );
+  dp[0][row][column] = 1;
+
+  for (const move of range(1, k + 1)) {
+    for (const y of range(n)) {
+      for (const x of range(n)) {
+        if (dp[move - 1][y][x] === 0) {
+          continue;
+        }
+        for (const [dy, dx] of directions) {
+          const [ny, nx] = [y - dy, x - dx];
+          if (isInBoard(ny, nx)) {
+            dp[move][ny][nx] += dp[move - 1][y][x] / 8;
+          }
+        }
+      }
+    }
+  }
+
+  return dp[k].reduce(
+    (totalProbability, row) => totalProbability + row.reduce((prev, prob) => prev + prob, 0),
+    0,
+  );
+}
+```

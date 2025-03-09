@@ -1,0 +1,32 @@
+---
+id: '1328'
+title: Break a Palindrome
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Greedy
+url: https://leetcode.com/problems/break-a-palindrome
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function breakPalindrome(palindrome: string): string {
+  const n = palindrome.length;
+  if (n === 1) {
+    return '';
+  }
+
+  const arr = [...palindrome];
+  const i = arr.findIndex((c) => c !== 'a');
+  const isMid = n % 2 === 1 && i === Math.floor(n / 2);
+  if (i === -1 || isMid) {
+    arr[n - 1] = 'b';
+  } else {
+    arr[i] = 'a';
+  }
+
+  return arr.join('');
+}
+```

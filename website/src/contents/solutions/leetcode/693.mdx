@@ -1,0 +1,17 @@
+---
+id: '693'
+title: Binary Number with Alternating Bits
+category: Algorithms
+difficulty: Easy
+tags:
+  - Bit Manipulation
+url: https://leetcode.com/problems/binary-number-with-alternating-bits
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function hasAlternatingBits(n: number): boolean {
+  return /^(?:10)*1?$/.test(n.toString(2));
+}
+```

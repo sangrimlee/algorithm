@@ -1,0 +1,48 @@
+---
+id: '173'
+title: Binary Search Tree Iterator
+category: Algorithms
+difficulty: Medium
+tags:
+  - Stack
+  - Tree
+  - Design
+  - Binary Search Tree
+  - Binary Tree
+  - Iterator
+url: https://leetcode.com/problems/binary-search-tree-iterator
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export class BSTIterator {
+  private readonly parentNodes: TreeNode[];
+
+  constructor(root: TreeNode | null) {
+    this.parentNodes = [];
+    this.skip(root);
+  }
+
+  next(): number | undefined {
+    const node = this.parentNodes.pop();
+    if (!node) return;
+    this.skip(node.right);
+    return node.val;
+  }
+
+  hasNext(): boolean {
+    return 0 < this.parentNodes.length;
+  }
+
+  skip(node: TreeNode | null) {
+    let currentNode = node;
+    while (currentNode !== null) {
+      this.parentNodes.push(currentNode);
+      currentNode = currentNode.left;
+    }
+  }
+}
+```

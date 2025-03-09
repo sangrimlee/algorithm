@@ -1,0 +1,23 @@
+---
+id: '2619'
+title: Array Prototype Last
+category: JavaScript
+difficulty: Easy
+url: https://leetcode.com/problems/array-prototype-last
+---
+
+## Solution
+
+```typescript showLineNumbers
+declare global {
+  interface Array<T> {
+    last(): T | -1;
+  }
+}
+
+Array.prototype.last = function () {
+  return this.length === 0 ? -1 : this[this.length - 1];
+};
+
+export {};
+```

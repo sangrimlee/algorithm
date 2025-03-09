@@ -1,0 +1,18 @@
+---
+id: '2716'
+title: Minimize String Length
+category: Algorithms
+difficulty: Easy
+tags:
+  - Hash Table
+  - String
+url: https://leetcode.com/problems/minimize-string-length
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimizedStringLength(s: string): number {
+  return new Set(s).size;
+}
+```

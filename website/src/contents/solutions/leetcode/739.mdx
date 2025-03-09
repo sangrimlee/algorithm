@@ -1,0 +1,36 @@
+---
+id: '739'
+title: Daily Temperatures
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Stack
+  - Monotonic Stack
+url: https://leetcode.com/problems/daily-temperatures
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function dailyTemperatures(temperatures: number[]): number[] {
+  const n = temperatures.length;
+
+  const stack: number[] = [];
+  const answer = new Array<number>(n).fill(0);
+
+  for (const day of range(n)) {
+    while (0 < stack.length && temperatures[stack[stack.length - 1]] < temperatures[day]) {
+      const lastDay = stack.pop();
+      if (lastDay !== undefined) {
+        answer[lastDay] = day - lastDay;
+      }
+    }
+    stack.push(day);
+  }
+
+  return answer;
+}
+```

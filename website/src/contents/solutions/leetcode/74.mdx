@@ -1,0 +1,24 @@
+---
+id: '74'
+title: Search a 2D Matrix
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+  - Matrix
+url: https://leetcode.com/problems/search-a-2d-matrix
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function searchMatrix(matrix: number[][], target: number): boolean {
+  for (const row of matrix) {
+    if (target <= row[row.length - 1]) {
+      return row.indexOf(target) !== -1;
+    }
+  }
+  return false;
+}
+```

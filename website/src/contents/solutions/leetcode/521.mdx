@@ -1,0 +1,17 @@
+---
+id: '521'
+title: Longest Uncommon Subsequence I
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+url: https://leetcode.com/problems/longest-uncommon-subsequence-i
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findLUSlength(a: string, b: string): number {
+  return a === b ? -1 : Math.max(a.length, b.length);
+}
+```

@@ -1,0 +1,21 @@
+---
+id: '1869'
+title: Longer Contiguous Segments of Ones than Zeros
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+url: https://leetcode.com/problems/longer-contiguous-segments-of-ones-than-zeros
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function checkZeroOnes(s: string): boolean {
+  function getMaxLength(arr: string[]) {
+    return arr.reduce((prev, s) => Math.max(prev, s.length), 0);
+  }
+
+  return getMaxLength(s.split(/0+/)) > getMaxLength(s.split(/1+/));
+}
+```

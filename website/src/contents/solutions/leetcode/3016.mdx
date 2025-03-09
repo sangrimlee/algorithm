@@ -1,0 +1,32 @@
+---
+id: '3016'
+title: Minimum Number of Pushes to Type Word II
+category: Algorithms
+difficulty: Medium
+tags:
+  - Hash Table
+  - String
+  - Greedy
+  - Sorting
+  - Counting
+url: https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumPushes(word: string): number {
+  const charCounter = new Map<string, number>();
+  for (const char of word) {
+    charCounter.set(char, (charCounter.get(char) ?? 0) + 1);
+  }
+  const counts = [...charCounter.values()].sort((a, b) => b - a);
+  return counts.reduce((prev, count, i) => prev + (Math.floor(i / 8) + 1) * count, 0);
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
+- `charCounter`의 최대 크기는 알파벳의 개수 `26`개이므로, 복잡도에 영항을 주지 않는다.

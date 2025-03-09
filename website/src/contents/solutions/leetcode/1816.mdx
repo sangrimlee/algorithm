@@ -1,0 +1,18 @@
+---
+id: '1816'
+title: Truncate Sentence
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+url: https://leetcode.com/problems/truncate-sentence
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function truncateSentence(s: string, k: number): string {
+  return s.split(' ').slice(0, k).join(' ');
+}
+```

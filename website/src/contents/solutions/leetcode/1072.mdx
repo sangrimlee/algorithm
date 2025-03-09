@@ -1,0 +1,29 @@
+---
+id: '1072'
+title: Flip Columns For Maximum Number of Equal Rows
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Matrix
+url: https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maxEqualRowsAfterFlips(matrix: number[][]): number {
+  const counter = new Map<string, number>();
+  for (const row of matrix) {
+    const pattern = row.reduce((prev, value) => prev + (value === row[0] ? '0' : '1'), '');
+    counter.set(pattern, (counter.get(pattern) ?? 0) + 1);
+  }
+  return [...counter.values()].reduce((prev, count) => Math.max(prev, count), 0);
+}
+```
+
+### Complexity
+
+- Time: $O(m \cdot n)$
+- Space: $O(m \cdot n)$

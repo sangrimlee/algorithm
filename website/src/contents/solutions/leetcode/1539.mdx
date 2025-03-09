@@ -1,0 +1,27 @@
+---
+id: '1539'
+title: Kth Missing Positive Number
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Binary Search
+url: https://leetcode.com/problems/kth-missing-positive-number
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findKthPositive(arr: number[], k: number): number {
+  let [start, end] = [0, arr.length];
+  while (start < end) {
+    const mid = Math.floor((start + end) / 2);
+    if (arr[mid] - mid - 1 < k) {
+      start = mid + 1;
+    } else {
+      end = mid;
+    }
+  }
+  return end + k;
+}
+```

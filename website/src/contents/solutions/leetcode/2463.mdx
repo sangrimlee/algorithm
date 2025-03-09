@@ -1,0 +1,46 @@
+---
+id: '2463'
+title: Minimum Total Distance Traveled
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Dynamic Programming
+  - Sorting
+url: https://leetcode.com/problems/minimum-total-distance-traveled
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumTotalDistance(robots: number[], factories: number[][]): number {
+  robots.sort((a, b) => a - b);
+  factories.sort((a, b) => a[0] - b[0]);
+  const factoryPositions = factories.flatMap(([position, limit]) =>
+    Array.from({ length: limit }, () => position),
+  );
+  const robotCount = robots.length;
+  const factoryCount = factoryPositions.length;
+
+  let nextDists = new Array<number>(factoryCount + 1).fill(0);
+  const currDists = new Array<number>(factoryCount + 1).fill(0);
+  for (let i = robotCount - 1; 0 <= i; i--) {
+    if (i !== robotCount - 1) {
+      nextDists[factoryCount] = Number.MAX_SAFE_INTEGER;
+    }
+    currDists[factoryCount] = Number.MAX_SAFE_INTEGER;
+    for (let j = factoryCount - 1; 0 <= j; j--) {
+      const assign = Math.abs(robots[i] - factoryPositions[j]) + nextDists[j + 1];
+      const skip = currDists[j + 1];
+      currDists[j] = Math.min(assign, skip);
+    }
+    nextDists = [...currDists];
+  }
+  return nextDists[0];
+}
+```
+
+### Complexity
+
+- Time: $O(n \cdot m)$
+- Space: $O(n)$

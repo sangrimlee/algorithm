@@ -1,0 +1,21 @@
+---
+id: '2634'
+title: Filter Elements from Array
+category: JavaScript
+difficulty: Easy
+url: https://leetcode.com/problems/filter-elements-from-array
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function filter<T>(arr: T[], fn: (n: T, i: number) => unknown): T[] {
+  const result: T[] = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i], i)) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+```

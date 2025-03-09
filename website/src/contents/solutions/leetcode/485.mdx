@@ -1,0 +1,27 @@
+---
+id: '485'
+title: Max Consecutive Ones
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+url: https://leetcode.com/problems/max-consecutive-ones
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findMaxConsecutiveOnes(nums: number[]): number {
+  let lastZero = -1;
+
+  let answer = 0;
+  nums.forEach((num, i) => {
+    if (num === 1) {
+      answer = Math.max(answer, i - lastZero);
+    } else {
+      lastZero = i;
+    }
+  });
+  return answer;
+}
+```

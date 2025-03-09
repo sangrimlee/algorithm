@@ -1,0 +1,31 @@
+---
+id: '3314'
+title: Construct the Minimum Bitwise Array I
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Bit Manipulation
+url: https://leetcode.com/problems/construct-the-minimum-bitwise-array-i
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minBitwiseArray(nums: number[]): number[] {
+  const answer = [];
+  for (const num of nums) {
+    if (num % 2 === 0) {
+      answer.push(-1);
+    } else {
+      answer.push(num - Math.floor(((num + 1) & (-num - 1)) / 2));
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`

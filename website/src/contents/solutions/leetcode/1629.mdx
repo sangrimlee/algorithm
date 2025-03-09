@@ -1,0 +1,32 @@
+---
+id: '1629'
+title: Slowest Key
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+url: https://leetcode.com/problems/slowest-key
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function slowestKey(releaseTimes: number[], keysPressed: string): string {
+  let answer = '';
+  let maxDuration = 0;
+  releaseTimes.forEach((releaseTime, i) => {
+    const key = keysPressed[i];
+    const prevReleaseTime = i === 0 ? 0 : releaseTimes[i - 1];
+    const duration = releaseTime - prevReleaseTime;
+    if (maxDuration < duration) {
+      maxDuration = duration;
+      answer = key;
+    } else if (maxDuration === duration) {
+      answer = answer < key ? key : answer;
+    }
+  });
+
+  return answer;
+}
+```

@@ -1,0 +1,17 @@
+---
+id: '3065'
+title: Minimum Operations to Exceed Threshold Value I
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+url: https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minOperations(nums: number[], k: number): number {
+  return nums.reduce((count, num) => (num < k ? count + 1 : count), 0);
+}
+```

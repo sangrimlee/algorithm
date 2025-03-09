@@ -1,0 +1,22 @@
+---
+id: '1299'
+title: Replace Elements with Greatest Element on Right Side
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+url: https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function replaceElements(arr: number[]): number[] {
+  const n = arr.length;
+  let maxValue = -1;
+  for (let i = n - 1; 0 <= i; i--) {
+    [arr[i], maxValue] = [maxValue, Math.max(arr[i], maxValue)];
+  }
+  return arr;
+}
+```

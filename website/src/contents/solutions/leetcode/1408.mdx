@@ -1,0 +1,19 @@
+---
+id: '1408'
+title: String Matching in an Array
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+  - String Matching
+url: https://leetcode.com/problems/string-matching-in-an-array
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function stringMatching(words: string[]): string[] {
+  return words.filter((word) => words.some((w) => w !== word && w.includes(word)));
+}
+```

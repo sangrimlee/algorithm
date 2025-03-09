@@ -1,0 +1,63 @@
+---
+id: '1334'
+title: Find the City With the Smallest Number of Neighbors at a Threshold Distance
+category: Algorithms
+difficulty: Medium
+tags:
+  - Dynamic Programming
+  - Graph
+  - Shortest Path
+url: https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findTheCity(n: number, edges: number[][], distanceThreshold: number): number {
+  const distance = floydWarshall(n, edges);
+
+  let answer = 0;
+  let minReachableCities = Number.MAX_SAFE_INTEGER;
+  for (let city = 0; city < n; city++) {
+    const reachableCities = getReachableCities(distance, distanceThreshold, city);
+    if (reachableCities <= minReachableCities) {
+      answer = city;
+      minReachableCities = reachableCities;
+    }
+  }
+  return answer;
+}
+
+function floydWarshall(n: number, edges: number[][]): number[][] {
+  const distance = Array.from({ length: n }, (_, i) =>
+    Array.from({ length: n }, (_, j) => (i === j ? 0 : Number.MAX_SAFE_INTEGER)),
+  );
+  for (const [from, to, weight] of edges) {
+    distance[from][to] = weight;
+    distance[to][from] = weight;
+  }
+  for (let k = 0; k < n; k++) {
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        distance[i][j] = Math.min(distance[i][j], distance[i][k] + distance[k][j]);
+      }
+    }
+  }
+  return distance;
+}
+
+function getReachableCities(distance: number[][], distanceThreshold: number, city: number) {
+  let reachableCities = 0;
+  for (let dest = 0; dest < distance.length; dest++) {
+    if (distance[city][dest] <= distanceThreshold) {
+      reachableCities += 1;
+    }
+  }
+  return reachableCities;
+}
+```
+
+### Complexity
+
+- Time: `O(N^3)`
+- Space: `O(N^2)`

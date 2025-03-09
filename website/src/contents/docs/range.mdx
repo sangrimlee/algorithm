@@ -1,0 +1,41 @@
+---
+title: range
+tags:
+  - Array
+  - Iterator
+---
+
+python의 `range`와 특정 횟수의 루프에 사용되는 제너레이터 함수 함수입니다.
+
+## Examples
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+[...range(10)]; // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+[...range(1, 11)]; // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+[...range(0, 30, 5)]; // [0, 5, 10, 15, 20, 25]
+
+[...range(0, 10, 3)]; // [0, 3, 6, 9]
+
+[...range(0, -10, -1)]; // [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+```
+
+## Source
+
+```typescript showLineNumbers
+function* range(start: number, end?: number, step = 1) {
+  let value = end === undefined ? 0 : start;
+  const endValue = end === undefined ? start : end;
+  while (value < endValue) {
+    yield value;
+    value += step;
+  }
+}
+```
+
+## Reference
+
+[Python - range](https://docs.python.org/3/library/stdtypes.html?highlight=range#ranges)

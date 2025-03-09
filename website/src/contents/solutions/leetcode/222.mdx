@@ -1,0 +1,23 @@
+---
+id: '222'
+title: Count Complete Tree Nodes
+category: Algorithms
+difficulty: Easy
+tags:
+  - Binary Search
+  - Bit Manipulation
+  - Tree
+  - Binary Tree
+url: https://leetcode.com/problems/count-complete-tree-nodes
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function countNodes(root: TreeNode | null): number {
+  if (root === null) return 0;
+  return countNodes(root.left) + countNodes(root.right) + 1;
+}
+```

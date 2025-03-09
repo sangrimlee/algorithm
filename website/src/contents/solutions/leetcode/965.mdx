@@ -1,0 +1,30 @@
+---
+id: '965'
+title: Univalued Binary Tree
+category: Algorithms
+difficulty: Easy
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/univalued-binary-tree
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function isUnivalTree(root: TreeNode | null): boolean {
+  if (!root) {
+    return true;
+  }
+  const leftValue = root.left?.val ?? root.val;
+  const rightValue = root.right?.val ?? root.val;
+  if (root.val !== leftValue || root.val !== rightValue) {
+    return false;
+  }
+  return isUnivalTree(root.left) && isUnivalTree(root.right);
+}
+```

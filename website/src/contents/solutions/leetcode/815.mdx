@@ -1,0 +1,48 @@
+---
+id: '815'
+title: Bus Routes
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Hash Table
+  - Breadth-First Search
+url: https://leetcode.com/problems/bus-routes
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function numBusesToDestination(routes: number[][], source: number, target: number): number {
+  const busRoutes = new Map<number, Set<number>>();
+  for (let bus = 0; bus < routes.length; bus++) {
+    for (const busStop of routes[bus]) {
+      const busRoute = busRoutes.get(busStop) ?? new Set();
+      busRoute.add(bus);
+      busRoutes.set(busStop, busRoute);
+    }
+  }
+
+  let queue: number[][] = [[source, 0]];
+  const visited = new Set<number>();
+  while (0 < queue.length) {
+    const nextQueue: number[][] = [];
+    for (const [busStop, busCount] of queue) {
+      if (busStop === target) {
+        return busCount;
+      }
+      const busRoute = busRoutes.get(busStop) ?? new Set();
+      for (const bus of busRoute) {
+        for (const nextBusStop of routes[bus]) {
+          if (visited.has(nextBusStop)) continue;
+          nextQueue.push([nextBusStop, busCount + 1]);
+          visited.add(nextBusStop);
+        }
+        routes[bus] = [];
+      }
+    }
+    queue = nextQueue;
+  }
+  return -1;
+}
+```

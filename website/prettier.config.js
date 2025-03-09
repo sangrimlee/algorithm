@@ -7,7 +7,7 @@ const config = {
   ...prettierConfig,
   plugins: [...(prettierConfig.plugins ?? []), 'prettier-plugin-tailwindcss'],
   tailwindFunctions: ['cx', 'cn', 'cva'],
-  tailwindStylesheet: './src/app/globals.css',
+  tailwindStylesheet: './src/styles/globals.css',
 };
 
 export default config;

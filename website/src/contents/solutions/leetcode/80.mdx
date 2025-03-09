@@ -1,0 +1,25 @@
+---
+id: '80'
+title: Remove Duplicates from Sorted Array II
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Two Pointers
+url: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function removeDuplicates(nums: number[]): number {
+  let currentIndex = 0;
+  for (const num of nums) {
+    if (currentIndex < 2 || nums[currentIndex - 2] < num) {
+      nums[currentIndex] = num;
+      currentIndex += 1;
+    }
+  }
+  return currentIndex;
+}
+```

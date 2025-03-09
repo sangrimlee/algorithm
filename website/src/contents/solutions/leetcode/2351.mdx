@@ -1,0 +1,27 @@
+---
+id: '2351'
+title: First Letter to Appear Twice
+category: Algorithms
+difficulty: Easy
+tags:
+  - Hash Table
+  - String
+  - Bit Manipulation
+  - Counting
+url: https://leetcode.com/problems/first-letter-to-appear-twice
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function repeatedCharacter(s: string): string {
+  const set = new Set();
+  for (const char of s) {
+    if (set.has(char)) {
+      return char;
+    }
+    set.add(char);
+  }
+  return '';
+}
+```

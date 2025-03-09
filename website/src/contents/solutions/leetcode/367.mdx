@@ -1,0 +1,22 @@
+---
+id: '367'
+title: Valid Perfect Square
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Binary Search
+url: https://leetcode.com/problems/valid-perfect-square
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function isPerfectSquare(num: number): boolean {
+  let r = num;
+  while (num < r * r) {
+    r = Math.floor((r + num / r) / 2);
+  }
+  return r * r === num;
+}
+```

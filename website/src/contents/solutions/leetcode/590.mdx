@@ -1,0 +1,30 @@
+---
+id: '590'
+title: N-ary Tree Postorder Traversal
+category: Algorithms
+difficulty: Easy
+tags:
+  - Stack
+  - Tree
+  - Depth-First Search
+url: https://leetcode.com/problems/n-ary-tree-postorder-traversal
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { NArrayTreeNode as Node } from '@algorithm/lib';
+
+export function postorder(root: Node | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const values: number[] = [];
+  const traverse = (node: Node) => {
+    node.children.forEach(traverse);
+    values.push(node.val);
+  };
+  traverse(root);
+  return values;
+}
+```

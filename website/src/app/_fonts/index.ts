@@ -1,4 +1,4 @@
-import { Poppins } from 'next/font/google';
+import { Poppins, Source_Code_Pro } from 'next/font/google';
 import localFont from 'next/font/local';
 
 export const poppins = Poppins({
@@ -6,16 +6,7 @@ export const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
-  preload: true,
-  fallback: [
-    'ui-sans-serif',
-    'system-ui',
-    'sans-serif',
-    "'Apple Color Emoji'",
-    "'Segoe UI Emoji'",
-    "'Segoe UI Symbol'",
-    "'Noto Color Emoji'",
-  ],
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
 });
 
 export const pretendard = localFont({
@@ -23,14 +14,22 @@ export const pretendard = localFont({
   weight: '45 920',
   display: 'swap',
   variable: '--font-pretendard',
+  fallback: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+});
+
+export const sourceCodePro = Source_Code_Pro({
+  subsets: ['latin'],
+  display: 'swap',
   preload: true,
+  variable: '--font-source-code-pro',
   fallback: [
-    'ui-sans-serif',
-    'system-ui',
-    'sans-serif',
-    "'Apple Color Emoji'",
-    "'Segoe UI Emoji'",
-    "'Segoe UI Symbol'",
-    "'Noto Color Emoji'",
+    'ui-monospace',
+    'SFMono-Regular',
+    'Menlo',
+    'Monaco',
+    'Consolas',
+    "'Liberation Mono'",
+    "'Courier New'",
+    'monospace',
   ],
 });

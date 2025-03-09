@@ -1,0 +1,24 @@
+---
+id: '1413'
+title: Minimum Value to Get Positive Step by Step Sum
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Prefix Sum
+url: https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minStartValue(nums: number[]): number {
+  let minValue = 0;
+  let currentValue = 0;
+  nums.forEach((num) => {
+    currentValue += num;
+    minValue = Math.min(minValue, currentValue);
+  });
+  return Math.max(-minValue, 0) + 1;
+}
+```

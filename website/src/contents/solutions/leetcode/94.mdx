@@ -1,0 +1,34 @@
+---
+id: '94'
+title: Binary Tree Inorder Traversal
+category: Algorithms
+difficulty: Easy
+tags:
+  - Stack
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/binary-tree-inorder-traversal
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function inorderTraversal(root: TreeNode | null): number[] {
+  const answer: number[] = [];
+
+  function inorder(node: TreeNode | null) {
+    if (node === null) {
+      return;
+    }
+    inorder(node.left);
+    answer.push(node.val);
+    inorder(node.right);
+  }
+
+  inorder(root);
+  return answer;
+}
+```

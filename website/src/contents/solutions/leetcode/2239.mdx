@@ -1,0 +1,22 @@
+---
+id: '2239'
+title: Find Closest Number to Zero
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+url: https://leetcode.com/problems/find-closest-number-to-zero
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findClosestNumber(nums: number[]): number {
+  return nums.reduce((answer, num) => {
+    if (Math.abs(num) === Math.abs(answer)) {
+      return Math.max(num, answer);
+    }
+    return Math.abs(num) < Math.abs(answer) ? num : answer;
+  }, Number.MAX_SAFE_INTEGER);
+}
+```

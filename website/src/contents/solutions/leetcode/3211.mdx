@@ -1,0 +1,40 @@
+---
+id: '3211'
+title: Generate Binary Strings Without Adjacent Zeros
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Backtracking
+  - Bit Manipulation
+url: https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function validStrings(n: number): string[] {
+  const answer: string[] = [];
+  function dfs(str: string) {
+    if (str.length === n) {
+      answer.push(str);
+      return;
+    }
+    dfs(str + '1');
+    if (str[str.length - 1] === '1') {
+      dfs(str + '0');
+    }
+  }
+
+  dfs('0');
+  dfs('1');
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(2^N)`
+  - `0` 또는 `1`이 `N`개의 길이 만큼의 `combination`을 구해야하기 때문에, `O(2^N)`이 된다.
+- Space: `O(N)`
+  - 최대 `recursion`은 `N`번이기 때문에, `call stack`이 필요한 최대 크기는 `O(N)`이 된다.

@@ -1,0 +1,29 @@
+---
+id: '2079'
+title: Watering Plants
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Simulation
+url: https://leetcode.com/problems/watering-plants
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function wateringPlants(plants: number[], capacity: number): number {
+  const n = plants.length;
+
+  let answer = 0;
+  let remain = capacity;
+  plants.forEach((water, i) => {
+    if (remain < water) {
+      answer += i * 2;
+      remain = capacity;
+    }
+    remain -= water;
+  });
+  return answer + n;
+}
+```

@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { Slot } from '@radix-ui/react-slot';
 import { cva } from 'class-variance-authority';
 import type { VariantProps } from 'class-variance-authority';
@@ -7,38 +8,33 @@ import { cn } from '@/utils/cn';
 
 const buttonVariants = cva(
   [
-    'inline-flex cursor-pointer items-center justify-center gap-2 font-medium whitespace-nowrap transition-colors duration-200',
+    'inline-flex cursor-pointer items-center justify-center gap-2 border border-transparent font-medium whitespace-nowrap transition-colors duration-200',
     'focus-visible:shadow-focus-ring focus-visible:outline-none',
-    'disabled:pointer-events-none disabled:opacity-50',
-    '[&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+    'disabled:pointer-events-none disabled:border-gray-6 disabled:bg-gray-3 disabled:text-gray-9',
+    '[&_svg]:pointer-events-none [&_svg]:shrink-0',
   ],
   {
     variants: {
-      variant: {
-        default: [
-          'bg-gray-950 text-gray-50',
-          'dark:bg-gray-50 dark:text-gray-950',
-          'hover:bg-gray-900 dark:hover:bg-gray-100',
-        ],
-        outline: [
-          'border',
-          'border-gray-300 bg-gray-50 text-gray-950 hover:bg-gray-100',
-          'dark:border-gray-700 dark:bg-gray-950 dark:text-gray-50 dark:hover:bg-gray-900',
-        ],
-      },
       size: {
-        sm: 'min-h-9 px-5 text-sm',
-        md: 'min-h-10 px-6 text-sm',
-        lg: 'min-h-11 px-7 text-base',
+        sm: 'min-h-8 px-3 text-xs [&_svg]:size-3.5',
+        md: 'min-h-9 px-4 text-sm [&_svg]:size-4',
+        lg: 'min-h-10 px-5 text-sm [&_svg]:size-4',
+        'icon-sm': 'h-8 w-8 [&_svg]:size-4',
+        icon: 'h-9 w-9 [&_svg]:size-5',
+      },
+      variant: {
+        default: ['bg-gray-12 text-gray-1', 'hover:bg-gray-12/90'],
+        outline: ['border-gray-7 bg-gray-1 text-gray-12', 'hover:border-gray-8 hover:bg-gray-3'],
+        ghost: ['bg-transparent text-gray-12', 'hover:bg-gray-3 hover:text-gray-11'],
       },
       rounded: {
-        default: 'rounded-md',
+        default: 'rounded-lg',
         full: 'rounded-full',
       },
     },
     defaultVariants: {
-      variant: 'default',
       size: 'md',
+      variant: 'default',
       rounded: 'default',
     },
   },

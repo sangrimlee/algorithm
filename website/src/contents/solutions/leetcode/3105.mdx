@@ -1,0 +1,26 @@
+---
+id: '3105'
+title: Longest Strictly Increasing or Strictly Decreasing Subarray
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+url: https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function longestMonotonicSubarray(nums: number[]): number {
+  const n = nums.length;
+
+  let answer = 1;
+  let [inc, dec] = [1, 1];
+  for (let i = 1; i < n; i++) {
+    inc = nums[i - 1] < nums[i] ? inc + 1 : 1;
+    dec = nums[i - 1] > nums[i] ? dec + 1 : 1;
+    answer = Math.max(answer, inc, dec);
+  }
+  return answer;
+}
+```

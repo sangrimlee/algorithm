@@ -1,0 +1,89 @@
+---
+id: '1545'
+title: Find Kth Bit in Nth Binary String
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Recursion
+  - Simulation
+url: https://leetcode.com/problems/find-kth-bit-in-nth-binary-string
+---
+
+## Solution
+
+### Solution1: `Brute Force`
+
+```typescript showLineNumbers
+function findKthBit(n: number, k: number): string {
+  let s = '0';
+  for (let i = 1; i < n; i++) {
+    if (k <= s.length) break;
+    s += '1' + reverse(invert(s));
+  }
+  return s[k - 1];
+}
+
+function invert(s: string) {
+  return [...s].map((bit) => (bit === '0' ? '1' : '0')).join('');
+}
+
+function reverse(s: string) {
+  return [...s].reverse().join('');
+}
+```
+
+#### Complexity
+
+- Time: `O(2^N)`
+- Space: `O(2^N)`
+
+### Solution2: `Recursion`
+
+```typescript showLineNumbers
+function findKthBit(n: number, k: number): string {
+  if (n === 1) {
+    return '0';
+  }
+  const length = 1 << n;
+  if (k < Math.floor(length / 2)) {
+    return findKthBit(n - 1, k);
+  }
+  if (k === Math.floor(length / 2)) {
+    return '1';
+  }
+
+  return findKthBit(n - 1, length - k) === '0' ? '1' : '0';
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`
+
+### Solution3: `Divide & Conquer`
+
+```typescript showLineNumbers
+export function findKthBit(n: number, k: number): string {
+  let invertCount = 0;
+  let totalLength = (1 << n) - 1;
+  while (1 < k) {
+    const mid = Math.floor(totalLength / 2);
+    if (k === mid + 1) {
+      return invertCount % 2 === 0 ? '1' : '0';
+    }
+    if (k > mid) {
+      k = totalLength + 1 - k;
+      invertCount += 1;
+    }
+    totalLength = Math.floor(totalLength / 2);
+  }
+  return invertCount % 2 === 0 ? '0' : '1';
+}
+```
+
+#### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`

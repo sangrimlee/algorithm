@@ -1,0 +1,18 @@
+---
+id: '575'
+title: Distribute Candies
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+url: https://leetcode.com/problems/distribute-candies
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function distributeCandies(candyType: number[]): number {
+  return Math.min(new Set(candyType).size, candyType.length / 2);
+}
+```

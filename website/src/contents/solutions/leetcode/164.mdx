@@ -1,0 +1,22 @@
+---
+id: '164'
+title: Maximum Gap
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Sorting
+  - Bucket Sort
+  - Radix Sort
+url: https://leetcode.com/problems/maximum-gap
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maximumGap(nums: number[]): number {
+  return nums
+    .sort((a, b) => a - b)
+    .reduce((prev, num, i) => (i === 0 ? prev : Math.max(prev, Math.abs(nums[i - 1] - num))), 0);
+}
+```

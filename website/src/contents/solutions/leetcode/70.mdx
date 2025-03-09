@@ -1,0 +1,30 @@
+---
+id: '70'
+title: Climbing Stairs
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Dynamic Programming
+  - Memoization
+url: https://leetcode.com/problems/climbing-stairs
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function climbStairs(n: number): number {
+  if (n <= 2) {
+    return n;
+  }
+  const dp = new Array<number>(n + 1).fill(0);
+  dp[1] = 1;
+  dp[2] = 2;
+  for (const i of range(3, n + 1)) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+  return dp[n];
+}
+```

@@ -1,0 +1,32 @@
+---
+id: '3068'
+title: Find the Maximum Sum of Node Values
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Dynamic Programming
+  - Greedy
+  - Bit Manipulation
+  - Tree
+  - Sorting
+url: https://leetcode.com/problems/find-the-maximum-sum-of-node-values
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maximumValueSum(nums: number[], k: number, edges: number[][]): number {
+  // `edges` are useless.
+  let sum = 0;
+  let count = 0;
+  let sacrifice = Number.MAX_SAFE_INTEGER;
+  for (const num of nums) {
+    const xor = num ^ k;
+    sum += Math.max(num, xor);
+    count += num < xor ? 1 : 0;
+    sacrifice = Math.min(sacrifice, Math.abs(num - xor));
+  }
+  return count % 2 === 0 ? sum : sum - sacrifice;
+}
+```

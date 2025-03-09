@@ -1,0 +1,21 @@
+---
+id: '2367'
+title: Number of Arithmetic Triplets
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+  - Two Pointers
+  - Enumeration
+url: https://leetcode.com/problems/number-of-arithmetic-triplets
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function arithmeticTriplets(nums: number[], diff: number): number {
+  const set = new Set(nums);
+  return nums.filter((num) => set.has(num + diff) && set.has(num + diff * 2)).length;
+}
+```

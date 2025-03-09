@@ -1,0 +1,32 @@
+---
+id: '3370'
+title: Smallest Number With All Set Bits
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Bit Manipulation
+url: https://leetcode.com/problems/smallest-number-with-all-set-bits
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function smallestNumber(n: number): number {
+  return (1 << bitLength(n)) - 1;
+}
+
+function bitLength(num: number): number {
+  let length = 0;
+  while (0 < num) {
+    num >>= 1;
+    length += 1;
+  }
+  return length;
+}
+```
+
+### Complexity
+
+- Time: $O(logn)$
+- Space: $O(1)$

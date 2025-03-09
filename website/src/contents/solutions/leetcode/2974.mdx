@@ -1,0 +1,26 @@
+---
+id: '2974'
+title: Minimum Number Game
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Sorting
+  - Heap (Priority Queue)
+  - Simulation
+url: https://leetcode.com/problems/minimum-number-game
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function numberGame(nums: number[]): number[] {
+  nums.sort((a, b) => a - b);
+  const answer: number[] = [];
+  for (let i = 0; i < nums.length; i += 2) {
+    answer.push(nums[i + 1]);
+    answer.push(nums[i]);
+  }
+  return answer;
+}
+```

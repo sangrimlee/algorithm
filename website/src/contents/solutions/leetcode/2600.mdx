@@ -1,0 +1,23 @@
+---
+id: '2600'
+title: K Items With the Maximum Sum
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Greedy
+url: https://leetcode.com/problems/k-items-with-the-maximum-sum
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function kItemsWithMaximumSum(
+  numOnes: number,
+  numZeros: number,
+  numNegOnes: number,
+  k: number,
+): number {
+  return Math.min(k, numOnes) - Math.max(0, k - numOnes - numZeros);
+}
+```

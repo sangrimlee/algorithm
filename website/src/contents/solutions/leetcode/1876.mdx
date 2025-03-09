@@ -1,0 +1,31 @@
+---
+id: '1876'
+title: Substrings of Size Three with Distinct Characters
+category: Algorithms
+difficulty: Easy
+tags:
+  - Hash Table
+  - String
+  - Sliding Window
+  - Counting
+url: https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function countGoodSubstrings(s: string): number {
+  function isGoodSubstring(substring: string) {
+    return new Set(substring).size === substring.length;
+  }
+
+  let answer = 0;
+  for (let i = 0; i < s.length - 2; i++) {
+    const substring = s.substring(i, i + 3);
+    if (isGoodSubstring(substring)) {
+      answer += 1;
+    }
+  }
+  return answer;
+}
+```

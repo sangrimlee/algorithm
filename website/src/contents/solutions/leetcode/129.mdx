@@ -1,0 +1,40 @@
+---
+id: '129'
+title: Sum Root to Leaf Numbers
+category: Algorithms
+difficulty: Medium
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/sum-root-to-leaf-numbers
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function sumNumbers(root: TreeNode | null): number {
+  if (root === null) {
+    return 0;
+  }
+
+  let answer = 0;
+  function sumRootToLeaf(node: TreeNode, prev: number) {
+    const current = prev * 10 + node.val;
+    if (node.left === null && node.right === null) {
+      answer += current;
+      return;
+    }
+    if (node.left) {
+      sumRootToLeaf(node.left, current);
+    }
+    if (node.right) {
+      sumRootToLeaf(node.right, current);
+    }
+  }
+  sumRootToLeaf(root, 0);
+  return answer;
+}
+```

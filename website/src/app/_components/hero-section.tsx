@@ -35,15 +35,16 @@ export const HeroSection = () => {
       initial="hidden"
       animate="show"
       variants={vairants.section}
-      className={cx('mx-auto flex flex-1 flex-col items-center justify-center py-8')}
+      className={cx(
+        'relative mx-auto flex min-h-(--content-height) flex-1 flex-col items-center justify-center py-20',
+      )}
     >
       <motion.h1
         variants={vairants.item}
         className={cx(
-          'mx-auto max-w-sm text-center font-logo text-3xl leading-[1.2] font-bold tracking-tight',
+          'mx-auto max-w-sm text-center font-logo text-3xl leading-[1.2] font-bold tracking-tight text-gray-12',
           'sm:max-w-lg sm:text-5xl sm:leading-[1.1]',
           'xl:max-w-xl xl:text-6xl',
-          'text-gray-950 dark:text-gray-50',
         )}
       >
         Algorithm Problem
@@ -53,10 +54,9 @@ export const HeroSection = () => {
       <motion.p
         variants={vairants.item}
         className={cx(
-          'mx-auto mt-4 max-w-sm text-center text-base',
+          'mx-auto mt-4 max-w-sm text-center text-sm text-gray-11',
           'sm:mt-6 sm:max-w-md sm:text-lg',
           'xl:mt-8 xl:max-w-lg xl:text-xl',
-          'text-gray-600 dark:text-gray-400',
         )}
       >
         Explore 1,000+ problems solved in TypeScript. — New solution weekly.
@@ -65,35 +65,13 @@ export const HeroSection = () => {
         variants={vairants.item}
         className={cx('mt-6 flex flex-wrap items-center justify-center gap-4', 'sm:mt-8 xl:mt-10')}
       >
-        <Button
-          asChild
-          variant="default"
-          size="lg"
-          rounded="full"
-          className="hidden min-w-44 sm:inline-flex"
-        >
-          <Link href="/solutions/leetcode/1">
+        <Button asChild variant="default" size="lg" rounded="full" className="min-w-40">
+          <Link href="/solutions/leetcode">
             <span>LeetCode</span>
           </Link>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          size="lg"
-          rounded="full"
-          className="hidden min-w-44 sm:inline-flex"
-        >
-          <Link href="/solutions/programmers/1843">
-            <span>Programmers</span>
-          </Link>
-        </Button>
-        <Button asChild variant="default" size="md" rounded="full" className="min-w-40 sm:hidden">
-          <Link href="/solutions/leetcode/1">
-            <span>LeetCode</span>
-          </Link>
-        </Button>
-        <Button asChild variant="outline" size="md" rounded="full" className="min-w-40 sm:hidden">
-          <Link href="/solutions/programmers/1843">
+        <Button asChild variant="outline" size="lg" rounded="full" className="min-w-40">
+          <Link href="/solutions/programmers">
             <span>Programmers</span>
           </Link>
         </Button>

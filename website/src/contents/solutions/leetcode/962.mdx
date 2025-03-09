@@ -1,0 +1,39 @@
+---
+id: '962'
+title: Maximum Width Ramp
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Two Pointers
+  - Stack
+  - Monotonic Stack
+url: https://leetcode.com/problems/maximum-width-ramp
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maxWidthRamp(nums: number[]): number {
+  const n = nums.length;
+  const stack: number[] = [];
+  for (let i = 0; i < n; i++) {
+    if (stack.length === 0 || nums[i] < nums[stack[stack.length - 1]]) {
+      stack.push(i);
+    }
+  }
+
+  let answer = 0;
+  for (let i = n - 1; 0 <= i; i--) {
+    while (0 < stack.length && nums[stack[stack.length - 1]] <= nums[i]) {
+      answer = Math.max(answer, i - stack.pop()!);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`

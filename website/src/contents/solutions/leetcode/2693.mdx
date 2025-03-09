@@ -1,0 +1,25 @@
+---
+id: '2693'
+title: Call Function with Custom Context
+category: JavaScript
+difficulty: Medium
+url: https://leetcode.com/problems/call-function-with-custom-context
+---
+
+## Solution
+
+```typescript showLineNumbers
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+declare global {
+  interface Function {
+    callPolyfill(context: Record<any, any>, ...args: any[]): any;
+  }
+}
+
+Function.prototype.callPolyfill = function (context, ...args): any {
+  return this.bind(context)(...args);
+};
+
+export {};
+```

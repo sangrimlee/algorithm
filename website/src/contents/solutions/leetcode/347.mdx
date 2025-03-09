@@ -1,0 +1,33 @@
+---
+id: '347'
+title: Top K Frequent Elements
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Divide and Conquer
+  - Sorting
+  - Heap (Priority Queue)
+  - Bucket Sort
+  - Counting
+  - Quickselect
+url: https://leetcode.com/problems/top-k-frequent-elements
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function topKFrequent(nums: number[], k: number): number[] {
+  const counter = new Map<number, number>();
+
+  const getCount = (num: number) => counter.get(num) ?? 0;
+  const sortByFreq = (a: number, b: number) => getCount(b) - getCount(a);
+
+  for (const num of nums) {
+    counter.set(num, getCount(num) + 1);
+  }
+
+  return [...counter.keys()].sort(sortByFreq).slice(0, k);
+}
+```

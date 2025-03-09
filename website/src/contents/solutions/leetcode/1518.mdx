@@ -1,0 +1,25 @@
+---
+id: '1518'
+title: Water Bottles
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+  - Simulation
+url: https://leetcode.com/problems/water-bottles
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function numWaterBottles(numBottles: number, numExchange: number): number {
+  let answer = numBottles;
+  let emptyBottles = numBottles;
+  while (numExchange <= emptyBottles) {
+    const fullBottles = Math.floor(emptyBottles / numExchange);
+    answer += fullBottles;
+    emptyBottles = fullBottles + (emptyBottles % numExchange);
+  }
+  return answer;
+}
+```

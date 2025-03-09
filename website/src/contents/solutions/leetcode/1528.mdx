@@ -1,0 +1,23 @@
+---
+id: '1528'
+title: Shuffle String
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+url: https://leetcode.com/problems/shuffle-string
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function restoreString(s: string, indices: number[]): string {
+  const n = indices.length;
+  const answer: string[] = new Array(n).fill('');
+  indices.forEach((index, i) => {
+    answer[index] = s[i];
+  });
+  return answer.join('');
+}
+```

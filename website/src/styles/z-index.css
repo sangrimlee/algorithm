@@ -1,0 +1,16 @@
+@theme {
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-offcanvas-backdrop: 1040;
+  --z-index-offcanvas: 1045;
+  --z-index-modal-backdrop: 1050;
+  --z-index-modal: 1055;
+  --z-index-popover: 1070;
+  --z-index-tooltip: 1080;
+  --z-index-toast: 1090;
+}
+
+@utility z-* {
+  z-index: --value(--z-index- *);
+}

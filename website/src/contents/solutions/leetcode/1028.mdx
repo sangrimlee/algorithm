@@ -1,0 +1,96 @@
+---
+id: '1028'
+title: Recover a Tree From Preorder Traversal
+category: Algorithms
+difficulty: Hard
+tags:
+  - String
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/
+---
+
+## 문제 설명
+
+이진 트리를 **전위 순회(Preorder)** 한 결과가 **문자열 형태**로 주어지고, 이 문자열을 이용해 원래 트리를 복원해야 합니다.
+
+**입력 형식**
+
+- `traversal` 문자열은 노드의 값(`value`)과 깊이 정보를 포함하고 있습니다.
+- 깊이는, `-`의 개수로 나타냅니다.
+
+**입력 예시**
+
+```
+"1-2--3--4-5--6--7"
+```
+
+**이진 트리로 변환하면,**
+
+```
+    1
+   / \
+  2   5
+ / \  / \
+3   4 6  7
+```
+
+## 문제 풀이
+
+**`Stack`을 사용하여, 현재 추가되는 노드의 부모 노드를 저장하여, 트리를 복원할 수 있습니다.**
+
+1. `-` 개수를 통한 **depth 찾기**
+2. 이후에 오는 숫자 값들을 통한 **`value` 찾기**
+3. 스택을 사용하여, 트리를 생성
+   - 스택의 길이가 `depth` 보다 크면, `pop()`하여 부모 노드를 갱신
+   - 현재 스택의 가장 위에 있는 노드가 부모 노드:
+     - 왼쪽 자식이 존재하지 않는다면, 왼쪽 자식 노드에 추가
+     - 왼쪽 자식이 존재한다면, 오른쪽 자식 노드에 추가
+4. 스택의 가장 밑에 있는 노드가, 루트 노드가 됨
+
+```typescript showLineNumbers
+function recoverFromPreorder(traversal: string): TreeNode | null {
+  let currentIndex = 0;
+  const stack: TreeNode[] = [];
+  while (currentIndex < traversal.length) {
+    const [depth, nextIndexAfterDepth] = findDepth(traversal, currentIndex);
+    const [value, nextIndexAfterValue] = findValue(traversal, nextIndexAfterDepth);
+    currentIndex = nextIndexAfterValue;
+
+    const node = new TreeNode(value);
+    while (stack.length > depth) {
+      stack.pop();
+    }
+
+    if (stack.length > 0) {
+      const peek = stack[stack.length - 1];
+      if (peek.left === null) {
+        peek.left = node;
+      } else {
+        peek.right = node;
+      }
+    }
+    stack.push(node);
+  }
+  return stack[0];
+}
+
+function findDepth(traversal: string, startIndex: number): [number, number] {
+  let depth = 0;
+  while (startIndex + depth < traversal.length && traversal[startIndex + depth] === '-') {
+    depth += 1;
+  }
+  return [depth, startIndex + depth];
+}
+
+function findValue(traversal: string, startIndex: number): [number, number] {
+  let value = 0;
+  let currentIndex = startIndex;
+  while (currentIndex < traversal.length && traversal[currentIndex] !== '-') {
+    value = 10 * value + Number(traversal[currentIndex]);
+    currentIndex += 1;
+  }
+  return [value, currentIndex];
+}
+```

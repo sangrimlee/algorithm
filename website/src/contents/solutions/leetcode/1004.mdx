@@ -1,0 +1,36 @@
+---
+id: '1004'
+title: Max Consecutive Ones III
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+  - Sliding Window
+  - Prefix Sum
+url: https://leetcode.com/problems/max-consecutive-ones-iii
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function longestOnes(nums: number[], k: number): number {
+  const n = nums.length;
+
+  let answer = 0;
+  let left = 0;
+  let zeroCount = 0;
+  for (const right of range(n)) {
+    zeroCount -= nums[right] - 1;
+    while (k < zeroCount) {
+      zeroCount += nums[left] - 1;
+      left += 1;
+    }
+    answer = Math.max(answer, right - left + 1);
+  }
+
+  return answer;
+}
+```

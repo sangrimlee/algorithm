@@ -1,18 +1,18 @@
-import 'nextra-theme-docs/style.css';
-import './globals.css';
+import '@/styles/globals.css';
 
 import type { Metadata } from 'next';
-import { Layout } from 'nextra-theme-docs';
-import { Head } from 'nextra/components';
-import { getPageMap } from 'nextra/page-map';
-import { Analytics } from '@vercel/analytics/react';
 
-import { Footer } from './_components/footer';
-import { NavBar } from './_components/nav-bar';
-import { poppins, pretendard } from './_fonts';
+import { ThemeProvider } from 'next-themes';
+
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import { cx } from '@/utils/cx';
 import { env } from '@/env';
+import { Footer } from './_components/footer';
+import { NavBar } from './_components/nav-bar';
+import { poppins, pretendard, sourceCodePro } from './_fonts';
+import StyledJsxRegistry from './registry';
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.URL),
@@ -45,29 +45,38 @@ export const metadata: Metadata = {
   ],
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="ko"
       dir="ltr"
-      className={cx(poppins.variable, pretendard.variable)}
+      className={cx(poppins.variable, pretendard.variable, sourceCodePro.variable)}
       suppressHydrationWarning
     >
-      <Head />
+      <head>
+        <link
+          rel="stylesheet"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+          integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib"
+        />
+      </head>
       <body>
         <Analytics />
-        <Layout
-          navbar={<NavBar />}
-          footer={<Footer />}
-          pageMap={await getPageMap()}
-          sidebar={{
-            autoCollapse: true,
-            defaultMenuCollapseLevel: 1,
-          }}
-          docsRepositoryBase="https://github.com/sangrimlee/algorithm/tree/main/website"
-        >
-          {children}
-        </Layout>
+        <SpeedInsights />
+        <StyledJsxRegistry>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem={false}
+            enableColorScheme
+            disableTransitionOnChange
+          >
+            <NavBar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </StyledJsxRegistry>
       </body>
     </html>
   );

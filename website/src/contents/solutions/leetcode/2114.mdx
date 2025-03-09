@@ -1,0 +1,21 @@
+---
+id: '2114'
+title: Maximum Number of Words Found in Sentences
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+url: https://leetcode.com/problems/maximum-number-of-words-found-in-sentences
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function mostWordsFound(sentences: string[]): number {
+  function countWord(sentence: string) {
+    return sentence.split(' ').length;
+  }
+  return sentences.reduce((wordCount, sentence) => Math.max(wordCount, countWord(sentence)), 0);
+}
+```

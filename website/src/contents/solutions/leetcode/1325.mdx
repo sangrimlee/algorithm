@@ -1,0 +1,29 @@
+---
+id: '1325'
+title: Delete Leaves With a Given Value
+category: Algorithms
+difficulty: Medium
+tags:
+  - Tree
+  - Depth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/delete-leaves-with-a-given-value
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function removeLeafNodes(root: TreeNode | null, target: number): TreeNode | null {
+  if (root === null) {
+    return null;
+  }
+  root.left = removeLeafNodes(root.left, target);
+  root.right = removeLeafNodes(root.right, target);
+  if (root.left === null && root.right === null && root.val === target) {
+    return null;
+  }
+  return root;
+}
+```

@@ -1,0 +1,146 @@
+---
+id: '2290'
+title: Minimum Obstacle Removal to Reach Corner
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Breadth-First Search
+  - Graph
+  - Heap (Priority Queue)
+  - Matrix
+  - Shortest Path
+url: https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumObstacles(grid: number[][]): number {
+  const [m, n] = [grid.length, grid[0].length];
+  const directions = [
+    [0, 1],
+    [0, -1],
+    [1, 0],
+    [-1, 0],
+  ];
+  const minObstacles: number[][] = Array.from({ length: m }, () =>
+    new Array(n).fill(Number.MAX_SAFE_INTEGER),
+  );
+  minObstacles[0][0] = 0;
+
+  const deque = new Deque([[0, 0, 0]]);
+  while (0 < deque.length) {
+    const [y, x, obstacles] = deque.popLeft()!;
+    for (const [dy, dx] of directions) {
+      const [ny, nx] = [y + dy, x + dx];
+      if (isValid(m, n, ny, nx) && minObstacles[ny][nx] === Number.MAX_SAFE_INTEGER) {
+        if (grid[ny][nx] === 1) {
+          minObstacles[ny][nx] = obstacles + 1;
+          deque.push([ny, nx, obstacles + 1]);
+        } else {
+          minObstacles[ny][nx] = obstacles;
+          deque.pushLeft([ny, nx, obstacles]);
+        }
+      }
+    }
+  }
+  return minObstacles[m - 1][n - 1];
+}
+
+function isValid(m: number, n: number, y: number, x: number) {
+  return 0 <= y && y < m && 0 <= x && x < n;
+}
+
+class DequeNode<T> {
+  value: T;
+  prev: DequeNode<T> | null;
+  next: DequeNode<T> | null;
+
+  constructor(value: T, prev: DequeNode<T> | null = null, next: DequeNode<T> | null = null) {
+    this.value = value;
+    this.prev = prev;
+    this.next = next;
+  }
+}
+
+class Deque<T> {
+  private head: DequeNode<T> | null = null;
+  private tail: DequeNode<T> | null = null;
+  private size: number = 0;
+  constructor(values: T[] = []) {
+    values.forEach((value) => {
+      this.push(value);
+    });
+  }
+
+  isEmpty(): boolean {
+    return this.size === 0;
+  }
+
+  get length(): number {
+    return this.size;
+  }
+
+  pushLeft(value: T): void {
+    const newNode = new DequeNode(value);
+    if (this.isEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head!.prev = newNode;
+      this.head = newNode;
+    }
+    this.size += 1;
+  }
+
+  push(value: T): void {
+    const newNode = new DequeNode(value);
+    if (this.isEmpty()) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail!.next = newNode;
+      newNode.prev = this.tail;
+      this.tail = newNode;
+    }
+    this.size += 1;
+  }
+
+  popLeft(): T | undefined {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    const removedNode = this.head!;
+    this.head = this.head!.next;
+    if (this.head) {
+      this.head.prev = null;
+    } else {
+      this.tail = null;
+    }
+    this.size -= 1;
+    return removedNode.value;
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    const removedNode = this.tail!;
+    this.tail = this.tail!.prev;
+    if (this.tail) {
+      this.tail.next = null;
+    } else {
+      this.head = null;
+    }
+    this.size -= 1;
+    return removedNode.value;
+  }
+}
+```
+
+### Complexity
+
+- Time: $O(m \cdot n)$
+- Space: $O(m \cdot n)$

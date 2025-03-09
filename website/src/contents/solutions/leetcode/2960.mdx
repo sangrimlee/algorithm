@@ -1,0 +1,25 @@
+---
+id: '2960'
+title: Count Tested Devices After Test Operations
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Simulation
+  - Counting
+url: https://leetcode.com/problems/count-tested-devices-after-test-operations
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function countTestedDevices(batteryPercentages: number[]): number {
+  let testedDevice = 0;
+  for (const batteryPercentage of batteryPercentages) {
+    if (testedDevice < batteryPercentage) {
+      testedDevice += 1;
+    }
+  }
+  return testedDevice;
+}
+```

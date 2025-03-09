@@ -1,0 +1,17 @@
+---
+id: '2651'
+title: Calculate Delayed Arrival Time
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+url: https://leetcode.com/problems/calculate-delayed-arrival-time
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findDelayedArrivalTime(arrivalTime: number, delayedTime: number): number {
+  return (arrivalTime + delayedTime) % 24;
+}
+```

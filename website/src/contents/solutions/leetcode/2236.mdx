@@ -1,0 +1,20 @@
+---
+id: '2236'
+title: Root Equals Sum of Children
+category: Algorithms
+difficulty: Easy
+tags:
+  - Tree
+  - Binary Tree
+url: https://leetcode.com/problems/root-equals-sum-of-children
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function checkTree(root: TreeNode | null): boolean {
+  return !root || root.val === root.left!.val + root.right!.val;
+}
+```

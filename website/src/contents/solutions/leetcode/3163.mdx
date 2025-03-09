@@ -1,0 +1,34 @@
+---
+id: '3163'
+title: String Compression III
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+url: https://leetcode.com/problems/string-compression-iii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function compressedString(word: string): string {
+  let answer = '';
+  let [prev, prevCount] = [word[0], 1];
+  for (let i = 1; i < word.length; i++) {
+    const char = word[i];
+    if (prev === char && prevCount < 9) {
+      prevCount += 1;
+    } else {
+      answer += `${prevCount}${prev}`;
+      [prev, prevCount] = [char, 1];
+    }
+  }
+  answer += `${prevCount}${prev}`;
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(1)$

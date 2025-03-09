@@ -1,0 +1,23 @@
+---
+id: '201'
+title: Bitwise AND of Numbers Range
+category: Algorithms
+difficulty: Medium
+tags:
+  - Bit Manipulation
+url: https://leetcode.com/problems/bitwise-and-of-numbers-range
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function rangeBitwiseAnd(left: number, right: number): number {
+  let shift = 0;
+  while (left < right) {
+    left >>= 1;
+    right >>= 1;
+    shift += 1;
+  }
+  return left << shift;
+}
+```

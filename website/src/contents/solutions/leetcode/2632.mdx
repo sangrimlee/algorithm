@@ -1,0 +1,22 @@
+---
+id: '2632'
+title: Curry
+category: JavaScript
+difficulty: Medium
+url: https://leetcode.com/problems/curry
+---
+
+## Solution
+
+```typescript showLineNumbers
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function curry(fn: Function): Function {
+  const curried = (...args: unknown[]) => {
+    if (fn.length <= args.length) {
+      return fn(...args);
+    }
+    return (...nextArgs: unknown[]) => curried(...args, ...nextArgs);
+  };
+  return curried;
+}
+```

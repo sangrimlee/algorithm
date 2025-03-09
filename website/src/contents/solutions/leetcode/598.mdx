@@ -1,0 +1,20 @@
+---
+id: '598'
+title: Range Addition II
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Math
+url: https://leetcode.com/problems/range-addition-ii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maxCount(m: number, n: number, ops: number[][]): number {
+  return ops
+    .reduce(([a1, b1], [a2, b2]) => [Math.min(a1, a2), Math.min(b1, b2)], [m, n])
+    .reduce((acc, curr) => acc * curr, 1);
+}
+```

@@ -1,0 +1,30 @@
+---
+id: '2722'
+title: Join Two Arrays by ID
+category: JavaScript
+difficulty: Medium
+url: https://leetcode.com/problems/join-two-arrays-by-id
+---
+
+## Solution
+
+```typescript showLineNumbers
+type ValueWithID = unknown & {
+  id: number;
+};
+
+export function join(arr1: ValueWithID[], arr2: ValueWithID[]): ValueWithID[] {
+  const result: Record<number, ValueWithID> = {};
+  arr1.forEach((value) => {
+    result[value.id] = value;
+  });
+  arr2.forEach((value) => {
+    result[value.id] = {
+      ...(result[value.id] || {}),
+      ...value,
+    };
+  });
+
+  return Object.values(result);
+}
+```

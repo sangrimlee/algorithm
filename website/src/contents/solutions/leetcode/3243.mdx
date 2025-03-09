@@ -1,0 +1,38 @@
+---
+id: '3243'
+title: Shortest Distance After Road Addition Queries I
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Breadth-First Search
+  - Graph
+url: https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function shortestDistanceAfterQueries(n: number, queries: number[][]): number[] {
+  const answer: number[] = [];
+  const graph: number[][] = Array.from({ length: n }, (_, i) => (i === 0 ? [] : [i - 1]));
+  const dists: number[] = Array.from({ length: n }, (_, i) => i);
+
+  for (const [u, v] of queries) {
+    graph[v].push(u);
+    for (let city = v; city < n; city++) {
+      for (const prevCity of graph[city]) {
+        dists[city] = Math.min(dists[city], dists[prevCity] + 1);
+      }
+    }
+    answer.push(dists[n - 1]);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: $O(q \cdot (n + q))$
+  - $n + q$: `edge`의 개수
+- Space: $O(n + q)$

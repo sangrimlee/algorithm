@@ -1,0 +1,29 @@
+---
+id: '1829'
+title: Maximum XOR for Each Query
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Bit Manipulation
+  - Prefix Sum
+url: https://leetcode.com/problems/maximum-xor-for-each-query
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function getMaximumXor(nums: number[], maximumBit: number): number[] {
+  const n = nums.length;
+  const maxXor = (1 << maximumBit) - 1;
+  const arrXor = nums.reduce((prev, num) => prev ^ num, 0);
+
+  const answer: number[] = [];
+  let xor = arrXor;
+  for (let i = n - 1; 0 <= i; i--) {
+    answer.push(xor ^ maxXor);
+    xor ^= nums[i];
+  }
+  return answer;
+}
+```

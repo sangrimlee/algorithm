@@ -1,0 +1,72 @@
+---
+id: '1980'
+title: Find Unique Binary String
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Backtracking
+url: https://leetcode.com/problems/find-unique-binary-string
+---
+
+## 문제 설명
+
+주어진 **`nums`** 배열은 길이가 `n`인 고유한 이진 문자열 `n`개를 포함하고 있습니다.
+
+**`nums`** 배열에 존재하지 않는, **길이가 n인 새로운 이진 문자열**을 반환해야 합니다.
+
+여기서, 여러 개의 정답이 있을 수 있고, 그 중에서 아무거나 반환하면 됩니다.
+
+## 문제 풀이
+
+### `Set`
+
+1. `Set` 을 사용해서, `num`에 있는 **이진 문자열을** 숫자로 변환하여 저장
+2. 0부터 차례대로 `Set`에 존재하는지 확인하고 존재하지 않는다면, 해당 숫자를 이진 문자열로 변환하여 반환합니다.
+
+```typescript showLineNumbers
+function findDifferentBinaryString(nums: string[]): string {
+  const n = nums.length;
+  const set = new Set(nums.map((num) => parseInt(num, 2)));
+
+  let curr = 0;
+  while (set.has(curr)) {
+    curr += 1;
+  }
+  return curr.toString(2).padStart(n, '0');
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$, 최대 `n` 번만 탐색하면 정답을 찾을 수 있음.
+- 공간 복잡도: $O(n)$
+
+---
+
+### **`Cantor's Diagonal Argument`**
+
+**Cantor의 대각선 논법**을 활용하면 간단하게 해결 가능합니다.
+
+1. 각 문자열의 `i` 번째 위치에 있는 비트를 선택합니다.
+2. 선택한 **비트를 반전(0 → 1, 1 → 0)** 하여 새로운 문자열을 선택합니다.
+3. 이렇게 만든 문자열은 기존의 문자열 중 어느 것과도 같지 않습니다.
+
+```typescript showLineNumbers
+function findDifferentBinaryString(nums: string[]): string {
+  const n = nums.length;
+  const answer: string[] = [];
+  for (let i = 0; i < n; i++) {
+    const curr = nums[i][i]; // i번째 문자열의 i번째 비트 선택
+    answer.push(curr === '0' ? '1' : '0'); // 비트를 반전
+  }
+  return answer.join('');
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$

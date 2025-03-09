@@ -1,0 +1,37 @@
+---
+id: '1249'
+title: Minimum Remove to Make Valid Parentheses
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Stack
+url: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minRemoveToMakeValid(s: string): string {
+  const chars = [...s];
+  const stack: number[] = [];
+
+  chars.forEach((char, i) => {
+    if (char === '(') {
+      stack.push(i);
+    } else if (char === ')') {
+      if (0 < stack.length) {
+        stack.pop();
+      } else {
+        chars[i] = '';
+      }
+    }
+  });
+
+  while (0 < stack.length) {
+    chars[stack.pop()!] = '';
+  }
+
+  return chars.join('');
+}
+```

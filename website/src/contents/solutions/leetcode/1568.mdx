@@ -1,0 +1,76 @@
+---
+id: '1568'
+title: Minimum Number of Days to Disconnect Island
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Depth-First Search
+  - Breadth-First Search
+  - Matrix
+  - Strongly Connected Component
+url: https://leetcode.com/problems/minimum-number-of-days-to-disconnect-island
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minDays(grid: number[][]): number {
+  const islands = countIslands(grid);
+  if (islands !== 1) {
+    return 0;
+  }
+
+  const [m, n] = [grid.length, grid[0].length];
+  for (let y = 0; y < m; y++) {
+    for (let x = 0; x < n; x++) {
+      if (grid[y][x] === 1) {
+        grid[y][x] = 0;
+        if (countIslands(grid) !== 1) {
+          return 1;
+        }
+        grid[y][x] = 1;
+      }
+    }
+  }
+  return 2;
+}
+
+function countIslands(grid: number[][]): number {
+  const [m, n] = [grid.length, grid[0].length];
+  const visited = Array.from({ length: m }, () => new Array(n).fill(false));
+
+  let islands = 0;
+  for (let y = 0; y < m; y++) {
+    for (let x = 0; x < n; x++) {
+      if (!visited[y][x] && grid[y][x] === 1) {
+        dfs(grid, visited, y, x);
+        islands += 1;
+      }
+    }
+  }
+  return islands;
+}
+
+function dfs(grid: number[][], visited: boolean[][], y: number, x: number) {
+  visited[y][x] = true;
+  const [m, n] = [grid.length, grid[0].length];
+  const directions = [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+  ];
+  for (const [dy, dx] of directions) {
+    const [ny, nx] = [y + dy, x + dx];
+    if (0 <= ny && ny < m && 0 <= nx && nx < n && !visited[ny][nx] && grid[ny][nx] === 1) {
+      dfs(grid, visited, ny, nx);
+    }
+  }
+}
+```
+
+### Complexity
+
+- Time: `O(N^4)`
+- Space: `O(N^2)`

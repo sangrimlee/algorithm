@@ -1,0 +1,23 @@
+---
+id: '2626'
+title: Array Reduce Transformation
+category: JavaScript
+difficulty: Easy
+url: https://leetcode.com/problems/array-reduce-transformation
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function reduce(
+  nums: number[],
+  fn: (acc: number, curr: number) => number,
+  init: number,
+): number {
+  let acc = init;
+  for (let i = 0; i < nums.length; i++) {
+    acc = fn(acc, nums[i]);
+  }
+  return acc;
+}
+```

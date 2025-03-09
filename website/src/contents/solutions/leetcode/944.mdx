@@ -1,0 +1,31 @@
+---
+id: '944'
+title: Delete Columns to Make Sorted
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - String
+url: https://leetcode.com/problems/delete-columns-to-make-sorted
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function minDeletionSize(strs: string[]): number {
+  const [n, m] = [strs.length, strs[0].length];
+
+  let answer = 0;
+  for (const col of range(m)) {
+    for (const row of range(1, n)) {
+      if (strs[row][col] < strs[row - 1][col]) {
+        answer += 1;
+        break;
+      }
+    }
+  }
+  return answer;
+}
+```

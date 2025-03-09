@@ -1,0 +1,42 @@
+---
+id: '199'
+title: Binary Tree Right Side View
+category: Algorithms
+difficulty: Medium
+tags:
+  - Tree
+  - Depth-First Search
+  - Breadth-First Search
+  - Binary Tree
+url: https://leetcode.com/problems/binary-tree-right-side-view
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function rightSideView(root: TreeNode | null): number[] {
+  if (!root) {
+    return [];
+  }
+  const answer: number[] = [];
+
+  let currentNodes: TreeNode[] = [root];
+  while (0 < currentNodes.length) {
+    const nextNodes: TreeNode[] = [];
+    currentNodes.forEach((currentNode) => {
+      if (currentNode.left) {
+        nextNodes.push(currentNode.left);
+      }
+      if (currentNode.right) {
+        nextNodes.push(currentNode.right);
+      }
+    });
+    answer.push(currentNodes[currentNodes.length - 1].val);
+    currentNodes = nextNodes;
+  }
+
+  return answer;
+}
+```

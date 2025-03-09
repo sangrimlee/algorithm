@@ -1,0 +1,27 @@
+---
+id: '1827'
+title: Minimum Operations to Make the Array Increasing
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Greedy
+url: https://leetcode.com/problems/minimum-operations-to-make-the-array-increasing
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minOperations(nums: number[]): number {
+  const n = nums.length;
+  let answer = 0;
+  for (let i = 1; i < n; i++) {
+    if (nums[i - 1] < nums[i]) {
+      continue;
+    }
+    answer += nums[i - 1] - nums[i] + 1;
+    nums[i] = nums[i - 1] + 1;
+  }
+  return answer;
+}
+```

@@ -1,0 +1,65 @@
+---
+id: '1352'
+title: Product of the Last K Numbers
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Math
+  - Design
+  - Data Stream
+  - Prefix Sum
+url: https://leetcode.com/problems/product-of-the-last-k-numbers
+---
+
+## 문제 설명
+
+`ProductOfNumbers` 클래스의 다음과 같은 두 가지 메서드를 구현하는 문제입니다.
+
+- `add(num: number)`: 숫자 `num`을 스트림에 추가합니다.
+- `getProduct(k: number)`: 마지막 `k`개의 숫자의 곱을 반환합니다.
+
+## 문제 풀이
+
+누적곱을 사용하면 마지막 `k`개의 숫자의 곱을 $O(1)$ 시간 복잡도로 계산할 수 있습니다.
+
+```typescript showLineNumbers
+export class ProductOfNumbers {
+  private products: number[];
+
+  constructor() {
+    this.products = [1];
+  }
+
+  add(num: number): void {
+    if (num === 0) {
+      this.products = [1];
+      return;
+    }
+    const lastProduct = this.products[this.products.length - 1];
+    this.products.push(lastProduct * num);
+  }
+
+  getProduct(k: number): number {
+    const n = this.products.length;
+    if (n <= k) {
+      return 0;
+    }
+    return this.products[n - 1] / this.products[n - k - 1];
+  }
+}
+```
+
+1. `add(num: number)`:
+   - `num`이 0인 경우, 모든 이전 곱셈 결과가 무효화되므로 `products` 배열을 초기화합니다.
+   - 그렇지 않은 경우, `products` 배열의 마지막 값에 num을 곱한 값을 배열에 추가합니다.
+2. `getProduct(k: number)`:
+   - `products` 배열의 길이가 k보다 작거나 같은 경우, 마지막 k개의 숫자 중 하나 이상이 0이므로 결과는 0입니다.
+   - 그렇지 않은 경우, 누적곱을 사용하여 `products` 배열의 마지막 값과 `products` 배열의 n - k - 1번째 값을 나누어 마지막 k개의 숫자의 곱을 계산합니다.
+
+## 복잡도
+
+- 시간 복잡도:
+  - `add`: $O(1)$
+  - `getProduct`: $O(1)$
+- 공간 복잡도: $O(n)$, `n`은 `ProductOfNumbers`에서 추가되는 숫자의 수

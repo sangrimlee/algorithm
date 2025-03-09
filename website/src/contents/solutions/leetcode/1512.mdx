@@ -1,0 +1,25 @@
+---
+id: '1512'
+title: Number of Good Pairs
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+  - Math
+  - Counting
+url: https://leetcode.com/problems/number-of-good-pairs
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function numIdenticalPairs(nums: number[]): number {
+  const counter = new Map<number, number>();
+  for (const num of nums) {
+    counter.set(num, (counter.get(num) ?? 0) + 1);
+  }
+
+  return [...counter.values()].reduce((prev, count) => prev + (count * (count - 1)) / 2, 0);
+}
+```

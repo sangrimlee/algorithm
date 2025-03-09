@@ -1,0 +1,18 @@
+---
+id: '434'
+title: Number of Segments in a String
+category: Algorithms
+difficulty: Easy
+tags:
+  - String
+url: https://leetcode.com/problems/number-of-segments-in-a-string
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function countSegments(s: string): number {
+  const matched = s.match(/([^ ]+)/g);
+  return matched ? matched.length : 0;
+}
+```

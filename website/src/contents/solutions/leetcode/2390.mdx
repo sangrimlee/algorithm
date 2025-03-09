@@ -1,0 +1,32 @@
+---
+id: '2390'
+title: Removing Stars From a String
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Stack
+  - Simulation
+url: https://leetcode.com/problems/removing-stars-from-a-string
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function removeStars(s: string): string {
+  const stack: string[] = [];
+  for (const char of s) {
+    if (char === '*') {
+      stack.pop();
+    } else {
+      stack.push(char);
+    }
+  }
+  return stack.join('');
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(N)`

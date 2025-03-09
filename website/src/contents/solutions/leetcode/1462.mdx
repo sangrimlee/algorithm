@@ -1,0 +1,99 @@
+---
+id: '1462'
+title: Course Schedule IV
+category: Algorithms
+difficulty: Medium
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Graph
+  - Topological Sort
+url: https://leetcode.com/problems/course-schedule-iv
+---
+
+## Solution
+
+### Solution1: `Kahn's Algorithm`
+
+```typescript showLineNumbers
+export function checkIfPrerequisite(
+  numCourses: number,
+  prerequisites: number[][],
+  queries: number[][],
+): boolean[] {
+  const graph: number[][] = Array.from({ length: numCourses }, () => []);
+  const inDegrees: number[] = new Array(numCourses).fill(0);
+  for (const [a, b] of prerequisites) {
+    inDegrees[b] += 1;
+    graph[a].push(b);
+  }
+
+  let queue: number[] = [];
+  inDegrees.forEach((inDegree, course) => {
+    if (inDegree === 0) {
+      queue.push(course);
+    }
+  });
+
+  const isPrerequisites = Array.from({ length: numCourses }, () => new Set<number>());
+  while (0 < queue.length) {
+    const nextQueue: number[] = [];
+    for (const node of queue) {
+      for (const nextNode of graph[node]) {
+        isPrerequisites[nextNode].add(node);
+        for (const prereqNode of isPrerequisites[node]) {
+          isPrerequisites[nextNode].add(prereqNode);
+        }
+        inDegrees[nextNode] -= 1;
+        if (inDegrees[nextNode] === 0) {
+          nextQueue.push(nextNode);
+        }
+      }
+    }
+    queue = nextQueue;
+  }
+
+  return queries.map(([u, v]) => isPrerequisites[v].has(u));
+}
+```
+
+#### Complexity
+
+- Time: $O(n^3 + q)$
+- Space: $(n^2)$
+
+---
+
+### Solution2: `Floyd Warshall Algorithm`
+
+```typescript showLineNumbers
+export function checkIfPrerequisite(
+  numCourses: number,
+  prerequisites: number[][],
+  queries: number[][],
+): boolean[] {
+  const isPrerequisites: boolean[][] = Array.from({ length: numCourses }, () =>
+    new Array(numCourses).fill(false),
+  );
+
+  for (const [a, b] of prerequisites) {
+    isPrerequisites[a][b] = true;
+  }
+
+  for (let mid = 0; mid < numCourses; mid++) {
+    for (let start = 0; start < numCourses; start++) {
+      for (let end = 0; end < numCourses; end++) {
+        if (!isPrerequisites[start][end]) {
+          isPrerequisites[start][end] = isPrerequisites[start][mid] && isPrerequisites[mid][end];
+        }
+      }
+    }
+  }
+  return queries.map(([u, v]) => isPrerequisites[u][v]);
+}
+```
+
+#### Complexity
+
+- Time: $O(n^3 + q)$
+- Space: $(n^2)$

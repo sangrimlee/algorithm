@@ -1,0 +1,43 @@
+---
+id: '826'
+title: Most Profit Assigning Work
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Two Pointers
+  - Binary Search
+  - Greedy
+  - Sorting
+url: https://leetcode.com/problems/most-profit-assigning-work
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maxProfitAssignment(
+  difficulty: number[],
+  profit: number[],
+  worker: number[],
+): number {
+  const n = difficulty.length;
+  const jobs: number[][] = [];
+  for (let i = 0; i < n; i++) {
+    jobs.push([difficulty[i], profit[i]]);
+  }
+  worker.sort((a, b) => a - b);
+  jobs.sort((a, b) => (a[0] !== b[0] ? a[0] - b[0] : a[1] - b[1]));
+
+  let answer = 0;
+  let jobIndex = 0;
+  let maxProfit = 0;
+  for (const ability of worker) {
+    while (jobIndex < n && ability >= jobs[jobIndex][0]) {
+      maxProfit = Math.max(maxProfit, jobs[jobIndex][1]);
+      jobIndex += 1;
+    }
+    answer += maxProfit;
+  }
+  return answer;
+}
+```

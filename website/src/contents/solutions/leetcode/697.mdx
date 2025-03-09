@@ -1,0 +1,36 @@
+---
+id: '697'
+title: Degree of an Array
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+url: https://leetcode.com/problems/degree-of-an-array
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findShortestSubArray(nums: number[]): number {
+  const counter = new Map<number, number>();
+  const firstIndices = new Map<number, number>();
+
+  let answer = 0;
+  let degree = 0;
+  nums.forEach((num, i) => {
+    const firstIndex = firstIndices.get(num) ?? i;
+    firstIndices.set(num, firstIndex);
+    const count = (counter.get(num) ?? 0) + 1;
+    counter.set(num, count);
+    if (degree < count) {
+      degree = count;
+      answer = i - firstIndex + 1;
+    } else if (degree == count) {
+      answer = Math.min(answer, i - firstIndex + 1);
+    }
+  });
+
+  return answer;
+}
+```

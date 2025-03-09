@@ -1,0 +1,18 @@
+---
+id: '476'
+title: Number Complement
+category: Algorithms
+difficulty: Easy
+tags:
+  - Bit Manipulation
+url: https://leetcode.com/problems/number-complement
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findComplement(num: number): number {
+  const bitSize = Math.floor(Math.log2(num));
+  return num ^ ((2 << bitSize) - 1);
+}
+```

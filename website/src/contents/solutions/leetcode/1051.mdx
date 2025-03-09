@@ -1,0 +1,20 @@
+---
+id: '1051'
+title: Height Checker
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Sorting
+  - Counting Sort
+url: https://leetcode.com/problems/height-checker
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function heightChecker(heights: number[]): number {
+  const expected = [...heights].sort((a, b) => a - b);
+  return heights.filter((height, i) => height !== expected[i]).length;
+}
+```

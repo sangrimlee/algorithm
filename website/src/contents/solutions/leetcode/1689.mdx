@@ -1,0 +1,18 @@
+---
+id: '1689'
+title: Partitioning Into Minimum Number Of Deci-Binary Numbers
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Greedy
+url: https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minPartitions(n: string): number {
+  return n.split('').reduce((prev, curr) => (prev < +curr ? +curr : prev), 0);
+}
+```

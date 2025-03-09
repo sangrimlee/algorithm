@@ -1,0 +1,38 @@
+---
+id: '2275'
+title: Largest Combination With Bitwise AND Greater Than Zero
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Bit Manipulation
+  - Counting
+url: https://leetcode.com/problems/largest-combination-with-bitwise-and-greater-than-zero
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function largestCombination(candidates: number[]): number {
+  const MAX_SIZE = 10e7;
+
+  let answer = 0;
+  for (let bit = 1; bit < MAX_SIZE; bit <<= 1) {
+    let count = 0;
+    for (const candidate of candidates) {
+      if ((candidate & bit) !== 0) {
+        count += 1;
+      }
+    }
+    answer = Math.max(answer, count);
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(NlogM)`
+  - `M`: `candidates`가 가질 수 있는 가장 큰 값, 문제에서는 `10^7`
+- Space: `O(1)`

@@ -1,0 +1,19 @@
+---
+id: '1846'
+title: Maximum Element After Decreasing and Rearranging
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Greedy
+  - Sorting
+url: https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function maximumElementAfterDecrementingAndRearranging(arr: number[]): number {
+  return arr.sort((a, b) => a - b).reduce((prev, num) => Math.min(prev + 1, num), 0);
+}
+```

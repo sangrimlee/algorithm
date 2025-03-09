@@ -1,0 +1,41 @@
+---
+id: '2352'
+title: Equal Row and Column Pairs
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Matrix
+  - Simulation
+url: https://leetcode.com/problems/equal-row-and-column-pairs
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { range } from '@algorithm/lib';
+
+export function equalPairs(grid: number[][]): number {
+  const n = grid.length;
+
+  const isEqualRowAndColumn = (row: number, col: number) => {
+    for (const i of range(n)) {
+      if (grid[row][i] !== grid[i][col]) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  let answer = 0;
+  for (const row of range(n)) {
+    for (const col of range(n)) {
+      if (isEqualRowAndColumn(row, col)) {
+        answer += 1;
+      }
+    }
+  }
+  return answer;
+}
+```

@@ -1,0 +1,33 @@
+---
+id: '3095'
+title: Shortest Subarray With OR at Least K I
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Bit Manipulation
+  - Sliding Window
+url: https://leetcode.com/problems/shortest-subarray-with-or-at-least-k-i
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumSubarrayLength(nums: number[], k: number): number {
+  const n = nums.length;
+  let answer = Number.MAX_SAFE_INTEGER;
+
+  for (let start = 0; start < n; start++) {
+    let curr = 0;
+    for (let end = start; end < n; end++) {
+      curr = curr | nums[end];
+      if (k <= curr) {
+        answer = Math.min(answer, end - start + 1);
+        break;
+      }
+    }
+  }
+
+  return answer === Number.MAX_SAFE_INTEGER ? -1 : answer;
+}
+```

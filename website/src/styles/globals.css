@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-animate';
+
+@import './font.css';
+@import './color.css';
+@import './shadow.css';
+@import './z-index.css';
+
+@import './code-block.css';
+@import './markdown.css';
+
+@layer base {
+  :root {
+    --navbar-height: 3.5rem;
+    --content-height: calc(100dvh - var(--navbar-height));
+    --content-width: 90rem;
+    --content-inset-left: max(env(safe-area-inset-left), 1.25rem);
+    --content-inset-right: max(env(safe-area-inset-right), 1.25rem);
+  }
+
+  * {
+    @apply border-gray-7;
+  }
+
+  ::selection {
+    @apply bg-pink-9 text-white;
+  }
+
+  html,
+  body {
+    @apply bg-gray-1 text-gray-12 antialiased;
+  }
+}
+
+@layer utilities {
+  .px-inset {
+    @apply pr-(--content-inset-right) pl-(--content-inset-left);
+  }
+
+  .container {
+    @apply mx-auto w-full max-w-(--content-width) pr-(--content-inset-right) pl-(--content-inset-left);
+  }
+
+  .styled-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray7) transparent;
+    scrollbar-gutter: stable;
+  }
+}

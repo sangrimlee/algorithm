@@ -1,0 +1,25 @@
+---
+id: '1337'
+title: The K Weakest Rows in a Matrix
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Binary Search
+  - Sorting
+  - Heap (Priority Queue)
+  - Matrix
+url: https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function kWeakestRows(mat: number[][], k: number): number[] {
+  return mat
+    .map((row, i) => [row.reduce((acc, curr) => acc + curr, 0), i])
+    .sort(([a], [b]) => a - b)
+    .slice(0, k)
+    .map(([, i]) => i);
+}
+```

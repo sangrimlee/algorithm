@@ -1,0 +1,34 @@
+---
+id: '785'
+title: Is Graph Bipartite?
+category: Algorithms
+difficulty: Medium
+tags:
+  - Depth-First Search
+  - Breadth-First Search
+  - Union Find
+  - Graph
+url: https://leetcode.com/problems/is-graph-bipartite
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function isBipartite(graph: number[][]): boolean {
+  const n = graph.length;
+  const colors = new Array(n).fill(-1);
+
+  const dfs = (color: number, index: number): boolean => {
+    if (colors[index] !== -1) {
+      return color === colors[index];
+    }
+    colors[index] = color;
+    return graph[index].every((nextIndex) => dfs(color ^ 1, nextIndex));
+  };
+
+  return new Array(n)
+    .fill(undefined)
+    .map((_, i) => i)
+    .every((index) => colors[index] !== -1 || dfs(0, index));
+}
+```

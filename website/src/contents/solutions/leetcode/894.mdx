@@ -1,0 +1,39 @@
+---
+id: '894'
+title: All Possible Full Binary Trees
+category: Algorithms
+difficulty: Medium
+tags:
+  - Dynamic Programming
+  - Tree
+  - Recursion
+  - Memoization
+  - Binary Tree
+url: https://leetcode.com/problems/all-possible-full-binary-trees
+---
+
+## Solution
+
+```typescript showLineNumbers
+import { TreeNode } from '@algorithm/lib';
+
+export function allPossibleFBT(n: number): Array<TreeNode | null> {
+  if (n % 2 === 0) {
+    return [];
+  }
+  if (n === 1) {
+    return [new TreeNode(0)];
+  }
+
+  const answer = new Array<TreeNode | null>();
+  for (let i = 1; i < n; i += 2) {
+    for (const leftNode of allPossibleFBT(i)) {
+      for (const rightNode of allPossibleFBT(n - 1 - i)) {
+        const rootNode = new TreeNode(0, leftNode, rightNode);
+        answer.push(rootNode);
+      }
+    }
+  }
+  return answer;
+}
+```

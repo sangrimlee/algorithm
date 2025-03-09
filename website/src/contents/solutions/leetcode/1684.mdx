@@ -1,0 +1,30 @@
+---
+id: '1684'
+title: Count the Number of Consistent Strings
+category: Algorithms
+difficulty: Easy
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Bit Manipulation
+  - Counting
+url: https://leetcode.com/problems/count-the-number-of-consistent-strings
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function countConsistentStrings(allowed: string, words: string[]): number {
+  const allowedSet = new Set(allowed);
+  const isAllowed = (word: string) => {
+    for (const char of word) {
+      if (!allowedSet.has(char)) {
+        return false;
+      }
+    }
+    return true;
+  };
+  return words.filter(isAllowed).length;
+}
+```

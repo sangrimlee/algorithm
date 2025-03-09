@@ -1,0 +1,30 @@
+---
+id: '2924'
+title: Find Champion II
+category: Algorithms
+difficulty: Medium
+tags:
+  - Graph
+url: https://leetcode.com/problems/find-champion-ii
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findChampion(n: number, edges: number[][]): number {
+  let championCount = n;
+  const isChampion = new Array<boolean>(n).fill(true);
+  for (const [, loser] of edges) {
+    if (isChampion[loser]) {
+      isChampion[loser] = false;
+      championCount -= 1;
+    }
+  }
+  return championCount === 1 ? isChampion.indexOf(true) : -1;
+}
+```
+
+### Complexity
+
+- Time: $O(n)$
+- Space: $O(n)$

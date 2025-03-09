@@ -1,0 +1,33 @@
+---
+id: '2244'
+title: Minimum Rounds to Complete All Tasks
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Greedy
+  - Counting
+url: https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumRounds(tasks: number[]): number {
+  const counts = new Map<number, number>();
+  for (const task of tasks) {
+    counts.set(task, (counts.get(task) || 0) + 1);
+  }
+
+  let minimumRound = 0;
+  for (const count of counts.values()) {
+    if (count === 1) {
+      return -1;
+    }
+    minimumRound += Math.floor((count + 2) / 3);
+  }
+
+  return minimumRound;
+}
+```

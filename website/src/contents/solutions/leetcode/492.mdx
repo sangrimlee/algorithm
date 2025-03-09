@@ -1,0 +1,23 @@
+---
+id: '492'
+title: Construct the Rectangle
+category: Algorithms
+difficulty: Easy
+tags:
+  - Math
+url: https://leetcode.com/problems/construct-the-rectangle
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function constructRectangle(area: number): number[] {
+  const maxWidth = Math.floor(Math.sqrt(area));
+  for (let width = maxWidth; 1 < width; width--) {
+    if (area % width === 0) {
+      return [area / width, width];
+    }
+  }
+  return [area, 1];
+}
+```

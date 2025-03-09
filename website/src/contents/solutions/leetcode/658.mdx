@@ -1,0 +1,28 @@
+---
+id: '658'
+title: Find K Closest Elements
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Two Pointers
+  - Binary Search
+  - Sliding Window
+  - Sorting
+  - Heap (Priority Queue)
+url: https://leetcode.com/problems/find-k-closest-elements
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function findClosestElements(arr: number[], k: number, x: number): number[] {
+  if (arr.length === k) {
+    return arr;
+  }
+  return arr
+    .sort((a, b) => Math.abs(a - x) - Math.abs(b - x))
+    .slice(0, k)
+    .sort((a, b) => a - b);
+}
+```

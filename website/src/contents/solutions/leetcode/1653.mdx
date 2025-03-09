@@ -1,0 +1,33 @@
+---
+id: '1653'
+title: Minimum Deletions to Make String Balanced
+category: Algorithms
+difficulty: Medium
+tags:
+  - String
+  - Dynamic Programming
+  - Stack
+url: https://leetcode.com/problems/minimum-deletions-to-make-string-balanced
+---
+
+## Solution
+
+```typescript showLineNumbers
+export function minimumDeletions(s: string): number {
+  let answer = 0;
+  let bCount = 0;
+  for (const char of s) {
+    if (char === 'b') {
+      bCount += 1;
+    } else {
+      answer = Math.min(answer + 1, bCount);
+    }
+  }
+  return answer;
+}
+```
+
+### Complexity
+
+- Time: `O(N)`
+- Space: `O(1)`
