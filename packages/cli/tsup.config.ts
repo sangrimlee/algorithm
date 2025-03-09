@@ -2,10 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig((options) => {
   return {
-    entry: {
-      algorithm: './src/algorithm.ts',
-      markdown: './src/markdown.ts',
-    },
+    entry: ['./src/cli.ts'],
     format: ['esm'],
     sourcemap: true,
     minify: !options.watch,

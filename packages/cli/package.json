@@ -5,8 +5,7 @@
   "description": "Template generation cli",
   "type": "module",
   "bin": {
-    "algorithm": "./bin/algorithm.js",
-    "markdown": "./bin/markdown.js"
+    "algorithm": "./bin/cli.js"
   },
   "files": [
     "bin",
