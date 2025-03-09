@@ -16,22 +16,16 @@ const BADGE_VARIANT_BY_LEVEL = {
   Hard: 'red',
 } as const;
 
-function getTextByLevel(level: ProblemLevel): string {
-  if (typeof level === 'number') {
-    return `Lv. ${level.toString()}`;
-  }
-  return level === 'Medium' ? 'Med.' : level;
-}
-
 interface LevelBadgeProps {
   size?: BadgeProps['size'];
   level: ProblemLevel;
 }
 
 export function LevelBadge({ size, level }: LevelBadgeProps) {
+  const badgeText = typeof level === 'number' ? `Lv. ${level.toString()}` : level;
   return (
     <Badge size={size} variant={BADGE_VARIANT_BY_LEVEL[level]}>
-      {getTextByLevel(level)}
+      {badgeText}
     </Badge>
   );
 }
