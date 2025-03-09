@@ -1,0 +1,8 @@
+{
+  "id": "1780",
+  "title": "Check if Number is a Sum of Powers of Three",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Math"],
+  "url": "https://leetcode.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate"
+}
