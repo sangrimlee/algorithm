@@ -1,8 +1,8 @@
 packages:
-  - 'packages/*'
-  - 'tooling/*'
-  - 'solution'
-  - 'website'
+  - packages/*
+  - tooling/*
+  - solution
+  - website
 
 catalog:
   eslint: ^9.20.1
@@ -15,3 +15,7 @@ catalogs:
     jest: ^29.7.0
     ts-jest: ^29.2.5
     '@types/jest': ^29.5.14
+
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
