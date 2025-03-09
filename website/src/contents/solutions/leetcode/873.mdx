@@ -1,0 +1,59 @@
+---
+id: '873'
+title: Length of Longest Fibonacci Subsequence
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Dynamic Programming
+  - Hash Table
+url: https://leetcode.com/problems/length-of-longest-fibonacci-subsequence
+---
+
+## 문제 설명
+
+- **엄격히 증가하는(Strictly Increasing) 정수 배열 `arr`** 가 주어진다.
+- **피보나치 수열과 유사한 가장 긴 부분 수열의 길이**를 반환한다.
+- 피보나지 수열과 유사하다는건 다음과 같다:
+  - **길이가 3 이상이어야 한다.**
+  - **각 원소는 이전 두 원소의 합**과 같아야 한다. (`xi + xi+1 == xi+2`)
+
+## 문제 풀이
+
+### `Dynamic Programming`
+
+- 두 숫자 `prev`와 `curr`가 마지막 두 원소일 때, 피보나치 길이를 저장한다.
+  - **`dp[prev,curr]`: (prev, curr)가 마지막 두 숫자일 때의 피보나치 최대 길이**
+- **현재 숫자 `curr`에서 이전 숫자 `prev`를 뺀 값, `diff`가 `arr`에 존재하면, 피보나치 수열 확장 가능하다.**
+  - **즉, `diff`가 `prev` 이전에 존재하는 숫자라면 → (diff, prev, curr)가 피보나치-like 수열을 이룰 수 있다.**
+
+```typescript showLineNumbers
+function lenLongestFibSubseq(arr: number[]): number {
+  const n = arr.length;
+  const dp = new Map<string, number>();
+  const set = new Set<number>(arr);
+
+  let maxLength = 0;
+  for (let i = 0; i < n; i++) {
+    const curr = arr[i];
+    for (let j = 0; j < i; j++) {
+      const prev = arr[j];
+      const diff = curr - prev;
+
+      if (diff < prev && set.has(diff)) {
+        const prevKey = `${diff},${prev}`;
+        const currKey = `${prev},${curr}`;
+        const prevLength = dp.get(prevKey) ?? 2;
+        dp.set(currKey, prevLength + 1);
+        maxLength = Math.max(maxLength, prevLength + 1);
+      }
+    }
+  }
+  return maxLength;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n^2)$
+- 공간 복잡도: $O(n^2)$
