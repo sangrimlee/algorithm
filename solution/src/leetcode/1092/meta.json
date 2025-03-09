@@ -1,0 +1,8 @@
+{
+  "id": "1092",
+  "url": "https://leetcode.com/problems/shortest-common-supersequence/",
+  "title": "Shortest Common Supersequence",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["String", "Dynamic Programming"]
+}
