@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import * as Breadcrumb from '@/components/ui/breadcrumb';
+import { LevelBadge } from '@/components/problem-badge';
+import { ProblemLink } from '@/components/problem-link';
+import { TableOfContents } from '@/components/table-of-contents';
 import { compileMDX } from '@/utils/mdx';
 import { getProgrammersPageBySlug, getProgrammersPageSlugs } from '../_api';
-import { TableOfContents } from '@/components/table-of-contents';
-import { ProblemLink } from '@/components/problem-link';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -57,6 +58,9 @@ export default async function ProgrammersPage({ params }: PageProps) {
         </Breadcrumb.Root>
         <div className="mt-4 mb-8">
           <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
+          <div className="mt-4 flex flex-wrap gap-1">
+            <LevelBadge level={metadata.level} />
+          </div>
         </div>
         <div className="markdown">{content}</div>
         <div className="mt-12 border-t pt-6">

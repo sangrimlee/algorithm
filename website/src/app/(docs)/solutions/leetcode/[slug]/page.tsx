@@ -2,10 +2,12 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import * as Breadcrumb from '@/components/ui/breadcrumb';
+import { Badge } from '@/components/ui/badge';
+import { LevelBadge } from '@/components/problem-badge';
+import { ProblemLink } from '@/components/problem-link';
 import { TableOfContents } from '@/components/table-of-contents';
 import { compileMDX } from '@/utils/mdx';
 import { getLeetCodePageBySlug, getLeetCodePageSlugs } from '../_api';
-import { ProblemLink } from '@/components/problem-link';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -58,6 +60,14 @@ export default async function LeetCodePage({ params }: PageProps) {
         </Breadcrumb.Root>
         <div className="mt-4 mb-8">
           <h1 className="text-4xl font-semibold tracking-tight text-gray-12">{metadata.title}</h1>
+          <div className="mt-4 flex flex-wrap gap-1">
+            <LevelBadge level={metadata.difficulty} />
+            {metadata.tags?.map((tag) => (
+              <Badge key={tag} variant="gray-subtle">
+                {tag}
+              </Badge>
+            ))}
+          </div>
         </div>
         <div className="markdown" data-docs="true">
           {content}
