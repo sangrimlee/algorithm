@@ -1,0 +1,8 @@
+{
+  "id": "2467",
+  "url": "https://leetcode.com/problems/most-profitable-path-in-a-tree/",
+  "title": "Most Profitable Path in a Tree",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Breadth-First Search", "Depth-First Search", "Graph", "Tree"]
+}
