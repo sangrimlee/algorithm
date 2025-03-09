@@ -2,6 +2,7 @@ import { Command } from 'commander';
 import { z } from 'zod';
 
 import { generatePage } from '@/lib/generate/page';
+import { handleError } from '@/utils/handle-error';
 
 const pageOptionsSchema = z.object({
   dir: z.string(),
@@ -20,6 +21,6 @@ export const page = new Command()
       const options = pageOptionsSchema.parse(opts);
       await generatePage(options.dir, options.outDir, options.force);
     } catch (error) {
-      console.error(error);
+      handleError(error);
     }
   });

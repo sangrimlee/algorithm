@@ -8,6 +8,7 @@ import {
   generateProgrammers,
 } from '@/lib/generate';
 import { choiceGenereateTypePrompt, leetCodePrompt, programmersPrompt } from '@/lib/prompt';
+import { handleError } from '@/utils/handle-error';
 
 const solutionOptionsSchema = z.object({
   outDir: z.string(),
@@ -21,7 +22,6 @@ export const solution = new Command()
     try {
       const options = solutionOptionsSchema.parse(opts);
       const generateType = await choiceGenereateTypePrompt();
-
       switch (generateType) {
         case 'LeetCode': {
           const id = await leetCodePrompt();
@@ -47,6 +47,6 @@ export const solution = new Command()
         }
       }
     } catch (error) {
-      console.error(error);
+      handleError(error);
     }
   });

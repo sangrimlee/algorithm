@@ -2,6 +2,7 @@ import { Command } from 'commander';
 import { z } from 'zod';
 
 import { generateREADME } from '@/lib/generate';
+import { handleError } from '@/utils/handle-error';
 
 const readmeOptionsSchema = z.object({
   dir: z.string(),
@@ -18,6 +19,6 @@ export const readme = new Command()
       const options = readmeOptionsSchema.parse(opts);
       await generateREADME(options.dir, options.outDir);
     } catch (error) {
-      console.error(error);
+      handleError(error);
     }
   });
