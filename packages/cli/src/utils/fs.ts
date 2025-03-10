@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { format } from '@/utils/format';
+
 /**
  * 주어진 파일 또는 디렉터리 경로가 존재하는지 확인
  * @param dirOrFilePath 파일 또는 디렉터리 경로
@@ -48,5 +50,6 @@ export async function ensureWriteFile(filePath: string, data: string): Promise<v
  * @param obj Object 형식의 데이터
  */
 export async function ensureWriteJson(filePath: string, obj: object): Promise<void> {
-  await ensureWriteFile(filePath, JSON.stringify(obj, null, 2));
+  const content = await format(JSON.stringify(obj, null, 2), 'json');
+  await ensureWriteFile(filePath, content);
 }
