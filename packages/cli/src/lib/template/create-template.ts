@@ -1,6 +1,7 @@
 import handlebars from 'handlebars';
 
 import { format } from '@/utils/format';
+import { README_TEMPLATE } from './templates/readme';
 import { SOLUTION_TEMPLATE, SOLUTION_TEST_TEMPLATE } from './templates/solution';
 import { helpers } from './helpers';
 
@@ -12,6 +13,10 @@ const TEMPLATES = {
   SOLUTION_TEST: {
     template: SOLUTION_TEST_TEMPLATE,
     parser: 'typescript',
+  },
+  README: {
+    template: README_TEMPLATE,
+    parser: 'markdown',
   },
 } as const;
 

@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import { z } from 'zod';
 
 import { handleError } from '@/utils/handle-error';
-import { logger } from '@/utils/logger';
+import { generateREADME } from '@/lib/generate/readme';
 
 const readmeOptionsSchema = z.object({
   dir: z.string(),
@@ -17,7 +17,7 @@ export const readme = new Command()
   .action(async (opts) => {
     try {
       const options = await readmeOptionsSchema.parseAsync(opts);
-      logger.log(options);
+      await generateREADME(options.dir, options.outDir);
     } catch (error) {
       handleError(error);
     }
