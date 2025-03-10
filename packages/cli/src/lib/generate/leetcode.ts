@@ -5,8 +5,9 @@ import {
   getLeetCodeQuestionBySlug,
   getLeetCodeSlugById,
 } from '@/api/leetcode';
-import { exists } from '@/utils/fs';
+import { ensureWriteFile, ensureWriteJson, exists } from '@/utils/fs';
 import { confirmPrompt, numberPrompt } from '@/lib/prompt';
+import { createTemplate } from '../template';
 
 export async function generateLeetCodeBySlug(outDir: string, titleSlug: string): Promise<void> {
   const question = await getLeetCodeQuestionBySlug(titleSlug);
@@ -16,12 +17,29 @@ export async function generateLeetCodeBySlug(outDir: string, titleSlug: string):
   if (isExist) {
     const isContinue = await confirmPrompt('해당 문제가 존재합니다. 계속하시겠습니까?');
     if (!isContinue) {
-      process.exit(1);
+      return;
     }
   }
 
-  // TODO: 템플릿 생성
-  await Promise.all([]);
+  const leetCodeQuestion = { siteName: 'LeetCode', fileName, ...question };
+  const meta = {
+    id: question.id,
+    url: question.url,
+    title: question.title,
+    category: question.title,
+    difficulty: question.difficulty,
+    tags: question.tags,
+  };
+
+  const [solutionTemplate, solutionTestTemplate] = await Promise.all([
+    createTemplate('SOLUTION', leetCodeQuestion),
+    createTemplate('SOLUTION_TEST', leetCodeQuestion),
+  ]);
+  await Promise.all([
+    ensureWriteFile(path.join(dirPath, `${fileName}.ts`), solutionTemplate),
+    ensureWriteFile(path.join(dirPath, `${fileName}.test.ts`), solutionTestTemplate),
+    ensureWriteJson(path.join(dirPath, 'meta.json'), meta),
+  ]);
 }
 
 export async function generateLeetCodeDailyChallenge(outDir: string): Promise<void> {
