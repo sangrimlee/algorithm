@@ -1,8 +1,8 @@
 import { Command } from 'commander';
 import { z } from 'zod';
 
-import { generatePage } from '@/lib/generate/page';
 import { handleError } from '@/utils/handle-error';
+import { logger } from '@/utils/logger';
 
 const pageOptionsSchema = z.object({
   dir: z.string(),
@@ -18,8 +18,8 @@ export const page = new Command()
   .option('--force', 'Force generate page', false)
   .action(async (opts) => {
     try {
-      const options = pageOptionsSchema.parse(opts);
-      await generatePage(options.dir, options.outDir, options.force);
+      const options = await pageOptionsSchema.parseAsync(opts);
+      logger.log(options);
     } catch (error) {
       handleError(error);
     }
