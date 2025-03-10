@@ -28,6 +28,17 @@ export function readFile(filePath: string): Promise<string> {
 }
 
 /**
+ * 주어진 경로의 json 파일을 읽음
+ *
+ * @param filePath 파일 경로
+ * @returns parse된 json 파일의 객체
+ */
+export async function readJsonFile<T>(filePath: string): Promise<T> {
+  const content = await readFile(filePath);
+  return JSON.parse(content) as T;
+}
+
+/**
  * 주어진 경로에 주어진 데이터의 파일을 생성
  * 기존의 `writeFile`과 다르게, 해당하는 파일의 경로(디렉터리)가 존재하지 않는다면 생성 후 파일 생성
  *
