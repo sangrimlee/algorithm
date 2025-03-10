@@ -1,15 +1,17 @@
-import inquirer from 'inquirer';
+import { select } from '@inquirer/prompts';
 
-const SOLUTION_CHOICES = ['LeetCode', 'LeetCode Daily Challenge'] as const;
-
-type SolutionChoice = (typeof SOLUTION_CHOICES)[number];
+type SolutionChoice = 'LeetCode' | 'LeetCode Daily Challenge';
 
 export async function solutionPrompt(): Promise<SolutionChoice> {
-  const { choice } = await inquirer.prompt<{ choice: SolutionChoice }>({
-    type: 'list',
-    name: 'choice',
+  const answer = await select<SolutionChoice>({
     message: '문제 생성 방식을 선택하세요.',
-    choices: SOLUTION_CHOICES,
+    choices: [
+      { value: 'LeetCode', description: 'LeetCode 템플릿 생성' },
+      {
+        value: 'LeetCode Daily Challenge',
+        description: 'LeetCode Daily Challenge 템플릿 생성',
+      },
+    ],
   });
-  return choice;
+  return answer;
 }
