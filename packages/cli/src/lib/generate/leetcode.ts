@@ -26,7 +26,7 @@ export async function generateLeetCodeBySlug(outDir: string, titleSlug: string):
     id: question.id,
     url: question.url,
     title: question.title,
-    category: question.title,
+    category: question.category,
     difficulty: question.difficulty,
     tags: question.tags,
   };
