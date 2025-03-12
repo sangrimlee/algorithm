@@ -12,7 +12,7 @@ const solutionOptionsSchema = z.object({
 
 export const solution = new Command()
   .name('solution')
-  .description('Generate template for @algorithm/solution')
+  .description('@algorithm/solution의 문제 풀이 템플릿 생성')
   .option('-d, --out-dir <dir>', 'Output directory', '.')
   .action(async (opts) => {
     try {

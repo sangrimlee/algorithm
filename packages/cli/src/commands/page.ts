@@ -11,7 +11,7 @@ const pageOptionsSchema = z.object({
 
 export const page = new Command()
   .name('page')
-  .description('Page generator for @algorithm/website')
+  .description('website의 페이지 템플릿 생성')
   .option('-d, --dir <dir>', 'Solution directory', '.')
   .option('-o, --out-dir <dir>', 'Output directory', '.')
   .action(async (opts) => {

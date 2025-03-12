@@ -11,7 +11,7 @@ const readmeOptionsSchema = z.object({
 
 export const readme = new Command()
   .name('readme')
-  .description('README.md generator for @algorithm/solution')
+  .description('@algorithm/solution의 README.md 생성')
   .option('-d, --dir <dir>', 'Solution directory', '.')
   .option('-o, --out-dir <dir>', 'Output directory', '.')
   .action(async (opts) => {

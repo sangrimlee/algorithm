@@ -8,7 +8,7 @@ import packageJson from '../package.json';
 
 function main() {
   const program = new Command()
-    .name(packageJson.name)
+    .name('algorithm')
     .description(packageJson.version)
     .version(packageJson.version, '-v, --version');
 
