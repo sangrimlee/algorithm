@@ -1,13 +1,27 @@
 # @algorithm/cli
 
-## Features
+내부에서 사용하는 다양한 템플릿을 생성하는 CLI
 
-- [x] 문제 풀이를 템플릿들을 생성해주는 CLI
-- [x] LeetCode Daily Challenge를 위한 템플릿 자동 생성 기능
-- [x] Programmers 문제 번호에 따른 템플릿 자동 생성 기능
-- [x] LeetCode 문제 번호에 따른 템플릿 자동 생성 기능
-- [x] TestCase 자동 생성 기능
-- [x] 푼 문제들을 README.md로 정리해주는 기능
-- [x] Programmers의 TestCase 생성 관련 기능 추가
+## 문제 풀이 템플릿 생성
 
-## Todo
+`@algorithm/solution`의 문제 풀이 템플릿 생성
+
+```bash
+algorithm solution
+```
+
+## 문제 풀이 목록 README.md 생성
+
+`@algorithm/solution`의 README.md 생성
+
+```bash
+algorithm readme
+```
+
+## 페이지 템플릿 생성
+
+`website`의 페이지 템플릿 생성
+
+```bash
+algorithm page
+```

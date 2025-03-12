@@ -1,3 +1,3 @@
-export * from './generate-type';
-export * from './leetcode';
-export * from './programmers';
+export { confirmPrompt } from './confirm';
+export { numberPrompt } from './number';
+export { solutionPrompt } from './solution';

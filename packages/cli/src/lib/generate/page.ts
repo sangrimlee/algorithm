@@ -1,86 +1,24 @@
-import { existsSync } from 'node:fs';
 import path from 'node:path';
 
-import { getLeetCodeQuestionBySlug } from '@/api/leetcode';
-import { groupByCodingSite, getSolutions } from '@/api/solution';
+import { createTemplate } from '@/lib/template';
 import { ensureWriteFile } from '@/utils/fs';
-import {
-  createIntroductionPageTemplate,
-  createLeetCodeSolutionPageTemplate,
-  createProgrammersSolutionPageTemplate,
-} from '@/lib/template';
+import { getMissingPages } from '@/api/page';
 
-import { EXTNAME } from '@/constants';
-import type { LeetCodeSolution, ProgrammersSolution, Solution } from '@/types';
-import { CodingSite } from '@/types';
-import { createSolutionPageMeta } from '../template/page';
-
-async function generateLeetCodeSolutionPage(solution: LeetCodeSolution, pagePath: string) {
-  try {
-    const { difficulty, topics } = await getLeetCodeQuestionBySlug(solution.slug);
-    const template = await createLeetCodeSolutionPageTemplate(solution, difficulty, topics);
-    await ensureWriteFile(pagePath, template);
-  } catch (_error) {
-    const template = await createLeetCodeSolutionPageTemplate(solution);
-    await ensureWriteFile(pagePath, template);
-  }
-}
-
-async function generateProgrammersSolutionPage(solution: ProgrammersSolution, pagePath: string) {
-  const template = await createProgrammersSolutionPageTemplate(solution);
-  await ensureWriteFile(pagePath, template);
-}
-
-function generateSolutionPage(solution: Solution, outDir: string, force: boolean) {
-  const pagePath = path.join(
-    outDir,
-    solution.codingSite.toLowerCase(),
-    solution.id,
-    `page${EXTNAME.MDX}`,
+async function generatePageBySite(siteName: string, solutionDir: string, outDir: string) {
+  const pages = await getMissingPages(
+    path.join(solutionDir, siteName),
+    path.join(outDir, siteName),
   );
-
-  if (existsSync(pagePath) && !force) {
-    return;
+  for (const page of pages) {
+    const template = await createTemplate('PAGE', page);
+    await ensureWriteFile(path.join(outDir, siteName, `${page.meta.id}.mdx`), template);
   }
-
-  if (solution.codingSite === CodingSite.LeetCode) {
-    return generateLeetCodeSolutionPage(solution, pagePath);
-  }
-  return generateProgrammersSolutionPage(solution, pagePath);
 }
 
-export async function generateSolutionPageMeta(
-  codingSite: CodingSite,
-  solutions: Solution[],
-  outDir: string,
-) {
-  const meta = Object.fromEntries(solutions.map(({ id, title }) => [id, title]));
-  const template = await createSolutionPageMeta(meta);
-
-  await ensureWriteFile(
-    path.join(outDir, codingSite.toLowerCase(), `_meta${EXTNAME.TYPESCRIPT}`),
-    template,
-  );
-}
-
-export async function generateIntroductionPage(
-  groups: Map<CodingSite, Solution[]>,
-  outDir: string,
-) {
-  const template = await createIntroductionPageTemplate(groups);
-
-  await ensureWriteFile(path.join(outDir, `page${EXTNAME.MDX}`), template);
-}
-
-export async function generatePage(solutionDir: string, outDir: string, force: boolean) {
-  const solutions = await getSolutions(solutionDir, outDir);
-  const groups = groupByCodingSite(solutions);
-
-  await Promise.all([
-    ...solutions.map((solution) => generateSolutionPage(solution, outDir, force)),
-    ...Array.from(groups).map(([codingSite, solution]) =>
-      generateSolutionPageMeta(codingSite, solution, outDir),
+export async function generatePage(solutionDir: string, outDir: string) {
+  await Promise.all(
+    ['programmers', 'leetcode'].map((siteName) =>
+      generatePageBySite(siteName, solutionDir, outDir),
     ),
-    generateIntroductionPage(groups, outDir),
-  ]);
+  );
 }

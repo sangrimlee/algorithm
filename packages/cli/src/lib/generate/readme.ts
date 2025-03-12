@@ -1,12 +1,13 @@
 import path from 'node:path';
 
-import { createREADMETemplate } from '@/lib/template';
+import { getSolutions } from '@/api/solution';
+import { createTemplate } from '@/lib/template';
 import { ensureWriteFile } from '@/utils/fs';
-import { groupByCodingSite, getSolutions } from '@/api/solution';
 
 export async function generateREADME(solutionDir: string, outDir: string) {
-  const solutions = await getSolutions(solutionDir, outDir);
-  const solutionGroups = groupByCodingSite(solutions);
+  const leetcode = await getSolutions(path.join(solutionDir, 'leetcode'), outDir);
+  const programmers = await getSolutions(path.join(solutionDir, 'programmers'), outDir);
 
-  await ensureWriteFile(path.join(outDir, 'README.md'), await createREADMETemplate(solutionGroups));
+  const template = await createTemplate('README', { leetcode, programmers });
+  await ensureWriteFile(path.join(outDir, 'README.md'), template);
 }

@@ -1,1 +1,1 @@
-export { getProgrammersProblemById } from './problem-by-id';
+export { getProgrammersQuestionById } from './get-qusetion-by-id';

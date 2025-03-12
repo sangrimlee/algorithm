@@ -1,3 +1,3 @@
-export { getLeetCodeDailyChallenge } from './daily-challenge';
-export { getLeetCodeQuestionBySlug } from './question-by-slug';
-export { getLeetCodeSlugById } from './slug-by-id';
+export { getLeetCodeDailyChallenge } from './get-daily-challenge';
+export { getLeetCodeQuestionBySlug, type LeetCodeQuestion } from './get-question-by-slug';
+export { getLeetCodeSlugById } from './get-slug-by-id';
