@@ -1,4 +1,5 @@
 import type { HelperDelegate } from 'handlebars';
+import { stringify } from 'yaml';
 
 export const helpers = {
   add: (context: number, arg: number) => {
@@ -11,5 +12,8 @@ export const helpers = {
   },
   removeComments: (text: string) => {
     return text.replace(/\/\/.*|\/\*[\s\S]*?\*\//g, '');
+  },
+  yaml: (value: unknown) => {
+    return stringify(value);
   },
 } satisfies Record<string, HelperDelegate>;

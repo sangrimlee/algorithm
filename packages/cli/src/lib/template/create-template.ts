@@ -3,6 +3,7 @@ import handlebars from 'handlebars';
 import { format } from '@/utils/format';
 import { README_TEMPLATE } from './templates/readme';
 import { SOLUTION_TEMPLATE, SOLUTION_TEST_TEMPLATE } from './templates/solution';
+import { PAGE_TEMPLATE } from './templates/page';
 import { helpers } from './helpers';
 
 const TEMPLATES = {
@@ -17,6 +18,10 @@ const TEMPLATES = {
   README: {
     template: README_TEMPLATE,
     parser: 'markdown',
+  },
+  PAGE: {
+    template: PAGE_TEMPLATE,
+    parser: 'mdx',
   },
 } as const;
 
