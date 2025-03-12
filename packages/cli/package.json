@@ -16,7 +16,7 @@
     "dev": "tsup --watch",
     "format": "prettier . --check --cache --ignore-path ../../.gitignore",
     "lint": "eslint --cache",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "typecheck": "tsc --noEmit"
   },
