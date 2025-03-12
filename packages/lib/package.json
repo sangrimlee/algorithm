@@ -27,7 +27,7 @@
     "eslint": "catalog:",
     "jest": "catalog:jest",
     "ts-jest": "catalog:jest",
-    "tsup": "^7.2.0",
+    "tsup": "catalog:",
     "typescript": "catalog:"
   }
 }
