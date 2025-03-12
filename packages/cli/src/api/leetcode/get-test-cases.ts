@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 
-import type { TestCase } from '@/api/test-case';
+import type { TestCase } from '@/types';
 
 function parseInputs(text: string): string[] {
   const inputMatched = /Input: (.*)/.exec(text);

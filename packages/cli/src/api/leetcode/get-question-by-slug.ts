@@ -1,6 +1,6 @@
 import * as graphql from '@/lib/graphql';
-import type { TestCase } from '@/api/test-case';
-import { getLeetCodeTestCases } from '@/api/test-case';
+import type { TestCase } from '@/types';
+import { getLeetCodeTestCases } from './get-test-cases';
 
 const LEET_CODE_QUESTION_QUERY = `
 query getQuestionBySlug($titleSlug: String) {
