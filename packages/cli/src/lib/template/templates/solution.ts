@@ -6,7 +6,7 @@ export const SOLUTION_TEMPLATE = `
 {{#if codeSnippet}}
 export {{removeComments codeSnippet}}
 {{else}}
-export solution(){}
+export function solution(){}
 {{/if}}`;
 
 export const SOLUTION_TEST_TEMPLATE = `

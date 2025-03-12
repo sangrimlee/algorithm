@@ -3,6 +3,7 @@ import { z } from 'zod';
 
 import { solutionPrompt } from '@/lib/prompt';
 import { generateLeetCodeById, generateLeetCodeDailyChallenge } from '@/lib/generate/leetcode';
+import { generateProgrammers } from '@/lib/generate/programmers';
 import { handleError } from '@/utils/handle-error';
 
 const solutionOptionsSchema = z.object({
@@ -23,6 +24,9 @@ export const solution = new Command()
           return;
         case 'LeetCode Daily Challenge':
           await generateLeetCodeDailyChallenge(options.outDir);
+          return;
+        case 'Programmers':
+          await generateProgrammers(options.outDir);
           return;
         default:
           throw new Error('지원하지 않는 문제입니다.');

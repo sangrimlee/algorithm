@@ -1,6 +1,6 @@
 import { select } from '@inquirer/prompts';
 
-type SolutionChoice = 'LeetCode' | 'LeetCode Daily Challenge';
+type SolutionChoice = 'LeetCode' | 'LeetCode Daily Challenge' | 'Programmers';
 
 export async function solutionPrompt(): Promise<SolutionChoice> {
   const answer = await select<SolutionChoice>({
@@ -10,6 +10,10 @@ export async function solutionPrompt(): Promise<SolutionChoice> {
       {
         value: 'LeetCode Daily Challenge',
         description: 'LeetCode Daily Challenge 템플릿 생성',
+      },
+      {
+        value: 'Programmers',
+        description: 'Programmers 템플릿 생성',
       },
     ],
   });
