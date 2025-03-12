@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { getSolutions } from '@/api/solution/get-solutions';
+import { getSolutions } from '@/api/solution';
 import { createTemplate } from '@/lib/template';
 import { ensureWriteFile } from '@/utils/fs';
 

@@ -1,26 +1,26 @@
 import path from 'node:path';
 
 import fg from 'fast-glob';
-import { z } from 'zod';
 
-import { readJsonFile } from '@/utils/fs';
+import type { SolutionMeta } from './get-solution-meta';
+import { getSolutionMeta } from './get-solution-meta';
 
-const solutionMetaSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  url: z.string(),
-});
-
-async function getSolution(solutionPath: string, outDir: string) {
-  const content = await readJsonFile(path.join(path.dirname(solutionPath), 'meta.json'));
-  const meta = solutionMetaSchema.parse(content);
+async function getSolution(
+  solutionPath: string,
+  outDir: string,
+): Promise<{ meta: SolutionMeta; relativePath: string }> {
+  const meta = await getSolutionMeta(solutionPath);
+  const relativePath = path.relative(outDir, solutionPath);
   return {
-    ...meta,
-    relativePath: path.relative(outDir, solutionPath),
+    meta,
+    relativePath,
   };
 }
 
-export async function getSolutions(solutionDir: string, outDir: string) {
+export async function getSolutions(
+  solutionDir: string,
+  outDir: string,
+): Promise<{ meta: SolutionMeta; relativePath: string }[]> {
   const solutionPaths = await fg.glob(path.join(solutionDir, '**/!(*.test).ts'));
   const solutions = await Promise.all(
     solutionPaths.map((solutionPath) => getSolution(solutionPath, outDir)),

@@ -11,7 +11,7 @@ async function generatePageBySite(siteName: string, solutionDir: string, outDir:
   );
   for (const page of pages) {
     const template = await createTemplate('PAGE', page);
-    await ensureWriteFile(path.join(outDir, siteName, `${page.fileName}.mdx`), template);
+    await ensureWriteFile(path.join(outDir, siteName, `${page.meta.id}.mdx`), template);
   }
 }
 
