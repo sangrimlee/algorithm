@@ -1,0 +1,8 @@
+{
+  "id": "3306",
+  "url": "https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii",
+  "title": "Count of Substrings Containing Every Vowel and K Consonants II",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Hash Table", "String", "Sliding Window"]
+}

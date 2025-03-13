@@ -1,0 +1,87 @@
+---
+id: '3306'
+title: Count of Substrings Containing Every Vowel and K Consonants II
+url: https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii
+category: Algorithms
+difficulty: Medium
+tags:
+  - Hash Table
+  - String
+  - Sliding Window
+---
+
+## 문제 설명
+
+- 문자열 `word`와 정수 `k`가 주어집니다.
+- `word`의 **부분 문자열(substring)** 중에서 다음 조건을 만족하는 개수를 반환하세요.
+  - 모든 모음이(`a`, `e`, `i`, `o`, `u`) **최소 한 번 이상 포함되어야 합니다.**
+  - **자음의 개수가 정확히 `k`** 이어야 합니다.
+
+## 문제 풀이
+
+### `Sliding Window`
+
+- **자음 개수가 정확히 `k`인 부분 문자열의 개수 = 자음 개수가 `k`개 이상 포함하는 부분 문자열의 개수 - 자음 개수가 `k+1`개 이상 포함하는 부분 문자열의 개수**
+- **`atLeastK()`**
+  - **자음 개수가 `k`개 이상 포함하는 부분 문자열의 개수를 구하는 함수**
+  - **Sliding Window 기법**을 사용하여, 조건에 만족하는 부분 문자열의 개수를 찾는다.
+
+```typescript showLineNumbers
+export function countOfSubstrings(word: string, k: number): number {
+  return atLeastK(word, k) - atLeastK(word, k + 1);
+}
+
+type Vowel = 'a' | 'e' | 'i' | 'o' | 'u';
+
+function isVowel(value: string): value is Vowel {
+  return /^[aeiou]$/.test(value);
+}
+
+function atLeastK(word: string, k: number): number {
+  const vowelCount: Record<Vowel, number> = {
+    a: 0,
+    e: 0,
+    i: 0,
+    o: 0,
+    u: 0,
+  };
+
+  let vowel = 0;
+  let consonantCount = 0;
+  let validCount = 0;
+
+  let start = 0;
+  for (let end = 0; end < word.length; end++) {
+    const endChar = word[end];
+    if (isVowel(endChar)) {
+      if (vowelCount[endChar] === 0) {
+        vowel += 1;
+      }
+      vowelCount[endChar] += 1;
+    } else {
+      consonantCount += 1;
+    }
+
+    while (vowel === 5 && consonantCount >= k) {
+      validCount += word.length - end;
+
+      const startChar = word[start];
+      if (isVowel(startChar)) {
+        vowelCount[startChar] -= 1;
+        if (vowelCount[startChar] === 0) {
+          vowel -= 1;
+        }
+      } else {
+        consonantCount -= 1;
+      }
+      start += 1;
+    }
+  }
+  return validCount;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
