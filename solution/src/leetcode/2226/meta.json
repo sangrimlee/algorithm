@@ -1,0 +1,8 @@
+{
+  "id": "2226",
+  "url": "https://leetcode.com/problems/maximum-candies-allocated-to-k-children",
+  "title": "Maximum Candies Allocated to K Children",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search"]
+}
