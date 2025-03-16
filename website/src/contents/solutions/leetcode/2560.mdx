@@ -1,0 +1,65 @@
+---
+id: '2560'
+title: House Robber IV
+url: https://leetcode.com/problems/house-robber-iv
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+---
+
+## 문제 설명
+
+- 여러 개의 연속된 집이 있으며, 각 집에는 **일정한 돈(`nums`)이** 있습니다.
+- 도둑은 **서로 인접한 집을 연속적으로 훔칠 수 없습니다.**
+- 도둑이 털 수 있는 **최소한의 집 개수** `k`가 주어집니다.
+- **도둑의 능력(`capability`)은**, **훔친 집 중에서 가장 많은 돈이 들어 있는 집의 돈의 액수입니다.**
+- 도둑이 최소 `k`개의 집을 훔칠 수 있는 모든 방법 중에서 **가장 작은 도둑의 능력(`capability`)를** 반환하여야합니다.
+
+## 문제 풀이
+
+### `Binary Search`
+
+1. **이진 탐색의 범위**
+   - 이진 탐색의 범위는 훔칠 수 있는 돈의 양으로 결정되기 때문에 다음과 같이 결정됩니다.
+   - **`left = min(nums)`**, **`right = max(nums)`**
+2. **이진 탐색**
+   - `mid`의 값을 **도둑의 최대 능력(`capability`)라고** 가정하고, **`canStealKHouses` 함수를 사용해, 최소 `k`의 집을 훔칠 수 있는지 확인합니다.**
+   - 가능하다면, **더 작은 능력도 가능한지 확인**하기 위해, **`right = mid`**
+   - 불가능하다면, **더 큰 능력이 필요**하므로 **`left = mid + 1`**
+
+```typescript showLineNumbers
+export function minCapability(nums: number[], k: number): number {
+  function canStealKHouses(capability: number): boolean {
+    let i = 0;
+    let stolenHouses = 0;
+    while (i < nums.length && stolenHouses < k) {
+      if (nums[i] <= capability) {
+        stolenHouses += 1;
+        i += 1;
+      }
+      i += 1;
+    }
+    return stolenHouses >= k;
+  }
+
+  let left = Math.min(...nums);
+  let right = Math.max(...nums);
+  while (left < right) {
+    const mid = Math.floor((left + right) / 2);
+    if (canStealKHouses(mid)) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return left;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n + n \cdot log_2 m)$
+  - $m = \max(nums) - \min(nums)$
+- 공간 복잡도: $O(1)$
