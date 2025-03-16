@@ -1,0 +1,70 @@
+---
+id: '2594'
+title: Minimum Time to Repair Cars
+url: https://leetcode.com/problems/minimum-time-to-repair-cars
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+---
+
+## 문제 설명
+
+- 정비사의 등급을 나타내는 정수 배열 `ranks` 가 주어집니다.
+  - `ranks[i]`는 자동차 `n`대를 수리하는데 필요한 시간을 의미합니다.
+  - **$r \times n^2$분에 `n`개의 자동차를 수리할 수 있습니다.**
+- 수리하기 위해 대기 중인 자동차의 개수인 정수 `cars`가 주어집니다.
+- **모든 자동차를 수리하는 데 걸린 최소 시간**을 반환합니다.
+  - 모든 정비사가 동시에 자동차를 수리할 수 있습니다.
+
+## 문제 풀이
+
+### `Binary Search`
+
+**모든 자동차를 수리하는데 걸린 최소 시간**을 구해야하므로, **수리하는데 걸린 시간을 기준으로 이분 탐색**을 활용하여 효율적으로 찾을 수 있다.
+
+1. **이분 탐색의 범위**
+   - `left`: 최소 범위, `0`
+   - `right`: 한 명의 정비사 혼자서 모든 차를 수리하는 시간, `ranks[0] * cars ** 2`
+2. **이분 탐색**
+   - `mid`의 시간안에 `cars` 만큼 자동차를 수리할 수 있는지 확인
+   - **`canRepairCars`** 함수를 사용해 **주어진 시간 내에 각 정비사가 몇 대를 수리할 수 있는지 계산**
+     - 정비사의 등급이 `r`일 때, `time` 시간 내에 수리 가능한 최대 자동차 수:
+       - **`Math.floor(Math.sqrt(time / r))`**
+   - **`cars`대 이상을 수리할 수 있다면,** 더 작은 시간으로도 가능한지 확인, **`right = mid`**
+   - **`cars`대 만큼 수리할 수 없다면,** 더 많은 시간이 필요, **`left = mid + 1`**
+
+```typescript showLineNumbers
+export function repairCars(ranks: number[], cars: number): number {
+  function canRepairCars(time: number): boolean {
+    let repairedCars = 0;
+    for (const rank of ranks) {
+      repairedCars += Math.floor(Math.sqrt(time / rank));
+      if (repairedCars >= cars) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  let left = 0;
+  let right = ranks[0] * cars ** 2;
+  while (left < right) {
+    const mid = Math.floor((left + right) / 2);
+    if (canRepairCars(mid)) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+  return left;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot \log_2(m \cdot \max(ranks)))$
+  - $n$: `ranks`의 길이
+  - $m$: `cars`
+- 공간 복잡도: $O(1)$

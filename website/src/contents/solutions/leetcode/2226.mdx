@@ -1,0 +1,65 @@
+---
+id: '2226'
+title: Maximum Candies Allocated to K Children
+url: https://leetcode.com/problems/maximum-candies-allocated-to-k-children
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+---
+
+## 문제 설명
+
+- `candies` 배열이 주어지며, 각 요소는 **사탕 묶음의 크기**를 나타냅니다.
+  - 각 묶음을 **여러 개의 작은 묶음으로 나눌 수 있지만, 합칠 수는 없습니다.**
+- `k`명의 아이들에게 **동일한 개수의 사탕**을 나눠줘야 합니다.
+  - **한 아이는 하나의 묶음에서만 사탕을 받을 수 있습니다.**
+  - 일부 사탕 묶음은 사용되지 않을 수도 있습니다.
+- **각 아이가 받을 수 있는 사탕의 최대 개수를 반환**해야 합니다.
+
+## 문제 풀이
+
+**한 아이가 받을 수 있는 사탕의 개수**를 이진 탐색하여 해결할 수 있다.
+
+1. **가능한 사탕 개수를 이진 탐색으로 찾기**
+   - 최소 사탕의 개수(`left`): $0$
+   - 최대 사탕의 개수(`right`): $\max(candies)$
+   - **`left`와 `right`사이의 `mid`를 정하고, `k`명에게 나눠줄 수 있는지 검사**
+2. **특정 개수의 사탕을 나눠줄 수 있는지 검사 (`canAllocateCandies`)**
+   - 각 사탕 묶음에서 **`Math.floor(candy / mid)`만큼** 나눠줄 수 있습니다.
+   - 이를 모두 합한 값이 **나눠줄 수 있는 모든 아이의 수**가 되고 이 값이 **`k` 이상이 되어야합니다.**
+3. 이진 탐색 수행
+   - 이진 탐색을 통해 **한 아이가 받을 수 있는 최대의 사탕 개수**를 찾을 수 있습니다.
+
+```typescript showLineNumbers
+export function maximumCandies(candies: number[], k: number): number {
+  const canAllocateCandies = (numberOfCandy: number) => {
+    let numberOfChildren = 0;
+    for (const candy of candies) {
+      numberOfChildren += Math.floor(candy / numberOfCandy);
+      if (numberOfChildren >= k) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  let left = 0;
+  let right = Math.max(...candies);
+  while (left < right) {
+    const mid = Math.floor((left + right + 1) / 2);
+    if (canAllocateCandies(mid)) {
+      left = mid;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return left;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot log_2(\max(candies)))$
+- 공간 복잡도: $O(1)$

@@ -1,0 +1,8 @@
+{
+  "id": "3356",
+  "url": "https://leetcode.com/problems/zero-array-transformation-ii",
+  "title": "Zero Array Transformation II",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Binary Search", "Prefix Sum"]
+}

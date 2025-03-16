@@ -1,0 +1,115 @@
+---
+id: '3356'
+title: Zero Array Transformation II
+url: https://leetcode.com/problems/zero-array-transformation-ii
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Binary Search
+  - Prefix Sum
+---
+
+## 문제 설명
+
+- 정수 배열 `nums` 가 주어집니다.
+- 2차원 정수 배열 `queries` 가 주어집니다.
+  - 각 `queries[i] = [left, right, value]`는 **`nums[left]`부터 `nums[right]`까지의 값을 최대 `value`만큼 감소**시킬 수 있다.
+  - 각 인덱스별 감소량은 **독립적으로 선택 가능합니다**.
+- **ZeroArray:** 모든 요소가 0인 배열입니다.
+- **ZeroArray를 만들기 위해 필요한 최소한의 쿼리의 개수**, `k`를 반환합니다.
+- 만약, 어떤 `k`를 선택해도 **ZeroArray를 만들 수 없다면**, `-1`을 반환합니다.
+
+## 문제 풀이
+
+### `Binary Search`
+
+- **`Binary Search`를 사용**해서, **ZeroArray**를 만들 수 있는 최소 `k`를 찾습니다.
+- 특정 `k`개의 쿼리를 사용했을 때, **ZeroArray**를 만들 수 있는지를 판단하는 함수 **`canMakeZeroArray`**를 사용합니다.
+
+```typescript showLineNumbers
+function minZeroArray(nums: number[], queries: number[][]): number {
+  const n = nums.length;
+  const m = queries.length;
+
+  // k개의 쿼리를 사용했을 때, ZeroArray를 만들 수 있는지를 판단
+  const canMakeZeroArray = (k: number) => {
+    const decrements = new Array<number>(n + 1).fill(0); // 감소할 총 값
+    let totalDecrement = 0; // 현재까지 적용된 감소 값의 누적합
+    for (let i = 0; i < k; i++) {
+      const [left, right, value] = queries[i];
+      decrements[left] += value;
+      decrements[right + 1] -= value;
+    }
+    for (let i = 0; i < n; i++) {
+      totalDecrement += decrements[i];
+      if (totalDecrement < nums[i]) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  if (!canMakeZeroArray(m)) {
+    return -1;
+  }
+
+  let [start, end] = [0, m];
+  while (start <= end) {
+    const mid = start + Math.floor((end - start) / 2);
+    if (canMakeZeroArray(mid)) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  return start;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(log_2{m} \times (n + m))$
+- 공간 복잡도: $O(n)$
+
+---
+
+### `Line Sweep`
+
+- `nums` 배열을 순차적으로 탐색합니다.
+- **각 요소를 0 이하로 만들기 위해 필요한 쿼리를 적용합니다.**
+  - 현재 인덱스보다 작은 범위에 대한 쿼리는 적용하지 않습니다.
+  - 현재 인덱스를 포함하거나 다음 인덱스에 대한 쿼리만을 적용합니다.
+
+```typescript showLineNumbers
+export function minZeroArray(nums: number[], queries: number[][]): number {
+  const n = nums.length;
+  const decrements = new Array<number>(n + 1).fill(0);
+
+  let k = 0;
+  let totalDecrement = 0;
+  for (let i = 0; i < n; i++) {
+    while (totalDecrement + decrements[i] < nums[i]) {
+      k += 1;
+
+      if (k > queries.length) {
+        return -1;
+      }
+
+      const [left, right, value] = queries[k - 1];
+
+      if (i <= right) {
+        decrements[Math.max(left, i)] += value;
+        decrements[right + 1] -= value;
+      }
+    }
+    totalDecrement += decrements[i];
+  }
+  return k;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n + m)$
+- 공간 복잡도: $O(n)$

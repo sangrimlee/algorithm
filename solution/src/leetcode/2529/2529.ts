@@ -3,8 +3,9 @@
  * https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer
  */
 export function maximumCount(nums: number[]): number {
+  const n = nums.length;
   const neg = lowerBound(nums, 0);
-  const pos = nums.length - lowerBound(nums, 1);
+  const pos = n - lowerBound(nums, 1);
   return Math.max(neg, pos);
 }
 

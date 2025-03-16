@@ -1,0 +1,87 @@
+---
+id: '1358'
+title: Number of Substrings Containing All Three Characters
+url: https://leetcode.com/problems/number-of-substrings-containing-all-three-characters
+category: Algorithms
+difficulty: Medium
+tags:
+  - Hash Table
+  - String
+  - Sliding Window
+---
+
+## 문제 설명
+
+- `a`, `b`, `c` 로만 이루어진 문자열 `s` 가 주어집니다.
+- `a`, `b`, `c`가 **하나 이상 포함된 부분 문자열의 개수**를 반환합니다.
+
+## 문제 풀이
+
+### `Sliding Window`
+
+- Sliding Window 기법을 사용, `end`를 증가시키고, 조건을 만족하면, `start`를 증가시키는 방식으로 부분 문자열을 탐색
+- **모든 문자가 포함되었다면,**
+  - **현재 `end` 부터 끝까지 유효한 부분 문자열**이므로, `n - end`개의 부분 문자열이 조건을 만족
+  - **`start` 를 증가시키면서 새로운 가능한 부분 문자열을 탐색**
+
+```typescript showLineNumbers
+function numberOfSubstrings(s: string): number {
+  const n = s.length;
+  const aCharCode = 'a'.charCodeAt(0);
+  const counts = [0, 0, 0];
+  const hasAllChars = () => {
+    return counts.every((count) => count > 0);
+  };
+
+  let answer = 0;
+  let start = 0;
+  for (let end = 0; end < n; end++) {
+    const endIndex = s.charCodeAt(end) - aCharCode;
+    counts[endIndex] += 1;
+
+    while (hasAllChars()) {
+      // 현재 end부터 끝까지 유효한 부분 문자열이므로 n - end개의 부분 문자열 추가
+      answer += n - end;
+
+      const startIndex = s.charCodeAt(start) - aCharCode;
+      counts[startIndex] -= 1;
+      start += 1;
+    }
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
+
+---
+
+### `Last Index`
+
+- `a`, `b`, `c`의 마지막 인덱스를 저장한다.
+- 매 번 `a`, `b`, `c` 중 가장 **마지막 인덱스가 가장 작은 인덱스를 기준으로 유효한 부분 문자열의 개수를 계산한다.**
+  - **마지막에 등장한 인덱스가 가장 작은 인덱스를 포함하면, 조건을 만족하는 부분 문자열이 된다.**
+
+```typescript showLineNumbers
+export function numberOfSubstrings(s: string): number {
+  const n = s.length;
+  const aCharCode = 'a'.charCodeAt(0);
+  const lastIndices = [-1, -1, -1];
+
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    const charIndex = s.charCodeAt(i) - aCharCode;
+    lastIndices[charIndex] = i;
+    answer += 1 + Math.min(...lastIndices);
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

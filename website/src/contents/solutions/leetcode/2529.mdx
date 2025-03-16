@@ -10,12 +10,50 @@ tags:
 url: https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer
 ---
 
-## Solution
+## 문제 설명
+
+- 오름차순으로 정렬된 배열 `nums` 가 주어진다.
+- **이 배열에서 양수의 개수와, 음수의 개수를 각각 구하고, 두 개 중 더 큰값을 반환한다.**
+- **0은 양수도 음수다 아니다.**
+
+## 문제 풀이
+
+### `Brute Force`
+
+- 단순하게, `nums`를 반복하면서, 양수와 음수의 개수를 계산한다.
+
+```typescript showLineNumbers
+function maximumCount(nums: number[]): number {
+  let [pos, neg] = [0, 0];
+  for (const num of nums) {
+    if (0 < num) {
+      pos += 1;
+    } else if (num < 0) {
+      neg += 1;
+    }
+  }
+  return Math.max(pos, neg);
+}
+```
+
+**복잡도**
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
+
+---
+
+### `Binary Search`
+
+- `lowerBound` 를 활용하여, **0이 시작하는 인덱스**와 **1이 시작하는 인덱스**를 찾는다.
+- **처음부터 숫자 0이 시작하는 인덱스까지는 음수**이므로, 음수의 개수는 **`lowerBound(0)`**
+- **1이 시작하는 인덱스부터 마지막 인덱스까지는 양수**이므로 양수의 개수는 **`n - lowerBound(1)`**
 
 ```typescript showLineNumbers
 export function maximumCount(nums: number[]): number {
+  const n = nums.length;
   const neg = lowerBound(nums, 0);
-  const pos = nums.length - lowerBound(nums, 1);
+  const pos = n - lowerBound(nums, 1);
   return Math.max(neg, pos);
 }
 
@@ -32,3 +70,8 @@ function lowerBound(arr: number[], target: number) {
   return left;
 }
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(log_2 n)$
+- 공간 복잡도: $O(1)$
