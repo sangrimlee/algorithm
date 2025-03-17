@@ -1,0 +1,116 @@
+---
+id: '340213'
+title: '[PCCP 기출문제] 1번 / 동영상 재생기'
+url: https://school.programmers.co.kr/learn/courses/30/lessons/340213
+level: 1
+---
+
+## 문제 설명
+
+당신은 **동영상 재생기**를 만들고 있으며, 다음 **3가지 기능**을 지원해야 합니다.
+
+1. **`prev` (10초 전으로 이동)**
+   - 현재 재생 위치에서 **10초 이전**으로 이동
+   - 단, 현재 위치가 10초 미만이면 **영상의 처음(0분 0초)**으로 설정
+2. **`next` (10초 후로 이동)**
+   - 현재 재생 위치에서 **10초 이후**로 이동
+   - 단, 남은 시간이 10초 미만이면 **영상의 끝**으로 설정
+3. **오프닝 건너뛰기**
+   - 현재 재생 위치가 **오프닝 구간**(**`opStart`** ≤ 현재 위치 ≤ **`opEnd`**)에 있다면,
+   - 자동으로 **오프닝이 끝나는 위치(`opEnd`)로 이동**
+   - **처음 시작 시간에도 마찬가지로, 자동으로 오프닝이 끝나는 위치로 이동**
+
+- **입력**
+  - `videoLen`: 동영상의 총 길이 ("mm:ss" 형식)
+  - `pos`: 현재 재생 위치 ("mm:ss" 형식)
+  - `opStart`: 오프닝 시작 시간 ("mm:ss" 형식)
+  - `opEnd`: 오프닝 종료 시간 ("mm:ss" 형식)
+  - `commands`: 수행할 명령어 목록 (**`prev`** 또는 **`next`**로 구성된 배열)
+- **출력**
+  - **모든 명령을 수행한 후** 최종 재생 위치를 "mm:ss" 형식으로 반환.
+
+## 문제 풀이
+
+### `Simulation`
+
+- **시간 변환 (`convertToSec`, `convertToTime`)**
+  - "mm:ss" 형식의 시간을 **초 단위로 변환하여 계산**하고, 결과를 다시 "mm:ss" 형식으로 변환
+- **오프닝 건너뛰기 (`skipOp`)**
+  - 오프닝 구간에 있을 때는 오프닝 마지막 시간으로, 아니면 현재 시간을 유지하는 로직 추가
+- **명령어 처리 (`operate`)**
+  - `prev`는 10초 전으로 이동하고, 0초와 비교
+  - `next`는 10초 후로 이동하고, 영상의 시간과 비교
+  - 명령을 처리하고, 각 명령 후 오프닝 시간이라면 오프닝을 건너뜀
+- **명령어 순차 실행**
+  - 주어진 명령어 목록을 순차적으로 실행하여 최종 시간을 계산
+
+```typescript showLineNumbers
+export function playVideos(
+  videoLen: string,
+  pos: string,
+  opStart: string,
+  opEnd: string,
+  commands: string[],
+): string {
+  const videoEndSec = convertToSec(videoLen);
+  const opStartSec = convertToSec(opStart);
+  const opEndSec = convertToSec(opEnd);
+
+  const skipOp = (sec: number): number => {
+    return opStartSec <= sec && sec <= opEndSec ? opEndSec : sec;
+  };
+
+  const operate = (sec: number, command: string): number => {
+    return skipOp(command === 'prev' ? Math.max(0, sec - 10) : Math.min(videoEndSec, sec + 10));
+  };
+
+  return convertToTime(commands.reduce(operate, skipOp(convertToSec(pos))));
+}
+
+function convertToSec(time: string): number {
+  const [minute, second] = time.split(':').map(Number);
+  return 60 * minute + second;
+}
+
+function convertToTime(sec: number): string {
+  const minute = String(Math.floor(sec / 60));
+  const second = String(sec % 60);
+  return `${minute.padStart(2, '0')}:${second.padStart(2, '0')}`;
+}
+```
+
+<details>
+<summary>JavaScript</summary>
+
+```javascript showLineNumbers
+function solution(videoLen, pos, opStart, opEnd, commands) {
+  const videoEndSec = convertToSec(videoLen);
+  const opStartSec = convertToSec(opStart);
+  const opEndSec = convertToSec(opEnd);
+  const skipOp = (sec) => {
+    return opStartSec <= sec && sec <= opEndSec ? opEndSec : sec;
+  };
+  const operate = (sec, command) => {
+    return skipOp(command === 'prev' ? Math.max(0, sec - 10) : Math.min(videoEndSec, sec + 10));
+  };
+  return convertToTime(commands.reduce(operate, skipOp(convertToSec(pos))));
+}
+
+function convertToSec(time) {
+  const [minute, second] = time.split(':').map(Number);
+  return 60 * minute + second;
+}
+
+function convertToTime(sec) {
+  const minute = String(Math.floor(sec / 60));
+  const second = String(sec % 60);
+  return `${minute.padStart(2, '0')}:${second.padStart(2, '0')}`;
+}
+```
+
+</details>
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
