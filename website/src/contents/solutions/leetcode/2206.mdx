@@ -11,14 +11,39 @@ tags:
 url: https://leetcode.com/problems/divide-array-into-equal-pairs
 ---
 
-## Solution
+## 문제 설명
+
+- `2 * n`개의 정수로 이루어진 배열 `nums`가 주어집니다.
+- **이를 `n`개의 쌍으로 나눌 때**, 다음 조건을 만족해야 합니다:
+  - 각 숫자는 **하나의 쌍**에 속합니다.
+  - **각 쌍의 두 숫자는 동일**해야 합니다.
+- `nums`를 주어진 조건에 맞게 나눌 수 있다면, `true`를 그렇지 않으면 `false`를 반환합니다.
+
+## 문제 풀이
+
+### `Set`
+
+- **`Set`을 사용**해 숫자들이 짝을 이룰 수 있는지 확인합니다.
+- 배열 `num`를 순회하면서,
+  - `num`이 `Set`에 없으면 **추가**합니다.
+  - `num`이 `Set`에 있으면 **쌍을 이룰 수 있는 다른 숫자**가 있으므로, **제거**합니다.
+- 최종적으로 **Set이 비어 있다면** 모든 숫자가 쌍을 이룬 것이므로 `true`, 그렇지 않으면 `false`를 반환합니다.
 
 ```typescript showLineNumbers
 export function divideArray(nums: number[]): boolean {
-  const counter = new Map<number, number>();
-  nums.forEach((num) => {
-    counter.set(num, (counter.get(num) ?? 0) + 1);
-  });
-  return [...counter.values()].every((count) => count % 2 === 0);
+  const set = new Set<number>();
+  for (const num of nums) {
+    if (set.has(num)) {
+      set.delete(num);
+    } else {
+      set.add(num);
+    }
+  }
+  return set.size === 0;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
