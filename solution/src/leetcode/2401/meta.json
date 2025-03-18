@@ -1,0 +1,8 @@
+{
+  "id": "2401",
+  "url": "https://leetcode.com/problems/longest-nice-subarray",
+  "title": "Longest Nice Subarray",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Bit Manipulation", "Sliding Window"]
+}
