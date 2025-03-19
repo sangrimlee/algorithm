@@ -1,0 +1,8 @@
+{
+  "id": "3191",
+  "url": "https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i",
+  "title": "Minimum Operations to Make Binary Array Elements Equal to One I",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Bit Manipulation", "Queue", "Sliding Window", "Prefix Sum"]
+}
