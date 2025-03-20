@@ -1,0 +1,96 @@
+---
+id: '3108'
+title: Minimum Cost Walk in Weighted Graph
+url: https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Bit Manipulation
+  - Union Find
+  - Graph
+---
+
+## 문제 설명
+
+1. 그래프
+   - `n`개의 정점(`0`부터 `n-1`)과 여러 간선을 가진 **무방향 가중 그래프(Undirected Weighted Graph)가** 주어집니다.
+   - **`edges[i]= [ui, vi, wi]`** 형태로 간선 정보가 주어지며, 이는 **정점 `ui`와 `vi` 사이에 가중치 `wi`인 간선이 존재**한다는 것을 의미합니다.
+2. **경로(Walk)**
+   - **경로(Walk)란,** 연속된 정점과 간선의 시퀀스로 이루어진 이동을 의미합니다.
+   - 같은 정점이나 간선을 여러 번 방문할 수 있습니다.
+   - 시작 정점 `u`에서 마지막 정점 `v`까지의 비용은 **경로에서 지나간 간선들의 가중치에 대해 비트 AND 연산을 수행한 값**입니다.
+3. 쿼리
+   - **`query[i] = [si, ti]`** 형태로 쿼리 정보가 주어집니다.
+   - **각 쿼리의 정점 `si`에서 `ti`까지 이동하는 경로 중 최소 비용을 구하는 문제**입니다.
+   - 만약 이동할 수 없는 경우, `-1`을 반환합니다.
+
+## 문제 풀이
+
+### `Union Find`
+
+- **유니온 파인드(Union-Find, Disjoint Set Union, DSU)** 를 사용하여 **각 그룹 내에서 가능한 모든 간선의 가중치에 대해 비트 AND 연산을 수행한 비용을 저장**하는 방식으로 문제를 해결할 수 있습니다.
+  - **두 개의 정점을 이동하는 경로의 최소 비용**은 **해당 그룹 내의 모든 간선에 대한 가중치를 AND연산을 수행한 값입니다.**
+  - 만약, **두 개의 정점이 다른 그룹이라면 이동할 수 없습니다.**
+- 기존의 **Union-Find**에서 `costs`를 추가합니다.
+  - `union`을 수행할 때마다, 두 개의 정점에 대한 `cost`와 가중치 `w`를 AND 연산을 수행한 후 `costs`를 업데이트합니다.
+
+```typescript showLineNumbers
+export function minimumCost(n: number, edges: number[][], query: number[][]): number[] {
+  const unionFind = new UnionFind(n);
+  for (const [u, v, w] of edges) {
+    unionFind.union(u, v, w);
+  }
+
+  const result: number[] = [];
+  for (const [s, t] of query) {
+    if (!unionFind.isUnion(s, t)) {
+      result.push(-1);
+    } else {
+      result.push(unionFind.getCost(s));
+    }
+  }
+  return result;
+}
+
+class UnionFind {
+  private readonly costs: number[];
+  private readonly parents: number[];
+
+  constructor(n: number) {
+    this.costs = new Array<number>(n).fill(Number.MAX_SAFE_INTEGER);
+    this.parents = Array.from({ length: n }, (_, i) => i);
+  }
+
+  find(x: number): number {
+    if (this.parents[x] !== x) {
+      this.parents[x] = this.find(this.parents[x]);
+    }
+    return this.parents[x];
+  }
+
+  union(x: number, y: number, w: number): void {
+    const parentX = this.find(x);
+    const parentY = this.find(y);
+    const costX = this.getCost(x);
+    const costY = this.getCost(y);
+
+    this.parents[parentY] = parentX;
+    this.costs[parentX] = costX & costY & w;
+  }
+
+  isUnion(x: number, y: number): boolean {
+    return this.find(x) === this.find(y);
+  }
+
+  getCost(x: number): number {
+    return this.costs[this.find(x)];
+  }
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(m + q)$
+  - $m$: `edges`의 길이, $q$: `query`의 길이
+- 공간 복잡도: $O(n)$
