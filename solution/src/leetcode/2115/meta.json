@@ -1,0 +1,8 @@
+{
+  "id": "2115",
+  "url": "https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies",
+  "title": "Find All Possible Recipes from Given Supplies",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Hash Table", "String", "Graph", "Topological Sort"]
+}

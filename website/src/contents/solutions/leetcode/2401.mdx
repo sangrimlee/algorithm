@@ -1,0 +1,54 @@
+---
+id: '2401'
+title: Longest Nice Subarray
+url: https://leetcode.com/problems/longest-nice-subarray
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Bit Manipulation
+  - Sliding Window
+---
+
+## 문제 설명
+
+- 양의 정수 배열 `nums`가 주어집니다.
+- **`nice`한 부분 배열이란:**
+  - **서로 다른 위치**에 있는 모든 요소들의 **비트 AND 연산 결과가 0이되는 부분 배열**을 의미합니다.
+  - **길이가 1인 부분 배열**은 항상 **`nice`한 것으로 간주됩니다.**
+- **가장 긴 `nice`한 부분 배열의 길이**를 반환해야 합니다.
+
+## 문제 풀이
+
+### `Sliding Window`
+
+1. `Sliding Window`를 사용하여, 현재 부분 배열 내 숫자들의 **비트 OR 결과**를 저장한다.
+2. `end` 포인터를 이동하면서, 새로운 숫자 `nums[end]` 추가한다.
+   - `usedBits & nums[end] !== 0`인 경우 (`nice`하지 않은 경우)
+   - 윈도우의 크기를 줄이면서, 겹치는 숫자 `nums[start]`를 제거한다.
+   - `usedBits`에 `nums[end]` 추가한다.
+   - 부분 배열의 최대 길이 `maxLength`를 갱신한다.
+
+```typescript showLineNumbers
+export function longestNiceSubarray(nums: number[]): number {
+  const n = nums.length;
+
+  let start = 0;
+  let usedBits = 0;
+  let maxLength = 1;
+  for (let end = 0; end < n; end++) {
+    while ((usedBits & nums[end]) !== 0) {
+      usedBits ^= nums[start];
+      start += 1;
+    }
+    usedBits |= nums[start];
+    maxLength = Math.max(maxLength, end - start + 1);
+  }
+  return maxLength;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

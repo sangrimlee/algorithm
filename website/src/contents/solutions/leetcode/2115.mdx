@@ -1,0 +1,157 @@
+---
+id: '2115'
+title: Find All Possible Recipes from Given Supplies
+url: https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - String
+  - Graph
+  - Topological Sort
+---
+
+## 문제 설명
+
+- **`n` 개의 서로 다른 레시피(`recipes`)가** 주어집니다.
+  - 각 레시피는 **특정 재료 리스트를 필요(`ingredients`)로** 합니다.
+  - 어떤 레시피는 **다른 레시피를 재료로 포함**할 수도 있습니다.
+- 처음에 제공되는 **기본 재료 목록(`supplies`)가** 주어집니다.
+- 기본 재료와, 레시피를 이용하여 **만들 수 있는 모든 레시피의 목록**을 반환하여야 합니다.
+
+## 문제 풀이
+
+### `Depth-First Search`
+
+**`Depth-First Search(깊이 우선 탐색)`를** 활용하여 만들 수 있는 레시피들을 찾을 수 있습니다.
+
+각 레시피들을 재귀적으로 탐색하면서, 필요한 재료가 모두 확보된 경우 해당 레시피를 만들 수 있다는 것을 알 수 있습니다.
+
+1. **`availableRecipes: Map<string, boolean>`**
+   - **각 레시피가 만들 수 있는 여부를 저장하는 `Map`**
+   - `supplies`에 있는 재료들은 이미 보유한 것이므로, `true`로 설정
+2. **`recipeIndices: Map<string, number>`**
+   - **`recipes` 배열에서 각 레시피의 인덱스를 저장하는 `Map`**
+   - `ingredients` 배열에서 특정 레시피의 필요한 재료 목록을 찾는데에 사용
+3. **`Depth-First Search`를 사용한 `isAvailableRecipe(recipe, visited)`**
+   - `availableRecipes`에 존재하는 경우, 해당 값을 반환
+   - `recipeIndices`에 존재하지 않는경우, **레시피가 아닌 재료이므로 `false`를 반환**
+   - `visited`에 현재 레시피가 있다면, **순환 구조이므로 `false`를 반환**
+   - **현재 레시피를 만들기 위해 필요한 모든 재료(`ingredients`)를** 재귀적으로 `DFS`로 탐색
+   - **모든 재료의 `isAvailableRecipe`의 결과가 `true`라면,** `true` 아니면 `false`를 저장 및 반환
+
+```typescript showLineNumbers
+function findAllRecipes(recipes: string[], ingredients: string[][], supplies: string[]): string[] {
+  const availableRecipes = new Map<string, boolean>(supplies.map((supply) => [supply, true]));
+  const recipeIndices = new Map<string, number>(recipes.map((recipe, i) => [recipe, i]));
+
+  function isAvailableRecipe(recipe: string, visited: Set<string>): boolean {
+    if (availableRecipes.has(recipe)) {
+      return availableRecipes.get(recipe) ?? false;
+    }
+    const recipeIndex = recipeIndices.get(recipe);
+    if (recipeIndex === undefined || visited.has(recipe)) {
+      return false;
+    }
+    visited.add(recipe);
+    const isAvailable = ingredients[recipeIndex].every((ingredient) =>
+      isAvailableRecipe(ingredient, visited),
+    );
+    availableRecipes.set(recipe, isAvailable);
+    return isAvailable;
+  }
+
+  return recipes.filter((recipe) => isAvailableRecipe(recipe, new Set<string>()));
+}
+```
+
+#### 복잡도
+
+- $n$: `repcies`의 개수, $m$: 모든 `gradients`의 개수, $s$: `supplies`의 개수
+- 시간 복잡도: $O(n + m + s)$
+- 공간 복잡도: $O(n + m)$
+
+---
+
+### `Topological Sort`
+
+이 문제는 **`Topological Sort(위상 정렬)`을** 사용하여 해결할 수 있습니다.
+
+각 **레시피를 그래프의 노드**로 보고, **필요한 재료들을 간선으로 표현**할 수 있습니다. 이를 기반으로 위상 정렬을 수행하여 만들 수 있는 레시피를 찾을 수 있습니다.
+
+1. **`graph: Map<string, Set<string>>`**
+   - **각 재료가 사용되는 레시피를 저장하는 인접리스트**
+   - 만약, `flour`가 `bread`를 만들기 위해 필요하다면, `graph.get('flour') = {'bread'}`
+2. **`indegrees: Map<string, number>`**
+   - **각 레시피가 필요로 하는 재료의 개수 (진입 차수)**
+   - `bread`를 만들기 위해 `flour`과 `yeast`가 필요하다면, `indegrees.get('bread') = 2`
+   - 처음에 제공되는 `supplies`의 재료 또는 레시피의 진입 차수를 0으로 초기화
+3. **`Topological Sort`**
+   - `indegree`가 0인 레시피들을 `queue`에 추가
+   - `queue`에서 하나씩 꺼내며, 만들 수 있는 레시피를 확인
+   - 해당 레시피를 만들면, **이 레시피를 재료로 하는 다른 레시피들의 진입 차수를 감소**
+   - **진입 차수가 0이 되면, `queue`에 추가 (즉, 만들 수 있는 상태가 됨)**
+4. 결과
+   - `recipes` 중에서 `indegree`가 0인 레시피들을 반환
+
+```typescript showLineNumbers
+export function findAllRecipes(
+  recipes: string[],
+  ingredients: string[][],
+  supplies: string[],
+): string[] {
+  const n = recipes.length;
+  const graph = new Map<string, Set<string>>();
+  const indegrees = new Map<string, number>();
+
+  // 그래프 및 진입 차수 초기화
+  for (let i = 0; i < n; i++) {
+    const recipe = recipes[i];
+    for (const ingredient of ingredients[i]) {
+      if (!graph.has(ingredient)) {
+        graph.set(ingredient, new Set<string>());
+      }
+      graph.get(ingredient)?.add(recipe);
+      indegrees.set(recipe, (indegrees.get(recipe) ?? 0) + 1);
+    }
+  }
+
+  // 기본으로 공급되는 재료에 대한 진입 차수 초기화
+  for (const supply of supplies) {
+    indegrees.set(supply, 0);
+  }
+
+  // 초기 진입 차수가 0인 레시피 및 재료들에 대한 큐 초기화
+  let queue: string[] = [];
+  for (const [recipe, indegree] of indegrees) {
+    if (indegree === 0) {
+      queue.push(recipe);
+    }
+  }
+
+  // 위상 정렬 수행
+  while (0 < queue.length) {
+    const nextQueue: string[] = [];
+    for (const recipe of queue) {
+      for (const canMakeRecipe of graph.get(recipe) ?? []) {
+        indegrees.set(canMakeRecipe, (indegrees.get(canMakeRecipe) ?? 0) - 1);
+
+        if (indegrees.get(canMakeRecipe) === 0) {
+          nextQueue.push(canMakeRecipe);
+        }
+      }
+    }
+    queue = nextQueue;
+  }
+
+  // 진입 차수가 0인 레시피는 모두 만들 수 있는 레시피
+  return recipes.filter((recipe) => indegrees.get(recipe) === 0);
+}
+```
+
+#### 복잡도
+
+- $n$: `repcies`의 개수, $m$: 모든 `gradients`의 개수, $s$: `supplies`의 개수
+- 시간 복잡도: $O(n + m + s)$
+- 공간 복잡도: $O(n + m + s)$

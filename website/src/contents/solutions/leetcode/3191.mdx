@@ -1,0 +1,55 @@
+---
+id: '3191'
+title: Minimum Operations to Make Binary Array Elements Equal to One I
+url: https://leetcode.com/problems/minimum-operations-to-make-binary-array-elements-equal-to-one-i
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Bit Manipulation
+  - Queue
+  - Sliding Window
+  - Prefix Sum
+---
+
+## 문제 설명
+
+- **0과 1**로 이루어진 배열 `nums`가 주어집니다.
+- **연속된 3개의 요소**를 선택하여, **모두 뒤집는 연산(0 → 1, 1 → 0)**을 수행할 수 있습니다.
+- 배열의 모든 원소를 1로 만드는 **최소 연산 횟수를 반환**해야 합니다.
+  - **불가능한 경우, -1을 반환합니다.**
+
+## 문제 풀이
+
+### `Greedy`
+
+- **Greedy 알고리즘을 사용**하여, 왼쪽에서부터 차례로 **0을 1로 뒤집습니다.**
+  - `nums[i]`가 0일 경우, `nums[i], nums[i+1], nums[i+2]`을 뒤집어서 `nums[i]`를 1로 만듭니다.
+- 이를 반복하여 **모든 요소를 1로 만드는 최소 연산 횟수를 계산합니다.**
+
+```typescript showLineNumbers
+export function minOperations(nums: number[]): number {
+  const n = nums.length;
+
+  let operations = 0;
+  for (let i = 0; i <= n - 3; i++) {
+    if (nums[i] === 0) {
+      flip(nums, i);
+      operations += 1;
+    }
+  }
+
+  return nums[n - 2] === 1 && nums[n - 1] === 1 ? operations : -1;
+}
+
+function flip(nums: number[], start: number): void {
+  nums[start] ^= 1;
+  nums[start + 1] ^= 1;
+  nums[start + 2] ^= 1;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

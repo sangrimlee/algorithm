@@ -1,0 +1,8 @@
+{
+  "id": "3108",
+  "url": "https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph",
+  "title": "Minimum Cost Walk in Weighted Graph",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Bit Manipulation", "Union Find", "Graph"]
+}

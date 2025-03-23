@@ -1,0 +1,158 @@
+---
+id: '1976'
+title: Number of Ways to Arrive at Destination
+url: https://leetcode.com/problems/number-of-ways-to-arrive-at-destination
+category: Algorithms
+difficulty: Medium
+tags:
+  - Dynamic Programming
+  - Graph
+  - Topological Sort
+  - Shortest Path
+---
+
+## 문제 설명
+
+1. `n`개의 교차로(0부터 n-1까지 번호가 매겨진)가 있는 도시가 있습니다.
+2. 교차로들은 양방향 도로로 연결되어 있습니다.
+3. 각 도로는 `roads[i] = [ui, vi, timei]` 형태로 주어지며, `ui`와 `vi`교차로 사이의 도로를 지나는데 `timei`분의 시간이 걸립니다.
+4. 모든 교차로에서 다른 모든 교차로로 도달할 수 있고, 두 교차로 사이에는 최대 하나의 도로만 있습니다.
+
+- 교차로 0에서 부터 n-1까지 **최단 시간**으로 이동할 수 있는 **서로 다른 경로의 개수**를 구해야 합니다.
+- 이 개수가 매우 클 수 있으므로, **$10^9 + 7$로 나눈 나머지를 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Dijkstra Algorithm`
+
+**해당 문제는 다익스트라(Dijkstra) 알고리즘을 사용하여 해결할 수 있습니다.**
+
+기존 다익스트라 알고리즘은 **각 노드까지의 최단 거리만을 계산**하지만, 이 문제는 추가로 **최단 거리에 도달하는 경로의 수도 계산**하면 해결 할 수 있습니다.
+
+**각 노드까지의 경로의 수가 해당 노드로 오는 이전 노드들의 경로 수의 합**입니다. 이를 통해, 시작 노드(0)부터 도착 노드(n-1)까지의 **최단 시간으로 이동할 수 있는 서로 다른 경로의 개수**를 구할 수 있습니다.
+
+1. **그래프 구성: `graph`**
+   - `roads`로부터 양 방향 그래프를 인접 리스트로 표현합니다.
+   - 각 노드에 연결된 다른 노드와 해당 경로의 이동 시간을 저장합니다.
+2. **초기화: `heap`, `minTimes`, `pathCounts`**
+   - `heap`: `[시간, 노드]`형식으로 저장하고, 시간이 적은 순으로 정렬됩니다.
+   - `minTimes`: 각 노드까지의 최소 도달 시간을 저장합니다.
+   - `pathCounts`: 각 노드까지의 최단 시간으로 도달하는 경로의 수를 저장합니다.
+3. **다익스트라(Dijkstra) 알고리즘 실행**
+   - `heap`에서 현재 최소 시간으로 이동하고 있는 노드를 꺼냅니다.
+   - 만약, 이미 더 짧은 시간으로 방문된 노드라면 건너뜁니다.
+   - 현재 노드에서 이동할 수 있는 모든 노드를 확인합니다.
+     - 더 짧은 경로를 발견한 경우: **최소 시간(`minTimes`)를 업데이트**하고, **경로 수(`pathCounts`) 를 현재 노드의 경로 수**로 설정합니다.
+     - 동일한 최단 시간 경로를 발견한 경우: **다음 노드의 경로 수에 현재 노드의 경로 수를 더하고**, 모듈러 연산을 실행합니다.
+4. 결과 반환
+   - 도착 노드(`n-1`)까지의 최단 경로수를 반환합니다.
+
+```typescript showLineNumbers
+import { Heap } from '@algorithm/lib';
+
+export function countPaths(n: number, roads: number[][]): number {
+  const MOD = 10 ** 9 + 7;
+  const graph: [number, number][][] = Array.from({ length: n }, () => []);
+  for (const [u, v, time] of roads) {
+    graph[u].push([v, time]);
+    graph[v].push([u, time]);
+  }
+
+  const heap = new Heap<[number, number]>((a, b) => a[0] - b[0]);
+  heap.push([0, 0]);
+  const minTimes = new Array<number>(n).fill(Number.MAX_SAFE_INTEGER);
+  minTimes[0] = 0;
+  const pathCounts = new Array<number>(n).fill(0);
+  pathCounts[0] = 1;
+
+  while (!heap.isEmpty) {
+    const peek = heap.pop();
+    if (peek === undefined) {
+      break;
+    }
+
+    const [currentTime, currentNode] = peek;
+    if (currentTime > minTimes[currentNode]) {
+      continue;
+    }
+
+    for (const [nextNode, time] of graph[currentNode]) {
+      const nextTime = currentTime + time;
+      if (nextTime < minTimes[nextNode]) {
+        minTimes[nextNode] = nextTime;
+        pathCounts[nextNode] = pathCounts[currentNode];
+        heap.push([nextTime, nextNode]);
+      } else if (nextTime === minTimes[nextNode]) {
+        pathCounts[nextNode] = (pathCounts[nextNode] + pathCounts[currentNode]) % MOD;
+      }
+    }
+  }
+  return pathCounts[n - 1];
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O((V + E) \cdot log_2V )$
+  - $V$: 정점의 수(`n`), $E$: 도로의 수(`roads`의 길이)
+- 공간 복잡도: $O(V + E)$
+
+---
+
+### `Floyd-Warshall Algorithm`
+
+**해당 문제는 플로이드-워셜(Floyd-Warshall) 알고리즘을 사용하여 해결할 수 있습니다.**
+
+기존 플로이드-워셜 알고리즘은 **모든 노드사이의 최단 거리만을 계산**하지만, 이 문제는 추가로 **최단 거리에 도달하는 경로의 수도 계산**하면 해결 할 수 있습니다.
+
+1. `dp` 초기화
+   - 3차원 배열 `dp`를 사용하여 각 노드 쌍간의 정보를 저장합니다.
+   - `dp[start][end][0]`: `start`에서 `end`까지의 최소 시간
+   - `dp[start][end][1]`: `start`에서 `end`까지의 최소 시간으로 가는 경로의 수
+   - 자기 자신으로의 경로는 시간은 0, 경로 수는 1로 초기화합니다.
+   - 나머지는 최대값과 0으로 초기화합니다.
+2. `roads` 정보 추가
+   - 각 도로에 대해 직접 연결된 노드 쌍의 최소 시간과 경로수를 설정합니다.
+3. **플로이드-워셜(Floyd-Warshall)**
+   - 모두 가능한 중간 노드를 거쳐가는 경로에 대해서 업데이트합니다.
+   - 더 짧은 경로를 발견한 경우: **최소 시간을 업데이트**하고, **경로 수를 start→mid와 mid→end 경로 수의 곱으로 설정**합니다.
+   - 동일한 최단 시간 경로를 발견한 경우: **기존 경로 수에 새로운 경로 수를 더합니다.**
+   - 모듈로 연산으로 큰 수를 관리합니다.
+4. 결과 반환
+   - 0에서 n-1까지의 최단 시간 경로 수를 반환합니다.
+
+```typescript
+function countPaths(n: number, roads: number[][]): number {
+  const MOD = 10 ** 9 + 7;
+  const dp: [number, number][][] = Array.from({ length: n }, (_, start) =>
+    Array.from({ length: n }, (_, end) => (start === end ? [0, 1] : [Number.MAX_SAFE_INTEGER, 0])),
+  );
+
+  for (const [u, v, time] of roads) {
+    dp[u][v] = [time, 1];
+    dp[v][u] = [time, 1];
+  }
+
+  for (let mid = 0; mid < n; mid++) {
+    for (let start = 0; start < n; start++) {
+      for (let end = 0; end < n; end++) {
+        if (start !== mid && end !== mid) {
+          const time = dp[start][mid][0] + dp[mid][end][0];
+          if (time < dp[start][end][0]) {
+            dp[start][end][0] = time;
+            dp[start][end][1] = (dp[start][mid][1] * dp[mid][end][1]) % MOD;
+          } else if (time === dp[start][end][0]) {
+            dp[start][end][1] = (dp[start][end][1] + dp[start][mid][1] * dp[mid][end][1]) % MOD;
+          }
+        }
+      }
+    }
+  }
+  return dp[0][n - 1][1];
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n^3)$
+- 공간 복잡도: $O(n^2)$
