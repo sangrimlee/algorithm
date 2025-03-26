@@ -1,0 +1,69 @@
+---
+id: '3394'
+title: Check if Grid can be Cut into Sections
+url: https://leetcode.com/problems/check-if-grid-can-be-cut-into-sections
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Sorting
+---
+
+## 문제 설명
+
+- 정수 `n`이 주어집니다.
+  - `n x n` 크기의 그리드를 나타냅니다.
+- 정수 2차원 배열 `rectangles`가 주어집니다.
+  - 각 요소는 `[startx, starty, endx, endy]`의 형태로, 그리드 위의 직사각형 좌표를 나타냅니다.
+    - `(startx, starty)`: 직사각형의 좌측 하단 모서리.
+    - `(endx, endy)`: 직사각형의 우측 상단 모서리.
+  - 주어진 직사각형은 서로 겹치지 않습니다.
+- 그리드에 두개의 수평선 또는 수직선을 그어서 세 개의 구역으로 나눌수 있다면 `true`, 그렇지 않으면 `false`를 반환하여야합니다.
+  - 각 구역에는 최소 하나의 직사각형이 포함되어야 합니다.
+  - 모든 직사각형이 정확히 하나의 구역에 속하여야 합니다.
+
+## 문제 풀이
+
+### `Line Sweep`
+
+1. `rectangles`의 처리
+   - `xRanges`: 각 직사각형의 `[startx, endx]`를 추출해 시작점(`startx`) 기준으로 정렬.
+   - `yRanges`: 각 직사각형의 `[starty, endy]`를 추출해 시작점(`starty`) 기준으로 정렬.
+2. **`countSections()`**
+   - 주어진 `[start, end]` 구조의 배열에서 **나눌 수 있는 구역의 개수**를 세는 함수
+   - **`currentEnd = ranges[0][1]`**: 첫 직사각형의 끝점(`end`)을 초기 기준점으로 설정.
+   - 정렬된 `ranges`를 순회하며, 현재 직사각형의 시작점(`start`)이 이전까지의 최대 끝점(`currentEnd`)보다 크거나 같으면 새 구역으로 간주하고 `sections`를 증가.
+   - `currentEnd`를 현재 직사각형의 끝점(`end`)과 비교해 더 큰 값으로 갱신.
+3. 결과 반환
+   - `xRanges` 또는 `yRanges`의 분리된 구역 수가 3개 이상이라면 `true`, 그렇지 않으면 `false`를 반환
+
+```typescript showLineNumbers
+export function checkValidCuts(n: number, rectangles: number[][]): boolean {
+  const xRanges = rectangles
+    .map((rectangle) => [rectangle[0], rectangle[2]])
+    .sort((a, b) => a[0] - b[0]);
+  const yRanges = rectangles
+    .map((rectangle) => [rectangle[1], rectangle[3]])
+    .sort((a, b) => a[0] - b[0]);
+
+  return countSections(xRanges) >= 3 || countSections(yRanges) >= 3;
+}
+
+function countSections(ranges: number[][]) {
+  let sections = 1;
+  let currentEnd = ranges[0][1];
+  for (const [start, end] of ranges) {
+    if (currentEnd <= start) {
+      sections += 1;
+    }
+    currentEnd = Math.max(currentEnd, end);
+  }
+  return sections;
+}
+```
+
+#### 복잡도
+
+- $r$: `rectangles`의 길이
+- 시간 복잡도: $O(r \log_2{r})$
+- 공간 복잡도: $O(r)$
