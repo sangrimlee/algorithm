@@ -1,0 +1,188 @@
+---
+id: '2503'
+title: Maximum Number of Points From Grid Queries
+url: https://leetcode.com/problems/maximum-number-of-points-from-grid-queries
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Two Pointers
+  - Breadth-First Search
+  - Union Find
+  - Sorting
+  - Heap (Priority Queue)
+  - Matrix
+---
+
+## 문제 설명
+
+- `m x n` 크기의 2차원 정수 배열 `grid`와 크기 `k`의 정수 배열 `queries`가 주어집니다.
+- 각 `queries[i]`에 대해 아래 이동 규칙을 따라 얻을 수 있는 **최대 점수**를 계산한 후, 그 결과를 배열로 반환해야 합니다.
+- **이동 규칙**
+  1. 현재 위치의 값보다 **queries[i]가 클 경우에만 이동 가능**
+  2. 처음 방문하는 셀이라면 **1점 획득**
+  3. 이동 가능한 방향: **상, 하, 좌, 우**
+  4. **이동 가능한 셀이 없거나 조건을 만족하지 못하면 종료.**
+  5. 각 쿼리에 대해 **동일한 셀을 여러 번 방문할 수 있음.**
+
+## 문제 풀이
+
+### `Heap (Priority Queue)`
+
+> 💡 핵심 아이디어
+>
+> - 값이 작은 `query` 부터 처리하면, **한 번 방문한 셀을 다시 방문하지 않아도 된다.**
+>   - 값이 작은 `query`가 이동할 수 있는 셀은, 값이 큰 `query` 또한 이동할 수 있다.
+> - `query`보다 작은 이동할 수 있는 셀들을 **BFS 방식으로 탐색**하여 점수를 계산할 수 있다.
+
+1. `queries` 정렬
+   - `queries` 배열을 **작은 값부터 처리하기 위해 정렬**
+   - 원래 순서를 유지하기 위해 `[queries[i], i]` 형태로 저장
+2. Priority Queue를 활용한 탐색
+   - `(0, 0)`에서 시작하여 값이 작은 셀부터 방문합니다.
+   - BFS 방식으로 **상, 하, 좌, 우 이동**하며, 처음 방문하는 셀은 점수로 추가합니다.
+   - 방문 여부를 `visited` 배열에 기록하여 중복 방문을 방지합니다.
+3. 각 `query`에 대한 점수 계산
+   - 현재 방문 가능한 셀의 값이 `query`보다 작다면 계속 탐색합니다.
+   - 그렇지 않으면, 현재까지의 점수를 저장하고, 다음 `query`로 넘어갑니다.
+
+```typescript showLineNumbers
+function maxPoints(grid: number[][], queries: number[]): number[] {
+  const [m, n, k] = [grid.length, grid[0].length, queries.length];
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+  const sortedQueries = queries.map((query, i) => [query, i]).sort((a, b) => a[0] - b[0]);
+
+  const pq = new PriorityQueue((a, b) => a[2] - b[2]);
+  pq.push([0, 0, grid[0][0]]);
+  const visited = Array.from({ length: m }, () => new Array<boolean>(n).fill(false));
+  visited[0][0] = true;
+
+  let totalPoints = 0;
+  const answer = new Array<number>(k).fill(0);
+  for (const [query, queryIndex] of sortedQueries) {
+    while (!pq.isEmpty() && pq.front()![2] < query) {
+      const [cy, cx] = pq.pop()!;
+      totalPoints += 1;
+      for (const [dy, dx] of directions) {
+        const [ny, nx] = [cy + dy, cx + dx];
+        if (0 <= ny && ny < m && 0 <= nx && nx < n && !visited[ny][nx]) {
+          pq.push([ny, nx, grid[ny][nx]]);
+          visited[ny][nx] = true;
+        }
+      }
+    }
+    answer[queryIndex] = totalPoints;
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(k \cdot \log_2k + m \cdot n \cdot \log_2(m \cdot n))$
+- 공간 복잡도: $O(m \cdot n + k)$
+
+---
+
+### `Union-Find`
+
+> 💡 핵심 아이디어
+>
+> 점수는 (0, 0)에서 이동할 수 있는 모든 셀의 개수이다. → **Union-Find를 사용**하여, `(0, 0)`의 집합의 개수가 곧 점수가 된다.
+
+1. `queries` 및 `grid`를 정렬
+   - `queries` 배열을 **작은 값부터 처리하기 위해 정렬**
+     - 원래 순서를 유지하기 위해 `[queries[i], i]` 형태로 저장
+   - `grid`의 모든 셀을 **값 기준으로 정렬**
+     - 해당 값의 좌표를 알기 위해 `[grid[y][x], y, x]`의 형태로 저장
+2. **Union-Find를 활용한 영역 확장**
+   - `grid`의 각 셀을 방문하며, **값이 `queries[i]`보다 작은 경우** 같은 영역으로 병합
+   - **상, 하, 좌, 우** 방향으로 연결된 낮은 값의 셀들을 **하나의 집합으로 병합**
+   - `Union-Find`를 사용하여 **효율적으로 그룹을 관리**하고 크기를 추적
+3. 각 `query`에 대한 점수 계산
+   - `query` 값보다 작은 셀을 **모두 합친 후**, `(0,0)`이 속한 영역의 크기를 반환합니다.
+   - `query`가 `grid[0][0]`보다 크다면 `(0,0)`에서 이동 가능한 영역 크기를 반환하고, 그렇지 않다면 `0`을 반환합니다.
+
+```typescript showLineNumbers
+export function maxPoints(grid: number[][], queries: number[]): number[] {
+  const [m, n, k] = [grid.length, grid[0].length, queries.length];
+  const directions = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+  ];
+  const sortedQueries = queries.map((query, i) => [query, i]).sort((a, b) => a[0] - b[0]);
+  const sortedCells = grid
+    .flat()
+    .map((value, i) => [value, Math.floor(i / n), i % n])
+    .sort((a, b) => a[0] - b[0]);
+
+  const unionFind = new UnionFind(m * n);
+  const result = new Array<number>(k).fill(0);
+
+  let cellIndex = 0;
+  for (const [query, queryIndex] of sortedQueries) {
+    while (cellIndex < m * n && sortedCells[cellIndex][0] < query) {
+      const [_, y, x] = sortedCells[cellIndex];
+      const cellId = y * n + x;
+
+      for (const [dy, dx] of directions) {
+        const [ny, nx] = [y + dy, x + dx];
+        if (0 <= ny && ny < m && 0 <= nx && nx < n && grid[ny][nx] < query) {
+          unionFind.union(cellId, ny * n + nx);
+        }
+      }
+      cellIndex += 1;
+    }
+    result[queryIndex] = query > grid[0][0] ? unionFind.getSize(0) : 0;
+  }
+
+  return result;
+}
+
+class UnionFind {
+  private readonly parents: number[];
+  private readonly sizes: number[];
+  constructor(n: number) {
+    this.parents = Array.from({ length: n }, (_, i) => i);
+    this.sizes = new Array<number>(n).fill(1);
+  }
+
+  find(x: number): number {
+    if (this.parents[x] !== x) {
+      this.parents[x] = this.find(this.parents[x]);
+    }
+    return this.parents[x];
+  }
+
+  union(x: number, y: number): void {
+    const parentX = this.find(x);
+    const parentY = this.find(y);
+    if (parentX === parentY) {
+      return;
+    }
+    if (this.sizes[parentX] > this.sizes[parentY]) {
+      this.parents[parentY] = parentX;
+      this.sizes[parentX] += this.sizes[parentY];
+    } else {
+      this.parents[parentX] = parentY;
+      this.sizes[parentY] += this.sizes[parentX];
+    }
+  }
+
+  getSize(x: number): number {
+    return this.sizes[this.find(x)];
+  }
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(k \cdot \log_2k + m \cdot n \cdot \log_2(m \cdot n))$
+- 공간 복잡도: $O(m \cdot n + k)$
