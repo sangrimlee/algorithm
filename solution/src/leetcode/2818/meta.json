@@ -1,0 +1,8 @@
+{
+  "id": "2818",
+  "url": "https://leetcode.com/problems/apply-operations-to-maximize-score",
+  "title": "Apply Operations to Maximize Score",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Math", "Stack", "Greedy", "Sorting", "Monotonic Stack", "Number Theory"]
+}

@@ -1,0 +1,154 @@
+---
+id: '2818'
+title: Apply Operations to Maximize Score
+url: https://leetcode.com/problems/apply-operations-to-maximize-score
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Math
+  - Stack
+  - Greedy
+  - Sorting
+  - Monotonic Stack
+  - Number Theory
+---
+
+## 문제 설명
+
+- `n`개의 양의 정수 배열 `nums`와 정수 `k`가 주어집니다.
+- 초기 점수는 `1`에서 시작하며, **최대 `k`번의 연산을 수행**할 수 있습니다.
+- 각 연산에서 수행할 수 있는 동작은 다음과 같습니다.
+  1. 이전에 선택하지 않은 **어떤 연속된 부분 배열** `nums[l, ..., r]`을 선택합니다.
+  2. 해당 부분 배열에서 **가장 높은 Prime Score를 가진 숫자** `x`를 선택합니다.
+     - 만약 같은 **Prime Score**를 가진 숫자가 여러 개라면, **가장 왼쪽의 숫자를 선택**합니다.
+     - **Prime Score는 소인수의 개수와 같습니다.**
+       - 예) $300 = 2^2 \times 3 \times 5^2$ → 소인수 `{2, 3, 5}` → **Prime Score = 3**
+  3. 현재 점수에 `x`를 곱합니다.
+- 최대 `k`번의 연산 후, 최댓값을 반환해야 합니다.
+  - 최종 결과를 $10^9+7$로 모듈려 연산하여 반환합니다.
+
+## 문제 풀이
+
+### **`Sieve of Eratosthenes & Sorting`**
+
+> 💡 핵심 아이디어
+>
+> - **소수 리스트를 미리 구해서 소인수 개수를 빠르게 계산**
+> - **스택을 이용해 `prevDominant`와 `nextDominant`를 구해 빠르게 서브 배열 개수 계산**
+> - **큰 숫자부터 선택하여 `k`번의 연산 내에서 최적의 곱셈을 수행**
+
+1. **소인수 개수(Prime Score) 계산**
+   - 가장 큰 숫자(`maxNum`)를 기준으로 `findPrimes()`를 사용해 **소수 리스트**를 구합니다.
+   - `getPrimeScore()`를 이용해 `nums` 배열의 각 숫자에 대한 **소인수 개수(Prime Score)**를 계산합니다.
+2. **Dominant Index 계산 (이전/다음 큰 Prime Score 찾기)**
+   - **오름차순 모노토닉 스택**을 활용
+     - `prevDominant[i]` → `i` 이전에 있는 더 큰 Prime Score의 인덱스
+     - `nextDominant[i]` → `i` 이후에 있는 더 큰 Prime Score의 인덱스
+   - 이를 이용해, **각 숫자가 선택될 수 있는 모든 부분 배열 개수**를 계산합니다.
+3. **가능한 모든 부분 배열 개수 구하기**
+   - `numOfSubarrays[i] = (nextDominant[i] - i) * (i - prevDominant[i])`
+     - 즉, `i`번 인덱스의 숫자가 포함될 수 있는 부분 배열의 개수를 구합니다.
+4. **가장 큰 숫자부터 선택하여 곱하기**
+   - `nums`를 **내림차순 정렬**하여 가장 큰 숫자부터 선택합니다.
+   - 가능한 연산 횟수(`k`)를 고려하면서, `power()`를 이용해 **모듈러 연산 기반 곱셈 연산**을 수행합니다.
+5. **최종 결과 반환**
+   - 연산이 종료되면 `score` 값을 반환합니다.
+   - **큰 수 연산이 필요하므로 `BigInt`를 사용하여 모듈러 연산을 최적화**합니다.
+
+```typescript showLineNumbers
+const MOD = 10 ** 9 + 7;
+
+export function maximumScore(nums: number[], k: number): number {
+  const n = nums.length;
+  const maxNum = nums.reduce((prev, num) => Math.max(prev, num), 0);
+  const primes = findPrimes(maxNum);
+  const primeScores = nums.map((num) => getPrimeScore(num, primes));
+  const nextDominant = new Array<number>(n).fill(n);
+  const prevDominant = new Array<number>(n).fill(-1);
+
+  const stack: number[] = [];
+  for (let i = 0; i < n; i++) {
+    while (0 < stack.length && primeScores[stack[stack.length - 1]] < primeScores[i]) {
+      const topIndex = stack.pop()!;
+      nextDominant[topIndex] = i;
+    }
+    if (0 < stack.length) {
+      prevDominant[i] = stack[stack.length - 1];
+    }
+    stack.push(i);
+  }
+
+  const numOfSubarrays = new Array<number>(n).fill(0);
+  for (let i = 0; i < n; i++) {
+    numOfSubarrays[i] = (nextDominant[i] - i) * (i - prevDominant[i]);
+  }
+
+  const sortedNums = nums.map((num, i) => [num, i]).sort((a, b) => b[0] - a[0]);
+  let score = 1;
+  let currentIndex = 0;
+  let remainOperations = k;
+  while (remainOperations > 0) {
+    const [num, i] = sortedNums[currentIndex];
+    currentIndex += 1;
+    const operations = Math.min(remainOperations, numOfSubarrays[i]);
+    score = multiply(score, power(num, operations));
+    remainOperations -= operations;
+  }
+  return score;
+}
+
+function findPrimes(limit: number): number[] {
+  const primes: number[] = [];
+  const isPrime = new Array<boolean>(limit + 1).fill(true);
+  for (let num = 2; num <= limit; num++) {
+    if (!isPrime[num]) {
+      continue;
+    }
+    primes.push(num);
+    for (let mul = num * num; mul <= limit; mul += num) {
+      isPrime[mul] = false;
+    }
+  }
+  return primes;
+}
+
+function getPrimeScore(num: number, primes: number[]): number {
+  let primeScore = 0;
+  for (const prime of primes) {
+    if (num < prime * prime) {
+      break;
+    }
+    if (num % prime !== 0) {
+      continue;
+    }
+    primeScore += 1;
+    while (num % prime === 0) {
+      num /= prime;
+    }
+  }
+  return num > 1 ? primeScore + 1 : primeScore;
+}
+
+function multiply(num1: number, num2: number): number {
+  return Number((BigInt(num1) * BigInt(num2)) % BigInt(MOD));
+}
+
+function power(base: number, exponent: number): number {
+  let result = 1;
+  while (exponent > 0) {
+    if (exponent % 2 !== 0) {
+      result = multiply(result, base);
+    }
+    base = multiply(base, base);
+    exponent = Math.floor(exponent / 2);
+  }
+  return result % MOD;
+}
+```
+
+#### 복잡도
+
+- $n$: `nums`의 길이, $m$: `nums`에서 가장 큰 수
+- 시간 복잡도: $O(n \times (log_2m + log_2n) + m \cdot log_2log_2m )$
+- 공간 복잡도: $O(\max(m, n))$
