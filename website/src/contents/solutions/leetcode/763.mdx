@@ -11,7 +11,26 @@ tags:
 url: https://leetcode.com/problems/partition-labels
 ---
 
-## Solution
+## 문제 설명
+
+- 문자열 `s`가 주어집니다.
+- 문자열 `s`를 여러 부분으로 나누되, **각 문자가 하나의 부분에서만 나타나도록** 해야 합니다.
+- 나눈 부분들을 순서대로 이어붙였을 때, 원래 문자열 `s`가 되어야 합니다.
+- 가능한 한 많은 개수의 부분으로 나누는 것이 목표입니다.
+- 각 부분의 길이를 담은 배열을 반환해야 합니다.
+
+## 문제 풀이
+
+### `Two Pointers`
+
+1. 각 문자별 마지막 인덱스 저장
+   - 문자열 `s`를 한 번 순회하며, 각 문자의 **마지막 인덱스를** `Map`에 저장합니다.
+2. 부분 문자열 찾기
+   - `startIndex`는 현재 부분의 시작 위치를, `endIndex`는 현재까지 만난 문자 중 가장 마지막 등장 위치를 나타냅니다.
+   - 문자열을 순회하면서, 현재 문자 `s[i]`의 마지막 등장 위치를 `endIndex`와 비교해 업데이트합니다.
+   - 만약 `i`가 `endIndex`와 같다면, **해당 부분의 길이를 저장**하고 `startIndex`를 갱신합니다.
+3. 결과 반환
+   - 각 부분 문자열의 길이를 배열에 저장한 뒤 반환합니다.
 
 ```typescript showLineNumbers
 export function partitionLabels(s: string): number[] {
@@ -33,3 +52,8 @@ export function partitionLabels(s: string): number[] {
   return answer;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
