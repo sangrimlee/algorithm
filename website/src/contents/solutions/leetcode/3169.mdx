@@ -1,0 +1,58 @@
+---
+id: '3169'
+title: Count Days Without Meetings
+url: https://leetcode.com/problems/count-days-without-meetings
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Sorting
+---
+
+## 문제 설명
+
+- `days`라는 양의 정수가 주어지며, 이는 **직원이 근무할 수 있는 총 일수**입니다. (1일부터 시작)
+- `meetings라는 2차원 배열이 주어집니다.`
+  - **`meetings[i] = [start_i, end_i]`는** i번째 **미팅의 시작일과 종료일**을 나타냅니다.
+- 직원이 근무할 수 있지만 **미팅이 없는 날의 수를 반환**해야 합니다.
+- 미팅일정은 **서로 겹칠 수 있습니다.**
+
+## 문제 풀이
+
+### `Sorting`
+
+1. **정렬**
+   - `meetings` 배열을 시작일(`start_i`) 기준으로 오름차순 정렬을 합니다.
+   - 이를 통해, **시간 순서대로** 미팅을 처리할 수 있습니다.
+2. **구간 병합**
+   - `currentDay` 변수는 현재까지 처리된 **마지막 미팅 종료일의 다음날을 추적**합니다. (시작일은 1)
+   - 각 미팅을 순회하며, 현재 미팅 시작일이, `currentDay` 보다 크다면, **그 사이의 날짜들은 미팅이 없는 날**입니다.
+   - 이 경우 `availableDays`에 **미팅이 없는 날의 수를 더합니다.**
+   - 각 미팅을 처리한 후, `currentDay`를 **현재 미팅 종료일의 다음날(`end_i`) 또는 기존 `currentDay` 중 큰 값**으로 업데이트 합니다.
+   - 이 방법을 통해 겹치는 구간을 올바르게 병합할 수 있습니다.
+3. **마지막 미팅 이후**
+   - **모든 미팅이 끝난 후에도 근무 가능한 날이 남아있다면, 해당 날들도 미팅이 없는 날**로 계산합니다.
+
+```typescript showLineNumbers
+export function countDays(days: number, meetings: number[][]): number {
+  meetings.sort((a, b) => a[0] - b[0]);
+
+  let availableDays = 0;
+  let currentDay = 1;
+  for (const [start, end] of meetings) {
+    if (currentDay < start) {
+      availableDays += start - currentDay;
+    }
+    currentDay = Math.max(currentDay, end + 1);
+  }
+
+  availableDays += days - currentDay + 1;
+  return availableDays;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot \log_2{n})$
+- 공간 복잡도: $O(1)$
+  - **`Array.prototype.sort()`**: $O(n)$
