@@ -8,20 +8,72 @@ tags:
 url: https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i
 ---
 
-## Solution
+## 문제 설명
+
+1. 정수 배열 `nums가 주어집니다.`
+2. 세 개의 인덱스 `(i, j, k)`를 선택해야 합니다.
+   - 인덱스는 `i < j < k` 조건을 만족해야 합니다.
+3. 이 세 인덱스의 값은 `(nums[i] - nums[j]) * nums[k]`로 계산됩니다.
+4. 모든 가능한 `(i, j, k)` 조합 중 최대값을 반환해야 합니다.
+   - 모든 조합의 값이 음수인 경우 `0`을 반환합니다.
+
+## 문제 풀이
+
+### `Brute Force`
+
+모든 `(i, j, k)`에 대한 경우의 수에 대한 `(nums[i] - nums[j]) * nums[k]`의 최대값을 구하는 방식으로 해결 할 수 있습니다.
 
 ```typescript showLineNumbers
 export function maximumTripletValue(nums: number[]): number {
   const n = nums.length;
 
   let answer = 0;
-  let maxi = Math.max(nums[0], nums[1]);
-  let maxij = nums[0] - nums[1];
-  for (let k = 2; k < n; k++) {
-    answer = Math.max(answer, maxij * nums[k]);
-    maxi = Math.max(maxi, nums[k - 1]);
-    maxij = Math.max(maxij, maxi - nums[k]);
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      for (let k = j + 1; k < n; k++) {
+        const value = (nums[i] - nums[j]) * nums[k];
+        answer = Math.max(answer, value);
+      }
+    }
   }
   return answer;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n^3)$
+- 공간 복잡도: $O(1)$
+
+---
+
+### `Greedy`
+
+`k`의 값을 고정하면, `nums[i] - nums[j]`가 최대값을 가질 때, `(nums[i] - nums[j]) * nums[k]`가 최대값을 가지게 됩니다.
+
+이를 통해, 가능한 `k`를 탐색하는 동안, `nums[i] - nums[j]`의 최대값을 업데이트하여, 최대값을 찾을 수 있습니다.
+
+1. **`maxI`** 변수: 현재까지 탐색한 `j` 위치 이전(`i < j`)의 최대 `nums[i]` 값 저장
+2. **`maxDiff`** 변수: `(nums[i] - nums[j])`의 최대값 저장 `(i < j)`
+3. 각 `k`를 순회하며 **`maxDiff * nums[k]`** 계산
+
+```typescript
+function maximumTripletValue(nums: number[]): number {
+  const n = nums.length;
+
+  let answer = 0;
+  let maxI = Math.max(nums[0], nums[1]);
+  let maxDiff = nums[0] - nums[1];
+  for (let k = 2; k < n; k++) {
+    answer = Math.max(answer, maxDiff * nums[k]);
+    maxDiff = Math.max(maxDiff, maxI - nums[k]);
+    maxI = Math.max(maxI, nums[k]);
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
