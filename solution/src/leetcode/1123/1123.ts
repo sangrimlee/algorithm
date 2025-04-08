@@ -19,6 +19,7 @@ export function lcaDeepestLeaves(root: TreeNode | null): TreeNode | null {
     }
     return Math.max(leftMaxDepth, rightMaxDepth);
   }
+
   traverse(root, 0);
   return answer;
 }
