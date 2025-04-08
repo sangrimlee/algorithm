@@ -1,0 +1,8 @@
+{
+  "id": "2551",
+  "url": "https://leetcode.com/problems/put-marbles-in-bags",
+  "title": "Put Marbles in Bags",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": ["Array", "Greedy", "Sorting", "Heap (Priority Queue)"]
+}
