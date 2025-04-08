@@ -12,11 +12,32 @@ tags:
 url: https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves
 ---
 
-## Solution
+## 문제 설명
+
+- 주어진 이진 트리에서 가장 깊은 리프 노드들의 **최소 공통 조상(Lowest Common Ancestor, LCA)를** 반환합니다.
+  - **리프 노드**: 자식이 없는 노드
+  - **최소 공통 조상**: 모든 노드가 속한 서브트리의 루트 중 가장 깊은 노드
+
+## 문제 풀이
+
+### `Lowest Common Ancestor (LCA)`
+
+**DFS(Depth-First Search)를** 활용하여, 각 서브트리의 최대 깊이를 계산하면서, 가장 깊은 리프 노드들의 공통 조상을 추적하여, 최소 공통 조상을 찾습니다.
+
+1. 최대 깊이 추적
+   - `maxDepth`는 트리에서 현재 까지 탐색한 최대 깊이를 저장합니다.
+   - DFS를 통해 각 노드의 깊이를 계산하며, 최대 깊이를 업데이트합니다.
+2. DFS 탐색
+   - `traverse` 함수는 재귀적으로 트리를 탐색하며, 다음을 수행합니다.
+     - 왼쪽과 오른쪽 서브트리를 각각 탐색하여 최대 깊이를 계산합니다.
+     - 현재 노드가 `maxDepth`에 해당하는 **가장 깊은 리프 노드들의 공통 조상인지 확인**합니다.
+3. **LCA** 조건
+   - **왼쪽과 오른쪽 서브트리의 최대 깊이가 같고, 그 깊이가 `maxDepth`와 동일하다면, 현재 노드는 가장 깊은 리프 노드들의 최소 공통 조상입니다.**
+   - 이를 통해, `answer`에 LCA를 저장합니다.
+4. 결과 반환
+   - DFS 탐색이 끝나면, `answer`에 저장된 최소 공통 조상을 반환합니다.
 
 ```typescript showLineNumbers
-import { TreeNode } from '@algorithm/lib';
-
 export function lcaDeepestLeaves(root: TreeNode | null): TreeNode | null {
   let maxDepth = 0;
   let answer: TreeNode | null = null;
@@ -32,12 +53,14 @@ export function lcaDeepestLeaves(root: TreeNode | null): TreeNode | null {
     }
     return Math.max(leftMaxDepth, rightMaxDepth);
   }
+
   traverse(root, 0);
   return answer;
 }
 ```
 
-### Complexity
+#### 복잡도
 
-- Time: `O(N)`
-- Space: `O(H)`
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(H)$
+  - $H$: 주어진 트리의 높이

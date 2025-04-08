@@ -9,25 +9,54 @@ tags:
 url: https://leetcode.com/problems/solving-questions-with-brainpower
 ---
 
-## Solution
+## 문제 설명
+
+- 2차원 정수 배열 `questions`가 주어지며, 각 문제는 `[points, brainpower]`의 형태입니다.
+  - `points`: 해당 문제를 풀었을 때 얻는 점수
+  - `brainpower`: 문제를 풀었을 경우 건너뛰어야 하는 다음 문제 개수
+- 제한 사항
+  - **문제를 순서대로 진행**하며, **각 문제마다 풀지 않을지 결정**해야 합니다.
+  - 문제를 풀 경우, **지정된 개수만큼 다음 문제를 건너뛰어야 합니다.**
+  - 문제를 풀지 않으면, 다음 문제로 넘어갑니다.
+  - **최대로 얻을 수 있는 점수를 계산**해야 합니다.
+
+## 문제 풀이
+
+### `Dynamic Programming`
+
+**동적 계획법(Dynamic Programming)을** 활용하여, 각 문제를 풀거나 건너뛰는 선택을 통해 최적의 점수를 찾습니다.
+
+1. `dp` 배열 정의
+   - `dp[i]`는 문제 `i`부터 시작했을 때 얻을 수 있는 최대 점수를 저장합니다.
+   - 배열의 크기를 `n + 1`로 설정하여 마지막 질문 이후의 경우를 처리합니다.
+2. 점화식
+   - 각 질문에 대해 두 가지 선택지가 있습니다.
+   - 현재 질문을 풀고, 이후 `i + brainpower + 1`번째 문제로 이동:
+     - `i + brainpower + 1`이 `n`보다 큰 경우를 방지
+     - **`dp[i] = points + dp[Math.min(i + brainpower + 1, n)]`**
+   - 현재 문제를 건너뛰고, 다음 질문으로 이동:
+     - **`dp[i] = dp[i + 1]`**
+   - 최종적으로, 두 가지 선택지 중 더 큰 점수를 저장
+     - **`dp[i] = Math.max(points + dp[Math.min(i + brainpower + 1, n)], dp[i + 1])`**
+3. 역순으로 탐색
+   - `dp` 배열은 뒤에서부터 순회하며 값을 채웁니다.
+4. 결과 반환
+   - 첫 번째 질문부터 시작했을 때의 최대 점수인 `dp[0]`를 반환합니다.
 
 ```typescript showLineNumbers
 export function mostPoints(questions: number[][]): number {
   const n = questions.length;
-  const dp = new Array<number>(n).fill(0);
+  const dp = new Array<number>(n + 1).fill(0);
 
-  const dfs = (i: number) => {
-    if (n <= i) {
-      return 0;
-    }
-    if (dp[i] !== 0) {
-      return dp[i];
-    }
-    const [point, brainPower] = questions[i];
-    dp[i] = Math.max(dfs(i + 1), point + dfs(i + brainPower + 1));
-    return dp[i];
-  };
-
-  return dfs(0);
+  for (let i = n - 1; i >= 0; i--) {
+    const [points, brainpower] = questions[i];
+    dp[i] = Math.max(points + dp[Math.min(n, brainpower + i + 1)], dp[i + 1]);
+  }
+  return dp[0];
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$

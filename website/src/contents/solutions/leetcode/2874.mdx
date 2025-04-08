@@ -1,0 +1,40 @@
+---
+id: '2874'
+title: Maximum Value of an Ordered Triplet II
+url: https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-ii
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+---
+
+## 문제 설명
+
+문제는 [Maximum Value of an Ordered Triplet I](/solutions/leetcode/2873)과 동일합니다.
+
+하지만, 주어진 조건이 기존 `3 <= nums.length <= 100`에서 `3 <= nums.length <= 10^5`로 변경되었습니다.
+
+## 문제 풀이
+
+### `Greedy`
+
+기존의 [`BruteForce`](/solutions/leetcode/2873#brute-force) 풀이는 시간 복잡도가 $O(n^3)$이므로 사용할 수 없습니다.
+따라서, [`Greedy`](/solutions/leetcode/2873#greedy) 풀이를 사용해야합니다.
+
+자세한 풀이는 기존 [Maximum Value of an Ordered Triplet I](/solutions/leetcode/2873)를 확인해주세요.
+
+```typescript showLineNumbers
+export function maximumTripletValue(nums: number[]): number {
+  const n = nums.length;
+
+  let answer = 0;
+  let maxI = Math.max(nums[0], nums[1]);
+  let maxDiff = nums[0] - nums[1];
+  for (let k = 2; k < n; k++) {
+    answer = Math.max(answer, maxDiff * nums[k]);
+    maxDiff = Math.max(maxDiff, maxI - nums[k]);
+    maxI = Math.max(maxI, nums[k]);
+  }
+  return answer;
+}
+```

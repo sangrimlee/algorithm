@@ -13,20 +13,60 @@ tags:
 url: https://leetcode.com/problems/sum-of-all-subset-xor-totals
 ---
 
-## Solution
+## 문제 설명
+
+- 주어진 배열 `nums`의 **모든 부분집합**에 대해 **XOR total의 합을 반환**해야 합니다.
+  - **부분집합이 중복**되어도 (같은 원소를 가지는 다른 조합) 각각 따로 계산해야 합니다.
+- **XOR total**이란, 배열에 있는 **모든 원소의 XOR 연산 결과**입니다.
+  - 빈 배열의 **XOR total**은 `0`입니다.
+
+## 문제 풀이
+
+### `Backtracking`
+
+**모든 부분집합을 백트래킹을 통해 순회**하면서, 각 부분집합의 XOR 값을 계산하고, 그 값을 모두 더하여 반환합니다.
 
 ```typescript showLineNumbers
 export function subsetXORSum(nums: number[]): number {
-  function backtrack(prev: number, i: number): number {
+  function sumXOR(i: number, curr: number): number {
     if (i === nums.length) {
-      return prev;
+      return curr;
     }
-    let ret = 0;
-    const num = nums[i];
-    ret += backtrack(prev ^ num, i + 1);
-    ret += backtrack(prev, i + 1);
-    return ret;
+    return sumXOR(i + 1, curr) + sumXOR(i + 1, curr ^ nums[i]);
   }
-  return backtrack(0, 0);
+  return sumXOR(0, 0);
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(2^n)$
+- 공간 복잡도: $O(n)$
+
+---
+
+### `Bit Manipulation`
+
+> 💡 아이디어
+>
+> - 어떤 비트가 전체 부분집합 XOR 합에 포함되기 위해선, 해당 비트가 홀수 번 등장해야합니다.
+> - `nums`에 `n`개의 숫자가 있다면, 전체 부분집합의 개수는 $2^n$개 입니다.
+> - 이 중 절반인 $2^{n-1}$**개의 부분집합이 각 원소를 포함**합니다.
+> - 어떤 **비트가 한 번이라도 등장했다면**, 이 비트는 **전체 부분집합의 절반,** 즉 $2^{n-1}$개의 부분 집합에서 XOR 결과에 포함됩니다.
+
+1. `nums`의 모든 값을 OR 연산 → 모든 숫자에 홀수 번 나타난 비트를 전부 포함합니다. (`totalOR`)
+2. 이 비트들은 $2^{n-1}$번 XOR 합에 기여합니다.
+   - $\text{XOR 합계} = \text{totalOR} \times 2^{n - 1} = \text{totalOR} \ll (n - 1)$
+
+```typescript showLineNumbers
+export function subsetXORSum(nums: number[]): number {
+  const n = nums.length;
+  const totalOR = nums.reduce((prev, num) => prev | num, 0);
+  return totalOR << (n - 1);
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
