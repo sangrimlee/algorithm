@@ -1,0 +1,61 @@
+---
+id: '416'
+title: Partition Equal Subset Sum
+url: https://leetcode.com/problems/partition-equal-subset-sum
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Dynamic Programming
+---
+
+## 문제 설명
+
+- 양의 정수로 이루어진 배열 `nums`가 주어집니다.
+- **배열의 합이 같은 두 부분집합으로 나눌 수 있으면** `true`, 그렇지 않으면 `false` 반환해야 합니다.
+
+## 문제 풀이
+
+### `Dynamic Programming`
+
+1. 전체 합 계산
+   - 배열의 모든 요소를 더해, `totalSum`을 계산합니다.
+   - 만약, `totalSum`이 홀수라면, 두 부분집합으로 나눌 수 없으므로, `false`를 반환합니다.
+2. 목표 합 설정
+   - 목표 합은 각 부분집합의 합이 동일해야 하므로, `targetSum = totalSum / 2` 입니다.
+   - **문제는 배열에서 합이 `targetSum`인 부분집합을 찾을 수 있는지 여부로 바뀝니다.**
+3. **동적 계획법 (Dynamic Programming)**
+   - `dp` 배열의 **`dp[i]`는 부분합 `i`를 만들 수 있는지 여부**를 나타냅니다.
+   - `nums` 배열의 각 숫자를 사용하여, `dp` 배열을 업데이트하며, **특정 합을 만들 수 있는지 확인**합니다.
+4. 결과 반환
+   - 모든 숫자를 탐색한 후에, `dp[targetSum]`이 참이면, 부분집합을 찾았으므로 `true`. 그렇지 않으면 `false`를 반환합니다.
+
+**해당 문제는 0/1 배낭 문제(Knapsack Problem)의 변형으로, 효율적으로 부분집합의 합을 찾는 것입니다.**
+
+```typescript showLineNumbers
+export function canPartition(nums: number[]): boolean {
+  const totalSum = nums.reduce((acc, num) => acc + num, 0);
+  if (totalSum % 2 !== 0) {
+    return false;
+  }
+
+  const targetSum = totalSum / 2;
+  const dp = new Array<boolean>(targetSum + 1).fill(false);
+  dp[0] = true;
+  for (const num of nums) {
+    for (let sum = targetSum; sum >= num; sum--) {
+      dp[sum] = dp[sum] || dp[sum - num];
+      if (dp[targetSum]) {
+        return true;
+      }
+    }
+  }
+  return dp[targetSum];
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \times \text{targetSum})$
+  - $\text{targetSum} = \text{totalSum}/2$
+- 공간 복잡도: $O(\text{targetSum})$
