@@ -1,0 +1,92 @@
+---
+id: '2999'
+title: Count the Number of Powerful Integers
+url: https://leetcode.com/problems/count-the-number-of-powerful-integers
+category: Algorithms
+difficulty: Hard
+tags:
+  - Math
+  - String
+  - Dynamic Programming
+---
+
+## 문제 설명
+
+- 정수 `start`, `finish`, `limit`와 양의 정수를 나타내는 문자열 `s`가 주어집니다.
+- 범위 `[start, ..., finish]`에서 **강력한 정수(_powerful integers_)의 개수를 반환**해야 합니다.
+- **강력한 정수(_powerful integers_)의 조건은 다음과 같습니다.**
+  1. 해당 수는 문자열 `s`로 끝나야 합니다.
+  2. 수의 모든 자릿수가 `limit`이하이어야 합니다.
+
+## 문제 풀이
+
+### **`Mathematics`**
+
+> 💡 아이디어
+>
+> 1. `finish`까지의 개수 - `start-1`까지의 개수를 빼는 방식으로, `start` 부터 `finish`까지의 개수를 구할 수 있습니다.
+> 2. 문제의 조건 중 하나인, **`s`로 끝나는 숫자의 특징**을 사용하여, **접미사(suffix)는 `s`로 고정**하고, 그 앞에 붙을 수 있는 **접두사(prefix)를 조합**하는 방식으로 문제를 해결할 수 있습니다.
+
+#### `caculate(x)`
+
+1. `x`의 **접미사(suffix)** 검사
+   - `x`의 길이가 `s`보다 짧다면, **강력한 정수가 될 수 없으므로 결과는 `0`을 반환**합니다.
+   - `x`의 길이가 `s`와 같고, 사전순으로 `s`다음이라면, **유효한 조합(`s`)이 하나 존재**합니다.
+2. **접두사(prefix) 조합 계산**
+   - `x`의 앞부분(접두사)을 기준으로 **가능한 조합의 수를 계산**합니다.
+   - 각 자릿수 `x[i]`에 대해 다음과 같이 처리합니다.
+   - **`x[i] > limit`인 경우**
+     - 현재 자리수가 `limit`를 초과한다면, 더 이상 `x`이하의 숫자를 만들 수 없습니다.
+     - 따라서, **남은 자릿수만큼 만들 수 있는 최대 조합 수**를 더합니다.
+       → `(limit + 1) ** (prefixLength - i)`
+     - 이후 계산은 불필요하므로 바로 반환합니다.
+   - **`x[i] <= limit`인 경우**
+     - 현재 자리수까지는 `x`와 같거나 작게 만들 수 있습니다.
+     - 이 경우 가능한 조합 수는 다음과 같습니다.
+       - 현재 자리수에서 만들 수 있는 경우의 수: `x[i]`
+       - 나머지 자리수는 자유롭게 채울 수 있으므로 → `(limit + 1) ** (prefixLength - 1 - i)`
+       - 따라서, **이 자리에서 만들 수 있는 조합 수는** `x[i] * (limit + 1) ** (prefixLength - 1 - i)` 입니다.
+3. **결과 반환**
+   - 접두사로 만들 수 있는 모든 조합 수를 계산한 후, 접미사(`suffix`)가 `s` 이상이라면 **1을 추가**합니다.
+   - 최종적으로는 `접두사 조합 수 + (suffix ≥ s ? 1 : 0)`을 반환합니다.
+
+```typescript showLineNumbers
+export function numberOfPowerfulInt(
+  start: number,
+  finish: number,
+  limit: number,
+  s: string,
+): number {
+  const low = (start - 1).toString();
+  const high = finish.toString();
+  return calculate(high, s, limit) - calculate(low, s, limit);
+}
+
+function calculate(x: string, s: string, limit: number): number {
+  if (x.length < s.length) {
+    return 0;
+  }
+  if (x.length === s.length) {
+    return x >= s ? 1 : 0;
+  }
+
+  let prefixCount = 0;
+  const prefixLength = x.length - s.length;
+  for (let i = 0; i < prefixLength; i++) {
+    const digit = parseInt(x[i]);
+    if (limit < digit) {
+      prefixCount += (limit + 1) ** (prefixLength - i);
+      return prefixCount;
+    }
+    prefixCount += digit * (limit + 1) ** (prefixLength - 1 - i);
+  }
+
+  const suffix = x.slice(-s.length);
+  return suffix >= s ? prefixCount + 1 : prefixCount;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(\log_{10} (finish))$
+- 공간 복잡도: $O(\log_{10} (finish))$
