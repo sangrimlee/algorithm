@@ -1,38 +1,65 @@
 ---
 id: '2843'
 title: '  Count Symmetric Integers'
+url: https://leetcode.com/problems/count-symmetric-integers
 category: Algorithms
 difficulty: Easy
 tags:
   - Math
   - Enumeration
-url: https://leetcode.com/problems/count-symmetric-integers
 ---
 
-## Solution
+## 문제 설명
+
+- 두 양의 정수 `low`와 `high`가 주어집니다.
+- `[low, high]` 범위 내에서 **대칭 정수(symmetric integer)의 개수를 반환**해야 합니다.
+- **대칭 정수(symmetric integer)란?**
+  - 정수 `x`가 **짝수 자리수**를 가지며, **앞의 절반과 뒤의 절반의 자릿수 합이 동일**할 때, `x`는 대칭 정수입니다.
+  - **홀수 자리수의 정수는 대칭 정수가 될 수 없습니다.**
+
+## 문제 풀이
+
+### `Brute Force`
+
+주어진 범위가 크지 않으므로, `[low, high]`의 모든 수를 순회하면서 **대칭 정수인지 확인**하는 방식의 **브루트 포스(Brute-force)한 접근법**으로 해결할 수 있습니다.
+
+- `countSymmetricIntegers(low, high)`
+  - `low`부터 `high`까지 모든 정수 `num`에 대해 `isSymmetricInteger(num)` 함수를 통해 **대칭 여부**를 판단하여, 대칭인 경우, 카운트를 증가시킵니다.
+- `isSymmetricInteger(num)`
+  - 정수 `num`을 분자열로 변환합니다.
+  - **홀수 자리수인 경우**, 대칭 정수가 될 수 없으므로 `false`를 반환합니다.
+  - **짝수 자리수인 경우:**
+    - 앞 쪽 절반의 자릿수 합(`left`)과 뒤 쪽 절반의 자릿수 합(`right`)을 계산합니다.
+    - 두 합이 같으면 `true`, 다르면 `false`를 반환합니다.
 
 ```typescript showLineNumbers
 export function countSymmetricIntegers(low: number, high: number): number {
-  function isSymmetric(num: number) {
-    const str = num.toString();
-    const n = str.length;
-    if (n % 2 !== 0) {
-      return false;
-    }
-    let [leftSum, rightSum] = [0, 0];
-    for (let i = 0; i < Math.floor(n / 2); i++) {
-      leftSum += parseInt(str[i]);
-      rightSum += parseInt(str[n - i - 1]);
-    }
-    return leftSum === rightSum;
-  }
-
   let answer = 0;
   for (let num = low; num <= high; num++) {
-    if (isSymmetric(num)) {
+    if (isSymmetricInteger(num)) {
       answer += 1;
     }
   }
   return answer;
 }
+
+function isSymmetricInteger(num: number): boolean {
+  const s = num.toString();
+  if (s.length % 2 !== 0) {
+    return false;
+  }
+
+  const n = s.length / 2;
+  let [left, right] = [0, 0];
+  for (let i = 0; i < n; i++) {
+    left += parseInt(s[i]);
+    right += parseInt(s[s.length - i - 1]);
+  }
+  return left === right;
+}
 ```
+
+**복잡도**
+
+- 시간 복잡도: $O(high -low)$
+- 공간 복잡도: $O(1)$
