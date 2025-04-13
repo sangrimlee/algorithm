@@ -3,17 +3,13 @@
  * https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct
  */
 export function minimumOperations(nums: number[]): number {
-  const lastDuplicate = findLastDuplicate(nums);
-  return Math.ceil((lastDuplicate + 1) / 3);
-}
-
-function findLastDuplicate(nums: number[]) {
+  const n = nums.length;
   const set = new Set<number>();
-  for (let i = nums.length; 0 <= i; i--) {
+  for (let i = n - 1; i >= 0; i--) {
     if (set.has(nums[i])) {
-      return i;
+      return Math.floor(i / 3) + 1;
     }
     set.add(nums[i]);
   }
-  return -1;
+  return 0;
 }

@@ -1,0 +1,117 @@
+---
+id: '3272'
+title: Find the Count of Good Integers
+url: https://leetcode.com/problems/find-the-count-of-good-integers
+category: Algorithms
+difficulty: Hard
+tags:
+  - Hash Table
+  - Math
+  - Combinatorics
+  - Enumeration
+---
+
+## 문제 설명
+
+- 정수 `n`과 `k`가 주어집니다.
+- **k-palindromic 수**란 다음 두 조건을 만족하는 정수입니다.
+  - **팰린드롬(palindrome)**이어야 합니다. (앞뒤가 같은 수)
+  - `k`로 나누어 떨어져야 합니다.
+- **좋은(good) 정수**란 다음 조건을 만족하는 정수입니다.
+  - 해당 수의 **자릿수를 재배열하여** **k-palindromic 수**로 만들 수 있어야 합니다.
+  - **단, 재배열 전 후 모두 앞자리에 0이 올 수 없습니다.**
+- `n`자리 수 중에서 **좋은 정수의 개수**를 반환해야 합니다.
+
+## 문제 풀이
+
+### `Enumeration, Permutations and Combinations`
+
+> 💡 아이디어
+>
+> 1. `k`로 나누어 떨어지는 팰린드롬 수를 먼저 찾는다.
+> 2. 각 팰린드롬 수의 자릿수를 정렬한 결과를 기준으로 **“좋은 정수”의 후보군**을 만듭니다.
+> 3. 후보군의 **자릿수를 재배열**하여 만들 수 있는 **모든 `n`자리 수의 경우의 수를 계산**한다.
+
+1. 유효한 팰린드롬 수 찾기.
+   - 팰린드롬의 절반만을 탐색하기 위해, `M**ath.floor(n + 1 / 2)`자리의 숫자들을 순회\*\*합니다.
+   - `createPalindrome`함수를 사용하여, **팰린드롬 수를 생성**합니다.
+   - 생성된 수가 `k`로 나누어 떨어지면, **그 수의 자릿수를 정렬한 문자열을 `Set`에 저장**합니다.
+     - 정렬하는 이유는, 각 자릿수의 개수가 같으면, **생성할 수 있는 경우의 수도 동일**하기 때문
+2. 후보군 재배열 경우의 수 계산
+   - `Set`에 있는 각 문자열에 대해 **중복된 원소가 있는 순열**을 계산하는 공식을 사용하여 경우의 수를 계산합니다.
+   - 단, 0이 **맨 앞에 오는 경우는 전체 경우의 수에서 제외**합니다.
+
+$$
+\text{총 조합 수} = \frac{(n-c_0)\times(n-1)!}{c_0 ! \times c_1 ! \times \dots \times c_9 !}
+$$
+
+3. 결과 반환
+   - 각 후보군의 **모든 경우의 수를 합산**하여 반환합니다.
+
+```typescript showLineNumbers
+export function countGoodIntegers(n: number, k: number): number {
+  const set = new Set<string>();
+  const base = 10 ** Math.floor((n - 1) / 2);
+  const skipLast = n % 2 === 1;
+
+  for (let i = base; i < 10 * base; i++) {
+    const palindrome = createPalindrome(i, skipLast);
+    const palindromicInteger = Number(palindrome);
+    if (palindromicInteger % k === 0) {
+      set.add(sortStr(palindrome));
+    }
+  }
+
+  let answer = 0;
+  const factorial = getFactorial(n);
+  for (const s of set) {
+    const digitCount = countDigit(s);
+    answer += countPermutations(n, digitCount, factorial);
+  }
+  return answer;
+}
+
+function createPalindrome(num: number, skipLast: boolean): string {
+  const left = num.toString();
+  const right = reverseStr(left).substring(skipLast ? 1 : 0);
+  return `${left}${right}`;
+}
+
+function getFactorial(n: number): bigint[] {
+  const factorial = new Array<bigint>(n + 1).fill(1n);
+  for (let i = 1; i <= n; i++) {
+    factorial[i] = factorial[i - 1] * BigInt(i);
+  }
+  return factorial;
+}
+
+function countDigit(s: string): number[] {
+  const digitCount = new Array<number>(10).fill(0);
+  for (const digit of s) {
+    digitCount[Number(digit)] += 1;
+  }
+  return digitCount;
+}
+
+function countPermutations(n: number, digitCount: number[], factorial: bigint[]): number {
+  let totalCount = BigInt(n - digitCount[0]) * factorial[n - 1];
+  for (const count of digitCount) {
+    totalCount /= factorial[count];
+  }
+  return Number(totalCount);
+}
+
+function reverseStr(s: string): string {
+  return s.split('').reverse().join('');
+}
+
+function sortStr(s: string): string {
+  return s.split('').sort().join('');
+}
+```
+
+#### 복잡도
+
+- $m = \lfloor \frac{n + 1}{2} \rfloor$
+- 시간 복잡도: $O(n \cdot \log_2n \times 10 ^ m)$
+- 공간 복잡도: $O(n \times 10 ^ m)$

@@ -1,25 +1,37 @@
 ---
 id: '3396'
 title: Minimum Number of Operations to Make Elements in Array Distinct
+url: https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct
 category: Algorithms
 difficulty: Easy
 tags:
   - Array
   - Hash Table
-url: https://leetcode.com/problems/minimum-number-of-operations-to-make-elements-in-array-distinct
 ---
 
-## Solution
+## 문제 설명
 
-### Solution1: Using `Map`
+- 정수 배열 `nums`가 주어집니다.
+- **모든 요소를 유일하게 만들기 위한 최소 작업 횟수를 반환**합니다.
+  - 작업은 **배열의 앞부분에서 최대 3개의 요소를 제거**하는 방식입니다.
+  - 배열이 비어있으면 모든 요소가 유일한 것으로 간주됩니다.
+
+## 문제 풀이
+
+### `Hash Table`
+
+- `Map` 객체를 활용하여 배열의 각 요소가 몇 번 등장했는지 추적합니다.
+- 모든 요소의 **등장 횟수가 1 이하가 되면 배열의 모든 요소는 유일**합니다.
+- **배열의 앞부분에서 최대 3개의 요소를 반복적으로 제거**하며, **모든 요소가 유일해질 때까지 작업을 수행**합니다.
+- 해당 작업의 횟수를 반환합니다.
 
 ```typescript showLineNumbers
 export function minimumOperations(nums: number[]): number {
   const n = nums.length;
   const counter = new Counter(nums);
 
-  let answer = 0;
   let i = 0;
+  let answer = 0;
   while (!counter.isDistinct() && i < n) {
     for (const num of nums.slice(i, i + 3)) {
       counter.sub(num);
@@ -62,34 +74,35 @@ class Counter extends Map<number, number> {
 }
 ```
 
-#### Complexity
+#### 복잡도
 
-- Time: $O(n^2)$
-- Space: $O(n)$
+- 시간 복잡도: $O(n^2)$
+- 공간 복잡도: $O(n)$
 
 ---
 
-### Solution2: Find Last Duplicate Index
+### `Reverse Traverse`
+
+- 배열을 뒤에서 부터 순회하며, **이미 확인된 요소는 `Set`에 추가**합니다.
+- 만약 현재 요소가 이미 `Set`에 존재한다면, **처음부터 현재 요소까지 제거**해야합니다.
+  - 따라서, 작업 횟수는 **해당 위치를 기준으로, $\lfloor i/3 \rfloor + 1$이 됩니다.**
+- 중복이 없으면 `0`을 반환합니다.
 
 ```typescript showLineNumbers
 export function minimumOperations(nums: number[]): number {
-  const lastDuplicate = findLastDuplicate(nums);
-  return Math.ceil((lastDuplicate + 1) / 3);
-}
-
-function findLastDuplicate(nums: number[]) {
+  const n = nums.length;
   const set = new Set<number>();
-  for (let i = nums.length; 0 <= i; i--) {
+  for (let i = n - 1; i >= 0; i--) {
     if (set.has(nums[i])) {
-      return i;
+      return Math.floor(i / 3) + 1;
     }
     set.add(nums[i]);
   }
-  return -1;
+  return 0;
 }
 ```
 
-#### Complexity
+#### 복잡도
 
-- Time: $O(n)$
-- Space: $O(n)$
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$

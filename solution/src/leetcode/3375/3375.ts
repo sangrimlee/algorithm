@@ -3,10 +3,15 @@
  * https://leetcode.com/problems/minimum-operations-to-make-array-values-equal-to-k
  */
 export function minOperations(nums: number[], k: number): number {
-  if (nums.some((num) => num < k)) {
-    return -1;
+  const set = new Set<number>();
+
+  for (const num of nums) {
+    if (num < k) {
+      return -1;
+    }
+    if (k < num) {
+      set.add(num);
+    }
   }
-  const set = new Set(nums);
-  set.add(k);
-  return set.size - 1;
+  return set.size;
 }

@@ -1,7 +1,7 @@
 {
   "id": "2843",
   "url": "https://leetcode.com/problems/count-symmetric-integers",
-  "title": "  Count Symmetric Integers",
+  "title": "Count Symmetric Integers",
   "category": "Algorithms",
   "difficulty": "Easy",
   "tags": ["Math", "Enumeration"]
