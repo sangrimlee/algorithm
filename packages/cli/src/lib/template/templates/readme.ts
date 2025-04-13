@@ -8,7 +8,7 @@ export const README_TEMPLATE = `
 | 제목 | 풀이 |
 | - | - |
 {{#each leetcode}}
-| [{{this.id}}. {{this.title}} ↗]({{this.url}}) | [풀이 보기]({{this.relativePath}}) | 
+| [{{this.meta.id}}. {{this.meta.title}} ↗]({{this.meta.url}}) | [풀이 보기]({{this.relativePath}}) | 
 {{/each}}
 
 ### Programmers
@@ -16,6 +16,6 @@ export const README_TEMPLATE = `
 | 제목 | 풀이 |
 | - | - |
 {{#each programmers}}
-| [{{this.title}} ↗]({{this.url}}) | [풀이 보기]({{this.relativePath}}) | 
+| [{{this.meta.title}} ↗]({{this.meta.url}}) | [풀이 보기]({{this.relativePath}}) | 
 {{/each}}
 `;
