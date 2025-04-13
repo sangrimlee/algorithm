@@ -1098,7 +1098,7 @@ export const meta = {
   '2828': 'Check if a String Is an Acronym of Words',
   '2833': 'Furthest Point From Origin',
   '2839': 'Check if Strings Can be Made Equal With Operations I',
-  '2843': '  Count Symmetric Integers',
+  '2843': 'Count Symmetric Integers',
   '2848': 'Points That Intersect With Cars',
   '2849': 'Determine if a Cell Is Reachable at a Given Time',
   '2855': 'Minimum Right Shifts to Sort the Array',
