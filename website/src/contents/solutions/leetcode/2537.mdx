@@ -1,0 +1,88 @@
+---
+id: '2537'
+title: Count the Number of Good Subarrays
+url: https://leetcode.com/problems/count-the-number-of-good-subarrays
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Sliding Window
+---
+
+## 문제 설명
+
+- 정수 배열 `nums`와 정수 `k`가 주어졌을 때, **Good Subarray의 개수를 반환**해야 합니다.
+- **Good Subarray란?**
+  - `nums`의 어떤 부분 배열 `arra`가 다음 조건을 만족하면 **Good Subarray**입니다.
+  - 아래 조건을 만족하는 **적어도 `k`개의 (i, j) 쌍이 존재**해야 합니다.
+    - `i < j`
+    - `arr[i] === arr[j]`
+  - **즉, 부분 배열 내에 값이 같은 인덱스 쌍이 `k`개 이상 존재해야 합니다.**
+
+## 문제 풀이
+
+### `Sliding Window`
+
+> 💡 아이디어
+>
+> 1. 쌍의 개수는 **추가되는 숫자의 기존 개수**로 계산할 수 있다.
+> 2. **슬라이딩 윈도우를 활용**해 조건을 만족하는 부분 배열을 빠르게 탐색할 수 있다.
+
+1. **윈도우 확장 (오른쪽으로 한 칸씩)**
+   - 새로운 원소를 윈도우에 추가하면서, 해당 숫자의 쌍 개수를 증가시킨다.
+     - 이때 **쌍의 개수는 현재 그 숫자의 등장 횟수만큼 증가**한다.
+2. **윈도우 수축 (왼쪽 포인터 이동)**
+   - **현재 쌍의 개수가 `k` 이상**이 되면, 왼쪽 포인터(`start`)를 오른쪽으로 옮기며 윈도우를 줄인다.
+     - 줄이면서 나가는 숫자의 등장 횟수를 줄이고, 그 **숫자에 의해 줄어드는 쌍의 개수만큼 `pairCount`에서 빼준다.**
+3. **조건 만족 시 기여 계산**
+   - 왼쪽 포인터 **`start`는 조건을 막 벗어나는 지점까지 이동**했기 때문에, **`start` 이전의 모든 위치에서 시작하는 부분 배열은 조건을 만족**한다.
+   - 따라서, **조건을 만족하는 서브배열의 개수 = `start`**
+
+```typescript showLineNumbers
+export function countGood(nums: number[], k: number): number {
+  let answer = 0;
+
+  let start = 0;
+  let pairCount = 0;
+  const counter = new Counter();
+  for (const num of nums) {
+    pairCount += counter.get(num);
+    counter.add(num);
+    while (pairCount >= k) {
+      counter.sub(nums[start]);
+      pairCount -= counter.get(nums[start]);
+      start += 1;
+    }
+    answer += start;
+  }
+  return answer;
+}
+
+class Counter {
+  private readonly map: Map<number, number>;
+  constructor() {
+    this.map = new Map();
+  }
+
+  get(num: number): number {
+    return this.map.get(num) ?? 0;
+  }
+
+  add(num: number): void {
+    this.map.set(num, this.get(num) + 1);
+  }
+
+  sub(num: number): void {
+    this.map.set(num, this.get(num) - 1);
+    if (this.get(num) <= 0) {
+      this.map.delete(num);
+    }
+  }
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
