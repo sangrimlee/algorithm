@@ -3,23 +3,29 @@
  * https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array
  */
 export function countPairs(nums: number[], k: number): number {
-  const indicesByValue = new Map<number, number[]>();
-
-  let answer = 0;
+  const indicesByNum = new Map<number, number[]>();
   nums.forEach((num, i) => {
-    const indices = indicesByValue.get(num) ?? [];
-    if (indices.length === 0) {
-      indicesByValue.set(num, [i]);
-      return;
-    }
-
-    for (const j of indices) {
-      if ((i * j) % k === 0) {
-        answer += 1;
-      }
-    }
+    const indices = indicesByNum.get(num) ?? [];
     indices.push(i);
+    indicesByNum.set(num, indices);
   });
 
+  let answer = 0;
+  for (const indices of indicesByNum.values()) {
+    const gcdCount = new Map<number, number>();
+    for (const i of indices) {
+      const gcdI = gcd(i, k);
+      for (const [gcdJ, count] of gcdCount) {
+        if ((gcdI * gcdJ) % k === 0) {
+          answer += count;
+        }
+      }
+      gcdCount.set(gcdI, (gcdCount.get(gcdI) ?? 0) + 1);
+    }
+  }
   return answer;
+}
+
+function gcd(a: number, b: number): number {
+  return b === 0 ? a : gcd(b, a % b);
 }
