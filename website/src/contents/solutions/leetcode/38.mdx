@@ -8,34 +8,90 @@ tags:
 url: https://leetcode.com/problems/count-and-say
 ---
 
-## Solution
+## 문제 설명
+
+- `countAndSay`란?
+  - `countAndSay(1) = '1'`
+  - `countAndSay(n)`은 `countAndSay(n - 1)`에 **run-length encoding**의 결과입니다.
+- [**Run-length encoding(RLE)**](https://ko.wikipedia.org/wiki/%EB%9F%B0_%EB%A0%9D%EC%8A%A4_%EB%B6%80%ED%98%B8%ED%99%94)란?
+  - 문자열에서 **연속된 동일한 숫자의 그룹**을 `"개수+숫자"`의 형식으로 표현하는 방식입니다.
+
+## 문제 풀이
+
+### `Recursive`
+
+- `countAndSay(n)`
+  - 재귀적으로 `countAndSay(n - 1)`을 구한 뒤, 그 결과를 `runLengthEncoding` 함수를 통해 인코딩하여 반환합니다.
+  - 처음은 `"1"`에서 시작하고, 이전 단계의 출력을 기반으로 다음 단계를 생성하여 반환합니다.
+- `runLengthEncoding(s)`
+  - 주어진 문자열 `s`에서 **같은 문자가 연속으로 등장하는 구간**을 찾습니다.
+  - 해당 문자의 **`등장 횟수 + 문자`** 형태로 결과 문자열에 추가합니다.
+  - 마지막 문자에 대한 처리를 루프가 끝난 뒤에 한 번 더 수행하여 반환합니다.
 
 ```typescript showLineNumbers
 export function countAndSay(n: number): string {
-  const count = (s: string) => {
-    let result = '';
+  if (n === 1) {
+    return '1';
+  }
+  return runLengthEncoding(countAndSay(n - 1));
+}
 
-    let num = '';
-    let count = 0;
-    for (const char of s) {
-      if (num === char) {
-        count += 1;
-        continue;
-      }
-      if (0 < count) {
-        result += `${count}${num}`;
-      }
-      num = char;
+function runLengthEncoding(s: string): string {
+  let result = '';
+  let count = 1;
+  for (let i = 1; i < s.length; i++) {
+    if (s[i - 1] === s[i]) {
+      count += 1;
+    } else {
+      result += `${count.toString()}${s[i - 1]}`;
       count = 1;
     }
-    result += `${count}${num}`;
-    return result;
-  };
-
-  let answer = '1';
-  for (let i = 2; i <= n; i++) {
-    answer = count(answer);
   }
-  return answer;
+  result += `${count.toString()}${s[s.length - 1]}`;
+  return result;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(2^n)$
+- 공간 복잡도: $O(2^n)$
+- **생성되는 문자열이 기존 문자열의 약 2배**가 되기 때문에, $O(2^n)$만큼의 복잡도를 가집니다.
+
+---
+
+### `Iterative`
+
+- 기존의 `countAndSay`함수에서 재귀적인 방식으로 구하던 것을 반복문을 사용하여 반환합니다.
+- 이 경우, `n`값이 커졌을 떄, **스택 오버플로우의 위험 없이 안전하게 동작합니다.**
+
+```typescript showLineNumbers
+export function countAndSay(n: number): string {
+  let current = '1';
+  for (let i = 0; i < n - 1; i++) {
+    current = runLengthEncoding(current);
+  }
+  return current;
+}
+
+function runLengthEncoding(s: string): string {
+  let result = '';
+  let count = 1;
+  for (let i = 1; i < s.length; i++) {
+    if (s[i - 1] === s[i]) {
+      count += 1;
+    } else {
+      result += `${count.toString()}${s[i - 1]}`;
+      count = 1;
+    }
+  }
+  result += `${count.toString()}${s[s.length - 1]}`;
+  return result;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(2^n)$
+- 공간 복잡도: $O(2^n)$
+- **재귀 방식과 동일한 시간/공간 복잡도지만, Call Stack의 크기를 줄일 수 있습니다.**
