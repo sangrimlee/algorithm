@@ -1,0 +1,55 @@
+---
+id: '781'
+title: Rabbits in Forest
+url: https://leetcode.com/problems/rabbits-in-forest
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Math
+  - Greedy
+---
+
+## 문제 설명
+
+- 몇 마리의 토끼가 살고 있는지는 알 수 없는 숲이 있습니다.
+- 우리는 `n`마리의 토끼에게 **"너와 같은 색을 가진 토끼는 몇 마리야?"** 라고 물었고, 그 답변을 정수 배열 `answers`에 정리했습니다.
+  - `answers[i]`는 `i`번째 토끼의 대답을 의미합니다.
+- 이 배열 `answers`가 주어질 때, **숲에 있을 수 있는 토끼의 최소 수**를 반환해야 합니다.
+
+## 문제 풀이
+
+> 💡 아이디어
+>
+> - 각 대답 `answer`는 그 토끼와 같은 색을 가진 **최대 `answer + 1`마리**의 토끼가 있을 수 있다는 것을 의미합니다.
+> - 따라서, 각 대답 `answer`의 개수를 세고, **각 그룹마다 `answer + 1`마리**를 기준으로 묶어서 숲에 존재할 수 있는 최소 토끼 수를 구할 수 있습니다.
+
+1. **대답 개수 세기**
+   - 각 대답의 개수들을 `Map`에 저장합니다.
+2. **최소 토끼 수 계산**
+   - 각 대답 `answer`과 해당 대답의 개수 `count`에 대해 다음과 같이 최소 토끼 수를 계산합니다.
+   - **존재할 수 있는 그룹의 개수: `Math.ceil(count / (answer + 1))`**
+   - **각 그룹에 존재하는 토끼의 수: `answer + 1`**
+   - **존재할 수 있는 최소 토끼 수: `Math.ceil(count / (answer + 1)) * (answer + 1)`**
+
+```typescript showLineNumbers
+export function numRabbits(answers: number[]): number {
+  const counter = new Map<number, number>();
+  for (const answer of answers) {
+    counter.set(answer, (counter.get(answer) ?? 0) + 1);
+  }
+
+  let result = 0;
+  for (const [answer, count] of counter) {
+    const groupCount = Math.ceil(count / (answer + 1));
+    result += groupCount * (answer + 1);
+  }
+  return result;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
