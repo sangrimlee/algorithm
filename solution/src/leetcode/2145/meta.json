@@ -1,0 +1,8 @@
+{
+  "id": "2145",
+  "url": "https://leetcode.com/problems/count-the-hidden-sequences",
+  "title": "Count the Hidden Sequences",
+  "category": "Algorithms",
+  "difficulty": "Medium",
+  "tags": ["Array", "Prefix Sum"]
+}
