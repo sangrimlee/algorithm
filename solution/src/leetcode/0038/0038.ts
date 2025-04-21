@@ -3,29 +3,24 @@
  * https://leetcode.com/problems/count-and-say
  */
 export function countAndSay(n: number): string {
-  const count = (s: string) => {
-    let result = '';
+  let current = '1';
+  for (let i = 0; i < n - 1; i++) {
+    current = runLengthEncoding(current);
+  }
+  return current;
+}
 
-    let num = '';
-    let count = 0;
-    for (const char of s) {
-      if (num === char) {
-        count += 1;
-        continue;
-      }
-      if (0 < count) {
-        result += `${count.toString()}${num.toString()}`;
-      }
-      num = char;
+function runLengthEncoding(s: string): string {
+  let result = '';
+  let count = 1;
+  for (let i = 1; i < s.length; i++) {
+    if (s[i - 1] === s[i]) {
+      count += 1;
+    } else {
+      result += `${count.toString()}${s[i - 1]}`;
       count = 1;
     }
-    result += `${count.toString()}${num.toString()}`;
-    return result;
-  };
-
-  let answer = '1';
-  for (let i = 2; i <= n; i++) {
-    answer = count(answer);
   }
-  return answer;
+  result += `${count.toString()}${s[s.length - 1]}`;
+  return result;
 }

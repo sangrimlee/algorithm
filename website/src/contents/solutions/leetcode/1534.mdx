@@ -9,27 +9,47 @@ tags:
 url: https://leetcode.com/problems/count-good-triplets
 ---
 
-## Solution
+## 문제 설명
+
+- 정수 배열 `arr`와 세 개의 정수 `a`, `b`, `c`가 주어집니다.
+- **Good Triplet**이란, **아래 조건을 모두 만족하는 `(arr[i], arr[j], arr[k])` 조합**을 말합니다.
+  - 인덱스 조건: `0 <= i < j < k < arr.length`
+  - 값의 차이 조건:
+    - `|arr[i] - arr[j]| <= a`
+    - `|arr[j] - arr[k]| <= b`
+    - `|arr[i] - arr[k]| <= c`
+- 주어진 배열에서 이러한 **Good Triplet의 개수를 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Brute Force`
+
+- 세 개의 중첩된 반복문을 사용해 가능한 모든 `(i, j, k)` 조합을 순회합니다.
+- 조건을 만족하는 모든 **Good Triplet** 총 개수를 계산하여 반환합니다.
 
 ```typescript showLineNumbers
-export function countGoodTriplets(arr: number[], a: number, b: number, c: number): number {
-  const diff = (i: number, j: number) => Math.abs(arr[i] - arr[j]);
+function countGoodTriplets(arr: number[], a: number, b: number, c: number): number {
   const n = arr.length;
 
   let answer = 0;
   for (let i = 0; i < n; i++) {
     for (let j = i + 1; j < n; j++) {
-      if (diff(i, j) > a) {
+      if (Math.abs(arr[i] - arr[j]) > a) {
         continue;
       }
+
       for (let k = j + 1; k < n; k++) {
-        if (diff(j, k) <= b && diff(i, k) <= c) {
+        if (Math.abs(arr[j] - arr[k]) <= b && Math.abs(arr[i] - arr[k]) <= c) {
           answer += 1;
         }
       }
     }
   }
-
   return answer;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n^3)$
+- 공간 복잡도: $O(1)$

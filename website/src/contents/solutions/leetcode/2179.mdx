@@ -1,0 +1,113 @@
+---
+id: '2179'
+title: Count Good Triplets in an Array
+url: https://leetcode.com/problems/count-good-triplets-in-an-array
+category: Algorithms
+difficulty: Hard
+tags:
+  - Array
+  - Binary Search
+  - Divide and Conquer
+  - Binary Indexed Tree
+  - Segment Tree
+  - Merge Sort
+  - Ordered Set
+---
+
+## 문제 설명
+
+- 길이가 `n`인 두 배열 `nums1`와 `nums2`가 주어집니다.
+- 두 배열 모두 `[0, 1, …, n - 1]`의 **순열(permutation)입니다.**
+- **Good Triplet**이란, 세 값 `(x, y, z)`의 조합으로, 아래 조건을 모두 만족해야합니다.
+  - `x`, `y`, `z`는 서로 다른 값이며, 모두 `[0, n - 1]`에 포함됩니다.
+  - `nums1`에서의 위치가 증가 순서입니다.
+    - $pos1_x < pos1_y < pos1_z$
+  - `nums2`에서도 위치가 증가 순서입니다.
+    - $pos2_x < pos2_y < pos2_z$
+- 두 배열의 **Good Triplet의 개수를 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Binary Indexed Tree`
+
+#### 💡 아이디어
+
+- `nums2`에서의 위치 기준으로 `nums1`의 인덱스를 재배열하여, 결국 하나의 배열에서 **증가하는 순서의 Triplet 개수**를 찾는 문제로 바꿉니다.
+- **Binary Indexed Tree(BIT)를** 이용해 **좌측에 존재하는 작은 값의 개수**를 효율적으로 구하고,
+  이를 바탕으로 가능한 Triplet의 개수를 계산한다.
+
+#### 풀이 과정
+
+1. `nums2`에서의 각 값의 인덱스를 저장하는 `pos2`를 생성
+2. `nums1`의 값을 `nums2`의 위치 기준으로 재배열한 `indexMapping` 생성
+   - 즉, 각 인덱스에는 `nums1[i]` 값의 `nums2`에서의 인덱스를 저장합니다.
+   - $indexMapping[i] = pos2_{nums1[i]}$
+3. **Binary Indexed Tree와 `indexMapping`**을 사용한 **Good Triplet**의 개수 계산.
+   - `indexMapping`에서 증가하는 인덱스를 가진 Triplet을 찾습니다.
+   - 값을 하나씩 처리하며, 현재 위치보다 왼쪽에 있는 값 중에서 작은 값의 개수를 계산합니다.
+   - `left`: **현재 값보다 왼쪽에 위치하며, 인덱스도 작은 값의 개수**
+   - `right`: **나머지 값 중에서 Triplet의 오른쪽이 될 수 있는 값의 개수**
+     - `right = n - 1 - pos - (value - left)`
+       - `n - 1 - pos`: **현재 위치 기준으로 우측에 있는 전체 요소 수**
+       - `value - left`: **현재까지 등장한 값 중 나보다 큰 값 수**
+   - `left * right`: **해당 값을 중심으로 만들 수 있는 Good Triplet 개수**
+4. **Good Triplet 개수를 누적하여 반환**
+
+```typescript showLineNumbers
+export function goodTriplets(nums1: number[], nums2: number[]): number {
+  const n = nums1.length;
+  const pos2 = new Array<number>(n).fill(-1);
+  const indexMapping = new Array<number>(n).fill(-1);
+  nums2.forEach((num2, i) => {
+    pos2[num2] = i;
+  });
+  nums1.forEach((num1, i) => {
+    indexMapping[pos2[num1]] = i;
+  });
+
+  const tree = new BinaryIndexedTree(n);
+  let answer = 0;
+  for (let value = 0; value < n; value++) {
+    const pos = indexMapping[value];
+
+    const left = tree.query(pos);
+    tree.update(pos, 1);
+    const right = n - 1 - pos - (value - left);
+    answer += left * right;
+  }
+  return answer;
+}
+
+class BinaryIndexedTree {
+  readonly size: number;
+  private readonly tree: number[];
+
+  constructor(size: number) {
+    this.size = size;
+    this.tree = new Array<number>(this.size + 1).fill(0);
+  }
+
+  update(index: number, delta: number): void {
+    let currentIndex = index + 1;
+    while (currentIndex <= this.size) {
+      this.tree[currentIndex] += delta;
+      currentIndex += currentIndex & -currentIndex;
+    }
+  }
+
+  query(index: number): number {
+    let result = 0;
+    let currentIndex = index + 1;
+    while (currentIndex > 0) {
+      result += this.tree[currentIndex];
+      currentIndex -= currentIndex & -currentIndex;
+    }
+    return result;
+  }
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot \log_2 n)$
+- 공간 복잡도: $O(n)$

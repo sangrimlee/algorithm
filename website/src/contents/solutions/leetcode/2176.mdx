@@ -1,35 +1,107 @@
 ---
 id: '2176'
 title: Count Equal and Divisible Pairs in an Array
+url: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array
 category: Algorithms
 difficulty: Easy
 tags:
   - Array
-url: https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array
 ---
 
-## Solution
+## 문제 설명
+
+- 길이가 `n`인 정수 배열 `nums`와 정수 `k`가 주어집니다.
+- 아래 조건을 만족하는 **쌍(i, j)의 개수를 반환**해야 합니다.
+  1. `0 <= i < j < n`
+  2. `nums[i] === nums[j]`
+  3. `(i * j) % k === 0`
+
+## 문제 풀이
+
+### `Brute Force`
+
+> 💡 아이디어
+>
+> **`n`의 최대 크기는 100**으로, $O(n^2)$ 시간이 걸려도 크게 문제가 되지 않으므로, **완전 탐색을 통해 모든 쌍을 탐색하여 해결할 수 있다.**
+
+1. 배열의 모든 가능한 인덱스 쌍 `(i, j)` (`0 <= i < j < n`)를 **이중 루프**로 탐색합니다.
+2. 각 쌍에 대해 두 가지 조건을 검사합니다.
+   - `nums[i] === nums[j]` → 값이 같은지 확인
+   - `(i * j) % k === 0` → 인덱스 곱이 `k`로 나누어 떨어지는지 확인
+3. 두 조건을 모두 만족하면 정답(`answer`)를 1 증가시킵니다.
 
 ```typescript showLineNumbers
 export function countPairs(nums: number[], k: number): number {
-  const indicesByValue = new Map<number, number[]>();
+  const n = nums.length;
 
   let answer = 0;
-  nums.forEach((num, i) => {
-    const indices = indicesByValue.get(num) ?? [];
-    if (indices.length === 0) {
-      indicesByValue.set(num, [i]);
-      return;
-    }
-
-    for (const j of indices) {
-      if ((i * j) % k === 0) {
+  for (let i = 0; i < n; i++) {
+    for (let j = i + 1; j < n; j++) {
+      if (nums[i] === nums[j] && (i * j) % k === 0) {
         answer += 1;
       }
     }
-    indices.push(i);
-  });
-
+  }
   return answer;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n^2)$
+- 공간 복잡도: $O(1)$
+
+---
+
+### `Hash Table and GCD`
+
+> 💡 아이디어
+>
+> 1. `(i * j) % k === 0`을 `gcd(i, k) * gcd(j, k) % k === 0`으로 바꿔서 생각한다.
+> 2. `i`의 GCD 값을 기준으로, 이전에 등장한 `j`들의 GCD 값을 모아놓고 비교한다.
+> 3. 모든 `(i, j)`를 순회하지 않고도 효율적으로 조건을 만족하는 쌍을 계산할 수 있다.
+> 4. 가능한 GCD 값은 `k`의 약수만큼만 존재하므로, 비교 대상은 $O(\sqrt{k})$개로 제한된다.
+
+1. **같은 값을 가진 인덱스를 그룹화**합니다.
+2. 같은 값을 각 인덱스에 대해:
+   - 현재 인덱스 `i`의 `gcd(i, k)`와 이전 인덱스의 GCD `gcd(j, k)`와 비교합니다.
+   - 만약, `gcd(i, k) * gcd(j,k) % k === 0`이면 정답 (`answer`)를 1 증가시킵니다.
+
+```typescript showLineNumbers
+export function countPairs(nums: number[], k: number): number {
+  const indicesByNum = new Map<number, number[]>();
+  nums.forEach((num, i) => {
+    const indices = indicesByNum.get(num) ?? [];
+    indices.push(i);
+    indicesByNum.set(num, indices);
+  });
+
+  let answer = 0;
+  for (const indices of indicesByNum.values()) {
+    const gcdCount = new Map<number, number>();
+    for (const i of indices) {
+      const gcdI = gcd(i, k);
+      for (const [gcdJ, count] of gcdCount) {
+        if ((gcdI * gcdJ) % k === 0) {
+          answer += count;
+        }
+      }
+      gcdCount.set(gcdI, (gcdCount.get(gcdI) ?? 0) + 1);
+    }
+  }
+  return answer;
+}
+
+function gcd(a: number, b: number): number {
+  return b === 0 ? a : gcd(b, a % b);
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot \sqrt{k})$
+  - **`k`의 약수의 최대 개수는 $\sqrt{k}$ 개이다.**
+  - 전체적으로 **모든 인덱스를 한 번씩 방문하면서, 각 인덱스에 대해 약수의 수 정도의 GCD 비교를 수행**하는 것으로 볼 수 있다.
+- 공간 복잡도: $O(n+\sqrt{k})$
+  - `indicesByNum`: $O(n)$
+  - `gcdCount`: $O(\sqrt{k})$

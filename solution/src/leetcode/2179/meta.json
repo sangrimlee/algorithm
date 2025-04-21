@@ -1,0 +1,16 @@
+{
+  "id": "2179",
+  "url": "https://leetcode.com/problems/count-good-triplets-in-an-array",
+  "title": "Count Good Triplets in an Array",
+  "category": "Algorithms",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Binary Search",
+    "Divide and Conquer",
+    "Binary Indexed Tree",
+    "Segment Tree",
+    "Merge Sort",
+    "Ordered Set"
+  ]
+}
