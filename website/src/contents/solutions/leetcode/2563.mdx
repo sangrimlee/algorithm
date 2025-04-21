@@ -11,30 +11,108 @@ tags:
 url: https://leetcode.com/problems/count-the-number-of-fair-pairs
 ---
 
+## 문제 설명
+
+- 정수 배열 `nums`와 정수 `lower`과 `upper`가 주어집니다.
+- **올바른 인덱스 쌍의 개수**를 반환해야 합니다.
+- **올바른 인덱스 쌍 `(i, j)`이란?**
+  - `0 <= i < j < n`
+  - `lower <= nums[i] + nums[j] <= upper`
+
+## 문제 풀이
+
+### `Binary Search`
+
+> 💡 아이디어
+>
+> 배열을 정렬한 뒤, 각 원소 nums[i]에 대해 조건을 만족하는 nums[j] (j > i)의 개수를 이분 탐색을 사용하여 찾습니다.
+
+1. 배열 정렬
+   - `nums`를 오름차순으로 정렬합니다.
+2. **각 원소 `nums[i]`에 대해 이분 탐색 수행**
+   - `low`: `nums[j] >= lower - nums[i]`인 첫 인덱스
+   - `high`: `nums[j] > upper - nums[i]`인 첫 인덱스
+   - 범위 `(low, high)`가 조건을 만족하는 쌍의 개수가 됩니다.
+
 ```typescript showLineNumbers
-export function countFairPairs(nums: number[], lower: number, upper: number): number {
+function countFairPairs(nums: number[], lower: number, upper: number): number {
   nums.sort((a, b) => a - b);
-  return countMinPairs(nums, upper + 1) - countMinPairs(nums, lower);
+  const n = nums.length;
+  let answer = 0;
+  for (let i = 0; i < n; i++) {
+    const low = lowerBound(nums, i + 1, n - 1, lower - nums[i]);
+    const high = lowerBound(nums, i + 1, n - 1, upper - nums[i] + 1);
+    answer += high - low;
+  }
+  return answer;
 }
 
-function countMinPairs(nums: number[], target: number) {
+function lowerBound(nums: number[], low: number, high: number, target: number): number {
+  let [start, end] = [low, high];
+  while (start <= end) {
+    const mid = start + Math.floor((end - start) / 2);
+    if (nums[mid] >= target) {
+      end = mid - 1;
+    } else {
+      start = mid + 1;
+    }
+  }
+  return start;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \log n)$
+- 공간 복잡도: $O(n)$
+  - `sort`메서드에 대한 공간 복잡도를 제외한 공간 복잡도: $O(1)$
+
+---
+
+### `Two Pointers`
+
+> 💡 아이디어
+>
+> 배열을 정렬한 뒤, 두 수의 합이 특정 `target` 이하인 쌍의 개수를 투포인터를 사용하여 찾습니다.
+
+1. 배열 정렬
+   - `nums`를 오름차순으로 정렬합니다.
+2. **누적 쌍 개수 계산**
+   - `nums[i] + nums[j] ≤ upper`를 만족하는 쌍의 총 개수에서,
+   - `nums[i] + nums[j] < lower`를 만족하는 쌍의 개수를 빼면,
+   - 결국 `lower ≤ nums[i] + nums[j] ≤ upper` 조건을 만족하는 쌍의 개수를 구할 수 있다.
+3. **`countPairs`**
+   - 정렬된 배열에서 `nums[i] + nums[j] ≤ target`을 만족하는 쌍의 개수를 효율적으로 구하기 위해 **투 포인터(Two Pointers)** 기법을 사용합니다.
+   - 포인터 `start`를 고정한 상태에서, `end`를 움직이며 **두 수의 합이 `target` 이하인 경우, `start`부터 `end`까지의 모든 인덱스 쌍이 유효한 쌍**이 된다.
+   - 이는 배열이 정렬되어 있기 때문에, `nums[start]`보다 큰 값을 가진 인덱스들과 더해도 여전히 `target` 이하라는 것이 보장됩니다.
+
+```typescript showLineNumbers
+function countFairPairs(nums: number[], lower: number, upper: number): number {
+  nums.sort((a, b) => a - b);
+  return countPairs(nums, upper) - countPairs(nums, lower - 1);
+}
+
+/**
+ * 인덱스 쌍의 합이 `target`보다 작거나 같은 쌍의 개수
+ */
+function countPairs(nums: number[], target: number) {
+  let count = 0;
   let [start, end] = [0, nums.length - 1];
-  let result = 0;
   while (start < end) {
     const sum = nums[start] + nums[end];
-    if (sum < target) {
-      result += end - start;
+    if (sum <= target) {
+      count += end - start;
       start += 1;
     } else {
       end -= 1;
     }
   }
-  return result;
+  return count;
 }
 ```
 
-### Complexity
+#### 복잡도
 
-- Time: $O(n \cdot logn)$
-- Space: $O(1)$
-  - 정렬 알고리즘에 대한 공간복잡도는 고려하지 않음
+- 시간 복잡도: $O(n \log n)$
+- 공간 복잡도: $O(n)$
+  - `sort`메서드에 대한 공간 복잡도를 제외한 공간 복잡도: $O(1)$
