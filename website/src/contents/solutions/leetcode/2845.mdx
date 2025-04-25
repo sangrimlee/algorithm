@@ -1,0 +1,68 @@
+---
+id: '2845'
+title: Count of Interesting Subarrays
+url: https://leetcode.com/problems/count-of-interesting-subarrays
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Prefix Sum
+---
+
+## 문제 설명
+
+- 정수 배열 `nums`와 정수 `modulo`와 `k`가 주어집니다.
+- **흥미로운(interesting) 부분 배열**은 다음과 같은 조건을 만족해야합니다.
+  - 부분 배열 `nums[l, ..., r]` 내에서 **`nums[i]` 값을 `modulo`로 나눈 나머지가 `k`와 같은 원소들의 개수**를 셉니다.
+  - 이 개수를 `cnt`라고 할 때, **`cnt`를 `modulo`로 나눈 나머지가 다시 `k`와 같아야 합니다.**
+- **흥미로운(interesting) 배열의 개수를 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Hash Table & Prefix Sum`
+
+> 💡 아이디어
+>
+> - 배열의 각 원소를 `modulo` 로 나눈 나머지가 `k` 인지에 따라 1 또는 0으로 변환하여 생각합니다.
+> - **부분 배열 내에서 조건을 만족하는 원소의 개수**에 대한 문제를 **변환된 배열의 누적합 차이**에 대한 문제로 바꾸어 생각합니다. - 즉, `cnt % modulo === k`를 `(sum[r] - sum[l - 1]) % modulo === k` 로 생각합니다.
+
+1. 초기 상태 설정 및 누적 개수 준비
+   - `prefixSum`: 현재 누적 개수 (`modulo`로 나눈 나머지가 `k`인 원소의 개수)
+   - `counter`: 현재까지 누적 개수들의 `modulo`로 나눈 나머지들의 빈도
+     - 배열 시작 전 상태(누적 개수 0)의 빈도를 1로 설정
+2. 배열 순회 및 누적 개수 업데이트
+   - 배열 `nums`를 순회하며 각 원소에 대해, `nums[i] % modulo == k` 조건을 만족하면 현재 누적 개수(`prefixSum`)를 1 증가시킵니다.
+3. **필요한 이전 나머지 탐색 및 개수 추가:**
+   - **현재 위치에서 끝나는 흥미로운 부분 배열을 만들기 위해 이전 누적 개수가 `modulo`로 나누었을 때 가져야 할 나머지를 계산합니다.**
+     - **`(sum[r] - sum[l - 1]) % modulo === k`는 `(sum[r] - k + modulo) % modulo = sum[l - 1] % modulo`과 같습니다.**
+     - 따라서, **`(prefixSum - k + modulo) % modulo`를 `modulo`로 나눈 나머지로 가지는 이전 누적 개수의 빈도**를 찾습니다.
+   - `counter`에서 이 계산된 나머지 값을 키로 가진 이전 누적 개수의 빈도를 찾아 총 결과에 더합니다.
+4. 현재 누적 개수 나머지 기록
+   - 현재 계산된 누적 개수(`prefixSum`)를 `modulo`로 나눈 나머지 빈도를 `counter`에 업데이트합니다.
+5. 결과 반환:
+   - 배열 순회를 모두 마친 후, 누적된 총 흥미로운 부분 배열의 개수를 반환합니다.
+
+```typescript showLineNumbers
+export function countInterestingSubarrays(nums: number[], modulo: number, k: number): number {
+  const counter = new Map<number, number>([[0, 1]]);
+
+  let answer = 0;
+  let prefixSum = 0;
+  for (const num of nums) {
+    prefixSum += num % modulo === k ? 1 : 0;
+    const requireRemainder = (prefixSum - k + modulo) % modulo;
+    answer += counter.get(requireRemainder) ?? 0;
+
+    const currentRemainder = prefixSum % modulo;
+    counter.set(currentRemainder, (counter.get(currentRemainder) ?? 0) + 1);
+  }
+  return answer;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(modulo)$
+  - 현재까지의 누적합의 `modulo`로 나눈 나머지를 저장하기 때문에 가능한 나머지 값은 0부터 `modulo - 1`까지 총 `modulo`개 입니다.
