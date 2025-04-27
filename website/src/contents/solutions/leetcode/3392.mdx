@@ -8,14 +8,26 @@ tags:
 url: https://leetcode.com/problems/count-subarrays-of-length-three-with-a-condition
 ---
 
-## Solution
+## 문제 설명
+
+- 정수 배열 `nums`가 주어집니다.
+- **길이가 3인 부분 배열(subarray)** 중에서 **첫 번째와 세 번째 숫자의 합이 두번째 숫자의 정확히 절반**과 같은 부분 배열의 개수를 반환해야 합니다.
+
+## 문제 풀이
+
+### `Brute Force`
+
+1. 배열을 한 번 순회하면서 **모든 길이 3의 연속된 부분 배열을 확인**합니다.
+2. 각 부분 배열에서 **`2 * (첫번째 + 세번째) = 두번째` 조건을 검사**합니다.
+3. 조건이 충족될 때마다 카운터를 증가시킵니다.
 
 ```typescript showLineNumbers
 export function countSubarrays(nums: number[]): number {
   const n = nums.length;
+
   let answer = 0;
   for (let i = 0; i < n - 2; i++) {
-    if (nums[i] + nums[i + 2] === nums[i + 1] / 2) {
+    if (2 * (nums[i] + nums[i + 2]) === nums[i + 1]) {
       answer += 1;
     }
   }
@@ -23,7 +35,7 @@ export function countSubarrays(nums: number[]): number {
 }
 ```
 
-### Complexity
+#### 복잡도
 
-- Time: $O(n)$
-- Space: $O(1)$
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
