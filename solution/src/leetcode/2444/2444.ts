@@ -3,23 +3,26 @@
  * https://leetcode.com/problems/count-subarrays-with-fixed-bounds
  */
 export function countSubarrays(nums: number[], minK: number, maxK: number): number {
-  let answer = 0;
+  const n = nums.length;
 
-  let minIndex = -1;
-  let maxIndex = -1;
-  let outIndex = -1;
-  nums.forEach((num, i) => {
-    if (num < minK || maxK < num) {
-      outIndex = i;
-    }
-    if (num === minK) {
-      minIndex = i;
+  let answer = 0;
+  let start = 0;
+  let lastMinIndex = -1;
+  let lastMaxIndex = -1;
+  for (let i = 0; i < n; i++) {
+    const num = nums[i];
+    if (num < minK || num > maxK) {
+      start = i + 1;
     }
     if (num === maxK) {
-      maxIndex = i;
+      lastMaxIndex = i;
     }
-    answer += Math.max(0, Math.min(minIndex, maxIndex) - outIndex);
-  });
-
+    if (num === minK) {
+      lastMinIndex = i;
+    }
+    if (start <= lastMinIndex && start <= lastMaxIndex) {
+      answer += Math.min(lastMinIndex, lastMaxIndex) - start + 1;
+    }
+  }
   return answer;
 }

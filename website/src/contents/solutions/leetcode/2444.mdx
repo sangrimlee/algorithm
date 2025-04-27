@@ -11,28 +11,60 @@ tags:
 url: https://leetcode.com/problems/count-subarrays-with-fixed-bounds
 ---
 
-## Solution
+## 문제 설명
+
+- 정수 배열 `nums`와 두 정수 `minK`, `maxK`가 주어집니다.
+- **"fixed-bound subarray"** 는 다음 조건을 만족하는 부분 배열입니다.
+  - 부분 배열의 최솟값이 정확히 `minK`입니다.
+  - 부분 배열의 최댓값이 정확히 `maxK`입니다.
+- **"fixed-bound subarray"** 의 개수를 반환해야 합니다.
+
+## 문제 풀이
+
+### `Sliding Window`
+
+> 💡 아이디어
+>
+> **fixed-bound subarray**의 조건을 다음과 같이 생각할 수 있습니다.
+>
+> - `minK`보다 작거나, `maxK`보다 큰 값을 가지면 안됩니다.
+> - `minK`와 `maxK`의 값을 가지고 있어야합니다.
+
+1. 배열을 순차적으로 순회합니다
+2. 범위 밖의 값(`num < minK || num > maxK`) 발견시 윈도우 재설정합니다.
+3. `minK`와 `maxK` 발견 시 각각의 마지막 위치를 갱신합니다.
+4. 현재 윈도우 내에 `minK`와 `maxK` 모두 존재하면 다음을 실행합니다.
+   - **가능한 부분 배열 개수 = `Math.min(lastMinIndex, lastMaxIndex) - start + 1`**
+   - **현재 윈도우에서 `minK`와 `maxK`를 모두 포함하면서 가능한 시작점의 개수**와 같습니다.
 
 ```typescript showLineNumbers
 export function countSubarrays(nums: number[], minK: number, maxK: number): number {
-  let answer = 0;
+  const n = nums.length;
 
-  let minIndex = -1;
-  let maxIndex = -1;
-  let outIndex = -1;
-  nums.forEach((num, i) => {
-    if (num < minK || maxK < num) {
-      outIndex = i;
-    }
-    if (num === minK) {
-      minIndex = i;
+  let answer = 0;
+  let start = 0;
+  let lastMinIndex = -1;
+  let lastMaxIndex = -1;
+  for (let i = 0; i < n; i++) {
+    const num = nums[i];
+    if (num < minK || num > maxK) {
+      start = i + 1;
     }
     if (num === maxK) {
-      maxIndex = i;
+      lastMaxIndex = i;
     }
-    answer += Math.max(0, Math.min(minIndex, maxIndex) - outIndex);
-  });
-
+    if (num === minK) {
+      lastMinIndex = i;
+    }
+    if (start <= lastMinIndex && start <= lastMaxIndex) {
+      answer += Math.min(lastMinIndex, lastMaxIndex) - start + 1;
+    }
+  }
   return answer;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$

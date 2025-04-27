@@ -1,0 +1,67 @@
+---
+id: '2145'
+title: Count the Hidden Sequences
+url: https://leetcode.com/problems/count-the-hidden-sequences
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Prefix Sum
+---
+
+## 문제 설명
+
+- 정수 배열 `differences`가 주어집니다.
+  - 이 배열은 숨겨진 수열 `hidden`의 연속된 요소들 간의 차이를 나타냅니다.
+  - 즉, `differences[i] = hidden[i + 1] - hidden[i]` 과 같습니다.
+- 정수 `lower`와 `upper`가 주어집니다.
+  - 숨겨진 수열 `hidden`의 모든 요소는 `[lower, upper]` 범위 내(경계값 포함)에 있어야 합니다.
+- 문제는 가능한 모든 숨겨진 수열 `hidden`의 개수를 구하는 것입니다.
+  - 가능한 수열이 없다면 `0`을 반환합니다.
+
+## 문제 풀이
+
+### `Prefix Sum`
+
+> 💡 아이디어
+>
+> - 수열의 **첫 번째 값이 정해지면, 나머지 모든 값들은 `differences` 배열에 의해 자동으로 결정**됩니다.
+> - 따라서, **가능한 시작점의 개수를 계산**하면, **가능한 수열의 총 개수**를 알 수 있습니다.
+
+1. 상대적 수열 탐색
+   - 첫 번째 값을 0으로 가정하고, `differences`를 통해 만들어지는 수열의 최소값과 최대값을 추적
+2. **최소 / 최대값 갱신**
+   - 모든 `differences`를 순회하면서 가능한 최소값과 최대값을 갱신
+   - `minValue`와 `maxValue`를 통해 수열의 범위 확인
+3. **범위 유효성 검사**
+   - 만약 **최대값과 최소값의 차이가 허용된 범위 크기(`upper - lower`)보다 크다면 불가능한 경우**이므로 0을 반환
+   - 어떤 시작점을 선택하더라도 모든 요소가 `[lower, upper]` 범위 내에 있을 수 없음
+4. 가능한 시작점 계산
+   - 가능한 경우, **시작점을 이동시킬 수 있는 범위의 크기**를 계산하여 반환
+   - `(upper - lower) - (maxValue - minValue) + 1`은 가능한 시작점의 개수를 의미
+
+```typescript showLineNumbers
+export function numberOfArrays(differences: number[], lower: number, upper: number): number {
+  const rangeSize = upper - lower;
+
+  let minValue = 0;
+  let maxValue = 0;
+  let currentValue = 0;
+  for (const difference of differences) {
+    currentValue += difference;
+    minValue = Math.min(minValue, currentValue);
+    maxValue = Math.max(maxValue, currentValue);
+
+    if (maxValue - minValue > rangeSize) {
+      return 0;
+    }
+  }
+
+  return rangeSize - (maxValue - minValue) + 1;
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(1)$
