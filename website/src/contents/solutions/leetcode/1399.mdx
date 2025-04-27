@@ -9,22 +9,57 @@ tags:
 url: https://leetcode.com/problems/count-largest-group
 ---
 
-## Solution
+## 문제 설명
+
+- 정수 `n`이 주어집니다.
+- 1부터 `n`까지의 각 "**숫자를 숫자의 자릿수 합**"에 따라 그룹화합니다.
+  - 예: 숫자 23의 자릿수 합은 2+3
+- **가장 크기가 큰 그룹(가장 많은 숫자를 포함한 그룹)이 몇 개인지 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Hash Table`
+
+> 💡 아이디어
+>
+> 1부터 `n`까지의 숫자를 **각 숫자의 자릿수 합에 따라 그룹화**하고, **가장 크기가 큰 그룹이 몇 개인지 계산하여** 문제를 해결할 수 있습니다.
+
+1. 1부터 `n`까지 순회하며 각 숫자의 자릿수 합을 계산합니다.
+2. 각 합에 해당하는 그룹의 크기를 `Map`에 저장합니다.
+3. 동시에 **가장 큰 그룹 크기를 추적하고, 같은 크기의 그룹이 몇 개인지 계산**합니다.
 
 ```typescript showLineNumbers
 export function countLargestGroup(n: number): number {
-  const sumOfDigits = (n: number) => {
-    return [...n.toString()].reduce((sum, digit) => sum + +digit, 0);
-  };
-  const groups = new Map<number, number>();
+  let groupCount = 0;
   let largestGroupSize = 0;
-  for (let i = 1; i <= n; i++) {
-    const group = sumOfDigits(i);
-    const groupSize = (groups.get(group) ?? 0) + 1;
-    groups.set(group, groupSize);
-    largestGroupSize = Math.max(groupSize, largestGroupSize);
-  }
+  const group = new Map<number, number>();
+  for (let num = 1; num <= n; num++) {
+    const sum = sumOfDigits(num);
+    const groupSize = (group.get(sum) ?? 0) + 1;
+    group.set(sum, groupSize);
 
-  return [...groups.values()].filter((groupSize) => groupSize === largestGroupSize).length;
+    if (groupSize > largestGroupSize) {
+      largestGroupSize = groupSize;
+      groupCount = 1;
+    } else if (groupSize === largestGroupSize) {
+      groupCount += 1;
+    }
+  }
+  return groupCount;
+}
+
+function sumOfDigits(num: number): number {
+  let result = 0;
+  let curr = num;
+  while (curr > 0) {
+    result += curr % 10;
+    curr = Math.floor(curr / 10);
+  }
+  return result;
 }
 ```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n \cdot \log_{10} n)$
+- 공간 복잡도: $O(\log_{10} n)$

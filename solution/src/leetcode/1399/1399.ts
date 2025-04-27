@@ -3,20 +3,30 @@
  * https://leetcode.com/problems/count-largest-group
  */
 export function countLargestGroup(n: number): number {
-  const sumOfDigits = (n: number) => {
-    return n
-      .toString()
-      .split('')
-      .reduce((sum, digit) => sum + +digit, 0);
-  };
-  const groups = new Map<number, number>();
+  let groupCount = 0;
   let largestGroupSize = 0;
-  for (let i = 1; i <= n; i++) {
-    const group = sumOfDigits(i);
-    const groupSize = (groups.get(group) ?? 0) + 1;
-    groups.set(group, groupSize);
-    largestGroupSize = Math.max(groupSize, largestGroupSize);
-  }
+  const group = new Map<number, number>();
+  for (let num = 1; num <= n; num++) {
+    const sum = sumOfDigits(num);
+    const groupSize = (group.get(sum) ?? 0) + 1;
+    group.set(sum, groupSize);
 
-  return [...groups.values()].filter((groupSize) => groupSize === largestGroupSize).length;
+    if (groupSize > largestGroupSize) {
+      largestGroupSize = groupSize;
+      groupCount = 1;
+    } else if (groupSize === largestGroupSize) {
+      groupCount += 1;
+    }
+  }
+  return groupCount;
+}
+
+function sumOfDigits(num: number): number {
+  let result = 0;
+  let curr = num;
+  while (curr > 0) {
+    result += curr % 10;
+    curr = Math.floor(curr / 10);
+  }
+  return result;
 }

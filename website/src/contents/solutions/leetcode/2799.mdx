@@ -1,0 +1,91 @@
+---
+id: '2799'
+title: Count Complete Subarrays in an Array
+url: https://leetcode.com/problems/count-complete-subarrays-in-an-array
+category: Algorithms
+difficulty: Medium
+tags:
+  - Array
+  - Hash Table
+  - Sliding Window
+---
+
+## 문제 설명
+
+- 양의 정수 배열 `nums`가 주어집니다.
+- 이 배열의 어떤 **부분 배열(subarray)가** 다음 조건을 만족하면, 그 부분 배열을 **"완전한 부분 배열(complete subarray)"** 라고 부릅니다.
+  - 해당 부분 배열 안에 있는 **서로 다른(distinct) 원소의 개수가**, 원래 전체 배열 `nums`안에 있는 서로 다른 원소의 개수와 같아야 합니다.
+- **완전한 부분 배열의 개수를 반환**해야 합니다.
+
+## 문제 풀이
+
+### `Hash Table & Sliding Window`
+
+> 💡 아이디어
+>
+> **슬라이딩 윈도우(Sliding Window)와** **빈도수 카운터(Frequency Counter)를 사용**하여, 윈도우를 확장하며, 서로 다른 원소의 개수를 추적하고, 조건에 맞는 윈도우가 나타날 때마다, 이를 포함하는 모든 완전한 부분 배열의 개수를 계산합니다.
+
+1. **`nums`의 서로 다른 원소의 개수 계산**
+   - `Set`을 사용하여, `nums`의 서로 다른 원소의 개수를 저장합니다. (`distinctCount`)
+2. **윈도우 확장**
+   - `end` 포인터를 배열 시작부터 끝까지 이동시키면서 **윈도우를 오른쪽으로 확장**하고, 현재 원소(`nums[end]`)를 카운터에 추가합니다.
+3. **윈도우 검사 및 계산**
+   - 현재 윈도우(`nums[start, ..., end]`)내의 **서로 다른 원소의 개수(`Counter.size`)가 전체 배열의 서로 다른 원소의 개수(`distinctCount`)와 같으면** 다음 단계를 수행합니다.
+   - 전체 완전한 부분 배열의 개수에 `nums.length - end`만큼 더합니다.
+     - **현재 부분 배열이 유효하다면, 뒤에 있는 모든 요소를 추가하더라도, 해당 부분 배열을 유효합니다.**
+4. **윈도우 축소**
+   - 윈도우가 완전한 상태를 유지하는 동안, `start`를 오른쪽으로 이동시키고, 해당 원소(`nums[start]`)를 카운터에서 제거합니다.
+5. **결과 반환**
+   - 최종적으로 완전한 부분 배열의 개수에 더합니다.
+
+```typescript showLineNumbers
+export function countCompleteSubarrays(nums: number[]): number {
+  const n = nums.length;
+  const distinctCount = new Set(nums).size;
+
+  let answer = 0;
+  let start = 0;
+  const counter = new Counter();
+  for (let end = 0; end < n; end++) {
+    counter.add(nums[end]);
+    while (counter.size === distinctCount) {
+      answer += n - end;
+      counter.sub(nums[start]);
+      start += 1;
+    }
+  }
+  return answer;
+}
+
+class Counter {
+  private readonly map: Map<number, number>;
+
+  constructor() {
+    this.map = new Map();
+  }
+
+  get(num: number): number {
+    return this.map.get(num) ?? 0;
+  }
+
+  add(num: number): void {
+    this.map.set(num, this.get(num) + 1);
+  }
+
+  sub(num: number): void {
+    this.map.set(num, this.get(num) - 1);
+    if (this.get(num) <= 0) {
+      this.map.delete(num);
+    }
+  }
+
+  get size(): number {
+    return this.map.size;
+  }
+}
+```
+
+#### 복잡도
+
+- 시간 복잡도: $O(n)$
+- 공간 복잡도: $O(n)$
